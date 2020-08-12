@@ -272,11 +272,11 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   xName       <- gettext("Log Odds Ratio")
 
   if(options$plotPosteriorOddsRatioAdditionalInfo)
-    p <- JASPgraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, BF = BF10, bfType = "BF10",
+    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = ppCri, median = median, bfSubscripts = bfSubscripts,
                                            CRItxt = CRItxt, medianTxt = medianTxt)
   else 
-    p <- JASPgraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, CRI = ppCri,  
+    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, CRI = ppCri,  
                                            bfSubscripts = bfSubscripts, draqCRItxt = FALSE)
 
   p$subplots$mainGraph <- p$subplots$mainGraph+ggplot2::theme(legend.position = "none")
@@ -688,7 +688,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     }
   )
 
-  # The following data.frame is for the argument dfLines at JASPgraphs::PlotPriorAndPosterior( and I guess it should be gettext'ed
+  # The following data.frame is for the argument dfLines at jaspGraphs::PlotPriorAndPosterior( and I guess it should be gettext'ed
   dat        <- data.frame(x = logOR, y = linesPosterior, g = rep(gettext("Posterior"), size))
   return(dat)
 }

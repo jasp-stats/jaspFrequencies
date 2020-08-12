@@ -369,7 +369,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
     ggplot2::ylab(yname) +
     ggplot2::coord_flip()
 
-    p <- JASPgraphs::themeJasp(p, xAxis = FALSE, yAxis = FALSE)
+    p <- jaspGraphs::themeJasp(p, xAxis = FALSE, yAxis = FALSE)
 
   return(p)
 }

@@ -309,9 +309,9 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   hypForPlots <- .binomHypothesisForPlots(hyp)
   
   if (!options$plotPriorAndPosteriorAdditionalInfo)
-    p <- JASPgraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName)
+    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName)
   else
-    p <- JASPgraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName, BF = BF10, bfType = "BF10",
+    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = c(quantiles$ci.lower, quantiles$ci.upper), median = quantiles$ci.median, 
                                            hypothesis = hypForPlots, drawCRItxt = TRUE)
   plot$plotObject <- p
@@ -331,7 +331,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   p <- try({
     bfSubscripts <- .bayesBinomGetSubscript(options$hypothesis)
     dfLinesSR   <- .dfLinesSR(d = data, var = var, split = level, a = options$priorA, b = options$priorB, hyp = hyp, theta0 = options$testValue)
-    JASPgraphs::PlotRobustnessSequential(dfLines = dfLinesSR, xName = "n", BF = BF10, bfType = "BF10", hypothesis = hypForPlots)
+    jaspGraphs::PlotRobustnessSequential(dfLines = dfLinesSR, xName = "n", BF = BF10, bfType = "BF10", hypothesis = hypForPlots)
   })
   
   if (inherits(p, "try-error"))

@@ -458,7 +458,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     base_breaks_y(plotFrame$yAxisMargin) +
     ggplot2::xlab(options$factor) + ggplot2::ylab(yname)
   
-  p <- JASPgraphs::themeJasp(p, horizontal = TRUE, xAxis = FALSE)
+  p <- jaspGraphs::themeJasp(p, horizontal = TRUE, xAxis = FALSE)
   descriptivesPlot$plotObject <- p
 }
 
