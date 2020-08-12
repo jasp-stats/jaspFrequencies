@@ -3,7 +3,7 @@ import JASP.Module 	1.0
 
 Description
 {
-	name		: "Frequencies"
+	name		: "jaspFrequencies"
 	title		: qsTr("Frequencies")
 	description	: qsTr("This module offers the standard Frequentist and Bayesian frequency analyses.")
 	icon		: "analysis-classical-crosstabs.svg"
