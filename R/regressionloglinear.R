@@ -170,7 +170,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
           pVal                         <- as.numeric(loglm.estimates$"Pr(>Chi)"[var])
           results[[ len.logreg ]]$p    <- pVal
           if (options$VovkSellkeMPR)
-            results[[ len.logreg ]]$VovkSellkeMPR <- .VovkSellkeMPR(pVal)
+            results[[ len.logreg ]]$VovkSellkeMPR <- VovkSellkeMPR(pVal)
         }
         results[[ len.logreg ]]$resDf <- as.integer(loglm.estimates$"Resid. Df"[var])
         res <- as.numeric(loglm.estimates$"Resid. Dev"[var])
@@ -227,7 +227,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
         Z <- as.numeric(loglm.estimates[i,3])
         p <- as.numeric(loglm.estimates[i,4])
         if (options$VovkSellkeMPR)
-          VovkSellkeMPR <- .VovkSellkeMPR(p)
+          VovkSellkeMPR <- VovkSellkeMPR(p)
         results[[len.logreg]] <- list(
           name  = name,
           Coeff = Coefficient,

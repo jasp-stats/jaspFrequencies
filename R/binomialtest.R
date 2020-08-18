@@ -99,7 +99,7 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
         total         = length(data),
         proportion    = counts / length(data),
         p             = p,
-        VovkSellkeMPR = .VovkSellkeMPR(p),
+        VovkSellkeMPR = VovkSellkeMPR(p),
         lowerCI       = tableResults$conf.int[1],
         upperCI       = tableResults$conf.int[2]
       )

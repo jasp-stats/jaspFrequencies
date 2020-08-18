@@ -8,3 +8,18 @@ Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
 Description: This module offers the standard Frequentist and Bayesian frequency analyses.
 License: GPL (>= 2)
+Encoding: UTF-8
+Imports:
+  abtest,
+  BayesFactor,
+  conting,
+  ggplot2,
+  jaspBase,
+  jaspGraphs,
+  plyr,
+  stringr,
+  vcd,
+  vcdExtra
+Remotes:
+  jasp-stats/jaspBase,
+  jasp-stats/jaspGraphs

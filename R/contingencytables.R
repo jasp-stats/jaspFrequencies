@@ -936,7 +936,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           row[["value[chiSquared]"]] <- unname(chi.result$statistic)
           row[["df[chiSquared]"]]    <- unname(chi.result$parameter)
           row[["p[chiSquared]"]]     <- unname(chi.result$p.value)
-          row[["MPR[chiSquared]"]]   <- .VovkSellkeMPR(row[["p[chiSquared]"]])
+          row[["MPR[chiSquared]"]]   <- VovkSellkeMPR(row[["p[chiSquared]"]])
         }
       } else 
         row[["value[chiSquared]"]] <- "."
@@ -969,7 +969,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           row[["df[chiSquared-cc]"]]    <- unname(chi.result$parameter)
           pVal                          <- unname(chi.result$p.value)
           row[["p[chiSquared-cc]"]]     <- pVal
-          row[["MPR[chiSquared-cc]"]]   <- .VovkSellkeMPR(pVal)
+          row[["MPR[chiSquared-cc]"]]   <- VovkSellkeMPR(pVal)
         }
         
       } else 
@@ -996,7 +996,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           pVal                       <- chi.result$chisq_tests[5]
           row[["p[likelihood]"]]     <- pVal
           if (options$VovkSellkeMPR)
-            row[["MPR[likelihood]"]]   <- .VovkSellkeMPR(pVal)
+            row[["MPR[likelihood]"]]   <- VovkSellkeMPR(pVal)
         }
       } else 
         row[["value[likelihood]"]] <- "."
@@ -1218,7 +1218,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       else {
                                     row[["value[kTauB]"]]     <- unname(chi.result$estimate)
                                     row[["p[kTauB]"]]         <- chi.result$p.value
-        if (options$VovkSellkeMPR)  row[["MPR[kTauB]"]]       <- .VovkSellkeMPR(row[["p[kTauB]"]])
+        if (options$VovkSellkeMPR)  row[["MPR[kTauB]"]]       <- VovkSellkeMPR(row[["p[kTauB]"]])
                                     row[["statistic[kTauB]"]] <- unname(chi.result$statistic)
       }
     } else {

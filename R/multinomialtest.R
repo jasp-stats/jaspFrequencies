@@ -203,7 +203,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     dataframe <- cbind(case = names(chisqResults), dataframe)
     
     if (options$VovkSellkeMPR)
-      dataframe <- cbind(dataframe, VovkSellkeMPR = .VovkSellkeMPR(dataframe$p))
+      dataframe <- cbind(dataframe, VovkSellkeMPR = VovkSellkeMPR(dataframe$p))
     
     jaspResults[["chisqTable"]]$setData(dataframe)
     
