@@ -10,7 +10,7 @@ Description: This module offers the standard Frequentist and Bayesian frequency 
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
-  abtest,
+  abtest (>= 0.2.1),
   BayesFactor,
   conting,
   ggplot2,
