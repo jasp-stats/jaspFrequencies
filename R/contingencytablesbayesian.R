@@ -18,10 +18,10 @@
 ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   dataset <- .crossTabReadData(dataset, options)
   ready <- !(length(options$rows) == 0 || length(options$columns) == 0)
-  
+
   if(ready)
     .crossTabCheckErrors(dataset, options)
-  
+
   # Compute the combinations of rows, columns, layers
   analyses <- .crossTabComputeAnalyses(dataset, options, ready)
   # Tables container - groups per analysis
@@ -31,10 +31,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   .contTabBasBF(      jaspResults, options, analyses, ready)
   .contTabBasLogOdds( jaspResults, options, analyses, ready)
   .contTabBasCramersV(jaspResults, options, analyses, ready)
-  
+
   # Plots
   .contTabBasLogOddsPlot(jaspResults, options, analyses, ready)
-  
+
   return()
 }
 
@@ -43,30 +43,30 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
     analysisContainer <- jaspResults[[paste0("container", i)]]
-    if (!is.null(analysisContainer[["contTabBasBF"]])) 
+    if (!is.null(analysisContainer[["contTabBasBF"]]))
       next
-    
+
     # Create table
     contTabBasBF <- createJaspTable(title = gettext("Bayesian Contingency Tables Tests"))
     dependList <- c("samplingModel", "hypothesis", "bayesFactorType", "priorConcentration", "setSeed", "seed")
     contTabBasBF$dependOn(dependList)
     contTabBasBF$showSpecifiedColumnsOnly <- TRUE
     contTabBasBF$position <- 2
-    
+
     # Add columns to table
     .crossTabLayersColumns(contTabBasBF, analysis)
     contTabBasBF$addColumnInfo(name = "type[BF]",  title = "",               type = "string")
     contTabBasBF$addColumnInfo(name = "value[BF]", title = gettext("Value"), type = "number")
     contTabBasBF$addColumnInfo(name = "type[N]",   title = "",               type = "string")
     contTabBasBF$addColumnInfo(name = "value[N]",  title = gettext("Value"), type = "integer")
-    
+
     analysisContainer[["contTabBasBF"]] <- contTabBasBF
     analysis <- as.list(analysis)
     # Compute/get groupList
     groupList <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready)
     # Compute/get bfList
     bfList <- .contTabBasComputeBfList(analysisContainer, options, groupList, ready)
-    
+
     res <- try(.contTabBasBFRows(analysisContainer, analysis$rows, groupList, bfList, options, ready))
     .contTabBasSetErrorOrFill(res, contTabBasBF)
   }
@@ -78,34 +78,34 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
     analysisContainer <- jaspResults[[paste0("container", i)]]
-    if (!is.null(analysisContainer[["contTabBasLogOdds"]])) 
+    if (!is.null(analysisContainer[["contTabBasLogOdds"]]))
       next
-    
+
     # Create table
     contTabBasLogOdds <- createJaspTable(title = gettext("Log Odds Ratio"))
     dependList <- c("oddsRatio", "oddsRatioCredibleIntervalInterval", "hypothesis", "samplingModel", "priorConcentration", "setSeed", "seed")
     contTabBasLogOdds$dependOn(dependList)
     contTabBasLogOdds$showSpecifiedColumnsOnly <- TRUE
     contTabBasLogOdds$position <- 3
-    
+
     ci.label <- gettextf("%.0f%% Credible Interval", 100*options$oddsRatioCredibleIntervalInterval)
-    
+
     # Add columns to table
     .crossTabLayersColumns(contTabBasLogOdds, analysis)
     #contTabBasLogOdds$addColumnInfo(name = "type[oddsRatio]",  title = "", type = "string")
     contTabBasLogOdds$addColumnInfo(name = "value[oddsRatio]", title = gettext("Log Odds Ratio"), type = "number")
     contTabBasLogOdds$addColumnInfo(name = "low[oddsRatio]",   title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
     contTabBasLogOdds$addColumnInfo(name = "up[oddsRatio]",    title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
-    
+
     analysisContainer[["contTabBasLogOdds"]] <- contTabBasLogOdds
     analysis <- as.list(analysis)
     # Compute/get groupList
     groupList <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready)
     # Compute/get bfList
     bfList <- .contTabBasComputeBfList(analysisContainer, options, groupList, ready)
-    
+
     res <- try(.contTabBasOddsRatioRows(analysisContainer, analysis$rows, groupList, bfList, options, ready))
-   
+
     .contTabBasSetErrorOrFill(res, contTabBasLogOdds)
   }
 }
@@ -117,14 +117,14 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   for (i in 1:nrow(analyses)){
     analysis          <- analyses[i,]
     analysisContainer <- jaspResults[[paste0("container", i)]]
-    if (!is.null(analysisContainer[["contTabBasCramersV"]])) 
+    if (!is.null(analysisContainer[["contTabBasCramersV"]]))
       next
 
     # Create table
     contTabBasCramersV <- createJaspTable(title = gettext("Cramer's V"), dependencies="effectSize")
     contTabBasCramersV$showSpecifiedColumnsOnly <- TRUE
     contTabBasCramersV$position <- 4
-    
+
     ci <- gettextf("%.0f%% Credible Interval", 100 * options$effectSizeCredibleIntervalInterval)
 
     # Add columns to table
@@ -139,7 +139,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     groupList <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready)
     # Compute/get bfList
     bfList <- .contTabBasComputeBfList(analysisContainer, options, groupList, ready)
-    
+
     res <- try(.contTabBasCramersVRows(analysisContainer, analysis$rows, groupList, bfList, options, ready))
     .contTabBasSetErrorOrFill(res, contTabBasCramersV)
   }
@@ -157,12 +157,12 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   oddsRatioPlotContainer$position <- 2
   .contTablesBayesianCitations(oddsRatioPlotContainer)
   for (i in 1:nrow(analyses)){
-    if (!is.null(oddsRatioPlotContainer[[paste0("plots", i)]])) 
+    if (!is.null(oddsRatioPlotContainer[[paste0("plots", i)]]))
       next
     analysisContainer <- jaspResults[[paste0("container", i)]]
     # get groupList
     groupList <- analysisContainer[["groupList"]]$object
-    
+
     group.matrices <- groupList$group.matrices
     groups <- groupList$groups
     for (g in 1:length(group.matrices)) {
@@ -171,12 +171,12 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
         group <- groups[[g]]
       else
         group <- NULL
-      
+
       if(!identical(dim(group.matrices[[1]]), as.integer(c(2,2))))
         return()
-      
+
       group[group == ""] <- gettext("Total")
-      
+
       if (length(group) == 0)
         oddsRatioSubContainer <- createJaspContainer()
       else if (length(group) > 0) {
@@ -188,7 +188,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       }
       analysis <- analyses[i,]
       title    <- ""
-      
+
       if(length(options$rows) > 0 || length(options$columns) > 0)
         title <- paste0(analysis$rows, " - ", analysis$columns)
       logOddsPlot <- createJaspPlot(title = title, width = 530, height = 400)
@@ -196,7 +196,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       logOddsPlot$dependOn(optionContainsValue = list(rows = analysis$rows, columns = analysis$columns))
       oddsRatioSubContainer[["plot"]] <- logOddsPlot
       oddsRatioPlotContainer[[paste0("plots", i, "sub", g)]] <- oddsRatioSubContainer
-      
+
       if(ready){
         analysisSamples.g <- analysisContainer[["logOddsSamples"]][[g]]
         # Get bfList
@@ -217,7 +217,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
 .contTabBasLogOddsPlotFill <- function(analysisContainer, options, analysisSamples.g,
                                        counts.matrix, bf.results.g, group) {
-  
+
   if (options$samplingModel == "hypergeometric")
     stop(gettext("Odds ratio for this model not yet implemented"))
   else {
@@ -245,7 +245,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   result  <- try(.contTabBasOddsRatioSamples(analysisSamples.g, bf.results.g, options))
   samples <- result$log.odds.ratio.samples
   xlim    <- vector("numeric", 2)
-  
+
   switch(oneSided,
     notABoolean = {
       xlim[1] <- quantile(samples, probs = 0.002)
@@ -275,20 +275,20 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = ppCri, median = median, bfSubscripts = bfSubscripts,
                                            CRItxt = CRItxt, medianTxt = medianTxt)
-  else 
-    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, CRI = ppCri,  
+  else
+    p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, CRI = ppCri,
                                            bfSubscripts = bfSubscripts, draqCRItxt = FALSE)
 
   p$subplots$mainGraph <- p$subplots$mainGraph+ggplot2::theme(legend.position = "none")
   return(p)
 }
 
-# Table functions 
+# Table functions
 .contTabBasSetErrorOrFill <- function(res, table) {
   if(isTryError(res))
     table$setError(.extractErrorMessage(res))
   else
-    for (level in 1:length(res)) 
+    for (level in 1:length(res))
       table$addRows(res[[level]])
 }
 
@@ -298,10 +298,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   bfList <- list()
   grp.mat <- groupList$group.matrices
   if(!ready) return()
-  for(g in 1:length(grp.mat)) 
+  for(g in 1:length(grp.mat))
     bfList[[g]]   <- .contTabBasComputeBF(options, grp.mat[[g]], ready)
   analysisContainer[["bfList"]] <- createJaspState(bfList)
-  analysisContainer[["bfList"]]$dependOn(c("samplingModel", "priorConcentration", 
+  analysisContainer[["bfList"]]$dependOn(c("samplingModel", "priorConcentration",
                                            "hypothesis", "bayesFactorType", "setSeed", "seed"))
   return(bfList)
 }
@@ -333,10 +333,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       sampleType  <- "hypergeom"
     }
   )
-  
+
   BF <- try({
-    BayesFactor::contingencyTableBF(counts.matrix, sampleType = sampleType, 
-                                    priorConcentration = options$priorConcentration, 
+    BayesFactor::contingencyTableBF(counts.matrix, sampleType = sampleType,
+                                    priorConcentration = options$priorConcentration,
                                     fixedMargin = fixedMargin) })
 
   bf1  <- exp(as.numeric(BF@bayesFactor$bf))
@@ -358,7 +358,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
       if(options$hypothesis == "groupOneGreater") prop.consistent <- 1 - mean(logOR < 0)
       else                                        prop.consistent <- mean(logOR < 0)
-    
+
     } else if(options$samplingModel %in% rowsOrCols) {
 
       theta <- as.data.frame(ch.result[,7:10])
@@ -379,7 +379,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       lbf1 <- lbf1 + log(prop.consistent) - log(0.5)
     }
   }
-  
+
   switch(options$hypothesis,
     groupOneGreater = { bfTitleUniquePart <- "\u208A" }, #On my system these code points seem to be rendered as B+0, B0+ etc. Probably wrong then?
     groupTwoGreater = { bfTitleUniquePart <- "\u208B" },
@@ -387,7 +387,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   #I am not adding the following bfTitle's to the translation strings because there is not a lot to translate and it would be neigh incomprehensible if all those unicode chars were %s...
   switch(options$bayesFactorType,
-    BF10 = { 
+    BF10 = {
       bfTitle <- paste0("BF", bfTitleUniquePart, "\u2080")
       bfVal   <- bf1
     },
@@ -450,14 +450,14 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
 .contTablesBayesianCitations <- function(object) {
   citationList <- list(
-    "Morey, R. D., & Rouder, J. N. (2015). BayesFactor 
+    "Morey, R. D., & Rouder, J. N. (2015). BayesFactor
     (Version 0.9.11-3)[Computer software].",
-    "Jamil, T., Ly, A., Morey, R. D., Love, J., 
-    Marsman, M., & Wagenmakers, E.-J. (2017). 
-    Default Gunel and Dickey Bayes factors for contingency tables. 
+    "Jamil, T., Ly, A., Morey, R. D., Love, J.,
+    Marsman, M., & Wagenmakers, E.-J. (2017).
+    Default Gunel and Dickey Bayes factors for contingency tables.
     Behavior Research Methods, 49, 638-652.",
-    "Gunel, E., & Dickey, J. (1974). 
-    Bayes factors for independence in contingency tables. 
+    "Gunel, E., & Dickey, J. (1974).
+    Bayes factors for independence in contingency tables.
     Biometrika, 61, 545-557.")
 
   for(citation in citationList)
@@ -497,14 +497,14 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   #median <- stats::median(samples)
   #lower  <- unname(stats::quantile(samples, p = alpha))
   #upper  <- unname(stats::quantile(samples, p = (1-alpha)))
-  samplesList <- list(log.odds.ratio.samples = samples, BF = BF, 
+  samplesList <- list(log.odds.ratio.samples = samples, BF = BF,
                       median = median, lower.ci = lower, upper.ci = upper)
   logOddsSamples    <- createJaspState(samplesList)
   analysisSamples.g <- logOddsSamples
   return(samplesList)
 }
 
-# Table Results 
+# Table Results
 .contTabBasBFRows <- function(analysisContainer, var.name, groupList, bf.results, options, ready) {
   bf.rows <- list()
   group.matrices <- groupList$group.matrices
@@ -512,24 +512,24 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   for (g in 1:length(group.matrices)) {
     counts.matrix <- group.matrices[[g]]
-    
+
     if (!is.null(groups)) group <- groups[[g]]
     else                  group <- NULL
 
     row <- list()
     row[["type[BF]"]] <- paste(bf.results[[g]]$bfTitle, bf.results[[g]]$bfEndLab)
     row[["type[N]"]]  <- "N"
-    
+
     if (ready) {
       row[["value[BF]"]] <- bf.results[[g]]$bfVal
       row[["value[N]"]]  <- sum(counts.matrix)
-    } else 
+    } else
       row[["value[BF]"]] <- row[["value[N]"]]  <- "."
-    
+
     bf.rows[[length(bf.rows) + 1]] <- .crossTabLayerNames(row, group)
   }
 
-  .contTabBasBFFootnote(options, counts.matrix, analysisContainer, ready) 
+  .contTabBasBFFootnote(options, counts.matrix, analysisContainer, ready)
   return(bf.rows)
 }
 
@@ -540,10 +540,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   for (g in 1:length(group.matrices)) {
     counts.matrix <- group.matrices[[g]]
-    
+
     if (!is.null(groups)) group <- groups[[g]]
     else                  group <- NULL
-    
+
     row                       <- .crossTabLayerNames(list(), group)
     row[["type[oddsRatio]"]]  <- gettext("Odds ratio")
     result                    <- list(median = ".", lower  = ".", upper  = ".")
@@ -567,7 +567,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     row[["value[oddsRatio]"]] <- result$median
     row[["low[oddsRatio]"]]   <- result$lower
     row[["up[oddsRatio]"]]    <- result$upper
-    
+
     odds.ratio.rows[[length(odds.ratio.rows) + 1]] <- row
   }
   return(odds.ratio.rows)
@@ -580,17 +580,17 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   for (g in 1:length(group.matrices)) {
     counts.matrix <- group.matrices[[g]]
-   
+
     if (!is.null(groups)) group <- groups[[g]]
     else                  group <- NULL
-    
+
     row                         <- .crossTabLayerNames(list(), group)
     row[["type[CramerV]"]]      <- gettext("Cramer's V")
 
     if ( options$samplingModel == "hypergeometric") {
       row[["value[CramerV]"]] <- NaN
       row[["low[CramerV]"]]   <- row[["up[CramerV]"]] <- ""
-      
+
       message <- gettext("Cramer's V for this model not yet implemented")
       analysisContainer[["contTabCramersV"]]$addFootnote(message)
 
@@ -605,7 +605,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
         N  <- sum(counts.matrix)
         yr <- rowSums(counts.matrix)
         yc <- colSums(counts.matrix)
-        
+
         if (options$samplingModel == "poisson") {
 
           lambda    <- as.data.frame(ch.result)
@@ -640,18 +640,18 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
           Phi.indepMulti <- sqrt(chi2/(N*(k-1)))
           Cramer         <- Phi.indepMulti
 
-        } else 
+        } else
           stop(("Invalid sampling model selected"))
-        
+
         CramersV.samples <- Cramer
         CramersV.median  <- stats::median(CramersV.samples)
         sig   <- options$effectSizeCredibleIntervalInterval
         alpha <- (1 - sig) / 2
         lower <- unname(stats::quantile(Cramer, p = alpha))
         upper <- unname(stats::quantile(Cramer, p = (1-alpha)))
-        
-        list(CramersV.samples = CramersV.samples, 
-             BF = BF, CVmedian = CramersV.median, 
+
+        list(CramersV.samples = CramersV.samples,
+             BF = BF, CVmedian = CramersV.median,
              CV.lower.ci = lower, CV.upper.ci = upper)
       })
     } else {
@@ -673,13 +673,13 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   linesPosterior  <- numeric(size) # initializes everything to 0
 
   switch(oneSided,
-    notABoolean = { 
-      linesPosterior <- dnorm(logOR, mean, sd) 
+    notABoolean = {
+      linesPosterior <- dnorm(logOR, mean, sd)
     },
     right = {
       idx                 <- logOR >= 0 # the nonzero components
       linesPosterior[idx] <- dnorm(logOR, mean, sd) / pnorm(0, mean, sd, lower.tail = FALSE)
-      linesPosterior[1]   <- 0 # gives the sharp truncation line 
+      linesPosterior[1]   <- 0 # gives the sharp truncation line
     },
     left = {
       idx                  <- logOR <= 0 # the nonzero components
@@ -693,12 +693,12 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   return(dat)
 }
 
-#CRI and Median 
+#CRI and Median
 .crossTabCIPlusMedian <- function(credibleIntervalInterval = .95, mean, sd, hypothesis = "groupsNotEqual") {
-  
+
   lower <- (1 - credibleIntervalInterval) / 2
   upper <- 1 - lower
-  
+
   switch(hypothesis,
     groupsNotEqual={
       quantiles <- qnorm(c(lower, .5, upper), mean, sd)

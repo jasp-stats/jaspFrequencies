@@ -208,7 +208,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)) {
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container",i)]]
+    analysisContainer <- jaspResults[[paste0("container", i)]]
     if (!is.null(analysisContainer[["crossTabLogOdds"]]))
       next
 
