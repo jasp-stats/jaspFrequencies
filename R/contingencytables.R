@@ -249,7 +249,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       next
     # Create table
     crossTabNominal <- createJaspTable(title = gettext("Nominal"))
-    crossTabNominal$dependOn(c("contingencyCoefficient", "phiAndCramersV"))
+    crossTabNominal$dependOn(c("contingencyCoefficient", "phiAndCramersV", "lambda"))
     crossTabNominal$showSpecifiedColumnsOnly <- TRUE
     crossTabNominal$position <- 4
     # Add columns to table
