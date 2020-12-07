@@ -578,8 +578,6 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     cmax <- apply(counts.matrix, 2, max)
     max.rsum <- max(rsum)
     max.csum <- max(csum)
-    nr <- nrow(counts.matrix)
-    nc <- ncol(counts.matrix)
 
     row[["value[LambdaR]"]] <- (sum(rmax) - max.csum)/(n - max.csum)
     row[["value[LambdaC]"]] <- (sum(cmax) - max.rsum)/(n - max.rsum)
