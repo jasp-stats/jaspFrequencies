@@ -65,7 +65,7 @@ Form
 			title: qsTr("Nominal")
 			CheckBox { name: "contingencyCoefficient" ; label: qsTr("Contingency coefficient")				}
 			CheckBox { name: "phiAndCramersV";			label: qsTr("Phi and Cramer's V")					}
-			CheckBox { name: "lambda";					label: qsTr("Lambda");					debug: true }
+			CheckBox { name: "lambda";					label: qsTr("Lambda");								}
 			CheckBox { name: "uncertaintyCoefficient";	label: qsTr("Uncertainty coefficient");	debug: true }
 		}
 

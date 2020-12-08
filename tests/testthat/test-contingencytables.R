@@ -91,8 +91,8 @@ test_that("Chi-Squared test table results match", {
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabChisq"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("N", "", "", "", 2550, 
-         "<unicode>", 82.0397085317219, 1, 1.33379878452991e-19, 63462127883801120, 
+    list("N", "", "", "", 2550,
+         "<unicode>", 82.0397085317219, 1, 1.33379878452991e-19, 63462127883801120,
          "<unicode><unicode> continuity correction", 81.3201582621313, 1, 1.91958529099645e-19, 44468347240355080,
          "Likelihood ratio", 82.4643894680383, 1, 0, "<unicode><unicode>")
   )
@@ -150,6 +150,31 @@ test_that("Kendall's Tau table results match", {
   jaspTools::expect_equal_tables(table,
     list(-0.0810440898473108, 0.420024632711394, 1, -0.806378512498144)
   )
+})
+
+test_that("Goodman-Kruskal lambda and Cramer's V results match", {
+  # test based on example data from p. 1130
+  # Kvålseth, T. O. (2018) Measuring association between nominal categorical variables: an alternative to the Goodman–Kruskal lambda, Journal of Applied Statistics, 45:6,1118-1132, DOI: 10.1080/02664763.2017.1346066
+
+  comb <- expand.grid(var1=letters[1:3], var2=letters[1:2], KEEP.OUT.ATTRS = FALSE, stringsAsFactors = FALSE)
+  counts <- c(40, 15, 5, 5, 25, 10)
+  df <- data.frame(var1 = rep(comb$var1, counts), var2 = rep(comb$var2, counts))
+
+  options                <- jaspTools::analysisOptions("ContingencyTables")
+  options$rows           <- "var1"
+  options$columns        <- "var2"
+  options$lambda         <- TRUE
+  options$phiAndCramersV <- TRUE
+
+  results <- jaspTools::runAnalysis("ContingencyTables", df, options)
+  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabNominal"]][["data"]][[1]]
+
+  # reported 0.3636
+  testthat::expect_equal(table[["value[LambdaC]"]], 0.363636363636364)
+  # reported 0.37
+  testthat::expect_equal(table[["value[LambdaS]"]], 0.369318181818182)
+  # reported 0.53
+  testthat::expect_equal(table[["value[CramerV]"]], 0.534135681195261)
 })
 
 test_that("Analysis handles errors", {
