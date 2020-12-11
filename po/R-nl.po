@@ -1,0 +1,504 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: R 3.6.1\n"
+"Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
+"POT-Creation-Date: 2020-12-11 10:30\n"
+"PO-Revision-Date: 2020-12-02 21:29+0000\n"
+"Last-Translator: JASP Stats <F.A.M.Meerhoff@uva.nl>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jasp-engine/"
+"nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
+
+msgid "Bayesian A/B Test"
+msgstr "Bayesiaanse A/B Toets"
+
+msgid "Models"
+msgstr "Modellen"
+
+msgid "P(M)"
+msgstr "P(M)"
+
+msgid "P(M|data)"
+msgstr "P(M|data)"
+
+msgid ""
+"A positive log odds ratio means that the success rate in Group 2 is higher "
+"than in Group 1."
+msgstr ""
+"Een positieve log odds ratio betekent dat de kans op succes in Groep 2 "
+"groter is dan Groep 1."
+
+msgid "Log odds ratio = 0"
+msgstr "Log odds ratio = 0"
+
+msgid "Log odds ratio > 0"
+msgstr "Log odds ratio > 0"
+
+msgid "Log odds ratio < 0"
+msgstr "Log odds ratio < 0"
+
+msgid "Log odds ratio %s 0"
+msgstr "Log odds ratio %s 0"
+
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgid "Counts"
+msgstr "Aantallen"
+
+msgid "Total"
+msgstr "Totaal"
+
+msgid "Proportion"
+msgstr "Proportie"
+
+msgid "Group 1"
+msgstr "Groep 1"
+
+msgid "Group 2"
+msgstr "Groep 2"
+
+msgid "Prior and Posterior"
+msgstr "Prior en Posterior"
+
+msgid "Sequential Analysis"
+msgstr "Sequentiële Analyse"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "Bayes Factor Robuustheidsevaluatie"
+
+msgid "Prior"
+msgstr "Prior"
+
+msgid "Cannot test the hypothesis that the test value is greater than 1."
+msgstr "Kan niet de hypothese testen dat de toetswaarde groter is dan 1."
+
+msgid "Cannot test the hypothesis that the test value is less than 0."
+msgstr "Kan de hypothese dat de toetswaarde kleiner is dan 1 niet testen."
+
+msgid "Binomial Test"
+msgstr "Binomiale Toets"
+
+msgid "Variable"
+msgstr "Variabele"
+
+msgid "Level"
+msgstr "Niveau"
+
+msgid "p"
+msgstr "p"
+
+msgid "VS-MPR"
+msgstr "VS-MPR"
+
+msgid "Lower"
+msgstr "Onder"
+
+msgid "%s%% CI for Proportion"
+msgstr "%s%% BI voor Proportie"
+
+msgid "Upper"
+msgstr "Boven"
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"less than %s."
+msgstr ""
+"Voor alle toetsen specificeert de alternatieve hypothese dat de proportie "
+"minder is dan %s."
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"greater than %s."
+msgstr ""
+"Voor alle toetsen specificeert de alternatieve hypothese dat de proportie "
+"groter is dan %s."
+
+msgid "Proportions tested against value: %s."
+msgstr "Proporties getest tegen waarde: %s."
+
+msgid "Descriptives Plots"
+msgstr "Beschrijvende Diagrammen"
+
+msgid "Bayesian Binomial Test"
+msgstr "Bayesiaanse Binomiaal Toets"
+
+msgid "Inferential Plots"
+msgstr "Inferentiële Grafieken"
+
+msgid "Population proportion"
+msgstr "Populatieproportie"
+
+msgid "One or more Bayes factors cannot be computed"
+msgstr "Eén of meer Bayes-factoren kunnen niet worden berekend"
+
+msgid "One or more Bayes factors are infinite"
+msgstr "Eén of meer Bayes-factoren zijn oneindig"
+
+msgid "Undefined hypothesis"
+msgstr "Ongedefinieerde hypothese"
+
+msgid "Contingency Tables"
+msgstr "Kruistabellen"
+
+msgid "Chi-Squared Tests"
+msgstr "Chi-kwadraat Toetsen"
+
+msgid ""
+"Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
+"      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Vovk-Sellke Maximum  <em>p</em>-Ratio:Gebaseerd op de  <em>p</em>-waarde, \n"
+"      De maximaal mogelijke kansen ten gunste van H%1$s boven H%2$s is "
+"gelijk aan %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
+
+msgid "Log Odds Ratio"
+msgstr "Log Odds Ratio"
+
+msgid "%.0f%% Confidence Intervals"
+msgstr "%.0f%% Betrouwbaarheidsintervallen"
+
+msgid "Nominal"
+msgstr "Nominaal"
+
+msgid "Ordinal Gamma"
+msgstr "Ordinaal Gamma"
+
+msgid "95%% Confidence Intervals"
+msgstr "95%% Betrouwbaarheidsintervallen"
+
+msgid "Gamma"
+msgstr "Gamma"
+
+msgid "Standard Error"
+msgstr "Standaardfout"
+
+msgid "Kendall's Tau-b"
+msgstr "Kendall's Tau-b"
+
+msgid "Z"
+msgstr "Z"
+
+msgid "VS-MPR%s"
+msgstr "VS-MPR%s"
+
+msgid "Value"
+msgstr "Waarde"
+
+msgid "df"
+msgstr "vg"
+
+msgid "Contingency coefficient"
+msgstr "Contingency coëfficiënt"
+
+msgid "Phi-coefficient"
+msgstr "Phi-coëfficiënt"
+
+msgid "Cramer's V"
+msgstr "Cramer's V"
+
+msgid ""
+"Value could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+"Waarde kon niet worden berekend - Minstens een rij of kolom bevat slechts "
+"nullen"
+
+msgid "Lambda (rows)"
+msgstr ""
+
+msgid "Lambda (columns)"
+msgstr ""
+
+msgid "Lambda (symmetric)"
+msgstr ""
+
+msgid "is less than"
+msgstr "is minder dan"
+
+msgid "is greater than"
+msgstr "is meer dan"
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"%2$s <em>%3$s</em>."
+msgstr ""
+"Voor alle toetsen specificeert de alternatieve hypothese dat groep <em>%1$s</"
+"em> %2$s <em>%3$s</em>."
+
+msgid "Expected count"
+msgstr "Verwacht aantal"
+
+msgid "%% within row"
+msgstr "%% binnen rij"
+
+msgid "%% within column"
+msgstr "%% binnen kolom"
+
+msgid "%% of total"
+msgstr "%% van totaal"
+
+msgid "N"
+msgstr "N"
+
+msgid ""
+"%s could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+"%s kon niet worden berekend - Minstens een rij of kolom bevat slechts nullen"
+
+msgid "%s continuity correction"
+msgstr "%s continuïteits correctie"
+
+msgid "Likelihood ratio"
+msgstr "Likelihood ratio"
+
+msgid "Odds ratio restricted to 2 x 2 tables"
+msgstr "Odds ratio beperkt tot 2 x 2 tabellen"
+
+msgid "Fisher's exact test"
+msgstr "Fisher's exacte toets"
+
+msgid "Bayesian Contingency Tables Tests"
+msgstr "Bayesiaanse Kruistabellen Toetsen"
+
+msgid "%.0f%% Credible Interval"
+msgstr "%.0f%% Geloofwaardigheidsinterval"
+
+msgid "Log Odds Ratio Plots"
+msgstr "Log Odds Ratio Grafieken"
+
+msgid "Odds ratio for this model not yet implemented"
+msgstr "Odds ratio nog niet geïmplementeerd voor dit model"
+
+msgid "The Bayes factor is undefined"
+msgstr "De Bayes factor is niet gedefinieerd"
+
+msgid "The Bayes factor is too small"
+msgstr "De Bayes factor is te klein"
+
+msgid "The Bayes factor is infinite"
+msgstr "De Bayes factor is oneindig"
+
+msgid "median Log OR ="
+msgstr "mediaan Log OR ="
+
+msgid "Poisson"
+msgstr "Poisson"
+
+msgid "Joint multinomial"
+msgstr "Joint multinomiaal"
+
+msgid "Independent multinomial"
+msgstr "Onafhankelijk multinomiaal"
+
+msgid "Hypergeometric"
+msgstr "Hypergeometrisch"
+
+msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
+msgstr ""
+"Hypergeometrische verhouidingstabellen toets beperkt tot 2 x 2 tabellen"
+
+msgid "Proportion test restricted to 2 x 2 tables"
+msgstr "Proportie toets beperkt tot 2 x 2 tabellen"
+
+msgid "is not equal to"
+msgstr "is niet gelijk aan"
+
+msgid "Invalid sampling model selected"
+msgstr "Invalide steekproeven model geselecteerd"
+
+msgid "Odds ratio"
+msgstr "Odds ratio"
+
+msgid "Odd ratio for this model not yet implemented"
+msgstr "Odds ratio is nog niet geïmplementeerd voor dit model"
+
+msgid "Cramer's V for this model not yet implemented"
+msgstr "Cramer's V nog niet geïmplementeerd voor dit model"
+
+msgid "Posterior"
+msgstr "Posterior"
+
+msgid "Expected counts not supported without observed counts."
+msgstr "Verwachte aantallen niet ondersteund zonder geobserveerde aantallen."
+
+msgid "No expected counts entered."
+msgstr "Geen verwachte aantallen ingevoerd."
+
+msgid ""
+"Invalid counts: variable does not match the number of levels of the factor. "
+"When counts are specified, each row of the data set must represent a unique "
+"level of the factor."
+msgstr ""
+"Ongeldige aantallen: de variabele past niet bij het aantal niveaus van de "
+"factor. Wanneer de aantallen worden gespecificeerd, moet elke rij van de "
+"gegevens een uniek niveau van de factor vertegenwoordigen."
+
+msgid ""
+"Invalid expected counts: variable does not match the number of levels of the "
+"factor."
+msgstr ""
+"Ongeldig aantallen: de variabele past niet bij het aantal niveaus van de "
+"factor."
+
+msgid "Invalid counts: variable must contain only integer values."
+msgstr ""
+"Ongeldig aantallen: de variabele kan alleen uit gehele waarden bestaan."
+
+msgid "Confidence intervals are based on independent binomial distributions."
+msgstr ""
+"Betrouwbaarheidsintervallen zijn gebaseerd op onafhankelijke binomiale "
+"verdelingen."
+
+msgid "Could not compute confidence intervals."
+msgstr "Kon betrouwbaarheidsintervallen niet berekenen."
+
+msgid "Factor"
+msgstr "Factor"
+
+msgid "Observed"
+msgstr "Geobserveerd"
+
+msgid "Expected: %s"
+msgstr "Verwacht: %s"
+
+msgid "Expected"
+msgstr "Verwacht"
+
+msgid "%s%% Confidence Interval"
+msgstr "%s%% Betrouwbaarheidsinterval"
+
+msgid "Descriptives Plot"
+msgstr "Beschrijvend Diagram"
+
+msgid "Observed counts"
+msgstr "Geobserveerde aantallen"
+
+msgid "Observed proportions"
+msgstr "Geobserveerde proporties"
+
+msgid "Bayesian Multinomial Test"
+msgstr "Bayesiaanse Multinomiale Toets"
+
+msgid "Levels"
+msgstr "Niveaus"
+
+msgid "Credible"
+msgstr "Geloofwaardigheid"
+
+msgid ""
+"Credible intervals are based on independent binomial distributions with flat "
+"priors."
+msgstr ""
+"Geloofwaardigheidsintervallen zijn gebaseerd op onafhankelijke binomiale "
+"verdelingen met flat priors."
+
+msgid "Confidence"
+msgstr "Betrouwbaarheid"
+
+msgid "%1$s%% %2$s Interval"
+msgstr "%1$s%% %2$s Interval"
+
+msgid "Could not compute %s Intervals."
+msgstr "Kon %s intervallen niet berekenen."
+
+msgid "Descriptives plot"
+msgstr "Beschrijvend diagram"
+
+msgid "Observed Counts"
+msgstr "Geobserveerde Aantallen"
+
+msgid "Observed Proportions"
+msgstr "Geobserveerde Proporties"
+
+msgid "ANOVA"
+msgstr "ANOVA"
+
+msgid "Deviance"
+msgstr "Afwijking"
+
+msgid "Residual df"
+msgstr "Residu vg"
+
+msgid "Residual Deviance"
+msgstr "Residu afwijking"
+
+msgid "Coefficients"
+msgstr "Coëfficiënten"
+
+msgid "Estimate"
+msgstr "Schatting"
+
+msgid "%s%% Confidence Intervals"
+msgstr "%s%% Betrouwbaarheidsinterval"
+
+msgid ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
+"the maximum possible odds in favor of H%1$s over H%2$s equals \n"
+"1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Gebaseerd op de <em>p</em>-waarde, \n"
+"de maximaal mogelijke kansen ten gunste van H%1$s boven H%2$s is \n"
+"1/(-e <em>p</em> log(<em>p</em>)) voor <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri, & Berger, 2001)."
+
+msgid "variables cannot be read"
+msgstr "variabelen kunnen niet worden gelezen"
+
+msgid "R Package error: %s"
+msgstr "R Package fout: %s"
+
+msgid "R Package error: Cannot retrieve table probabilities"
+msgstr "R Package fout: kan tabelkansen niet ophalen"
+
+msgid "Total number of models visited = %i"
+msgstr "Totaal aantal modellen bezocht = %i"
+
+msgid "Submodel specified is not within possible submodels"
+msgstr "Gespecificeerd submodel niet binnen mogelijke submodellen"
+
+msgid "<em>Model formula:</em>"
+msgstr "<em>Model formule:</em>"
+
+msgid "<em>Posterior model probability =</em>"
+msgstr "<em>Posterior model kans =</em>"
+
+msgid "Model Comparison"
+msgstr "Model Vergelijking"
+
+msgid "BF<sub>10</sub>"
+msgstr "BF<sub>10</sub>"
+
+msgid "BF<sub>01</sub>"
+msgstr "BF<sub>01</sub>"
+
+msgid "Log(BF<sub>10</sub>)"
+msgstr "Log(BF<sub>10</sub>)"
+
+msgid "Posterior Summary Statistics"
+msgstr "Posterior Kengetallen"
+
+msgid "P(incl|data)"
+msgstr "P(incl|data)"
+
+msgid "Mean"
+msgstr "Gemiddelde"
+
+msgid "Variance"
+msgstr "Variantie"
+
+msgid "%s%% Credible intervals"
+msgstr "%s%% Geloofwaardigheidsintervallen"
+
+msgid "Posterior Summary Statistics For Submodel %s"
+msgstr "Posterior Kengetallen Voor Submodel %s"
+
+msgid "%.0f%% Credible intervals"
+msgstr "%.0f%% Geloofwaardigheidsintervallen"
