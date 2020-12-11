@@ -1,0 +1,868 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "Frequencies"
+msgstr "Frequenties"
+
+msgctxt "Description|"
+msgid ""
+"This module offers the standard Frequentist and Bayesian frequency analyses."
+msgstr ""
+"Deze module biedt de standaard Frequentistische en Bayesiaanse frequentie "
+"analyses."
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr "Klassiek"
+
+msgctxt "Description|"
+msgid "Binomial Test"
+msgstr "Binomiaal Toets"
+
+msgctxt "Description|"
+msgid "Multinomial Test"
+msgstr "Multinomiale Toets"
+
+msgctxt "Description|"
+msgid "Contingency Tables"
+msgstr "Kruistabellen"
+
+msgctxt "Description|"
+msgid "Log-Linear Regression"
+msgstr "Log-Lineaire Regressie"
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr "Bayesiaans"
+
+msgctxt "Description|"
+msgid "Bayesian Binomial Test"
+msgstr "Bayesiaanse Binomiaal Toets"
+
+msgctxt "Description|"
+msgid "A/B Test"
+msgstr "A/B Toets"
+
+msgctxt "Description|"
+msgid "Bayesian A/B Test"
+msgstr "Bayesiaanse A/B Toets"
+
+msgctxt "Description|"
+msgid "Bayesian Multinomial Test"
+msgstr "Bayesiaanse Multinomiale Toets"
+
+msgctxt "Description|"
+msgid "Bayesian Contingency Tables"
+msgstr "Bayesiaanse Kruistabellen"
+
+msgctxt "Description|"
+msgid "Bayesian Log-Linear Regression"
+msgstr "Bayesiaanse Log-Lineaire Regressie"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 1"
+msgstr "Successen groep 1"
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 1"
+msgstr "Steekproefgrootte groep 1"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 2"
+msgstr "Successen groep 2"
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 2"
+msgstr "Steekproefgrootte groep 2"
+
+msgctxt "ABTestBayesian|"
+msgid "Normal Prior on Log Odds Ratio"
+msgstr "Normale a priori verdeling voor de log odds ratio"
+
+msgctxt "ABTestBayesian|"
+msgid "μ:"
+msgstr "μ:"
+
+msgctxt "ABTestBayesian|"
+msgid "σ:"
+msgstr "σ:"
+
+msgctxt "ABTestBayesian|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "ABTestBayesian|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior and posterior"
+msgstr "Prior en posterior"
+
+msgctxt "ABTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Sequentiële analyse"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "ABTestBayesian|"
+msgid "Bayes factor robustness check"
+msgstr "Bayes factor robuustheidsevaluatie"
+
+msgctxt "ABTestBayesian|"
+msgid "Order"
+msgstr "Volgorde"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to best model"
+msgstr "Vergelijk met beste model"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to null model"
+msgstr "Vergelijk met nulmodel"
+
+msgctxt "ABTestBayesian|"
+msgid "Advanced Options"
+msgstr "Geavanceerde opties"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "Prior Model Kans"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio = 0"
+msgstr "Log odds ratio = 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio > 0"
+msgstr "Log odds ratio > 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio < 0"
+msgstr "Log odds ratio < 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio ≠ 0"
+msgstr "Log odds ratio ≠ 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Sampling"
+msgstr "Steekproef nemen"
+
+msgctxt "ABTestBayesian|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
+
+msgctxt "ABTestBayesian|"
+msgid "Robustness Plot"
+msgstr "Robuustheid Diagram"
+
+msgctxt "ABTestBayesian|"
+msgid "No. Steps"
+msgstr "Aantal Stappen"
+
+msgctxt "ABTestBayesian|"
+msgid "Step Range"
+msgstr "Stappenreeks"
+
+msgctxt "ABTestBayesian|"
+msgid "lower:"
+msgstr "onder:"
+
+msgctxt "ABTestBayesian|"
+msgid "upper:"
+msgstr "boven:"
+
+msgctxt "BinomialTest|"
+msgid "Variables"
+msgstr "Variabelen"
+
+msgctxt "BinomialTest|"
+msgid "Test value: "
+msgstr "Toetswaarde: "
+
+msgctxt "BinomialTest|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "BinomialTest|"
+msgid "≠ Test value"
+msgstr "≠ Toetswaarde"
+
+msgctxt "BinomialTest|"
+msgid "> Test value"
+msgstr "> Toetswaarde"
+
+msgctxt "BinomialTest|"
+msgid "< Test value"
+msgstr "< Toetswaarde"
+
+msgctxt "BinomialTest|"
+msgid "Additional Statisics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "BinomialTest|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "BinomialTest|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "BinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "BinomialTest|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "BinomialTest|"
+msgid "Descriptive plots"
+msgstr "Beschrijvende diagrammen"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Test value: "
+msgstr "Toetswaarde: "
+
+msgctxt "BinomialTestBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "BinomialTestBayesian|"
+msgid "≠ Test value"
+msgstr "≠ Toetswaarde"
+
+msgctxt "BinomialTestBayesian|"
+msgid "> Test value"
+msgstr "> Toetswaarde"
+
+msgctxt "BinomialTestBayesian|"
+msgid "< Test value"
+msgstr "< Toetswaarde"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior and posterior"
+msgstr "Prior en posterior"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Additional info"
+msgstr "Aanvullende info"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Sequentiële analyse"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Descriptive plots"
+msgstr "Beschrijvende diagrammen"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter a"
+msgstr "Beta prior: parameter a"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter b"
+msgstr "Beta prior: parameter b"
+
+msgctxt "ContingencyTables|"
+msgid "Rows"
+msgstr "Rijen"
+
+msgctxt "ContingencyTables|"
+msgid "Columns"
+msgstr "Kolommen"
+
+msgctxt "ContingencyTables|"
+msgid "Counts"
+msgstr "Aantallen"
+
+msgctxt "ContingencyTables|"
+msgid "Layers"
+msgstr "Lagen"
+
+msgctxt "ContingencyTables|"
+msgid "Statistics"
+msgstr "Statistieken"
+
+msgctxt "ContingencyTables|"
+msgid "χ²"
+msgstr "χ²"
+
+msgctxt "ContingencyTables|"
+msgid "χ² continuity correction"
+msgstr "χ² continuïteitscorrectie"
+
+msgctxt "ContingencyTables|"
+msgid "Likelihood ratio"
+msgstr "Waarschijnlijkheidsratio"
+
+msgctxt "ContingencyTables|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "ContingencyTables|"
+msgid "Log odds ratio (2x2 only)"
+msgstr "Log odds ratio (enkel 2x2)"
+
+msgctxt "ContingencyTables|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "ContingencyTables|"
+msgid "Alt. Hypothesis (Fisher's exact test)"
+msgstr "Alt. hypothese (Fisher's exacte toets)"
+
+msgctxt "ContingencyTables|"
+msgid "Group one ≠ Group two"
+msgstr "Groep één ≠ groep twee"
+
+msgctxt "ContingencyTables|"
+msgid "Group one > Group two"
+msgstr "Groep één > groep twee"
+
+msgctxt "ContingencyTables|"
+msgid "Group one < Group two"
+msgstr "Groep één < groep twee"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal"
+msgstr "Nominaal"
+
+msgctxt "ContingencyTables|"
+msgid "Contingency coefficient"
+msgstr "Contingentiecoëfficiënt"
+
+msgctxt "ContingencyTables|"
+msgid "Phi and Cramer's V"
+msgstr "Phi en Cramer's V"
+
+msgctxt "ContingencyTables|"
+msgid "Lambda"
+msgstr "Lambda"
+
+msgctxt "ContingencyTables|"
+msgid "Uncertainty coefficient"
+msgstr "Onzekerheidscoëfficiënt"
+
+msgctxt "ContingencyTables|"
+msgid "Ordinal"
+msgstr "Ordinaal"
+
+msgctxt "ContingencyTables|"
+msgid "Gamma"
+msgstr "Gamma"
+
+msgctxt "ContingencyTables|"
+msgid "Somers' d"
+msgstr "Somers' d"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-b"
+msgstr "Kendall's tau-b"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-c"
+msgstr "Kendall's tau-c"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal By Interval"
+msgstr "Nominaal voor interval"
+
+msgctxt "ContingencyTables|"
+msgid "Eta"
+msgstr "Eta"
+
+msgctxt "ContingencyTables|"
+msgid "Cochran's and Mantel-Haenszel statistics"
+msgstr "Cochran's en Mantel-Haenszel statistieken"
+
+msgctxt "ContingencyTables|"
+msgid "Test common odds ratio equals"
+msgstr "Toets common odds ratio equals"
+
+msgctxt "ContingencyTables|"
+msgid "Cells"
+msgstr "Cellen"
+
+msgctxt "ContingencyTables|"
+msgid "Expected"
+msgstr "Verwachte"
+
+msgctxt "ContingencyTables|"
+msgid "Hide small counts"
+msgstr "Verberg kleine aantallen"
+
+msgctxt "ContingencyTables|"
+msgid "Less than"
+msgstr "Lager dan"
+
+msgctxt "ContingencyTables|"
+msgid "Z-Test"
+msgstr "Z-toets"
+
+msgctxt "ContingencyTables|"
+msgid "Compare column proportions"
+msgstr "Vergelijk kolomproporties"
+
+msgctxt "ContingencyTables|"
+msgid "Adjust p-values"
+msgstr "Wijzig p-waarden"
+
+msgctxt "ContingencyTables|"
+msgid "Percentages"
+msgstr "Percentages"
+
+msgctxt "ContingencyTables|"
+msgid "Row"
+msgstr "Rij"
+
+msgctxt "ContingencyTables|"
+msgid "Column"
+msgstr "Kolom"
+
+msgctxt "ContingencyTables|"
+msgid "Total"
+msgstr "Totaal"
+
+msgctxt "ContingencyTables|"
+msgid "Residuals"
+msgstr "Residuen"
+
+msgctxt "ContingencyTables|"
+msgid "Unstandardized"
+msgstr "Ongestandardiseerd"
+
+msgctxt "ContingencyTables|"
+msgid "Standardized"
+msgstr "Gestandaardiseerd"
+
+msgctxt "ContingencyTables|"
+msgid "Adjusted standardized"
+msgstr "Aangepast gestandaardiseerd"
+
+msgctxt "ContingencyTables|"
+msgid "Options"
+msgstr "Opties"
+
+msgctxt "ContingencyTables|"
+msgid "Row Order"
+msgstr "Volgorde rij"
+
+msgctxt "ContingencyTables|"
+msgid "Ascending"
+msgstr "Toenemende"
+
+msgctxt "ContingencyTables|"
+msgid "Descending"
+msgstr "Afnemende"
+
+msgctxt "ContingencyTables|"
+msgid "Column Order"
+msgstr "Volgorde kolom"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Rows"
+msgstr "Rijen"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Columns"
+msgstr "Kolommen"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Counts"
+msgstr "Aantallen"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Layers"
+msgstr "Lagen"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Statistics"
+msgstr "Statistieken"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Sample"
+msgstr "Steekproef"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Poisson"
+msgstr "Poisson"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Joint multinomial"
+msgstr "Samengesteld multinomiaal"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, rows fixed"
+msgstr "Onafh. multinomiaal, rijen vastgezet"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, columns fixed"
+msgstr "Onafh. multinomiaal, kolommen vastgezet"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Hypergeometric (2x2 only)"
+msgstr "Hypergeometrisch (enkel 2x2)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Log odds ratio (2x2 only)"
+msgstr "Log odds ratio (enkel 2x2)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cramer's V"
+msgstr "Cramer's V"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "Alt. hypothese"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one ≠ Group two"
+msgstr "Groep één ≠ groep twee"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one > Group two"
+msgstr "Groep één > groep twee"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one < Group two"
+msgstr "Groep één < groep twee"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional info"
+msgstr "Aanvullende info"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior concentration"
+msgstr "Prior concentratie"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cells"
+msgstr "Cellen"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Percentages"
+msgstr "Percentages"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row"
+msgstr "Rij"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column"
+msgstr "Kolom"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Total"
+msgstr "Totaal"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Options"
+msgstr "Opties"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row Order"
+msgstr "Volgorde rij"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Ascending"
+msgstr "Toenemend"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Descending"
+msgstr "Afnemend"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column Order"
+msgstr "Volgorde kolom"
+
+msgctxt "MultinomialTest|"
+msgid "Factor"
+msgstr "Factor"
+
+msgctxt "MultinomialTest|"
+msgid "Counts"
+msgstr "Aantallen"
+
+msgctxt "MultinomialTest|"
+msgid "Expected Counts"
+msgstr "Verwachte aantallen"
+
+msgctxt "MultinomialTest|"
+msgid "Test Values"
+msgstr "Toetswaarden"
+
+msgctxt "MultinomialTest|"
+msgid "Equal proportions (multinomial test)"
+msgstr "Gelijke proporties (multinomiale toets)"
+
+msgctxt "MultinomialTest|"
+msgid "Expected proportions (χ² test)"
+msgstr "Verwachte proporties (χ² toets)"
+
+msgctxt "MultinomialTest|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "MultinomialTest|"
+msgid "Confidence interval"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "MultinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "MultinomialTest|"
+msgid "Display"
+msgstr "Weergeven"
+
+msgctxt "MultinomialTest|"
+msgid "Proportions"
+msgstr "Proportie"
+
+msgctxt "MultinomialTest|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives plot"
+msgstr "Beschrijvend diagram"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Factor"
+msgstr "Factor"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Counts"
+msgstr "Aantallen"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Expected Counts"
+msgstr "Verwachte aantallen"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Test Values"
+msgstr "Toetswaarden"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Equal proportions"
+msgstr "Gelijke proporties"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Expected proportions"
+msgstr "Verwachte proporties"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Additional Statistics"
+msgstr "Aanvullende statistieken"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives"
+msgstr "Beschrijvende statistiek"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Geloofwaardigheidsinterval"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Display"
+msgstr "Weergeven"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Proportions"
+msgstr "Proporties"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Plots"
+msgstr "Grafieken"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives plot"
+msgstr "Beschrijvend diagram"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "Geen factor gespecificeerd"
+
+msgctxt "RegressionLogLinear|"
+msgid "Counts (optional)"
+msgstr "Aantallen (optioneel)"
+
+msgctxt "RegressionLogLinear|"
+msgid "Factors"
+msgstr "Factoren"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "RegressionLogLinear|"
+msgid "Components"
+msgstr "Componenten"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model Terms"
+msgstr "Modeltermen"
+
+msgctxt "RegressionLogLinear|"
+msgid "Statistics"
+msgstr "Statistieken"
+
+msgctxt "RegressionLogLinear|"
+msgid "Regression Coefficient"
+msgstr "Regressiecoëfficiënt"
+
+msgctxt "RegressionLogLinear|"
+msgid "Estimates"
+msgstr "Schattingen"
+
+msgctxt "RegressionLogLinear|"
+msgid "Confidence intervals"
+msgstr "Betrouwbaarheidsinterval"
+
+msgctxt "RegressionLogLinear|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "RegressionLogLinear|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Vovk-Sellke maximum p-ratio"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Counts (optional)"
+msgstr "Aantallen (optioneel)"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Factors"
+msgstr "Factoren"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Shape"
+msgstr "Vorm"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Scale"
+msgstr "Schaal"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Cut-offs"
+msgstr "Model grenzen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Display best"
+msgstr "Toon beste"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "models"
+msgstr "modellen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Posterior prob."
+msgstr "Posterior kans"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Components"
+msgstr "Componenten"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Terms"
+msgstr "Modeltermen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Statistics"
+msgstr "Statistieken"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Regression Coefficients"
+msgstr "Regressiecoëfficiënten"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Estimates"
+msgstr "Schattingen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Credible intervals"
+msgstr "Geloofwaardigheidsintervallen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Submodel"
+msgstr "Submodel"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Advanced"
+msgstr "Geavanceerd"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Samples"
+msgstr "Steekproeven"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Auto"
+msgstr "Auto"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Manual"
+msgstr "Handmatig"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "No. samples"
+msgstr "Aantal steekproeven"
