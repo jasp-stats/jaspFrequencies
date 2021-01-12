@@ -45,6 +45,20 @@ Form
 
 		Group
 		{
+		    CheckBox
+			{
+				name: "oddsRatioNormal"; label: qsTr("Odds ratio (2x2 only)")
+				CIField { name: "oddsRatioConfidenceIntervalIntervalNormal"; label: qsTr("Confidence interval") }
+				RadioButtonGroup
+				{
+					title: qsTr("Alt. Hypothesis (Fisher's exact test)")
+					name: "oddsRatioHypothesisNormal"
+					RadioButton { value: "two.sided";	label: qsTr("Group one ≠ Group two"); checked: true	}
+					RadioButton { value: "greater";		label: qsTr("Group one > Group two")				}
+					RadioButton { value: "less";		label: qsTr("Group one < Group two")				}
+				}
+			}
+			
 			CheckBox
 			{
 				name: "oddsRatio"; label: qsTr("Log odds ratio (2x2 only)")
@@ -58,6 +72,8 @@ Form
 					RadioButton { value: "less";		label: qsTr("Group one < Group two")				}
 				}
 			}
+			
+
 		}
 
 		Group

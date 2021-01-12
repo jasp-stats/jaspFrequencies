@@ -33,6 +33,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
   # Output tables (each calls its own results function)
   .crossTabMain(      jaspResults, dataset, options, analyses, ready)
   .crossTabChisq(     jaspResults, dataset, options, analyses, ready)
+  .crossTabOdds(      jaspResults, dataset, options, analyses, ready)
   .crossTabLogOdds(   jaspResults, dataset, options, analyses, ready)
   .crossTabNominal(   jaspResults, dataset, options, analyses, ready)
   .crossTabGamma(     jaspResults, dataset, options, analyses, ready)
@@ -201,6 +202,47 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     .crossTabSetErrorOrFill(res, crossTabChisq)
   }
 }
+
+
+.crossTabOdds <- function(jaspResults, dataset, options, analyses, ready){
+  if (!options$oddsRatioNormal)
+    return ()
+  
+  for (i in 1:nrow(analyses)) {
+    analysis <- analyses[i,]
+    analysisContainer <- jaspResults[[paste0("container",i)]]
+    if (!is.null(analysisContainer[["crossTabOdds"]]))
+      next
+    
+    # Create table
+    crossTabOdds <- createJaspTable(title = gettext("Odds Ratio")) 
+    crossTabOdds$dependOn(c("oddsRatioNormal", "oddsRatioConfidenceIntervalIntervalNormal", 
+                            "oddsRatioHypothesisNormal", "rowOrder", "columnOrder"))
+    crossTabOdds$showSpecifiedColumnsOnly <- TRUE
+    crossTabOdds$position <- 3
+    
+    ci.label <- gettextf("%.0f%% Confidence Intervals", 100*options$oddsRatioConfidenceIntervalIntervalNormal)
+    
+    # Add columns to table
+    .crossTabLayersColumns(crossTabOdds, analysis)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label)
+    
+    analysisContainer[["crossTabOdds"]] <- crossTabOdds
+    analysis                               <- as.list(analysis)
+    groupList                              <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis,     
+                                                                     ready) # Compute/get Group List
+    
+    # Add note for one-sided tests
+    .crossTabOddsNote(crossTabOdds, groupList, options, ready)
+    
+    res <- try(.crossTabOddsRatioRows(analysisContainer, analysis$rows, groupList, options, ready))
+    
+    .crossTabSetErrorOrFill(res, crossTabOdds)
+  }
+}
+    
+    
 
 .crossTabLogOdds <- function(jaspResults, dataset, options, analyses, ready) {
   if(!options$oddsRatio)
@@ -409,6 +451,15 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
   if (options$VovkSellkeMPR)  table$addColumnInfo(name = paste0("MPR[",   fold, "]"),   title = gettextf("VS-MPR%s", "\u002A"), type = "number")
 }
 
+.crossTabOddsAddColInfo <- function(table, fold, ci.label) {
+  table$addColumnInfo(name = paste0("type[",  fold, "]"), title = "",                        type = "string")
+  table$addColumnInfo(name = paste0("value[", fold, "]"), title = gettext("Odds Ratio"),     type = "number")
+  table$addColumnInfo(name = paste0("low[",   fold, "]"), title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
+  table$addColumnInfo(name = paste0("up[",    fold, "]"), title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
+  table$addColumnInfo(name = paste0("p[",     fold, "]"), title = gettext("p"),              type = "pvalue")
+  
+}
+
 .crossTabLogOddsAddColInfo <- function(table, fold, ci.label) {
   table$addColumnInfo(name = paste0("type[",  fold, "]"), title = "",                        type = "string")
   table$addColumnInfo(name = paste0("value[", fold, "]"), title = gettext("Log Odds Ratio"), type = "number")
@@ -596,6 +647,23 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     return(!all((counts %% 1) == 0))
   }
   return(FALSE)
+}
+
+.crossTabOddsNote <- function(crossTabOdds, groupList, options, ready){
+  if(ready){
+    if(length(groupList$group.matrices) >= 1  & options$oddsRatioHypothesisNormal != "two.sided"){
+      
+      gp1 <- dimnames(groupList$group.matrices[[1]])[[1]][1]
+      gp2 <- dimnames(groupList$group.matrices[[1]])[[1]][2]
+      
+      if(options$oddsRatioHypothesisNormal == "less") lessIsMore <- gettext("is less than")
+      else                                            lessIsMore <- gettext("is greater than")
+      
+      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", gp1, lessIsMore, gp2)
+      
+      crossTabOdds$addFootnote(message)
+    }
+  }
 }
 
 .crossTabLogOddsNote <- function(crossTabLogOdds, groupList, options, ready){
