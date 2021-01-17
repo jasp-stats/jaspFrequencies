@@ -224,11 +224,11 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     ci.label <- gettextf("%.0f%% Confidence Intervals", 100*options$oddsRatioConfidenceIntervalIntervalNormal)
     
     # Add columns to table
-    .crossTabLayersColumns(crossTabOdds, analysis)
+    .crossTabLayersColumns( crossTabOdds, analysis)
     .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label)
     .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label)
     
-    analysisContainer[["crossTabOdds"]] <- crossTabOdds
+    analysisContainer[["crossTabOdds"]]    <- crossTabOdds
     analysis                               <- as.list(analysis)
     groupList                              <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis,     
                                                                      ready) # Compute/get Group List
@@ -236,7 +236,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     # Add note for one-sided tests
     .crossTabOddsNote(crossTabOdds, groupList, options, ready)
     
-    res <- try(.crossTabOddsRatioRows(analysisContainer, analysis$rows, groupList, options, ready))
+    res <- try(.crossTabOddsRatioNormalRows(analysisContainer, analysis$rows, groupList, options, ready))
     
     .crossTabSetErrorOrFill(res, crossTabOdds)
   }
@@ -258,7 +258,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     crossTabLogOdds <- createJaspTable(title = gettext("Log Odds Ratio"))
     crossTabLogOdds$dependOn(c("oddsRatio", "oddsRatioConfidenceIntervalInterval", "oddsRatioHypothesis", "rowOrder", "columnOrder"))
     crossTabLogOdds$showSpecifiedColumnsOnly <- TRUE
-    crossTabLogOdds$position <- 3
+    crossTabLogOdds$position <- 4
 
     ci.label <- gettextf("%.0f%% Confidence Intervals", 100*options$oddsRatioConfidenceIntervalInterval)
 
@@ -293,7 +293,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     crossTabNominal <- createJaspTable(title = gettext("Nominal"))
     crossTabNominal$dependOn(c("contingencyCoefficient", "phiAndCramersV", "lambda"))
     crossTabNominal$showSpecifiedColumnsOnly <- TRUE
-    crossTabNominal$position <- 4
+    crossTabNominal$position <- 5
     # Add columns to table
     .crossTabLayersColumns(crossTabNominal, analysis)
     if (options$contingencyCoefficient)
@@ -333,7 +333,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     crossTabGamma <- createJaspTable(title = gettext("Ordinal Gamma"))
     crossTabGamma$dependOn(c("gamma", "rowOrder", "columnOrder"))
     crossTabGamma$showSpecifiedColumnsOnly <- TRUE
-    crossTabGamma$position <- 5
+    crossTabGamma$position <- 6
 
     ci.label <- gettextf("95%% Confidence Intervals")
 
@@ -367,7 +367,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     crossTabKendallTau <- createJaspTable(title = "Kendall's Tau")
     crossTabKendallTau$dependOn(c("kendallsTauB", "VovkSellkeMPR", "rowOrder", "columnOrder"))
     crossTabKendallTau$showSpecifiedColumnsOnly <- TRUE
-    crossTabKendallTau$position <- 6
+    crossTabKendallTau$position <- 7
 
     # Add columns to table
     .crossTabLayersColumns(crossTabKendallTau, analysis)
@@ -1098,6 +1098,97 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     tests.rows[[length(tests.rows) + 1]] <- row
   }
   return(list(rows = tests.rows, rownames = row.rownames))
+}
+
+.crossTabOddsRatioNormalRows <- function(analysisContainer, var.name, groupList, options, ready) {
+  odds.ratio.rows <- list()
+  group.matrices  <- groupList$group.matrices
+  groups          <- groupList$groups
+  row.rownames    <- .crossTabRowName(groups)
+  
+  for (g in seq_along(group.matrices)) {
+    counts.matrix <- group.matrices[[g]]
+    if (!is.null(groups))
+      group <- groups[[g]]
+    else
+      group <- NULL
+    
+    row <- list()
+    row[["type[oddsRatio]"]] <- "Odds ratio"
+    if (ready) {
+      if ( ! identical(dim(counts.matrix),as.integer(c(2,2)))) {
+        row[["value[oddsRatio]"]] <- NaN
+        row[["low[oddsRatio]"]]   <- ""
+        row[["up[oddsRatio]"]]    <- ""
+        row[["p[oddsRatio]"]]     <- ""
+        stop(gettext("Odds ratio restricted to 2 x 2 tables"))
+      } else {
+        chi.result <- try({
+          chi.result  <- vcd::oddsratio(counts.matrix)
+          level       <- options$oddsRatioConfidenceIntervalIntervalNormal
+          CI          <- stats::confint(chi.result, level = level)
+          OR          <- exp(unname(chi.result$coefficients))
+          CI.low      <- exp(CI[1])
+          CI.high     <- exp(CI[2])
+        })
+        
+        if (isTryError(chi.result))
+          row[["value[oddsRatio]"]] <- NaN
+        else if (is.na(chi.result))
+          row[["value[oddsRatio]"]] <- NaN
+        else {
+          row[["value[oddsRatio]"]] <- OR
+          row[["low[oddsRatio]"]]   <- CI.low
+          row[["up[oddsRatio]"]]    <- CI.high
+          row[["p[oddsRatio]"]]     <- ""
+        }
+        row[["value[oddsRatio]"]] <- OR
+        row[["low[oddsRatio]"]]   <- CI.low
+        row[["up[oddsRatio]"]]    <- CI.high
+        row[["p[oddsRatio]"]]     <- ""
+      }
+    }
+    
+    row[["type[FisherTest]"]] <- gettext("Fisher's exact test ")
+    if (ready) {
+      
+      if ( ! identical(dim(counts.matrix),as.integer(c(2,2)))) {
+        row[["value[FisherTest]"]] <- NaN
+        row[["low[FisherTest]"]]   <- ""
+        row[["up[FisherTest]"]]    <- ""
+        row[["p[FisherTest]"]]     <- ""
+      } else {
+        chi.result <- try({
+          conf.level  <- options$oddsRatioConfidenceIntervalIntervalNormal
+          chi.result  <- stats::fisher.test(counts.matrix, conf.level = conf.level,
+                                            alternative = options$oddsRatioHypothesisNormal)
+          OR          <- unname(chi.result$estimate)
+          CI.low      <- chi.result$conf.int[1]
+          CI.high     <- chi.result$conf.int[2]
+          p           <- chi.result$p.value
+        })
+        
+        if (isTryError(chi.result))
+          row[["value[FisherTest]"]] <- NaN
+        else if (is.na(chi.result))
+          row[["value[FisherTest]"]] <- NaN
+        else {
+          row[["value[FisherTest]"]] <- OR
+          row[["low[FisherTest]"]]   <- CI.low
+          row[["up[FisherTest]"]]    <- CI.high
+          row[["p[FisherTest]"]]     <- p
+        }
+        row[["value[FisherTest]"]]   <- OR
+        row[["low[FisherTest]"]]     <- CI.low
+        row[["up[FisherTest]"]]      <- CI.high
+        row[["p[FisherTest]"]]       <- p
+      }
+    }
+    
+    row <- .crossTabLayerNames(row, group)
+    odds.ratio.rows[[length(odds.ratio.rows) + 1]] <- row
+  }
+  return(list(rows = odds.ratio.rows, rownames = row.rownames))
 }
 
 .crossTabOddsRatioRows <- function(analysisContainer, var.name, groupList, options, ready) {
