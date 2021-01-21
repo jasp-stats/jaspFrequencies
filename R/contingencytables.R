@@ -213,7 +213,8 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       next
 
     # Create table
-    crossTabOdds <- createJaspTable(title = ifelse(options[["LogOdds"]],"Log Odds Ratio", "Odds Ratio"))
+    title <- if (options[["LogOdds"]]) gettext("Log Odds Ratio") else gettext("Odds Ratio")
+    crossTabOdds <- createJaspTable(title = title)
     crossTabOdds$dependOn(c("LogOdds","oddsRatio", "oddsRatioConfidenceIntervalInterval",
                             "oddsRatioHypothesis", "rowOrder", "columnOrder"))
     crossTabOdds$showSpecifiedColumnsOnly <- TRUE
@@ -223,8 +224,8 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
     # Add columns to table
     .crossTabLayersColumns( crossTabOdds, analysis)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label, oddsTitle = title)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label, oddsTitle = title)
 
     analysisContainer[["crossTabLogOdds"]] <- crossTabOdds
     analysis                               <- as.list(analysis)
@@ -411,12 +412,12 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
   if (options$VovkSellkeMPR)  table$addColumnInfo(name = paste0("MPR[",   fold, "]"),   title = gettextf("VS-MPR%s", "\u002A"), type = "number")
 }
 
-.crossTabOddsAddColInfo <- function(table, fold, ci.label) {
-  table$addColumnInfo(name = paste0("type[",  fold, "]"), title = "",                        type = "string")
-  table$addColumnInfo(name = paste0("value[", fold, "]"), title = gettext("Odds Ratio"),     type = "number")
-  table$addColumnInfo(name = paste0("low[",   fold, "]"), title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
-  table$addColumnInfo(name = paste0("up[",    fold, "]"), title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
-  table$addColumnInfo(name = paste0("p[",     fold, "]"), title = gettext("p"),              type = "pvalue")
+.crossTabOddsAddColInfo <- function(table, fold, ci.label, oddsTitle) {
+                            table$addColumnInfo(name = paste0("type[",  fold, "]"),   title = "",                        type = "string")
+                            table$addColumnInfo(name = paste0("value[", fold, "]"),   title = oddsTitle,                 type = "number")
+                            table$addColumnInfo(name = paste0("low[",   fold, "]"),   title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
+                            table$addColumnInfo(name = paste0("up[",    fold, "]"),   title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
+                            table$addColumnInfo(name = paste0("p[",     fold, "]"),   title = gettext("p"),              type = "pvalue")
 
 }
 
