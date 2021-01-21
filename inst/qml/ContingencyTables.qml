@@ -45,9 +45,13 @@ Form
 
 		Group
 		{
-			CheckBox
+		    CheckBox
 			{
-				name: "oddsRatio"; label: qsTr("Log odds ratio (2x2 only)")
+				name: "oddsRatio"; label: qsTr("Odds ratio (2x2 only)")
+				CheckBox
+				{
+					name: "LogOdds";     label: qsTr("Log Odds Ratio");	checked: true
+				}
 				CIField { name: "oddsRatioConfidenceIntervalInterval"; label: qsTr("Confidence interval") }
 				RadioButtonGroup
 				{
