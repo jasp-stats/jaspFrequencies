@@ -186,3 +186,31 @@ test_that("Analysis handles errors", {
   errorMsg <- results[["results"]][["errorMessage"]]
   expect_is(errorMsg, "character")
 })
+
+
+options <- analysisOptions("ContingencyTables")
+options$columns <- "V2"
+options$contingencyCoefficient <- TRUE
+options$phiAndCramersV <- TRUE
+options$rows <- "V1"
+set.seed(1)
+# data is a random sample from https://github.com/jasp-stats/jasp-issues/issues/811
+dataset <- structure(list(V1 = c(1L, 2L, 1L, 2L, 1L, 0L, 2L, 0L, 0L, 1L), V2 = c(0L, 0L, 1L, 0L, 0L, 1L, 0L, 1L, 1L, 0L)), row.names = c(NA, -10L), class = "data.frame")
+results <- runAnalysis("ContingencyTables", dataset, options)
+
+test_that("Phi coefficient is only available for 2 by 2 contingency tables", {
+  tb <- results[["results"]][["container1"]][["collection"]][["container1_crossTabNominal"]]
+  table <- tb[["data"]]
+  jaspTools::expect_equal_tables(
+    test  = table,
+    ref   = list("Contingency coefficient", "Cramer's V ", "Phi-coefficient", 0.638284738504225, 0.82915619758885, "NaN"),
+    label = "values in the table"
+  )
+
+  footnote <- tb[["footnotes"]]
+  jaspTools::expect_equal_tables(
+    test  = footnote,
+    ref   = list("value[PhiCoef]", 15, 0, "Phi coefficient is only available for 2 by 2 contingency Tables"),
+    label = "footnote under the table"
+  )
+})

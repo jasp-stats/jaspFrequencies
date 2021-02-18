@@ -550,20 +550,27 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
   })
 
   if (ready) {
+
     chi.result <- try(vcd::assocstats(counts.matrix))
 
-    if (isTryError(chi.result))
-      row[[paste0("value[", type, "]")]] <- NaN
-    else if (is.na(chi.result[[val]])) {
-      row[[paste0("value[", type, "]")]] <- NaN
-      message                            <- gettext("Value could not be calculated - At least one row or column contains all zeros")
+    colName <- paste0("value[", type, "]")
 
-      analysisContainer[["crossTabNominal"]]$addFootnote(message, rowNames = rowname, colNames = paste0("value[", type, "]"))
+    if (isTryError(chi.result))
+      row[[colName]] <- NaN
+    else if (is.na(chi.result[[val]])) {
+      row[[colName]] <- NaN
+
+      message <- if (val == "phi" && !all(dim(counts.matrix) == 2L))
+        gettext("Phi coefficient is only available for 2 by 2 contingency Tables")
+      else
+        gettext("Value could not be calculated - At least one row or column contains all zeros")
+
+      analysisContainer[["crossTabNominal"]]$addFootnote(message, rowNames = rowname, colNames = colName)
     } else
-      row[[paste0("value[", type, "]")]] <- chi.result[[val]]
+      row[[colName]] <- chi.result[[val]]
   }
   else
-    row[[paste0("value[", type, "]")]] <- "."
+    row[[colName]] <- "."
 
   return(row)
 }
