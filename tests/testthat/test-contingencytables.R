@@ -12,7 +12,7 @@ test_that("Main table results match R, SPSS, SAS, Minitab", {
   results <- jaspTools::runAnalysis("ContingencyTables", "chisquare2.csv", options)
   
   # Main table
-  resultTable   <- results$results$container1$collection$container1_crossTabMain$data
+  resultTable   <- results[["results"]][["container1"]][["collection"]][["container1_crossTabMain"]][["data"]]
   
   jaspTools::expect_equal_tables(
     "test"=resultTable,
@@ -21,7 +21,7 @@ test_that("Main table results match R, SPSS, SAS, Minitab", {
   )
   
   # Chi-squared table
-  resultTable   <- results$results$container1$collection$container1_crossTabChisq$data
+  resultTable   <- results[["results"]][["container1"]][["collection"]][["container1_crossTabChisq"]][["data"]]
   
   jaspTools::expect_equal_tables(
     "test"=resultTable,
