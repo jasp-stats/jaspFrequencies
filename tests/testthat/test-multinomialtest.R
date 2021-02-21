@@ -31,9 +31,8 @@ test_that("Main table results match R, SPSS, SAS", {
   
   jaspTools::expect_equal_tables("test"= resultTable, "ref"=refTable)
   
-  # Descriptive Plot
+  # TODO(Alexander) Descriptive Plot put in separate tests
   resultPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  # jaspTools::expect_equal_plots(resultPlot, "descriptives-1", dir="MultinomialTest")
 })
 
 test_that("Main table results match", {
