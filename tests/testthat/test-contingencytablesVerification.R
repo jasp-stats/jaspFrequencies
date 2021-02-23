@@ -7,6 +7,7 @@ context("Contingency Tables -- Verification project")
 options <- jaspTools::analysisOptions("ContingencyTables")
 options$rows <- "Preference"
 options$columns <- "Sex"
+options$counts <- ""
 
 results <- jaspTools::runAnalysis("ContingencyTables", "chisquare2.csv", options)
 
