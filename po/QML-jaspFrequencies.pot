@@ -319,10 +319,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr ""
 
 msgctxt "ContingencyTables|"
-msgid "Log odds ratio (2x2 only)"
-msgstr ""
-
-msgctxt "ContingencyTables|"
 msgid "Confidence interval"
 msgstr ""
 
@@ -860,4 +856,12 @@ msgstr ""
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Odds ratio (2x2 only)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Log Odds Ratio"
 msgstr ""

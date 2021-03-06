@@ -324,10 +324,6 @@ msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Vovk-Sellke maximum p-ratio"
 
 msgctxt "ContingencyTables|"
-msgid "Log odds ratio (2x2 only)"
-msgstr "Log odds ratio (enkel 2x2)"
-
-msgctxt "ContingencyTables|"
 msgid "Confidence interval"
 msgstr "Betrouwbaarheidsinterval"
 
@@ -866,3 +862,11 @@ msgstr "Handmatig"
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
 msgstr "Aantal steekproeven"
+
+msgctxt "ContingencyTables|"
+msgid "Odds ratio (2x2 only)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Log Odds Ratio"
+msgstr ""

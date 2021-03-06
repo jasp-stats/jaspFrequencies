@@ -1,20 +1,27 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspFrequencies 0.11.0\n"
+"Project-Id-Version: R 3.6.1\n"
+"Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: tr\n"
+"PO-Revision-Date: 2020-12-02 21:29+0000\n"
+"Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspFrequencies/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: en_US\n"
+"X-Source-Language: American English\n"
+"X-Qt-Contexts: true\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
 
+#, fuzzy
 msgid "Models"
-msgstr ""
+msgstr "Modelo"
 
 msgid "P(M)"
 msgstr ""
@@ -39,8 +46,9 @@ msgstr ""
 msgid "Log odds ratio %s 0"
 msgstr ""
 
+#, fuzzy
 msgid "Descriptives"
-msgstr ""
+msgstr "Descritivas"
 
 msgid "Counts"
 msgstr ""
@@ -48,8 +56,9 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
+#, fuzzy
 msgid "Proportion"
-msgstr ""
+msgstr "Opções de Diagramas"
 
 msgid "Group 1"
 msgstr ""
@@ -57,17 +66,20 @@ msgstr ""
 msgid "Group 2"
 msgstr ""
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Posteriores marginal"
 
+#, fuzzy
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Removar esta análise"
 
 msgid "Bayes Factor Robustness Check"
 msgstr ""
 
+#, fuzzy
 msgid "Prior"
-msgstr ""
+msgstr "Anterior"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr ""
@@ -78,8 +90,9 @@ msgstr ""
 msgid "Binomial Test"
 msgstr ""
 
+#, fuzzy
 msgid "Variable"
-msgstr ""
+msgstr "Variáveis"
 
 msgid "Level"
 msgstr ""
@@ -112,8 +125,9 @@ msgstr ""
 msgid "Proportions tested against value: %s."
 msgstr ""
 
+#, fuzzy
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Diagramas Descritivos"
 
 msgid "Bayesian Binomial Test"
 msgstr ""
@@ -121,8 +135,9 @@ msgstr ""
 msgid "Inferential Plots"
 msgstr ""
 
+#, fuzzy
 msgid "Population proportion"
-msgstr ""
+msgstr "Coeficiente de Correlação População"
 
 msgid "One or more Bayes factors cannot be computed"
 msgstr ""
@@ -151,23 +166,28 @@ msgstr ""
 msgid "Odds Ratio"
 msgstr ""
 
+#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "Intervalos de Confiança"
 
+#, fuzzy
 msgid "Nominal"
-msgstr ""
+msgstr "Nominal"
 
+#, fuzzy
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "Ordinal"
 
+#, fuzzy
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "Intervalos de Confiança"
 
 msgid "Gamma"
 msgstr ""
 
+#, fuzzy
 msgid "Standard Error"
-msgstr ""
+msgstr "Erro padrão"
 
 msgid "Kendall's Tau-b"
 msgstr ""
@@ -178,17 +198,21 @@ msgstr ""
 msgid "VS-MPR%s"
 msgstr ""
 
+#, fuzzy
 msgid "Value"
-msgstr ""
+msgstr "Valor"
 
+#, fuzzy
 msgid "df"
-msgstr ""
+msgstr "gl:"
 
+#, fuzzy
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "Coeficiente de Mardia"
 
+#, fuzzy
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Coeficiente de Mardia"
 
 msgid "Cramer's V"
 msgstr ""
@@ -239,8 +263,9 @@ msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
 
+#, fuzzy
 msgid "%s continuity correction"
-msgstr ""
+msgstr "Correções de Homogeneidade"
 
 msgid "Likelihood ratio"
 msgstr ""
@@ -254,8 +279,9 @@ msgstr ""
 msgid "Bayesian Contingency Tables Tests"
 msgstr ""
 
+#, fuzzy
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "Intervalo de credibilidade"
 
 msgid "Log Odds Ratio Plots"
 msgstr ""
@@ -308,8 +334,9 @@ msgstr ""
 msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
+#, fuzzy
 msgid "Posterior"
-msgstr ""
+msgstr "RÂ² Posterior"
 
 msgid "Expected counts not supported without observed counts."
 msgstr ""
@@ -334,11 +361,13 @@ msgstr ""
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
 
+#, fuzzy
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "Intervalos de Confiança"
 
+#, fuzzy
 msgid "Factor"
-msgstr ""
+msgstr "Fatores"
 
 msgid "Observed"
 msgstr ""
@@ -346,20 +375,25 @@ msgstr ""
 msgid "Expected: %s"
 msgstr ""
 
+#, fuzzy
 msgid "Expected"
-msgstr ""
+msgstr "Selecionada"
 
+#, fuzzy
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "Intervalo de Confiança"
 
+#, fuzzy
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "Diagramas Descritivos"
 
+#, fuzzy
 msgid "Observed counts"
-msgstr ""
+msgstr "momentos observados"
 
+#, fuzzy
 msgid "Observed proportions"
-msgstr ""
+msgstr "Covariâncias / correlações observadas"
 
 msgid "Bayesian Multinomial Test"
 msgstr ""
@@ -367,16 +401,18 @@ msgstr ""
 msgid "Levels"
 msgstr ""
 
+#, fuzzy
 msgid "Credible"
-msgstr ""
+msgstr "Intervalo de credibilidade"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
 msgstr ""
 
+#, fuzzy
 msgid "Confidence"
-msgstr ""
+msgstr "Intervalo de Confiança"
 
 msgid "%1$s%% %2$s Interval"
 msgstr ""
@@ -384,35 +420,44 @@ msgstr ""
 msgid "Could not compute %s Intervals."
 msgstr ""
 
+#, fuzzy
 msgid "Descriptives plot"
-msgstr ""
+msgstr "Diagramas Descritivos"
 
+#, fuzzy
 msgid "Observed Counts"
-msgstr ""
+msgstr "momentos observados"
 
+#, fuzzy
 msgid "Observed Proportions"
-msgstr ""
+msgstr "Covariâncias / correlações observadas"
 
 msgid "ANOVA"
 msgstr ""
 
+#, fuzzy
 msgid "Deviance"
-msgstr ""
+msgstr "Avançado"
 
+#, fuzzy
 msgid "Residual df"
-msgstr ""
+msgstr "Resíduos"
 
+#, fuzzy
 msgid "Residual Deviance"
-msgstr ""
+msgstr "Variâncias residual"
 
+#, fuzzy
 msgid "Coefficients"
-msgstr ""
+msgstr "Coeficiente de Mardia"
 
+#, fuzzy
 msgid "Estimate"
-msgstr ""
+msgstr "Estimativas"
 
+#, fuzzy
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "Intervalos de Confiança"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -442,8 +487,9 @@ msgstr ""
 msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
+#, fuzzy
 msgid "Model Comparison"
-msgstr ""
+msgstr "Opções de modelo"
 
 msgid "BF<sub>10</sub>"
 msgstr ""
@@ -460,17 +506,22 @@ msgstr ""
 msgid "P(incl|data)"
 msgstr ""
 
+#, fuzzy
 msgid "Mean"
-msgstr ""
+msgstr "Médias"
 
+#, fuzzy
 msgid "Variance"
-msgstr ""
+msgstr "Variáveis"
 
+#, fuzzy
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "Intervalo de credibilidade"
 
 msgid "Posterior Summary Statistics For Submodel %s"
 msgstr ""
 
+#, fuzzy
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "Intervalo de credibilidade"
+

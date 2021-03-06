@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2020-12-11 10:30\n"
+"POT-Creation-Date: 2021-03-06 14:13\n"
 "PO-Revision-Date: 2021-03-06 09:51+0000\n"
 "Last-Translator: Paulina Elizabeth Robalino <paulina.e.robalino@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -151,6 +151,9 @@ msgstr ""
 msgid "Log Odds Ratio"
 msgstr ""
 
+msgid "Odds Ratio"
+msgstr ""
+
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
 
@@ -191,6 +194,9 @@ msgid "Phi-coefficient"
 msgstr ""
 
 msgid "Cramer's V"
+msgstr ""
+
+msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
 
 msgid ""

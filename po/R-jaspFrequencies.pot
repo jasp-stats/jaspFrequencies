@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2020-12-11 10:30\n"
+"Project-Id-Version: jaspFrequencies 0.15.0\n"
+"POT-Creation-Date: 2021-03-06 14:13\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,6 +139,9 @@ msgstr ""
 msgid "Log Odds Ratio"
 msgstr ""
 
+msgid "Odds Ratio"
+msgstr ""
+
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
 
@@ -179,6 +182,9 @@ msgid "Phi-coefficient"
 msgstr ""
 
 msgid "Cramer's V"
+msgstr ""
+
+msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
 
 msgid "Value could not be calculated - At least one row or column contains all zeros"
