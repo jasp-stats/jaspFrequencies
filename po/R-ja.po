@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-02-21 04:50+0000\n"
-"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
+"PO-Revision-Date: 2021-03-12 00:02+0000\n"
+"Last-Translator: Yoshihiko Kunisato <ykunisato@psy.senshu-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ja/>\n"
 "Language: ja\n"
@@ -11,19 +11,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
 
 msgid "Models"
-msgstr ""
+msgstr "モデル"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|データ)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -43,7 +43,7 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "記述統計量"
 
 msgid "Counts"
 msgstr "カウント"
@@ -85,7 +85,7 @@ msgid "Variable"
 msgstr "変数"
 
 msgid "Level"
-msgstr ""
+msgstr "水準"
 
 msgid "p"
 msgstr "p"
@@ -356,7 +356,7 @@ msgid "%s%% Confidence Interval"
 msgstr "% s%% 信頼区間"
 
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "記述統計量プロット"
 
 msgid "Observed counts"
 msgstr ""
@@ -446,22 +446,22 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "モデル比較"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P（効果を含む|データ）"
 
 msgid "Mean"
 msgstr "平均値"
