@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-03-13 15:02+0000\n"
+"PO-Revision-Date: 2021-03-18 05:18+0000\n"
 "Last-Translator: Paulina Elizabeth Robalino <paulina.e.robalino@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/es/>\n"
@@ -49,7 +49,7 @@ msgid "Counts"
 msgstr ""
 
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 msgid "Proportion"
 msgstr ""
@@ -94,13 +94,13 @@ msgid "VS-MPR"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Más bajo"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Superior"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
@@ -312,7 +312,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "Expected counts not supported without observed counts."
 msgstr ""
@@ -467,7 +467,7 @@ msgid "Mean"
 msgstr "Media"
 
 msgid "Variance"
-msgstr ""
+msgstr "Varianza"
 
 msgid "%s%% Credible intervals"
 msgstr ""
