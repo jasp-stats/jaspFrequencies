@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-03-12 00:02+0000\n"
+"PO-Revision-Date: 2021-03-19 18:18+0000\n"
 "Last-Translator: Alex França <alex.tonante@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
@@ -99,19 +99,21 @@ msgid "Level"
 msgstr ""
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
 
+#, fuzzy
 msgid "Lower"
-msgstr ""
+msgstr "Inferior"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
+#, fuzzy
 msgid "Upper"
-msgstr ""
+msgstr "Superior"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
@@ -196,16 +198,16 @@ msgstr ""
 msgid "Z"
 msgstr ""
 
+#, fuzzy
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 #, fuzzy
 msgid "Value"
 msgstr "Valor"
 
-#, fuzzy
 msgid "df"
-msgstr "gl:"
+msgstr "gl"
 
 #, fuzzy
 msgid "Contingency coefficient"
@@ -434,7 +436,7 @@ msgid "Observed Proportions"
 msgstr "Covariâncias / correlações observadas"
 
 msgid "ANOVA"
-msgstr ""
+msgstr "ANOVA"
 
 #, fuzzy
 msgid "Deviance"
