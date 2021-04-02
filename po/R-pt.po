@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-03-23 23:29+0000\n"
-"Last-Translator: Laura Durans <lauraadurans@gmail.com>\n"
+"PO-Revision-Date: 2021-04-03 08:30+0000\n"
+"Last-Translator: Alex França <alex.tonante@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
 "Language: pt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.2-dev\n"
+"X-Generator: Weblate 4.6-dev\n"
 "X-Language: en_US\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -24,11 +24,13 @@ msgstr ""
 msgid "Models"
 msgstr "Modelos"
 
+#, fuzzy
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
+#, fuzzy
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|dado)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -95,21 +97,25 @@ msgstr ""
 msgid "Variable"
 msgstr "Variável"
 
+#, fuzzy
 msgid "Level"
-msgstr ""
+msgstr "Nível"
 
+#, fuzzy
 msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
 
+#, fuzzy
 msgid "Lower"
 msgstr "Inferior"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
+#, fuzzy
 msgid "Upper"
 msgstr "Superior"
 
@@ -203,6 +209,7 @@ msgstr "VS-MPR%s"
 msgid "Value"
 msgstr "Valor"
 
+#, fuzzy
 msgid "df"
 msgstr "gl"
 
@@ -256,8 +263,9 @@ msgstr ""
 msgid "%% of total"
 msgstr ""
 
+#, fuzzy
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
@@ -365,6 +373,7 @@ msgstr ""
 msgid "Could not compute confidence intervals."
 msgstr "Intervalos de Confiança"
 
+#, fuzzy
 msgid "Factor"
 msgstr "Fator"
 
@@ -430,6 +439,7 @@ msgstr "momentos observados"
 msgid "Observed Proportions"
 msgstr "Covariâncias / correlações observadas"
 
+#, fuzzy
 msgid "ANOVA"
 msgstr "ANOVA"
 
@@ -449,6 +459,7 @@ msgstr "Variâncias residual"
 msgid "Coefficients"
 msgstr "Coeficiente de Mardia"
 
+#, fuzzy
 msgid "Estimate"
 msgstr "Estimativas"
 
@@ -486,22 +497,26 @@ msgstr ""
 
 #, fuzzy
 msgid "Model Comparison"
-msgstr "Opções de modelo"
+msgstr "Comparação de Modelo"
 
+#, fuzzy
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
+#, fuzzy
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
+#, fuzzy
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
+#, fuzzy
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(incl|dados)"
 
 #, fuzzy
 msgid "Mean"
