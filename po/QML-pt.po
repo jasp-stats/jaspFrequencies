@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-04-04 17:26+0000\n"
-"Last-Translator: Alex França <alex.tonante@gmail.com>\n"
+"PO-Revision-Date: 2021-04-17 18:26+0000\n"
+"Last-Translator: Lucas Müller-Silveira <mullerlucass@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pt/>\n"
 "Language: pt\n"
@@ -16,7 +16,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
-msgstr ""
+msgstr "Sucesso Grupo 1"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
