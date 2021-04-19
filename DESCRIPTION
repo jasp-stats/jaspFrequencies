@@ -6,7 +6,7 @@ Date: 2019-08-31
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
-Description: This module offers the standard Frequentist and Bayesian frequency analyses.
+Description: Analyses for count data
 License: GPL (>= 2)
 Encoding: UTF-8
 Imports:
