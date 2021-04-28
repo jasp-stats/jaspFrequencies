@@ -5,7 +5,7 @@ Description
 {
 	name		: "jaspFrequencies"
 	title		: qsTr("Frequencies")
-	description	: qsTr("This module offers the standard Frequentist and Bayesian frequency analyses.")
+	description	: qsTr("Analyses for count data")
 	icon		: "analysis-classical-crosstabs.svg"
 	version		: "0.13"
 	author		: "JASP Team"
