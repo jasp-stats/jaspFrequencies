@@ -13,13 +13,6 @@ msgid "Frequencies"
 msgstr "Frequenties"
 
 msgctxt "Description|"
-msgid ""
-"This module offers the standard Frequentist and Bayesian frequency analyses."
-msgstr ""
-"Deze module biedt de standaard Frequentistische en Bayesiaanse frequentie "
-"analyses."
-
-msgctxt "Description|"
 msgid "Classical"
 msgstr "Klassiek"
 
@@ -869,4 +862,8 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Analyses for count data"
 msgstr ""

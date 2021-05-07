@@ -10,11 +10,6 @@ msgid "Frequencies"
 msgstr ""
 
 msgctxt "Description|"
-msgid ""
-"This module offers the standard Frequentist and Bayesian frequency analyses."
-msgstr ""
-
-msgctxt "Description|"
 msgid "Classical"
 msgstr ""
 
@@ -864,4 +859,8 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Analyses for count data"
 msgstr ""
