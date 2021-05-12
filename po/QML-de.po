@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-10 18:32+0000\n"
-"Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
+"PO-Revision-Date: 2021-05-13 17:32+0000\n"
+"Last-Translator: Thomas Langkamp <thomas.lassdiesonnerein@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/de/>\n"
 "Language: de\n"
@@ -192,7 +192,7 @@ msgstr "Testwert: "
 
 msgctxt "BinomialTest|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "BinomialTest|"
 msgid "≠ Test value"
@@ -236,7 +236,7 @@ msgstr "Testwert: "
 
 msgctxt "BinomialTestBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "BinomialTestBayesian|"
 msgid "≠ Test value"
@@ -540,7 +540,7 @@ msgstr "Cramers V"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Alt.-Hypothese"
+msgstr "Alternativhypothese (H1)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
