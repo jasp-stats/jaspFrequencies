@@ -42,7 +42,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 .contTabBasBF <- function(jaspResults, options, analyses, ready) {
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["contTabBasBF"]]))
       next
 
@@ -77,7 +77,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     return()
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["contTabBasLogOdds"]]))
       next
 
@@ -116,7 +116,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   for (i in 1:nrow(analyses)){
     analysis          <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["contTabBasCramersV"]]))
       next
 
@@ -149,69 +149,64 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 .contTabBasLogOddsPlot <- function(jaspResults, options, analyses, ready) {
   if(!options$plotPosteriorOddsRatio)
     return()
-  oddsRatioPlotContainer <- createJaspContainer(gettext("Log Odds Ratio Plots"))
-  dependList <- c("plotPosteriorOddsRatio", "hypothesis", "samplingModel",
-                  "plotPosteriorOddsRatioAdditionalInfo", "priorConcentration",
-                  "counts", "layers", "setSeed", "seed")
-  oddsRatioPlotContainer$dependOn(dependList)
-  oddsRatioPlotContainer$position <- 2
-  .contTablesBayesianCitations(oddsRatioPlotContainer)
+
+  if (is.null(jaspResults[["oddsRatioPlots"]])) {
+    oddsRatioPlots <- createJaspContainer(gettext("Log Odds Ratio Plots"))
+    oddsRatioPlots$dependOn(c("layers", "counts", "plotPosteriorOddsRatio", "hypothesis", "samplingModel",
+                                                "plotPosteriorOddsRatioAdditionalInfo", "priorConcentration",
+                                                "counts", "layers", "setSeed", "seed"))
+    oddsRatioPlots$position <- 2
+    .contTablesBayesianCitations(oddsRatioPlots)
+    jaspResults[["oddsRatioPlots"]] <- oddsRatioPlots
+  } else {
+    oddsRatioPlots <- jaspResults[["oddsRatioPlots"]]
+  }
+
   for (i in 1:nrow(analyses)){
-    if (!is.null(oddsRatioPlotContainer[[paste0("plots", i)]]))
+    analysis <- analyses[i, ]
+
+    if (!is.null(oddsRatioPlots[[.crossTabCreateContainerName(analysis)]]))
       next
-    analysisContainer <- jaspResults[[paste0("container", i)]]
-    # get groupList
+
+    logOddsAnalysisContainer <- createJaspContainer()
+    logOddsAnalysisContainer$dependOn(optionContainsValue = list(rows = analysis$rows, columns = analysis$columns))
+    oddsRatioPlots[[.crossTabCreateContainerName(analysis)]] <- logOddsAnalysisContainer
+
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     groupList <- analysisContainer[["groupList"]]$object
-
-    group.matrices <- groupList$group.matrices
     groups <- groupList$groups
+    group.matrices <- groupList$group.matrices
+
     for (g in 1:length(group.matrices)) {
-      counts.matrix <- group.matrices[[g]]
-      if (!is.null(groups))
+
+      group <- NULL
+      if (!is.null(groups)) { # we'll want a plot + container for every combination of factor levels of the groups (aka "layers")
         group <- groups[[g]]
-      else
-        group <- NULL
-
-      if(!identical(dim(group.matrices[[1]]), as.integer(c(2,2))))
-        return()
-
-      group[group == ""] <- gettext("Total")
-
-      if (length(group) == 0)
-        oddsRatioSubContainer <- createJaspContainer()
-      else if (length(group) > 0) {
-        #Ok, so during the adding of gettext the following looks like it might need some attention, but im afraid to touch it cause i https://www.youtube.com/watch?v=FYhQge4Mnoo what is going on
-        layer.levels <- paste(names(group),"=", group)
-        layer.levels <- gsub(pattern = " = Total", layer.levels, replacement = "")
-        plot.title   <- paste(layer.levels, collapse = "; ")
-        oddsRatioSubContainer <- createJaspContainer(plot.title)
+        plotContainer <- createJaspContainer(title = .contTabBasCreateLogOddsGroupTitle(group))
+        logOddsAnalysisContainer[[paste0(names(group), unlist(group), collapse = "_")]] <- plotContainer
+      } else { # we can insert the plot straight into the analysis container
+        plotContainer <- logOddsAnalysisContainer
       }
-      analysis <- analyses[i,]
-      title    <- ""
 
-      if(length(options$rows) > 0 || length(options$columns) > 0)
-        title <- paste0(analysis$rows, " - ", analysis$columns)
-      logOddsPlot <- createJaspPlot(title = title, width = 530, height = 400)
-      logOddsPlot$position <- 5
-      logOddsPlot$dependOn(optionContainsValue = list(rows = analysis$rows, columns = analysis$columns))
-      oddsRatioSubContainer[["plot"]] <- logOddsPlot
-      oddsRatioPlotContainer[[paste0("plots", i, "sub", g)]] <- oddsRatioSubContainer
+      plotTitle <- ""
+      if (length(options$rows) > 0 || length(options$columns) > 0)
+        plotTitle <- paste0(analysis$rows, " - ", analysis$columns)
 
-      if(ready){
-        analysisSamples.g <- analysisContainer[["logOddsSamples"]][[g]]
-        # Get bfList
-        bfList <- analysisContainer[["bfList"]]$object
-        bf.results.g <- bfList[[g]]
-        p <- try(.contTabBasLogOddsPlotFill(analysisContainer, options, analysisSamples.g,
-                                            counts.matrix, bf.results.g, group))
-        if(isTryError(p))
+      logOddsPlot <- createJaspPlot(title = plotTitle, width = 530, height = 400)
+      plotContainer[["plot"]] <- logOddsPlot
+
+      if (!identical(dim(group.matrices[[1]]), as.integer(c(2,2)))) {
+        logOddsPlot$setError(gettext("Odds ratio restricted to 2 x 2 analyses"))
+      } else if (ready) {
+        p <- try(.contTabBasLogOddsPlotFill(analysisContainer, options, analysisContainer[["logOddsSamples"]][[g]],
+                                            group.matrices[[g]], analysisContainer[["bfList"]]$object[[g]], group))
+        if (isTryError(p))
           logOddsPlot$setError(.extractErrorMessage(p))
         else
           logOddsPlot$plotObject <- p
       }
     }
   }
-  jaspResults[["plots"]] <- oddsRatioPlotContainer
   return()
 }
 
@@ -281,6 +276,14 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
   p$subplots$mainGraph <- p$subplots$mainGraph+ggplot2::theme(legend.position = "none")
   return(p)
+}
+
+.contTabBasCreateLogOddsGroupTitle <- function(group) {
+  factors <- names(group)
+  levels <- unlist(group)
+  levels[levels != ""] <- paste0(" = ", levels[levels != ""]) # if a level is missing it means the entire factor was used
+  title <- paste0(factors, levels, collapse = "; ") # e.g., "facFive = 5; facExperim"
+  return(title)
 }
 
 # Table functions
