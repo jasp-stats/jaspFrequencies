@@ -17,7 +17,7 @@ test_that("Main table results match", {
   options$percentagesColumn <- TRUE
   options$percentagesTotal <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table   <- results[["results"]][["container1"]][["collection"]][["container1_crossTabMain"]][["data"]]
+  table   <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
   jaspTools::expect_equal_tables(table,
       list(0.489296636085627, 320, 394.529977794227, 0.236861584011843, 0.392638036809816,
            0.710186513629842, 495, 420.470022205773, 0.36639526276832,
@@ -65,18 +65,15 @@ test_that("Multiple row and column variables give multiple main tables", {
   options$columns <- c("contBinom", "facFive")
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
 
-  pairs <- list(
-    c("facExperim", "contBinom"),
-    c("facExperim", "facFive"),
-    c("facGender", "contBinom"),
-    c("facGender", "facFive")
-  )
+  table1 <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
+  table2 <- results[["results"]][["container_facExperim_facFive"]][["collection"]][["container_facExperim_facFive_crossTabMain"]][["data"]]
+  table3 <- results[["results"]][["container_facGender_contBinom"]][["collection"]][["container_facGender_contBinom_crossTabMain"]][["data"]]
+  table4 <- results[["results"]][["container_facGender_facFive"]][["collection"]][["container_facGender_facFive_crossTabMain"]][["data"]]
 
-  for (i in 1:4) {
-    rows <- results[["results"]][[paste0("container", i)]][["collection"]][[paste0("container", i, "_crossTabMain")]][["schema"]][["fields"]][[1]][["name"]]
-    cols <- results[["results"]][[paste0("container", i)]][["collection"]][[paste0("container", i, "_crossTabMain")]][["schema"]][["fields"]][[2]][["overTitle"]]
-    expect_identical(c(rows, cols), pairs[[i]], label=paste("Table", i))
-  }
+  expect_is(table1, "list", label = "facExperim-contBinom table")
+  expect_is(table2, "list", label = "facExperim-Facfive table")
+  expect_is(table3, "list", label = "facGender-contBinom table")
+  expect_is(table4, "list", label = "facGender-facFive table")
 })
 
 test_that("Chi-Squared test table results match", {
@@ -89,7 +86,7 @@ test_that("Chi-Squared test table results match", {
   options$likelihoodRatio <- TRUE
   options$VovkSellkeMPR <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabChisq"]][["data"]]
+  table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabChisq"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list("N", "", "", "", 2550,
          "<unicode>", 82.0397085317219, 1, 1.33379878452991e-19, 63462127883801120,
@@ -105,7 +102,7 @@ test_that("Nominal table results match", {
   options$contingencyCoefficient <- TRUE
   options$phiAndCramersV <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabNominal"]][["data"]]
+  table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabNominal"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list("Contingency coefficient", 0.0807792391722019, "Phi-coefficient",
          0.0810440898473108, "Cramer's V ", 0.0810440898473108)
@@ -119,7 +116,7 @@ test_that("Log Odds Ratio table results match", {
   options$oddsRatio <- TRUE
   options$oddsRatioConfidenceIntervalInterval <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabLogOdds"]][["data"]]
+  table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabLogOdds"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list("Odds ratio", -0.329205575243527, -0.998167649205055, 0.339756498718001,"",
          "Fisher's exact test ", -0.325882968750928, -1.07370478788709,
@@ -133,7 +130,7 @@ test_that("Ordinal Gamma table results match", {
   options$columns <- "contBinom"
   options$gamma <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabGamma"]][["data"]]
+  table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabGamma"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list(-0.163132137030995, 0.197938461395245, -0.551084392520947, 0.224820118458957)
   )
@@ -146,7 +143,7 @@ test_that("Kendall's Tau table results match", {
   options$kendallsTauB <- TRUE
   options$VovkSellkeMPR <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabKendallTau"]][["data"]]
+  table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabKendallTau"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list(-0.0810440898473108, 0.420024632711394, 1, -0.806378512498144)
   )
@@ -167,7 +164,7 @@ test_that("Goodman-Kruskal lambda and Cramer's V results match", {
   options$phiAndCramersV <- TRUE
 
   results <- jaspTools::runAnalysis("ContingencyTables", df, options)
-  table <- results[["results"]][["container1"]][["collection"]][["container1_crossTabNominal"]][["data"]][[1]]
+  table <- results[["results"]][["container_var1_var2"]][["collection"]][["container_var1_var2_crossTabNominal"]][["data"]][[1]]
 
   # reported 0.3636
   testthat::expect_equal(table[["value[LambdaC]"]], 0.363636363636364)
@@ -196,10 +193,10 @@ options$rows <- "V1"
 set.seed(1)
 # data is a random sample from https://github.com/jasp-stats/jasp-issues/issues/811
 dataset <- structure(list(V1 = c(1L, 2L, 1L, 2L, 1L, 0L, 2L, 0L, 0L, 1L), V2 = c(0L, 0L, 1L, 0L, 0L, 1L, 0L, 1L, 1L, 0L)), row.names = c(NA, -10L), class = "data.frame")
-results <- runAnalysis("ContingencyTables", dataset, options)
+results <- jaspTools::runAnalysis("ContingencyTables", dataset, options)
 
 test_that("Phi coefficient is only available for 2 by 2 contingency tables", {
-  tb <- results[["results"]][["container1"]][["collection"]][["container1_crossTabNominal"]]
+  tb <- results[["results"]][["container_V1_V2"]][["collection"]][["container_V1_V2_crossTabNominal"]]
   table <- tb[["data"]]
   jaspTools::expect_equal_tables(
     test  = table,

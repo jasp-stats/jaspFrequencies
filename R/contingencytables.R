@@ -91,17 +91,25 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
   return(analyses)
 }
 
+.crossTabCreateContainerName <- function(analysis, prefix = "container") {
+  if (nrow(analysis) != 1)
+    stop("Attempting to create container name for multiple analyses. Each analysis has its own container.")
+
+  return(paste(prefix, analysis$rows, analysis$columns, sep = "_"))
+}
+
 # Container
 .crossTabContainer <- function(jaspResults, options, analyses, ready) {
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    if (is.null(jaspResults[[paste0("container", i)]])) {
+    containerName <- .crossTabCreateContainerName(analysis)
+    if (is.null(jaspResults[[containerName]])) {
       container <- createJaspContainer()
       container$dependOn(options              = c("layers", "counts"),
                          optionContainsValue  = list(rows     = analysis$rows,
                                                      columns  = analysis$columns))
       container$position <- 1
-      jaspResults[[paste0("container", i)]] <- container
+      jaspResults[[containerName]] <- container
     }
   }
 }
@@ -110,7 +118,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 .crossTabMain <- function(jaspResults, dataset, options, analyses, ready) {
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabMain"]]))
       next
 
@@ -166,7 +174,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)){
     analysis          <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabChisq"]]))
       next
 
@@ -208,7 +216,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)) {
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabLogOdds"]]))
       next
 
@@ -247,7 +255,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabNominal"]]))
       next
     # Create table
@@ -286,7 +294,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabGamma"]]))
       next
 
@@ -320,7 +328,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   for (i in 1:nrow(analyses)){
     analysis <- analyses[i,]
-    analysisContainer <- jaspResults[[paste0("container", i)]]
+    analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
     if (!is.null(analysisContainer[["crossTabKendallTau"]]))
       next
 
