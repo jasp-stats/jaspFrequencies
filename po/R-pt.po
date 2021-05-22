@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-05-13 22:32+0000\n"
+"PO-Revision-Date: 2021-05-15 20:50+0000\n"
 "Last-Translator: Alex França <alex.tonante@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
@@ -20,15 +20,12 @@ msgstr ""
 msgid "Bayesian A/B Test"
 msgstr "Teste Bayesiano A/B"
 
-#, fuzzy
 msgid "Models"
 msgstr "Modelos"
 
-#, fuzzy
 msgid "P(M)"
 msgstr "P(M)"
 
-#, fuzzy
 msgid "P(M|data)"
 msgstr "P(M|dado)"
 
@@ -49,7 +46,6 @@ msgstr ""
 msgid "Log odds ratio %s 0"
 msgstr ""
 
-#, fuzzy
 msgid "Descriptives"
 msgstr "Descritivas"
 
@@ -96,29 +92,24 @@ msgstr "Não é possível testar a hipótese cujo valor de teste é menor que 0.
 msgid "Binomial Test"
 msgstr "Teste Binomial"
 
-#, fuzzy
 msgid "Variable"
 msgstr "Variável"
 
-#, fuzzy
 msgid "Level"
 msgstr "Nível"
 
-#, fuzzy
 msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
 
-#, fuzzy
 msgid "Lower"
 msgstr "Inferior"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
-#, fuzzy
 msgid "Upper"
 msgstr "Superior"
 
@@ -220,7 +211,6 @@ msgstr ""
 msgid "Z"
 msgstr ""
 
-#, fuzzy
 msgid "VS-MPR%s"
 msgstr "VS-MPR%s"
 
@@ -228,7 +218,6 @@ msgstr "VS-MPR%s"
 msgid "Value"
 msgstr "Valor"
 
-#, fuzzy
 msgid "df"
 msgstr "gl"
 
@@ -293,7 +282,6 @@ msgstr ""
 msgid "%% of total"
 msgstr ""
 
-#, fuzzy
 msgid "N"
 msgstr "N"
 
@@ -431,7 +419,6 @@ msgstr ""
 msgid "Could not compute confidence intervals."
 msgstr "Intervalos de Confiança"
 
-#, fuzzy
 msgid "Factor"
 msgstr "Fator"
 
@@ -449,7 +436,6 @@ msgstr "Selecionada"
 msgid "%s%% Confidence Interval"
 msgstr "Intervalo de Confiança"
 
-#, fuzzy
 msgid "Descriptives Plot"
 msgstr "Diagramas Descritivos"
 
@@ -519,7 +505,6 @@ msgstr "Variâncias residual"
 msgid "Coefficients"
 msgstr "Coeficiente de Mardia"
 
-#, fuzzy
 msgid "Estimate"
 msgstr "Estimativas"
 
@@ -555,30 +540,24 @@ msgstr ""
 msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
-#, fuzzy
 msgid "Model Comparison"
 msgstr "Comparação de Modelo"
 
-#, fuzzy
 msgid "BF<sub>10</sub>"
 msgstr "BF<sub>10</sub>"
 
-#, fuzzy
 msgid "BF<sub>01</sub>"
 msgstr "BF<sub>01</sub>"
 
-#, fuzzy
 msgid "Log(BF<sub>10</sub>)"
 msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
-#, fuzzy
 msgid "P(incl|data)"
 msgstr "P(incl|dados)"
 
-#, fuzzy
 msgid "Mean"
 msgstr "Média"
 
