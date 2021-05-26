@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-15 20:50+0000\n"
+"PO-Revision-Date: 2021-05-27 11:34+0000\n"
 "Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/de/>\n"
@@ -84,7 +84,7 @@ msgstr "Stichprobenumfang Gruppe 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr "Normale Priorverteilung der Log-Odds-Ratio"
+msgstr "Normal-Prior des Log-Chancenverhältnis"
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
@@ -140,19 +140,19 @@ msgstr "A-priori Modellwahrscheinlichkeit"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr "Log-Odds-Ratio = 0"
+msgstr "Log-Chancenverhältnis = 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr "Log-Odds-Ratio > 0"
+msgstr "Log-Chancenverhältnis > 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr "Log-Odds-Ratio < 0"
+msgstr "Log-Chancenverhältnis < 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr "Log-Odds-Ratio ≠ 0"
+msgstr "Log-Chancenverhältnis ≠ 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
@@ -396,7 +396,7 @@ msgstr "Cochrans und Mantel-Haenszel-Statistiken"
 
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr "Test der allgemeinen Odds Ratio entspricht"
+msgstr "Test des allgemeinen Chancenverhältnis entspricht"
 
 msgctxt "ContingencyTables|"
 msgid "Cells"
@@ -528,7 +528,7 @@ msgstr "Weitere Statistiken"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr "Log-Odds-Ratio (nur 2x2)"
+msgstr "Log-Chancenverhältnis (nur 2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
@@ -864,11 +864,11 @@ msgstr "Stichprobenumfang"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr "Quotenverhältnis (nur 2x2)"
+msgstr "Chancenverhältnis (nur 2x2)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Log-Chancenverhältnis"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
