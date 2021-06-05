@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-05-08 17:32+0000\n"
+"PO-Revision-Date: 2021-05-30 04:32+0000\n"
 "Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/de/>\n"
@@ -30,20 +30,20 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
-"Eine positive Log-Odds-Ratio bedeutet, dass die Gewinnchance für Gruppe 2 "
-"höher ist als für Gruppe 1."
+"Ein positives Log-Chancenverhältnis bedeutet, dass die Gewinnchance für "
+"Gruppe 2 höher ist als für Gruppe 1."
 
 msgid "Log odds ratio = 0"
-msgstr "Log-Odds-Ratio = 0"
+msgstr "Log-Chancenverhältnis = 0"
 
 msgid "Log odds ratio > 0"
-msgstr "Log-Odds-Ratio > 0"
+msgstr "Log-Chancenverhältnis > 0"
 
 msgid "Log odds ratio < 0"
-msgstr "Log-Odds-Ratio < 0"
+msgstr "Log-Chancenverhältnis < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr "Log-Odds-Ratio %s 0"
+msgstr "Log-Chancenverhältnis %s 0"
 
 msgid "Descriptives"
 msgstr "Deskriptive Statistiken"
@@ -161,10 +161,10 @@ msgstr ""
 "      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Log Odds Ratio"
-msgstr "Log Odds Ratio"
+msgstr "Log-Chancenverhältnis"
 
 msgid "Odds Ratio"
-msgstr "Quotenverhältnis"
+msgstr "Chancenverhältnis"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr "%.0f%% Konfidenzintervalle"
@@ -267,7 +267,7 @@ msgid "Likelihood ratio"
 msgstr "Wahrscheinlichkeits-Verhältnis"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr "Odds ratio ist beschränkt auf 2 x 2 Tabellen"
+msgstr "Chancenverhältnis beschränkt auf 2 x 2 Tabellen"
 
 msgid "Fisher's exact test"
 msgstr "Fishers exakter Test"
@@ -279,10 +279,10 @@ msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Glaubwürdigkeitsintervall"
 
 msgid "Log Odds Ratio Plots"
-msgstr "Log Odds Ratio Diagramme"
+msgstr "Log-Chancenverhältnis-Diagramme"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr "Odds ratio ist für dieses Modell noch nicht verfügbar"
+msgstr "Chancenverhältnis für dieses Modell noch nicht verfügbar"
 
 msgid "The Bayes factor is undefined"
 msgstr "Der Bayesfaktor ist undefiniert"
@@ -323,10 +323,10 @@ msgid "Invalid sampling model selected"
 msgstr "Ungültiges Stichprobenmodell ausgewählt"
 
 msgid "Odds ratio"
-msgstr "Odds ratio"
+msgstr "Chancenverhältnis"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr "Odds ratio ist für dieses Modell noch nicht verfügbar"
+msgstr "Chancenverhältnis für dieses Modell noch nicht verfügbar"
 
 msgid "Cramer's V for this model not yet implemented"
 msgstr "Cramers V ist für dieses Modell noch nicht implementiert"
