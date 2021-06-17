@@ -24,8 +24,8 @@ test_that("Descriptives plots match", {
   results <- jaspTools::runAnalysis("BinomialTest", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives-1", dir="BinomialTest")
+  jaspTools::expect_equal_plots(testPlot, "descriptives-1")
 
   testPlot <- results[["state"]][["figures"]][[2]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives-2", dir="BinomialTest")
+  jaspTools::expect_equal_plots(testPlot, "descriptives-2")
 })

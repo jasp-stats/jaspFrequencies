@@ -43,7 +43,7 @@ test_that("Descriptives plots match", {
                                    values = rep(1, 2)))
   results <- jaspTools::runAnalysis("MultinomialTestBayesian", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "multinomialBayesianDescriptivesPlot", dir="MultinomialTestBayesian")
+  jaspTools::expect_equal_plots(testPlot, "multinomialBayesianDescriptivesPlot")
 })
 
 test_that("Bayesian Multinomial Test table results match in short data format", {

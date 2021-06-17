@@ -40,7 +40,7 @@ test_that("Descriptives plot matches", {
   options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("MultinomialTest", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
-  jaspTools::expect_equal_plots(testPlot, "descriptives-1", dir="MultinomialTest")
+  jaspTools::expect_equal_plots(testPlot, "descriptives-1")
 })
 
 test_that("Analysis handles errors - Negative Values", {

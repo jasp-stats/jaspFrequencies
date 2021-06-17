@@ -148,7 +148,7 @@ test_that("Log Odds Ratio Plot matches", {
   options$plotPosteriorOddsRatio <- TRUE
   options$plotPosteriorOddsRatioAdditionalInfo <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
-  jaspTools::expect_equal_plots(results[["state"]][["figures"]][[1]][["obj"]], "log-odds-ratio", dir="ContingencyTablesBayesian")
+  jaspTools::expect_equal_plots(results[["state"]][["figures"]][[1]][["obj"]], "log-odds-ratio")
 })
 
 test_that("Analysis handles errors", {
