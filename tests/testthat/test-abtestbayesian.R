@@ -110,7 +110,7 @@ test_that("Prior plot matches", {
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
 
-  jaspTools::expect_equal_plots(testPlot, "prioronly", dir="ABTestBayesian")
+  jaspTools::expect_equal_plots(testPlot, "prioronly")
 })
 
 
@@ -132,7 +132,7 @@ test_that("Posterior plot matches", {
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]
 
-  jaspTools::expect_equal_plots(testPlot, "posterior", dir="ABTestBayesian")
+  jaspTools::expect_equal_plots(testPlot, "posterior")
 })
 
 
@@ -154,7 +154,7 @@ test_that("Sequential plot matches", {
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]
 
-  jaspTools::expect_equal_plots(testPlot, "sequential", dir="ABTestBayesian")
+  jaspTools::expect_equal_plots(testPlot, "sequential")
 })
 
 
@@ -176,5 +176,5 @@ test_that("plotRobustness plot matches", {
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]
 
-  jaspTools::expect_equal_plots(testPlot, "robustness", dir="ABTestBayesian")
+  jaspTools::expect_equal_plots(testPlot, "robustness")
 })
