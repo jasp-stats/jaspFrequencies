@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2021-03-06 14:13\n"
-"PO-Revision-Date: 2021-06-01 08:32+0000\n"
+"PO-Revision-Date: 2021-06-16 19:34+0000\n"
 "Last-Translator: Alex França <alex.tonante@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
@@ -33,31 +33,32 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
+"Um log de razão de chances positivo significa que a taxa de sucesso no Grupo "
+"2 é maior do que no Grupo 1."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Log razão de chances = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Log razão de chances > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Log razão de chances < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "Log razão de chances %s 0"
 
 msgid "Descriptives"
 msgstr "Descritivas"
 
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contável"
 
 msgid "Total"
 msgstr "Total"
 
-#, fuzzy
 msgid "Proportion"
-msgstr "Opções de Diagramas"
+msgstr "Proporção"
 
 msgid "Group 1"
 msgstr "Grupo 1"
@@ -65,30 +66,24 @@ msgstr "Grupo 1"
 msgid "Group 2"
 msgstr "Grupo 2"
 
-#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Posteriores marginal"
+msgstr "Anterior e posterior"
 
-#, fuzzy
 msgid "Sequential Analysis"
-msgstr "Removar esta análise"
+msgstr "Análise sequencial"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Verificação de robustez do fator Bayes"
 
-#, fuzzy
 msgid "Prior"
 msgstr "Anterior"
 
-#, fuzzy
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr "Não é possível testar a hipótese cujo valor de teste é maior que 1."
 
-#, fuzzy
 msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr "Não é possível testar a hipótese cujo valor de teste é menor que 0."
 
-#, fuzzy
 msgid "Binomial Test"
 msgstr "Teste Binomial"
 
@@ -102,18 +97,17 @@ msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
 msgstr "Inferior"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% IC para Proporção"
 
 msgid "Upper"
 msgstr "Superior"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
@@ -121,7 +115,6 @@ msgstr ""
 "Para todos os testes, a hipótese alternativa especifica que a proporção é "
 "menor que %s."
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
@@ -130,41 +123,32 @@ msgstr ""
 "maior que %s."
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "Proporções testadas em relação ao valor: %s."
 
-#, fuzzy
 msgid "Descriptives Plots"
 msgstr "Diagramas Descritivos"
 
-#, fuzzy
 msgid "Bayesian Binomial Test"
 msgstr "Teste Binomial Bayesiano"
 
-#, fuzzy
 msgid "Inferential Plots"
-msgstr "Gráficos de inferência"
+msgstr "Diagramas de inferência"
 
-#, fuzzy
 msgid "Population proportion"
-msgstr "Coeficiente de Correlação População"
+msgstr "Proporção populacional"
 
-#, fuzzy
 msgid "One or more Bayes factors cannot be computed"
 msgstr "Um ou mais fatores de Bayes não podem ser computados"
 
-#, fuzzy
 msgid "One or more Bayes factors are infinite"
 msgstr "Um ou mais fatores de Bayes são infinitos"
 
-#, fuzzy
 msgid "Undefined hypothesis"
 msgstr "Hipótese não definida"
 
-#, fuzzy
 msgid "Contingency Tables"
 msgstr "Tabelas de Contingência"
 
-#, fuzzy
 msgid "Chi-Squared Tests"
 msgstr "Testes qui-quadrado"
 
@@ -173,61 +157,55 @@ msgid ""
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"<em>p máximo de <em>p</em>-ratio: Baseado no valor <em>p</em>,\n"
+"      as probabilidades máximas possíveis a favor de H%1$s acima de H%2$s "
+"equivale a %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
 
-#, fuzzy
 msgid "Log Odds Ratio"
-msgstr "Registro de razões de probabilidade"
+msgstr "Log de razões de chance"
 
-#, fuzzy
 msgid "Odds Ratio"
-msgstr "Razão de probabilidade"
+msgstr "Razão de chance"
 
-#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr "Intervalos de Confiança"
+msgstr "%.0f%% Intervalos de confiança"
 
-#, fuzzy
 msgid "Nominal"
 msgstr "Nominal"
 
-#, fuzzy
 msgid "Ordinal Gamma"
-msgstr "Ordinal"
+msgstr "Gama Ordinal"
 
-#, fuzzy
 msgid "95%% Confidence Intervals"
-msgstr "Intervalos de Confiança"
+msgstr "95%% Intervalos de Confiança"
 
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
-#, fuzzy
 msgid "Standard Error"
 msgstr "Erro padrão"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "Tau-b de Kendall"
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "VS-MPR%s"
 msgstr "VS-MPR%s"
 
-#, fuzzy
 msgid "Value"
 msgstr "Valor"
 
 msgid "df"
 msgstr "gl"
 
-#, fuzzy
 msgid "Contingency coefficient"
-msgstr "Coeficiente de Mardia"
+msgstr "Coeficiente de contingência"
 
-#, fuzzy
 msgid "Phi-coefficient"
-msgstr "Coeficiente de Mardia"
+msgstr "Coeficiente Phi"
 
 msgid "Cramer's V"
 msgstr "V de Cramer"
@@ -235,34 +213,27 @@ msgstr "V de Cramer"
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr "O coeficiente phi só está disponível para tabelas de contingência 2x2"
 
-#, fuzzy
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
 "O valor não pôde ser calculado - pelo menos uma linha ou coluna está "
 "preenchida apenas com zero"
 
-#, fuzzy
 msgid "Lambda (rows)"
 msgstr "Lambda (linhas)"
 
-#, fuzzy
 msgid "Lambda (columns)"
 msgstr "Lambda (colunas)"
 
-#, fuzzy
 msgid "Lambda (symmetric)"
 msgstr "Lambda (simétrico)"
 
-#, fuzzy
 msgid "is less than"
 msgstr "é menor que"
 
-#, fuzzy
 msgid "is greater than"
 msgstr "é maior que"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
@@ -271,16 +242,16 @@ msgstr ""
 "<em>%1$s</em> %2$s <em>%3$s</em>."
 
 msgid "Expected count"
-msgstr ""
+msgstr "Contagem esperada"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% dentro da linha"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% dentro da coluna"
 
 msgid "%% of total"
-msgstr ""
+msgstr "%% do total"
 
 msgid "N"
 msgstr "N"
@@ -288,107 +259,87 @@ msgstr "N"
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"Não foi possível calcular a %s - Pelo menos uma linha ou coluna contém todos "
+"os zeros"
 
-#, fuzzy
 msgid "%s continuity correction"
-msgstr "Correções de Homogeneidade"
+msgstr "%s de correção de continuidade"
 
-#, fuzzy
 msgid "Likelihood ratio"
 msgstr "Razão de verossimilhança"
 
-#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr "Razão de probabilidade restrita a tabelas 2x2"
+msgstr "Razão de chances restrita a tabelas 2x2"
 
-#, fuzzy
 msgid "Fisher's exact test"
 msgstr "Teste Exato de Fisher"
 
-#, fuzzy
 msgid "Bayesian Contingency Tables Tests"
 msgstr "Testes bayesianos para tabelas de contingências"
 
-#, fuzzy
 msgid "%.0f%% Credible Interval"
-msgstr "Intervalo de credibilidade"
+msgstr "%.0f%% Intervalo de credibilidade"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "Diagramas de razão de chances logarítmicas"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "Razão de chances para este modelo ainda não implementado"
 
-#, fuzzy
 msgid "The Bayes factor is undefined"
 msgstr "O fator de Bayes não está definido"
 
-#, fuzzy
 msgid "The Bayes factor is too small"
 msgstr "O fator de Bayes é muito pequeno"
 
-#, fuzzy
 msgid "The Bayes factor is infinite"
 msgstr "O fator de Bayes é infinito"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "meadiana Log OR ="
 
-#, fuzzy
 msgid "Poisson"
 msgstr "Poisson"
 
-#, fuzzy
 msgid "Joint multinomial"
 msgstr "Multinomial conjunta"
 
-#, fuzzy
 msgid "Independent multinomial"
 msgstr "Multinomial independente"
 
-#, fuzzy
 msgid "Hypergeometric"
 msgstr "Distribuição hipergeométrica"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Teste hipergeométrico de contingência restrito a 2 x 2 tabelas"
 
-#, fuzzy
 msgid "Proportion test restricted to 2 x 2 tables"
 msgstr "Teste de proporção restrito a tabelas 2x2"
 
-#, fuzzy
 msgid "is not equal to"
 msgstr "não é igual a"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "selecionado modelo de amostragem inválido"
 
-#, fuzzy
 msgid "Odds ratio"
-msgstr "Razão de probabilidade"
+msgstr "Razão de chance"
 
-#, fuzzy
 msgid "Odd ratio for this model not yet implemented"
-msgstr "A razão de probabilidade para esse modelo ainda não foi implementada"
+msgstr "A razão de chance para esse modelo ainda não foi implementada"
 
-#, fuzzy
 msgid "Cramer's V for this model not yet implemented"
 msgstr "O V de Cramer para esse modelo ainda não foi implementado"
 
-#, fuzzy
 msgid "Posterior"
-msgstr "RÂ² Posterior"
+msgstr "Posterior"
 
-#, fuzzy
 msgid "Expected counts not supported without observed counts."
 msgstr "Contagens esperadas não suportadas sem contagens observadas."
 
-#, fuzzy
 msgid "No expected counts entered."
 msgstr "Nenhuma contagem esperada inserida."
 
-#, fuzzy
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
@@ -398,7 +349,6 @@ msgstr ""
 "fator. Quando as contagens são especificadas, cada linha do conjunto de "
 "dados deve representar um único nível do fator."
 
-#, fuzzy
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
@@ -407,110 +357,94 @@ msgstr ""
 "níveis do fator."
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
 
-#, fuzzy
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
 "Os intervalos de confiança são baseados em distribuições binomiais "
 "independentes."
 
-#, fuzzy
 msgid "Could not compute confidence intervals."
-msgstr "Intervalos de Confiança"
+msgstr "Não foi possível calcular os intervalos de confiança."
 
 msgid "Factor"
 msgstr "Fator"
 
-#, fuzzy
 msgid "Observed"
 msgstr "Observado"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "Esperado: %s"
 
-#, fuzzy
 msgid "Expected"
-msgstr "Selecionada"
+msgstr "Esperado"
 
 msgid "%s%% Confidence Interval"
-msgstr "Intervalo de Confiança"
+msgstr "%s%% Intervalo de Confiança"
 
 msgid "Descriptives Plot"
 msgstr "Diagramas Descritivos"
 
-#, fuzzy
 msgid "Observed counts"
-msgstr "momentos observados"
+msgstr "Contagens observadas"
 
-#, fuzzy
 msgid "Observed proportions"
-msgstr "Covariâncias / correlações observadas"
+msgstr "Proporções observadas"
 
-#, fuzzy
 msgid "Bayesian Multinomial Test"
 msgstr "Teste Multinomial Bayesiano"
 
-#, fuzzy
 msgid "Levels"
 msgstr "Níveis"
 
-#, fuzzy
 msgid "Credible"
-msgstr "Intervalo de credibilidade"
+msgstr "Credibilidade"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
 msgstr ""
+"Os intervalos de credibilidade são baseados em distribuições binomiais "
+"independentes com antecedentes planos."
 
-#, fuzzy
 msgid "Confidence"
-msgstr "Intervalo de Confiança"
+msgstr "Confiança"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s Intervalo"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "Não foi possível calcular o %s Intervalos."
 
-#, fuzzy
 msgid "Descriptives plot"
 msgstr "Diagramas Descritivos"
 
-#, fuzzy
 msgid "Observed Counts"
-msgstr "momentos observados"
+msgstr "Contagens Observadas"
 
-#, fuzzy
 msgid "Observed Proportions"
-msgstr "Covariâncias / correlações observadas"
+msgstr "Proporções Observadas"
 
 msgid "ANOVA"
 msgstr "ANOVA"
 
-#, fuzzy
 msgid "Deviance"
-msgstr "Avançado"
+msgstr "Desvio"
 
-#, fuzzy
 msgid "Residual df"
-msgstr "Resíduos"
+msgstr "Resíduos gl"
 
-#, fuzzy
 msgid "Residual Deviance"
-msgstr "Variâncias residual"
+msgstr "Desvio Residual"
 
-#, fuzzy
 msgid "Coefficients"
-msgstr "Coeficiente de Mardia"
+msgstr "Coeficientes"
 
 msgid "Estimate"
 msgstr "Estimativas"
 
-#, fuzzy
 msgid "%s%% Confidence Intervals"
-msgstr "Intervalos de Confiança"
+msgstr "%s%% Intervalos de Confiança"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
