@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-06-17 13:34+0000\n"
+"Last-Translator: Alex França <alex.tonante@gmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7\n"
 "X-Language: en_US\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -14,109 +20,95 @@ msgstr "Sucesso Grupo 1"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr ""
+msgstr "Tamanho da amostra Grupo 1"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr "Sucesso Grupo 2"
+msgstr "Sucessos Grupo 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr ""
+msgstr "Tamanho da amostra Grupo 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr ""
+msgstr "Prioridade Normal na Relação de Razão de Chances de Log"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Descriptives"
 msgstr "Descritivas"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Plots"
 msgstr "Gráficos"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
 msgstr "Anterior e posterior"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Análise sequencial"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Prior"
 msgstr "Anterior"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Verificação de robustez do fator Bayes"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Order"
 msgstr "Ordem"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
 msgstr "Comparar com o melhor modelo"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Compare to null model"
 msgstr "Comparar com o modelo nulo"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
 msgstr "Opções avançadas"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
-msgstr ""
+msgstr "Probabilidade do modelo anterior"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Log razão de chances = 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Log razão de chances > 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Log razão de chances < 0"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
 msgstr "Amostragem"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
 msgstr "No. de amostras"
 
-#, fuzzy
 msgctxt "BinomialTest|"
 msgid "Variables"
 msgstr "Variáveis"
 
 msgctxt "BinomialTest|"
 msgid "Test value: "
-msgstr ""
+msgstr "Valor do teste: "
 
-#, fuzzy
 msgctxt "BinomialTest|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese Alt."
 
 msgctxt "BinomialTest|"
 msgid "> Test value"
