@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-03-06 14:13\n"
+"POT-Creation-Date: 2021-06-29 14:05\n"
 "PO-Revision-Date: 2021-05-30 04:32+0000\n"
 "Last-Translator: Johannes Keyser <johanneskeyser@posteo.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
@@ -143,6 +143,11 @@ msgstr "Einer oder mehrere Bayesfaktoren sind unendlich"
 msgid "Undefined hypothesis"
 msgstr "Undefinierte Hypothese"
 
+msgid ""
+"Attempting to create container name for multiple analyses. Each analysis has "
+"its own container."
+msgstr ""
+
 msgid "Contingency Tables"
 msgstr "Kreuztabellen"
 
@@ -280,6 +285,10 @@ msgstr "%.0f%% Glaubwürdigkeitsintervall"
 
 msgid "Log Odds Ratio Plots"
 msgstr "Log-Chancenverhältnis-Diagramme"
+
+#, fuzzy
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr "Chancenverhältnis beschränkt auf 2 x 2 Tabellen"
 
 msgid "Odds ratio for this model not yet implemented"
 msgstr "Chancenverhältnis für dieses Modell noch nicht verfügbar"

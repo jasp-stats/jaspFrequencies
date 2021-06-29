@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2021-03-06 14:13\n"
+"POT-Creation-Date: 2021-06-29 14:05\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -133,6 +133,11 @@ msgstr ""
 msgid "Undefined hypothesis"
 msgstr ""
 
+msgid ""
+"Attempting to create container name for multiple analyses. Each analysis has "
+"its own container."
+msgstr ""
+
 msgid "Contingency Tables"
 msgstr ""
 
@@ -258,6 +263,9 @@ msgid "%.0f%% Credible Interval"
 msgstr ""
 
 msgid "Log Odds Ratio Plots"
+msgstr ""
+
+msgid "Odds ratio restricted to 2 x 2 analyses"
 msgstr ""
 
 msgid "Odds ratio for this model not yet implemented"

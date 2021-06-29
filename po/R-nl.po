@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-03-06 14:13\n"
+"POT-Creation-Date: 2021-06-29 14:05\n"
 "PO-Revision-Date: 2020-12-02 21:29+0000\n"
 "Last-Translator: JASP Stats <F.A.M.Meerhoff@uva.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jasp-engine/"
@@ -143,6 +143,11 @@ msgstr "Eén of meer Bayes-factoren zijn oneindig"
 msgid "Undefined hypothesis"
 msgstr "Ongedefinieerde hypothese"
 
+msgid ""
+"Attempting to create container name for multiple analyses. Each analysis has "
+"its own container."
+msgstr ""
+
 msgid "Contingency Tables"
 msgstr "Kruistabellen"
 
@@ -279,6 +284,10 @@ msgstr "%.0f%% Geloofwaardigheidsinterval"
 
 msgid "Log Odds Ratio Plots"
 msgstr "Log Odds Ratio Grafieken"
+
+#, fuzzy
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr "Odds ratio beperkt tot 2 x 2 tabellen"
 
 msgid "Odds ratio for this model not yet implemented"
 msgstr "Odds ratio nog niet geïmplementeerd voor dit model"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-03-06 14:13\n"
+"POT-Creation-Date: 2021-06-29 14:05\n"
 "PO-Revision-Date: 2021-06-28 18:32+0000\n"
 "Last-Translator: Alex França <alex.tonante@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -146,6 +146,11 @@ msgstr "Um ou mais fatores de Bayes são infinitos"
 msgid "Undefined hypothesis"
 msgstr "Hipótese não definida"
 
+msgid ""
+"Attempting to create container name for multiple analyses. Each analysis has "
+"its own container."
+msgstr ""
+
 msgid "Contingency Tables"
 msgstr "Tabelas de Contingência"
 
@@ -238,8 +243,8 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
-"Para todos os testes, a hipótese alternativa especifica que o grupo "
-"<em>%1$s</em> %2$s <em>%3$s</em>."
+"Para todos os testes, a hipótese alternativa especifica que o grupo <em>"
+"%1$s</em> %2$s <em>%3$s</em>."
 
 msgid "Expected count"
 msgstr "Contagem esperada"
@@ -282,6 +287,10 @@ msgstr "%.0f%% Intervalo de credibilidade"
 
 msgid "Log Odds Ratio Plots"
 msgstr "Diagramas de razão de chances logarítmicas"
+
+#, fuzzy
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr "Razão de chances restrita a tabelas 2x2"
 
 msgid "Odds ratio for this model not yet implemented"
 msgstr "Razão de chances para este modelo ainda não implementado"
