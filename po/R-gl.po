@@ -1,0 +1,559 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-06-29 14:05\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Virgin-Header: remove this line if you change anything in the header.\n"
+"X-Language: gl_ES\n"
+"X-Source-Language: C\n"
+"X-Generator: Poedit 2.3\n"
+
+msgid "Bayesian A/B Test"
+msgstr "Proba baiesiana A/B"
+
+msgid "Models"
+msgstr "Modelos"
+
+msgid "P(M)"
+msgstr ""
+
+msgid "P(M|data)"
+msgstr ""
+
+msgid ""
+"A positive log odds ratio means that the success rate in Group 2 is higher "
+"than in Group 1."
+msgstr ""
+
+msgid "Log odds ratio = 0"
+msgstr "Logaritmo da proporción de posibilidades = 0"
+
+msgid "Log odds ratio > 0"
+msgstr "Logaritmo da proporción de posibilidades > 0"
+
+msgid "Log odds ratio < 0"
+msgstr "Logaritmo da proporción de posibilidades < 0"
+
+#, fuzzy
+msgid "Log odds ratio %s 0"
+msgstr "Logaritmo da proporción de posibilidades = 0"
+
+msgid "Descriptives"
+msgstr "Descritivos"
+
+msgid "Counts"
+msgstr "Recontos"
+
+msgid "Total"
+msgstr "Total"
+
+#, fuzzy
+msgid "Proportion"
+msgstr "Proporcións"
+
+msgid "Group 1"
+msgstr "Grupo 1"
+
+msgid "Group 2"
+msgstr "Grupo 2"
+
+#, fuzzy
+msgid "Prior and Posterior"
+msgstr "Previo e posterior"
+
+msgid "Sequential Analysis"
+msgstr "Análise secuencial"
+
+#, fuzzy
+msgid "Bayes Factor Robustness Check"
+msgstr "Comprobación da robustez do factor de Bayes"
+
+msgid "Prior"
+msgstr "Previo"
+
+msgid "Cannot test the hypothesis that the test value is greater than 1."
+msgstr ""
+
+msgid "Cannot test the hypothesis that the test value is less than 0."
+msgstr ""
+
+msgid "Binomial Test"
+msgstr "Proba Binomial"
+
+msgid "Variable"
+msgstr "Variable"
+
+#, fuzzy
+msgid "Level"
+msgstr "Niveis"
+
+msgid "p"
+msgstr "p"
+
+msgid "VS-MPR"
+msgstr ""
+
+msgid "Lower"
+msgstr "Inferior"
+
+#, fuzzy
+msgid "%s%% CI for Proportion"
+msgstr "Proporcións"
+
+msgid "Upper"
+msgstr "Superior"
+
+#, fuzzy
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"less than %s."
+msgstr ""
+"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
+"valor a probar."
+
+#, fuzzy
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"greater than %s."
+msgstr ""
+"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
+"valor a probar."
+
+msgid "Proportions tested against value: %s."
+msgstr ""
+
+msgid "Descriptives Plots"
+msgstr "Gráficas descritivas"
+
+msgid "Bayesian Binomial Test"
+msgstr "Proba baiesiana Binomial"
+
+msgid "Inferential Plots"
+msgstr "Gráficas inferenciais"
+
+#, fuzzy
+msgid "Population proportion"
+msgstr "Presentar as proporcións"
+
+#, fuzzy
+msgid "One or more Bayes factors cannot be computed"
+msgstr "Non poden estar baleiros o usuario nin o contrasinal."
+
+msgid "One or more Bayes factors are infinite"
+msgstr ""
+
+#, fuzzy
+msgid "Undefined hypothesis"
+msgstr "Hipótese"
+
+msgid ""
+"Attempting to create container name for multiple analyses. Each analysis has "
+"its own container."
+msgstr ""
+
+msgid "Contingency Tables"
+msgstr "Táboas de continxencia"
+
+#, fuzzy
+msgid "Chi-Squared Tests"
+msgstr "Khi-cadrado"
+
+msgid ""
+"Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
+"      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+#, fuzzy
+msgid "Log Odds Ratio"
+msgstr "Proporción de posibilidades"
+
+msgid "Odds Ratio"
+msgstr "Proporción de posibilidades"
+
+#, fuzzy
+msgid "%.0f%% Confidence Intervals"
+msgstr "Intervalo de confianza"
+
+msgid "Nominal"
+msgstr "Nominal"
+
+#, fuzzy
+msgid "Ordinal Gamma"
+msgstr "Ordinal"
+
+#, fuzzy
+msgid "95%% Confidence Intervals"
+msgstr "Intervalo de confianza"
+
+msgid "Gamma"
+msgstr "Gamma"
+
+#, fuzzy
+msgid "Standard Error"
+msgstr "Desviación padrón"
+
+#, fuzzy
+msgid "Kendall's Tau-b"
+msgstr "Tau-b de Kendall"
+
+msgid "Z"
+msgstr ""
+
+msgid "VS-MPR%s"
+msgstr ""
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "df"
+msgstr "gl"
+
+msgid "Contingency coefficient"
+msgstr "Coeficiente de continxencia"
+
+#, fuzzy
+msgid "Phi-coefficient"
+msgstr "Coeficientes"
+
+msgid "Cramer's V"
+msgstr "V de Cramer"
+
+msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
+msgstr ""
+
+msgid ""
+"Value could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+
+#, fuzzy
+msgid "Lambda (rows)"
+msgstr "Lambda (λ)"
+
+#, fuzzy
+msgid "Lambda (columns)"
+msgstr "Lambda (λ)"
+
+#, fuzzy
+msgid "Lambda (symmetric)"
+msgstr "Lambda (λ)"
+
+#, fuzzy
+msgid "is less than"
+msgstr "Menor que"
+
+#, fuzzy
+msgid "is greater than"
+msgstr "Maior que: %1"
+
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"%2$s <em>%3$s</em>."
+msgstr ""
+
+#, fuzzy
+msgid "Expected count"
+msgstr "Cantidades agardadas"
+
+msgid "%% within row"
+msgstr ""
+
+msgid "%% within column"
+msgstr ""
+
+msgid "%% of total"
+msgstr ""
+
+msgid "N"
+msgstr "N"
+
+msgid ""
+"%s could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+
+#, fuzzy
+msgid "%s continuity correction"
+msgstr "Corrección χ² de continuidade"
+
+msgid "Likelihood ratio"
+msgstr "Proporción de verosimilitudes"
+
+#, fuzzy
+msgid "Odds ratio restricted to 2 x 2 tables"
+msgstr "Escala da proporción de posibilidades"
+
+#, fuzzy
+msgid "Fisher's exact test"
+msgstr "Hipótese alternativa (Proba exacta de Fisher)"
+
+#, fuzzy
+msgid "Bayesian Contingency Tables Tests"
+msgstr "Táboas baiesianas de continxencia"
+
+#, fuzzy
+msgid "%.0f%% Credible Interval"
+msgstr "Intervalo de credibilidade"
+
+#, fuzzy
+msgid "Log Odds Ratio Plots"
+msgstr "Logaritmo da proporción de posibilidades = 0"
+
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr ""
+
+msgid "Odds ratio for this model not yet implemented"
+msgstr ""
+
+#, fuzzy
+msgid "The Bayes factor is undefined"
+msgstr "Factores de Bayes"
+
+#, fuzzy
+msgid "The Bayes factor is too small"
+msgstr "Matriz de factores de Bayes"
+
+#, fuzzy
+msgid "The Bayes factor is infinite"
+msgstr "Factores de Bayes"
+
+msgid "median Log OR ="
+msgstr ""
+
+msgid "Poisson"
+msgstr "Poisson"
+
+msgid "Joint multinomial"
+msgstr "Multinomial conxunta"
+
+#, fuzzy
+msgid "Independent multinomial"
+msgstr "Multinomial conxunta"
+
+msgid "Hypergeometric"
+msgstr "Hiperxeométrico"
+
+msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
+msgstr ""
+
+msgid "Proportion test restricted to 2 x 2 tables"
+msgstr ""
+
+#, fuzzy
+msgid "is not equal to"
+msgstr "Menor que ou igual a: %1"
+
+msgid "Invalid sampling model selected"
+msgstr ""
+
+#, fuzzy
+msgid "Odds ratio"
+msgstr "Proporcións de posibilidades"
+
+msgid "Odd ratio for this model not yet implemented"
+msgstr ""
+
+msgid "Cramer's V for this model not yet implemented"
+msgstr ""
+
+#, fuzzy
+msgid "Posterior"
+msgstr "R² posterior"
+
+msgid "Expected counts not supported without observed counts."
+msgstr ""
+
+#, fuzzy
+msgid "No expected counts entered."
+msgstr "Cantidades agardadas"
+
+msgid ""
+"Invalid counts: variable does not match the number of levels of the factor. "
+"When counts are specified, each row of the data set must represent a unique "
+"level of the factor."
+msgstr ""
+
+msgid ""
+"Invalid expected counts: variable does not match the number of levels of the "
+"factor."
+msgstr ""
+
+msgid "Invalid counts: variable must contain only integer values."
+msgstr ""
+
+msgid "Confidence intervals are based on independent binomial distributions."
+msgstr ""
+
+#, fuzzy
+msgid "Could not compute confidence intervals."
+msgstr "Intervalos de confianza"
+
+msgid "Factor"
+msgstr "Factor"
+
+msgid "Observed"
+msgstr "Observado"
+
+#, fuzzy
+msgid "Expected: %s"
+msgstr "Agardado"
+
+msgid "Expected"
+msgstr "Agardado"
+
+#, fuzzy
+msgid "%s%% Confidence Interval"
+msgstr "Intervalo de confianza"
+
+#, fuzzy
+msgid "Descriptives Plot"
+msgstr "Gráficas descritivas"
+
+#, fuzzy
+msgid "Observed counts"
+msgstr "momentos observados"
+
+#, fuzzy
+msgid "Observed proportions"
+msgstr "Proporción observada"
+
+msgid "Bayesian Multinomial Test"
+msgstr "Proba baiesiana multinomial"
+
+msgid "Levels"
+msgstr "Niveis"
+
+#, fuzzy
+msgid "Credible"
+msgstr "Rexión de credibilidade"
+
+msgid ""
+"Credible intervals are based on independent binomial distributions with flat "
+"priors."
+msgstr ""
+
+msgid "Confidence"
+msgstr "Confianza"
+
+msgid "%1$s%% %2$s Interval"
+msgstr ""
+
+#, fuzzy
+msgid "Could not compute %s Intervals."
+msgstr "Intervalo de confianza"
+
+msgid "Descriptives plot"
+msgstr "Gráfica descritiva"
+
+#, fuzzy
+msgid "Observed Counts"
+msgstr "momentos observados"
+
+#, fuzzy
+msgid "Observed Proportions"
+msgstr "Proporción observada"
+
+msgid "ANOVA"
+msgstr "ANOVA"
+
+msgid "Deviance"
+msgstr "Desviación"
+
+#, fuzzy
+msgid "Residual df"
+msgstr "Erros"
+
+#, fuzzy
+msgid "Residual Deviance"
+msgstr "Varianza dos erros"
+
+msgid "Coefficients"
+msgstr "Coeficientes"
+
+#, fuzzy
+msgid "Estimate"
+msgstr "Estimado"
+
+#, fuzzy
+msgid "%s%% Confidence Intervals"
+msgstr "Intervalo de confianza"
+
+msgid ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
+"the maximum possible odds in favor of H%1$s over H%2$s equals \n"
+"1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+#, fuzzy
+msgid "variables cannot be read"
+msgstr "As actualización non poden lerse"
+
+msgid "R Package error: %s"
+msgstr ""
+
+#, fuzzy
+msgid "R Package error: Cannot retrieve table probabilities"
+msgstr "Probabilidades previas e posteriores"
+
+msgid "Total number of models visited = %i"
+msgstr ""
+
+msgid "Submodel specified is not within possible submodels"
+msgstr ""
+
+msgid "<em>Model formula:</em>"
+msgstr ""
+
+#, fuzzy
+msgid "<em>Posterior model probability =</em>"
+msgstr "Probabilidades posteriores do modelo"
+
+#, fuzzy
+msgid "Model Comparison"
+msgstr "Opcións do modelo"
+
+msgid "BF<sub>10</sub>"
+msgstr ""
+
+msgid "BF<sub>01</sub>"
+msgstr ""
+
+msgid "Log(BF<sub>10</sub>)"
+msgstr ""
+
+#, fuzzy
+msgid "Posterior Summary Statistics"
+msgstr "Resumo estatístico"
+
+msgid "P(incl|data)"
+msgstr ""
+
+msgid "Mean"
+msgstr "Media"
+
+msgid "Variance"
+msgstr "Varianza"
+
+#, fuzzy
+msgid "%s%% Credible intervals"
+msgstr "Intervalos de credibilidade"
+
+#, fuzzy
+msgid "Posterior Summary Statistics For Submodel %s"
+msgstr "Módulo de resumo estatístico"
+
+#, fuzzy
+msgid "%.0f%% Credible intervals"
+msgstr "Intervalos de credibilidade"
+
