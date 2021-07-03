@@ -7,17 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-06-29 14:05\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: gl_ES\n"
+"PO-Revision-Date: 2021-07-02 14:03+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/gl/>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8-dev\n"
 "X-Virgin-Header: remove this line if you change anything in the header.\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
-"X-Generator: Poedit 2.3\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Proba baiesiana A/B"
@@ -182,9 +184,8 @@ msgstr "Proporción de posibilidades"
 msgid "Odds Ratio"
 msgstr "Proporción de posibilidades"
 
-#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr "Intervalo de confianza"
+msgstr "Intervalos co %.0f%% de confianza"
 
 msgid "Nominal"
 msgstr "Nominal"
@@ -212,7 +213,7 @@ msgid "Z"
 msgstr ""
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
 msgstr "Valor"
@@ -301,9 +302,8 @@ msgstr "Hipótese alternativa (Proba exacta de Fisher)"
 msgid "Bayesian Contingency Tables Tests"
 msgstr "Táboas baiesianas de continxencia"
 
-#, fuzzy
 msgid "%.0f%% Credible Interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo co %.0f%% de credibilidade"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
@@ -411,21 +411,17 @@ msgstr "Agardado"
 msgid "Expected"
 msgstr "Agardado"
 
-#, fuzzy
 msgid "%s%% Confidence Interval"
-msgstr "Intervalo de confianza"
+msgstr "Intervalo co %s%% de confianza"
 
-#, fuzzy
 msgid "Descriptives Plot"
-msgstr "Gráficas descritivas"
+msgstr "Gráfica dos descritivos"
 
-#, fuzzy
 msgid "Observed counts"
-msgstr "momentos observados"
+msgstr "Recontos observados"
 
-#, fuzzy
 msgid "Observed proportions"
-msgstr "Proporción observada"
+msgstr "Proporcións observadas"
 
 msgid "Bayesian Multinomial Test"
 msgstr "Proba baiesiana multinomial"
@@ -433,35 +429,33 @@ msgstr "Proba baiesiana multinomial"
 msgid "Levels"
 msgstr "Niveis"
 
-#, fuzzy
 msgid "Credible"
-msgstr "Rexión de credibilidade"
+msgstr "Crible"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
 msgstr ""
+"Os intervalos cribles baséanse en distribucións binomiais independentes con "
+"previos aplanados."
 
 msgid "Confidence"
 msgstr "Confianza"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "Intervalo %1$s%% %2$s"
 
-#, fuzzy
 msgid "Could not compute %s Intervals."
-msgstr "Intervalo de confianza"
+msgstr "Non poden calcularse %s intervalos."
 
 msgid "Descriptives plot"
-msgstr "Gráfica descritiva"
+msgstr "Gráficas descritivas"
 
-#, fuzzy
 msgid "Observed Counts"
-msgstr "momentos observados"
+msgstr "Recontos observados"
 
-#, fuzzy
 msgid "Observed Proportions"
-msgstr "Proporción observada"
+msgstr "Proporcións observadas"
 
 msgid "ANOVA"
 msgstr "ANOVA"
@@ -469,24 +463,20 @@ msgstr "ANOVA"
 msgid "Deviance"
 msgstr "Desviación"
 
-#, fuzzy
 msgid "Residual df"
-msgstr "Erros"
+msgstr "GL dos erros"
 
-#, fuzzy
 msgid "Residual Deviance"
-msgstr "Varianza dos erros"
+msgstr "Desviación dos erros"
 
 msgid "Coefficients"
 msgstr "Coeficientes"
 
-#, fuzzy
 msgid "Estimate"
-msgstr "Estimado"
+msgstr "Estimar"
 
-#, fuzzy
 msgid "%s%% Confidence Intervals"
-msgstr "Intervalo de confianza"
+msgstr "Intervalos do %s%% de confianza"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -495,49 +485,44 @@ msgid ""
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
 
-#, fuzzy
 msgid "variables cannot be read"
-msgstr "As actualización non poden lerse"
+msgstr "as variables non poden lerse"
 
 msgid "R Package error: %s"
-msgstr ""
+msgstr "Fallo do paquete de R: %s"
 
-#, fuzzy
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr "Probabilidades previas e posteriores"
+msgstr "Fallo do paquete de R: As probabilidades da táboa non poden recuperarse"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "Número total de modelos consultados = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "O submodelo especificado non é un dos submodelos posibles"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>Fórmula do modelo:</em>"
 
-#, fuzzy
 msgid "<em>Posterior model probability =</em>"
-msgstr "Probabilidades posteriores do modelo"
+msgstr "<em>Probabilidade do modelo posterior =</em>"
 
-#, fuzzy
 msgid "Model Comparison"
-msgstr "Opcións do modelo"
+msgstr "Cotexo de modelos"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "FB<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "FB<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(FB<sub>10</sub>)"
 
-#, fuzzy
 msgid "Posterior Summary Statistics"
-msgstr "Resumo estatístico"
+msgstr "Estatísticos de resumo posteriores"
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(incl|datos)"
 
 msgid "Mean"
 msgstr "Media"
@@ -545,15 +530,11 @@ msgstr "Media"
 msgid "Variance"
 msgstr "Varianza"
 
-#, fuzzy
 msgid "%s%% Credible intervals"
-msgstr "Intervalos de credibilidade"
+msgstr "Intervalos co %s%% de credibilidade"
 
-#, fuzzy
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr "Módulo de resumo estatístico"
+msgstr "Estatísticos de Resumo Posteriores para o Submodelo %s"
 
-#, fuzzy
 msgid "%.0f%% Credible intervals"
-msgstr "Intervalos de credibilidade"
-
+msgstr "Intervalos co %.0f%% de credibilidade"
