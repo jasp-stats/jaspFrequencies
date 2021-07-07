@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-06-29 14:05\n"
-"PO-Revision-Date: 2021-07-02 14:03+0000\n"
+"PO-Revision-Date: 2021-07-08 20:32+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/gl/>\n"
@@ -28,10 +28,10 @@ msgid "Models"
 msgstr "Modelos"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|datos)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -70,14 +70,12 @@ msgstr "Grupo 1"
 msgid "Group 2"
 msgstr "Grupo 2"
 
-#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Previo e posterior"
+msgstr "Previo e Posterior"
 
 msgid "Sequential Analysis"
 msgstr "Análise secuencial"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
 msgstr "Comprobación da robustez do factor de Bayes"
 
@@ -85,10 +83,10 @@ msgid "Prior"
 msgstr "Previo"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
+msgstr "Non se pode comprobar a hipótese de que o valor a probar é maior que 1."
 
 msgid "Cannot test the hypothesis that the test value is less than 0."
-msgstr ""
+msgstr "Non se pode comprobar a hipótese de que o valor a probar é menor que 1."
 
 msgid "Binomial Test"
 msgstr "Proba Binomial"
@@ -96,9 +94,8 @@ msgstr "Proba Binomial"
 msgid "Variable"
 msgstr "Variable"
 
-#, fuzzy
 msgid "Level"
-msgstr "Niveis"
+msgstr "Nivel"
 
 msgid "p"
 msgstr "p"
@@ -116,24 +113,22 @@ msgstr "Proporcións"
 msgid "Upper"
 msgstr "Superior"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
 msgstr ""
-"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
-"valor a probar."
+"Para todas as probas, a hipótese alternativa indica que a proporción é menor "
+"que %s."
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
 msgstr ""
-"Hipótese alternativa dunha cola, de que a media da poboación é maior que o "
-"valor a probar."
+"Para todas as probas, a hipótese alternativa indica que a proporción é maior "
+"que %s."
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "Proporcións probadas fronte ao valor: %s."
 
 msgid "Descriptives Plots"
 msgstr "Gráficas descritivas"
@@ -144,9 +139,8 @@ msgstr "Proba baiesiana Binomial"
 msgid "Inferential Plots"
 msgstr "Gráficas inferenciais"
 
-#, fuzzy
 msgid "Population proportion"
-msgstr "Presentar as proporcións"
+msgstr "Proporción de poboación"
 
 #, fuzzy
 msgid "One or more Bayes factors cannot be computed"
@@ -155,9 +149,8 @@ msgstr "Non poden estar baleiros o usuario nin o contrasinal."
 msgid "One or more Bayes factors are infinite"
 msgstr ""
 
-#, fuzzy
 msgid "Undefined hypothesis"
-msgstr "Hipótese"
+msgstr "Hipótese indefinida"
 
 msgid ""
 "Attempting to create container name for multiple analyses. Each analysis has "
@@ -185,7 +178,7 @@ msgid "Odds Ratio"
 msgstr "Proporción de posibilidades"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr "Intervalos co %.0f%% de confianza"
+msgstr "Intervalos co %.0f%% de Confianza"
 
 msgid "Nominal"
 msgstr "Nominal"
@@ -194,16 +187,14 @@ msgstr "Nominal"
 msgid "Ordinal Gamma"
 msgstr "Ordinal"
 
-#, fuzzy
 msgid "95%% Confidence Intervals"
-msgstr "Intervalo de confianza"
+msgstr "Intervalos co 95%% de Confianza"
 
 msgid "Gamma"
 msgstr "Gamma"
 
-#, fuzzy
 msgid "Standard Error"
-msgstr "Desviación padrón"
+msgstr "Erro Padrón"
 
 #, fuzzy
 msgid "Kendall's Tau-b"
@@ -303,7 +294,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Táboas baiesianas de continxencia"
 
 msgid "%.0f%% Credible Interval"
-msgstr "Intervalo co %.0f%% de credibilidade"
+msgstr "Intervalo co %.0f%% de Credibilidade"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
@@ -366,9 +357,8 @@ msgstr ""
 msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
-#, fuzzy
 msgid "Posterior"
-msgstr "R² posterior"
+msgstr "Posterior"
 
 msgid "Expected counts not supported without observed counts."
 msgstr ""
@@ -394,9 +384,8 @@ msgstr ""
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
 
-#, fuzzy
 msgid "Could not compute confidence intervals."
-msgstr "Intervalos de confianza"
+msgstr "Non poden calcularse os intervalos de confianza."
 
 msgid "Factor"
 msgstr "Factor"
@@ -412,7 +401,7 @@ msgid "Expected"
 msgstr "Agardado"
 
 msgid "%s%% Confidence Interval"
-msgstr "Intervalo co %s%% de confianza"
+msgstr "Intervalo co %s%% de Confianza"
 
 msgid "Descriptives Plot"
 msgstr "Gráfica dos descritivos"
@@ -446,7 +435,7 @@ msgid "%1$s%% %2$s Interval"
 msgstr "Intervalo %1$s%% %2$s"
 
 msgid "Could not compute %s Intervals."
-msgstr "Non poden calcularse %s intervalos."
+msgstr "Non poden calcularse %s Intervalos."
 
 msgid "Descriptives plot"
 msgstr "Gráficas descritivas"
@@ -476,7 +465,7 @@ msgid "Estimate"
 msgstr "Estimar"
 
 msgid "%s%% Confidence Intervals"
-msgstr "Intervalos do %s%% de confianza"
+msgstr "Intervalos co %s%% de Confianza"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -531,10 +520,10 @@ msgid "Variance"
 msgstr "Varianza"
 
 msgid "%s%% Credible intervals"
-msgstr "Intervalos co %s%% de credibilidade"
+msgstr "Intervalos co %s%% de Credibilidade"
 
 msgid "Posterior Summary Statistics For Submodel %s"
 msgstr "Estatísticos de Resumo Posteriores para o Submodelo %s"
 
 msgid "%.0f%% Credible intervals"
-msgstr "Intervalos co %.0f%% de credibilidade"
+msgstr "Intervalos co %.0f%% de Credibilidade"
