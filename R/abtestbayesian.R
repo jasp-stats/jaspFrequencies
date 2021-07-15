@@ -326,7 +326,12 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   if (!ready)
     return()
 
-  abTestSequentialPlot$plotObject <- .plotSequentialAnalysis.abTest(ab_obj)
+  plotObject <- try(.plotSequentialAnalysis.abTest(ab_obj))
+  if (jaspBase::isTryError(plotObject)) {
+    abTestSequentialPlot$setError(jaspBase::.extractErrorMessage(plotObject))
+  } else {
+    abTestSequentialPlot$plotObject <- plotObject
+  }
 }
 
 
