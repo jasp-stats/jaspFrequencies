@@ -137,7 +137,6 @@ test_that("Posterior plot matches", {
 
 
 test_that("Sequential plot matches", {
-  skip("This test need to be verified")
   set.seed(0)
 
   options <- jaspTools::analysisOptions("ABTestBayesian")
