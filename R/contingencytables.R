@@ -65,6 +65,12 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
              type = c('negativeValues', 'infinity', 'missingValues'),
              all.target = c(options$counts),
              exitAnalysisIfErrors = TRUE)
+
+  .hasErrors(dataset,
+             type = "factorLevels",
+             factorLevels.target = c(options[["rows"]], options[["columns"]]),
+             factorLevels.amount  = "< 2",
+             exitAnalysisIfErrors = TRUE)
 }
 
 # Combinations of rows, columns, layers
