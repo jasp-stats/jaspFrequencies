@@ -486,14 +486,18 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   priorPieChart <- jaspGraphs::plotPieChart(p_prior, names(p_prior), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col_trans) +
     ggplot2::ylab("Prior Probabilities") +
-    ggplot2::theme(legend.position = "none", axis.title.y = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .1)) +
-    ggplot2::coord_polar("y", start = pi / 2)
+    ggplot2::coord_polar("y", start = pi / 2) +
+    ggplot2::theme(legend.position = "none",
+                   axis.title.x = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .75),
+                   plot.margin = ggplot2::margin())
 
   posteriorPieChart <- jaspGraphs::plotPieChart(p_post, names(p_post), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col) +
     ggplot2::ylab("Posterior Probabilities") +
-    ggplot2::theme(legend.position = "none", axis.title.y = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .1)) +
-    ggplot2::coord_polar("y", start = pi / 2)
+    ggplot2::coord_polar("y", start = pi / 2) +
+    ggplot2::theme(legend.position = "none",
+                   axis.title.x = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .75),
+                   plot.margin = ggplot2::margin())
 
   legendText <- names(hyp_index2)
   legendText[legendText == "H-"] <- "H−" # abtest also does this and yes the two '-' are different...
@@ -501,31 +505,36 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   priorLabels <- .abTestmakeLabels(legendText, p_prior)
   dfPriorLabels <- data.frame(x = 1, y = rev(seq_along(priorLabels)), label = priorLabels, g = names(p_prior))
   priorText <- ggplot2::ggplot(data = dfPriorLabels, mapping = ggplot2::aes(x = x, y = y, label = label)) +
-    ggplot2::geom_point(data = dfPriorLabels, mapping = ggplot2::aes(x = x - 0.1, y = y, group = g, fill = g), inherit.aes = FALSE, shape = 21, size = 3) +
+    ggplot2::geom_point(data = dfPriorLabels, mapping = ggplot2::aes(x = x - 0.5, y = y, group = g, fill = g), inherit.aes = FALSE, shape = 21, size = 3) +
     ggplot2::scale_fill_manual(values = col_trans) +
     ggplot2::geom_text(hjust = "left") +
-    ggplot2::xlim(c(.5, 2)) +
-    ggplot2::ylim(range(seq_along(priorLabels)) + c(-1, 0)) +
+    ggplot2::xlim(c(0, 15)) +
+    ggplot2::ylim(range(seq_along(priorLabels)) + c(-2, 1)) +
+    ggplot2::xlab("") +
     ggplot2::theme_void() +
     ggplot2::theme(legend.position = "none")
 
   postLabels <- .abTestmakeLabels(legendText, p_post)
   dfPostLabels <- data.frame(x = 1, y = rev(seq_along(postLabels)), label = postLabels, g = names(p_post))
   postText <- ggplot2::ggplot(data = dfPostLabels, mapping = ggplot2::aes(x = x, y = y, label = label)) +
-    ggplot2::geom_point(data = dfPostLabels, mapping = ggplot2::aes(x = x - 0.1, y = y, group = g, fill = g), inherit.aes = FALSE, shape = 21, size = 3) +
+    ggplot2::geom_point(data = dfPostLabels, mapping = ggplot2::aes(x = x - 0.5, y = y, group = g, fill = g), inherit.aes = FALSE, shape = 21, size = 3) +
     ggplot2::scale_fill_manual(values = col) +
     ggplot2::geom_text(hjust = "left") +
-    ggplot2::xlim(c(.5, 2)) +
-    ggplot2::ylim(range(seq_along(postLabels)) + c(-1, 0)) +
+    ggplot2::xlim(c(0, 15)) +
+    ggplot2::ylim(range(seq_along(postLabels)) + c(-2, 1)) +
+    ggplot2::xlab("") +
     ggplot2::theme_void() +
     ggplot2::theme(legend.position = "none")
 
   arrowPlot <- ggplot2::ggplot(data = data.frame(x = c(.5, 1), y = c(0, 0)), mapping = ggplot2::aes(x = x, y = y)) +
-    ggplot2::geom_line(arrow = ggplot2::arrow(length = grid::unit(0.4, "cm")), size = 1.05) +
+    ggplot2::geom_line(arrow = ggplot2::arrow(length = grid::unit(0.3, "cm")), size = 1.05) +
     ggplot2::xlim(c(0, 1)) +
-    ggplot2::theme_void()
+    ggplot2::ylim(c(-1, .5)) +
+    ggplot2::theme_void() +
+    ggplot2::xlab("")
 
-  layout <- rbind(1:5, 6, 6, 6, 6)
+  widths <- c(3, 4, 1, 3, 4) # relative widths of the figures above
+  layout <- rbind(rep(1:5, widths), matrix(6, 4, sum(widths)))
 
   combinedPlot <- jaspGraphs:::jaspGraphsPlot$new(
     subplots = list(

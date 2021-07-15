@@ -151,7 +151,7 @@ test_that("Sequential plot matches", {
   options$plotSequentialAnalysis <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
-  testPlot <- results[["state"]][["figures"]][[1]]
+  testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
 
   jaspTools::expect_equal_plots(testPlot, "sequential")
 })
