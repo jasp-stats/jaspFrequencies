@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-06-29 14:05\n"
-"PO-Revision-Date: 2021-07-08 20:32+0000\n"
+"PO-Revision-Date: 2021-07-15 15:33+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/gl/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 "X-Virgin-Header: remove this line if you change anything in the header.\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
@@ -37,6 +37,8 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
+"Un logaritmo da proporción de posibilidades que sexa positivo significa que "
+"a taxa de éxito no Grupo 2 é maior que no Grupo 1."
 
 msgid "Log odds ratio = 0"
 msgstr "Logaritmo da proporción de posibilidades = 0"
@@ -47,9 +49,8 @@ msgstr "Logaritmo da proporción de posibilidades > 0"
 msgid "Log odds ratio < 0"
 msgstr "Logaritmo da proporción de posibilidades < 0"
 
-#, fuzzy
 msgid "Log odds ratio %s 0"
-msgstr "Logaritmo da proporción de posibilidades = 0"
+msgstr "Logaritmo da proporción de posibilidades %s 0"
 
 msgid "Descriptives"
 msgstr "Descritivos"
@@ -60,9 +61,8 @@ msgstr "Recontos"
 msgid "Total"
 msgstr "Total"
 
-#, fuzzy
 msgid "Proportion"
-msgstr "Proporcións"
+msgstr "Proporción"
 
 msgid "Group 1"
 msgstr "Grupo 1"
@@ -101,14 +101,13 @@ msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
 msgstr "Inferior"
 
-#, fuzzy
 msgid "%s%% CI for Proportion"
-msgstr "Proporcións"
+msgstr "IC do %s%% para a Proporción"
 
 msgid "Upper"
 msgstr "Superior"
@@ -142,12 +141,11 @@ msgstr "Gráficas inferenciais"
 msgid "Population proportion"
 msgstr "Proporción de poboación"
 
-#, fuzzy
 msgid "One or more Bayes factors cannot be computed"
-msgstr "Non poden estar baleiros o usuario nin o contrasinal."
+msgstr "Un (ou máis) factor de Bayes non se pode calcular"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "Un (ou máis) factor de Bayes é infinito"
 
 msgid "Undefined hypothesis"
 msgstr "Hipótese indefinida"
@@ -156,26 +154,30 @@ msgid ""
 "Attempting to create container name for multiple analyses. Each analysis has "
 "its own container."
 msgstr ""
+"Tratando de crear un nome do contedor para análises múltiples. Cada análise "
+"ten o seu propio contedor."
 
 msgid "Contingency Tables"
 msgstr "Táboas de continxencia"
 
-#, fuzzy
 msgid "Chi-Squared Tests"
-msgstr "Khi-cadrado"
+msgstr "Probas Khi-cadrado"
 
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Máximo Cociente <em>p</em> de Vovk-Sellke: Baseado no valor <em>p</em>,\n"
+"      a máxima probabilidade posible favorable a H%1$s sobre H%2$s igual a "
+"%3$s\n"
+"      (Sellke, Bayarri & Berger, 2001)."
 
-#, fuzzy
 msgid "Log Odds Ratio"
-msgstr "Proporción de posibilidades"
+msgstr "Logaritmo da Proporción de Posibilidades"
 
 msgid "Odds Ratio"
-msgstr "Proporción de posibilidades"
+msgstr "Proporción de Posibilidades"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr "Intervalos co %.0f%% de Confianza"
@@ -183,9 +185,8 @@ msgstr "Intervalos co %.0f%% de Confianza"
 msgid "Nominal"
 msgstr "Nominal"
 
-#, fuzzy
 msgid "Ordinal Gamma"
-msgstr "Ordinal"
+msgstr "Gamma Ordinal"
 
 msgid "95%% Confidence Intervals"
 msgstr "Intervalos co 95%% de Confianza"
@@ -196,12 +197,11 @@ msgstr "Gamma"
 msgid "Standard Error"
 msgstr "Erro Padrón"
 
-#, fuzzy
 msgid "Kendall's Tau-b"
 msgstr "Tau-b de Kendall"
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "VS-MPR%s"
 msgstr "VS-MPR%s"
@@ -215,57 +215,55 @@ msgstr "gl"
 msgid "Contingency coefficient"
 msgstr "Coeficiente de continxencia"
 
-#, fuzzy
 msgid "Phi-coefficient"
-msgstr "Coeficientes"
+msgstr "Coeficiente phi"
 
 msgid "Cramer's V"
 msgstr "V de Cramer"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
+"O coeficiente phi só está dispoñible para Táboas de Continxencia 2 por 2"
 
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"Non se pode calcular o valor - Cando menos, unha fila ou columna ten todos "
+"ceros"
 
-#, fuzzy
 msgid "Lambda (rows)"
-msgstr "Lambda (λ)"
+msgstr "Lambda (filas)"
 
-#, fuzzy
 msgid "Lambda (columns)"
-msgstr "Lambda (λ)"
+msgstr "Lambda (columnas)"
 
-#, fuzzy
 msgid "Lambda (symmetric)"
-msgstr "Lambda (λ)"
+msgstr "Lambda (simétrico)"
 
-#, fuzzy
 msgid "is less than"
-msgstr "Menor que"
+msgstr "é menor que"
 
-#, fuzzy
 msgid "is greater than"
-msgstr "Maior que: %1"
+msgstr "é maior que"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
+"Para todas as probas, a hipótese alternativa indica que o grupo <em>%1$s</"
+"em> %2$s <em>%3$s</em>."
 
-#, fuzzy
 msgid "Expected count"
-msgstr "Cantidades agardadas"
+msgstr "Reconto agardado"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% dentro da fila"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% dentro da columna"
 
 msgid "%% of total"
-msgstr ""
+msgstr "%% do total"
 
 msgid "N"
 msgstr "N"
@@ -273,53 +271,46 @@ msgstr "N"
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"% non se pode calcular - Cando menos, unha fila ou columna ten todos ceros"
 
-#, fuzzy
 msgid "%s continuity correction"
-msgstr "Corrección χ² de continuidade"
+msgstr "Corrección %s de continuidade"
 
 msgid "Likelihood ratio"
 msgstr "Proporción de verosimilitudes"
 
-#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr "Escala da proporción de posibilidades"
+msgstr "Proporción de posibilidades restrinxida a táboas 2x2"
 
-#, fuzzy
 msgid "Fisher's exact test"
-msgstr "Hipótese alternativa (Proba exacta de Fisher)"
+msgstr "Proba exacta de Fisher"
 
-#, fuzzy
 msgid "Bayesian Contingency Tables Tests"
-msgstr "Táboas baiesianas de continxencia"
+msgstr "Probas da Táboas Baiesianas de Continxencia"
 
 msgid "%.0f%% Credible Interval"
 msgstr "Intervalo co %.0f%% de Credibilidade"
 
-#, fuzzy
 msgid "Log Odds Ratio Plots"
-msgstr "Logaritmo da proporción de posibilidades = 0"
+msgstr "Gráficas do Logaritmo da Proporción de Posibilidades"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "Proporción de posibilidade restrinxida a análises 2x2"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "Aínda sen implementar a proporción de posibilidades para este modelo"
 
-#, fuzzy
 msgid "The Bayes factor is undefined"
-msgstr "Factores de Bayes"
+msgstr "O factor de Bayes non está definido"
 
-#, fuzzy
 msgid "The Bayes factor is too small"
-msgstr "Matriz de factores de Bayes"
+msgstr "O factor de Bayes é demasiado pequeno"
 
-#, fuzzy
 msgid "The Bayes factor is infinite"
-msgstr "Factores de Bayes"
+msgstr "O factor de Bayes é infinito"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "mediana Log OR ="
 
 msgid "Poisson"
 msgstr "Poisson"
@@ -327,62 +318,65 @@ msgstr "Poisson"
 msgid "Joint multinomial"
 msgstr "Multinomial conxunta"
 
-#, fuzzy
 msgid "Independent multinomial"
-msgstr "Multinomial conxunta"
+msgstr "Multinomial independente"
 
 msgid "Hypergeometric"
-msgstr "Hiperxeométrico"
+msgstr "Hiperxeométrica"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
 msgstr ""
+"Probas de táboas de continxencia hiperxeométrica restrinxidas a táboas 2x2"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Proba de proporcións restrinxida a táboas 2x2"
 
-#, fuzzy
 msgid "is not equal to"
-msgstr "Menor que ou igual a: %1"
+msgstr "non é igual a"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "Escolleuse un modelo de mostraxe incorrecto"
 
-#, fuzzy
 msgid "Odds ratio"
-msgstr "Proporcións de posibilidades"
+msgstr "Proporción de posibilidades"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "Aínda sen implementar a Proporción de posibilidades para este modelo"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "Aínda sen implementar o V de Cramer para este modelo"
 
 msgid "Posterior"
 msgstr "Posterior"
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "Non se admiten os recontos agardados sen recontos observados."
 
-#, fuzzy
 msgid "No expected counts entered."
-msgstr "Cantidades agardadas"
+msgstr "Non se introduciron as cantidades agardadas."
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"Recontos incorrectos: a variable non coincide co número de niveles do "
+"factor. Cando se indican os recontos, cada fila do conxunto de datos debe "
+"representar un único nivel do factor."
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
 msgstr ""
+"Recontos agardados incorrectos: a variable non coincide co número de niveles "
+"do factor."
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "Recontos incorrectos: a variable debe conter só valores enteiros."
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
+"Os intervalos de confianza baséanse en distribucións Binomiais independentes."
 
 msgid "Could not compute confidence intervals."
 msgstr "Non poden calcularse os intervalos de confianza."
@@ -393,9 +387,8 @@ msgstr "Factor"
 msgid "Observed"
 msgstr "Observado"
 
-#, fuzzy
 msgid "Expected: %s"
-msgstr "Agardado"
+msgstr "Agardado: %s"
 
 msgid "Expected"
 msgstr "Agardado"
@@ -473,6 +466,10 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Máximo Cociente <em>p</em> de Vovk-Sellke: Baseado no valor <em>p</em>, \n"
+"a máxima probabilidade posible favorable a H%1$s sobre H%2$s igual a \n"
+"1/(-e <em>p</em> log(<em>p</em>)) para <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri & Berger, 2001)."
 
 msgid "variables cannot be read"
 msgstr "as variables non poden lerse"
