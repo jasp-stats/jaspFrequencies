@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-07-20 19:07+0000\n"
+"PO-Revision-Date: 2021-07-22 19:33+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/gl/>\n"
@@ -465,7 +465,7 @@ msgstr "Gráfica de Robustez"
 
 msgctxt "ABTestBayesian|"
 msgid "No. Steps"
-msgstr "Número de Pasos"
+msgstr "Número de Etapas"
 
 msgctxt "ABTestBayesian|"
 msgid "Step Range"
