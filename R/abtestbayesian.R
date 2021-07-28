@@ -452,7 +452,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   for (i in seq_along(hyp_index2)) {
     hyp <- names(hyp_index2)[i]
     values <- c(abObj$input$prior_prob[hyp], vapply(out, FUN = function(y) y$post_prob[hyp], FUN.VALUE = 0))
-    dfLines$y[(1 + (nLen + 1) *(i - 1)): ((nLen + 1) * i)] <- values
+    dfLines$y[dfLines[["g"]] == hyp] <- values
   }
 
   mainPlot <- ggplot2::ggplot(data = dfLines, mapping = ggplot2::aes(x = x, y = y, group = g, color = g, fill = g)) +
