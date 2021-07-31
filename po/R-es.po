@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2021-06-29 14:05\n"
+"POT-Creation-Date: 2021-07-31 03:37\n"
 "PO-Revision-Date: 2021-05-30 04:32+0000\n"
 "Last-Translator: Paulina Elizabeth Robalino <paulina.e.robalino@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -73,6 +73,19 @@ msgstr "Comprobación de robustez del factor de Bayes"
 
 msgid "Prior"
 msgstr "Anterior"
+
+msgid "thinning hides the last observation"
+msgstr ""
+
+msgid "n"
+msgstr ""
+
+#, fuzzy
+msgid "Posterior Probability"
+msgstr "<em>Probabilidad posterior del modelo =</em>"
+
+msgid "P(%1$s | data) = %2$.3f"
+msgstr ""
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr ""
