@@ -106,8 +106,11 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
           return(gettext("Invalid expected counts: variable does not match the number of levels of the factor."))
 
         # only applies for observed counts, expected counts can be proportions
-        if (options$exProbVar == "" && !all(counts == round(counts)))
+        if (any(counts != round(counts)))
           return(gettext("Invalid counts: variable must contain only integer values."))
+
+        if (sum(counts) == 0)
+          return(gettext("Invalid counts: less than 1 observation."))
       }
     }
   )
