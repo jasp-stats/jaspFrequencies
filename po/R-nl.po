@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2021-07-31 03:37\n"
+"POT-Creation-Date: 2021-08-21 03:31\n"
 "PO-Revision-Date: 2020-12-02 21:29+0000\n"
 "Last-Translator: JASP Stats <F.A.M.Meerhoff@uva.nl>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/jasp-engine/"
@@ -377,6 +377,11 @@ msgstr ""
 "factor."
 
 msgid "Invalid counts: variable must contain only integer values."
+msgstr ""
+"Ongeldig aantallen: de variabele kan alleen uit gehele waarden bestaan."
+
+#, fuzzy
+msgid "Invalid counts: less than 1 observation."
 msgstr ""
 "Ongeldig aantallen: de variabele kan alleen uit gehele waarden bestaan."
 

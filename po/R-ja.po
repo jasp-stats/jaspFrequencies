@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2021-07-31 03:37\n"
+"POT-Creation-Date: 2021-08-21 03:31\n"
 "PO-Revision-Date: 2021-06-01 08:32+0000\n"
 "Last-Translator: Ko Yamamoto <kou@ynu.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -353,6 +353,9 @@ msgid ""
 msgstr ""
 
 msgid "Invalid counts: variable must contain only integer values."
+msgstr ""
+
+msgid "Invalid counts: less than 1 observation."
 msgstr ""
 
 msgid "Confidence intervals are based on independent binomial distributions."

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-07-31 03:37\n"
+"POT-Creation-Date: 2021-08-21 03:31\n"
 "PO-Revision-Date: 2021-08-01 23:34+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -386,6 +386,10 @@ msgstr ""
 "do factor."
 
 msgid "Invalid counts: variable must contain only integer values."
+msgstr "Recontos incorrectos: a variable debe conter só valores enteiros."
+
+#, fuzzy
+msgid "Invalid counts: less than 1 observation."
 msgstr "Recontos incorrectos: a variable debe conter só valores enteiros."
 
 msgid "Confidence intervals are based on independent binomial distributions."
