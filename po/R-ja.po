@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2021-08-21 03:31\n"
-"PO-Revision-Date: 2021-06-01 08:32+0000\n"
-"Last-Translator: Ko Yamamoto <kou@ynu.ac.jp>\n"
+"PO-Revision-Date: 2021-08-25 23:32+0000\n"
+"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ja/>\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.8.1-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
@@ -76,7 +76,7 @@ msgid "thinning hides the last observation"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 #, fuzzy
 msgid "Posterior Probability"
@@ -170,7 +170,7 @@ msgid "Log Odds Ratio"
 msgstr ""
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "オッズ比"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
@@ -377,7 +377,7 @@ msgid "Expected"
 msgstr ""
 
 msgid "%s%% Confidence Interval"
-msgstr "% s%% 信頼区間"
+msgstr "%s%% 信頼区間"
 
 msgid "Descriptives Plot"
 msgstr "記述統計量プロット"
@@ -424,16 +424,16 @@ msgid "ANOVA"
 msgstr "分散分析"
 
 msgid "Deviance"
-msgstr ""
+msgstr "デビアンス"
 
 msgid "Residual df"
-msgstr ""
+msgstr "残差 df"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "残差逸脱度"
 
 msgid "Coefficients"
-msgstr ""
+msgstr "係数"
 
 msgid "Estimate"
 msgstr "推定"
