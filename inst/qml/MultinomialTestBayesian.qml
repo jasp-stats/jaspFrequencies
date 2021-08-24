@@ -123,7 +123,8 @@ Form
 
 			showAddButton		: false
 			showDeleteButton	: false
-			colHeader			: "Counts"
+			colHeader			: qsTr("Counts")
+			cornerText			: qsTr("Level #")
 			itemType			: JASP.Integer
 		}
 	}
