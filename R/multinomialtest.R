@@ -441,22 +441,13 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     plotFrame  <- cbind(plotFrame, ciDf)
   }
 
-  # Define custom y axis function
-  base_breaks_y <- function(x){
-    b <- pretty(c(0,x))
-    d <- data.frame(x = -Inf, xend = -Inf, y = min(b), yend = max(b))
-    list(ggplot2::geom_segment(data = d,
-                               ggplot2::aes(x = x, y = y, xend = xend, yend = yend),
-                               size = 0.75, inherit.aes = FALSE),
-         ggplot2::scale_y_continuous(breaks = b))
-  }
-
   # Determine y-axis margin: If CIs could not be computed, use observed counts
   plotFrame$yAxisMargin <- plotFrame$upperCI
   for(i in 1:nrow(plotFrame))
-    if(abs(plotFrame$upperCI) <= sqrt(.Machine$double.eps)) #near-zero value
+    if(abs(plotFrame$upperCI[i]) <= sqrt(.Machine$double.eps)) #near-zero value
       plotFrame$yAxisMargin[i] <- plotFrame$obs[i]
 
+  yBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, plotFrame[["yAxisMargin"]]))
   # Create plot
   p <- ggplot2::ggplot(data = plotFrame,
                        mapping = ggplot2::aes(x = factor, y = obs)) +
@@ -464,10 +455,12 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
                       fill = "grey") +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = ciDf$lowerCI, ymax = ciDf$upperCI),
                            size = 0.75, width = 0.3) +
-    base_breaks_y(plotFrame$yAxisMargin) +
-    ggplot2::xlab(options$factor) + ggplot2::ylab(yname)
+    ggplot2::xlab(options$factor) +
+    ggplot2::scale_y_continuous(name = yname, breaks = yBreaks) +
+    jaspGraphs::geom_rangeframe(sides = "b") +
+    ggplot2::coord_flip() +
+    jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
-  p <- jaspGraphs::themeJasp(p, horizontal = TRUE, xAxis = FALSE)
   descriptivesPlot$plotObject <- p
 }
 
