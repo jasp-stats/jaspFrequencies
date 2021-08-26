@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-24 16:33+0000\n"
+"PO-Revision-Date: 2021-08-27 17:33+0000\n"
 "Last-Translator: D.J. Dekker <dj_dekker@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/nl/>\n"
@@ -352,7 +352,7 @@ msgstr "Contingentiecoëfficiënt"
 
 msgctxt "ContingencyTables|"
 msgid "Phi and Cramer's V"
-msgstr "Phi en Cramer's V"
+msgstr "Phi en Cramér's V"
 
 msgctxt "ContingencyTables|"
 msgid "Lambda"
@@ -536,7 +536,7 @@ msgstr "Geloofwaardigheidsinterval"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cramer's V"
-msgstr "Cramer's V"
+msgstr "Cramér's V"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
