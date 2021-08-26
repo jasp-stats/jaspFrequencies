@@ -342,6 +342,9 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
                                     priorConcentration = options$priorConcentration,
                                     fixedMargin = fixedMargin) })
 
+  if (isTryError(BF))
+    return(BF)
+
   bf1  <- exp(as.numeric(BF@bayesFactor$bf))
   lbf1 <- as.numeric(BF@bayesFactor$bf)
 
@@ -518,6 +521,9 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
     if (!is.null(groups)) group <- groups[[g]]
     else                  group <- NULL
+
+    if(isTryError(bf.results[[g]]))
+      bf.results[[g]] <- list(bfTitle = "", bfEndLab = "", bfVal = NaN)
 
     row <- list()
     row[["type[BF]"]] <- paste(bf.results[[g]]$bfTitle, bf.results[[g]]$bfEndLab)
