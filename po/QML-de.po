@@ -867,3 +867,7 @@ msgstr "Log-Chancenverhältnis"
 msgctxt "Description|"
 msgid "Analyses for count data"
 msgstr "Analysen für Zähldaten"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr ""

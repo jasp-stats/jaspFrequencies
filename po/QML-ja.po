@@ -866,3 +866,7 @@ msgstr ""
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
 msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr ""

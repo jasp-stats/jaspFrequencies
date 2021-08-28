@@ -866,3 +866,7 @@ msgstr ""
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
 msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr ""

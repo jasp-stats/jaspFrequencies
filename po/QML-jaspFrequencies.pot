@@ -864,3 +864,7 @@ msgstr ""
 msgctxt "Description|"
 msgid "Analyses for count data"
 msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr ""
