@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-28 12:21+0000\n"
+"PO-Revision-Date: 2021-08-31 12:16+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/gl/>\n"
@@ -104,7 +104,7 @@ msgstr "Recontos"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr "Grupo un > Grupo dous"
+msgstr "Grupo 1 > Grupo 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column Order"
@@ -136,7 +136,7 @@ msgstr "Comparar as proporcións de columnas"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr "Grupo un < Grupo dous"
+msgstr "Grupo 1 < Grupo 2"
 
 msgctxt "ContingencyTables|"
 msgid "Contingency coefficient"
@@ -316,7 +316,7 @@ msgstr "Submodelo"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Display best"
-msgstr "Presentar o mellor"
+msgstr "Presentar os mellores"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
@@ -505,11 +505,11 @@ msgstr "< Valor a probar"
 
 msgctxt "BinomialTest|"
 msgid "Confidence interval"
-msgstr "Intervalo de confianza"
+msgstr "Intervalo de confianza do"
 
 msgctxt "BinomialTest|"
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "Intervalo do"
 
 msgctxt "BinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -557,7 +557,7 @@ msgstr "Análise secuencial"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo de credibilidade do"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
@@ -597,7 +597,7 @@ msgstr "Logaritmo da Proporción de Posibilidades"
 
 msgctxt "ContingencyTables|"
 msgid "Confidence interval"
-msgstr "Intervalo de confianza"
+msgstr "Intervalo de confianza do"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
@@ -605,11 +605,11 @@ msgstr "Grupo1 ≠ Grupo2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr "Grupo un > Grupo dous"
+msgstr "Grupo 1 > Grupo 2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr "Grupo un < Grupo dous"
+msgstr "Grupo 1 < Grupo 2"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal"
@@ -693,7 +693,7 @@ msgstr "Estatísticos Adicionais"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo de credibilidade do"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
@@ -741,7 +741,7 @@ msgstr "Descritivos"
 
 msgctxt "MultinomialTest|"
 msgid "Confidence interval"
-msgstr "Intervalo de confianza"
+msgstr "Intervalo de confianza do"
 
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -773,7 +773,7 @@ msgstr "Descritivos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo de credibilidade do"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Display"
@@ -801,11 +801,11 @@ msgstr "Estimacións"
 
 msgctxt "RegressionLogLinear|"
 msgid "Confidence intervals"
-msgstr "Intervalos de confianza"
+msgstr "Intervalos de confianza do"
 
 msgctxt "RegressionLogLinear|"
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "Intervalo do"
 
 msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -853,11 +853,11 @@ msgstr "Estimacións"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Credible intervals"
-msgstr "Intervalos de credibilidade"
+msgstr "Intervalos de credibilidade do"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "Intervalo do"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Advanced"
