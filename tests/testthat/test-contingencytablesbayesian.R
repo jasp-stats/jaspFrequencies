@@ -160,3 +160,18 @@ test_that("Analysis handles errors", {
   errorMsg <- results[["results"]][["errorMessage"]]
   expect_is(errorMsg, "character")
 })
+
+test_that("Hypergeometric contingency table does not crash for not 2x2 tables", {
+  options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
+  options$rows <- "facFive"
+  options$columns <- "facGender"
+  options$samplingModel <- "hypergeometric"
+  results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
+
+  expect(is.null(results[["results"]][["errorMessage"]]),
+         "Hypergeometric contingency table errored out with not 2x2 table!")
+
+  bfFootnote <- results[["results"]][["container_facFive_facGender"]][["collection"]][["container_facFive_facGender_contTabBasBF"]][["footnotes"]][[1]][["text"]]
+  expect_equal(bfFootnote,
+               "Hypergeometric contingency tables test restricted to 2 x 2 tables")
+})
