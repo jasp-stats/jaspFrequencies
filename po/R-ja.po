@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2021-08-21 03:31\n"
-"PO-Revision-Date: 2021-09-11 03:29+0000\n"
-"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
+"PO-Revision-Date: 2021-09-14 08:36+0000\n"
+"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ja/>\n"
 "Language: ja\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 4.9-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "ベイジアンA / Bテスト"
 
 msgid "Models"
 msgstr "モデル"
@@ -28,19 +28,19 @@ msgstr "P(M|データ)"
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
-msgstr ""
+msgstr "正の対数オッズ比は、グループ2の成功率がグループ1よりも高いことを意味します。"
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "対数オッズ比 = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "対数オッズ比 > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "対数オッズ比 < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "ログオッズ比 %s 0"
 
 msgid "Descriptives"
 msgstr "記述統計量"
@@ -52,13 +52,13 @@ msgid "Total"
 msgstr "合計"
 
 msgid "Proportion"
-msgstr ""
+msgstr "比率"
 
 msgid "Group 1"
-msgstr ""
+msgstr "グループ1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "グループ2"
 
 msgid "Prior and Posterior"
 msgstr "事前分布と事後分布"
@@ -73,26 +73,25 @@ msgid "Prior"
 msgstr "事前分布"
 
 msgid "thinning hides the last observation"
-msgstr ""
+msgstr "間引き(thinning)は最後の観測を隠します"
 
 msgid "n"
 msgstr "n"
 
-#, fuzzy
 msgid "Posterior Probability"
-msgstr "事後分布"
+msgstr "事後確率"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | データ) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
+msgstr "検定値が1より大きいという仮説を検定することはできません。"
 
 msgid "Cannot test the hypothesis that the test value is less than 0."
-msgstr ""
+msgstr "検定値が 0 未満であるという仮説を検定することはできません。"
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "二項検定"
 
 msgid "Variable"
 msgstr "変数"
@@ -110,7 +109,7 @@ msgid "Lower"
 msgstr "下"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% 比例のCI"
 
 msgid "Upper"
 msgstr "上"
@@ -118,80 +117,83 @@ msgstr "上"
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
-msgstr ""
+msgstr "すべての検定において、対立仮説は比率が %s 未満であるとしています。"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
-msgstr ""
+msgstr "すべての検定において、対立仮説は比率が %s より大きいとしています。"
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "値 %sに対する比率検定"
 
 msgid "Descriptives Plots"
 msgstr "記述統計量プロット"
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "ベイジアンニ項検定"
 
 msgid "Inferential Plots"
 msgstr "推論プロット"
 
 msgid "Population proportion"
-msgstr ""
+msgstr "母比率"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "1つまたは複数のベイズファクターが計算できません"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "1つまたは複数のベイズファクターが無限大です"
 
 msgid "Undefined hypothesis"
-msgstr ""
+msgstr "未定義の仮説"
 
 msgid ""
 "Attempting to create container name for multiple analyses. Each analysis has "
 "its own container."
-msgstr ""
+msgstr "複数の分析に対してコンテナ名を作成しようとしています。各分析は独自のコンテナを持っています。"
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "分割表"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "カイ二乗検定"
 
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke最大の<em>p</em>-Ratio。<em>p</em>値を基にしており，\n"
+"      H%1$sがH%2$sよりも有利になる可能性の最大オッズは%3$sに等しくなります\n"
+"　(Sellke, Bayarri, & Berger, 2001)。"
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "対数オッズ比"
 
 msgid "Odds Ratio"
 msgstr "オッズ比"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% 信頼区間"
 
 msgid "Nominal"
-msgstr ""
+msgstr "名義"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "序数ガンマ"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95%% 信頼区間"
 
 msgid "Gamma"
-msgstr ""
+msgstr "ガンマ"
 
 msgid "Standard Error"
 msgstr "標準誤差"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "ケンドールのタウb"
 
 msgid "Z"
 msgstr "Z"
@@ -206,163 +208,164 @@ msgid "df"
 msgstr "自由度"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "コンティンジェンシー係数"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "ファイ係数"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "クラメールのV"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "ファイ係数は、2×2の分割表でのみ利用可能です"
 
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "値を計算できませんでした - 少なくとも 1 つの行または列は全てゼロです"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "ラムダ(行)"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "ラムダ (列)"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "ラムダ (対称)"
 
 msgid "is less than"
-msgstr ""
+msgstr "より少ない"
 
 msgid "is greater than"
-msgstr ""
+msgstr "より大きい"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-msgstr ""
+msgstr "すべての検定について、対立仮説はグループ <em>%1$s </em> %2$s <em>%3$s</em>を指定します。"
 
 msgid "Expected count"
-msgstr ""
+msgstr "期待度数"
 
 msgid "%% within row"
-msgstr ""
+msgstr "行内の %%"
 
 msgid "%% within column"
-msgstr ""
+msgstr "列内の %%"
 
 msgid "%% of total"
-msgstr ""
+msgstr "全体の%%"
 
 msgid "N"
 msgstr "N"
 
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "%s は計算できませんでした - 少なくとも 1 つの行または列が全てゼロです"
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s 連続性の修正"
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "尤度比"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "オッズ比は2 x 2のテーブルに限定されています"
 
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "フィッシャーの直接確率検定"
 
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "ベイジアン分割表の検定"
 
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% 信用区間"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "対数オッズ比プロット"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "オッズ比は2×2分析に制限されています"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "このモデルのオッズ比はまだ実装されていません"
 
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "ベイズファクターは未定義です"
 
 msgid "The Bayes factor is too small"
 msgstr "ベイズファクターが小さすぎる"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "ベイズファクターは無限大です"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "中央値 Log OR ="
 
 msgid "Poisson"
-msgstr ""
+msgstr "ポアソン"
 
 msgid "Joint multinomial"
-msgstr ""
+msgstr "ジョイント多項式"
 
 msgid "Independent multinomial"
-msgstr ""
+msgstr "独立した多項式"
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "超幾何"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "2×2表に限定した超幾何学的分割表テスト"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "2 x2分割表に限定された比率テスト"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "は次の値に等しくありません"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "無効なサンプリング モデルが選択されました"
 
 msgid "Odds ratio"
-msgstr ""
+msgstr "オッズ比"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "このモデルのオッズ比はまだ実装されていません"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "このモデルのクラメールの Vはまだ実装されていません"
 
 msgid "Posterior"
 msgstr "事後分布"
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "期待度数は、観測度数なしではサポートされません。"
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "期待度数が入力されていません。"
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"無効な度数です：変数が因子のレベル数と一致しません。度数が指定されている場合、データセットの各行は、因子水準を一意に表現していなければなりません。"
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
-msgstr ""
+msgstr "無効な期待値：変数が因子のレベル数と一致しません。"
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "無効なカウント: 変数は整数だけでなければなりません。"
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "無効な度数: 1 未満の観測値。"
 
 msgid "Confidence intervals are based on independent binomial distributions."
-msgstr ""
+msgstr "信頼区間は、独立した二項分布に基づいています。"
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "信頼区間を計算できませんでした。"
 
 msgid "Factor"
 msgstr "要因"
@@ -371,10 +374,10 @@ msgid "Observed"
 msgstr "観測された変数"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "期待値: %s"
 
 msgid "Expected"
-msgstr ""
+msgstr "期待値"
 
 msgid "%s%% Confidence Interval"
 msgstr "%s%% 信頼区間"
@@ -383,42 +386,42 @@ msgid "Descriptives Plot"
 msgstr "記述統計量プロット"
 
 msgid "Observed counts"
-msgstr ""
+msgstr "観測度数"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "観察された比率"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "ベイズ多項検定"
 
 msgid "Levels"
-msgstr ""
+msgstr "水準"
 
 msgid "Credible"
-msgstr ""
+msgstr "確信"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
-msgstr ""
+msgstr "確信区間はフラットな事前分布に基づく独立した二項分布に基づいています。"
 
 msgid "Confidence"
-msgstr ""
+msgstr "信頼"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s 区間"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "%s 区間を計算できませんでした。"
 
 msgid "Descriptives plot"
-msgstr ""
+msgstr "記述的プロット"
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "観測度数"
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "観測比率"
 
 msgid "ANOVA"
 msgstr "分散分析"
@@ -439,7 +442,7 @@ msgid "Estimate"
 msgstr "推定"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% 信頼区間"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -447,27 +450,30 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke 最大 <em>p</em> 比: "
+"<em>p</em>-値に基づいて、H%2$sよりもH%1$sを支持する最大の可能なオッズは、<em>p</em> %3$s .37に対して1/(-e "
+"<em>p</em> log(<em>p</em>))に等しくなります(Sellke, Bayarri, & Berger, 2001)。"
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "変数を読み取ることができません"
 
 msgid "R Package error: %s"
-msgstr ""
+msgstr "R パッケージのエラーです: %s"
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "Rパッケージのエラー。表の確率を取得できません"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "アクセスしたモデルの合計数 = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "指定されたサブモデルが可能なサブモデルに含まれていません"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>モデル式:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>事後モデル確率 =</em>"
 
 msgid "Model Comparison"
 msgstr "モデル比較"
@@ -482,7 +488,7 @@ msgid "Log(BF<sub>10</sub>)"
 msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "事後要約統計"
 
 msgid "P(incl|data)"
 msgstr "P（効果を含む|データ）"
@@ -494,10 +500,10 @@ msgid "Variance"
 msgstr "分散"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% 確信区間"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "サブモデル%sの事後要約統計量"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% 確信区間"
