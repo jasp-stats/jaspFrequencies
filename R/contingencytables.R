@@ -565,7 +565,15 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
   if (ready) {
 
-    chi.result <- try(vcd::assocstats(counts.matrix))
+    chi.result <- try({
+
+      res <- vcd::assocstats(counts.matrix)
+      # vcd::assocstats only returns absolute the value
+      if (val == "phi" && (counts.matrix[1, 1] * counts.matrix[2, 2] - counts.matrix[1, 2] * counts.matrix[1, 2]) < 0) {
+        res[[val]] <- -1 * res[[val]]
+      }
+      res
+    })
 
     colName <- paste0("value[", type, "]")
 
