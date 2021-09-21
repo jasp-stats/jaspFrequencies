@@ -569,7 +569,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
       res <- vcd::assocstats(counts.matrix)
       # vcd::assocstats only returns absolute the value
-      if (val == "phi" && (counts.matrix[1, 1] * counts.matrix[2, 2] - counts.matrix[1, 2] * counts.matrix[1, 2]) < 0) {
+      if (val == "phi" && (counts.matrix[1, 1] * counts.matrix[2, 2] - counts.matrix[1, 2] * counts.matrix[2, 1]) < 0) {
         res[[val]] <- -1 * res[[val]]
       }
       res
