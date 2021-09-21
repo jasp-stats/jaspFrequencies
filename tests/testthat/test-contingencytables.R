@@ -105,7 +105,7 @@ test_that("Nominal table results match", {
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabNominal"]][["data"]]
   jaspTools::expect_equal_tables(table,
     list("Contingency coefficient", 0.0807792391722019, "Phi-coefficient",
-         0.0810440898473108, "Cramer's V ", 0.0810440898473108)
+         -0.0810440898473108, "Cramer's V ", 0.0810440898473108)
   )
 })
 
