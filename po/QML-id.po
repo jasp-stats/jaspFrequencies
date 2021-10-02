@@ -1,0 +1,877 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-09-26 14:38+0000\n"
+"Last-Translator: Sunu Bagaskara <sunu.bagaskara@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.9-dev\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "Frequencies"
+msgstr "Frekuensi"
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr "Klasikal"
+
+msgctxt "Description|"
+msgid "Binomial Test"
+msgstr "Uji Binomial"
+
+msgctxt "Description|"
+msgid "Multinomial Test"
+msgstr "Uji Multinomial"
+
+msgctxt "Description|"
+msgid "Contingency Tables"
+msgstr "Tabel Kontingensi"
+
+msgctxt "Description|"
+msgid "Log-Linear Regression"
+msgstr "Regresi Log-Linier"
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr "Bayesian"
+
+msgctxt "Description|"
+msgid "Bayesian Binomial Test"
+msgstr "Uji Binomial Bayesian"
+
+msgctxt "Description|"
+msgid "A/B Test"
+msgstr "Uji A/B"
+
+msgctxt "Description|"
+msgid "Bayesian A/B Test"
+msgstr "Uji A/B Bayesian"
+
+msgctxt "Description|"
+msgid "Bayesian Multinomial Test"
+msgstr "Uji Bayesian Multinomial"
+
+msgctxt "Description|"
+msgid "Bayesian Contingency Tables"
+msgstr "Tabel Kontingensi Bayesian"
+
+msgctxt "Description|"
+msgid "Bayesian Log-Linear Regression"
+msgstr "Regresi Log-Linier Bayesian"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 1"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 1"
+msgstr "Ukuran Sampel Kelompok 1"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 2"
+msgstr "Ukuran Sampel Kelompok 2"
+
+msgctxt "ABTestBayesian|"
+msgid "Normal Prior on Log Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "μ:"
+msgstr "μ:"
+
+msgctxt "ABTestBayesian|"
+msgid "σ:"
+msgstr "σ:"
+
+msgctxt "ABTestBayesian|"
+msgid "Descriptives"
+msgstr "Deskriptif"
+
+msgctxt "ABTestBayesian|"
+msgid "Plots"
+msgstr "Plot"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior and posterior"
+msgstr "Prior dan posterior"
+
+msgctxt "ABTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Analisis sekuensial"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Bayes factor robustness check"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Order"
+msgstr "Urutan"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to best model"
+msgstr "Bandingkan dengan model terbaik"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to null model"
+msgstr "Bandingkan dengan model nol"
+
+msgctxt "ABTestBayesian|"
+msgid "Advanced Options"
+msgstr "Opsi Lanjutan"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "Probabilitas Model Prior"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio = 0"
+msgstr "Log rasio odd = 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio > 0"
+msgstr "Log rasio odd > 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio < 0"
+msgstr "Log rasio odd < 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio ≠ 0"
+msgstr "Log rasio odd ≠ 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Sampling"
+msgstr "Sampling"
+
+msgctxt "ABTestBayesian|"
+msgid "No. samples"
+msgstr "Jml. sampel"
+
+msgctxt "ABTestBayesian|"
+msgid "Robustness Plot"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "No. Steps"
+msgstr "Jml. Langkah"
+
+msgctxt "ABTestBayesian|"
+msgid "Step Range"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "lower:"
+msgstr "bawah:"
+
+msgctxt "ABTestBayesian|"
+msgid "upper:"
+msgstr "atas:"
+
+msgctxt "BinomialTest|"
+msgid "Variables"
+msgstr "Variabel"
+
+msgctxt "BinomialTest|"
+msgid "Test value: "
+msgstr "Nilai uji: "
+
+msgctxt "BinomialTest|"
+msgid "Alt. Hypothesis"
+msgstr "Hipotesis Alt."
+
+msgctxt "BinomialTest|"
+msgid "≠ Test value"
+msgstr "≠ Nilai uji"
+
+msgctxt "BinomialTest|"
+msgid "> Test value"
+msgstr "> Nilai uji"
+
+msgctxt "BinomialTest|"
+msgid "< Test value"
+msgstr "< Nilai uji"
+
+msgctxt "BinomialTest|"
+msgid "Additional Statisics"
+msgstr "Statistik Tambahan"
+
+msgctxt "BinomialTest|"
+msgid "Confidence interval"
+msgstr "Interval kepercayaan"
+
+msgctxt "BinomialTest|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "BinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr ""
+
+msgctxt "BinomialTest|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "BinomialTest|"
+msgid "Descriptive plots"
+msgstr "Plot deskriptif"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Test value: "
+msgstr "Nilai uji: "
+
+msgctxt "BinomialTestBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "Hipotesis Alt."
+
+msgctxt "BinomialTestBayesian|"
+msgid "≠ Test value"
+msgstr "≠ Nilai uji"
+
+msgctxt "BinomialTestBayesian|"
+msgid "> Test value"
+msgstr "> Nilai uji"
+
+msgctxt "BinomialTestBayesian|"
+msgid "< Test value"
+msgstr "< Nilai uji"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Plots"
+msgstr "Plot"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior and posterior"
+msgstr "Prior dan posterior"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Additional info"
+msgstr "Info tambahan"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Analisis sekuensial"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Descriptive plots"
+msgstr "Plot deskriptif"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Interval kredibel"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter a"
+msgstr "Prior beta: parameter a"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter b"
+msgstr "Prior beta: parameter b"
+
+msgctxt "ContingencyTables|"
+msgid "Rows"
+msgstr "Baris"
+
+msgctxt "ContingencyTables|"
+msgid "Columns"
+msgstr "Kolom"
+
+msgctxt "ContingencyTables|"
+msgid "Counts"
+msgstr "Jumlah"
+
+msgctxt "ContingencyTables|"
+msgid "Layers"
+msgstr "Lapisan"
+
+msgctxt "ContingencyTables|"
+msgid "Statistics"
+msgstr "Statistik"
+
+msgctxt "ContingencyTables|"
+msgid "χ²"
+msgstr "χ²"
+
+msgctxt "ContingencyTables|"
+msgid "χ² continuity correction"
+msgstr "Koreksi kontinuitas χ²"
+
+msgctxt "ContingencyTables|"
+msgid "Likelihood ratio"
+msgstr "Rasio kemungkinan"
+
+msgctxt "ContingencyTables|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Rasio-p maksimum Vovk-Sellke"
+
+msgctxt "ContingencyTables|"
+msgid "Confidence interval"
+msgstr "Interval kepercayaan"
+
+msgctxt "ContingencyTables|"
+msgid "Alt. Hypothesis (Fisher's exact test)"
+msgstr "Hipotesis Alt. (uji eksak Fisher)"
+
+msgctxt "ContingencyTables|"
+msgid "Group one ≠ Group two"
+msgstr "Kelompok satu ≠ Kelompok dua"
+
+msgctxt "ContingencyTables|"
+msgid "Group one > Group two"
+msgstr "Kelompok satu > Kelompok dua"
+
+msgctxt "ContingencyTables|"
+msgid "Group one < Group two"
+msgstr "Kelompok satu < Kelompok dua"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal"
+msgstr "Nominal"
+
+msgctxt "ContingencyTables|"
+msgid "Contingency coefficient"
+msgstr "Koefisien kontingensi"
+
+msgctxt "ContingencyTables|"
+msgid "Phi and Cramer's V"
+msgstr "V Phi dan Cramer"
+
+msgctxt "ContingencyTables|"
+msgid "Lambda"
+msgstr "Lambda"
+
+msgctxt "ContingencyTables|"
+msgid "Uncertainty coefficient"
+msgstr "Koefisien ketidakpastian"
+
+msgctxt "ContingencyTables|"
+msgid "Ordinal"
+msgstr "Ordinal"
+
+msgctxt "ContingencyTables|"
+msgid "Gamma"
+msgstr "Gamma"
+
+msgctxt "ContingencyTables|"
+msgid "Somers' d"
+msgstr "d Somer"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-b"
+msgstr "tau-b Kendall"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-c"
+msgstr "tau-c Kendall"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal By Interval"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Eta"
+msgstr "Eta"
+
+msgctxt "ContingencyTables|"
+msgid "Cochran's and Mantel-Haenszel statistics"
+msgstr "Statistik Cochran dan Mantel-Haenszel"
+
+msgctxt "ContingencyTables|"
+msgid "Test common odds ratio equals"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Cells"
+msgstr "Sel"
+
+msgctxt "ContingencyTables|"
+msgid "Expected"
+msgstr "Harapan"
+
+msgctxt "ContingencyTables|"
+msgid "Hide small counts"
+msgstr "Sembunyikan angka kecil"
+
+msgctxt "ContingencyTables|"
+msgid "Less than"
+msgstr "Kurang dari"
+
+msgctxt "ContingencyTables|"
+msgid "Z-Test"
+msgstr "Uji-Z"
+
+msgctxt "ContingencyTables|"
+msgid "Compare column proportions"
+msgstr "Bandingkan proporsi kolom"
+
+msgctxt "ContingencyTables|"
+msgid "Adjust p-values"
+msgstr "Sesuaikan p-values"
+
+msgctxt "ContingencyTables|"
+msgid "Percentages"
+msgstr "Persentase"
+
+msgctxt "ContingencyTables|"
+msgid "Row"
+msgstr "Baris"
+
+msgctxt "ContingencyTables|"
+msgid "Column"
+msgstr "Kolom"
+
+msgctxt "ContingencyTables|"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "ContingencyTables|"
+msgid "Residuals"
+msgstr "Residual"
+
+msgctxt "ContingencyTables|"
+msgid "Unstandardized"
+msgstr "Tidak terstandar"
+
+msgctxt "ContingencyTables|"
+msgid "Standardized"
+msgstr "Terstandar"
+
+msgctxt "ContingencyTables|"
+msgid "Adjusted standardized"
+msgstr "Terstandar disesuaikan"
+
+msgctxt "ContingencyTables|"
+msgid "Options"
+msgstr "Opsi"
+
+msgctxt "ContingencyTables|"
+msgid "Row Order"
+msgstr "Urutan Baris"
+
+msgctxt "ContingencyTables|"
+msgid "Ascending"
+msgstr "Naik"
+
+msgctxt "ContingencyTables|"
+msgid "Descending"
+msgstr "Turun"
+
+msgctxt "ContingencyTables|"
+msgid "Column Order"
+msgstr "Urutan Kolom"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Rows"
+msgstr "Baris"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Columns"
+msgstr "Kolom"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Counts"
+msgstr "Jumlah"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Layers"
+msgstr "Lapisan"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Statistics"
+msgstr "Statistik"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Sample"
+msgstr "Sampel"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Poisson"
+msgstr "Poisson"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Joint multinomial"
+msgstr "Multinomial gabungan"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, rows fixed"
+msgstr "Multinomial indep,. baris tetap"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, columns fixed"
+msgstr "Multinomial indep., kolom tetap"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Hypergeometric (2x2 only)"
+msgstr "Hipergeometrik (hanya 2x2)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional Statistics"
+msgstr "Statistik Tambahan"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Log odds ratio (2x2 only)"
+msgstr "Log rasio odd (hanya 2x2)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Credible interval"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cramer's V"
+msgstr "V Cramer"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "Hipotesis Alt."
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one ≠ Group two"
+msgstr "Kelompok satu ≠ Kelompok dua"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one > Group two"
+msgstr "Kelompok satu > Kelompok dua"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one < Group two"
+msgstr "Kelompok satu < Kelompok dua"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Plots"
+msgstr "Plot"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional info"
+msgstr "Info tambahan"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior concentration"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cells"
+msgstr "Sel"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Percentages"
+msgstr "Persentase"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row"
+msgstr "Baris"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column"
+msgstr "Kolom"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Options"
+msgstr "Opsi"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row Order"
+msgstr "Urutan Baris"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Ascending"
+msgstr "Naik"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Descending"
+msgstr "Turun"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column Order"
+msgstr "Urutan Kolom"
+
+msgctxt "MultinomialTest|"
+msgid "Factor"
+msgstr "Faktor"
+
+msgctxt "MultinomialTest|"
+msgid "Counts"
+msgstr "Jumlah"
+
+msgctxt "MultinomialTest|"
+msgid "Expected Counts"
+msgstr ""
+
+msgctxt "MultinomialTest|"
+msgid "Test Values"
+msgstr "Nilai Uji"
+
+msgctxt "MultinomialTest|"
+msgid "Equal proportions (multinomial test)"
+msgstr "Proporsi setara (uji multinomial)"
+
+msgctxt "MultinomialTest|"
+msgid "Expected proportions (χ² test)"
+msgstr "Proporsi harapan (uji χ²)"
+
+msgctxt "MultinomialTest|"
+msgid "Additional Statistics"
+msgstr "Statistik Tambahan"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives"
+msgstr "Deskriptif"
+
+msgctxt "MultinomialTest|"
+msgid "Confidence interval"
+msgstr "Interval kepercayaan"
+
+msgctxt "MultinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Rasio-p maksimum Vovk-Sellke"
+
+msgctxt "MultinomialTest|"
+msgid "Display"
+msgstr "Tampilkan"
+
+msgctxt "MultinomialTest|"
+msgid "Proportions"
+msgstr "Proporsi"
+
+msgctxt "MultinomialTest|"
+msgid "Plots"
+msgstr "Plot"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives plot"
+msgstr "Plot deskriptif"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Factor"
+msgstr "Faktor"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Counts"
+msgstr "Jumlah"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Expected Counts"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Test Values"
+msgstr "Nilai Uji"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Equal proportions"
+msgstr "Proporsi setara"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Expected proportions"
+msgstr "Proporsi harapan"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Additional Statistics"
+msgstr "Statistik Tambahan"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives"
+msgstr "Deskriptif"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Interval kredibel"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Display"
+msgstr "Tampilkan"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Proportions"
+msgstr "Proporsi"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Plots"
+msgstr "Plot"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives plot"
+msgstr "Plot deskriptif"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "Tidak ada faktor yang ditentukan"
+
+msgctxt "RegressionLogLinear|"
+msgid "Counts (optional)"
+msgstr "Jumlah (opsional)"
+
+msgctxt "RegressionLogLinear|"
+msgid "Factors"
+msgstr "Faktor"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "RegressionLogLinear|"
+msgid "Components"
+msgstr "Komponen"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model Terms"
+msgstr "Ketentuan Model"
+
+msgctxt "RegressionLogLinear|"
+msgid "Statistics"
+msgstr "Statistik"
+
+msgctxt "RegressionLogLinear|"
+msgid "Regression Coefficient"
+msgstr "Koefisien Regresi"
+
+msgctxt "RegressionLogLinear|"
+msgid "Estimates"
+msgstr "Estimasi"
+
+msgctxt "RegressionLogLinear|"
+msgid "Confidence intervals"
+msgstr "Interval kepercayaan"
+
+msgctxt "RegressionLogLinear|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "RegressionLogLinear|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "Rasio-p maksimum Vovk-Sellke"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Counts (optional)"
+msgstr "Jumlah (opsional)"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Factors"
+msgstr "Faktor"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Prior"
+msgstr "Prior"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Shape"
+msgstr "Bentuk"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Scale"
+msgstr "Skala"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Cut-offs"
+msgstr ""
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Display best"
+msgstr "Tampilkan yang terbaik"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "models"
+msgstr "model"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Posterior prob."
+msgstr "Prob. posterior"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model"
+msgstr "Model"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Components"
+msgstr "Komponen"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Terms"
+msgstr "Ketentuan Model"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Statistics"
+msgstr "Statistik"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Regression Coefficients"
+msgstr "Koefisien Regresi"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Estimates"
+msgstr "Estimasi"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Credible intervals"
+msgstr "Interval kredibel"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Interval"
+msgstr "Interval"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Submodel"
+msgstr "Submodel"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Advanced"
+msgstr "Lanjutan"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Samples"
+msgstr "Sampel"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Auto"
+msgstr "Otomatis"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Manual"
+msgstr "Manual"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "No. samples"
+msgstr "Jml. Sampel"
+
+msgctxt "ContingencyTables|"
+msgid "Odds ratio (2x2 only)"
+msgstr "Rasio odd (hanya 2x2)"
+
+msgctxt "ContingencyTables|"
+msgid "Log Odds Ratio"
+msgstr "Log Rasio Odd"
+
+msgctxt "Description|"
+msgid "Analyses for count data"
+msgstr "Analisis hitungan data"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr "Level #"
