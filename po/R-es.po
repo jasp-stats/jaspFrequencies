@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
 "POT-Creation-Date: 2021-08-21 03:31\n"
-"PO-Revision-Date: 2021-09-11 03:29+0000\n"
-"Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
+"PO-Revision-Date: 2021-10-11 20:05+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/es/>\n"
 "Language: es\n"
@@ -72,20 +72,19 @@ msgid "Bayes Factor Robustness Check"
 msgstr "Comprobación de robustez del factor de Bayes"
 
 msgid "Prior"
-msgstr "Anterior"
+msgstr "Previo"
 
 msgid "thinning hides the last observation"
-msgstr ""
+msgstr "el estrechamiento oculta la última observación"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
-#, fuzzy
 msgid "Posterior Probability"
-msgstr "<em>Probabilidad posterior del modelo =</em>"
+msgstr "Probabilidad Posterior"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | datos) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr ""
@@ -161,6 +160,8 @@ msgid ""
 "Attempting to create container name for multiple analyses. Each analysis has "
 "its own container."
 msgstr ""
+"Intentando crear un nombre del contenedor para análisis múltiples. Cada "
+"análisis tiene su propio contenedor."
 
 msgid "Contingency Tables"
 msgstr "Tablas de contingencia"
@@ -300,9 +301,8 @@ msgstr "Intervalo de Credibilidad del %.0f%%"
 msgid "Log Odds Ratio Plots"
 msgstr "Gráficos logarítmicos de razón de probabilidades"
 
-#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr "Razón de probabilidades restringida a tablas de 2 x 2"
+msgstr "Razón de probabilidades restringida a análisis de 2 x 2"
 
 msgid "Odds ratio for this model not yet implemented"
 msgstr "Razón de probabilidades para este modelo aún no implementado"
@@ -382,9 +382,8 @@ msgstr ""
 msgid "Invalid counts: variable must contain only integer values."
 msgstr "Recuentos no válidos: la variable debe contener solo valores enteros."
 
-#, fuzzy
 msgid "Invalid counts: less than 1 observation."
-msgstr "Recuentos no válidos: la variable debe contener solo valores enteros."
+msgstr "Recuentos incorrectos: menos de 1 observación."
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
@@ -459,10 +458,10 @@ msgid "Deviance"
 msgstr "Desviación"
 
 msgid "Residual df"
-msgstr "gl residual"
+msgstr "GL de los residuos"
 
 msgid "Residual Deviance"
-msgstr "Desviación residual"
+msgstr "Desviación de los residuos"
 
 msgid "Coefficients"
 msgstr "Coeficientes"
@@ -471,7 +470,7 @@ msgid "Estimate"
 msgstr "Estimar"
 
 msgid "%s%% Confidence Intervals"
-msgstr "%s%% Intervalos de confianza"
+msgstr "Intervalos con el %s%% de Confianza"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -485,40 +484,41 @@ msgstr ""
 "(Sellke, Bayarri, & Berger, 2001)."
 
 msgid "variables cannot be read"
-msgstr "las variables no pueden ser leídas"
+msgstr "las variables no se pueden leer"
 
 msgid "R Package error: %s"
-msgstr "Error del paquete R: %s"
+msgstr "Fallo del paquete de R: %s"
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr "Error del paquete R: No se puede recuperar la tabla de probabilidades"
+msgstr ""
+"Fallo del paquete de R: Las probabilidades de la tabla no se pueden recuperar"
 
 msgid "Total number of models visited = %i"
-msgstr "Número total de modelos visitados = %i"
+msgstr "Número total de modelos consultados = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr "El submodelo especificado no está dentro de los submodelos posibles"
+msgstr "El submodelo especificado no es uno de los submodelos posibles"
 
 msgid "<em>Model formula:</em>"
 msgstr "<em>Fórmula del modelo:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr "<em>Probabilidad posterior del modelo =</em>"
+msgstr "<em>Probabilidad del modelo posterior =</em>"
 
 msgid "Model Comparison"
-msgstr "Comparación de modelos"
+msgstr "Comparación de Modelos"
 
 msgid "BF<sub>10</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "FB<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr "BF<sub>01</sub>"
+msgstr "FB<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr "Log(BF<sub>10</sub>)"
+msgstr "Log(FB<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
-msgstr "Resumen estadístico posterior"
+msgstr "Estadísticos de Resumen Posteriores"
 
 msgid "P(incl|data)"
 msgstr "P(incl|datos)"
@@ -530,10 +530,10 @@ msgid "Variance"
 msgstr "Varianza"
 
 msgid "%s%% Credible intervals"
-msgstr "%s%% Intervalos credibilidad"
+msgstr "Intervalos con el %s%% de Credibilidad"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr "Resumen estadístico posterior del submodelo %s"
+msgstr "Estadísticos de Resumen Posteriores para el Submodelo %s"
 
 msgid "%.0f%% Credible intervals"
-msgstr "%.0f%% Intervalos credibilidad"
+msgstr "Intervalos con el %.0f%% de Credibilidad"
