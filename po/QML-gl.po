@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-11 20:05+0000\n"
+"PO-Revision-Date: 2021-10-15 11:32+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/gl/>\n"
@@ -557,7 +557,7 @@ msgstr "Análise secuencial"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade do"
+msgstr "Intervalo de credibilidade"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
@@ -773,7 +773,7 @@ msgstr "Descritivos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade do"
+msgstr "Intervalo de credibilidade"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Display"
