@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-08-21 03:31\n"
-"PO-Revision-Date: 2021-10-11 20:05+0000\n"
+"PO-Revision-Date: 2021-10-19 12:48+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/gl/>\n"
@@ -37,20 +37,20 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
-"Un logaritmo da proporción de posibilidades que sexa positivo significa que "
-"a taxa de acerto no Grupo 2 é maior que no Grupo 1."
+"Un logaritmo da razón de probabilidades que sexa positivo significa que a "
+"taxa de acerto no Grupo 2 é maior que no Grupo 1."
 
 msgid "Log odds ratio = 0"
-msgstr "Logaritmo da proporción de posibilidades = 0"
+msgstr "Logaritmo da razón de probabilidades = 0"
 
 msgid "Log odds ratio > 0"
-msgstr "Logaritmo da proporción de posibilidades > 0"
+msgstr "Logaritmo da razón de probabilidades > 0"
 
 msgid "Log odds ratio < 0"
-msgstr "Logaritmo da proporción de posibilidades < 0"
+msgstr "Logaritmo da razón de probabilidades < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr "Logaritmo da proporción de posibilidades %s 0"
+msgstr "Logaritmo da razón de probabilidades %s 0"
 
 msgid "Descriptives"
 msgstr "Descritivos"
@@ -188,10 +188,10 @@ msgstr ""
 "      (Sellke, Bayarri & Berger, 2001)."
 
 msgid "Log Odds Ratio"
-msgstr "Logaritmo da Proporción de Posibilidades"
+msgstr "Logaritmo da Razón de Probabilidades"
 
 msgid "Odds Ratio"
-msgstr "Proporción de Posibilidades"
+msgstr "Razón de Probabilidades"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr "Intervalos co %.0f%% de Confianza"
@@ -294,7 +294,7 @@ msgid "Likelihood ratio"
 msgstr "Proporción de verosimilitudes"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr "Proporción de posibilidades restrinxida a táboas 2x2"
+msgstr "Razón de probabilidades restrinxida a táboas 2x2"
 
 msgid "Fisher's exact test"
 msgstr "Proba exacta de Fisher"
@@ -306,13 +306,13 @@ msgid "%.0f%% Credible Interval"
 msgstr "Intervalo co %.0f%% de Credibilidade"
 
 msgid "Log Odds Ratio Plots"
-msgstr "Gráficas do Logaritmo da Proporción de Posibilidades"
+msgstr "Gráficas do Logaritmo da Razón de Probabilidades"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr "Proporción de posibilidade restrinxida a análises 2x2"
+msgstr "Razón de probabilidades restrinxida a análises 2x2"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr "Aínda sen implementar a proporción de posibilidades para este modelo"
+msgstr "Aínda sen implementar a razón de probabilidades para este modelo"
 
 msgid "The Bayes factor is undefined"
 msgstr "O factor de Bayes non está definido"
@@ -352,10 +352,10 @@ msgid "Invalid sampling model selected"
 msgstr "Escolleuse un modelo de mostraxe incorrecto"
 
 msgid "Odds ratio"
-msgstr "Proporción de posibilidades"
+msgstr "Razón de probabilidades"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr "Aínda sen implementar a Proporción de posibilidades para este modelo"
+msgstr "Aínda sen implementar a razón de probabilidades para este modelo"
 
 msgid "Cramer's V for this model not yet implemented"
 msgstr "Aínda sen implementar o V de Cramer para este modelo"
