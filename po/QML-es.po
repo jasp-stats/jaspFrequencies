@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-19 12:48+0000\n"
+"PO-Revision-Date: 2021-10-20 15:41+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/es/>\n"
@@ -92,17 +92,15 @@ msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
 msgstr "Tamaño de muestra Grupo 2"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr "Previo normal en relación de probabilidades logarítmicas"
+msgstr ""
+"Distribución Previa Normal para el Logaritmo de la Razón de Probabilidades"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "μ:"
 msgstr "μ:"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "σ:"
 msgstr "σ:"
@@ -153,19 +151,19 @@ msgstr "Probabilidad del Modelo Previo"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr "Logaritmo de razón de probabilidades = 0"
+msgstr "Logaritmo de la razón de probabilidades = 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr "Logaritmo de razón de probabilidades > 0"
+msgstr "Logaritmo de la razón de probabilidades > 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr "Logaritmo de razón de probabilidades < 0"
+msgstr "Logaritmo de la razón de probabilidades < 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr "Logaritmo de razón de probabilidades ≠ 0"
+msgstr "Logaritmo de la razón de probabilidades ≠ 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
@@ -333,7 +331,6 @@ msgctxt "ContingencyTables|"
 msgid "Likelihood ratio"
 msgstr "Ratio de verosimilitudes"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Relación p máxima de Vovk-Sellke"
@@ -676,7 +673,6 @@ msgctxt "MultinomialTest|"
 msgid "Confidence interval"
 msgstr "Intervalo de confianza"
 
-#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Relación p máxima de Vovk-Sellke"
