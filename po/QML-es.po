@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-20 15:41+0000\n"
+"PO-Revision-Date: 2021-10-21 17:02+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/es/>\n"
@@ -758,12 +758,10 @@ msgctxt "RegressionLogLinear|"
 msgid "Counts (optional)"
 msgstr "Recuentos (opcional)"
 
-#, fuzzy
 msgctxt "RegressionLogLinear|"
 msgid "Factors"
 msgstr "Factores"
 
-#, fuzzy
 msgctxt "RegressionLogLinear|"
 msgid "Model"
 msgstr "Modelo"
@@ -840,7 +838,6 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
 msgstr "Problema posterior"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
 msgstr "Modelo"
