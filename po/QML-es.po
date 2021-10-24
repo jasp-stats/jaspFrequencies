@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-24 11:42+0000\n"
+"PO-Revision-Date: 2021-10-24 13:08+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/es/>\n"
@@ -35,10 +35,9 @@ msgctxt "Description|"
 msgid "Contingency Tables"
 msgstr "Tablas de contingencia"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Log-Linear Regression"
-msgstr "Regresión log-lineal"
+msgstr "Regresión Log-lineal"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -48,48 +47,41 @@ msgctxt "Description|"
 msgid "Bayesian Binomial Test"
 msgstr "Contraste bayesiano Binomial"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "A/B Test"
-msgstr "Prueba A / B"
+msgstr "Contraste A / B"
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr "Contraste A/B Bayesiano"
+msgstr "Contraste bayesiano A/B"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr "Prueba multinomial bayesiana"
+msgstr "Contraste bayesiano Multinomial"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
-msgstr "Tablas de contingencia bayesianas"
+msgstr "Tablas bayesianas de Contingencia"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr "Regresión log-lineal bayesiana"
+msgstr "Regresión bayesiana Log-lineal"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
-msgstr "Éxitos Grupo 1"
+msgstr "Aciertos Grupo 1"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr "Tamaño de muestra Grupo 1"
+msgstr "Tamaño de muestra del Grupo 1"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr "Éxitos Grupo 2"
+msgstr "Aciertos Grupo 2"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr "Tamaño de muestra Grupo 2"
+msgstr "Tamaño de muestra del Grupo 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
