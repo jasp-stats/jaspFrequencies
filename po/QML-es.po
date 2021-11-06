@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-30 20:58+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.9-dev\n"
 "X-Language: es\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -20,10 +26,9 @@ msgctxt "Description|"
 msgid "Binomial Test"
 msgstr "Prueba binomial"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Multinomial Test"
-msgstr "Prueba multinomial"
+msgstr "Contraste Multinomial"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
@@ -290,12 +295,10 @@ msgctxt "ContingencyTables|"
 msgid "Columns"
 msgstr "Columnas"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Counts"
 msgstr "Recuentos"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Layers"
 msgstr "Capas"
@@ -404,55 +407,45 @@ msgctxt "ContingencyTables|"
 msgid "Expected"
 msgstr "Esperado"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Hide small counts"
 msgstr "Ocultar pequeños recuentos"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Less than"
-msgstr "Menos que"
+msgstr "Menor que"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Z-Test"
-msgstr "Prueba Z"
+msgstr "Contraste Z"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Compare column proportions"
-msgstr "Comparar proporciones de columnas"
+msgstr "Comparar las proporciones de columnas"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Adjust p-values"
 msgstr "Ajustar los valores p"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Percentages"
 msgstr "Porcentajes"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Row"
 msgstr "Fila"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Column"
 msgstr "Columna"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Total"
 msgstr "Total"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Residuals"
-msgstr "Derechos residuales de autor"
+msgstr "Residuos"
 
 msgctxt "ContingencyTables|"
 msgid "Unstandardized"
@@ -498,7 +491,6 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
 msgstr "Recuentos"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
 msgstr "Capas"
@@ -535,10 +527,9 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
 msgstr "Estadísticos Adicionales"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr "Log odds ratio (solo 2x2)"
+msgstr "Logaritmo de la razón de probabilidades (solo 2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
@@ -636,15 +627,13 @@ msgctxt "MultinomialTest|"
 msgid "Test Values"
 msgstr "Valores de Prueba"
 
-#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
-msgstr "Proporciones iguales (prueba multinomial)"
+msgstr "Proporciones iguales (Contraste multinomial)"
 
-#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Expected proportions (χ² test)"
-msgstr "Proporciones esperadas (prueba χ²)"
+msgstr "Proporciones esperadas (Contraste χ²)"
 
 msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
@@ -738,7 +727,6 @@ msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Ningún factor especificado"
 
-#, fuzzy
 msgctxt "RegressionLogLinear|"
 msgid "Counts (optional)"
 msgstr "Recuentos (opcional)"
@@ -803,25 +791,21 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Scale"
 msgstr "Escala"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Cut-offs"
-msgstr "Modelos de corte"
+msgstr "Puntos de Corte del Modelo"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Display best"
 msgstr "Mostrar mejor"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
 msgstr "modelos"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr "Problema posterior"
+msgstr "Probabilidad posterior"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
@@ -881,16 +865,16 @@ msgstr "Número de muestras"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr ""
+msgstr "Razón de probabilidades (solo 2x2)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Logaritmo de la Razón de Probabilidades"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
-msgstr ""
+msgstr "Análisis para datos de recuento"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Nivel #"
