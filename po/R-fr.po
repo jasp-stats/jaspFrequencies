@@ -2,25 +2,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2021-08-21 03:31\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-01-14 14:55+0000\n"
+"Last-Translator: Jordy STEFAN <jordy.stefan@askoria.eu>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
 
 msgid "Models"
-msgstr ""
+msgstr "Modèle"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|donnée)"
 
 msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
 msgstr ""
@@ -38,13 +41,13 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Descriptives"
 
 msgid "Counts"
-msgstr ""
+msgstr "Nombre"
 
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 msgid "Proportion"
 msgstr ""
@@ -71,7 +74,7 @@ msgid "thinning hides the last observation"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
 msgstr ""
@@ -89,25 +92,25 @@ msgid "Binomial Test"
 msgstr ""
 
 msgid "Variable"
-msgstr ""
+msgstr "Variable"
 
 msgid "Level"
-msgstr ""
+msgstr "Niveau"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Inférieur"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Supérieur"
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
@@ -182,13 +185,13 @@ msgid "Z"
 msgstr ""
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
 msgstr ""
 
 msgid "df"
-msgstr ""
+msgstr "ddl"
 
 msgid "Contingency coefficient"
 msgstr ""
@@ -236,7 +239,7 @@ msgid "%% of total"
 msgstr ""
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
@@ -395,7 +398,7 @@ msgid "Observed Proportions"
 msgstr ""
 
 msgid "ANOVA"
-msgstr ""
+msgstr "ANOVA"
 
 msgid "Deviance"
 msgstr ""
@@ -410,7 +413,7 @@ msgid "Coefficients"
 msgstr ""
 
 msgid "Estimate"
-msgstr ""
+msgstr "Estimation"
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
@@ -440,28 +443,28 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "Comparaison de modèle"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(incl|donnée)"
 
 msgid "Mean"
-msgstr ""
+msgstr "Moyenne"
 
 msgid "Variance"
-msgstr ""
+msgstr "Variance"
 
 msgid "%s%% Credible intervals"
 msgstr ""
