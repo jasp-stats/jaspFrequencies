@@ -12,10 +12,13 @@ Met de bayesiaanse binomiaaltoets kan worden getoetst of de proportie van een di
 
 - Toetswaarde: De proportie van de variabele onder de nulhypothese. De standaardwaarde is 0.5. 
 
-#### Hypothesen
-- *&ne; Toets waarde*: Tweezijdige alternatieve hypothese dat de proportie niet gelijk is aan de toetswaarde. 
-- *&gt; Toets waarde*: Eenzijdige alternatieve hypothese dat de proportie hoger is dan de toetswaarde.
-- *&lt; Toets waarde*: Eenzijdige alternatieve hypothese dat de proportie lager is dan de toetswaarde.
+#### Alt. Hypothesen
+- Direction
+  - *&ne; Toets waarde*: Tweezijdige alternatieve hypothese dat de proportie niet gelijk is aan de toetswaarde. 
+  - *&gt; Toets waarde*: Eenzijdige alternatieve hypothese dat de proportie hoger is dan de toetswaarde.
+  - *&lt; Toets waarde*: Eenzijdige alternatieve hypothese dat de proportie lager is dan de toetswaarde.
+
+- Prior: **Beta**-parameters *a* en *b* voor de prioriteitsverdeling onder de alternatieve hypothese. Standaard zijn ze elk op '1' ingesteld. Dit komt overeen met een uniforme prior verdeling. Zie de module Learn Bayes voor meer informatie en alternatieven.
 
 #### Bayes factor
 - BF<sub>10</sub>: Als u deze optie selecteert geeft de Bayes factor bewijs voor de alternatieve hypothese ten opzichte van de nul hypothese. Dit is de standaardoptie. 
@@ -28,8 +31,6 @@ Met de bayesiaanse binomiaaltoets kan worden getoetst of de proportie van een di
 - Sequentiële analyse: Geeft de ontwikkeling van de Bayes factor weer terwijl de data binnenkomt. 
 
 
-#### Prior
-**Beta prior** parameters *a* en *b* staan standaard beide op '1'. Dit correspondeert met een uniforme prior.
 
 ### Uitvoer
 ---
