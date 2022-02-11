@@ -125,7 +125,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   else
     note <- gettextf("Proportions tested against value: %s.", options$testValueUnparsed)
 
-  note <- gettextf("%1$s Shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s).", note, options[["priorAUnparsed"]], options[["priorBUnparsed"]])
+  note <- gettextf("%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s).", note, options[["priorAUnparsed"]], options[["priorBUnparsed"]])
 
   binomTable$addFootnote(message = note)
 
