@@ -1,6 +1,6 @@
 Bayesian Multinomial Test
 ===
-  
+
 The Bayesian multinomial test allows the user to test whether an observed distribution of cell counts corresponds to an expected distribution.
 
 ### Assumptions
@@ -35,7 +35,7 @@ The Bayesian multinomial test allows the user to test whether an observed distri
   - Descriptive plot: Plots the frequencies and the credible intervals of the observed counts.
 
 ### Prior
-Option to adjust the prior distribution for the vector of cell probabilities. 
+Option to adjust the prior distribution for the vector of cell probabilities.
 - *Dirichlet*: For *K* categories, the default prior is Dirichlet(alpha_*1*, alpha_*2*, ..., alpha_*K*) with all alpha parameters set to 1. Note that the parameters of the *Dirichlet distribution* reflect prior counts, which implies that all values must be non-negative.
 
 ### Output
@@ -56,8 +56,10 @@ The descriptive plot displays the frequency of the reported counts and the corre
 ---
 - Clopper, C. J. & Pearson, E. S. (1934). The use of confidence or fiducial limits illustrated in the case of the binomial. *Biometrika, 26*, 404–413. doi: 10.2307/2331986.
 - Good, I. J. (1967). A Bayesian significance test for multinomial distributions. *Journal of the Royal Statistical Society: Series B (Methodological), 29*, 399-418.
+- Gunel, E. & Dickey, J. (1974). Bayes factors for independence in contingency tabls. *Biometrika, 61*(3), 670-693.
 
 ### R Packages
 ---
+- BayesFactor
 - ggplot2
 - stats
