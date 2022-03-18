@@ -55,6 +55,7 @@ Form
 			visible			: expectedProbs.checked && factors.count > 0
 			source			: "factor"
 			maxNumHypotheses: 5
+			decimals		: 3
 		}
 	}
 
