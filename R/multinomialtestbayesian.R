@@ -54,7 +54,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   if (!multinomialResults$specs[["ready"]])
     return(multinomialResults)
-  
+
   # Prepare for running the Bayesian Multinomial test
   factorVariable <- multinomialResults$specs$factorVariable
   countVariable  <- multinomialResults$specs$countVariable
@@ -118,7 +118,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   multinomialResults$descriptivesTable[["descProps"]]    <- setNames(as.data.frame(multinomialResults$descriptivesTable[["descProps"]]), c("fact", "observed", nms))
   multinomialResults$descriptivesTable[["descCounts"]]   <- setNames(as.data.frame(multinomialResults$descriptivesTable[["descCounts"]]), c("fact", "observed", nms))
   multinomialResults$descriptivesTable[["descPropsCI"]]  <- .multComputeCIs(dataTable, options$credibleIntervalInterval, scale = "descProbs")
-  multinomialResults$descriptivesTable[["descCountsCI"]] <- .multComputeCIs(dataTable, options$credibleIntervalInterval, scale = "descCounts") 
+  multinomialResults$descriptivesTable[["descCountsCI"]] <- .multComputeCIs(dataTable, options$credibleIntervalInterval, scale = "descCounts")
 
   # Save results to state
   defaultOptions <- multinomialResults$specs$defaultOptions
@@ -200,7 +200,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
     descriptivesTable$dependOn(c("countProp", "descriptives", "credibleIntervalInterval"))
   } else {
     ciRequested   <- options$confidenceInterval
-    ciInterval    <- options$confidenceIntervalInterval 
+    ciInterval    <- options$confidenceIntervalInterval
     ciType  <- gettext("Confidence")
     tableFootnote <- gettext("Confidence intervals are based on independent binomial distributions.")
     descriptivesTable$dependOn(c("countProp", "descriptives", "confidenceIntervalInterval"))
@@ -225,12 +225,12 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # If no variable is selected, adjust column title
   if(is.null(nhyps)){
-    descriptivesTable$addColumnInfo(name = "expected", title = gettext("Expected"), type = numberType)
+    descriptivesTable$addColumnInfo(name = "expected", title = gettext("Expected"), type = "number")
   } else if(nhyps == 1) {
-      descriptivesTable$addColumnInfo(name = nms, title = gettextf("Expected: %s", nms), type = numberType)
+      descriptivesTable$addColumnInfo(name = nms, title = gettextf("Expected: %s", nms), type = "number")
   } else if(nhyps > 1) {
     for(h in 1:nhyps){
-      descriptivesTable$addColumnInfo(name = nms[h], title = nms[h], type = numberType, overtitle = gettext("Expected"))
+      descriptivesTable$addColumnInfo(name = nms[h], title = nms[h], type = "number", overtitle = gettext("Expected"))
     }
   }
 
@@ -240,7 +240,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
                                       overtitle = overTitle)
       descriptivesTable$addColumnInfo(name = "upperCI", title = gettext("Upper"), type = "number",
                                       overtitle = overTitle)
-    } 
+    }
 
   jaspResults[["multinomialDescriptivesTable"]] <- descriptivesTable
 
@@ -250,20 +250,17 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # Add rows
   descDF <- multinomialResults[["descriptivesTable"]][[options$countProp]]
-  if(options$countProp == "descCounts"){
-    descDF[nms] <- round(descDF[nms])
-  }
 
   if(ciRequested){
     ciInfo <- multinomialResults[["descriptivesTable"]][[paste0(options$countProp, "CI")]]
     descDF <- cbind(descDF, ciInfo)
     descriptivesTable$addFootnote(tableFootnote)
-    
+
     if (any(is.nan(unlist(descDF[, c('lowerCI', 'upperCI')])))) {
       descriptivesTable$addFootnote(message = gettextf("Could not compute %s Intervals.", tolower(ciType)))
     }
-  } 
-  
+  }
+
   descriptivesTable$setData(descDF)
 }
 
@@ -301,15 +298,15 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   errorReturn <- rep(ifErrorReturn, 2)
   div         <- ifelse(scale == 'descCounts', sum(counts), 1)
   N           <- sum(counts)
-  
+
   ciDf   <- data.frame(lowerCI = NA, upperCI = NA)
   for(i in seq_along(counts)){
     # return results on count scale. If function crashes, return table with NaN's
-    tryCatch(binomResult <- binom.test(counts[i], N, conf.level = CI)$conf.int * div, 
+    tryCatch(binomResult <- binom.test(counts[i], N, conf.level = CI)$conf.int * div,
              error = function(e) {binomResult <<- errorReturn})
     ciDf[i, ] <- binomResult
   }
-  
+
   return(ciDf)
 }
 
@@ -347,13 +344,13 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   plotFrame <- multinomialResults[["descriptivesPlot"]][[options$countProp]]
   # We need to reverse the factor's levels because of the coord_flip later
   plotFrame$fact <- factor(plotFrame$fact, levels = rev(plotFrame$fact))
-  
+
   # Determine y-axis margin: If CIs could not be computed, use observed counts
   plotFrame$yAxisMargin <- plotFrame$upperCI
   for(i in 1:nrow(plotFrame)){
     if(plotFrame$upperCI[i] == 0){
       plotFrame$yAxisMargin[i] <- plotFrame$obs[i]
-    }   
+    }
   }
 
   # Create plot
