@@ -24,17 +24,17 @@ Form
 {
 	VariablesForm
 	{
-		AvailableVariablesList { name: "allVariablesList" }		
+		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "rows";		title: qsTr("Rows");	suggestedColumns: ["ordinal", "nominal"] }
 		AssignedVariablesList { name: "columns";	title: qsTr("Columns");	suggestedColumns: ["ordinal", "nominal"] }
 		AssignedVariablesList { name: "counts";		title: qsTr("Counts");	suggestedColumns: ["scale", "ordinal"]; singleVariable: true }
 		AssignedVariablesList { name: "layers";		title: qsTr("Layers");	suggestedColumns: ["ordinal", "nominal"]; listViewType: JASP.Layers; preferredHeight: 120 }
 	}
-	
+
 	Section
 	{
 		title: qsTr("Statistics")
-		
+
 		Group
 		{
 			CheckBox { name: "chiSquared";						label: qsTr("χ²"); checked: true			}
@@ -88,7 +88,7 @@ Form
 			title: qsTr("Nominal By Interval")
 			CheckBox { name: "byIntervalEta"; label: qsTr("Eta") }
 		}
-		
+
 		Group
 		{
 			debug: true
@@ -100,11 +100,11 @@ Form
 			}
 		}
 	}
-	
+
 	Section
 	{
 		title: qsTr("Cells")
-		
+
 		Group
 		{
 			title: qsTr("Counts")
@@ -129,6 +129,14 @@ Form
 
 		Group
 		{
+			title: qsTr("Residuals")
+			CheckBox { name: "resids";	label: qsTr("Unstandardized") }
+			CheckBox { name: "standardizedResids";	label: qsTr("Standardized") }
+      CheckBox { name: "adjustedResids";	label: qsTr("Adjusted standardized") }
+    }
+
+		Group
+		{
 			title: qsTr("Percentages")
 			CheckBox { name: "percentagesRow";		label: qsTr("Row")		}
 			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
@@ -144,11 +152,11 @@ Form
 			CheckBox { name: "residualsAdjustedStandardized";	label: qsTr("Adjusted standardized")	}
 		}
 	}
-	
+
 	Section
 	{
 		title: qsTr("Options")
-		
+
 		RadioButtonGroup
 		{
 			name: "rowOrder"
