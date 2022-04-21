@@ -11,10 +11,13 @@ The Bayesian binomial test allows you to test whether a proportion of a dichotom
 
 - Test value: The proportion of the variable under the null hypothesis. By default, this is set to 0.5.
 
-#### Hypothesis
-- *&ne; Test value*: Two-sided alternative hypothesis that the proportion is not equal to test value.
-- *&gt; Test value*: One-sided alternative hypothesis that the proportion is larger than the test value.
-- *&lt; Test value*: One-sided alternative hypothesis that the proportion is smaller than the test value.
+#### Alt. Hypothesis
+- Direction
+  - *&ne; Test value*: Two-sided alternative hypothesis that the proportion is not equal to test value.
+  - *&gt; Test value*: One-sided alternative hypothesis that the proportion is larger than the test value.
+  - *&lt; Test value*: One-sided alternative hypothesis that the proportion is smaller than the test value.
+
+- Prior: **Beta** parameters *a* and *b* for the prior distribution under the alternative hypothesis. By default they are set to '1' each. This corresponds to a uniform prior distribution. See Learn Bayes module for more information and alternatives.
 
 #### Bayes Factor
 - BF<sub>10</sub>: By selecting this option, the Bayes factor will show evidence for the alternative hypothesis relative to the null hypothesis. This option is selected by default.
@@ -26,8 +29,6 @@ The Bayesian binomial test allows you to test whether a proportion of a dichotom
     - Additional info: Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting the odds of the data under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior density of the effect size.
 - Sequential analysis: Displays the development of the Bayes factor as the data come in using the user-defined prior.
 
-#### Prior
-**Beta prior** parameters *a* and *b* are set to '1' each. This corresponds to a uniform prior.
 
 ### Output
 ---

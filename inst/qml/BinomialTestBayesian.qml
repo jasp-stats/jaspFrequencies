@@ -35,13 +35,25 @@ Form
 	
 	FormulaField { label: qsTr("Test value: "); name: "testValue"; value: "0.5" ; min:0; max: 1; Layout.columnSpan: 2 }
 	
-	RadioButtonGroup
+	Group
 	{
 		title: qsTr("Alt. Hypothesis")
-		name: "hypothesis"
-		RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true	}
-		RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value")					}
-		RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value")					}
+
+		RadioButtonGroup
+		{
+			title: qsTr("Direction")
+			name: "hypothesis"
+			RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true	}
+			RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value")					}
+			RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value")					}
+		}
+
+		Group
+		{
+			title: qsTr("Prior")
+			FormulaField { name: "priorA"; label: qsTr("Beta prior: parameter a"); value: "1"; min:0; max: 10000; inclusive: JASP.None }
+			FormulaField { name: "priorB"; label: qsTr("Beta prior: parameter b"); value: "1"; min:0; max: 10000; inclusive: JASP.None }
+		}
 	}
 
 	Group {
@@ -60,11 +72,4 @@ Form
 	}
 
 	BayesFactorType {}
-
-	Group
-	{
-		title: qsTr("Prior")
-		FormulaField { name: "priorA"; label: qsTr("Beta prior: parameter a"); value: "1"; min:0; max: 10000; inclusive: JASP.None }
-		FormulaField { name: "priorB"; label: qsTr("Beta prior: parameter b"); value: "1"; min:0; max: 10000; inclusive: JASP.None }
-	}
 }
