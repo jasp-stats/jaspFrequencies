@@ -252,7 +252,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   )
   if (options$countProp == "descCounts")
     for (r in chisqResults)
-      tableFrame <- cbind(tableFrame, round(r[["expected"]]))
+      tableFrame <- cbind(tableFrame, r[["expected"]])
   else
     for (r in chisqResults){
       div <- sum(chisqResults[[1]][["observed"]])
@@ -358,20 +358,12 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     nms <- names(chisqResults)
 
     if (length(nms) == 1) {
-      if (options$countProp == "descCounts")
-        descriptivesTable$addColumnInfo(name = "expected", title = gettextf("Expected: %s", nms),
-                                        type = "integer")
-      else
-        descriptivesTable$addColumnInfo(name = "expected", title = gettextf("Expected: %s", nms),
-                                        type = "number")
+      descriptivesTable$addColumnInfo(name = "expected", title = gettextf("Expected: %s", nms),
+                                      type = "number")
     } else {
       for (i in 1:length(nms)) {
-        if (options$countProp == "descCounts")
-          descriptivesTable$addColumnInfo(name = nms[i], title = nms[i],
-                                          type = "integer", overtitle = gettext("Expected"))
-        else
-          descriptivesTable$addColumnInfo(name = nms[i], title = nms[i],
-                                          type = "number", overtitle = gettext("Expected"))
+        descriptivesTable$addColumnInfo(name = nms[i], title = nms[i],
+                                        type = "number", overtitle = gettext("Expected"))
       }
     }
   }

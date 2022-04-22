@@ -55,6 +55,7 @@ Form
 			preferredWidth	: form.availableWidth - hypothesisGroup.leftPadding
 			visible			: expectedProbs.checked && factors.count > 0
 			source			: "factor"
+			decimals		: 3
 		}
 	}
 
