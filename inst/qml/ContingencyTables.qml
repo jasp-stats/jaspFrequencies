@@ -130,9 +130,9 @@ Form
 		Group
 		{
 			title: qsTr("Residuals")
-			CheckBox { name: "resids";	label: qsTr("Unstandardized") }
-			CheckBox { name: "standardizedResids";	label: qsTr("Standardized") }
-      CheckBox { name: "adjustedResids";	label: qsTr("Adjusted standardized") }
+			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized") }
+			CheckBox { name: "residualsPearson";	label: qsTr("Pearson") }
+      CheckBox { name: "residualsStandardized";	label: qsTr("Standardized") }
     }
 
 		Group
@@ -147,9 +147,9 @@ Form
 		{
 			title: qsTr("Residuals")
 			debug: true
-			CheckBox { name: "residualsUnstandardized";			label: qsTr("Unstandardized")		}
-			CheckBox { name: "residualsStandardized";			label: qsTr("Standardized")			}
-			CheckBox { name: "residualsAdjustedStandardized";	label: qsTr("Adjusted standardized")	}
+			CheckBox { name: "residualUnstandardized";			label: qsTr("Unstandardized")		}
+			CheckBox { name: "residualStandardized";			label: qsTr("Standardized")			}
+			CheckBox { name: "residualAdjustedStandardized";	label: qsTr("Adjusted standardized")	}
 		}
 	}
 

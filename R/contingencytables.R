@@ -131,8 +131,8 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     # Create table
     crossTabMain <- createJaspTable(title = gettext("Contingency Tables"))
     crossTabMain$dependOn(c("countsExpected", "percentagesRow",  "percentagesColumn",
-                            "percentagesTotal", "rowOrder", "columnOrder", "resids",
-                            "standardizedResids", "adjustedResids"))
+                            "percentagesTotal", "rowOrder", "columnOrder", "residualsUnstandardized",
+                            "residualsPearson", "residualsStandardized"))
     crossTabMain$showSpecifiedColumnsOnly <- TRUE
     crossTabMain$position <- 1
       #
@@ -147,30 +147,32 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     counts.fp <- .crossTabCountsFp(dataset, options)
 
     if (options$countsExpected || options$percentagesRow || options$percentagesColumn ||
-        options$percentagesTotal || options$resids || options$standardizedResids || options$adjustedResids)
-                                    crossTabMain$addColumnInfo(name = "type[counts]",           title = "", type = "string")
-    if (options$countsExpected)     crossTabMain$addColumnInfo(name = "type[expected]",         title = "", type = "string")
-    if (options$percentagesRow)     crossTabMain$addColumnInfo(name = "type[row.proportions]",  title = "", type = "string")
-    if (options$percentagesColumn)  crossTabMain$addColumnInfo(name = "type[col.proportions]",  title = "", type = "string")
-    if (options$percentagesTotal)   crossTabMain$addColumnInfo(name = "type[proportions]",      title = "", type = "string")
-    if (options$resids)             crossTabMain$addColumnInfo(name = "type[residuals]",        title = "", type = "string")
-    if (options$standardizedResids) crossTabMain$addColumnInfo(name = "type[std.residuals]",    title = "", type = "string")
-    if (options$adjustedResids)     crossTabMain$addColumnInfo(name = "type[adj.residuals]",    title = "", type = "string")
+        options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson ||
+        options$residualsStandardized)
+                                          crossTabMain$addColumnInfo(name = "type[counts]",                  title = "", type = "string")
+    if (options$countsExpected)           crossTabMain$addColumnInfo(name = "type[expected]",                title = "", type = "string")
+    if (options$percentagesRow)           crossTabMain$addColumnInfo(name = "type[row.proportions]",         title = "", type = "string")
+    if (options$percentagesColumn)        crossTabMain$addColumnInfo(name = "type[col.proportions]",         title = "", type = "string")
+    if (options$percentagesTotal)         crossTabMain$addColumnInfo(name = "type[proportions]",             title = "", type = "string")
+    if (options$residualsUnstandardized)  crossTabMain$addColumnInfo(name = "type[unstandardized.residuals]",title = "", type = "string")
+    if (options$residualsPearson)         crossTabMain$addColumnInfo(name = "type[pearson.residuals]",       title = "", type = "string")
+    if (options$residualsStandardized)    crossTabMain$addColumnInfo(name = "type[standardized.residuals]",  title = "", type = "string")
 
     .crossTabMainOvertitle(dataset, options, crossTabMain, analysis, counts.fp)
 
     # Totals columns
     totalTitle <- gettext("Total")
     if (counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn ||
-        options$percentagesTotal || options$resids || options$standardizedResids || options$adjustedResids) {
-                                      crossTabMain$addColumnInfo(name = "total[counts]",          title = totalTitle, type = "number", format = "sf:4;dp:2")
-      if (options$countsExpected)     crossTabMain$addColumnInfo(name = "total[expected]",        title = totalTitle, type = "number", format = "sf:4;dp:2")
-      if (options$percentagesRow)     crossTabMain$addColumnInfo(name = "total[row.proportions]", title = totalTitle, type = "number", format = "dp:1;pc")
-      if (options$percentagesColumn)  crossTabMain$addColumnInfo(name = "total[col.proportions]", title = totalTitle, type = "number", format = "dp:1;pc")
-      if (options$percentagesTotal)   crossTabMain$addColumnInfo(name = "total[proportions]",     title = totalTitle, type = "number", format = "dp:1;pc")
-      if (options$resids)             crossTabMain$addColumnInfo(name = "total[residuals]",       title = totalTitle, type = "string")
-      if (options$standardizedResids) crossTabMain$addColumnInfo(name = "total[std.residuals]",   title = totalTitle, type = "string")
-      if (options$adjustedResids)     crossTabMain$addColumnInfo(name = "total[adj.residuals]",   title = totalTitle, type = "string")
+        options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson ||
+        options$residualsStandardized) {
+                                           crossTabMain$addColumnInfo(name = "total[counts]",                   title = totalTitle, type = "number", format = "sf:4;dp:2")
+      if (options$countsExpected)          crossTabMain$addColumnInfo(name = "total[expected]",                 title = totalTitle, type = "number", format = "sf:4;dp:2")
+      if (options$percentagesRow)          crossTabMain$addColumnInfo(name = "total[row.proportions]",          title = totalTitle, type = "number", format = "dp:1;pc")
+      if (options$percentagesColumn)       crossTabMain$addColumnInfo(name = "total[col.proportions]",          title = totalTitle, type = "number", format = "dp:1;pc")
+      if (options$percentagesTotal)        crossTabMain$addColumnInfo(name = "total[proportions]",              title = totalTitle, type = "number", format = "dp:1;pc")
+      if (options$residualsUnstandardized) crossTabMain$addColumnInfo(name = "total[unstandardized.residuals]", title = totalTitle, type = "string")
+      if (options$residualsPearson)        crossTabMain$addColumnInfo(name = "total[pearson.residuals]",        title = totalTitle, type = "string")
+      if (options$residualsStandardized)   crossTabMain$addColumnInfo(name = "total[standardized.residuals]",   title = totalTitle, type = "string")
     } else
                                       crossTabMain$addColumnInfo(name = "total[counts]",          title = totalTitle, type = "integer")
 
@@ -403,20 +405,22 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
     pr.format <- NULL
     pr.type   <- "integer"
-    if (counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn || options$percentagesTotal || options$resids || options$standardizedResids || options$adjustedResids)
+    if (counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn ||
+        options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson ||
+        options$residualsStandardized)
     {
       pr.format <- "sf:4;dp:2"
       pr.type   <- "number"
     }
 
-                                     table$addColumnInfo(name = paste0(column.name,"[counts]"),          title = myTitle, type = pr.type,  format = pr.format, overtitle = overTitle)
-    if (options$countsExpected)      table$addColumnInfo(name = paste0(column.name,"[expected]"),        title = myTitle, type = "number", format = "sf:4;dp:2")
-    if (options$percentagesRow)      table$addColumnInfo(name = paste0(column.name,"[row.proportions]"), title = myTitle, type = "number", format = "dp:1;pc")
-    if (options$percentagesColumn)   table$addColumnInfo(name = paste0(column.name,"[col.proportions]"), title = myTitle, type = "number", format = "dp:1;pc")
-    if (options$percentagesTotal)    table$addColumnInfo(name = paste0(column.name,"[proportions]"),     title = myTitle, type = "number", format = "dp:1;pc")
-    if (options$resids)              table$addColumnInfo(name = paste0(column.name,"[residuals]"),       title = myTitle, type = "number", format = "sf:4;dp:2")
-    if (options$standardizedResids)  table$addColumnInfo(name = paste0(column.name,"[std.residuals]"),   title = myTitle, type = "number", format = "sf:4;dp:2")
-    if (options$adjustedResids)      table$addColumnInfo(name = paste0(column.name,"[adj.residuals]"),   title = myTitle, type = "number", format = "sf:4;dp:2")
+                                         table$addColumnInfo(name = paste0(column.name,"[counts]"),                  title = myTitle, type = pr.type,  format = pr.format, overtitle = overTitle)
+    if (options$countsExpected)          table$addColumnInfo(name = paste0(column.name,"[expected]"),                title = myTitle, type = "number", format = "sf:4;dp:2")
+    if (options$percentagesRow)          table$addColumnInfo(name = paste0(column.name,"[row.proportions]"),         title = myTitle, type = "number", format = "dp:1;pc")
+    if (options$percentagesColumn)       table$addColumnInfo(name = paste0(column.name,"[col.proportions]"),         title = myTitle, type = "number", format = "dp:1;pc")
+    if (options$percentagesTotal)        table$addColumnInfo(name = paste0(column.name,"[proportions]"),             title = myTitle, type = "number", format = "dp:1;pc")
+    if (options$residualsUnstandardized) table$addColumnInfo(name = paste0(column.name,"[unstandardized.residuals]"),title = myTitle, type = "number", format = "sf:4;dp:2")
+    if (options$residualsPearson)        table$addColumnInfo(name = paste0(column.name,"[pearson.residuals]"),       title = myTitle, type = "number", format = "sf:4;dp:2")
+    if (options$residualsStandardized)   table$addColumnInfo(name = paste0(column.name,"[standardized.residuals]"),  title = myTitle, type = "number", format = "sf:4;dp:2")
   }
 }
 
@@ -765,22 +769,26 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     else
       group <- NULL
 
-    rows                  <- list()
-    row.count             <- list()
-    row.expected          <- list()
-    row.row.proportions   <- list()
-    row.col.proportions   <- list()
-    row.total.proportions <- list()
-    row.proportions       <- list()
-    row.residuals         <- list()
-    row.std.residuals     <- list()
-    row.adj.residuals     <- list()
-    row.count[["type[counts]"]] <- "Count"
+    rows                          <- list()
+    row.count                     <- list()
+    row.expected                  <- list()
+    row.row.proportions           <- list()
+    row.col.proportions           <- list()
+    row.total.proportions         <- list()
+    row.proportions               <- list()
+    row.unstandardized.residuals  <- list()
+    row.pearson.residuals         <- list()
+    row.standardized.residuals    <- list()
+    row.count[["type[counts]"]]   <- "Count"
 
     if (ready) {
-      expected.matrix <- try({
-        stats::chisq.test(counts.matrix, correct = FALSE)$expected
+
+      chisqResults <- try({
+        stats::chisq.test(counts.matrix, correct = FALSE)
       })
+
+      expected.matrix <- chisqResults$expected
+
       if (isTryError(expected.matrix)) {
         expected.matrix    <- counts.matrix
         expected.matrix[,] <- ""
@@ -810,28 +818,25 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
         proportions.matrix[,] <- ""
       }
 
-      residuals.matrix <- try({
-        counts.matrix - stats::chisq.test(counts.matrix, correct = FALSE)$expected
-      })
-      if (isTryError(residuals.matrix)) {
-        residuals.matrix    <- counts.matrix
-        residuals.matrix[,] <- ""
+      unstandardized.residuals.matrix <- counts.matrix - chisqResults$expected
+
+      if (isTryError(unstandardized.residuals.matrix)) {
+        unstandardized.residuals.matrix    <- counts.matrix
+        unstandardized.residuals.matrix[,] <- ""
       }
 
-      std.residuals.matrix <- try({
-        stats::chisq.test(counts.matrix, correct = FALSE)$residuals
-      })
-      if (isTryError(std.residuals.matrix)) {
-        std.residuals.matrix    <- counts.matrix
-        std.residuals.matrix[,] <- ""
+      pearson.residuals.matrix <- chisqResults$residuals
+
+      if (isTryError(pearson.residuals.matrix)) {
+        pearson.residuals.matrix    <- counts.matrix
+        pearson.residuals.matrix[,] <- ""
       }
 
-      adj.residuals.matrix <- try({
-        stats::chisq.test(counts.matrix, correct = FALSE)$stdres
-      })
-      if (isTryError(adj.residuals.matrix)) {
-        adj.residuals.matrix    <- counts.matrix
-        adj.residuals.matrix[,] <- ""
+      standardized.residuals.matrix <- chisqResults$stdres
+
+      if (isTryError(standardized.residuals.matrix)) {
+        standardized.residuals.matrix    <- counts.matrix
+        standardized.residuals.matrix[,] <- ""
       }
 
     } else {
@@ -839,9 +844,9 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       row.proportions.matrix <- counts.matrix
       col.proportions.matrix <- counts.matrix
       proportions.matrix     <- counts.matrix
-      residuals.matrix       <- counts.matrix
-      std.residuals.matrix   <- counts.matrix
-      adj.residuals.matrix   <- counts.matrix
+      unstandardized.residuals.matrix       <- counts.matrix
+      pearson.residuals.matrix   <- counts.matrix
+      standardized.residuals.matrix   <- counts.matrix
     }
 
     for (j in 1:dim(counts.matrix)[[1]]) {
@@ -852,8 +857,10 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
         names(row) <- paste0(names(row),"[counts]")
         sum        <- sum(counts.matrix[j,])
 
-        if(counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn || options$percentagesTotal || options$resids || options$standardizedResids || options$adjustedResids)
-              row[["total[counts]"]] <- sum
+        if(counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn ||
+           options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson ||
+           options$residualsStandardized)
+          row[["total[counts]"]] <- sum
         else  row[["total[counts]"]] <- as.integer(sum)
 
         row          <- c(row.count, row)
@@ -916,40 +923,40 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           row               <- c(row, total.proportions)
         }
 
-        if (options$resids) {
+        if (options$residualsUnstandardized) {
 
-          row.residuals[["type[residuals]"]] <- gettext("Unstandardized Residuals")
-          residuals                          <- as.list(residuals.matrix[j,])
-          names(residuals)                   <- paste0(names(residuals),"[residuals]")
+          row.unstandardized.residuals[["type[unstandardized.residuals]"]] <- gettext("Unstandardized residuals")
+          unstandardized.residuals                                         <- as.list(unstandardized.residuals.matrix[j,])
+          names(unstandardized.residuals)                                  <- paste0(names(unstandardized.residuals),"[unstandardized.residuals]")
 
-          residuals[["total[residuals]"]] <- " "
+          unstandardized.residuals[["total[unstandardized.residuals]"]]    <- " "
 
-          residuals      <- c(row.residuals, residuals)
-          row            <- c(row, residuals)
+          unstandardized.residuals                                         <- c(row.unstandardized.residuals, unstandardized.residuals)
+          row                                                              <- c(row, unstandardized.residuals)
         }
 
-        if (options$standardizedResids) {
+        if (options$residualsPearson) {
 
-          row.std.residuals[["type[std.residuals]"]] <- gettext("Standardized residuals")
-          std.residuals                              <- as.list(std.residuals.matrix[j,])
-          names(std.residuals)                       <- paste0(names(std.residuals),"[std.residuals]")
+          row.pearson.residuals[["type[pearson.residuals]"]]               <- gettext("Pearson residuals")
+          pearson.residuals                                                <- as.list(pearson.residuals.matrix[j,])
+          names(pearson.residuals)                                         <- paste0(names(pearson.residuals),"[pearson.residuals]")
 
-          std.residuals[["total[std.residuals]"]] <- " "
+          pearson.residuals[["total[pearson.residuals]"]]                  <- " "
 
-          std.residuals      <- c(row.std.residuals, std.residuals)
-          row           <- c(row, std.residuals)
+          pearson.residuals                                                <- c(row.pearson.residuals, pearson.residuals)
+          row                                                              <- c(row, pearson.residuals)
         }
 
-        if (options$adjustedResids) {
+        if (options$residualsStandardized) {
 
-          row.adj.residuals[["type[adj.residuals]"]] <- gettext("Adj. Standardized residuals")
-          adj.residuals                              <- as.list(adj.residuals.matrix[j,])
-          names(adj.residuals)                       <- paste0(names(adj.residuals),"[adj.residuals]")
+          row.standardized.residuals[["type[standardized.residuals]"]]     <- gettext("Standardized residuals")
+          standardized.residuals                                           <- as.list(standardized.residuals.matrix[j,])
+          names(standardized.residuals)                                    <- paste0(names(standardized.residuals),"[standardized.residuals]")
 
-          adj.residuals[["total[adj.residuals]"]] <- " "
+          standardized.residuals[["total[standardized.residuals]"]]        <- " "
 
-          adj.residuals      <- c(row.adj.residuals, adj.residuals)
-          row           <- c(row, adj.residuals)
+          standardized.residuals                                           <- c(row.standardized.residuals, standardized.residuals)
+          row           <- c(row, standardized.residuals)
         }
 
 
@@ -960,7 +967,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
       if (j == 1 && !options$countsExpected && !options$percentagesRow &&
           !options$percentagesCol &&  !options$percentagesTotal &&
-          !options$resids && !options$standardizedResids && !options$adjustedResids)
+          !options$residualsUnstandardized && !options$residualsPearson && !options$residualsStandardized)
         row[[".isNewGroup"]] <- TRUE
       rows[[length(rows) + 1]] <- row
     }
@@ -972,9 +979,9 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       sum         <- sum(counts.matrix)
 
       if(counts.fp || options$countsExpected || options$percentagesRow ||
-         options$percentagesColumn || options$percentagesTotal || options$resids ||
-         options$standardizedResids || options$adjustedResids)
-            row[["total[counts]"]] <- sum
+         options$percentagesColumn || options$percentagesTotal || options$residualsUnstandardized ||
+         options$residualsPearson || options$residualsStandardized)
+        row[["total[counts]"]] <- sum
       else  row[["total[counts]"]] <- as.integer(sum)
 
       row <- c(row.count, row)
@@ -1012,8 +1019,8 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       row[[var.name]] <- gettext("Total")
 
     if (!(options$countsExpected || options$percentagesRow || options$percentagesCol ||
-          options$percentagesTotal || options$resids || options$standardizedResids ||
-          options$adjustedResids))
+          options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson ||
+          options$residualsStandardized))
       row[[".isNewGroup"]] <- TRUE
 
     row                       <- .crossTabLayerNames(row, group)

@@ -28,9 +28,9 @@ Form
 	plotHeight: 240
 
 	CheckBox { visible: false ; name: "countsExpected"; checked: false }
-	CheckBox { visible: false ; name: "resids"; checked: false }
-	CheckBox { visible: false ; name: "standardizedResids"; checked: false }
-	CheckBox { visible: false ; name: "adjustedResids"; checked: false }
+	CheckBox { visible: false ; name: "residualsUnstandardized"; checked: false }
+	CheckBox { visible: false ; name: "residualsPearson"; checked: false }
+	CheckBox { visible: false ; name: "residualsStandardized"; checked: false }
 
 	VariablesForm
 	{
