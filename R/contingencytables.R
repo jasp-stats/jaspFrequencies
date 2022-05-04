@@ -170,9 +170,9 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       if (options$percentagesRow)          crossTabMain$addColumnInfo(name = "total[row.proportions]",          title = totalTitle, type = "number", format = "dp:1;pc")
       if (options$percentagesColumn)       crossTabMain$addColumnInfo(name = "total[col.proportions]",          title = totalTitle, type = "number", format = "dp:1;pc")
       if (options$percentagesTotal)        crossTabMain$addColumnInfo(name = "total[proportions]",              title = totalTitle, type = "number", format = "dp:1;pc")
-      if (options$residualsUnstandardized) crossTabMain$addColumnInfo(name = "total[unstandardized.residuals]", title = totalTitle, type = "string")
-      if (options$residualsPearson)        crossTabMain$addColumnInfo(name = "total[pearson.residuals]",        title = totalTitle, type = "string")
-      if (options$residualsStandardized)   crossTabMain$addColumnInfo(name = "total[standardized.residuals]",   title = totalTitle, type = "string")
+      if (options$residualsUnstandardized) crossTabMain$addColumnInfo(name = "total[unstandardized.residuals]", title = totalTitle, type = "number", format = "sf:4;dp:2")
+      if (options$residualsPearson)        crossTabMain$addColumnInfo(name = "total[pearson.residuals]",        title = totalTitle, type = "number", format = "sf:4;dp:2")
+      if (options$residualsStandardized)   crossTabMain$addColumnInfo(name = "total[standardized.residuals]",   title = totalTitle, type = "number", format = "sf:4;dp:2")
     } else
                                       crossTabMain$addColumnInfo(name = "total[counts]",          title = totalTitle, type = "integer")
 
@@ -840,13 +840,13 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       }
 
     } else {
-      expected.matrix        <- counts.matrix
-      row.proportions.matrix <- counts.matrix
-      col.proportions.matrix <- counts.matrix
-      proportions.matrix     <- counts.matrix
-      unstandardized.residuals.matrix       <- counts.matrix
-      pearson.residuals.matrix   <- counts.matrix
-      standardized.residuals.matrix   <- counts.matrix
+      expected.matrix                  <- counts.matrix
+      row.proportions.matrix           <- counts.matrix
+      col.proportions.matrix           <- counts.matrix
+      proportions.matrix               <- counts.matrix
+      unstandardized.residuals.matrix  <- counts.matrix
+      pearson.residuals.matrix         <- counts.matrix
+      standardized.residuals.matrix    <- counts.matrix
     }
 
     for (j in 1:dim(counts.matrix)[[1]]) {
@@ -929,7 +929,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           unstandardized.residuals                                         <- as.list(unstandardized.residuals.matrix[j,])
           names(unstandardized.residuals)                                  <- paste0(names(unstandardized.residuals),"[unstandardized.residuals]")
 
-          unstandardized.residuals[["total[unstandardized.residuals]"]]    <- " "
+          unstandardized.residuals[["total[unstandardized.residuals]"]]    <- NULL
 
           unstandardized.residuals                                         <- c(row.unstandardized.residuals, unstandardized.residuals)
           row                                                              <- c(row, unstandardized.residuals)
@@ -941,7 +941,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           pearson.residuals                                                <- as.list(pearson.residuals.matrix[j,])
           names(pearson.residuals)                                         <- paste0(names(pearson.residuals),"[pearson.residuals]")
 
-          pearson.residuals[["total[pearson.residuals]"]]                  <- " "
+          pearson.residuals[["total[pearson.residuals]"]]                  <- NULL
 
           pearson.residuals                                                <- c(row.pearson.residuals, pearson.residuals)
           row                                                              <- c(row, pearson.residuals)
@@ -953,7 +953,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           standardized.residuals                                           <- as.list(standardized.residuals.matrix[j,])
           names(standardized.residuals)                                    <- paste0(names(standardized.residuals),"[standardized.residuals]")
 
-          standardized.residuals[["total[standardized.residuals]"]]        <- " "
+          standardized.residuals[["total[standardized.residuals]"]]        <- NULL
 
           standardized.residuals                                           <- c(row.standardized.residuals, standardized.residuals)
           row           <- c(row, standardized.residuals)
