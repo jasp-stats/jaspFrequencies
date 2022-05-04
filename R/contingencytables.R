@@ -174,7 +174,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       if (options$residualsPearson)        crossTabMain$addColumnInfo(name = "total[pearson.residuals]",        title = totalTitle, type = "number", format = "sf:4;dp:2")
       if (options$residualsStandardized)   crossTabMain$addColumnInfo(name = "total[standardized.residuals]",   title = totalTitle, type = "number", format = "sf:4;dp:2")
     } else
-                                      crossTabMain$addColumnInfo(name = "total[counts]",          title = totalTitle, type = "integer")
+                                           crossTabMain$addColumnInfo(name = "total[counts]",                   title = totalTitle, type = "integer")
 
     analysisContainer[["crossTabMain"]] <- crossTabMain
     analysis                            <- as.list(analysis)
