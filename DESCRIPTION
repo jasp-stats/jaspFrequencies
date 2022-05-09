@@ -13,6 +13,7 @@ Imports:
   abtest (>= 0.2.1),
   BayesFactor,
   conting,
+  multibridge,
   ggplot2,
   jaspBase,
   jaspGraphs,
