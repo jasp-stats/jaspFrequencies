@@ -221,7 +221,7 @@ Form
 		
 		Group
 		{
-			title: 		qsTr("Estimation settings (MCMC)")
+			title: 		qsTr("Estimation settings")
 			columns: 	1
 
 			IntegerField
@@ -246,7 +246,7 @@ Form
 
 			IntegerField
 			{
-				label: 			qsTr("Max iteration (bridgesampling))")
+				label: 			qsTr("Max iteration (bridgesampling)")
 				name: 			"bridgeIter"
 				defaultValue: 	1000
 				min:			5

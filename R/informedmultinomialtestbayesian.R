@@ -15,7 +15,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# TODO: add comparison to null / one of the levels
+# TODO:
+# - dynamically fill comparison dropdown
+# - how to deal with restricted hypotheses with different number of elements?
+# - scale proportions for posterior when restricted?
+# - bug with empty model
+# - x-axis label for posterior: change to estimated
+# - fit the null and encompassing models separately (there should be a function for that)
 
 InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
@@ -129,11 +135,11 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   else
     bfTitle <- gettextf("Log(BF%s%s)", "\u2081", "\u2080")
 
-  summaryTable$addColumnInfo(name = "model",         title = "",                                   type = "string")
-  summaryTable$addColumnInfo(name = "marglik",       title = gettext("log(Marginal likelihood)"),  type = "number")
-  summaryTable$addColumnInfo(name = "marglikError",  title = gettext("Error"),                     type = "number")
-  summaryTable$addColumnInfo(name = "marglikPrec",   title = gettext("Error %"),                   type = "number")
-  summaryTable$addColumnInfo(name = "bf",            title = bfTitle,                              type = "number")
+  summaryTable$addColumnInfo(name = "model",         title = "",                      type = "string")
+  summaryTable$addColumnInfo(name = "marglik",       title = gettext("Log marglik"),  type = "number")
+  summaryTable$addColumnInfo(name = "marglikError",  title = gettext("Error"),        type = "number")
+  summaryTable$addColumnInfo(name = "marglikPrec",   title = gettext("Error %"),      type = "number")
+  summaryTable$addColumnInfo(name = "bf",            title = bfTitle,                 type = "number")
 
   jaspResults[["summaryTable"]] <- summaryTable
 
@@ -243,7 +249,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
     return()
 
   plotData <- .createInformedMultBayesDescriptivesData(dataset, options, table = FALSE)
-  descriptivesPlot$plotObject <- .informedMultinomialPlot(plotData, options)
+  descriptivesPlot$plotObject <- .informedMultinomialPlot(plotData, options, descriptives = TRUE)
 
   return()
 }
@@ -280,7 +286,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
     tempPlot$position <- i
     posteriorPlots[[models[[i]]$name]] <- tempPlot
 
-    tempPlot$plotObject <- .informedMultinomialPlot(tempSummary, options)
+    tempPlot$plotObject <- .informedMultinomialPlot(tempSummary, options, descriptives = FALSE)
   }
 
   return()
@@ -322,7 +328,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsFrame <- do.call(rbind, rowsList)
   return(rowsFrame)
 }
-.informedMultinomialPlot                  <- function(plotData, options){
+.informedMultinomialPlot                  <- function(plotData, options, descriptives = TRUE){
 
   base_breaks_y <- function(x) {
     b <- pretty(c(0,x))
@@ -332,11 +338,10 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   }
 
   # Counts or props
-  if (options$countProp == "descCounts") {
-    yname <- gettext("Observed Counts")
-  } else {
-    yname <- gettext("Observed Proportions")
-  }
+  yname <- sprintf("%1$s %2$s",
+    if (descriptives) gettext("Observed") else gettext("Estimated"),
+    if (options[["countProp"]] == "descCounts") gettext("Counts") else gettext("Proportions")
+  )
 
   # Prepare data for plotting
   plotFrame <- plotData
