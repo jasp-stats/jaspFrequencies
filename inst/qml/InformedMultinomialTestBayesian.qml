@@ -28,30 +28,70 @@ Form
 {
 	VariablesForm
 	{
-		preferredHeight: 190 * preferencesModel.uiScale
-		marginBetweenVariablesLists	: 15
-		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";		title: qsTr("Factor");			singleVariable: true; suggestedColumns: ["ordinal", "nominal"]	}
-		AssignedVariablesList {					name: "counts";		title: qsTr("Counts");			singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
+		preferredHeight:				190 * preferencesModel.uiScale
+		marginBetweenVariablesLists:	15
+
+		AvailableVariablesList
+		{
+			name:				"allVariablesList"
+		}
+
+		AssignedVariablesList
+		{
+			id:					factors
+			name:				"factor"
+			title:				qsTr("Factor")
+			singleVariable:		true
+			suggestedColumns:	["ordinal", "nominal"]
+		}
+
+		AssignedVariablesList
+		{
+			name:				"counts"
+			title:				qsTr("Counts")
+			singleVariable:		true
+			suggestedColumns:	["scale", "ordinal"]
+		}
 	}
 
 	ColumnLayout
 	{
+
+		DropDown
+		{
+			label:				qsTr("Compare to")
+			name:				"testAgainst"
+			values:				
+			[
+				{ label: qsTr("Encompasing"),		value: "Encompasing"		},
+				{ label: qsTr("Null"),				value: "Null"				},
+				{ label: qsTr("Model 1"),			value: "Model 1"			}
+			]
+			indexDefaultValue:	0
+			
+		}
+
 		BayesFactorType { }
 
 		Group
 		{
-			title	: qsTr("Additional Statistics")
+			title:	qsTr("Additional Statistics")
+
 			CheckBox
 			{
-				name	: "descriptives"
-				label	: qsTr("Descriptives")
+				name:	"descriptives"
+				label:	qsTr("Descriptives")
+
 				CheckBox
 				{
-					name				: "credibleInterval"; label: qsTr("Credible interval")
-					childrenOnSameRow	: true
+					name:				"credibleInterval"
+					label:				qsTr("Credible interval")
+					childrenOnSameRow:	true
 
-					CIField { name: "credibleIntervalInterval" }
+					CIField
+					{
+						name:	"credibleIntervalInterval"
+					}
 				}
 			}
 		}
@@ -64,19 +104,43 @@ Form
 			name	: "countProp"
 			title	: qsTr("Display")
 
-			RadioButton { value: "descCounts";	label: qsTr("Counts");	checked: true	}
-			RadioButton { value: "descProps";	label: qsTr("Proportions")				}
+			RadioButton
+			{
+				value:		"descCounts"
+				label:		qsTr("Counts")
+				checked:	true
+			}
+
+			RadioButton
+			{
+				value:		"descProps"
+				label:		qsTr("Proportions")
+			}
 		}
 
 		Group
 		{
 			title	: qsTr("Plots")
+
 			CheckBox
 			{
-				name	: "descriptivesPlot"
-				label	: qsTr("Descriptives plot")
+				name:		"descriptivesPlot"
+				id:			descriptivesPlot
+				label:		qsTr("Descriptives")
+			}
 
-				CIField { name: "descriptivesPlotCredibleInterval"; label: qsTr("Credible interval") }
+			CheckBox
+			{
+				name:		"posteriorPlot"
+				id:			posteriorPlot
+				label:		qsTr("Posterior")
+			}
+
+			CIField
+			{
+				enabled:	descriptivesPlot.checked || posteriorPlot.checked
+				name:		"credibleIntervalPlot"
+				label:		qsTr("Credible interval")
 			}
 		}
 	}
@@ -148,5 +212,49 @@ Form
 				}
 			}
 		}
+	}
+
+		Section
+	{
+		columns: 	2
+		title: 		qsTr("Advanced")
+		
+		Group
+		{
+			title: 		qsTr("Estimation settings (MCMC)")
+			columns: 	1
+
+			IntegerField
+			{
+				label: 			qsTr("Burnin (MCMC)")
+				name: 			"mcmcBurnin"
+				defaultValue: 	500
+				min:			50
+				max: 			1000000
+				fieldWidth: 	50
+			}
+
+			IntegerField
+			{
+				label: 			qsTr("Iterations (MCMC)")
+				name: 			"mcmcIter"
+				defaultValue: 	5000
+				min:			100
+				max: 			1000000
+				fieldWidth: 	50
+			}
+
+			IntegerField
+			{
+				label: 			qsTr("Max iteration (bridgesampling))")
+				name: 			"bridgeIter"
+				defaultValue: 	1000
+				min:			5
+				max: 			1000000
+				fieldWidth: 	50
+			}
+		}
+
+		SetSeed { }
 	}
 }
