@@ -31,7 +31,7 @@ Form
 		AssignedVariablesList { name: "layers";		title: qsTr("Layers");	suggestedColumns: ["ordinal", "nominal"]; listViewType: JASP.Layers; preferredHeight: 120 }
 	}
 
-	Section
+  Section
 	{
 		title: qsTr("Statistics")
 
@@ -127,31 +127,22 @@ Form
 			}
 		}
 
-		Group
+    Group
 		{
-			title: qsTr("Residuals")
-			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized") }
-			CheckBox { name: "residualsPearson";	label: qsTr("Pearson") }
-      CheckBox { name: "residualsStandardized";	label: qsTr("Standardized") }
+      title: qsTr("Residuals")
+      CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized") }
+      CheckBox { name: "residualsPearson";	label: qsTr("Pearson")              }
+      CheckBox { name: "residualsStandardized";	label: qsTr("Standardized")     }
     }
 
-		Group
-		{
-			title: qsTr("Percentages")
-			CheckBox { name: "percentagesRow";		label: qsTr("Row")		}
-			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
-			CheckBox { name: "percentagesTotal";	label: qsTr("Total")		}
-		}
-
-		Group
-		{
-			title: qsTr("Residuals")
-			debug: true
-			CheckBox { name: "residualUnstandardized";			label: qsTr("Unstandardized")		}
-			CheckBox { name: "residualStandardized";			label: qsTr("Standardized")			}
-			CheckBox { name: "residualAdjustedStandardized";	label: qsTr("Adjusted standardized")	}
-		}
-	}
+    Group
+    {
+      title: qsTr("Percentages")
+      CheckBox { name: "percentagesRow";		label: qsTr("Row")		}
+      CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
+      CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
+    }
+  }
 
 	Section
 	{
