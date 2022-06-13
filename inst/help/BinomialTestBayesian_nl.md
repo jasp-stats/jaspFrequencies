@@ -1,7 +1,7 @@
 Bayesiaanse binomiaaltoets
 ===
 
-Met de bayesiaanse binomiaaltoets kan worden getoetst of de proportie van een dichotome variabele gelijk is aan een toetswaarde (aangenomen populatie waarde). De analyse geeft een binomiale toets voor elk niveau van de afhankelijke variabele ten opzichte van alle andere niveaus, dus zal ook werken voor variabelen met meer dan twee niveaus.
+Met de bayesiaanse binomiaaltoets kan worden getoetst of de proportie van een dichotome variabele gelijk is aan een toetswaarde (aangenomen populatie waarde). De analyse voert een binomiale toets uit voor elk niveau van de afhankelijke variabele ten opzichte van alle andere niveaus, dus de analyse werkt ook voor variabelen met meer dan twee niveaus.
 
 ### Assumpties
 - De variabele is dichotoom.
