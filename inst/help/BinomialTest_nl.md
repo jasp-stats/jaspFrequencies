@@ -1,6 +1,6 @@
 Binomiaal Toets
 ====
-De binomiaal toets laat de gebruiker testen of een proportie van een dichotome variabele gelijk is aan een toetswaarde (= aangenomen populatiewaarde).
+De binomiaal toets laat de gebruiker testen of een proportie van een dichotome variabele gelijk is aan een toetswaarde (= aangenomen populatiewaarde). De analyse geeft een binomiale toets voor elk niveau van de afhankelijke variabele ten opzichte van alle andere niveaus, dus zal ook werken voor variabelen met meer dan twee niveaus.
 
 ### Assumpties
 - De variabele is op dichotome schaal gemeten.
