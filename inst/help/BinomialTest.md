@@ -1,6 +1,6 @@
 Binomial Test
 ====
-The binomial test allows the user to test whether a proportion of a dichotomous variable is equal to a test value (=presumed population value).
+The binomial test allows the user to test whether a proportion of a dichotomous variable is equal to a test value (=presumed population value). The analysis returns a binomial test for each level of the dependent variable against all other levels, so it will also work for variables with more than two levels.
 
 ### Assumptions
 - The variable should be a dichotomous scale.
