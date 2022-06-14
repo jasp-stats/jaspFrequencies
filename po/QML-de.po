@@ -871,3 +871,7 @@ msgstr "Analysen für Zähldaten"
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
 msgstr "Stufe #"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Direction"
+msgstr ""

@@ -871,3 +871,7 @@ msgstr "Número de mostras"
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
 msgstr "Nivel #"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Direction"
+msgstr ""

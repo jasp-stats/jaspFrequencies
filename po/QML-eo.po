@@ -870,3 +870,7 @@ msgstr ""
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
 msgstr ""
+
+msgctxt "BinomialTestBayesian|"
+msgid "Direction"
+msgstr ""

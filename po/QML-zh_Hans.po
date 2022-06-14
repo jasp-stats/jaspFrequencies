@@ -870,3 +870,7 @@ msgstr "样本量"
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
 msgstr "水平 #"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Direction"
+msgstr ""
