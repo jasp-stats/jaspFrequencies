@@ -1,0 +1,476 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspFrequencies 0.15.0\n"
+"POT-Creation-Date: 2022-04-23 03:35\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Bayesian A/B Test"
+msgstr ""
+
+msgid "Models"
+msgstr ""
+
+msgid "P(M)"
+msgstr ""
+
+msgid "P(M|data)"
+msgstr ""
+
+msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
+msgstr ""
+
+msgid "Log odds ratio = 0"
+msgstr ""
+
+msgid "Log odds ratio > 0"
+msgstr ""
+
+msgid "Log odds ratio < 0"
+msgstr ""
+
+msgid "Log odds ratio %s 0"
+msgstr ""
+
+msgid "Descriptives"
+msgstr ""
+
+msgid "Counts"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Proportion"
+msgstr ""
+
+msgid "Group 1"
+msgstr ""
+
+msgid "Group 2"
+msgstr ""
+
+msgid "Prior and Posterior"
+msgstr ""
+
+msgid "Sequential Analysis"
+msgstr ""
+
+msgid "Bayes Factor Robustness Check"
+msgstr ""
+
+msgid "Prior"
+msgstr ""
+
+msgid "thinning hides the last observation"
+msgstr ""
+
+msgid "n"
+msgstr ""
+
+msgid "Posterior Probability"
+msgstr ""
+
+msgid "P(%1$s | data) = %2$.3f"
+msgstr ""
+
+msgid "Cannot test the hypothesis that the test value is greater than 1."
+msgstr ""
+
+msgid "Cannot test the hypothesis that the test value is less than 0."
+msgstr ""
+
+msgid "Binomial Test"
+msgstr ""
+
+msgid "Variable"
+msgstr ""
+
+msgid "Level"
+msgstr ""
+
+msgid "p"
+msgstr ""
+
+msgid "VS-MPR"
+msgstr ""
+
+msgid "Lower"
+msgstr ""
+
+msgid "%s%% CI for Proportion"
+msgstr ""
+
+msgid "Upper"
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that the proportion is greater than %s."
+msgstr ""
+
+msgid "Proportions tested against value: %s."
+msgstr ""
+
+msgid "Descriptives Plots"
+msgstr ""
+
+msgid "Bayesian Binomial Test"
+msgstr ""
+
+msgid "%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s)."
+msgstr ""
+
+msgid "Inferential Plots"
+msgstr ""
+
+msgid "Population proportion"
+msgstr ""
+
+msgid "One or more Bayes factors cannot be computed"
+msgstr ""
+
+msgid "One or more Bayes factors are infinite"
+msgstr ""
+
+msgid "Undefined hypothesis"
+msgstr ""
+
+msgid "Attempting to create container name for multiple analyses. Each analysis has its own container."
+msgstr ""
+
+msgid "Contingency Tables"
+msgstr ""
+
+msgid "Chi-Squared Tests"
+msgstr ""
+
+msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+msgid "Log Odds Ratio"
+msgstr ""
+
+msgid "Odds Ratio"
+msgstr ""
+
+msgid "%.0f%% Confidence Intervals"
+msgstr ""
+
+msgid "Nominal"
+msgstr ""
+
+msgid "Ordinal Gamma"
+msgstr ""
+
+msgid "95%% Confidence Intervals"
+msgstr ""
+
+msgid "Gamma"
+msgstr ""
+
+msgid "Standard Error"
+msgstr ""
+
+msgid "Kendall's Tau-b"
+msgstr ""
+
+msgid "Z"
+msgstr ""
+
+msgid "VS-MPR%s"
+msgstr ""
+
+msgid "Value"
+msgstr ""
+
+msgid "df"
+msgstr ""
+
+msgid "Contingency coefficient"
+msgstr ""
+
+msgid "Phi-coefficient"
+msgstr ""
+
+msgid "Cramer's V"
+msgstr ""
+
+msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
+msgstr ""
+
+msgid "Value could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+
+msgid "Lambda (rows)"
+msgstr ""
+
+msgid "Lambda (columns)"
+msgstr ""
+
+msgid "Lambda (symmetric)"
+msgstr ""
+
+msgid "is less than"
+msgstr ""
+
+msgid "is greater than"
+msgstr ""
+
+msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
+msgstr ""
+
+msgid "Expected count"
+msgstr ""
+
+msgid "%% within row"
+msgstr ""
+
+msgid "%% within column"
+msgstr ""
+
+msgid "%% of total"
+msgstr ""
+
+msgid "N"
+msgstr ""
+
+msgid "%s could not be calculated - At least one row or column contains all zeros"
+msgstr ""
+
+msgid "%s continuity correction"
+msgstr ""
+
+msgid "Likelihood ratio"
+msgstr ""
+
+msgid "Odds ratio restricted to 2 x 2 tables"
+msgstr ""
+
+msgid "Fisher's exact test"
+msgstr ""
+
+msgid "Bayesian Contingency Tables Tests"
+msgstr ""
+
+msgid "%.0f%% Credible Interval"
+msgstr ""
+
+msgid "Log Odds Ratio Plots"
+msgstr ""
+
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr ""
+
+msgid "Odds ratio for this model not yet implemented"
+msgstr ""
+
+msgid "The Bayes factor is undefined"
+msgstr ""
+
+msgid "The Bayes factor is too small"
+msgstr ""
+
+msgid "The Bayes factor is infinite"
+msgstr ""
+
+msgid "median Log OR ="
+msgstr ""
+
+msgid "Poisson"
+msgstr ""
+
+msgid "Joint multinomial"
+msgstr ""
+
+msgid "Independent multinomial"
+msgstr ""
+
+msgid "Hypergeometric"
+msgstr ""
+
+msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
+msgstr ""
+
+msgid "Proportion test restricted to 2 x 2 tables"
+msgstr ""
+
+msgid "is not equal to"
+msgstr ""
+
+msgid "Invalid sampling model selected"
+msgstr ""
+
+msgid "Odds ratio"
+msgstr ""
+
+msgid "Odd ratio for this model not yet implemented"
+msgstr ""
+
+msgid "Cramer's V for this model not yet implemented"
+msgstr ""
+
+msgid "Posterior"
+msgstr ""
+
+msgid "Expected counts not supported without observed counts."
+msgstr ""
+
+msgid "No expected counts entered."
+msgstr ""
+
+msgid "Invalid counts: variable does not match the number of levels of the factor. When counts are specified, each row of the data set must represent a unique level of the factor."
+msgstr ""
+
+msgid "Invalid expected counts: variable does not match the number of levels of the factor."
+msgstr ""
+
+msgid "Invalid counts: variable must contain only integer values."
+msgstr ""
+
+msgid "Invalid counts: less than 1 observation."
+msgstr ""
+
+msgid "Confidence intervals are based on independent binomial distributions."
+msgstr ""
+
+msgid "Could not compute confidence intervals."
+msgstr ""
+
+msgid "Factor"
+msgstr ""
+
+msgid "Observed"
+msgstr ""
+
+msgid "Expected: %s"
+msgstr ""
+
+msgid "Expected"
+msgstr ""
+
+msgid "%s%% Confidence Interval"
+msgstr ""
+
+msgid "Descriptives Plot"
+msgstr ""
+
+msgid "Observed counts"
+msgstr ""
+
+msgid "Observed proportions"
+msgstr ""
+
+msgid "Bayesian Multinomial Test"
+msgstr ""
+
+msgid "Levels"
+msgstr ""
+
+msgid "Credible"
+msgstr ""
+
+msgid "Credible intervals are based on independent binomial distributions with flat priors."
+msgstr ""
+
+msgid "Confidence"
+msgstr ""
+
+msgid "%1$s%% %2$s Interval"
+msgstr ""
+
+msgid "Could not compute %s Intervals."
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr ""
+
+msgid "Observed Counts"
+msgstr ""
+
+msgid "Observed Proportions"
+msgstr ""
+
+msgid "ANOVA"
+msgstr ""
+
+msgid "Deviance"
+msgstr ""
+
+msgid "Residual df"
+msgstr ""
+
+msgid "Residual Deviance"
+msgstr ""
+
+msgid "Coefficients"
+msgstr ""
+
+msgid "Estimate"
+msgstr ""
+
+msgid "%s%% Confidence Intervals"
+msgstr ""
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \nthe maximum possible odds in favor of H%1$s over H%2$s equals \n1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n(Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+
+msgid "variables cannot be read"
+msgstr ""
+
+msgid "R Package error: %s"
+msgstr ""
+
+msgid "R Package error: Cannot retrieve table probabilities"
+msgstr ""
+
+msgid "Total number of models visited = %i"
+msgstr ""
+
+msgid "Submodel specified is not within possible submodels"
+msgstr ""
+
+msgid "<em>Model formula:</em>"
+msgstr ""
+
+msgid "<em>Posterior model probability =</em>"
+msgstr ""
+
+msgid "Model Comparison"
+msgstr ""
+
+msgid "BF<sub>10</sub>"
+msgstr ""
+
+msgid "BF<sub>01</sub>"
+msgstr ""
+
+msgid "Log(BF<sub>10</sub>)"
+msgstr ""
+
+msgid "Posterior Summary Statistics"
+msgstr ""
+
+msgid "P(incl|data)"
+msgstr ""
+
+msgid "Mean"
+msgstr ""
+
+msgid "Variance"
+msgstr ""
+
+msgid "%s%% Credible intervals"
+msgstr ""
+
+msgid "Posterior Summary Statistics For Submodel %s"
+msgstr ""
+
+msgid "%.0f%% Credible intervals"
+msgstr ""
