@@ -2,112 +2,131 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2022-04-23 03:35\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-29 08:59+0000\n"
+"Last-Translator: José Ramón Rueda <joseramon.rueda@ehu.es>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
+#, fuzzy
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "A/B proba bayesiarra"
 
+#, fuzzy
 msgid "Models"
-msgstr ""
+msgstr "Ereduak"
 
+#, fuzzy
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
+#, fuzzy
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|data)"
 
 msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
 msgstr ""
+"Log odds ratio positiboak esan nahi du 2. taldeko arrakasta-tasa 1. taldekoa "
+"baino handiagoa dela."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Log odds ratioa = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Log odds ratioa > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Log odds ratioa < 0"
 
+#, fuzzy
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "%s 0 log odds ratioa"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskribatzaileak"
 
+#, fuzzy
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgid "Total"
-msgstr ""
+msgstr "Guztira"
 
 msgid "Proportion"
-msgstr ""
+msgstr "Proportzioa"
 
 msgid "Group 1"
-msgstr ""
+msgstr "1. taldea"
 
 msgid "Group 2"
-msgstr ""
+msgstr "2. taldea"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Aurrekoa eta ondorengoa"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Analisi sekuentziala"
 
+#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Bayes faktorearen sendotasuna egiaztatzea"
 
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgid "thinning hides the last observation"
 msgstr ""
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "Ondorengo probabilitatea"
 
+#, fuzzy
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | data) = %2$.3f"
 
+#, fuzzy
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
+msgstr "Ezin da frogatu testaren balioa 1 baino handiagoa dela dioen hipotesia."
 
+#, fuzzy
 msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr ""
+"Ezin da frogatu saiakuntzaren balioa 0 baino txikiagoa dela dioen hipotesia."
 
 msgid "Binomial Test"
 msgstr ""
 
 msgid "Variable"
-msgstr ""
+msgstr "Aldagaia"
 
 msgid "Level"
-msgstr ""
+msgstr "Maila"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
+#, fuzzy
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
-msgstr ""
+msgstr "Behekoa"
 
+#, fuzzy
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% CI for Proportion"
 
 msgid "Upper"
-msgstr ""
+msgstr "Goikoa"
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
@@ -119,7 +138,7 @@ msgid "Proportions tested against value: %s."
 msgstr ""
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Grafiko deskribatzaileak"
 
 msgid "Bayesian Binomial Test"
 msgstr ""
@@ -128,100 +147,116 @@ msgid "%1$s The shape of the prior distribution under the alternative hypothesis
 msgstr ""
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Grafiko inferentzialak"
 
 msgid "Population proportion"
-msgstr ""
+msgstr "Biztanleriaren proportzioa"
 
+#, fuzzy
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "Bayes faktore bat edo gehiago ezin dira zenbatu"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "Bayes faktore bat edo gehiago infinituak dira"
 
+#, fuzzy
 msgid "Undefined hypothesis"
-msgstr ""
+msgstr "Hipotesi mugagabea?"
 
+#, fuzzy
 msgid "Attempting to create container name for multiple analyses. Each analysis has its own container."
 msgstr ""
+"Analisi askotarako edukiontziaren izena sortzen saiatu. Analisi bakoitzak "
+"bere edukiontzia du."
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "Kontingentzia-taulak"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "Chi-karratu-probak"
 
+#, fuzzy
 msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
+"      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Log Odds Ratioa"
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Odds Ratioa"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
 
+#, fuzzy
 msgid "Nominal"
-msgstr ""
+msgstr "Nominala"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "Gamma ordinala"
 
+#, fuzzy
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "% 95, konfiantza-tarteak"
 
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 msgid "Standard Error"
-msgstr ""
+msgstr "Errore estandarra"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "Kendall's Tau-b"
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
+#, fuzzy
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
-msgstr ""
+msgstr "Balioa"
 
+#, fuzzy
 msgid "df"
-msgstr ""
+msgstr "askatasun-mailak"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "Kontingentzia-koefizientea"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi-koefizientea"
 
+#, fuzzy
 msgid "Cramer's V"
-msgstr ""
+msgstr "Cramer's V"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "Phi koefizientea 2 kontingentzia-taulako soilik erabil daiteke"
 
 msgid "Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"Ezin da balioa kalkulatu - Lerro edo zutabe batek gutxienez zero guztiak ditu"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "Lambda (errenkadak)"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "Lambda (zutabeak)"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "Lambda (simetrikoa)"
 
+#, fuzzy
 msgid "is less than"
-msgstr ""
+msgstr "baino gutxiago da"
 
 msgid "is greater than"
-msgstr ""
+msgstr "hau baino handiagoa da"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
 msgstr ""
@@ -239,10 +274,12 @@ msgid "%% of total"
 msgstr ""
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"%a ezin izan da kalkulatu - gutxienez errenkada edo zutabe batek ditu zero "
+"guztiak"
 
 msgid "%s continuity correction"
 msgstr ""
@@ -250,14 +287,17 @@ msgstr ""
 msgid "Likelihood ratio"
 msgstr ""
 
+#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Odds ratio murriztua bakarrik  2 x 2 taulentzat"
 
+#, fuzzy
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "Fisherren proba zehatza"
 
+#, fuzzy
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
 msgstr ""
@@ -265,26 +305,29 @@ msgstr ""
 msgid "Log Odds Ratio Plots"
 msgstr ""
 
+#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "Odds ratioa bakarrik 2 x 2 analisitan"
 
+#, fuzzy
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "Odds ratioa oraindik ezarri ez den eredu horrentzat??"
 
+#, fuzzy
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "Bayes faktorea ez dago zehaztuta"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Bayes faktorea txikiegia da"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "Bayes faktorea infinitua da"
 
 msgid "median Log OR ="
 msgstr ""
 
 msgid "Poisson"
-msgstr ""
+msgstr "Poisson"
 
 msgid "Joint multinomial"
 msgstr ""
@@ -293,7 +336,7 @@ msgid "Independent multinomial"
 msgstr ""
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "Hipergeometrikoa"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
 msgstr ""
