@@ -12,51 +12,68 @@ test_that("Main table results match", {
     name = "Layer 1",
     variables = "facGender"
   ))
-  options$countsExpected <- TRUE
-  options$percentagesRow <- TRUE
-  options$percentagesColumn <- TRUE
-  options$percentagesTotal <- TRUE
+  options$countsExpected           <- TRUE
+  options$percentagesRow           <- TRUE
+  options$percentagesColumn        <- TRUE
+  options$percentagesTotal         <- TRUE
+  options$residualsUnstandardized  <- TRUE
+  options$residualsPearson         <- TRUE
+  options$residualsStandardized    <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table   <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
   jaspTools::expect_equal_tables(table,
-      list(0.489296636085627, 320, 394.529977794227, 0.236861584011843, 0.392638036809816,
-           0.710186513629842, 495, 420.470022205773, 0.36639526276832,
-           0.607361963190184, "control", "f", 0.603256846780163, 815, 815,
-           0.603256846780163, 1, " % within column", "Count", "Expected count",
-           " % of total", " % within row", 0.510703363914373, 334, 259.470022205773,
-           0.247224278312361, 0.623134328358209, 0.289813486370158, 202,
-           276.529977794227, 0.149518874907476, 0.376865671641791, "experimental",
-           "f", 0.396743153219837, 536, 536, 0.396743153219837, 1, " % within column",
-           "Count", "Expected count", " % of total", " % within row", 1,
-           654, 654, 0.484085862324204, 0.484085862324204, 1, 697, 697,
-           0.515914137675796, 0.515914137675796, "Total", "f", 1, 1351, 1351,
-           1, 1, " % within column", "Count", "Expected count", " % of total",
-           " % within row", 0.338688085676037, 253, 271.013344453712, 0.211009174311927,
-           0.581609195402299, 0.402654867256637, 182, 163.986655546289,
-           0.151793160967473, 0.418390804597701, "control", "m", 0.362802335279399,
-           435, 435, 0.362802335279399, 1, " % within column", "Count",
-           "Expected count", " % of total", " % within row", 0.661311914323963,
-           494, 475.986655546288, 0.412010008340284, 0.646596858638743,
-           0.597345132743363, 270, 288.013344453712, 0.225187656380317,
-           0.353403141361257, "experimental", "m", 0.6371976647206, 764,
-           764, 0.6371976647206, 1, " % within column", "Count", "Expected count",
-           " % of total", " % within row", 1, 747, 747, 0.62301918265221,
-           0.62301918265221, 1, 452, 452, 0.37698081734779, 0.37698081734779,
-           "Total", "m", 1, 1199, 1199, 1, 1, " % within column", "Count", "Expected count",
-           " % of total", " % within row", 0.408993576017131, 573, 686.764705882353,
-           0.224705882352941, 0.4584, 0.589208006962576, 677, 563.235294117647,
-           0.265490196078431, 0.5416, "control", "Total", 0.490196078431372,
-           1250, 1250, 0.490196078431373, 1, " % within column", "Count",
-           "Expected count", " % of total", " % within row", 0.591006423982869,
-           828, 714.235294117647, 0.324705882352941, 0.636923076923077,
-           0.410791993037424, 472, 585.764705882353, 0.185098039215686,
-           0.363076923076923, "experimental", "Total", 0.509803921568627,
-           1300, 1300, 0.509803921568627, 1, " % within column", "Count",
-           "Expected count", " % of total", " % within row", 1, 1401, 1401,
-           0.549411764705882, 0.549411764705882, 1, 1149, 1149, 0.450588235294118,
-           0.450588235294118, "Total", "Total", 1, 2550, 2550, 1, 1, " % within column",
-           "Count", "Expected count", " % of total", " % within row")
-  )
+                                 list(0.489296636085627, 320, 394.529977794227, -3.75224327419637, 0.392638036809816,
+                                      -8.29368531337046, 0.236861584011843, -74.5299777942265, 0.710186513629842,
+                                      495, 420.470022205773, 3.63465733359156, 0.607361963190184,
+                                      8.29368531337046, 0.36639526276832, 74.5299777942265, "control",
+                                      "f", 0.603256846780163, 815, 815, 1, 0.603256846780163, " % within column",
+                                      "Count", "Expected count", "Pearson residuals", " % within row",
+                                      "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      0.510703363914373, 334, 259.470022205773, 4.62687106461469,
+                                      0.623134328358209, 8.29368531337046, 0.247224278312361, 74.5299777942265,
+                                      0.289813486370158, 202, 276.529977794227, -4.48187647166511,
+                                      0.376865671641791, -8.29368531337046, 0.149518874907476, -74.5299777942265,
+                                      "experimental", "f", 0.396743153219837, 536, 536, 1, 0.396743153219837,
+                                      " % within column", "Count", "Expected count", "Pearson residuals",
+                                      " % within row", "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      1, 654, 654, 0.484085862324204, 0.484085862324204, 1, 697, 697,
+                                      0.515914137675796, 0.515914137675796, "Total", "f", 1, 1351,
+                                      1351, 1, 1, " % within column", "Count", "Expected count", " % within row",
+                                      " % of total", 0.338688085676037, 253, 271.013344453711, -1.09420580859867,
+                                      0.581609195402299, -2.23255569694362, 0.211009174311927, -18.0133444537115,
+                                      0.402654867256637, 182, 163.986655546289, 1.40666311404823,
+                                      0.418390804597701, 2.23255569694361, 0.151793160967473, 18.0133444537114,
+                                      "control", "m", 0.362802335279399, 435, 435, 1, 0.3628023352794,
+                                      " % within column", "Count", "Expected count", "Pearson residuals",
+                                      " % within row", "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      0.661311914323963, 494, 475.986655546289, 0.82565186283563,
+                                      0.646596858638743, 2.23255569694362, 0.412010008340284, 18.0133444537115,
+                                      0.597345132743363, 270, 288.013344453711, -1.06142191109686,
+                                      0.353403141361257, -2.23255569694362, 0.225187656380317, -18.0133444537115,
+                                      "experimental", "m", 0.6371976647206, 764, 764, 1, 0.6371976647206,
+                                      " % within column", "Count", "Expected count", "Pearson residuals",
+                                      " % within row", "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      1, 747, 747, 0.62301918265221, 0.62301918265221, 1, 452, 452,
+                                      0.37698081734779, 0.37698081734779, "Total", "m", 1, 1199, 1199,
+                                      1, 1, " % within column", "Count", "Expected count", " % within row",
+                                      " % of total", 0.408993576017131, 573, 686.764705882353, -4.34113772648338,
+                                      0.4584, -9.05757740964558, 0.224705882352941, -113.764705882353,
+                                      0.589208006962576, 677, 563.235294117647, 4.79360911772348,
+                                      0.5416, 9.05757740964558, 0.265490196078431, 113.764705882353,
+                                      "control", "Total", 0.490196078431373, 1250, 1250, 1, 0.490196078431373,
+                                      " % within column", "Count", "Expected count", "Pearson residuals",
+                                      " % within row", "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      0.591006423982869, 828, 714.235294117647, 4.25683576510241,
+                                      0.636923076923077, 9.05757740964558, 0.324705882352941, 113.764705882353,
+                                      0.410791993037424, 472, 585.764705882353, -4.70052046765545,
+                                      0.363076923076923, -9.05757740964558, 0.185098039215686, -113.764705882353,
+                                      "experimental", "Total", 0.509803921568627, 1300, 1300, 1, 0.509803921568627,
+                                      " % within column", "Count", "Expected count", "Pearson residuals",
+                                      " % within row", "Standardized residuals", " % of total", "Unstandardized residuals",
+                                      1, 1401, 1401, 0.549411764705882, 0.549411764705882, 1, 1149,
+                                      1149, 0.450588235294118, 0.450588235294118, "Total", "Total",
+                                      1, 2550, 2550, 1, 1, " % within column", "Count", "Expected count",
+                                      " % within row", " % of total"))
 })
 
 test_that("Multiple row and column variables give multiple main tables", {
@@ -88,11 +105,11 @@ test_that("Chi-Squared test table results match", {
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabChisq"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("N", "", "", "", 2550,
-         "<unicode>", 82.0397085317219, 1, 1.33379878452991e-19, 63462127883801120,
-         "<unicode><unicode> continuity correction", 81.3201582621313, 1, 1.91958529099645e-19, 44468347240355080,
-         "Likelihood ratio", 82.4643894680383, 1, 0, "<unicode><unicode>")
-  )
+    list("", 44468347240355080, 63462127883801120, "<unicode>", "", 1,
+         1, 1, "", 1.91958529099645e-19, 1.33379878452991e-19, 0, "N",
+         "<unicode><unicode> continuity correction", "<unicode><unicode>",
+         "Likelihood ratio", 2550, 81.3201582621313, 82.0397085317219,
+         82.4643894680383))
 })
 
 test_that("Nominal table results match", {

@@ -23,25 +23,28 @@ import JASP				1.0
 
 Form
 {
-    
+
 	plotWidth: 320
 	plotHeight: 240
-	
+
 	CheckBox { visible: false ; name: "countsExpected"; checked: false }
-	
+	CheckBox { visible: false ; name: "residualsUnstandardized"; checked: false }
+	CheckBox { visible: false ; name: "residualsPearson"; checked: false }
+	CheckBox { visible: false ; name: "residualsStandardized"; checked: false }
+
 	VariablesForm
 	{
-		AvailableVariablesList { name: "allVariablesList" }		
+		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "rows";		title: qsTr("Rows");	suggestedColumns: ["ordinal", "nominal"] }
 		AssignedVariablesList { name: "columns";	title: qsTr("Columns");	suggestedColumns: ["ordinal", "nominal"] }
         AssignedVariablesList { name: "counts";		title: qsTr("Counts");	suggestedColumns: ["scale", "ordinal"]; singleVariable: true }
 		AssignedVariablesList { name: "layers";		title: qsTr("Layers");	suggestedColumns: ["ordinal", "nominal"]; listViewType: JASP.Layers; preferredHeight: 120 }
 	}
-	
+
 	Section
 	{
 		title: qsTr("Statistics")
-		
+
 		RadioButtonGroup
 		{
 			name: "samplingModel"
@@ -97,11 +100,11 @@ Form
 			DoubleField { name: "priorConcentration"; label: qsTr("Prior concentration"); defaultValue: 1; min: 1; decimals: 1 }
 		}
 	}
-	
+
 	Section
 	{
 		title: qsTr("Cells")
-	
+
 		Group
 		{
 			title: qsTr("Percentages")
@@ -110,11 +113,11 @@ Form
 			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
 		}
 	}
-	
+
 	Section
 	{
 		title: qsTr("Options")
-		
+
 		RadioButtonGroup
 		{
 			name: "rowOrder"
