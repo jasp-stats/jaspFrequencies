@@ -173,10 +173,6 @@ msgid "Nominal By Interval"
 msgstr "Nominal por Intervalo"
 
 msgctxt "ContingencyTables|"
-msgid "Adjusted standardized"
-msgstr "Típicos axustados"
-
-msgctxt "ContingencyTables|"
 msgid "Expected"
 msgstr "Agardado"
 
@@ -875,3 +871,7 @@ msgstr "Nivel #"
 msgctxt "BinomialTestBayesian|"
 msgid "Direction"
 msgstr "Dirección"
+
+msgctxt "ContingencyTables|"
+msgid "Pearson"
+msgstr ""

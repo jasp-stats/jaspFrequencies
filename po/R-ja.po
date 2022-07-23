@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-04-23 03:35\n"
+"POT-Creation-Date: 2022-07-23 03:47\n"
 "PO-Revision-Date: 2022-05-31 11:19+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -215,6 +215,27 @@ msgstr "値"
 msgid "df"
 msgstr "df"
 
+msgid "Expected count"
+msgstr "期待度数"
+
+msgid "%% within row"
+msgstr "行内の %%"
+
+msgid "%% within column"
+msgstr "列内の %%"
+
+msgid "%% of total"
+msgstr "全体の%%"
+
+msgid "Unstandardized residuals"
+msgstr ""
+
+msgid "Pearson residuals"
+msgstr ""
+
+msgid "Standardized residuals"
+msgstr ""
+
 msgid "Contingency coefficient"
 msgstr "コンティンジェンシー係数"
 
@@ -252,18 +273,6 @@ msgid ""
 msgstr ""
 "すべての検定について、対立仮説はグループ <em>%1$s </em> %2$s <em>%3$s</em>を"
 "指定します。"
-
-msgid "Expected count"
-msgstr "期待度数"
-
-msgid "%% within row"
-msgstr "行内の %%"
-
-msgid "%% within column"
-msgstr "列内の %%"
-
-msgid "%% of total"
-msgstr "全体の%%"
 
 msgid "N"
 msgstr "N"

@@ -456,10 +456,6 @@ msgid "Standardized"
 msgstr ""
 
 msgctxt "ContingencyTables|"
-msgid "Adjusted standardized"
-msgstr ""
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr ""
 
@@ -873,4 +869,8 @@ msgstr ""
 
 msgctxt "BinomialTestBayesian|"
 msgid "Direction"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Pearson"
 msgstr ""

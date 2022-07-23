@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-04-23 03:35\n"
+"POT-Creation-Date: 2022-07-23 03:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -206,6 +206,27 @@ msgstr ""
 msgid "df"
 msgstr ""
 
+msgid "Expected count"
+msgstr ""
+
+msgid "%% within row"
+msgstr ""
+
+msgid "%% within column"
+msgstr ""
+
+msgid "%% of total"
+msgstr ""
+
+msgid "Unstandardized residuals"
+msgstr ""
+
+msgid "Pearson residuals"
+msgstr ""
+
+msgid "Standardized residuals"
+msgstr ""
+
 msgid "Contingency coefficient"
 msgstr ""
 
@@ -240,18 +261,6 @@ msgstr ""
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-msgstr ""
-
-msgid "Expected count"
-msgstr ""
-
-msgid "%% within row"
-msgstr ""
-
-msgid "%% within column"
-msgstr ""
-
-msgid "%% of total"
 msgstr ""
 
 msgid "N"

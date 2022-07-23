@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2022-04-23 03:35\n"
+"POT-Creation-Date: 2022-07-23 03:47\n"
 "PO-Revision-Date: 2022-04-24 21:14+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -227,6 +227,27 @@ msgstr "Valor"
 msgid "df"
 msgstr "gl"
 
+msgid "Expected count"
+msgstr "Recuento esperado"
+
+msgid "%% within row"
+msgstr "%% dentro de la fila"
+
+msgid "%% within column"
+msgstr "%% dentro de la columna"
+
+msgid "%% of total"
+msgstr "%% del total"
+
+msgid "Unstandardized residuals"
+msgstr ""
+
+msgid "Pearson residuals"
+msgstr ""
+
+msgid "Standardized residuals"
+msgstr ""
+
 msgid "Contingency coefficient"
 msgstr "Coeficiente de contingencia"
 
@@ -268,18 +289,6 @@ msgid ""
 msgstr ""
 "Para todas las pruebas, la hipótesis alternativa especifica que el grupo <em>"
 "%1$s</em>%2$s<em>%3$s</em>."
-
-msgid "Expected count"
-msgstr "Recuento esperado"
-
-msgid "%% within row"
-msgstr "%% dentro de la fila"
-
-msgid "%% within column"
-msgstr "%% dentro de la columna"
-
-msgid "%% of total"
-msgstr "%% del total"
 
 msgid "N"
 msgstr "N"

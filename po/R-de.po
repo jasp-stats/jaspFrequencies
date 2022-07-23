@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-04-23 03:35\n"
+"POT-Creation-Date: 2022-07-23 03:47\n"
 "PO-Revision-Date: 2022-04-24 21:14+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
@@ -225,6 +225,27 @@ msgstr "Wert"
 msgid "df"
 msgstr "df"
 
+msgid "Expected count"
+msgstr "Erwartete Anzahl"
+
+msgid "%% within row"
+msgstr "%% in Zeile"
+
+msgid "%% within column"
+msgstr "%% in Spalte"
+
+msgid "%% of total"
+msgstr "%% von Gesamt"
+
+msgid "Unstandardized residuals"
+msgstr ""
+
+msgid "Pearson residuals"
+msgstr ""
+
+msgid "Standardized residuals"
+msgstr ""
+
 msgid "Contingency coefficient"
 msgstr "Kontingenzkoeffizient"
 
@@ -264,18 +285,6 @@ msgid ""
 msgstr ""
 "Für alle Tests gibt die Alternativhypothese an, dass Gruppe <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-
-msgid "Expected count"
-msgstr "Erwartete Anzahl"
-
-msgid "%% within row"
-msgstr "%% in Zeile"
-
-msgid "%% within column"
-msgstr "%% in Spalte"
-
-msgid "%% of total"
-msgstr "%% von Gesamt"
 
 msgid "N"
 msgstr "N"

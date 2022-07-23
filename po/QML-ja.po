@@ -448,10 +448,6 @@ msgid "Standardized"
 msgstr "標準化"
 
 msgctxt "ContingencyTables|"
-msgid "Adjusted standardized"
-msgstr "調整済み標準化"
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr "オプション"
 
@@ -873,4 +869,8 @@ msgstr "レベル #"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Direction"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Pearson"
 msgstr ""

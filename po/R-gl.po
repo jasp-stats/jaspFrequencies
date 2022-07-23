@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-04-23 03:35\n"
+"POT-Creation-Date: 2022-07-23 03:47\n"
 "PO-Revision-Date: 2022-06-15 08:32+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -233,6 +233,27 @@ msgstr "Valor"
 msgid "df"
 msgstr "gl"
 
+msgid "Expected count"
+msgstr "Reconto agardado"
+
+msgid "%% within row"
+msgstr "%% dentro da fila"
+
+msgid "%% within column"
+msgstr "%% dentro da columna"
+
+msgid "%% of total"
+msgstr "%% do total"
+
+msgid "Unstandardized residuals"
+msgstr ""
+
+msgid "Pearson residuals"
+msgstr ""
+
+msgid "Standardized residuals"
+msgstr ""
+
 msgid "Contingency coefficient"
 msgstr "Coeficiente de continxencia"
 
@@ -273,18 +294,6 @@ msgid ""
 msgstr ""
 "Para tódalas probas, a hipótese alternativa indica que o grupo <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-
-msgid "Expected count"
-msgstr "Reconto agardado"
-
-msgid "%% within row"
-msgstr "%% dentro da fila"
-
-msgid "%% within column"
-msgstr "%% dentro da columna"
-
-msgid "%% of total"
-msgstr "%% do total"
 
 msgid "N"
 msgstr "N"
