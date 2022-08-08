@@ -50,12 +50,12 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
   # perform a check on the hypothesis
 
   custom <- function() {
-    if (options$testValue == 1 && options$hypothesis == "greaterThanTestValue")
+    if (options$testValue == 1 && options$alternative == "greater")
       return(gettext("Cannot test the hypothesis that the test value is greater than 1."))
-    else if (options$testValue == 0 && options$hypothesis == "lessThanTestValue")
+    else if (options$testValue == 0 && options$alternative == "less")
       return(gettext("Cannot test the hypothesis that the test value is less than 0."))
   }
-  
+
   # Error Check 1: Number of levels of the variables and the hypothesis
   .hasErrors(
     dataset              = dataset,
@@ -75,7 +75,7 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
 
   # This will be the object that we fill with results
   results <- list()
-  hyp <- .binomTransformHypothesis(options$hypothesis)
+  hyp <- .binomTransformHypothesis(options$alternative)
 
   for (variable in options$variables) {
 
@@ -84,14 +84,14 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
     data <- na.omit(dataset[[.v(variable)]])
 
     for (level in levels(data)) {
-      
+
       counts <- sum(data == level)
       tableResults <- stats::binom.test(
         x           = counts,
         n           = length(data),
         p           = options$testValue,
         alternative = hyp,
-        conf.level  = options$confidenceIntervalInterval
+        conf.level  = options$ciLevel
       )
 
       # sometimes p.value becomes true or false, convert this to 1 or 0
@@ -105,19 +105,19 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
         total         = length(data),
         proportion    = counts / length(data),
         p             = p,
-        VovkSellkeMPR = VovkSellkeMPR(p),
+        vovkSellke    = VovkSellkeMPR(p),
         lowerCI       = tableResults$conf.int[1],
         upperCI       = tableResults$conf.int[2]
       )
-      
+
     }
-    
+
   }
 
   # Save results to state
   jaspResults[["binomTableResults"]] <- createJaspState(results)
   jaspResults[["binomTableResults"]]$dependOn(
-    c("variables", "testValue", "hypothesis", "confidenceIntervalInterval")
+    c("variables", "testValue", "alternative", "ciLevel")
   )
 
   # Return results object
@@ -129,7 +129,7 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
   data <- na.omit(dataset[[.v(variable)]])
 
   for (level in levels(data)) {
-    
+
     counts <- sum(data == level)
     plotResults <- stats::binom.test(
       x           = counts,
@@ -146,19 +146,18 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
       lowerCI    = plotResults$conf.int[1],
       upperCI    = plotResults$conf.int[2]
     )
-    
+
   }
 
   return(results)
 }
 
-.binomTransformHypothesis <- function(hypothesis) {
-  if (hypothesis == "greaterThanTestValue")
-    return("greater")
-  else if (hypothesis == "lessThanTestValue")
-    return("less")
-  else
+.binomTransformHypothesis <- function(alternative) {
+  if (alternative == "twoSided") {
     return("two.sided")
+  } else {
+    return(alternative)
+  }
 }
 
 # Output functions ----
@@ -168,8 +167,8 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   binomialTable <- createJaspTable(title = gettext("Binomial Test"))
-  binomialTable$dependOn(c("variables", "testValue", "hypothesis", "confidenceInterval",
-                                  "confidenceIntervalInterval", "VovkSellkeMPR"))
+  binomialTable$dependOn(c("variables", "testValue", "alternative", "ci",
+                                  "ciLevel", "vovkSellke"))
 
   binomialTable$showSpecifiedColumnsOnly <- TRUE
 
@@ -181,37 +180,37 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
   binomialTable$addColumnInfo(name = "proportion", title = gettext("Proportion"), type = "number")
   binomialTable$addColumnInfo(name = "p",          title = gettext("p"),          type = "pvalue")
 
-  if (options$VovkSellkeMPR)
-    binomialTable$addColumnInfo(name = "VovkSellkeMPR", title = gettext("VS-MPR"), type = "number")
+  if (options$vovkSellke)
+    binomialTable$addColumnInfo(name = "vovkSellke", title = gettext("VS-MPR"), type = "number")
 
-  if (options$confidenceInterval) {
+  if (options$ci) {
     binomialTable$addColumnInfo(name = "lowerCI", title = gettext("Lower"), type = "number",
-      overtitle = gettextf("%s%% CI for Proportion", 100 * options$confidenceIntervalInterval))
+      overtitle = gettextf("%s%% CI for Proportion", 100 * options$ciLevel))
     binomialTable$addColumnInfo(name = "upperCI", title = gettext("Upper"), type = "number",
-      overtitle = gettextf("%s%% CI for Proportion", 100 * options$confidenceIntervalInterval))
+      overtitle = gettextf("%s%% CI for Proportion", 100 * options$ciLevel))
   }
-  
+
   # Add footnote: VovkSellkeMPR
-  if (options$VovkSellkeMPR)
-    binomialTable$addFootnote(message = .messages("footnote", "VovkSellkeMPR"), symbol = "\u002A", colNames="VovkSellkeMPR")
-    
+  if (options$vovkSellke)
+    binomialTable$addFootnote(message = .messages("footnote", "VovkSellkeMPR"), symbol = "\u002A", colNames="vovkSellke")
+
   # Add footnote: Alternative hypothesis
-  if (options$hypothesis == "lessThanTestValue")
+  if (options$alternative == "less")
     note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValueUnparsed)
-  else if (options$hypothesis == "greaterThanTestValue")
+  else if (options$alternative == "greater")
     note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValueUnparsed)
   else
     note <- gettextf("Proportions tested against value: %s.", options$testValueUnparsed)
-  
+
   binomialTable$addFootnote(message = note)
-  
+
   jaspResults[["binomialTable"]] <- binomialTable
 
   if (!ready)
     return()
-  
+
   binomialTable$setExpectedSize(sum(unlist(lapply(dataset, nlevels))))
-  
+
   # Compute the results and fill the table
   binomResults <- .binomComputeTableResults(jaspResults, dataset, options)
   .binomFillTableMain(binomialTable, binomResults)
@@ -219,7 +218,7 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
 
 .binomFillTableMain <- function(binomialTable, binomResults) {
   for (variable in names(binomResults)) {
-    
+
     isNewGroup <- TRUE
     for (level in names(binomResults[[variable]])) {
       row <- binomResults[[variable]][[level]]
@@ -227,21 +226,21 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
       isNewGroup <- FALSE
       binomialTable$addRows(row)
     }
-    
+
   }
 }
 
-.binomPlotsDescriptive <- function(jaspResults, dataset, options, ready, ciName = "descriptivesPlotsConfidenceInterval") {
-  if (!options$descriptivesPlots)
+.binomPlotsDescriptive <- function(jaspResults, dataset, options, ready, ciName = "descriptivePlotCiLevel") {
+  if (!options$descriptivePlot)
     return()
 
   if (is.null(jaspResults[["containerPlots"]])) {
     jaspResults[["containerPlots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlots", "testValue", ciName))
+    jaspResults[["containerPlots"]]$dependOn(c("descriptivePlot", "testValue", ciName))
   }
-    
+
   plotContainer <- jaspResults[["containerPlots"]]
-  
+
   if (!ready) {
     # show a placeholder plot if someone says he wants a plot but does not enter any variables
     plotContainer[["placeholder"]] <- createJaspPlot(width = 320, height = 320, dependencies = "variables")
@@ -259,7 +258,7 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
     plotContainer[[variable]]$dependOn(optionContainsValue = list(variables=variable))
 
     plotResults <- .binomComputePlotResults(variable, dataset, options[["testValue"]], options[[ciName]])
-    
+
     for (level in names(plotResults)) {
       plot <- createJaspPlot(title = level, width = 160, height = 320)
       plotContainer[[variable]][[level]] <- plot

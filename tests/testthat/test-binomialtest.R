@@ -4,9 +4,9 @@ test_that("Main table results match", {
   options <- jaspTools::analysisOptions("BinomialTest")
   options$variables <- "contBinom"
   options$testValue <- 0.6
-  options$hypothesis <- "greaterThanTestValue"
-  options$confidenceInterval <- TRUE
-  options$VovkSellkeMPR <- TRUE
+  options$alternative <- "greater"
+  options$ci <- TRUE
+  options$vovkSellke <- TRUE
   results <- jaspTools::runAnalysis("BinomialTest", "test.csv", options)
   table <- results[["results"]][["binomialTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -19,8 +19,8 @@ test_that("Descriptives plots match", {
   skip("This test need to be verified")
   options <- jaspTools::analysisOptions("BinomialTest")
   options$variables <- "contBinom"
-  options$descriptivesPlots <- TRUE
-  options$descriptivesPlotsConfidenceInterval <- 0.90
+  options$descriptivePlot <- TRUE
+  options$descriptivePlotCiLevel <- 0.90
   results <- jaspTools::runAnalysis("BinomialTest", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

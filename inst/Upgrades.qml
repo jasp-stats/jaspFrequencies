@@ -28,7 +28,7 @@ Upgrades
 		ChangeRename{	from: "confidenceInterval";						to: "ci"						}
 		ChangeRename{	from: "confidenceIntervalInterval";				to: "ciLevel"					}
 		ChangeRename{	from: "VovkSellkeMPR";							to: "vovkSellke"				}
-		ChangeRename{	from: "descriptivePlots";						to: "descriptivePlot"			}
+		ChangeRename{	from: "descriptivesPlots";						to: "descriptivePlot"			}
 		ChangeRename{	from: "descriptivesPlotsConfidenceInterval";	to: "descriptivePlotCiLevel"	}
 	}
 }
