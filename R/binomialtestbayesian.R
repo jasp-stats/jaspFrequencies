@@ -30,7 +30,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   # Output tables and plots
   .bayesBinomTableMain(       jaspResults, dataset, options, ready)
   .bayesBinomInferentialPlots(jaspResults, dataset, options, ready)
-  .binomPlotsDescriptive(     jaspResults, dataset, options, ready, ciName = "descriptivesPlotsCredibleInterval")
+  .binomPlotsDescriptive(     jaspResults, dataset, options, ready, ciName = "descriptivePlotCiLevel")
 }
 
 # Results function ----
@@ -40,7 +40,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
   # This will be the object that we fill with results
   results <- list()
-  hyp <- .binomTransformHypothesis(options$hypothesis)
+  hyp <- .binomTransformHypothesis(options$alternative)
 
   for (variable in options$variables) {
 
@@ -51,7 +51,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
     for (level in levels(data)) {
 
       counts <- sum(data == level)
-      BF10  <- .bayesBinomialTest(counts, length(data), theta0=options$testValue, hypothesis = hyp, a = options$priorA, b = options$priorB)
+      BF10  <- .bayesBinomialTest(counts, length(data), theta0=options$testValue, alternative = hyp, a = options$priorA, b = options$priorB)
 
       # Add results for each level of each variable to results object
       results[[variable]][[level]] <- list(
@@ -71,7 +71,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   # Save results to state
   jaspResults[["binomResults"]] <- createJaspState(results)
   jaspResults[["binomResults"]]$dependOn(
-    c("variables", "testValue", "hypothesis", "priorA", "priorB")
+    c("variables", "testValue", "alternative", "priorA", "priorB")
   )
 
   # Return results object
@@ -84,7 +84,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
     return()
 
   binomTable <- createJaspTable(gettext("Bayesian Binomial Test"))
-  binomTable$dependOn(c("variables", "testValue", "hypothesis", "bayesFactorType", "priorA", "priorB"))
+  binomTable$dependOn(c("variables", "testValue", "alternative", "bayesFactorType", "priorA", "priorB"))
   binomTable$position <- 1
   binomTable$showSpecifiedColumnsOnly <- TRUE
 
@@ -95,11 +95,11 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   ))
 
   bfTitleSpec <- list(null="\u2080")
-  if (options$hypothesis == "notEqualToTestValue")
+  if (options$alternative == "twoSided")
     bfTitleSpec[["other"]] <- "\u2081"
-  else if (options$hypothesis == "greaterThanTestValue")
+  else if (options$alternative == "greater")
     bfTitleSpec[["other"]] <- "\u208A"
-  else if (options$hypothesis == "lessThanTestValue")
+  else if (options$alternative == "less")
     bfTitleSpec[["other"]] <- "\u208B"
 
   bfType <- options$bayesFactorType
@@ -118,9 +118,9 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   binomTable$addColumnInfo(name = "proportion", title = gettext("Proportion"), type = "number")
   binomTable$addColumnInfo(name = bfType,       title = bfTitle,               type = "number")
 
-  if (options$hypothesis == "lessThanTestValue")
+  if (options$alternative == "less")
     note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValueUnparsed)
-  else if (options$hypothesis == "greaterThanTestValue")
+  else if (options$alternative == "greater")
     note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValueUnparsed)
   else
     note <- gettextf("Proportions tested against value: %s.", options$testValueUnparsed)
@@ -168,13 +168,13 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 }
 
-.bayesBinomialTest.oneSided <- function(counts, n, theta0, a, b, hypothesis) {
+.bayesBinomialTest.oneSided <- function(counts, n, theta0, a, b, alternative) {
 
-  if (hypothesis == "less") {
+  if (alternative == "less") {
 
     lowerTail <- TRUE
 
-  } else if (hypothesis == "greater") {
+  } else if (alternative == "greater") {
 
     lowerTail <- FALSE
 
@@ -206,9 +206,9 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 }
 
-.bayesBinomialTest <- function(counts, n, theta0, hypothesis, a, b) {
+.bayesBinomialTest <- function(counts, n, theta0, alternative, a, b) {
 
-  if (hypothesis == "two.sided") {
+  if (alternative == "two.sided") {
 
     BF10 <- try(.bayesBinomialTest.twoSided(counts, n, theta0, a, b), silent = TRUE)
 
@@ -220,7 +220,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
     #
     #} else {
 
-    BF10 <- try(.bayesBinomialTest.oneSided(counts, n, theta0, a, b, hypothesis), silent = TRUE)
+    BF10 <- try(.bayesBinomialTest.oneSided(counts, n, theta0, a, b, alternative), silent = TRUE)
 
     #}
   }
@@ -232,10 +232,10 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 }
 
-.bayesBinomGetSubscript <- function(hypothesis) {
-  if (hypothesis == "notEqualToTestValue")
+.bayesBinomGetSubscript <- function(alternative) {
+  if (alternative == "twoSided")
     return("BF[1][0]")
-  else if (hypothesis == "greaterThanTestValue")
+  else if (alternative == "greater")
     return("BF['+'][0]")
   else
     return("BF['-'][0]")
@@ -243,12 +243,12 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 #plots ----
 .bayesBinomInferentialPlots <- function(jaspResults, dataset, options, ready) {
-  if (!options$plotPriorAndPosterior && !options$plotSequentialAnalysis)
+  if (!options$priorAndPosteriorPlot && !options$sequentialAnalysisPlot)
     return()
 
   if (is.null(jaspResults[["inferentialPlots"]])) {
     inferentialPlots <- createJaspContainer(gettext("Inferential Plots"))
-    inferentialPlots$dependOn(c("testValue", "priorA", "priorB", "hypothesis"))
+    inferentialPlots$dependOn(c("testValue", "priorA", "priorB", "alternative"))
     inferentialPlots$position <- 2
     jaspResults[["inferentialPlots"]] <- inferentialPlots
   } else {
@@ -261,7 +261,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
     return()
   }
 
-  hyp <- .binomTransformHypothesis(options$hypothesis)
+  hyp <- .binomTransformHypothesis(options$alternative)
 
   for (var in options$variables) {
 
@@ -281,7 +281,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
       }
 
       counts <- sum(data == level)
-      BF10   <- .bayesBinomialTest(counts, length(data), options$testValue, hypothesis = hyp, a = options$priorA, b = options$priorB)
+      BF10   <- .bayesBinomialTest(counts, length(data), options$testValue, alternative = hyp, a = options$priorA, b = options$priorB)
 
       plotName <- paste0(var, level, "priorposterior")
       .bayesBinomPriorPosteriorPlot(levelPlotContainer, plotName, options, BF10, counts, length(data), hyp)
@@ -294,23 +294,23 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .bayesBinomPriorPosteriorPlot <- function(container, plotName, options, BF10, counts, n, hyp) {
-  if (!options$plotPriorAndPosterior || !is.null(container[[plotName]]))
+  if (!options$priorAndPosteriorPlot || !is.null(container[[plotName]]))
     return()
 
   plot <- createJaspPlot(title = gettext("Prior and Posterior"), width = 530, height = 400, aspectRatio = 0.7)
-  plot$dependOn(c("plotPriorAndPosterior", "plotPriorAndPosteriorAdditionalInfo"))
+  plot$dependOn(c("priorAndPosteriorPlot", "priorAndPosteriorPlotAdditionalInfo"))
 
   container[[plotName]] <- plot
 
-  bfSubscripts <- .bayesBinomGetSubscript(options$hypothesis)
-  quantiles <- .credibleIntervalPlusMedian(credibleIntervalInterval = .95, options$priorA, options$priorB, counts, n, hypothesis=hyp, theta0 = options$testValue)
+  bfSubscripts <- .bayesBinomGetSubscript(options$alternative)
+  quantiles <- .credibleIntervalPlusMedian(credibleIntervalInterval = .95, options$priorA, options$priorB, counts, n, alternative=hyp, theta0 = options$testValue)
   dfLinesPP <- .dfLinesPP(a=options$priorA, b=options$priorB, hyp = hyp, theta0 = options$testValue, counts = counts, n = n)
   dfPointsPP <- .dfPointsPP(a=options$priorA, b=options$priorB, hyp = hyp, theta0 = options$testValue, counts = counts, n = n)
   xName <- bquote(paste(.(gettext("Population proportion")), ~theta))
 
   hypForPlots <- .binomHypothesisForPlots(hyp)
 
-  if (!options$plotPriorAndPosteriorAdditionalInfo)
+  if (!options$priorAndPosteriorPlotAdditionalInfo)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName)
   else
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName, BF = BF10, bfType = "BF10",
@@ -320,11 +320,11 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .bayesBinomSequentialPlot <- function(container, plotName, options, BF10, counts, n, hyp, var, data, level) {
-  if (!options$plotSequentialAnalysis || !is.null(container[[plotName]]))
+  if (!options$sequentialAnalysisPlot || !is.null(container[[plotName]]))
     return()
 
   plot <- createJaspPlot(title = gettext("Sequential Analysis"), width = 530, height = 400, aspectRatio = 0.7)
-  plot$dependOn(c("plotSequentialAnalysis", "bayesFactorType"))
+  plot$dependOn(c("sequentialAnalysisPlot", "bayesFactorType"))
 
   container[[plotName]] <- plot
 
@@ -333,7 +333,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   p <- try({
     bfTypeIgnoreLog <- if(options[["bayesFactorType"]] == "BF01") "BF01"  else "BF10" # see https://github.com/jasp-stats/INTERNAL-jasp/issues/1101
     bf <- if(bfTypeIgnoreLog == "BF01") 1 / BF10  else BF10
-    bfSubscripts <- .bayesBinomGetSubscript(options$hypothesis)
+    bfSubscripts <- .bayesBinomGetSubscript(options$alternative)
     dfLinesSR   <- .dfLinesSR(d = data, var = var, split = level, a = options$priorA, b = options$priorB, hyp = hyp, theta0 = options$testValue, bfType = bfTypeIgnoreLog)
     jaspGraphs::PlotRobustnessSequential(dfLines = dfLinesSR, xName = "n", BF = bf, bfType = bfTypeIgnoreLog, hypothesis = hypForPlots)
   })
@@ -427,22 +427,22 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 #CRI and Median ----
-.credibleIntervalPlusMedian <- function(credibleIntervalInterval = .95, a = 1, b = 1, counts = 10, n = 20, hypothesis = "two.sided", theta0 = .5) {
+.credibleIntervalPlusMedian <- function(credibleIntervalInterval = .95, a = 1, b = 1, counts = 10, n = 20, alternative = "two.sided", theta0 = .5) {
 
   lower <- (1 - credibleIntervalInterval) / 2
   upper <- 1 - lower
 
-  if (hypothesis == "two.sided") {
+  if (alternative == "two.sided") {
 
     quantiles <- qbeta(c(lower, .5, upper), a + counts , b + n - counts)
 
-  } else if (hypothesis == "greater") {
+  } else if (alternative == "greater") {
 
     rightArea <- pbeta(theta0, a + counts , b + n - counts, lower.tail = FALSE)
     leftArea  <- 1 - rightArea
     quantiles <- qbeta(leftArea + rightArea * c(lower, .5, upper), a + counts , b + n - counts)
 
-  } else if (hypothesis == "less") {
+  } else if (alternative == "less") {
 
     leftArea  <- pbeta(theta0, a + counts , b + n - counts)
     quantiles <- qbeta(leftArea * c(lower, .5, upper), a + counts , b + n - counts)
