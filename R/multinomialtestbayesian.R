@@ -296,7 +296,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # set function behaviour, if analysis crashes
   errorReturn <- rep(ifErrorReturn, 2)
-  div         <- ifelse(scale == 'descCounts', sum(counts), 1)
+  div         <- ifelse(scale == 'counts', sum(counts), 1)
   N           <- sum(counts)
 
   ciDf   <- data.frame(lowerCI = NA, upperCI = NA)

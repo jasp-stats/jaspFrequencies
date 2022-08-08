@@ -37,10 +37,10 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   fact <- asnum <- NULL
   if (options$factor != "") {
     fact <- options$factor
-    if (options$counts != "") {
-      asnum <- options$counts
-      if (options$exProbVar != "")
-        asnum <- c(asnum, options$exProbVar)
+    if (options$count != "") {
+      asnum <- options$count
+      if (options$expectedCount != "")
+        asnum <- c(asnum, options$expectedCount)
     }
   }
 
@@ -53,21 +53,21 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 
   # Reorder the rows of the factor and the counts (and expected probabilities) if the user changes the factor level order in JASP.
   # This ensures the ordering in tables and plots also changes appropriately.
-  if (options$factor != "" && options$counts != "") {
+  if (options$factor != "" && options$count != "") {
     factLevelOrder        <- as.character(dataset[[.v(options$factor)]])
 
-    # the following condition holds when `counts` are specified but the data set is not in aggregated form
+    # the following condition holds when `count` are specified but the data set is not in aggregated form
     # the error is subsequently caught in  .multinomCheckErrors
     # we need to escape this function early because the operations under this check assume that the data set is already in aggregated form
     if(length(unique(factLevelOrder)) != length(factLevelOrder)) return(dataset)
 
-    levelOrderUserWants   <- options$tableWidget[[1]]$levels
+    levelOrderUserWants   <- options$testValuesCustom[[1]]$levels
     whatUserWantsToWhatIs <- match(levelOrderUserWants, factLevelOrder)
 
     if (!identical(sort(whatUserWantsToWhatIs), whatUserWantsToWhatIs))
       dataset[seq_along(factLevelOrder), ] <- dataset[whatUserWantsToWhatIs, ]
 
-    # For syntax mode the analysis will be called from RStudio and the factor levels may not match the tableWidget.
+    # For syntax mode the analysis will be called from RStudio and the factor levels may not match the testValuesCustom.
     factValues <- as.character(dataset[[.v(options$factor)]])
     facLevels  <- levels(dataset[[.v(options$factor)]])
     if (length(facLevels) == length(factValues) && !identical(factValues, facLevels))
@@ -83,26 +83,26 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 
   customChecks <- list(
     checkExpecAndObs = function() {
-      if (options$exProbVar != "" && options$counts == "")
+      if (options$expectedCount != "" && options$count == "")
         return(gettext("Expected counts not supported without observed counts."))
     },
 
     checkExpecNeeded = function() {
-      if (options$exProbVar != "" || options$hypothesis != "multinomialTest")
-        if (options$exProbVar == "" && length(options$tableWidget) == 0)
+      if (options$expectedCount != "" || options$testValues != "equal")
+        if (options$expectedCount == "" && length(options$testValuesCustom) == 0)
           return(gettext("No expected counts entered."))
     },
 
     checkCounts = function() {
-      if (options$counts != "") {
+      if (options$count != "") {
         dataset <- na.omit(dataset)
         nlevels <- nlevels(as.factor(dataset[[.v(options$factor)]]))
-        counts  <- dataset[[.v(options$counts)]]
+        counts  <- dataset[[.v(options$count)]]
 
         if (nlevels != length(counts))
           return(gettext("Invalid counts: variable does not match the number of levels of the factor. When counts are specified, each row of the data set must represent a unique level of the factor."))
 
-        if (options$exProbVar != "" && nlevels != length(dataset[[.v(options$exProbVar)]]))
+        if (options$expectedCount != "" && nlevels != length(dataset[[.v(options$expectedCount)]]))
           return(gettext("Invalid expected counts: variable does not match the number of levels of the factor."))
 
         # only applies for observed counts, expected counts can be proportions
@@ -117,8 +117,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 
   .hasErrors(dataset,
              type = c("factorLevels", "negativeValues", "infinity"),
-             negativeValues.target = c(options$counts, options$exProbVar),
-             infinity.target = c(options$counts, options$exProbVar),
+             negativeValues.target = c(options$count, options$expectedCount),
+             infinity.target = c(options$count, options$expectedCount),
              factorLevels.target  = options$factor,
              factorLevels.amount  = "< 1",
              custom = customChecks,
@@ -151,11 +151,11 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     factorVariable <- as.factor(factorVariable)
     nlev <- nlevels(factorVariable)
 
-    if (options$counts != "") {
-      counts <- dataset[[.v(options$counts)]]
+    if (options$count != "") {
+      counts <- dataset[[.v(options$count)]]
       # omit count entries for which factor variable is NA
       counts <- counts[!is.na(factorVariable)]
-      c <- dataset[[.v(options$counts)]]
+      c <- dataset[[.v(options$count)]]
       factorVariable <- factor(rep(factorVariable, c),
                                levels = levels(factorVariable))
     }
@@ -171,7 +171,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
       # need to improve this try statement
       csr  <- withCallingHandlers(
                 chisq.test(x = dataTable, p = h, rescale.p = TRUE,
-                           simulate.p.value = options$simulatepval),
+                           simulate.p.value = FALSE),
                 warning = function(w) warn <<- w$message
       )
       csr[["warn"]] <- warn
@@ -180,8 +180,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   }
   # Save results to state
   jaspResults[["stateChisqResults"]] <- createJaspState(chisqResults)
-  jaspResults[["stateChisqResults"]]$dependOn(c("factor", "counts", "hypothesis",
-                                                "exProbVar", "tableWidget", "simulatepval"))
+  jaspResults[["stateChisqResults"]]$dependOn(c("factor", "count", "testValues",
+                                                "expectedCount", "testValuesCustom"))
   return(chisqResults)
 }
 
@@ -211,8 +211,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     colnames(dataframe) <- c("chisquare", "df", "p")
     dataframe <- cbind(case = names(chisqResults), dataframe)
 
-    if (options$VovkSellkeMPR)
-      dataframe <- cbind(dataframe, VovkSellkeMPR = VovkSellkeMPR(dataframe$p))
+    if (options$vovkSellke)
+      dataframe <- cbind(dataframe, vovkSellke = VovkSellkeMPR(dataframe$p))
 
     jaspResults[["chisqTable"]]$setData(dataframe)
 
@@ -239,7 +239,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   footnotes <- list()
 
   observed <- chisqResults[[1]][["observed"]]
-  if (options$countProp == "descCounts")
+  if (options$descriptivesAs == "counts")
     observed <- as.integer(observed)
   else
     observed <- as.numeric(observed)/sum(observed)
@@ -250,7 +250,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     observed = observed,
     stringsAsFactors = FALSE
   )
-  if (options$countProp == "descCounts")
+  if (options$descriptivesAs == "counts")
     for (r in chisqResults)
       tableFrame <- cbind(tableFrame, r[["expected"]])
   else
@@ -265,10 +265,10 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     colnames(tableFrame)[-(1:2)] <- nms
 
   # Add confidenceInterval to the tableFrame
-  if (options$confidenceInterval){
+  if (options$descriptiveTableCi){
     ciDf <- .multComputeCIs(chisqResults[[1]][["observed"]],
-                            options$confidenceIntervalInterval,
-                            scale = options$countProp)
+                            options$descriptiveTableCiLevel,
+                            scale = options$descriptivesAs)
     tableFrame <- cbind(tableFrame, ciDf)
     message <- gettext("Confidence intervals are based on independent binomial distributions.")
     results[["footnotes"]][["CImessage"]] <- message
@@ -298,8 +298,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 
   # Create table
   chisqTable <- createJaspTable(title = "Multinomial Test")
-  chisqTable$dependOn(c("factor", "counts", "exProbVar", "tableWidget",
-                        "VovkSellkeMPR", "hypothesis"))
+  chisqTable$dependOn(c("factor", "count", "expectedCount", "testValuesCustom",
+                        "vovkSellke", "testValues"))
   chisqTable$showSpecifiedColumnsOnly <- TRUE
 
   # Add columns to table
@@ -309,8 +309,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   chisqTable$addColumnInfo(name = "p",         title = gettext("p"),  type = "pvalue")
 
   # include Vovk-Selke p-ratio as columns
-  if (options$VovkSellkeMPR) {
-    chisqTable$addColumnInfo(name = "VovkSellkeMPR", title =  gettextf("VS-MPR%s", "\u002A"), type = "number")
+  if (options$vovkSellke) {
+    chisqTable$addColumnInfo(name = "vovkSellke", title =  gettextf("VS-MPR%s", "\u002A"), type = "number")
     chisqTable$addFootnote(.messages("footnote", "VovkSellkeMPR"), symbol = "\u002A")
   }
 
@@ -332,25 +332,25 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   # Return:
   #   Descriptives table
 
-  if(!options$descriptives || !is.null(jaspResults[["descriptivesTable"]]))
+  if(!options$descriptiveTable || !is.null(jaspResults[["descriptivesTable"]]))
     return()
 
   # Compute/get Results
   chisqResults <- .chisquareTest(jaspResults, dataset, options)
 
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
-  descriptivesTable$dependOn(c("factor", "counts", "exProbVar",  "hypothesis", "countProp", "descriptives",
-                               "confidenceInterval", "tableWidget", "confidenceIntervalInterval"))
+  descriptivesTable$dependOn(c("factor", "count", "expectedCount",  "testValues", "descriptivesAs", "descriptiveTable",
+                               "descriptiveTableCi", "testValuesCustom", "descriptiveTableCiLevel"))
 
   if(options$factor == ""){
     descriptivesTable$addColumnInfo(name = "factor", title = gettext("Factor"), type = "string")
-    if (options$countProp == "descCounts")
+    if (options$descriptivesAs == "counts")
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "integer")
     else
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "number")
   } else {
     descriptivesTable$addColumnInfo(name = "factor", title = options$factor, type = "string")
-    if (options$countProp == "descCounts")
+    if (options$descriptivesAs == "counts")
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "integer")
     else
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "number")
@@ -367,8 +367,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
       }
     }
   }
-  if (options$confidenceInterval){
-    interval <- 100 * options$confidenceIntervalInterval
+  if (options$descriptiveTableCi){
+    interval <- 100 * options$descriptiveTableCiLevel
     title <- gettextf("%s%% Confidence Interval", interval)
     descriptivesTable$addColumnInfo(name = "lowerCI", title = gettext("Lower"),
                                     type = "number", overtitle = title)
@@ -380,7 +380,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     return()
   res <- try(.multinomDescriptivesTableFill(jaspResults, options, chisqResults))
   .multinomialSetError(res, descriptivesTable)
-  if(options$confidenceInterval) {
+  if(options$descriptiveTableCi) {
     message <- gettext("Confidence intervals are based on independent binomial distributions.")
     descriptivesTable$addFootnote(message)
     if (anyNA(unlist(descriptivesTable[["data"]][, c('lowerCI', 'upperCI')]))){
@@ -391,12 +391,12 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 }
 
 .multinomialDescriptivesPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivesPlot || !is.null(jaspResults[["descriptivesPlot"]]))
+  if(!options$descriptivePlot || !is.null(jaspResults[["descriptivesPlot"]]))
     return()
 
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives Plot"), width = 500, aspectRatio = 0.7)
-  descriptivesPlot$dependOn(c("factor", "counts", "descriptivesPlotConfidenceInterval",
-                              "countProp", "descriptivesPlot"))
+  descriptivesPlot$dependOn(c("factor", "count", "descriptivePlotCiLevel",
+                              "descriptivesAs", "descriptivePlot"))
 
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
@@ -415,7 +415,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   f <- names(chisqResults[[1]][["observed"]])
   plotFrame <- data.frame(factor = factor(f, levels = rev(f)))
   # Counts or props
-  if (options$countProp == "descCounts") {
+  if (options$descriptivesAs == "counts") {
     yname <- gettext("Observed counts")
     obs   <- as.integer(chisqResults[[1]][["observed"]])
   } else {
@@ -426,10 +426,10 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   plotFrame <- cbind(plotFrame, obs)
 
   # Calculate confidence interval
-  if (options$descriptivesPlotConfidenceInterval){
+  if (options$descriptivePlotCiLevel){
     ciDf       <- .multComputeCIs(chisqResults[[1]][["observed"]],
-                                  options$descriptivesPlotConfidenceInterval,
-                                  ifErrorReturn = 0, scale = options$countProp)
+                                  options$descriptivePlotCiLevel,
+                                  ifErrorReturn = 0, scale = options$descriptivesAs)
     plotFrame  <- cbind(plotFrame, ciDf)
   }
 
@@ -470,7 +470,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   #   hypotheses
 
   hyps <- list()
-  if (options$exProbVar == "" && options$hypothesis == "multinomialTest") {
+  if (options$expectedCount == "" && options$testValues == "equal") {
     # Expected probabilities are simple now
     hyps[["Multinomial"]] <- rep(1/nlevels, nlevels)
   } else {
@@ -495,26 +495,26 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   # Return:
   #   expected Probabilities
 
-  if (options$exProbVar != "") {
-    # use only exProbVar
+  if (options$expectedCount != "") {
+    # use only expectedCount
     fact   <- dataset[[.v(options$factor)]]
-    eProps <- dataset[.v(options$exProbVar)]
-    colnames(eProps) <- options$exProbVar
+    eProps <- dataset[.v(options$expectedCount)]
+    colnames(eProps) <- options$expectedCount
     rownames(eProps) <- fact
 
     return(na.omit(eProps))
 
-  } else if (length(options$tableWidget) > 0) {
-    eProps <- sapply(options$tableWidget, function(x) {
+  } else if (length(options$testValuesCustom) > 0) {
+    eProps <- sapply(options$testValuesCustom, function(x) {
       vals <- unlist(x$values)
       if (sum(vals) == 0)
         vals <- rep(1, length(vals))
       return(vals)
     })
 
-    colnames(eProps) <- sapply(seq_along(options$tableWidget),
+    colnames(eProps) <- sapply(seq_along(options$testValuesCustom),
                                function(x) paste0("H\u2080 (", letters[x], ")"))
-    rownames(eProps) <- options$tableWidget[[1]]$levels
+    rownames(eProps) <- options$testValuesCustom[[1]]$levels
 
     return(as.data.frame(eProps))
   }

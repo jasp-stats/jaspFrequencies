@@ -2,12 +2,12 @@ context("Multinomial Test")
 
 test_that("Main table results match", {
   options <- jaspTools::analysisOptions("MultinomialTest")
-  options$VovkSellkeMPR <- TRUE
-  options$countProp <- "descProps"
-  options$descriptives <- TRUE
+  options$vovkSellke <- TRUE
+  options$descriptivesAs <- "proportions"
+  options$descriptiveTable <- TRUE
   options$factor <- "facOutlier"
-  options$hypothesis <- "expectedProbs"
-  options$tableWidget <- list(
+  options$testValues <- "custom"
+  options$testValuesCustom <- list(
     list(
       levels = list("f1", "f2", "f3", "totallyridiculoussuperlongfactorme"),
       name = "H1",
@@ -37,7 +37,7 @@ test_that("Main table results match", {
 test_that("Descriptives plot matches", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facFive"
-  options$descriptivesPlot <- TRUE
+  options$descriptivePlot <- TRUE
   results <- jaspTools::runAnalysis("MultinomialTest", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives-1")
@@ -46,8 +46,8 @@ test_that("Descriptives plot matches", {
 test_that("Analysis handles errors - Negative Values", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
-  options$counts <- "contNormal"
-  options$tableWidget <- list(
+  options$count  <- "contNormal"
+  options$testValuesCustom <- list(
     list(
       levels = list("control", "experimental"),
       name = "H1",
@@ -62,8 +62,8 @@ test_that("Analysis handles errors - Negative Values", {
 test_that("Analysis handles errors - wrong levels", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
-  options$counts <- "debSame"
-  options$tableWidget <- list(
+  options$count  <- "debSame"
+  options$testValluesCustom <- list(
     list(
       levels = list("control", "experimental"),
       name = "H1",
@@ -78,8 +78,8 @@ test_that("Analysis handles errors - wrong levels", {
 test_that("Analysis handles errors - Infinities", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
-  options$counts <- "debInf"
-  options$tableWidget <- list(
+  options$count  <- "debInf"
+  options$testValuesCustom <- list(
     list(
       levels = list("control", "experimental"),
       name = "H1",
