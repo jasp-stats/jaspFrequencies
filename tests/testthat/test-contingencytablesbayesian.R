@@ -79,35 +79,35 @@ test_that("Bayesian Contingency Tables Tests table results match - different hyp
 
   samplingModels <- c("poisson", "jointMultinomial", "independentMultinomialRowsFixed",
                       "independentMultinomialColumnsFixed")
-  hypotheses <- c("groupsNotEqual", "groupOneGreater", "groupTwoGreater")
+  alternatives <- c("twoSided", "greater", "less")
 
   refTables <- list(
     poisson = list(
-      groupsNotEqual  = list("BF<unicode><unicode> Poisson", "N", 100, 0.523118843924781),
-      groupOneGreater = list("BF<unicode><unicode> Poisson", "N", 100, 0.224941102887656),
-      groupTwoGreater = list("BF<unicode><unicode> Poisson", "N", 100, 0.818576366973497)),
+      twoSided  = list("BF<unicode><unicode> Poisson", "N", 100, 0.523118843924781),
+      greater   = list("BF<unicode><unicode> Poisson", "N", 100, 0.224941102887656),
+      less      = list("BF<unicode><unicode> Poisson", "N", 100, 0.818576366973497)),
     jointMultinomial = list(
-      groupsNotEqual  = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.440084106793853),
-      groupOneGreater = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.181490685641785),
-      groupTwoGreater = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.683978718779006)),
+      twoSided  = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.440084106793853),
+      greater   = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.181490685641785),
+      less      = list("BF<unicode><unicode> joint multinomial", "N", 100, 0.683978718779006)),
     independentMultinomialRowsFixed = list(
-      groupsNotEqual  = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.35545254779504),
-      groupOneGreater = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.149361160583476),
-      groupTwoGreater = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.560761939401455)),
+      twoSided  = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.35545254779504),
+      greater   = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.149361160583476),
+      less      = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.560761939401455)),
     independentMultinomialColumnsFixed = list(
-      groupsNotEqual  = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.364069579256729),
-      groupOneGreater = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.153564548530488),
-      groupTwoGreater = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.571734867264767))
+      twoSided  = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.364069579256729),
+      greater   = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.153564548530488),
+      less      = list("BF<unicode><unicode> independent multinomial", "N", 100, 0.571734867264767))
   )
 
   for (samplingModel in samplingModels) {
     options$samplingModel <- samplingModel
-    for(hypothesis in hypotheses) {
-      options$hypothesis <- hypothesis
+    for(alternative in alternatives) {
+      options$alternative <- alternative
       results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options, view = FALSE)
       table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_contTabBasBF"]][["data"]]
       #makeTestTable(table)
-      jaspTools::expect_equal_tables(table, refTables[[samplingModel]][[hypothesis]], label=paste("Sampling model", samplingModel, "; hypothesis", hypothesis))
+      jaspTools::expect_equal_tables(table, refTables[[samplingModel]][[alternative]], label=paste("Sampling model", samplingModel, "; hypothesis", alternative))
     }
   }
 })
@@ -118,7 +118,7 @@ test_that("Log Odds Ratio table results match", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$oddsRatio <- TRUE
-  options$oddsRatioCredibleIntervalInterval <- 0.90
+  options$oddsRatioCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_contTabBasLogOdds"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -131,8 +131,8 @@ test_that("Cramer's V table results match", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
-  options$effectSize <- TRUE
-  options$effectSizeCredibleIntervalInterval <- 0.90
+  options$cramersV <- TRUE
+  options$cramersVCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_contTabBasCramersV"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -145,8 +145,8 @@ test_that("Log Odds Ratio Plot matches", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
-  options$plotPosteriorOddsRatio <- TRUE
-  options$plotPosteriorOddsRatioAdditionalInfo <- TRUE
+  options$posteriorOddsRatioPlot <- TRUE
+  options$posteriorOddsRatioPlotAdditionalInfo <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   jaspTools::expect_equal_plots(results[["state"]][["figures"]][[1]][["obj"]], "log-odds-ratio")
 })

@@ -166,6 +166,35 @@ Upgrades
 		ChangeRename{	from: "hideSmallCountsLessThan";				to: "countsHiddenSmallCountsThreshold"		}
 		ChangeRename{	from: "zTestCompareColumns";					to: "zTestColumnComparison"					}
 		ChangeRename{	from: "zTestAdjustPValues";						to: "zTestAdjustedPValues"					}
+	}
+
+	Upgrade
+	{
+		functionName:		"ContingencyTablesBayesian"
+		fromVersion:		"0.15"
+		toVersion:			"0.16.4"
+
+		ChangeRename{	from: "oddsRatioCredibleIntervalInterval";			to: "oddsRatioCiLevel"	}
+		ChangeRename{	from: "effectSize";									to: "cramersV"	}
+		ChangeRename{	from: "effectSizeCredibleIntervalInterval";			to: "cramersVCiLevel"	}
+		ChangeRename{	from: "hypothesis";									to: "alternative"		}
+		ChangeJS
+		{
+			name:		"alternative"
+			jsFunction:	function(options)
+			{
+				switch(options["alternative"])
+				{
+					case "groupsNotEqual":		return "twoSided";
+					case "groupOneGreater":		return "greater";
+					case "groupTwoGreater":		return "less";
+				}
+			}
+		}
+		ChangeRename{	from: "plotPosteriorOddsRatio";					to: "posteriorOddsRatioPlot"				}
+		ChangeRename{	from: "plotPosteriorOddsRatioAdditionalInfo";	to: "posteriorOddsRatioPlotAdditionalInfo"	}
+		ChangeRename{	from: "plotPosteriorEffectSize";				to: "cramersVPlot"							}
+
 
 	}
 }
