@@ -65,8 +65,8 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   a              <- setNames(prior$values, prior$levels)
   factNms        <- levels(fact)
 
-  if (options$counts != "") {
-    counts <- dataset[[.v(options$counts)]]
+  if (options$count != "") {
+    counts <- dataset[[.v(options$count)]]
     # omit count entries for which factor variable is NA
     counts <- counts[!is.na(fact)]
     dataTable        <- counts
@@ -97,28 +97,28 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   multinomialResults$mainTable[["nhyps"]]   <- nhyps
 
   #  Results for descriptives plot
-  multinomialResults$descriptivesPlot[["descProps"]]  <- .multComputeCIs(dataTable, options$descriptivesPlotCredibleInterval, ifErrorReturn = 0, scale = 'descProbs')
-  multinomialResults$descriptivesPlot[["descCounts"]] <- multinomialResults$descriptivesPlot[["descProps"]] * N
-  multinomialResults$descriptivesPlot[["descProps"]][["observed"]]  <- as.numeric(dataTable)/N
-  multinomialResults$descriptivesPlot[["descCounts"]][["observed"]] <- as.numeric(dataTable)
-  multinomialResults$descriptivesPlot[["descProps"]][["fact"]]  <- factNms
-  multinomialResults$descriptivesPlot[["descCounts"]][["fact"]] <- factNms
+  multinomialResults$descriptivesPlot[["proportions"]]  <- .multComputeCIs(dataTable, options$descriptivePlotCiLevel, ifErrorReturn = 0, scale = "proportions")
+  multinomialResults$descriptivesPlot[["counts"]] <- multinomialResults$descriptivesPlot[["proportions"]] * N
+  multinomialResults$descriptivesPlot[["proportions"]][["observed"]]  <- as.numeric(dataTable)/N
+  multinomialResults$descriptivesPlot[["counts"]][["observed"]] <- as.numeric(dataTable)
+  multinomialResults$descriptivesPlot[["proportions"]][["fact"]]  <- factNms
+  multinomialResults$descriptivesPlot[["counts"]][["fact"]] <- factNms
 
   # Results for descriptives table
-  multinomialResults$descriptivesTable[["descProps"]][["fact"]]      <- factNms
-  multinomialResults$descriptivesTable[["descCounts"]][["fact"]]     <- factNms
-  multinomialResults$descriptivesTable[["descProps"]][["observed"]]  <- as.numeric(dataTable)/N
-  multinomialResults$descriptivesTable[["descCounts"]][["observed"]] <- as.numeric(dataTable)
+  multinomialResults$descriptivesTable[["proportions"]][["fact"]]      <- factNms
+  multinomialResults$descriptivesTable[["counts"]][["fact"]]     <- factNms
+  multinomialResults$descriptivesTable[["proportions"]][["observed"]]  <- as.numeric(dataTable)/N
+  multinomialResults$descriptivesTable[["counts"]][["observed"]] <- as.numeric(dataTable)
 
   for(h in 1:nhyps) {
-    multinomialResults$descriptivesTable[["descProps"]][[nms[h]]]    <- multinomialResults$mainTable[[nms[h]]]$expected/N
-    multinomialResults$descriptivesTable[["descCounts"]][[nms[h]]]   <- multinomialResults$mainTable[[nms[h]]]$expected
+    multinomialResults$descriptivesTable[["proportions"]][[nms[h]]]    <- multinomialResults$mainTable[[nms[h]]]$expected/N
+    multinomialResults$descriptivesTable[["counts"]][[nms[h]]]   <- multinomialResults$mainTable[[nms[h]]]$expected
   }
 
-  multinomialResults$descriptivesTable[["descProps"]]    <- setNames(as.data.frame(multinomialResults$descriptivesTable[["descProps"]]), c("fact", "observed", nms))
-  multinomialResults$descriptivesTable[["descCounts"]]   <- setNames(as.data.frame(multinomialResults$descriptivesTable[["descCounts"]]), c("fact", "observed", nms))
-  multinomialResults$descriptivesTable[["descPropsCI"]]  <- .multComputeCIs(dataTable, options$credibleIntervalInterval, scale = "descProbs")
-  multinomialResults$descriptivesTable[["descCountsCI"]] <- .multComputeCIs(dataTable, options$credibleIntervalInterval, scale = "descCounts")
+  multinomialResults$descriptivesTable[["proportions"]]    <- setNames(as.data.frame(multinomialResults$descriptivesTable[["proportions"]]), c("fact", "observed", nms))
+  multinomialResults$descriptivesTable[["counts"]]   <- setNames(as.data.frame(multinomialResults$descriptivesTable[["counts"]]), c("fact", "observed", nms))
+  multinomialResults$descriptivesTable[["proportionsCI"]]  <- .multComputeCIs(dataTable, options$descriptiveTableCiLevel, scale = "proportions")
+  multinomialResults$descriptivesTable[["countsCI"]] <- .multComputeCIs(dataTable, options$descriptiveTableCiLevel, scale = "counts")
 
   # Save results to state
   defaultOptions <- multinomialResults$specs$defaultOptions
@@ -185,7 +185,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 #' @return descriptivesTable descriptives table
 .createMultBayesDescriptivesTable <- function(jaspResults, options, multinomialResults, bayesianAnalysis = TRUE){
 
-  if(!options[["descriptives"]])
+  if(!options[["descriptiveTable"]])
     return()
 
   # Create table
@@ -193,17 +193,17 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # settings for Bayesian and frequentist analysis
   if(bayesianAnalysis){
-    ciRequested   <- options$credibleInterval
-    ciInterval    <- options$credibleIntervalInterval
+    ciRequested   <- options$descriptiveTableCi
+    ciInterval    <- options$descriptiveTableCiLevel
     ciType  <- gettext("Credible")
     tableFootnote <- gettext("Credible intervals are based on independent binomial distributions with flat priors.")
-    descriptivesTable$dependOn(c("countProp", "descriptives", "credibleIntervalInterval"))
+    descriptivesTable$dependOn(c("descriptivesAs", "descriptiveTable", "descriptiveTableCiLevel"))
   } else {
-    ciRequested   <- options$confidenceInterval
-    ciInterval    <- options$confidenceIntervalInterval
+    ciRequested   <- options$descriptiveTableCi
+    ciInterval    <- options$descriptiveTableCiLevel
     ciType  <- gettext("Confidence")
     tableFootnote <- gettext("Confidence intervals are based on independent binomial distributions.")
-    descriptivesTable$dependOn(c("countProp", "descriptives", "confidenceIntervalInterval"))
+    descriptivesTable$dependOn(c("descriptivesAs", "descriptiveTable", "descriptiveTableCiLevel"))
   }
 
   descriptivesTable$showSpecifiedColumnsOnly <- TRUE
@@ -211,7 +211,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   factorVariable <- multinomialResults[["specs"]][["factorVariable"]]
 
-  if(options$countProp == "descCounts")
+  if(options$descriptivesAs == "counts")
     numberType <- "integer"
   else
     numberType <- "number"
@@ -249,10 +249,10 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
     return()
 
   # Add rows
-  descDF <- multinomialResults[["descriptivesTable"]][[options$countProp]]
+  descDF <- multinomialResults[["descriptivesTable"]][[options$descriptivesAs]]
 
   if(ciRequested){
-    ciInfo <- multinomialResults[["descriptivesTable"]][[paste0(options$countProp, "CI")]]
+    ciInfo <- multinomialResults[["descriptivesTable"]][[paste0(options$descriptivesAs, "CI")]]
     descDF <- cbind(descDF, ciInfo)
     descriptivesTable$addFootnote(tableFootnote)
 
@@ -273,14 +273,14 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 #' @return descriptivesPlot descriptives plot object
 .createMultBayesDescriptivesPlot <- function(jaspResults, options, multinomialResults) {
   # If there is no data OR descriptives plot is not selected: do not create a plot
-  if(!options$descriptivesPlot)
+  if(!options$descriptivePlot)
     return()
 
   factorVariable   <- multinomialResults[["specs"]][["factorVariable"]]
   descriptivesPlot <- .multBayesPlotHelper(factorVariable, options, multinomialResults)
 
   jaspResults[["descriptivesPlot"]] <- createJaspPlot(plot = descriptivesPlot, title = gettext("Descriptives plot"), width = 480, height = 320)
-  jaspResults[["descriptivesPlot"]]$dependOn(c("descriptivesPlot", "factor", "counts", "descriptivesPlotsCredibleInterval"))
+  jaspResults[["descriptivesPlot"]]$dependOn(c("descriptivePlot", "factor", "count", "descriptivePlotCiLevel"))
 
   descriptivesPlot$position <- 2
 }
@@ -334,14 +334,14 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   }
 
   # Counts or props
-  if (options$countProp == "descCounts") {
+  if (options$descriptivesAs == "counts") {
     yname <- gettext("Observed Counts")
   } else {
     yname <- gettext("Observed Proportions")
   }
 
   # Prepare data for plotting
-  plotFrame <- multinomialResults[["descriptivesPlot"]][[options$countProp]]
+  plotFrame <- multinomialResults[["descriptivesPlot"]][[options$descriptivesAs]]
   # We need to reverse the factor's levels because of the coord_flip later
   plotFrame$fact <- factor(plotFrame$fact, levels = rev(plotFrame$fact))
 
@@ -416,8 +416,8 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   specs <- list()
 
   # Default options
-  specs$defaultOptions <- c("tableWidget", "priorCounts","factor", "counts", "exProbVar", "hypothesis",
-                            "credibleIntervalInterval")
+  specs$defaultOptions <- c("testValuesCustom", "priorCounts","factor", "count", "expectedCount", "testValues",
+                            "descriptiveTableCiLevel")
 
   # Ready statement
   specs$ready <- options$factor != "" && !is.null(dataset)
@@ -429,20 +429,20 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   if (options$factor != "") {
     specs$factorVariable <- options$factor
     # Specify count variable
-    if (options$counts != "") {
-      specs$countVariable <- options$counts
+    if (options$count != "") {
+      specs$countVariable <- options$count
       }
-    if (options$exProbVar != "") {
-        specs$exProbVariable <- options$exProbVar
+    if (options$expectedCount != "") {
+        specs$exProbVariable <- options$expectedCount
       }
   }
 
-  if(options$exProbVar != "") {
+  if(options$expectedCount != "") {
     specs$hypNames <- specs$exProbVariable
-  } else if(options$hypothesis == "multinomialTest") {
+  } else if(options$testValues == "equal") {
     specs$hypNames <- "Multinomial"
-  } else if(options$hypothesis == "expectedProbs") {
-    specs$hypNames <- sapply(seq_along(options$tableWidget), function(x) paste0("H\u2080 (", letters[x], ")"))
+  } else if(options$testValues == "custom") {
+    specs$hypNames <- sapply(seq_along(options$testValuesCustom), function(x) paste0("H\u2080 (", letters[x], ")"))
   } else if(!is.null(specs$exProbVariable)) {
     specs$hypNames <- specs$exProbVariable
   }
