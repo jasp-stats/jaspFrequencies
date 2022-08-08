@@ -198,7 +198,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
     # Create table
     crossTabChisq <- createJaspTable(title = gettext("Chi-Squared Tests"))
-    crossTabChisq$dependOn(c("chiSquared", "chiSquaredContinuityCorrection", "likelihoodRatio", "VovkSellkeMPR"))
+    crossTabChisq$dependOn(c("chiSquared", "chiSquaredContinuityCorrection", "likelihoodRatio", "vovkSellke"))
     crossTabChisq$showSpecifiedColumnsOnly <- TRUE
     crossTabChisq$position <- 2
 
@@ -212,7 +212,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
     if (options$likelihoodRatio)                  .crossTabChisqAddColInfo(fold = "likelihood",     crossTabChisq, options)
                                                   .crossTabChisqAddColInfo(fold = "N",              crossTabChisq, options, counts.fp)
 
-    if(options$VovkSellkeMPR){
+    if(options$vovkSellke){
       message <- gettextf("Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,
       the maximum possible odds in favor of H%1$s over H%2$s equals %3$s
       (Sellke, Bayarri, & Berger, 2001).", "\u2081", "\u2080", "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> \u2264 .37")
@@ -239,14 +239,14 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       next
 
     # Create table
-    title <- if (options[["LogOdds"]]) gettext("Log Odds Ratio") else gettext("Odds Ratio")
+    title <- if (options[["oddsRatioAsLogOdds"]]) gettext("Log Odds Ratio") else gettext("Odds Ratio")
     crossTabOdds <- createJaspTable(title = title)
-    crossTabOdds$dependOn(c("LogOdds","oddsRatio", "oddsRatioConfidenceIntervalInterval",
-                            "oddsRatioHypothesis", "rowOrder", "columnOrder"))
+    crossTabOdds$dependOn(c("oddsRatioAsLogOdds","oddsRatio", "oddsRatioCiLevel",
+                            "oddsRatioAlternative", "rowOrder", "columnOrder"))
     crossTabOdds$showSpecifiedColumnsOnly <- TRUE
     crossTabOdds$position <- 3
 
-    ci.label <- gettextf("%.0f%% Confidence Intervals", 100*options$oddsRatioConfidenceIntervalInterval)
+    ci.label <- gettextf("%.0f%% Confidence Intervals", 100*options$oddsRatioCiLevel)
 
     # Add columns to table
     .crossTabLayersColumns( crossTabOdds, analysis)
@@ -352,7 +352,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
     # Create table
     crossTabKendallTau <- createJaspTable(title = "Kendall's Tau")
-    crossTabKendallTau$dependOn(c("kendallsTauB", "VovkSellkeMPR", "rowOrder", "columnOrder"))
+    crossTabKendallTau$dependOn(c("kendallsTauB", "vovkSellke", "rowOrder", "columnOrder"))
     crossTabKendallTau$showSpecifiedColumnsOnly <- TRUE
     crossTabKendallTau$position <- 6
 
@@ -361,7 +361,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
                                 crossTabKendallTau$addColumnInfo(name = "value[kTauB]",     title = gettext("Kendall's Tau-b "),    type = "number")
                                 crossTabKendallTau$addColumnInfo(name = "statistic[kTauB]", title = gettext("Z"),                   type = "number", format = "dp:3")
                                 crossTabKendallTau$addColumnInfo(name = "p[kTauB]",         title = gettext("p"),                   type = "pvalue")
-    if (options$VovkSellkeMPR)  crossTabKendallTau$addColumnInfo(name = "MPR[kTauB]",       title = gettextf("VS-MPR%s", "\u002A"), type = "number")
+    if (options$vovkSellke)  crossTabKendallTau$addColumnInfo(name = "MPR[kTauB]",       title = gettextf("VS-MPR%s", "\u002A"), type = "number")
 
     analysisContainer[["crossTabKendallTau"]] <- crossTabKendallTau
     analysis                                  <- as.list(analysis)
@@ -440,7 +440,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
                               table$addColumnInfo(name = paste0("value[", fold, "]"),   title = gettext("Value"),               type = valueFoldType)
                               table$addColumnInfo(name = paste0("df[",    fold, "]"),   title = gettext("df"),                  type = "integer")
                               table$addColumnInfo(name = paste0("p[",     fold, "]"),   title = gettext("p"),                   type = "pvalue")
-  if (options$VovkSellkeMPR)  table$addColumnInfo(name = paste0("MPR[",   fold, "]"),   title = gettextf("VS-MPR%s", "\u002A"), type = "number")
+  if (options$vovkSellke)  table$addColumnInfo(name = paste0("MPR[",   fold, "]"),   title = gettextf("VS-MPR%s", "\u002A"), type = "number")
 }
 
 .crossTabOddsAddColInfo <- function(table, fold, ci.label, oddsTitle) {
@@ -690,12 +690,12 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
 .crossTabOddsNote <- function(crossTabOdds, groupList, options, ready){
   if(ready){
-    if(length(groupList$group.matrices) >= 1  & options[["oddsRatioHypothesis"]] != "two.sided"){
+    if(length(groupList$group.matrices) >= 1  & options[["oddsRatioAlternative"]] != "twoSided"){
 
       gp1 <- dimnames(groupList$group.matrices[[1]])[[1]][1]
       gp2 <- dimnames(groupList$group.matrices[[1]])[[1]][2]
 
-      if(options[["oddsRatioHypothesis"]] == "less") lessIsMore <- gettext("is less than")
+      if(options[["oddsRatioAlternative"]] == "less") lessIsMore <- gettext("is less than")
       else                                      lessIsMore <- gettext("is greater than")
 
       message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", gp1, lessIsMore, gp2)
@@ -1096,14 +1096,14 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
           row[["value[likelihood]"]] <- NaN
           row[["df[likelihood]"]]    <- ""
           row[["p[likelihood]"]]     <- ""
-          if (options$VovkSellkeMPR)
+          if (options$vovkSellke)
             row[["MPR[likelihood]"]]   <- ""
         } else {
           row[["value[likelihood]"]] <- chi.result$chisq_tests[1]
           row[["df[likelihood]"]]    <- chi.result$chisq_tests[3]
           pVal                       <- chi.result$chisq_tests[5]
           row[["p[likelihood]"]]     <- pVal
-          if (options$VovkSellkeMPR)
+          if (options$vovkSellke)
             row[["MPR[likelihood]"]]   <- VovkSellkeMPR(pVal)
         }
       } else
@@ -1140,9 +1140,9 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       } else {
         chi.result <- try({
           chi.result  <- vcd::oddsratio(counts.matrix)
-          level       <- options$oddsRatioConfidenceIntervalInterval
+          level       <- options$oddsRatioCiLevel
           CI          <- stats::confint(chi.result, level = level)
-          if (options[["LogOdds"]]){
+          if (options[["oddsRatioAsLogOdds"]]){
             OR          <- unname(chi.result$coefficients)
             CI.low      <- CI[1]
             CI.high     <- CI[2]
@@ -1180,10 +1180,10 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
         row[["p[FisherTest]"]]     <- ""
       } else {
         chi.result <- try({
-          conf.level  <- options$oddsRatioConfidenceIntervalInterval
-          chi.result  <- stats::fisher.test(counts.matrix, conf.level = conf.level,
-                                            alternative = options$oddsRatioHypothesis)
-          if (options[["LogOdds"]]){
+          conf.level  <- options$oddsRatioCiLevel
+          alternative <- if(options[["oddsRatioAlternative"]] == "twoSided") "two.sided" else options[["oddsRatioAlternative"]]
+          chi.result  <- stats::fisher.test(counts.matrix, conf.level = conf.level, alternative = alternative)
+          if (options[["oddsRatioAsLogOdds"]]){
             OR          <- log(unname(chi.result$estimate))
             CI.low      <- log(chi.result$conf.int[1])
             CI.high     <- log(chi.result$conf.int[2])
@@ -1315,13 +1315,13 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
       else {
                                     row[["value[kTauB]"]]     <- unname(chi.result$estimate)
                                     row[["p[kTauB]"]]         <- chi.result$p.value
-        if (options$VovkSellkeMPR)  row[["MPR[kTauB]"]]       <- VovkSellkeMPR(row[["p[kTauB]"]])
+        if (options$vovkSellke)     row[["MPR[kTauB]"]]       <- VovkSellkeMPR(row[["p[kTauB]"]])
                                     row[["statistic[kTauB]"]] <- unname(chi.result$statistic)
       }
     } else {
                                     row[["value[kTauB]"]]     <- "."
                                     row[["p[kTauB]"]]         <- "."
-      if (options$VovkSellkeMPR)    row[["MPR[kTauB]"]]       <- "."
+      if (options$vovkSellke)    row[["MPR[kTauB]"]]       <- "."
                                     row[["statistic[kTauB]"]] <- "."
     }
 

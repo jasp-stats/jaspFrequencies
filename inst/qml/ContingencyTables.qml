@@ -40,7 +40,7 @@ Form
 			CheckBox { name: "chiSquared";						label: qsTr("χ²"); checked: true			}
 			CheckBox { name: "chiSquaredContinuityCorrection";	label: qsTr("χ² continuity correction")	}
 			CheckBox { name: "likelihoodRatio";					label: qsTr("Likelihood ratio")			}
-			CheckBox { name: "VovkSellkeMPR";					label: qsTr("Vovk-Sellke maximum p-ratio") }
+			CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio") }
 		}
 
 		Group
@@ -50,14 +50,14 @@ Form
 				name: "oddsRatio"; label: qsTr("Odds ratio (2x2 only)")
 				CheckBox
 				{
-					name: "LogOdds";     label: qsTr("Log Odds Ratio");	checked: true
+					name: "oddsRatioAsLogOdds";     label: qsTr("Log Odds Ratio");	checked: true
 				}
-				CIField { name: "oddsRatioConfidenceIntervalInterval"; label: qsTr("Confidence interval") }
+				CIField { name: "oddsRatioCiLevel"; label: qsTr("Confidence interval") }
 				RadioButtonGroup
 				{
 					title: qsTr("Alt. Hypothesis (Fisher's exact test)")
-					name: "oddsRatioHypothesis"
-					RadioButton { value: "two.sided";	label: qsTr("Group one ≠ Group two"); checked: true	}
+					name: "oddsRatioAlternative"
+					RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true	}
 					RadioButton { value: "greater";		label: qsTr("Group one > Group two")				}
 					RadioButton { value: "less";		label: qsTr("Group one < Group two")				}
 				}
@@ -77,9 +77,9 @@ Form
 		{
 			title: qsTr("Ordinal")
 			CheckBox { name: "gamma";			label: qsTr("Gamma")						}
-			CheckBox { name: "somersD";			label: qsTr("Somers' d"); debug: true	}
+			CheckBox { name: "somersD";			label: qsTr("Somers' d");		debug: true	}
 			CheckBox { name: "kendallsTauB";	label: qsTr("Kendall's tau-b")			}
-			CheckBox { name: "kendallsTauC";	label: qsTr("Kendall's tau-c"); debug: true }
+			CheckBox { name: "kendallsTauC";	label: qsTr("Kendall's tau-c");	debug: true }
 		}
 
 		Group
@@ -95,7 +95,7 @@ Form
 			Layout.columnSpan: 2
 			CheckBox
 			{
-				name: "cochransAndMantel"; label: qsTr("Cochran's and Mantel-Haenszel statistics")
+				name: "cochranAndMantel"; label: qsTr("Cochran's and Mantel-Haenszel statistics")
 				DoubleField { name: "testOddsRatioEquals"; label: qsTr("Test common odds ratio equals"); defaultValue: 1 }
 			}
 		}
@@ -111,8 +111,8 @@ Form
 			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
 			CheckBox
 			{
-				name: "hideSmallCounts"; label: qsTr("Hide small counts"); debug: true
-				IntegerField { name: "hideSmallCountsLessThan"; label: qsTr("Less than"); defaultValue: 5; debug: true }
+				name: "countsHiddenSmallCounts"; label: qsTr("Hide small counts"); debug: true
+				IntegerField { name: "countsHiddenSmallCountsThreshold"; label: qsTr("Less than"); defaultValue: 5; debug: true }
 			}
 		}
 
@@ -122,8 +122,8 @@ Form
 			debug: true
 			CheckBox
 			{
-				name: "zTestCompareColumns"; label: qsTr("Compare column proportions")
-				CheckBox { name: "zTestAdjustPValues";	label: qsTr("Adjust p-values") }
+				name: "zTestColumnComparison"; label: qsTr("Compare column proportions")
+				CheckBox { name: "zTestAdjustedPValues";	label: qsTr("Adjust p-values") }
 			}
 		}
 

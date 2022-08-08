@@ -10,7 +10,6 @@ Upgrades
 		toVersion:			"0.16.4"
 
 		ChangeRename{	from: "hypothesis";	to: "alternative"	}
-
 		ChangeJS
 		{
 			name:		"alternative"
@@ -24,7 +23,6 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "confidenceInterval";						to: "ci"						}
 		ChangeRename{	from: "confidenceIntervalInterval";				to: "ciLevel"					}
 		ChangeRename{	from: "VovkSellkeMPR";							to: "vovkSellke"				}
@@ -39,7 +37,6 @@ Upgrades
 		toVersion:			"0.16.4"
 
 		ChangeRename{	from: "hypothesis";	to: "alternative"	}
-
 		ChangeJS
 		{
 			name:		"alternative"
@@ -53,7 +50,6 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "plotPriorAndPosterior";					to: "priorAndPosteriorPlot"					}
 		ChangeRename{	from: "plotPriorAndPosteriorAdditionalInfo";	to: "priorAndPosteriorPlotAdditionalInfo"	}
 		ChangeRename{	from: "plotSequentialAnalysis";					to: "sequentialAnalysisPlot"				}
@@ -69,11 +65,9 @@ Upgrades
 
 		// this option did not do anything and was always hidden so now it's removed
 		ChangeRemove{	name: "simulatepval"	}
-
 		ChangeRename{	from: "counts";					to: "count"				}
 		ChangeRename{	from: "exProbVar";				to: "expectedCount"		}
 		ChangeRename{	from: "hypothesis";				to: "testValues"		}
-
 		ChangeJS
 		{
 			name:		"testValues"
@@ -86,11 +80,8 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "tableWidget";					to: "testValuesCustom"			}
-
 		ChangeRename{	from: "VovkSellkeMPR";					to: "vovkSellke"				}
-
 		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
 		ChangeRename{	from: "confidenceInterval";				to: "descriptiveTableCi"		}
 		ChangeRename{	from: "confidenceIntervalInterval";		to: "descriptiveTableCiLevel"	}
@@ -107,7 +98,6 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "descriptivesPlot";						to: "descriptivePlot"			}
 		ChangeRename{	from: "descriptivesPlotConfidenceInterval";		to: "descriptivePlotCiLevel"	}
 	}
@@ -121,7 +111,6 @@ Upgrades
 		ChangeRename{	from: "counts";					to: "count"				}
 		ChangeRename{	from: "exProbVar";				to: "expectedCount"		}
 		ChangeRename{	from: "hypothesis";				to: "testValues"		}
-
 		ChangeJS
 		{
 			name:		"testValues"
@@ -134,9 +123,7 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "tableWidget";					to: "testValuesCustom"			}
-
 		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
 		ChangeRename{	from: "credibleInterval";				to: "descriptiveTableCi"		}
 		ChangeRename{	from: "credibleIntervalInterval";		to: "descriptiveTableCiLevel"	}
@@ -153,8 +140,32 @@ Upgrades
 				}
 			}
 		}
-
 		ChangeRename{	from: "descriptivesPlot";						to: "descriptivePlot"			}
 		ChangeRename{	from: "descriptivesPlotCredibleInterval";		to: "descriptivePlotCiLevel"	}
+	}
+
+	Upgrade
+	{
+		functionName:		"ContingencyTables"
+		fromVersion:		"0.15"
+		toVersion:			"0.16.4"
+
+		ChangeRename{	from: "VovkSellkeMPR";							to: "vovkSellke"				}
+		ChangeRename{	from: "LogOdds";								to: "oddsRatioAsLogOdds"		}
+		ChangeRename{	from: "oddsRatioConfidenceIntervalInterval";	to: "oddsRatioCiLevel"			}
+		ChangeRename{	from: "oddsRatioHypothesis";					to: "oddsRatioAlternative"		}
+		ChangeSetValue
+		{
+			name:		"oddsRatioAlternative"
+			condition:	function(options) { return options["oddsRatioAlternative"] === "two.sided" }
+			jsonValue:	"twoSided"
+		}
+		ChangeRename{	from: "cochransAndMantel";						to: "cochranAndMantel"						}
+		ChangeRename{	from: "testOddsRatioEquals";					to: "cochranAndMantelCommonOddsRatioTest"	}
+		ChangeRename{	from: "hideSmallCounts";						to: "countsHiddenSmallCounts"				}
+		ChangeRename{	from: "hideSmallCountsLessThan";				to: "countsHiddenSmallCountsThreshold"		}
+		ChangeRename{	from: "zTestCompareColumns";					to: "zTestColumnComparison"					}
+		ChangeRename{	from: "zTestAdjustPValues";						to: "zTestAdjustedPValues"					}
+
 	}
 }
