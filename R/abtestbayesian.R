@@ -36,23 +36,23 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   .abTestBayesianTableMain(jaspResults, ab_obj, options, ready, position = 1)
 
   ### DESCRIPTIVES TABLE       ###
-  if (options$descriptives)
+  if (options$descriptiveTable)
     .abTestBayesianDescriptivesTable(jaspResults, dataset, options, ready, position = 2)
 
   ### PRIOR AND POSTERIOR PLOT ###
-  if (options$plotPriorAndPosterior)
+  if (options$priorAndPosteriorPlot)
     .abTestPlotPriorPosterior(jaspResults, ab_obj, options, ready, position = 3)
 
   ### SEQUENTIAL PLOT          ###
-  if (options$plotSequentialAnalysis)
+  if (options$sequentialAnalysisPlot)
     .abTestPlotSequential(jaspResults, ab_obj, ready, position = 4)
 
   ### ROBUSTNESS PLOT          ###
-  if (options$plotRobustness)
+  if (options$robustnessPlot)
     .abTestPlotRobustness(jaspResults, ab_obj, options, ready, position = 5)
 
   ### PRIOR PLOT               ###
-  if (options$plotPriorOnly)
+  if (options$priorPlot)
     .abTestPlotPriorOnly(jaspResults, options, position = 6)
 }
 
@@ -119,11 +119,11 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestBayesianFillTableMain <- function(abTestBayesianTable, ab_obj, options) {
 
   # Normalize prior probabilities
-  sum_logor          <- options$orGreaterThan1Prob + options$orLessThan1Prob + options$orEqualTo1Prob + options$orNotEqualTo1Prob
-  orGreaterThan1Prob <- options$orGreaterThan1Prob / sum_logor
-  orLessThan1Prob    <- options$orLessThan1Prob / sum_logor
-  orEqualTo1Prob     <- options$orEqualTo1Prob / sum_logor
-  orNotEqualTo1Prob  <- options$orNotEqualTo1Prob / sum_logor
+  sum_logor          <- options$priorModelProbabilityGreater + options$priorModelProbabilityLess + options$priorModelProbabilityEqual + options$priorModelProbabilityTwoSided
+  priorModelProbabilityGreater   <- options$priorModelProbabilityGreater / sum_logor
+  priorModelProbabilityLess      <- options$priorModelProbabilityLess / sum_logor
+  priorModelProbabilityEqual     <- options$priorModelProbabilityEqual / sum_logor
+  priorModelProbabilityTwoSided  <- options$priorModelProbabilityTwoSided / sum_logor
 
   if (inherits(ab_obj, "try-error")) {
     errorMessage <- as.character(ab_obj)
@@ -135,43 +135,43 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   output.rows <- list()
   rowCount    <- 0
 
-  if (orEqualTo1Prob > 0) {
+  if (priorModelProbabilityEqual > 0) {
     rowCount = rowCount + 1
     output.rows[[rowCount]] <- list(
       "Models"    = gettext("Log odds ratio = 0"),
       "BF"        = 1.00,
       "P(M|data)" = ab_obj$post_prob[["H0"]],
-      "P(M)"      = orEqualTo1Prob
+      "P(M)"      = priorModelProbabilityEqual
     )
   }
 
-  if (orGreaterThan1Prob > 0) {
+  if (priorModelProbabilityGreater > 0) {
     rowCount = rowCount + 1
     output.rows[[rowCount]] <- list(
       "Models"    = gettext("Log odds ratio > 0"),
       "BF"        = ab_obj$bf[["bfplus0"]],
       "P(M|data)" = ab_obj$post_prob[["H+"]],
-      "P(M)"      = orGreaterThan1Prob
+      "P(M)"      = priorModelProbabilityGreater
     )
   }
 
-  if (orLessThan1Prob > 0) {
+  if (priorModelProbabilityLess > 0) {
     rowCount = rowCount + 1
     output.rows[[rowCount]] <- list(
       "Models"    = gettext("Log odds ratio < 0"),
       "BF"        = ab_obj$bf[["bfminus0"]],
       "P(M|data)" = ab_obj$post_prob[["H-"]],
-      "P(M)"      = orLessThan1Prob
+      "P(M)"      = priorModelProbabilityLess
     )
   }
 
-  if (orNotEqualTo1Prob > 0) {
+  if (priorModelProbabilityTwoSided > 0) {
     rowCount = rowCount + 1
     output.rows[[rowCount]] <- list(
       "Models"    = gettextf("Log odds ratio %s 0","\u2260"),
       "BF"        = ab_obj$bf[["bf10"]],
       "P(M|data)" = ab_obj$post_prob[["H1"]],
-      "P(M)"      = orNotEqualTo1Prob
+      "P(M)"      = priorModelProbabilityTwoSided
     )
   }
 
@@ -205,27 +205,27 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 
   # we copy dependencies from this state object in a few places, so it must always exist
   jaspResults[["model"]] <- createJaspState()
-  jaspResults[["model"]]$dependOn(c("n1", "y1", "n2", "y2", "normal_mu", "normal_sigma", "orEqualTo1Prob",
-                                    "orLessThan1Prob", "orGreaterThan1Prob", "orNotEqualTo1Prob", "numSamples", "setSeed", "seed"))
+  jaspResults[["model"]]$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "priorModelProbabilityEqual",
+                                    "priorModelProbabilityLess", "priorModelProbabilityGreater", "priorModelProbabilityTwoSided", "samples", "setSeed", "seed"))
 
   if (!ready)
     return(NULL)
 
-  prior_par <- list(mu_psi = options$normal_mu, sigma_psi = options$normal_sigma, mu_beta = 0, sigma_beta = 1)
+  prior_par <- list(mu_psi = options$normalPriorMean, sigma_psi = options$normalPriorSd, mu_beta = 0, sigma_beta = 1)
 
   # Normalize prior probabilities
-  sum_logor          <- options$orGreaterThan1Prob + options$orLessThan1Prob + options$orEqualTo1Prob + options$orNotEqualTo1Prob
-  orGreaterThan1Prob <- options$orGreaterThan1Prob / sum_logor
-  orLessThan1Prob    <- options$orLessThan1Prob / sum_logor
-  orEqualTo1Prob     <- options$orEqualTo1Prob / sum_logor
-  orNotEqualTo1Prob  <- options$orNotEqualTo1Prob / sum_logor
+  sum_logor          <- options$priorModelProbabilityGreater + options$priorModelProbabilityLess + options$priorModelProbabilityEqual + options$priorModelProbabilityTwoSided
+  priorModelProbabilityGreater   <- options$priorModelProbabilityGreater / sum_logor
+  priorModelProbabilityLess      <- options$priorModelProbabilityLess / sum_logor
+  priorModelProbabilityEqual     <- options$priorModelProbabilityEqual / sum_logor
+  priorModelProbabilityTwoSided  <- options$priorModelProbabilityTwoSided / sum_logor
 
-  prior_prob <- c(orNotEqualTo1Prob, orGreaterThan1Prob, orLessThan1Prob, orEqualTo1Prob)
+  prior_prob <- c(priorModelProbabilityTwoSided, priorModelProbabilityGreater, priorModelProbabilityLess, priorModelProbabilityEqual)
   names(prior_prob) <- c("H1", "H+", "H-", "H0")
 
   .setSeedJASP(options)
   ab <- try(abtest::ab_test(data = dataset, prior_par = prior_par, prior_prob = prior_prob,
-                            posterior = TRUE, nsamples = options$numSamples))
+                            posterior = TRUE, nsamples = options$samples))
 
   jaspResults[["model"]]$object <- ab
 
@@ -240,7 +240,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 
   abTestBayesianDescriptivesTable <- createJaspTable(title = gettext("Descriptives"))
 
-  abTestBayesianDescriptivesTable$dependOn(c("n1", "y1", "n2", "y2", "descriptives"))
+  abTestBayesianDescriptivesTable$dependOn(c("n1", "y1", "n2", "y2", "descriptiveTable"))
   abTestBayesianDescriptivesTable$position <- position
 
   abTestBayesianDescriptivesTable$addColumnInfo(name = "group",      title = "",                    type = "string")
@@ -279,7 +279,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotPriorPosterior <- function(jaspResults, ab_obj, options, ready, position) {
 
   abTestPriorAndPosteriorPlot <- createJaspPlot(title = gettext("Prior and Posterior"),  width = 530, height = 400)
-  abTestPriorAndPosteriorPlot$dependOn(c("n1", "y1", "n2", "y2", "normal_mu", "normal_sigma", "numSamples", "plotPosteriorType", "plotPriorAndPosterior",
+  abTestPriorAndPosteriorPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "samples", "priorAndPosteriorPlotType", "priorAndPosteriorPlot",
                                          "setSeed", "seed"))
   abTestPriorAndPosteriorPlot$position <- position
 
@@ -288,7 +288,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   if (!ready)
     return()
 
-  abTestPriorAndPosteriorPlot$plotObject <- .plotPosterior.abTest(ab_obj, options$plotPosteriorType)
+  abTestPriorAndPosteriorPlot$plotObject <- .plotPosterior.abTest(ab_obj, options$priorAndPosteriorPlotType)
 }
 
 
@@ -300,11 +300,11 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   #   posteriorPlotType
   what <- switch(
     posteriorPlotType,
-    "LogOddsRatio" = "logor",
-    "OddsRatio"    = "or",
-    "RelativeRisk" = "rrisk",
-    "AbsoluteRisk" = "arisk",
-    "p1&p2"        = "p1p2"
+    "logOddsRatio" = "logor",
+    "oddsRatio"    = "or",
+    "relativeRisk" = "rrisk",
+    "absoluteRisk" = "arisk",
+    "p1p2"         = "p1p2"
   )
 
   plotFunc <- function() {
@@ -318,7 +318,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotSequential <- function(jaspResults, ab_obj, ready, position) {
 
   abTestSequentialPlot <- createJaspPlot(title = gettext("Sequential Analysis"),  width = 530, height = 400)
-  abTestSequentialPlot$dependOn(options = "plotSequentialAnalysis", optionsFromObject = jaspResults[["model"]])
+  abTestSequentialPlot$dependOn(options = "sequentialAnalysisPlot", optionsFromObject = jaspResults[["model"]])
   abTestSequentialPlot$position <- position
 
   jaspResults[["abTestSequentialPlot"]] <- abTestSequentialPlot
@@ -338,7 +338,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotRobustness <- function(jaspResults, ab_obj, options, ready, position) {
 
   abTestRobustnessPlot <- createJaspPlot(title = gettext("Bayes Factor Robustness Check"),  width = 530, height = 400)
-  abTestRobustnessPlot$dependOn(c("n1", "y1", "n2", "y2", "normal_mu", "normal_sigma", "mu_stepsize", "sigma_stepsize", "mu_stepsize_lower", "mu_stepsize_upper", "sigma_stepsize_lower", "sigma_stepsize_upper", "plotRobustnessBFType", "numSamples", "plotRobustness", "setSeed", "seed"))
+  abTestRobustnessPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "robustnessPlotStepsPriorMean", "robustnessPlotStepsPriorSd", "robustnessPlotLowerPriorMean", "robustnessPlotUpperPriorMean", "robustnessPlotLowerPriorSd", "robustnessPlotUpperPriorSd", "robustnessPlotType", "samples", "robustnessPlot", "setSeed", "seed"))
   abTestRobustnessPlot$position <- position
 
   jaspResults[["abTestRobustnessPlot"]] <- abTestRobustnessPlot
@@ -354,18 +354,18 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   # Args:
   #   ab_obj: ab test object
 
-  mu_range    = c(options$mu_stepsize_lower,    options$mu_stepsize_upper)
-  sigma_range = c(options$sigma_stepsize_lower, options$sigma_stepsize_upper)
+  mu_range    = c(options$robustnessPlotLowerPriorMean,    options$robustnessPlotUpperPriorMean)
+  sigma_range = c(options$robustnessPlotLowerPriorSd, options$robustnessPlotUpperPriorSd)
 
   plotFunc <- function() {
 
     abtest::plot_robustness(
       x           = ab_obj,
-      mu_steps    = options$mu_stepsize,
-      sigma_steps = options$sigma_stepsize,
+      mu_steps    = options$robustnessPlotStepsPriorMean,
+      sigma_steps = options$robustnessPlotStepsPriorSd,
       mu_range    = mu_range,
       sigma_range = sigma_range,
-      bftype      = options$plotRobustnessBFType
+      bftype      = options$robustnessPlotType
     )
   }
 
@@ -376,7 +376,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotPriorOnly <- function(jaspResults, options, position) {
 
   abTestPriorPlot <- createJaspPlot(title = gettext("Prior"),  width = 530, height = 400)
-  abTestPriorPlot$dependOn(c("normal_mu", "normal_sigma", "plotPriorType", "plotPriorOnly"))
+  abTestPriorPlot$dependOn(c("normalPriorMean", "normalPriorSd", "priorPlotType", "priorPlot"))
   abTestPriorPlot$position <- position
 
   jaspResults[["abTestPriorPlot"]] <- abTestPriorPlot
@@ -391,15 +391,15 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   # Args:
   #   options
 
-  prior_par <- list(mu_psi = options$normal_mu, sigma_psi = options$normal_sigma, mu_beta = 0, sigma_beta = 1)
+  prior_par <- list(mu_psi = options$normalPriorMean, sigma_psi = options$normalPriorSd, mu_beta = 0, sigma_beta = 1)
 
   what <- switch(
-    options$plotPriorType,
-    "LogOddsRatio" = "logor",
-    "OddsRatio"    = "or",
-    "RelativeRisk" = "rrisk",
-    "AbsoluteRisk" = "arisk",
-    "p1&p2"        = "p1p2",
+    options$priorPlotType,
+    "logOddsRatio" = "logor",
+    "oddsRatio"    = "or",
+    "relativeRisk" = "rrisk",
+    "absoluteRisk" = "arisk",
+    "p1p2"         = "p1p2",
     "p1"           = "p1",
     "p2"           = "p2"
   )
