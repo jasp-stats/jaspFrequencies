@@ -194,7 +194,17 @@ Upgrades
 		ChangeRename{	from: "plotPosteriorOddsRatio";					to: "posteriorOddsRatioPlot"				}
 		ChangeRename{	from: "plotPosteriorOddsRatioAdditionalInfo";	to: "posteriorOddsRatioPlotAdditionalInfo"	}
 		ChangeRename{	from: "plotPosteriorEffectSize";				to: "cramersVPlot"							}
+	}
 
+	Upgrade
+	{
+		functionName:		"RegressionLogLinear"
+		fromVersion:		"0.15"
+		toVersion:			"0.16.4"
 
+		ChangeRename{	from: "counts";													to: "count"								}
+		ChangeRename{	from: "regressionCoefficientsConfidenceIntervals";				to: "regressionCoefficientsCi"			}
+		ChangeRename{	from: "regressionCoefficientsConfidenceIntervalsInterval";		to: "regressionCoefficientsCiLevel"		}
+		ChangeRename{	from: "VovkSellkeMPR";											to: "vovkSellke"						}
 	}
 }
