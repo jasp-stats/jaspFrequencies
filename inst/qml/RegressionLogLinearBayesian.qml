@@ -26,7 +26,7 @@ Form
 	VariablesForm
 	{
 		AvailableVariablesList { name: "allVariablesList" }		
-		AssignedVariablesList { name: "counts";	 title: qsTr("Counts (optional)");	singleVariable: true;	suggestedColumns:["scale", "ordinal"]}
+		AssignedVariablesList { name: "count";	 title: qsTr("Counts (optional)");	singleVariable: true;	suggestedColumns:["scale", "ordinal"]}
 		AssignedVariablesList { name: "factors"; title: qsTr("Factors"); itemType: "fixedFactors"; suggestedColumns: ["ordinal", "nominal"] }
 	}
 	
@@ -43,8 +43,8 @@ Form
 	Group
 	{
 		title: qsTr("Model Cut-offs")
-		IntegerField { name: "maxModels";					label: qsTr("Display best") ;  defaultValue: 2; afterLabel: qsTr("models"); min: 2 }
-		DoubleField { name: "posteriorProbabilityCutOff";	label: qsTr("Posterior prob."); defaultValue: 0.1 ; max: 0.5 }
+		IntegerField	{	name: "modelCutOffBestDisplayed";			label: qsTr("Display best") ;  defaultValue: 2; afterLabel: qsTr("models"); min: 2 }
+		DoubleField		{	name: "modelCutOffPosteriorProbability";	label: qsTr("Posterior prob."); defaultValue: 0.1 ; max: 0.5 }
 	}
 	
 	Section
@@ -70,8 +70,8 @@ Form
 			CheckBox { name: "regressionCoefficientsEstimates";	label: qsTr("Estimates") }
 			CheckBox
 			{
-				name: "regressionCoefficientsCredibleIntervals"; label: qsTr("Credible intervals")
-				CIField { name: "regressionCoefficientsCredibleIntervalsInterval"; label: qsTr("Interval") }
+				name: "regressionCoefficientsCi"; label: qsTr("Credible intervals")
+				CIField { name: "regressionCoefficientsCiLevel"; label: qsTr("Interval") }
 			}
 		}
 
@@ -90,8 +90,8 @@ Form
 				enabled: regressionCoefficientsSubmodel.checked
 				CheckBox
 				{
-					name: "regressionCoefficientsSubmodelCredibleIntervals"; label: qsTr("Credible intervals")
-					CIField { name: "regressionCoefficientsSubmodelCredibleIntervalsInterval"; label: qsTr("Interval") }
+					name: "regressionCoefficientsSubmodelCi"; label: qsTr("Credible intervals")
+					CIField { name: "regressionCoefficientsSubmodelCiLevel"; label: qsTr("Interval") }
 				}
 			}
 		}
@@ -104,12 +104,12 @@ Form
 		RadioButtonGroup
 		{
 			title: qsTr("Samples")
-			name: "sampleMode"
+			name: "samplingMethod"
 			RadioButton { value: "auto";	label: qsTr("Auto");  checked: true	}
 			RadioButton
 			{
 				value: "manual";			label: qsTr("Manual")
-				IntegerField { name: "fixedSamplesNumber"; label: qsTr("No. samples"); defaultValue: 10000; fieldWidth: 60 }
+				IntegerField { name: "samplingMethodManualSamples"; label: qsTr("No. samples"); defaultValue: 10000; fieldWidth: 60 }
 			}
 		}
 

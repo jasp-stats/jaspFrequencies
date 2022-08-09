@@ -207,4 +207,21 @@ Upgrades
 		ChangeRename{	from: "regressionCoefficientsConfidenceIntervalsInterval";		to: "regressionCoefficientsCiLevel"		}
 		ChangeRename{	from: "VovkSellkeMPR";											to: "vovkSellke"						}
 	}
+
+	Upgrade
+	{
+		functionName:		"RegressionLogLinearBayesian"
+		fromVersion:		"0.15"
+		toVersion:			"0.16.4"
+
+		ChangeRename{	from: "counts";															to: "count"										}
+		ChangeRename{	from: "maxModels";														to: "modelCutOffBestDisplayed"					}
+		ChangeRename{	from: "posteriorProbabilityCutOff";										to: "modelCutOffPosteriorProbability"			}
+		ChangeRename{	from: "regressionCoefficientsCredibleIntervals";						to: "regressionCoefficientsCi"					}
+		ChangeRename{	from: "regressionCoefficientsCredibleIntervalsInterval";				to: "regressionCoefficientsCiLevel"				}
+		ChangeRename{	from: "regressionCoefficientsSubmodelCredibleIntervals";				to: "regressionCoefficientsSubmodelCi"			}
+		ChangeRename{	from: "regressionCoefficientsSubmodelCredibleIntervalsInterval";		to: "regressionCoefficientsSubmodelCiLevel"		}
+		ChangeRename{	from: "sampleMode";														to: "samplingMethod"							}
+		ChangeRename{	from: "fixedSamplesNumber";												to: "samplingMethodManualSamples"				}
+	}
 }

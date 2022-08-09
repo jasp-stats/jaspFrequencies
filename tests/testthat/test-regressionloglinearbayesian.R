@@ -2,15 +2,15 @@ context("Bayesian Log-Linear Regression")
 
 initOpts <- function() {
   options <- jaspTools::analysisOptions("RegressionLogLinearBayesian")
-  options$sampleMode <- "manual"
-  options$fixedSamplesNumber <- 100
+  options$samplingMethod <- "manual"
+  options$samplingMethodManualSamples <- 100
   return(options)
 }
 
 test_that("Main table results match", {
   set.seed(0)
   options <- initOpts()
-  options$counts <- "facFifty"
+  options$count <- "facFifty"
   options$factors <- c("contBinom", "facGender")
   options$modelTerms <- list(
     list(components="contBinom"),
@@ -19,8 +19,8 @@ test_that("Main table results match", {
   )
   options$priorScale <- 1
   options$priorShape <- 0
-  options$maxModels <- 2
-  options$posteriorProbabilityCutOff <- 0.001
+  options$modelCutOffBestDisplayed <- 2
+  options$modelCutOffPosteriorProbability <- 0.001
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
   table <- results[["results"]][["Container"]][["collection"]][["Container_MainTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -40,8 +40,8 @@ test_that("General summary statistics table matches", {
     list(components=c("contBinom", "facFive"))
   )
   options$regressionCoefficientsEstimates <- TRUE
-  options$regressionCoefficientsCredibleIntervals <- TRUE
-  options$regressionCoefficientsCredibleIntervalsInterval <- 0.90
+  options$regressionCoefficientsCi <- TRUE
+  options$regressionCoefficientsCiLevel <- 0.90
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
   table <- results[["results"]][["Container"]][["collection"]][["Container_SummaryTable"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -75,7 +75,7 @@ test_that("Submodel summary statistics table matches", {
     list(components=c("contBinom", "facFive"))
   )
   options$regressionCoefficientsSubmodel <- TRUE
-  options$regressionCoefficientsSubmodelCredibleIntervals <- TRUE
+  options$regressionCoefficientsSubmodelCi <- TRUE
   options$regressionCoefficientsSubmodelEstimates <- TRUE
   options$regressionCoefficientsSubmodelNo <- 2
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
@@ -96,7 +96,7 @@ test_that("Analysis handles errors - Infinity", {
   set.seed(0)
   options <- initOpts()
   options$factors <- c("contBinom", "facFive")
-  options$counts <- "debInf"
+  options$count <- "debInf"
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError")
