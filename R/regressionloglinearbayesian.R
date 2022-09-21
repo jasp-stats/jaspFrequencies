@@ -197,7 +197,7 @@ RegressionLogLinearBayesian <- function(jaspResults, dataset = NULL, options, ..
     }
   }
   container[["bfObject"]] <- createJaspState(bfObject)
-  container[["bfObject"]]$dependOn(c("fixedSamplesNumber", "sampleMode", "seed", "setSeed"))
+  container[["bfObject"]]$dependOn(c("fixedSamplesNumber", "sampleMode", "seed", "setSeed", "maxModels"))
   return(bfObject)
 }
 
