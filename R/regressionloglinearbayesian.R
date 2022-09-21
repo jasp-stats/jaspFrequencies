@@ -251,7 +251,7 @@ RegressionLogLinearBayesian <- function(jaspResults, dataset = NULL, options, ..
   results <- list()
 
   lookup.table <- .regressionLogLinearBayesianBuildLookup(dataset, options$factors)
-  lookup.table[["(Intercept)"]] <- "(Intercept)"
+  lookup.table[["(Intercept)"]] <- gettext("(Intercept)")
 
   if(inherits(bfObject$bcctObj, "bcct")) {
     probLevel <- options$regressionCoefficientsCredibleIntervalsInterval
@@ -333,7 +333,7 @@ RegressionLogLinearBayesian <- function(jaspResults, dataset = NULL, options, ..
 
   results <- list()
   lookup.table <- .regressionLogLinearBayesianBuildLookup(dataset, options$factors)
-  lookup.table[["(Intercept)"]] <- "(Intercept)"
+  lookup.table[["(Intercept)"]] <- gettext("(Intercept)")
 
   if (!is.null(bfObject$bcctObj)) {
     probLevel <- options$regressionCoefficientsSubmodelCredibleIntervalsInterval
