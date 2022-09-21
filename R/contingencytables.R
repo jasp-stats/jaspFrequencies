@@ -812,7 +812,7 @@ ContingencyTables <- function(jaspResults, dataset, options, ...) {
 
     rows                          <- list()
     row.count                     <- list()
-    row.count[["type[counts]"]]   <- "Count"
+    row.count[["type[counts]"]]   <- gettext("Count")
 
     if (ready) {
 
