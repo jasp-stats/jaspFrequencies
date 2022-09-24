@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.16.4\n"
-"POT-Creation-Date: 2022-09-17 04:05\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -247,6 +247,9 @@ msgstr ""
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
 msgstr ""
 
+msgid "Count"
+msgstr ""
+
 msgid "N"
 msgstr ""
 
@@ -406,6 +409,9 @@ msgstr ""
 msgid "Observed Proportions"
 msgstr ""
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr ""
 
@@ -431,6 +437,9 @@ msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \nthe m
 msgstr ""
 
 msgid "variables cannot be read"
+msgstr ""
+
+msgid "Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors."
 msgstr ""
 
 msgid "R Package error: %s"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2022-07-23 03:47\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: 2022-09-15 09:10+0000\n"
 "Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
@@ -266,6 +266,10 @@ msgid ""
 "%2$s <em>%3$s</em>."
 msgstr ""
 
+#, fuzzy
+msgid "Count"
+msgstr "Nombre"
+
 msgid "N"
 msgstr "N"
 
@@ -434,6 +438,9 @@ msgstr ""
 msgid "Observed Proportions"
 msgstr ""
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr "ANOVA"
 
@@ -463,6 +470,11 @@ msgid ""
 msgstr ""
 
 msgid "variables cannot be read"
+msgstr ""
+
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
 msgstr ""
 
 msgid "R Package error: %s"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-07-23 03:47\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: 2021-09-11 03:29+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -286,6 +286,10 @@ msgstr ""
 "Para todos os testes, a hipótese alternativa especifica que o grupo <em>"
 "%1$s</em> %2$s <em>%3$s</em>."
 
+#, fuzzy
+msgid "Count"
+msgstr "Contagem"
+
 msgid "N"
 msgstr "N"
 
@@ -464,6 +468,9 @@ msgstr "Contagens Observadas"
 msgid "Observed Proportions"
 msgstr "Proporções Observadas"
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr "ANOVA"
 
@@ -499,6 +506,11 @@ msgstr ""
 
 msgid "variables cannot be read"
 msgstr "as variáveis não podem ser lidas"
+
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
+msgstr ""
 
 msgid "R Package error: %s"
 msgstr "Erro do pacote R: %s"

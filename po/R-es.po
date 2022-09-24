@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2022-07-23 03:47\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: 2022-07-26 11:24+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -290,6 +290,10 @@ msgstr ""
 "Para todas las pruebas, la hipótesis alternativa especifica que el grupo <em>"
 "%1$s</em>%2$s<em>%3$s</em>."
 
+#, fuzzy
+msgid "Count"
+msgstr "Recuentos"
+
 msgid "N"
 msgstr "N"
 
@@ -469,6 +473,9 @@ msgstr "Recuentos Observados"
 msgid "Observed Proportions"
 msgstr "Proporciones Observadas"
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr "ANOVA"
 
@@ -503,6 +510,11 @@ msgstr ""
 
 msgid "variables cannot be read"
 msgstr "las variables no se pueden leer"
+
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
+msgstr ""
 
 msgid "R Package error: %s"
 msgstr "Fallo del paquete de R: %s"

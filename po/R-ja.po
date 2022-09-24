@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-07-23 03:47\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: 2022-05-31 11:19+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -274,6 +274,10 @@ msgstr ""
 "すべての検定について、対立仮説はグループ <em>%1$s </em> %2$s <em>%3$s</em>を"
 "指定します。"
 
+#, fuzzy
+msgid "Count"
+msgstr "カウント"
+
 msgid "N"
 msgstr "N"
 
@@ -443,6 +447,9 @@ msgstr "観測度数"
 msgid "Observed Proportions"
 msgstr "観測比率"
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr "分散分析"
 
@@ -476,6 +483,11 @@ msgstr ""
 
 msgid "variables cannot be read"
 msgstr "変数を読み取ることができません"
+
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
+msgstr ""
 
 msgid "R Package error: %s"
 msgstr "R パッケージのエラーです: %s"

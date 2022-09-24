@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-07-23 03:47\n"
+"POT-Creation-Date: 2022-09-24 04:11\n"
 "PO-Revision-Date: 2022-07-26 11:24+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -295,6 +295,10 @@ msgstr ""
 "Para tódalas probas, a hipótese alternativa indica que o grupo <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 
+#, fuzzy
+msgid "Count"
+msgstr "Recontos"
+
 msgid "N"
 msgstr "N"
 
@@ -472,6 +476,9 @@ msgstr "Recontos observados"
 msgid "Observed Proportions"
 msgstr "Proporcións observadas"
 
+msgid "(Intercept)"
+msgstr ""
+
 msgid "ANOVA"
 msgstr "ANOVA"
 
@@ -506,6 +513,11 @@ msgstr ""
 
 msgid "variables cannot be read"
 msgstr "as variables non poden lerse"
+
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
+msgstr ""
 
 msgid "R Package error: %s"
 msgstr "Fallo do paquete de R: %s"
