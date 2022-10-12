@@ -44,11 +44,11 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
     .abTestPlotPriorPosterior(jaspResults, ab_obj, options, ready, position = 3)
 
   ### SEQUENTIAL PLOT          ###
-  if (options$sequentialAnalysisPlot)
+  if (options$bfSequentialPlot)
     .abTestPlotSequential(jaspResults, ab_obj, ready, position = 4)
 
   ### ROBUSTNESS PLOT          ###
-  if (options$robustnessPlot)
+  if (options$bfRobustnessPlot)
     .abTestPlotRobustness(jaspResults, ab_obj, options, ready, position = 5)
 
   ### PRIOR PLOT               ###
@@ -304,7 +304,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
     "oddsRatio"    = "or",
     "relativeRisk" = "rrisk",
     "absoluteRisk" = "arisk",
-    "p1p2"         = "p1p2"
+    "p1P2"         = "p1p2"
   )
 
   plotFunc <- function() {
@@ -318,7 +318,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotSequential <- function(jaspResults, ab_obj, ready, position) {
 
   abTestSequentialPlot <- createJaspPlot(title = gettext("Sequential Analysis"),  width = 530, height = 400)
-  abTestSequentialPlot$dependOn(options = "sequentialAnalysisPlot", optionsFromObject = jaspResults[["model"]])
+  abTestSequentialPlot$dependOn(options = "bfSequentialPlot", optionsFromObject = jaspResults[["model"]])
   abTestSequentialPlot$position <- position
 
   jaspResults[["abTestSequentialPlot"]] <- abTestSequentialPlot
@@ -338,7 +338,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotRobustness <- function(jaspResults, ab_obj, options, ready, position) {
 
   abTestRobustnessPlot <- createJaspPlot(title = gettext("Bayes Factor Robustness Check"),  width = 530, height = 400)
-  abTestRobustnessPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "robustnessPlotStepsPriorMean", "robustnessPlotStepsPriorSd", "robustnessPlotLowerPriorMean", "robustnessPlotUpperPriorMean", "robustnessPlotLowerPriorSd", "robustnessPlotUpperPriorSd", "robustnessPlotType", "samples", "robustnessPlot", "setSeed", "seed"))
+  abTestRobustnessPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "bfRobustnessPlotStepsPriorMean", "bfRobustnessPlotStepsPriorSd", "bfRobustnessPlotLowerPriorMean", "bfRobustnessPlotUpperPriorMean", "bfRobustnessPlotLowerPriorSd", "bfRobustnessPlotUpperPriorSd", "bfRobustnessPlotType", "samples", "bfRobustnessPlot", "setSeed", "seed"))
   abTestRobustnessPlot$position <- position
 
   jaspResults[["abTestRobustnessPlot"]] <- abTestRobustnessPlot
@@ -354,18 +354,18 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   # Args:
   #   ab_obj: ab test object
 
-  mu_range    = c(options$robustnessPlotLowerPriorMean,    options$robustnessPlotUpperPriorMean)
-  sigma_range = c(options$robustnessPlotLowerPriorSd, options$robustnessPlotUpperPriorSd)
+  mu_range    = c(options$bfRobustnessPlotLowerPriorMean,    options$bfRobustnessPlotUpperPriorMean)
+  sigma_range = c(options$bfRobustnessPlotLowerPriorSd, options$bfRobustnessPlotUpperPriorSd)
 
   plotFunc <- function() {
 
     abtest::plot_robustness(
       x           = ab_obj,
-      mu_steps    = options$robustnessPlotStepsPriorMean,
-      sigma_steps = options$robustnessPlotStepsPriorSd,
+      mu_steps    = options$bfRobustnessPlotStepsPriorMean,
+      sigma_steps = options$bfRobustnessPlotStepsPriorSd,
       mu_range    = mu_range,
       sigma_range = sigma_range,
-      bftype      = options$robustnessPlotType
+      bftype      = options$bfRobustnessPlotType
     )
   }
 
@@ -399,7 +399,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
     "oddsRatio"    = "or",
     "relativeRisk" = "rrisk",
     "absoluteRisk" = "arisk",
-    "p1p2"         = "p1p2",
+    "p1P2"         = "p1p2",
     "p1"           = "p1",
     "p2"           = "p2"
   )

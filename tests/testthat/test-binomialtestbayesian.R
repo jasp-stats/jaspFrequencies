@@ -39,7 +39,7 @@ test_that("Sequential analysis plots match - BF10", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
-  options$sequentialAnalysisPlot <- TRUE
+  options$bfSequentialPlot <- TRUE
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -55,7 +55,7 @@ test_that("Sequential analysis plots match - BF01", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
-  options$sequentialAnalysisPlot <- TRUE
+  options$bfSequentialPlot <- TRUE
   options$bayesFactorType <- "BF01"
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
 

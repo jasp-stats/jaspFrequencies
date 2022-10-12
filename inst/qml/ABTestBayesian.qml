@@ -25,7 +25,7 @@ import JASP 1.0
 
 Form
 {
-	
+
 
 	VariablesForm
 	{
@@ -79,14 +79,14 @@ Form
 						{ value: "oddsRatio",		label: qsTr("Odds Ratio")			},
 						{ value: "relativeRisk",	label: qsTr("Relative Risk")		},
 						{ value: "absoluteRisk",	label: qsTr("Absolute Risk")		},
-						{ value: "p1p2",			label: qsTr("p1 & p2")				}
+						{ value: "p1P2",			label: qsTr("p1 & p2")				}
 					]
 				}
 			}
 
 			CheckBox
 			{
-				name	: "sequentialAnalysisPlot"
+				name	: "bfSequentialPlot"
 				label	: qsTr("Sequential analysis")
 			}
 
@@ -106,7 +106,7 @@ Form
 						{ value: "oddsRatio",		label: qsTr("Odds Ratio")			},
 						{ value: "relativeRisk",	label: qsTr("Relative Risk")		},
 						{ value: "absoluteRisk",	label: qsTr("Absolute Risk")		},
-						{ value: "p1p2",			label: qsTr("p1 & p2")				},
+						{ value: "p1P2",			label: qsTr("p1 & p2")				},
 						{ value: "p1",				label: qsTr("p1")					},
 						{ value: "p1",				label: qsTr("p1")					},
 					]
@@ -115,14 +115,14 @@ Form
 
 			CheckBox
 			{
-				name				: "robustnessPlot"
+				name				: "bfRobustnessPlot"
 				label				: qsTr("Bayes factor robustness check")
 				childrenOnSameRow	: true
 
 				DropDown
 				{
 					id		: plotRobustnessBFType
-					name	: "robustnessPlotType"
+					name	: "bfRobustnessPlotType"
 					values	: bayesFactorType.value == "BF01" ? ['BF01', 'BF0+', 'BF0-'] : ['BF10', 'BF+0', 'BF-0']
 				}
 			}
@@ -171,8 +171,8 @@ Form
 				Group
 				{
 					title	: qsTr("No. Steps")
-					IntegerField { label: qsTr("\u03bc:"); name: "robustnessPlotStepsPriorMean";	defaultValue: 5; min: 3 }
-					IntegerField { label: qsTr("\u03c3:"); name: "robustnessPlotStepsPriorSd";	defaultValue: 5; min: 3 }
+					IntegerField { label: qsTr("\u03bc:"); name: "bfRobustnessPlotStepsPriorMean";	defaultValue: 5; min: 3 }
+					IntegerField { label: qsTr("\u03c3:"); name: "bfRobustnessPlotStepsPriorSd";	defaultValue: 5; min: 3 }
 				}
 
 				Group
@@ -185,7 +185,7 @@ Form
 					{
 						id				: muLower
 						label			: qsTr("lower:")
-						name			: "robustnessPlotLowerPriorMean"
+						name			: "bfRobustnessPlotLowerPriorMean"
 						defaultValue	: plotRobustnessBFType.currentText == "BF+0" ? 0 : -0.5
 						max				: muUpper.value
 						negativeValues	: true
@@ -196,7 +196,7 @@ Form
 					{
 						id				: muUpper
 						label			: qsTr("upper:")
-						name			: "robustnessPlotUpperPriorMean"
+						name			: "bfRobustnessPlotUpperPriorMean"
 						defaultValue	: plotRobustnessBFType.currentText == "BF-0" ? 0 : 0.5
 						min				: muLower.value
 						negativeValues	: true
@@ -208,7 +208,7 @@ Form
 					{
 						id				: sigmaLower
 						label			: qsTr("lower:")
-						name			: "robustnessPlotLowerPriorSd"
+						name			: "bfRobustnessPlotLowerPriorSd"
 						defaultValue	: 0.1
 						max				: sigmaUpper.value
 						negativeValues	: false
@@ -218,7 +218,7 @@ Form
 					{
 						id				: sigmaUpper
 						label			: qsTr("upper:")
-						name			: "robustnessPlotUpperPriorSd"
+						name			: "bfRobustnessPlotUpperPriorSd"
 						defaultValue	: 1.0
 						min				: sigmaLower.value
 						negativeValues	: false

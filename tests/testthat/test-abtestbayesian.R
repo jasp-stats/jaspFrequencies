@@ -150,7 +150,7 @@ test_that("Sequential plot matches", {
   options$priorModelProbabilityGreater <- 0.5
   options$priorModelProbabilityLess    <- 0
   options$priorModelProbabilityTwoSided  <- 0
-  options$sequentialAnalysisPlot <- TRUE
+  options$bfSequentialPlot <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -172,7 +172,7 @@ test_that("plotRobustness plot matches", {
   options$priorModelProbabilityGreater   <- 0.5
   options$priorModelProbabilityLess      <- 0
   options$priorModelProbabilityTwoSided  <- 0
-  options$robustnessPlot     <- TRUE
+  options$bfRobustnessPlot     <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]

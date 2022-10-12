@@ -243,7 +243,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 #plots ----
 .bayesBinomInferentialPlots <- function(jaspResults, dataset, options, ready) {
-  if (!options$priorAndPosteriorPlot && !options$sequentialAnalysisPlot)
+  if (!options$priorAndPosteriorPlot && !options$bfSequentialPlot)
     return()
 
   if (is.null(jaspResults[["inferentialPlots"]])) {
@@ -320,11 +320,11 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .bayesBinomSequentialPlot <- function(container, plotName, options, BF10, counts, n, hyp, var, data, level) {
-  if (!options$sequentialAnalysisPlot || !is.null(container[[plotName]]))
+  if (!options$bfSequentialPlot || !is.null(container[[plotName]]))
     return()
 
   plot <- createJaspPlot(title = gettext("Sequential Analysis"), width = 530, height = 400, aspectRatio = 0.7)
-  plot$dependOn(c("sequentialAnalysisPlot", "bayesFactorType"))
+  plot$dependOn(c("bfSequentialPlot", "bayesFactorType"))
 
   container[[plotName]] <- plot
 

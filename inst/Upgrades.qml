@@ -52,7 +52,7 @@ Upgrades
 		}
 		ChangeRename{	from: "plotPriorAndPosterior";					to: "priorAndPosteriorPlot"					}
 		ChangeRename{	from: "plotPriorAndPosteriorAdditionalInfo";	to: "priorAndPosteriorPlotAdditionalInfo"	}
-		ChangeRename{	from: "plotSequentialAnalysis";					to: "sequentialAnalysisPlot"				}
+		ChangeRename{	from: "plotSequentialAnalysis";					to: "bfSequentialPlot"				}
 		ChangeRename{	from: "descriptivesPlots";						to: "descriptivePlot"						}
 		ChangeRename{	from: "descriptivesPlotsCredibleInterval";		to: "descriptivePlotCiLevel"				}
 	}
@@ -247,11 +247,11 @@ Upgrades
 					case "OddsRatio":			return "oddsRatio";
 					case "RelativeRisk":		return "relativeRisk";
 					case "AbsoluteRisk":		return "absoluteRisk";
-					case "p1&p2":				return "p1p2";
+					case "p1&p2":				return "p1P2";
 				}
 			}
 		}
-		ChangeRename{	from: "plotSequentialAnalysis";		to: "sequentialAnalysisPlot"		}
+		ChangeRename{	from: "plotSequentialAnalysis";		to: "bfSequentialPlot"		}
 		ChangeRename{	from: "plotPriorOnly";				to: "priorPlot"						}
 		ChangeRename{	from: "plotPriorType";				to: "priorPlotType"					}
 		ChangeJS
@@ -265,24 +265,24 @@ Upgrades
 					case "OddsRatio":			return "oddsRatio";
 					case "RelativeRisk":		return "relativeRisk";
 					case "AbsoluteRisk":		return "absoluteRisk";
-					case "p1&p2":				return "p1p2";
+					case "p1&p2":				return "p1P2";
 					default:					return options["priorPlotType"];
 				}
 			}
 		}
-		ChangeRename{	from: "plotRobustness";						to: "robustnessPlot"					}
-		ChangeRename{	from: "plotRobustnessBFType";				to: "robustnessPlotType"				}
+		ChangeRename{	from: "plotRobustness";						to: "bfRobustnessPlot"					}
+		ChangeRename{	from: "plotRobustnessBFType";				to: "bfRobustnessPlotType"				}
 		ChangeRename{	from: "orEqualTo1Prob";						to: "priorModelProbabilityEqual"		}
 		ChangeRename{	from: "orGreaterThan1Prob";					to: "priorModelProbabilityGreater"		}
 		ChangeRename{	from: "orLessThan1Prob";					to: "priorModelProbabilityLess"			}
 		ChangeRename{	from: "orNotEqualTo1Prob";					to: "priorModelProbabilityTwoSided"		}
 		ChangeRename{	from: "numSamples";							to: "samples"							}
-		ChangeRename{	from: "mu_stepsize";						to: "robustnessPlotStepsPriorMean"		}
-		ChangeRename{	from: "sigma_stepsize";						to: "robustnessPlotStepsPriorSd"		}
-		ChangeRename{	from: "mu_stepsize_lower";					to: "robustnessPlotLowerPriorMean"		}
-		ChangeRename{	from: "mu_stepsize_upper";					to: "robustnessPlotUpperPriorMean"		}
-		ChangeRename{	from: "sigma_stepsize_lower";				to: "robustnessPlotLowerPriorSd"		}
-		ChangeRename{	from: "sigma_stepsize_upper";				to: "robustnessPlotUpperPriorSd"		}
+		ChangeRename{	from: "mu_stepsize";						to: "bfRobustnessPlotStepsPriorMean"		}
+		ChangeRename{	from: "sigma_stepsize";						to: "bfRobustnessPlotStepsPriorSd"		}
+		ChangeRename{	from: "mu_stepsize_lower";					to: "bfRobustnessPlotLowerPriorMean"		}
+		ChangeRename{	from: "mu_stepsize_upper";					to: "bfRobustnessPlotUpperPriorMean"		}
+		ChangeRename{	from: "sigma_stepsize_lower";				to: "bfRobustnessPlotLowerPriorSd"		}
+		ChangeRename{	from: "sigma_stepsize_upper";				to: "bfRobustnessPlotUpperPriorSd"		}
 
 
 	}
