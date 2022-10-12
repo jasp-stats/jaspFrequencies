@@ -6,8 +6,8 @@ Upgrades
 	Upgrade
 	{
 		functionName: 		"BinomialTest"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "hypothesis";	to: "alternative"	}
 		ChangeJS
@@ -33,8 +33,8 @@ Upgrades
 	Upgrade
 	{
 		functionName: 		"BinomialTestBayesian"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "hypothesis";	to: "alternative"	}
 		ChangeJS
@@ -60,8 +60,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"MultinomialTest"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		// this option did not do anything and was always hidden so now it's removed
 		ChangeRemove{	name: "simulatepval"	}
@@ -105,8 +105,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"MultinomialTestBayesian"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "counts";					to: "count"				}
 		ChangeRename{	from: "exProbVar";				to: "expectedCount"		}
@@ -147,8 +147,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"ContingencyTables"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "VovkSellkeMPR";							to: "vovkSellke"				}
 		ChangeRename{	from: "LogOdds";								to: "oddsRatioAsLogOdds"		}
@@ -171,8 +171,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"ContingencyTablesBayesian"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "oddsRatioCredibleIntervalInterval";			to: "oddsRatioCiLevel"	}
 		ChangeRename{	from: "effectSize";									to: "cramersV"	}
@@ -199,8 +199,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"RegressionLogLinear"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "counts";													to: "count"								}
 		ChangeRename{	from: "regressionCoefficientsConfidenceIntervals";				to: "regressionCoefficientsCi"			}
@@ -211,8 +211,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"RegressionLogLinearBayesian"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "counts";															to: "count"										}
 		ChangeRename{	from: "maxModels";														to: "modelCutOffBestDisplayed"					}
@@ -228,8 +228,8 @@ Upgrades
 	Upgrade
 	{
 		functionName:		"ABTestBayesian"
-		fromVersion:		"0.15"
-		toVersion:			"0.16.4"
+		fromVersion:		"0.16.4"
+		toVersion:			"0.17.0"
 
 		ChangeRename{	from: "normal_mu";					to: "normalPriorMean"				}
 		ChangeRename{	from: "normal_sigma";				to: "normalPriorSd"					}
@@ -283,7 +283,5 @@ Upgrades
 		ChangeRename{	from: "mu_stepsize_upper";					to: "bfRobustnessPlotUpperPriorMean"		}
 		ChangeRename{	from: "sigma_stepsize_lower";				to: "bfRobustnessPlotLowerPriorSd"		}
 		ChangeRename{	from: "sigma_stepsize_upper";				to: "bfRobustnessPlotUpperPriorSd"		}
-
-
 	}
 }
