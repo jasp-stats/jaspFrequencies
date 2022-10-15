@@ -1,65 +1,72 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-10-16 10:38+0000\n"
+"Last-Translator: Changya Hu <changyahu@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"jasp/jaspfrequencies-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15-dev\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "Frequencies"
-msgstr ""
+msgstr "次數"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
-msgstr ""
+msgstr "計次資料分析"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "古典"
 
 msgctxt "Description|"
 msgid "Binomial Test"
-msgstr ""
+msgstr "二項式檢定"
 
 msgctxt "Description|"
 msgid "Multinomial Test"
-msgstr ""
+msgstr "多項式檢定"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
-msgstr ""
+msgstr "列聯表"
 
 msgctxt "Description|"
 msgid "Log-Linear Regression"
-msgstr ""
+msgstr "對數線性迴歸"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "貝氏"
 
 msgctxt "Description|"
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "貝氏二項式檢定"
 
 msgctxt "Description|"
 msgid "A/B Test"
-msgstr ""
+msgstr "A/B 檢定"
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "貝氏A/B檢定"
 
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "貝氏多項式檢定"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
-msgstr ""
+msgstr "貝氏列聯表"
 
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr ""
+msgstr "貝氏對數線性迴歸"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
@@ -67,7 +74,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr ""
+msgstr "組1樣本數"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
@@ -75,7 +82,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr ""
+msgstr "組2樣本數"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
@@ -91,23 +98,23 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Descriptives"
-msgstr ""
+msgstr "描述統計"
 
 msgctxt "ABTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "事前與事後"
 
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "事前"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
@@ -119,15 +126,15 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
-msgstr ""
+msgstr "與最佳模式比較"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to null model"
-msgstr ""
+msgstr "與虛無模式比較"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
-msgstr ""
+msgstr "進階設定選項"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
@@ -151,7 +158,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
-msgstr ""
+msgstr "抽樣"
 
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
@@ -287,99 +294,99 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Rows"
-msgstr ""
+msgstr "橫列"
 
 msgctxt "ContingencyTables|"
 msgid "Columns"
-msgstr ""
+msgstr "直行"
 
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr ""
+msgstr "計次"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
-msgstr ""
+msgstr "層"
 
 msgctxt "ContingencyTables|"
 msgid "Statistics"
-msgstr ""
+msgstr "統計數"
 
 msgctxt "ContingencyTables|"
 msgid "χ²"
-msgstr ""
+msgstr "卡方"
 
 msgctxt "ContingencyTables|"
 msgid "χ² continuity correction"
-msgstr ""
+msgstr "卡方連續校正"
 
 msgctxt "ContingencyTables|"
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "概似比"
 
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke最大p-比率"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr ""
+msgstr "勝率比 (僅提供2x2)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "對數勝率比"
 
 msgctxt "ContingencyTables|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "ContingencyTables|"
 msgid "Alt. Hypothesis (Fisher's exact test)"
-msgstr ""
+msgstr "對立假設(Fisher's exact檢定)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
-msgstr ""
+msgstr "組1 ≠ 組2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr ""
+msgstr "組1 > 組2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr ""
+msgstr "組1 < 組2"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal"
-msgstr ""
+msgstr "名義"
 
 msgctxt "ContingencyTables|"
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "列聯(相關)係數"
 
 msgctxt "ContingencyTables|"
 msgid "Phi and Cramer's V"
-msgstr ""
+msgstr "Phi與Cramer's V"
 
 msgctxt "ContingencyTables|"
 msgid "Lambda"
-msgstr ""
+msgstr "Lambda"
 
 msgctxt "ContingencyTables|"
 msgid "Uncertainty coefficient"
-msgstr ""
+msgstr "不確定性係數"
 
 msgctxt "ContingencyTables|"
 msgid "Ordinal"
-msgstr ""
+msgstr "順序"
 
 msgctxt "ContingencyTables|"
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 msgctxt "ContingencyTables|"
 msgid "Somers' d"
-msgstr ""
+msgstr "Somers' d"
 
 msgctxt "ContingencyTables|"
 msgid "Kendall's tau-b"
@@ -395,23 +402,24 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Eta"
-msgstr ""
+msgstr "Eta"
 
 msgctxt "ContingencyTables|"
 msgid "Cochran's and Mantel-Haenszel statistics"
-msgstr ""
+msgstr "Cochran's and Mantel-Haenszel 統計數"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr ""
+msgstr "檢定共同勝率是否為"
 
 msgctxt "ContingencyTables|"
 msgid "Cells"
-msgstr ""
+msgstr "細格"
 
 msgctxt "ContingencyTables|"
 msgid "Expected"
-msgstr ""
+msgstr "期望值"
 
 msgctxt "ContingencyTables|"
 msgid "Hide small counts"
@@ -419,99 +427,99 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Less than"
-msgstr ""
+msgstr "小於"
 
 msgctxt "ContingencyTables|"
 msgid "Z-Test"
-msgstr ""
+msgstr "Z檢定"
 
 msgctxt "ContingencyTables|"
 msgid "Compare column proportions"
-msgstr ""
+msgstr "比較直行比例"
 
 msgctxt "ContingencyTables|"
 msgid "Adjust p-values"
-msgstr ""
+msgstr "調整p值"
 
 msgctxt "ContingencyTables|"
 msgid "Residuals"
-msgstr ""
+msgstr "殘差"
 
 msgctxt "ContingencyTables|"
 msgid "Unstandardized"
-msgstr ""
+msgstr "未標準化"
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
-msgstr ""
+msgstr "皮爾森"
 
 msgctxt "ContingencyTables|"
 msgid "Standardized"
-msgstr ""
+msgstr "標準化"
 
 msgctxt "ContingencyTables|"
 msgid "Percentages"
-msgstr ""
+msgstr "百分比"
 
 msgctxt "ContingencyTables|"
 msgid "Row"
-msgstr ""
+msgstr "橫列"
 
 msgctxt "ContingencyTables|"
 msgid "Column"
-msgstr ""
+msgstr "直行"
 
 msgctxt "ContingencyTables|"
 msgid "Total"
-msgstr ""
+msgstr "總和"
 
 msgctxt "ContingencyTables|"
 msgid "Options"
-msgstr ""
+msgstr "設定選項"
 
 msgctxt "ContingencyTables|"
 msgid "Row Order"
-msgstr ""
+msgstr "橫列順序"
 
 msgctxt "ContingencyTables|"
 msgid "Ascending"
-msgstr ""
+msgstr "升冪"
 
 msgctxt "ContingencyTables|"
 msgid "Descending"
-msgstr ""
+msgstr "降冪"
 
 msgctxt "ContingencyTables|"
 msgid "Column Order"
-msgstr ""
+msgstr "直行順序"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Rows"
-msgstr ""
+msgstr "橫列"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Columns"
-msgstr ""
+msgstr "直行"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "計次"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
-msgstr ""
+msgstr "層"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Statistics"
-msgstr ""
+msgstr "統計數"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Sample"
-msgstr ""
+msgstr "樣本"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Poisson"
-msgstr ""
+msgstr "卜瓦松"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Joint multinomial"
@@ -531,47 +539,47 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr ""
+msgstr "對數勝率比(僅提供2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "可信區間"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cramer's V"
-msgstr ""
+msgstr "Cramer's V 相關係數"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "對立假設"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
-msgstr ""
+msgstr "組1 ≠ 組2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr ""
+msgstr "組1 > 組2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr ""
+msgstr "組1 < 組2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional info"
-msgstr ""
+msgstr "其他資訊"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "事前"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
@@ -579,59 +587,59 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cells"
-msgstr ""
+msgstr "細格"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Percentages"
-msgstr ""
+msgstr "百分比"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row"
-msgstr ""
+msgstr "橫列"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column"
-msgstr ""
+msgstr "直行"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Total"
-msgstr ""
+msgstr "總數"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Options"
-msgstr ""
+msgstr "設定選項"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row Order"
-msgstr ""
+msgstr "橫列順序"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Ascending"
-msgstr ""
+msgstr "升冪"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Descending"
-msgstr ""
+msgstr "降冪"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column Order"
-msgstr ""
+msgstr "直行順序"
 
 msgctxt "MultinomialTest|"
 msgid "Factor"
-msgstr ""
+msgstr "因子"
 
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr ""
+msgstr "計次"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
-msgstr ""
+msgstr "計次期望值"
 
 msgctxt "MultinomialTest|"
 msgid "Test Values"
-msgstr ""
+msgstr "檢定值"
 
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
@@ -639,95 +647,95 @@ msgstr ""
 
 msgctxt "MultinomialTest|"
 msgid "Expected proportions (χ² test)"
-msgstr ""
+msgstr "期望比率(卡方檢定)"
 
 msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives"
-msgstr ""
+msgstr "描述統計"
 
 msgctxt "MultinomialTest|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke 最大p-比率"
 
 msgctxt "MultinomialTest|"
 msgid "Display"
-msgstr ""
+msgstr "顯示"
 
 msgctxt "MultinomialTest|"
 msgid "Proportions"
-msgstr ""
+msgstr "比例"
 
 msgctxt "MultinomialTest|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
-msgstr ""
+msgstr "描述統計圖"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
-msgstr ""
+msgstr "因子"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "計次"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
-msgstr ""
+msgstr "計次期望值"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Test Values"
-msgstr ""
+msgstr "檢定值"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
-msgstr ""
+msgstr "相同比率"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected proportions"
-msgstr ""
+msgstr "預期比例"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "其他統計數"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives"
-msgstr ""
+msgstr "描述統計"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "可信區間"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Display"
-msgstr ""
+msgstr "顯示"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "比例"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
-msgstr ""
+msgstr "描述統計圖"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "事前"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
@@ -735,63 +743,63 @@ msgstr ""
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "水準數"
 
 msgctxt "RegressionLogLinear|"
 msgid "Counts (optional)"
-msgstr ""
+msgstr "計次(自選)"
 
 msgctxt "RegressionLogLinear|"
 msgid "Factors"
-msgstr ""
+msgstr "因子"
 
 msgctxt "RegressionLogLinear|"
 msgid "Model"
-msgstr ""
+msgstr "模型"
 
 msgctxt "RegressionLogLinear|"
 msgid "Components"
-msgstr ""
+msgstr "成分"
 
 msgctxt "RegressionLogLinear|"
 msgid "Model Terms"
-msgstr ""
+msgstr "模型設定"
 
 msgctxt "RegressionLogLinear|"
 msgid "Statistics"
-msgstr ""
+msgstr "統計數"
 
 msgctxt "RegressionLogLinear|"
 msgid "Regression Coefficient"
-msgstr ""
+msgstr "迴歸係數"
 
 msgctxt "RegressionLogLinear|"
 msgid "Estimates"
-msgstr ""
+msgstr "估計數"
 
 msgctxt "RegressionLogLinear|"
 msgid "Confidence intervals"
-msgstr ""
+msgstr "信賴區間"
 
 msgctxt "RegressionLogLinear|"
 msgid "Interval"
-msgstr ""
+msgstr "區間"
 
 msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke 最大p-比率"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Counts (optional)"
-msgstr ""
+msgstr "計次(自選)"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Factors"
-msgstr ""
+msgstr "因子"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "事前"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
@@ -811,64 +819,64 @@ msgstr ""
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
-msgstr ""
+msgstr "模式"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr ""
+msgstr "事後機率"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
-msgstr ""
+msgstr "模式"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Components"
-msgstr ""
+msgstr "成分"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr ""
+msgstr "模式內容"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
-msgstr ""
+msgstr "統計數"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Regression Coefficients"
-msgstr ""
+msgstr "迴歸係數"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Estimates"
-msgstr ""
+msgstr "估計值"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Credible intervals"
-msgstr ""
+msgstr "可靠(Credible)區間"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Interval"
-msgstr ""
+msgstr "區間"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Submodel"
-msgstr ""
+msgstr "子模式"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Advanced"
-msgstr ""
+msgstr "進階的"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Samples"
-msgstr ""
+msgstr "樣本"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Auto"
-msgstr ""
+msgstr "自動"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Manual"
-msgstr ""
+msgstr "手動"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
-msgstr ""
+msgstr "樣本數"
