@@ -22,8 +22,8 @@ test_that("Prior posterior plots match", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
-  options$priorAndPosteriorPlot <- TRUE
-  options$priorAndPosteriorPlotAdditionalInfo <- TRUE
+  options$priorPosteriorPlot <- TRUE
+  options$priorPosteriorPlotAdditionalInfo <- TRUE
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

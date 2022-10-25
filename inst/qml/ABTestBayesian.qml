@@ -65,14 +65,14 @@ Form
 			title	: qsTr("Plots")
 			CheckBox
 			{
-				name	: "priorAndPosteriorPlot"
+				name	: "priorPosteriorPlot"
 				label	: qsTr("Prior and posterior")
 				childrenOnSameRow: true
 
 				DropDown
 				{
 					id: plotPosteriorType
-					name: "priorAndPosteriorPlotType"
+					name: "priorPosteriorPlotType"
 					values:
 					[
 						{ value: "logOddsRatio",	label: qsTr("Log Odds Ratio")		},

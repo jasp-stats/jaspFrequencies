@@ -243,7 +243,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
 #plots ----
 .bayesBinomInferentialPlots <- function(jaspResults, dataset, options, ready) {
-  if (!options$priorAndPosteriorPlot && !options$bfSequentialPlot)
+  if (!options$priorPosteriorPlot && !options$bfSequentialPlot)
     return()
 
   if (is.null(jaspResults[["inferentialPlots"]])) {
@@ -294,11 +294,11 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .bayesBinomPriorPosteriorPlot <- function(container, plotName, options, BF10, counts, n, hyp) {
-  if (!options$priorAndPosteriorPlot || !is.null(container[[plotName]]))
+  if (!options$priorPosteriorPlot || !is.null(container[[plotName]]))
     return()
 
   plot <- createJaspPlot(title = gettext("Prior and Posterior"), width = 530, height = 400, aspectRatio = 0.7)
-  plot$dependOn(c("priorAndPosteriorPlot", "priorAndPosteriorPlotAdditionalInfo"))
+  plot$dependOn(c("priorPosteriorPlot", "priorPosteriorPlotAdditionalInfo"))
 
   container[[plotName]] <- plot
 
@@ -310,7 +310,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
 
   hypForPlots <- .binomHypothesisForPlots(hyp)
 
-  if (!options$priorAndPosteriorPlotAdditionalInfo)
+  if (!options$priorPosteriorPlotAdditionalInfo)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName)
   else
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName, BF = BF10, bfType = "BF10",

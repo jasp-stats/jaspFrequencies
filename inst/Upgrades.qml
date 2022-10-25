@@ -50,8 +50,8 @@ Upgrades
 				}
 			}
 		}
-		ChangeRename{	from: "plotPriorAndPosterior";					to: "priorAndPosteriorPlot"					}
-		ChangeRename{	from: "plotPriorAndPosteriorAdditionalInfo";	to: "priorAndPosteriorPlotAdditionalInfo"	}
+		ChangeRename{	from: "plotPriorAndPosterior";					to: "priorPosteriorPlot"					}
+		ChangeRename{	from: "plotPriorAndPosteriorAdditionalInfo";	to: "priorPosteriorPlotAdditionalInfo"	}
 		ChangeRename{	from: "plotSequentialAnalysis";					to: "bfSequentialPlot"				}
 		ChangeRename{	from: "descriptivesPlots";						to: "descriptivePlot"						}
 		ChangeRename{	from: "descriptivesPlotsCredibleInterval";		to: "descriptivePlotCiLevel"				}
@@ -234,14 +234,14 @@ Upgrades
 		ChangeRename{	from: "normal_mu";					to: "normalPriorMean"				}
 		ChangeRename{	from: "normal_sigma";				to: "normalPriorSd"					}
 		ChangeRename{	from: "descriptives";				to: "descriptiveTable"				}
-		ChangeRename{	from: "plotPriorAndPosterior";		to: "priorAndPosteriorPlot"			}
-		ChangeRename{	from: "plotPosteriorType";			to: "priorAndPosteriorPlotType"		}
+		ChangeRename{	from: "plotPriorAndPosterior";		to: "priorPosteriorPlot"			}
+		ChangeRename{	from: "plotPosteriorType";			to: "priorPosteriorPlotType"		}
 		ChangeJS
 		{
-			name:		"priorAndPosteriorPlotType"
+			name:		"priorPosteriorPlotType"
 			jsFunction:	function(options)
 			{
-				switch(options["priorAndPosteriorPlotType"])
+				switch(options["priorPosteriorPlotType"])
 				{
 					case "LogOddsRatio":		return "logOddsRatio";
 					case "OddsRatio":			return "oddsRatio";

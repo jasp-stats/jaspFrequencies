@@ -60,9 +60,9 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name:	"priorAndPosteriorPlot"
+			name:	"priorPosteriorPlot"
 			label:	qsTr("Prior and posterior")
-			CheckBox { name: "priorAndPosteriorPlotAdditionalInfo";	label: qsTr("Additional info");	checked: true }
+			CheckBox { name: "priorPosteriorPlotAdditionalInfo";	label: qsTr("Additional info");	checked: true }
 		}
 		CheckBox { name: "bfSequentialPlot";	label: qsTr("Sequential analysis") }
 		CheckBox

@@ -128,8 +128,8 @@ test_that("Posterior plot matches", {
   options$priorModelProbabilityGreater <- 0.5
   options$priorModelProbabilityLess    <- 0
   options$priorModelProbabilityTwoSided  <- 0
-  options$priorAndPosteriorPlot <- TRUE
-  options$priorAndPosteriorPlotType <- "logOddsRatio"
+  options$priorPosteriorPlot <- TRUE
+  options$priorPosteriorPlotType <- "logOddsRatio"
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]

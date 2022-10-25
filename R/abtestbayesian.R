@@ -40,7 +40,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
     .abTestBayesianDescriptivesTable(jaspResults, dataset, options, ready, position = 2)
 
   ### PRIOR AND POSTERIOR PLOT ###
-  if (options$priorAndPosteriorPlot)
+  if (options$priorPosteriorPlot)
     .abTestPlotPriorPosterior(jaspResults, ab_obj, options, ready, position = 3)
 
   ### SEQUENTIAL PLOT          ###
@@ -279,7 +279,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 .abTestPlotPriorPosterior <- function(jaspResults, ab_obj, options, ready, position) {
 
   abTestPriorAndPosteriorPlot <- createJaspPlot(title = gettext("Prior and Posterior"),  width = 530, height = 400)
-  abTestPriorAndPosteriorPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "samples", "priorAndPosteriorPlotType", "priorAndPosteriorPlot",
+  abTestPriorAndPosteriorPlot$dependOn(c("n1", "y1", "n2", "y2", "normalPriorMean", "normalPriorSd", "samples", "priorPosteriorPlotType", "priorPosteriorPlot",
                                          "setSeed", "seed"))
   abTestPriorAndPosteriorPlot$position <- position
 
@@ -288,7 +288,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   if (!ready)
     return()
 
-  abTestPriorAndPosteriorPlot$plotObject <- .plotPosterior.abTest(ab_obj, options$priorAndPosteriorPlotType)
+  abTestPriorAndPosteriorPlot$plotObject <- .plotPosterior.abTest(ab_obj, options$priorPosteriorPlotType)
 }
 
 
