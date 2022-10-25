@@ -239,7 +239,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   footnotes <- list()
 
   observed <- chisqResults[[1]][["observed"]]
-  if (options$descriptivesAs == "counts")
+  if (options$descriptivesType == "counts")
     observed <- as.integer(observed)
   else
     observed <- as.numeric(observed)/sum(observed)
@@ -250,7 +250,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     observed = observed,
     stringsAsFactors = FALSE
   )
-  if (options$descriptivesAs == "counts")
+  if (options$descriptivesType == "counts")
     for (r in chisqResults)
       tableFrame <- cbind(tableFrame, r[["expected"]])
   else
@@ -268,7 +268,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   if (options$descriptiveTableCi){
     ciDf <- .multComputeCIs(chisqResults[[1]][["observed"]],
                             options$descriptiveTableCiLevel,
-                            scale = options$descriptivesAs)
+                            scale = options$descriptivesType)
     tableFrame <- cbind(tableFrame, ciDf)
     message <- gettext("Confidence intervals are based on independent binomial distributions.")
     results[["footnotes"]][["CImessage"]] <- message
@@ -339,18 +339,18 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   chisqResults <- .chisquareTest(jaspResults, dataset, options)
 
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
-  descriptivesTable$dependOn(c("factor", "count", "expectedCount",  "testValues", "descriptivesAs", "descriptiveTable",
+  descriptivesTable$dependOn(c("factor", "count", "expectedCount",  "testValues", "descriptivesType", "descriptiveTable",
                                "descriptiveTableCi", "testValuesCustom", "descriptiveTableCiLevel"))
 
   if(options$factor == ""){
     descriptivesTable$addColumnInfo(name = "factor", title = gettext("Factor"), type = "string")
-    if (options$descriptivesAs == "counts")
+    if (options$descriptivesType == "counts")
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "integer")
     else
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "number")
   } else {
     descriptivesTable$addColumnInfo(name = "factor", title = options$factor, type = "string")
-    if (options$descriptivesAs == "counts")
+    if (options$descriptivesType == "counts")
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "integer")
     else
       descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = "number")
@@ -396,7 +396,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives Plot"), width = 500, aspectRatio = 0.7)
   descriptivesPlot$dependOn(c("factor", "count", "descriptivePlotCiLevel",
-                              "descriptivesAs", "descriptivePlot"))
+                              "descriptivesType", "descriptivePlot"))
 
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
@@ -415,7 +415,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   f <- names(chisqResults[[1]][["observed"]])
   plotFrame <- data.frame(factor = factor(f, levels = rev(f)))
   # Counts or props
-  if (options$descriptivesAs == "counts") {
+  if (options$descriptivesType == "counts") {
     yname <- gettext("Observed counts")
     obs   <- as.integer(chisqResults[[1]][["observed"]])
   } else {
@@ -429,7 +429,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   if (options$descriptivePlotCiLevel){
     ciDf       <- .multComputeCIs(chisqResults[[1]][["observed"]],
                                   options$descriptivePlotCiLevel,
-                                  ifErrorReturn = 0, scale = options$descriptivesAs)
+                                  ifErrorReturn = 0, scale = options$descriptivesType)
     plotFrame  <- cbind(plotFrame, ciDf)
   }
 

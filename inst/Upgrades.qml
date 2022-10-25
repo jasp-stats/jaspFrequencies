@@ -85,13 +85,13 @@ Upgrades
 		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
 		ChangeRename{	from: "confidenceInterval";				to: "descriptiveTableCi"		}
 		ChangeRename{	from: "confidenceIntervalInterval";		to: "descriptiveTableCiLevel"	}
-		ChangeRename{	from: "countProp";						to: "descriptivesAs"			}
+		ChangeRename{	from: "countProp";						to: "descriptivesType"			}
 		ChangeJS
 		{
-			name: "descriptivesAs"
+			name: "descriptivesType"
 			jsFunction:	function(options)
 			{
-				switch(options["descriptivesAs"])
+				switch(options["descriptivesType"])
 				{
 					case "descCounts":		return "counts";
 					case "descProps":		return "proportions";
@@ -127,13 +127,13 @@ Upgrades
 		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
 		ChangeRename{	from: "credibleInterval";				to: "descriptiveTableCi"		}
 		ChangeRename{	from: "credibleIntervalInterval";		to: "descriptiveTableCiLevel"	}
-		ChangeRename{	from: "countProp";						to: "descriptivesAs"			}
+		ChangeRename{	from: "countProp";						to: "descriptivesType"			}
 		ChangeJS
 		{
-			name: "descriptivesAs"
+			name: "descriptivesType"
 			jsFunction:	function(options)
 			{
-				switch(options["descriptivesAs"])
+				switch(options["descriptivesType"])
 				{
 					case "descCounts":		return "counts";
 					case "descProps":		return "proportions";

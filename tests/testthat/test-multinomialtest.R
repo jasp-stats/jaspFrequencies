@@ -3,7 +3,7 @@ context("Multinomial Test")
 test_that("Main table results match", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$vovkSellke <- TRUE
-  options$descriptivesAs <- "proportions"
+  options$descriptivesType <- "proportions"
   options$descriptiveTable <- TRUE
   options$factor <- "facOutlier"
   options$testValues <- "custom"

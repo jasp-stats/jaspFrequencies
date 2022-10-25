@@ -18,7 +18,7 @@ test_that("Main table results match", {
 test_that("Descriptives table results match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "debString"
-  options$descriptivesAs <- "proportions"
+  options$descriptivesType <- "proportions"
   options$descriptiveTable <- TRUE
   options$descriptiveTableCi <- TRUE
   options$descriptiveTableCiLevel <- 0.10
@@ -35,7 +35,7 @@ test_that("Descriptives table results match", {
 test_that("Descriptives plots match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "contBinom"
-  options$descriptivesAs <- "proportions"
+  options$descriptivesType <- "proportions"
   options$descriptiveTableCi <- TRUE
   options$descriptivePlot <- TRUE
   options$priorCounts <- list(list(levels = c("0", "1"),

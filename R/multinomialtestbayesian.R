@@ -197,13 +197,13 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
     ciInterval    <- options$descriptiveTableCiLevel
     ciType  <- gettext("Credible")
     tableFootnote <- gettext("Credible intervals are based on independent binomial distributions with flat priors.")
-    descriptivesTable$dependOn(c("descriptivesAs", "descriptiveTable", "descriptiveTableCiLevel"))
+    descriptivesTable$dependOn(c("descriptivesType", "descriptiveTable", "descriptiveTableCiLevel"))
   } else {
     ciRequested   <- options$descriptiveTableCi
     ciInterval    <- options$descriptiveTableCiLevel
     ciType  <- gettext("Confidence")
     tableFootnote <- gettext("Confidence intervals are based on independent binomial distributions.")
-    descriptivesTable$dependOn(c("descriptivesAs", "descriptiveTable", "descriptiveTableCiLevel"))
+    descriptivesTable$dependOn(c("descriptivesType", "descriptiveTable", "descriptiveTableCiLevel"))
   }
 
   descriptivesTable$showSpecifiedColumnsOnly <- TRUE
@@ -211,7 +211,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   factorVariable <- multinomialResults[["specs"]][["factorVariable"]]
 
-  if(options$descriptivesAs == "counts")
+  if(options$descriptivesType == "counts")
     numberType <- "integer"
   else
     numberType <- "number"
@@ -249,10 +249,10 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
     return()
 
   # Add rows
-  descDF <- multinomialResults[["descriptivesTable"]][[options$descriptivesAs]]
+  descDF <- multinomialResults[["descriptivesTable"]][[options$descriptivesType]]
 
   if(ciRequested){
-    ciInfo <- multinomialResults[["descriptivesTable"]][[paste0(options$descriptivesAs, "CI")]]
+    ciInfo <- multinomialResults[["descriptivesTable"]][[paste0(options$descriptivesType, "CI")]]
     descDF <- cbind(descDF, ciInfo)
     descriptivesTable$addFootnote(tableFootnote)
 
@@ -334,14 +334,14 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   }
 
   # Counts or props
-  if (options$descriptivesAs == "counts") {
+  if (options$descriptivesType == "counts") {
     yname <- gettext("Observed Counts")
   } else {
     yname <- gettext("Observed Proportions")
   }
 
   # Prepare data for plotting
-  plotFrame <- multinomialResults[["descriptivesPlot"]][[options$descriptivesAs]]
+  plotFrame <- multinomialResults[["descriptivesPlot"]][[options$descriptivesType]]
   # We need to reverse the factor's levels because of the coord_flip later
   plotFrame$fact <- factor(plotFrame$fact, levels = rev(plotFrame$fact))
 

@@ -82,7 +82,7 @@ Form
 	{
 		RadioButtonGroup
 		{
-			name	: "descriptivesAs"
+			name	: "descriptivesType"
 			title	: qsTr("Display")
 
 			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true	}
