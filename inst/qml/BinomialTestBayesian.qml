@@ -67,9 +67,9 @@ Form
 		CheckBox { name: "bfSequentialPlot";	label: qsTr("Sequential analysis") }
 		CheckBox
 		{
-			name:	"descriptivePlot"
+			name:	"descriptivesPlot"
 			label:	qsTr("Descriptive plots")
-			CIField { name: "descriptivePlotCiLevel";	label: qsTr("Credible interval") }
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 	}
 

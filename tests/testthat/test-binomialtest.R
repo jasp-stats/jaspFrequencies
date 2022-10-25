@@ -19,8 +19,8 @@ test_that("Descriptives plots match", {
   skip("This test need to be verified")
   options <- jaspTools::analysisOptions("BinomialTest")
   options$variables <- "contBinom"
-  options$descriptivePlot <- TRUE
-  options$descriptivePlotCiLevel <- 0.90
+  options$descriptivesPlot <- TRUE
+  options$descriptivesPlotCiLevel <- 0.90
   results <- jaspTools::runAnalysis("BinomialTest", "test.csv", options)
 
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]

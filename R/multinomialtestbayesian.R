@@ -97,7 +97,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
   multinomialResults$mainTable[["nhyps"]]   <- nhyps
 
   #  Results for descriptives plot
-  multinomialResults$descriptivesPlot[["proportions"]]  <- .multComputeCIs(dataTable, options$descriptivePlotCiLevel, ifErrorReturn = 0, scale = "proportions")
+  multinomialResults$descriptivesPlot[["proportions"]]  <- .multComputeCIs(dataTable, options$descriptivesPlotCiLevel, ifErrorReturn = 0, scale = "proportions")
   multinomialResults$descriptivesPlot[["counts"]] <- multinomialResults$descriptivesPlot[["proportions"]] * N
   multinomialResults$descriptivesPlot[["proportions"]][["observed"]]  <- as.numeric(dataTable)/N
   multinomialResults$descriptivesPlot[["counts"]][["observed"]] <- as.numeric(dataTable)
@@ -117,8 +117,8 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   multinomialResults$descriptivesTable[["proportions"]]    <- setNames(as.data.frame(multinomialResults$descriptivesTable[["proportions"]]), c("fact", "observed", nms))
   multinomialResults$descriptivesTable[["counts"]]   <- setNames(as.data.frame(multinomialResults$descriptivesTable[["counts"]]), c("fact", "observed", nms))
-  multinomialResults$descriptivesTable[["proportionsCI"]]  <- .multComputeCIs(dataTable, options$descriptiveTableCiLevel, scale = "proportions")
-  multinomialResults$descriptivesTable[["countsCI"]] <- .multComputeCIs(dataTable, options$descriptiveTableCiLevel, scale = "counts")
+  multinomialResults$descriptivesTable[["proportionsCI"]]  <- .multComputeCIs(dataTable, options$descriptivesTableCiLevel, scale = "proportions")
+  multinomialResults$descriptivesTable[["countsCI"]] <- .multComputeCIs(dataTable, options$descriptivesTableCiLevel, scale = "counts")
 
   # Save results to state
   defaultOptions <- multinomialResults$specs$defaultOptions
@@ -185,7 +185,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 #' @return descriptivesTable descriptives table
 .createMultBayesDescriptivesTable <- function(jaspResults, options, multinomialResults, bayesianAnalysis = TRUE){
 
-  if(!options[["descriptiveTable"]])
+  if(!options[["descriptivesTable"]])
     return()
 
   # Create table
@@ -193,17 +193,17 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # settings for Bayesian and frequentist analysis
   if(bayesianAnalysis){
-    ciRequested   <- options$descriptiveTableCi
-    ciInterval    <- options$descriptiveTableCiLevel
+    ciRequested   <- options$descriptivesTableCi
+    ciInterval    <- options$descriptivesTableCiLevel
     ciType  <- gettext("Credible")
     tableFootnote <- gettext("Credible intervals are based on independent binomial distributions with flat priors.")
-    descriptivesTable$dependOn(c("descriptivesType", "descriptiveTable", "descriptiveTableCiLevel"))
+    descriptivesTable$dependOn(c("descriptivesType", "descriptivesTable", "descriptivesTableCiLevel"))
   } else {
-    ciRequested   <- options$descriptiveTableCi
-    ciInterval    <- options$descriptiveTableCiLevel
+    ciRequested   <- options$descriptivesTableCi
+    ciInterval    <- options$descriptivesTableCiLevel
     ciType  <- gettext("Confidence")
     tableFootnote <- gettext("Confidence intervals are based on independent binomial distributions.")
-    descriptivesTable$dependOn(c("descriptivesType", "descriptiveTable", "descriptiveTableCiLevel"))
+    descriptivesTable$dependOn(c("descriptivesType", "descriptivesTable", "descriptivesTableCiLevel"))
   }
 
   descriptivesTable$showSpecifiedColumnsOnly <- TRUE
@@ -273,14 +273,14 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 #' @return descriptivesPlot descriptives plot object
 .createMultBayesDescriptivesPlot <- function(jaspResults, options, multinomialResults) {
   # If there is no data OR descriptives plot is not selected: do not create a plot
-  if(!options$descriptivePlot)
+  if(!options$descriptivesPlot)
     return()
 
   factorVariable   <- multinomialResults[["specs"]][["factorVariable"]]
   descriptivesPlot <- .multBayesPlotHelper(factorVariable, options, multinomialResults)
 
   jaspResults[["descriptivesPlot"]] <- createJaspPlot(plot = descriptivesPlot, title = gettext("Descriptives plot"), width = 480, height = 320)
-  jaspResults[["descriptivesPlot"]]$dependOn(c("descriptivePlot", "factor", "count", "descriptivePlotCiLevel"))
+  jaspResults[["descriptivesPlot"]]$dependOn(c("descriptivesPlot", "factor", "count", "descriptivesPlotCiLevel"))
 
   descriptivesPlot$position <- 2
 }
@@ -417,7 +417,7 @@ MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   # Default options
   specs$defaultOptions <- c("testValuesCustom", "priorCounts","factor", "count", "expectedCount", "testValues",
-                            "descriptiveTableCiLevel")
+                            "descriptivesTableCiLevel")
 
   # Ready statement
   specs$ready <- options$factor != "" && !is.null(dataset)

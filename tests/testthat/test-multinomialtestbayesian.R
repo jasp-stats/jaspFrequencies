@@ -19,9 +19,9 @@ test_that("Descriptives table results match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "debString"
   options$descriptivesType <- "proportions"
-  options$descriptiveTable <- TRUE
-  options$descriptiveTableCi <- TRUE
-  options$descriptiveTableCiLevel <- 0.10
+  options$descriptivesTable <- TRUE
+  options$descriptivesTableCi <- TRUE
+  options$descriptivesTableCiLevel <- 0.10
   options$priorCounts <- list(list(levels =letters,
                                    name   = c('Counts'),
                                    values = rep(1, length(letters))))
@@ -36,8 +36,8 @@ test_that("Descriptives plots match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "contBinom"
   options$descriptivesType <- "proportions"
-  options$descriptiveTableCi <- TRUE
-  options$descriptivePlot <- TRUE
+  options$descriptivesTableCi <- TRUE
+  options$descriptivesPlot <- TRUE
   options$priorCounts <- list(list(levels = c("0", "1"),
                                    name   = c('Counts'),
                                    values = rep(1, 2)))
@@ -70,7 +70,7 @@ test_that("Descriptives table correctly shows reordered factor levels", {
   options$factor <- "Month"
   options$count  <- "Stress.frequency"
   options$expectedCount <- "Expected.counts"
-  options$descriptiveTable <- TRUE
+  options$descriptivesTable <- TRUE
   options$testValuesCustom <- list(list(levels = c("3", "1", "2", "4", "5", "6", "7", "8",
                                               "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"), name = "H₀ (a)",
                                    values = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,

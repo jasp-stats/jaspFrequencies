@@ -37,7 +37,7 @@ test_that("Descriptives table results match", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$descriptiveTable <- TRUE
+  options$descriptivesTable <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   table    <- results[["results"]][["abTestBayesianDescriptivesTable"]][["data"]]

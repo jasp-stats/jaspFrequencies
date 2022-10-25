@@ -53,7 +53,7 @@ Form
 
 		CheckBox
 		{
-			name	: "descriptiveTable";
+			name	: "descriptivesTable";
 			label	: qsTr("Descriptives")
 		}
 	}

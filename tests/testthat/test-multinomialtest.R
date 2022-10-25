@@ -4,7 +4,7 @@ test_that("Main table results match", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$vovkSellke <- TRUE
   options$descriptivesType <- "proportions"
-  options$descriptiveTable <- TRUE
+  options$descriptivesTable <- TRUE
   options$factor <- "facOutlier"
   options$testValues <- "custom"
   options$testValuesCustom <- list(
@@ -37,7 +37,7 @@ test_that("Main table results match", {
 test_that("Descriptives plot matches", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facFive"
-  options$descriptivePlot <- TRUE
+  options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("MultinomialTest", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
   jaspTools::expect_equal_plots(testPlot, "descriptives-1")

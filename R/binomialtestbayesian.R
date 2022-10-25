@@ -30,7 +30,7 @@ BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
   # Output tables and plots
   .bayesBinomTableMain(       jaspResults, dataset, options, ready)
   .bayesBinomInferentialPlots(jaspResults, dataset, options, ready)
-  .binomPlotsDescriptive(     jaspResults, dataset, options, ready, ciName = "descriptivePlotCiLevel")
+  .binomPlotsDescriptive(     jaspResults, dataset, options, ready, ciName = "descriptivesPlotCiLevel")
 }
 
 # Results function ----

@@ -7,7 +7,7 @@ test_that("Main table results match R, SPSS, SAS", {
   options$count <- "Count"
   options$factor <- "Color"
   options$testValues <- "custom"
-  options$descriptivePlot <- TRUE
+  options$descriptivesPlot <- TRUE
   options$testValuesCustom <- list(
     list(
       levels = list("Black", "Red", "White"),

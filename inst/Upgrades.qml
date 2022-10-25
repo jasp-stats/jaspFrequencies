@@ -26,8 +26,8 @@ Upgrades
 		ChangeRename{	from: "confidenceInterval";						to: "ci"						}
 		ChangeRename{	from: "confidenceIntervalInterval";				to: "ciLevel"					}
 		ChangeRename{	from: "VovkSellkeMPR";							to: "vovkSellke"				}
-		ChangeRename{	from: "descriptivesPlots";						to: "descriptivePlot"			}
-		ChangeRename{	from: "descriptivesPlotsConfidenceInterval";	to: "descriptivePlotCiLevel"	}
+		ChangeRename{	from: "descriptivesPlots";						to: "descriptivesPlot"			}
+		ChangeRename{	from: "descriptivesPlotsConfidenceInterval";	to: "descriptivesPlotCiLevel"	}
 	}
 
 	Upgrade
@@ -53,8 +53,8 @@ Upgrades
 		ChangeRename{	from: "plotPriorAndPosterior";					to: "priorPosteriorPlot"					}
 		ChangeRename{	from: "plotPriorAndPosteriorAdditionalInfo";	to: "priorPosteriorPlotAdditionalInfo"	}
 		ChangeRename{	from: "plotSequentialAnalysis";					to: "bfSequentialPlot"				}
-		ChangeRename{	from: "descriptivesPlots";						to: "descriptivePlot"						}
-		ChangeRename{	from: "descriptivesPlotsCredibleInterval";		to: "descriptivePlotCiLevel"				}
+		ChangeRename{	from: "descriptivesPlots";						to: "descriptivesPlot"						}
+		ChangeRename{	from: "descriptivesPlotsCredibleInterval";		to: "descriptivesPlotCiLevel"				}
 	}
 
 	Upgrade
@@ -82,9 +82,9 @@ Upgrades
 		}
 		ChangeRename{	from: "tableWidget";					to: "testValuesCustom"			}
 		ChangeRename{	from: "VovkSellkeMPR";					to: "vovkSellke"				}
-		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
-		ChangeRename{	from: "confidenceInterval";				to: "descriptiveTableCi"		}
-		ChangeRename{	from: "confidenceIntervalInterval";		to: "descriptiveTableCiLevel"	}
+		ChangeRename{	from: "descriptives";					to: "descriptivesTable"			}
+		ChangeRename{	from: "confidenceInterval";				to: "descriptivesTableCi"		}
+		ChangeRename{	from: "confidenceIntervalInterval";		to: "descriptivesTableCiLevel"	}
 		ChangeRename{	from: "countProp";						to: "descriptivesType"			}
 		ChangeJS
 		{
@@ -98,8 +98,8 @@ Upgrades
 				}
 			}
 		}
-		ChangeRename{	from: "descriptivesPlot";						to: "descriptivePlot"			}
-		ChangeRename{	from: "descriptivesPlotConfidenceInterval";		to: "descriptivePlotCiLevel"	}
+		ChangeRename{	from: "descriptivesPlot";						to: "descriptivesPlot"			}
+		ChangeRename{	from: "descriptivesPlotConfidenceInterval";		to: "descriptivesPlotCiLevel"	}
 	}
 
 	Upgrade
@@ -124,9 +124,9 @@ Upgrades
 			}
 		}
 		ChangeRename{	from: "tableWidget";					to: "testValuesCustom"			}
-		ChangeRename{	from: "descriptives";					to: "descriptiveTable"			}
-		ChangeRename{	from: "credibleInterval";				to: "descriptiveTableCi"		}
-		ChangeRename{	from: "credibleIntervalInterval";		to: "descriptiveTableCiLevel"	}
+		ChangeRename{	from: "descriptives";					to: "descriptivesTable"			}
+		ChangeRename{	from: "credibleInterval";				to: "descriptivesTableCi"		}
+		ChangeRename{	from: "credibleIntervalInterval";		to: "descriptivesTableCiLevel"	}
 		ChangeRename{	from: "countProp";						to: "descriptivesType"			}
 		ChangeJS
 		{
@@ -140,8 +140,8 @@ Upgrades
 				}
 			}
 		}
-		ChangeRename{	from: "descriptivesPlot";						to: "descriptivePlot"			}
-		ChangeRename{	from: "descriptivesPlotCredibleInterval";		to: "descriptivePlotCiLevel"	}
+		ChangeRename{	from: "descriptivesPlot";						to: "descriptivesPlot"			}
+		ChangeRename{	from: "descriptivesPlotCredibleInterval";		to: "descriptivesPlotCiLevel"	}
 	}
 
 	Upgrade
@@ -233,7 +233,7 @@ Upgrades
 
 		ChangeRename{	from: "normal_mu";					to: "normalPriorMean"				}
 		ChangeRename{	from: "normal_sigma";				to: "normalPriorSd"					}
-		ChangeRename{	from: "descriptives";				to: "descriptiveTable"				}
+		ChangeRename{	from: "descriptives";				to: "descriptivesTable"				}
 		ChangeRename{	from: "plotPriorAndPosterior";		to: "priorPosteriorPlot"			}
 		ChangeRename{	from: "plotPosteriorType";			to: "priorPosteriorPlotType"		}
 		ChangeJS

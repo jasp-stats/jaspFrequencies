@@ -230,13 +230,13 @@ BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
   }
 }
 
-.binomPlotsDescriptive <- function(jaspResults, dataset, options, ready, ciName = "descriptivePlotCiLevel") {
-  if (!options$descriptivePlot)
+.binomPlotsDescriptive <- function(jaspResults, dataset, options, ready, ciName = "descriptivesPlotCiLevel") {
+  if (!options$descriptivesPlot)
     return()
 
   if (is.null(jaspResults[["containerPlots"]])) {
     jaspResults[["containerPlots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-    jaspResults[["containerPlots"]]$dependOn(c("descriptivePlot", "testValue", ciName))
+    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlot", "testValue", ciName))
   }
 
   plotContainer <- jaspResults[["containerPlots"]]

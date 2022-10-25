@@ -64,15 +64,15 @@ Form
 
 		CheckBox
 		{
-			name	: "descriptiveTable"; label: qsTr("Descriptives")
+			name	: "descriptivesTable"; label: qsTr("Descriptives")
 
 			CheckBox
 			{
-				name:					"descriptiveTableCi"
+				name:					"descriptivesTableCi"
 				label:					qsTr("Confidence interval")
 				childrenOnSameRow	:	true
 
-				CIField {	name: "descriptiveTableCiLevel"	}
+				CIField {	name: "descriptivesTableCiLevel"	}
 			}
 		}
 		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio")		}
@@ -95,10 +95,10 @@ Form
 
 			CheckBox
 			{
-				name	: "descriptivePlot"
+				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
 
-				CIField {	name: "descriptivePlotCiLevel"; label: qsTr("Confidence interval")	}
+				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval")	}
 			}
 		}
 	}

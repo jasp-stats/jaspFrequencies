@@ -68,14 +68,14 @@ Form
 			title	: qsTr("Additional Statistics")
 			CheckBox
 			{
-				name	: "descriptiveTable"
+				name	: "descriptivesTable"
 				label	: qsTr("Descriptives")
 				CheckBox
 				{
-					name				: "descriptiveTableCi"; label: qsTr("Credible interval")
+					name				: "descriptivesTableCi"; label: qsTr("Credible interval")
 					childrenOnSameRow	: true
 
-					CIField { name: "descriptiveTableCiLevel" }
+					CIField { name: "descriptivesTableCiLevel" }
 				}
 			}
 		}
@@ -97,10 +97,10 @@ Form
 			title	: qsTr("Plots")
 			CheckBox
 			{
-				name	: "descriptivePlot"
+				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
 
-				CIField { name: "descriptivePlotCiLevel"; label: qsTr("Credible interval") }
+				CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Credible interval") }
 			}
 		}
 	}

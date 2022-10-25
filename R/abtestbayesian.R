@@ -36,7 +36,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
   .abTestBayesianTableMain(jaspResults, ab_obj, options, ready, position = 1)
 
   ### DESCRIPTIVES TABLE       ###
-  if (options$descriptiveTable)
+  if (options$descriptivesTable)
     .abTestBayesianDescriptivesTable(jaspResults, dataset, options, ready, position = 2)
 
   ### PRIOR AND POSTERIOR PLOT ###
@@ -240,7 +240,7 @@ ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
 
   abTestBayesianDescriptivesTable <- createJaspTable(title = gettext("Descriptives"))
 
-  abTestBayesianDescriptivesTable$dependOn(c("n1", "y1", "n2", "y2", "descriptiveTable"))
+  abTestBayesianDescriptivesTable$dependOn(c("n1", "y1", "n2", "y2", "descriptivesTable"))
   abTestBayesianDescriptivesTable$position <- position
 
   abTestBayesianDescriptivesTable$addColumnInfo(name = "group",      title = "",                    type = "string")

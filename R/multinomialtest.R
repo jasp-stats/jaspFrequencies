@@ -265,9 +265,9 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     colnames(tableFrame)[-(1:2)] <- nms
 
   # Add confidenceInterval to the tableFrame
-  if (options$descriptiveTableCi){
+  if (options$descriptivesTableCi){
     ciDf <- .multComputeCIs(chisqResults[[1]][["observed"]],
-                            options$descriptiveTableCiLevel,
+                            options$descriptivesTableCiLevel,
                             scale = options$descriptivesType)
     tableFrame <- cbind(tableFrame, ciDf)
     message <- gettext("Confidence intervals are based on independent binomial distributions.")
@@ -332,15 +332,15 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   # Return:
   #   Descriptives table
 
-  if(!options$descriptiveTable || !is.null(jaspResults[["descriptivesTable"]]))
+  if(!options$descriptivesTable || !is.null(jaspResults[["descriptivesTable"]]))
     return()
 
   # Compute/get Results
   chisqResults <- .chisquareTest(jaspResults, dataset, options)
 
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
-  descriptivesTable$dependOn(c("factor", "count", "expectedCount",  "testValues", "descriptivesType", "descriptiveTable",
-                               "descriptiveTableCi", "testValuesCustom", "descriptiveTableCiLevel"))
+  descriptivesTable$dependOn(c("factor", "count", "expectedCount",  "testValues", "descriptivesType", "descriptivesTable",
+                               "descriptivesTableCi", "testValuesCustom", "descriptivesTableCiLevel"))
 
   if(options$factor == ""){
     descriptivesTable$addColumnInfo(name = "factor", title = gettext("Factor"), type = "string")
@@ -367,8 +367,8 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
       }
     }
   }
-  if (options$descriptiveTableCi){
-    interval <- 100 * options$descriptiveTableCiLevel
+  if (options$descriptivesTableCi){
+    interval <- 100 * options$descriptivesTableCiLevel
     title <- gettextf("%s%% Confidence Interval", interval)
     descriptivesTable$addColumnInfo(name = "lowerCI", title = gettext("Lower"),
                                     type = "number", overtitle = title)
@@ -380,7 +380,7 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
     return()
   res <- try(.multinomDescriptivesTableFill(jaspResults, options, chisqResults))
   .multinomialSetError(res, descriptivesTable)
-  if(options$descriptiveTableCi) {
+  if(options$descriptivesTableCi) {
     message <- gettext("Confidence intervals are based on independent binomial distributions.")
     descriptivesTable$addFootnote(message)
     if (anyNA(unlist(descriptivesTable[["data"]][, c('lowerCI', 'upperCI')]))){
@@ -391,12 +391,12 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
 }
 
 .multinomialDescriptivesPlot <- function(jaspResults, dataset, options, ready) {
-  if(!options$descriptivePlot || !is.null(jaspResults[["descriptivesPlot"]]))
+  if(!options$descriptivesPlot || !is.null(jaspResults[["descriptivesPlot"]]))
     return()
 
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives Plot"), width = 500, aspectRatio = 0.7)
-  descriptivesPlot$dependOn(c("factor", "count", "descriptivePlotCiLevel",
-                              "descriptivesType", "descriptivePlot"))
+  descriptivesPlot$dependOn(c("factor", "count", "descriptivesPlotCiLevel",
+                              "descriptivesType", "descriptivesPlot"))
 
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
@@ -426,9 +426,9 @@ MultinomialTest <- function(jaspResults, dataset, options, ...) {
   plotFrame <- cbind(plotFrame, obs)
 
   # Calculate confidence interval
-  if (options$descriptivePlotCiLevel){
+  if (options$descriptivesPlotCiLevel){
     ciDf       <- .multComputeCIs(chisqResults[[1]][["observed"]],
-                                  options$descriptivePlotCiLevel,
+                                  options$descriptivesPlotCiLevel,
                                   ifErrorReturn = 0, scale = options$descriptivesType)
     plotFrame  <- cbind(plotFrame, ciDf)
   }
