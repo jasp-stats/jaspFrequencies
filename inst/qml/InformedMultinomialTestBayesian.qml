@@ -64,14 +64,14 @@ Form
 
 			RadioButton
 			{
-				value:		"Encompassing"
+				value:		"encompassing"
 				label:		qsTr("Encompassing")
 				checked:	true
 			}
 
 			RadioButton
 			{
-				value:		"Null"
+				value:		"null"
 				label:		qsTr("Null")
 			}
 
@@ -98,25 +98,20 @@ Form
 	ColumnLayout
 	{
 
-		Group
+		CheckBox
 		{
-			title:	qsTr("Additional Statistics")
+			name:	"descriptivesTable"
+			label:	qsTr("Descriptives")
 
 			CheckBox
 			{
-				name:	"descriptives"
-				label:	qsTr("Descriptives")
+				name:				"descriptivesTableCi"
+				label:				qsTr("Credible interval")
+				childrenOnSameRow:	true
 
-				CheckBox
+				CIField
 				{
-					name:				"credibleInterval"
-					label:				qsTr("Credible interval")
-					childrenOnSameRow:	true
-
-					CIField
-					{
-						name:	"credibleIntervalInterval"
-					}
+					name:	"descriptivesTableCiCoverage"
 				}
 			}
 		}
@@ -142,26 +137,26 @@ Form
 			CIField
 			{
 				enabled:	descriptivesPlot.checked || posteriorPlot.checked
-				name:		"credibleIntervalPlot"
+				name:		"descriptivesAndPosteriorPlotCiCoverage"
 				label:		qsTr("Credible interval")
 			}
 		}
 
 		RadioButtonGroup
 		{
-			name	: "countProp"
+			name	: "display"
 			title	: qsTr("Display")
 
 			RadioButton
 			{
-				value:		"descCounts"
+				value:		"counts"
 				label:		qsTr("Counts")
 				checked:	true
 			}
 
 			RadioButton
 			{
-				value:		"descProps"
+				value:		"proportions"
 				label:		qsTr("Proportions")
 			}
 		}
@@ -216,7 +211,7 @@ Form
 		TabView
 		{
 			id:					models
-			name:				"restrictedModels"
+			name:				"models"
 			maximumItems:		10
 			newItemName:		qsTr("Model 1")
 			optionKey:			"modelName"
@@ -226,7 +221,7 @@ Form
 			{
 				TextArea
 				{
-					name:				"restrictionSyntax"
+					name:				"syntax"
 					width:				models.width
 					textType:			JASP.TextTypeModel
 					trim:				true
@@ -259,7 +254,7 @@ Form
 			IntegerField
 			{
 				label: 			qsTr("Iterations (MCMC)")
-				name: 			"mcmcIter"
+				name: 			"mcmcSamples"
 				defaultValue: 	5000
 				min:			100
 				max: 			1000000
@@ -268,8 +263,8 @@ Form
 
 			IntegerField
 			{
-				label: 			qsTr("Max iteration (bridgesampling)")
-				name: 			"bridgeIter"
+				label: 			qsTr("Maximum samples (bridgesampling)")
+				name: 			"bridgeSamples"
 				defaultValue: 	1000
 				min:			5
 				max: 			1000000

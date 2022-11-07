@@ -23,7 +23,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   .computeInformedMultinomialResults(jaspResults, dataset, options)
   .createInformedMultBayesMainTable(jaspResults, options)
 
-  if (options[["descriptives"]])
+  if (options[["descriptivesTable"]])
     .createInformedMultBayesDescriptivesTable(jaspResults, dataset, options)
 
   if (options[["descriptivesPlot"]])
@@ -35,8 +35,8 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   return()
 }
 
-.informedMultinomialDependency <- c("factor", "counts", "priorCounts", "restrictedModels", "restrictionSyntax",
-                                    "bridgeIter", "mcmcBurnin", "mcmcIter", "setSeed", "seed")
+.informedMultinomialDependency <- c("factor", "counts", "priorCounts", "models", "syntax",
+                                    "bridgeSamples", "mcmcBurnin", "mcmcSamples", "setSeed", "seed")
 
 .computeInformedMultinomialResults        <- function(jaspResults, dataset, options){
 
@@ -52,8 +52,8 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   models$dependOn(.informedMultinomialDependency)
   jaspResults[["models"]] <- models
 
-  if(length(options[["restrictedModels"]]) > 0)
-    startProgressbar(length(options[["restrictedModels"]]))
+  if(length(options[["models"]]) > 0)
+    startProgressbar(length(options[["models"]]))
 
 
   modelsList <- list()
@@ -67,21 +67,21 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
       factor_levels = dataset[,options[["factor"]]],
       bf_type       = "BF0r",
       nburnin       = options[["mcmcBurnin"]],
-      niter         = options[["mcmcBurnin"]] + options[["mcmcIter"]],
-      maxiter       = options[["bridgeIter"]],
+      niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
+      maxiter       = options[["bridgeSamples"]],
       seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
     )),
     "name"  = "unrestricted"
   )
 
   # estimate the restricted models
-  for(i in seq_along(options[["restrictedModels"]])) {
+  for(i in seq_along(options[["models"]])) {
 
-    if (nchar(options[["restrictedModels"]][[i]][["restrictionSyntax"]]) == 0) {
+    if (nchar(options[["models"]][[i]][["syntax"]]) == 0) {
 
       modelsList[[i+1]] <- list(
         "model" = NULL,
-        "name"  = options[["restrictedModels"]][[i]][["modelName"]]
+        "name"  = options[["models"]][[i]][["modelName"]]
       )
 
     } else {
@@ -89,16 +89,16 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::mult_bf_informed(
           x             = dataset[,options[["counts"]]],
-          Hr            = options[["restrictedModels"]][[i]][["restrictionSyntax"]],
+          Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           factor_levels = dataset[,options[["factor"]]],
           bf_type       = "BF0r",
           nburnin       = options[["mcmcBurnin"]],
-          niter         = options[["mcmcBurnin"]] + options[["mcmcIter"]],
-          maxiter       = options[["bridgeIter"]],
+          niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
+          maxiter       = options[["bridgeSamples"]],
           seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
         )),
-        "name"  = options[["restrictedModels"]][[i]][["modelName"]]
+        "name"  = options[["models"]][[i]][["modelName"]]
       )
     }
 
@@ -182,8 +182,10 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsFrame <- do.call(rbind, rowsList)
 
   # extract the Bayes factor comparison
-  if(options[["bfComparison"]] %in% c("Encompassing", "Null"))
-    bfComparison <- options[["bfComparison"]]
+  if(options[["bfComparison"]]== "encompassing")
+    bfComparison <- "Encompassing"
+  else if(options[["bfComparison"]]== "null")
+    bfComparison <- "Null"
   else if(options[["bfVsHypothesis"]] %in% rowsFrame$model)
     bfComparison <- options[["bfVsHypothesis"]]
   else
@@ -208,9 +210,9 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   # Create Table
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
   descriptivesTable$position <- 2
-  descriptivesTable$dependOn(c("factor", "counts", "countProp", "descriptives", "credibleInterval", "credibleIntervalInterval"))
+  descriptivesTable$dependOn(c("factor", "counts", "display", "descriptivesTable", "descriptivesTableCi", "descriptivesTableCiCoverage"))
 
-  if (options[["countProp"]] == "descCounts")
+  if (options[["display"]] == "counts")
     outType <- "integer"
   else
     outType <- "number"
@@ -218,8 +220,8 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   descriptivesTable$addColumnInfo(name = "fact",     title = options[["factor"]], type = "string")
   descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = outType)
 
-  if (options[["credibleInterval"]]) {
-    overTitle <- gettextf("%1$s%% Credible Interval", paste0(100 * options[["credibleIntervalInterval"]]))
+  if (options[["descriptivesTableCi"]]) {
+    overTitle <- gettextf("%1$s%% Credible Interval", paste0(100 * options[["descriptivesTableCiCoverage"]]))
     descriptivesTable$addColumnInfo(name = "lowerCI", title = gettext("Lower"), type = "number", overtitle = overTitle)
     descriptivesTable$addColumnInfo(name = "upperCI", title = gettext("Upper"), type = "number", overtitle = overTitle)
   }
@@ -234,7 +236,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   descriptivesData <- .createInformedMultBayesDescriptivesData(dataset, options)
   descriptivesTable$setData(descriptivesData)
 
-  if (options[["counts"]] != "" && options[["credibleInterval"]]){
+  if (options[["counts"]] != "" && options[["descriptivesTableCi"]]){
     descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
   }
 
@@ -248,7 +250,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   # Create Plot
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives plot"), width = 480, height = 320)
   descriptivesPlot$position <- 3
-  descriptivesPlot$dependOn(c(.informedMultinomialDependency, "countProp", "descriptivesPlot", "credibleIntervalPlot"))
+  descriptivesPlot$dependOn(c(.informedMultinomialDependency, "display", "descriptivesPlot", "descriptivesAndPosteriorPlotCiCoverage"))
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
   # Show empty Plot if no variable is selected
@@ -267,16 +269,16 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempModel             <- jaspResults[["models"]]$object[[1]]$model
-  tempModel$cred_level  <- options[["credibleIntervalPlot"]]
+  tempModel$cred_level  <- options[["descriptivesAndPosteriorPlotCiCoverage"]]
   tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
-  if (options[["countProp"]] == "descCounts")
+  if (options[["display"]] == "counts")
     tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[,options[["counts"]]])
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedMultinomialDependency,  "countProp", "posteriorPlot", "credibleIntervalPlot"))
+  posteriorPlot$dependOn(c(.informedMultinomialDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
   posteriorPlot$plotObject <- .informedMultinomialPlot(tempSummary, options, descriptives = FALSE)
@@ -289,7 +291,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
     return()
 
   posteriorPlots <- createJaspContainer("Posterior plots")
-  posteriorPlots$dependOn(c(.informedMultinomialDependency,  "countProp", "posteriorPlot", "credibleIntervalPlot"))
+  posteriorPlots$dependOn(c(.informedMultinomialDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
   posteriorPlots$position <- 4
   jaspResults[["posteriorPlots"]] <- posteriorPlots
 
@@ -308,11 +310,11 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
     # extract posterior summary and format it for the plotting function
     tempModel             <- models[[i]]$model
-    tempModel$cred_level  <- options[["credibleIntervalPlot"]]
+    tempModel$cred_level  <- options[["descriptivesAndPosteriorPlotCiCoverage"]]
     tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
     colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
-    if (options[["countProp"]] == "descCounts")
+    if (options[["display"]] == "counts")
       tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[,options[["counts"]]])
 
     tempPlot <- createJaspPlot(title = models[[i]]$name, width = 480, height = 320)
@@ -327,14 +329,14 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 .createInformedMultBayesDescriptivesData  <- function(dataset, options, table = TRUE){
 
   # Compute CI
-  if (table && options[["counts"]] != "" && options[["credibleInterval"]])
-    tempCI <- .multComputeCIs(dataset[,options[["counts"]]], options[["credibleIntervalInterval"]], ifErrorReturn = 0, scale = options[["countProp"]])
+  if (table && options[["counts"]] != "" && options[["descriptivesTableCi"]])
+    tempCI <- .multComputeCIs(dataset[,options[["counts"]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else if (!table && options[["counts"]] != "")
-    tempCI <- .multComputeCIs(dataset[,options[["counts"]]], options[["credibleIntervalPlot"]], ifErrorReturn = 0, scale = options[["countProp"]])
+    tempCI <- .multComputeCIs(dataset[,options[["counts"]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else
     tempCI <- NULL
 
-  if (options[["countProp"]] == "descCounts")
+  if (options[["display"]] == "counts")
     stdConst <- 1
   else
     stdConst <- sum(dataset[,options[["counts"]]])
@@ -373,7 +375,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   # Counts or props
   yname <- sprintf("%1$s %2$s",
     if (descriptives) gettext("Observed") else gettext("Estimated"),
-    if (options[["countProp"]] == "descCounts") gettext("Counts") else gettext("Proportions")
+    if (options[["display"]] == "counts") gettext("Counts") else gettext("Proportions")
   )
 
   # Prepare data for plotting
@@ -407,5 +409,12 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   return(p)
 }
 .chechIfAllRestrictedModelsNull           <- function(options){
-  return(all(unlist(lapply(options[["restrictedModels"]], function(x) nchar(trimws(x[["restrictionSyntax"]], "both")) == 0))))
+  return(all(unlist(lapply(options[["models"]], function(x) nchar(trimws(x[["syntax"]], "both")) == 0))))
+}
+.decodeOptionsDisplay                    <- function(options){
+  switch(
+    options[["display"]],
+    "counts"      = "descCounts",
+    "proportions" = "descProp"
+  )
 }
