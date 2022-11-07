@@ -17,20 +17,14 @@
 
 # TODO:
 # - dynamically fill comparison dropdown
-# - how to deal with restricted hypotheses with different number of elements?
 # - scale proportions for posterior when restricted?
 # - bug with empty model
-# - x-axis label for posterior: change to estimated
-# - fit the null and encompassing models separately (there should be a function for that)
 
 InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   dataset            <- .multinomReadData(dataset, options)
 
   .multinomCheckErrors(dataset, options)
-
-  saveRDS(dataset, file = "C:/JASP/jaspFrequencies/dataset.RDS")
-  saveRDS(options, file = "C:/JASP/jaspFrequencies/options.RDS")
 
   .computeInformedMultinomialResults(jaspResults, dataset, options)
   .createInformedMultBayesMainTable(jaspResults, options)
@@ -110,14 +104,9 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   models$object <- modelsList
 
-
-
-  saveRDS(modelsList, file = "C:/JASP/jaspFrequencies/models.RDS")
-
   return()
 }
 .createInformedMultBayesMainTable         <- function(jaspResults, options){
-
 
   if (!is.null(jaspResults[["summaryTable"]]))
     return()
@@ -155,25 +144,32 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsList <- list()
   for (i in seq_along(models)) {
 
-    if (i == 1) {
+    if (is.null(models[[i]][["model"]]))
+      next
+
+    # extract marginal likelihood for the null and encompassing models from the first fit object
+    # (and check that they match on all subsequent ones)
+    if (length(rowsList) == 0) {
       rowsList[[1]] <- data.frame(
         model         = "Null",
-        marglik       = models[[i]]$model$bridge_output[[1]]$post$logml - models[[i]]$model$bf_list$bf[1, "LogBFr0"],
+        marglik       = models[[i]]$model$logml[["logmlH0"]],
         marglikError  = NA,
         marglikPrec   = NA
       )
       rowsList[[2]] <- data.frame(
-        model         = "Encompasing",
-        marglik       = models[[i]]$model$bridge_output[[1]]$post$logml + models[[i]]$model$bf_list$bfr_table[1, "LogBFer"],
+        model         = "Encompassing",
+        marglik       = models[[i]]$model$logml[["logmlHe"]],
         marglikError  = NA,
         marglikPrec   = NA
       )
+    } else if (!all.equal(rowsList[[1]][["marglik"]], models[[i]]$model$logml[["logmlH0"]]) ||
+               !all.equal(rowsList[[2]][["marglik"]], models[[i]]$model$logml[["logmlHe"]]))
+      stop("Marginal likelihoods of different models do not match.")
 
-    }
-
+    # add the alternative hypotheses
     rowsList[[i + 2]] <- data.frame(
       model        = models[[i]][["name"]],
-      marglik      = models[[i]]$model$bridge_output[[1]]$post$logml,
+      marglik      = models[[i]]$model$logml[["logmlHr"]],
       marglikError = models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
       marglikPrec  = as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
     )
@@ -188,7 +184,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   summaryTable$setData(rowsFrame)
   summaryTable$addFootnote(gettextf(
     "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0).",
-    if (options[["testAgainst"]] %in% c("Encompasing", "Null")) paste0(options[["testAgainst"]], " model") else options[["testAgainst"]]
+    if (options[["testAgainst"]] %in% c("Encompassing", "Null")) paste0(options[["testAgainst"]], " model") else options[["testAgainst"]]
   ))
 
   return()
@@ -272,6 +268,9 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   }
 
   for (i in seq_along(models)) {
+
+    if (is.null(models[[i]][["model"]]))
+      next
 
     # extract posterior summary and format it for the plotting function
     tempModel             <- models[[i]]$model

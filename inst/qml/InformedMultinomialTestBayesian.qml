@@ -63,7 +63,7 @@ Form
 			name:				"testAgainst"
 			values:				
 			[
-				{ label: qsTr("Encompasing"),		value: "Encompasing"		},
+				{ label: qsTr("Encompassing"),		value: "Encompassing"		},
 				{ label: qsTr("Null"),				value: "Null"				},
 				{ label: qsTr("Model 1"),			value: "Model 1"			}
 			]
