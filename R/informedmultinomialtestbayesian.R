@@ -16,9 +16,7 @@
 #
 
 # TODO:
-# - dynamically fill comparison dropdown
 # - scale proportions for posterior when restricted?
-# - bug with empty model
 
 InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
@@ -115,7 +113,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   summaryTable <- createJaspTable(title = gettext("Bayesian evaluation of multinomial order constraints "))
   summaryTable$position <- 1
-  summaryTable$dependOn(c(.informedMultinomialDependency, "bayesFactorType", "testAgainst"))
+  summaryTable$dependOn(c(.informedMultinomialDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis"))
 
   if (options$bayesFactorType == "BF10")
     bfTitle <- gettextf("BF%s%s", "\u2081", "\u2080")
@@ -177,15 +175,20 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   rowsFrame <- do.call(rbind, rowsList)
 
+  # extract the Bayes factor comparison
+  if(options[["bfComparison"]] %in% c("Encompassing", "Null"))
+    bfComparison <- options[["bfComparison"]]
+  else if(options[["bfVsHypothesis"]] %in% rowsFrame$model)
+    bfComparison <- options[["bfVsHypothesis"]]
+  else
+    bfComparison <- "Encompassing"
+
   # compute Bayes factors
-  rowsFrame$bf <- exp(rowsFrame$marglik[rowsFrame$model == options[["testAgainst"]]] - rowsFrame$marglik)
+  rowsFrame$bf <- exp(rowsFrame$marglik[rowsFrame$model == bfComparison] - rowsFrame$marglik)
   rowsFrame$bf <- .recodeBFtype(rowsFrame$bf, options[["bayesFactorType"]])
 
   summaryTable$setData(rowsFrame)
-  summaryTable$addFootnote(gettextf(
-    "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0).",
-    if (options[["testAgainst"]] %in% c("Encompassing", "Null")) paste0(options[["testAgainst"]], " model") else options[["testAgainst"]]
-  ))
+  summaryTable$addFootnote(gettextf("Model in each row (denoted as '1') is compared to the %1$s (denoted as 0).", bfComparison))
 
   return()
 }

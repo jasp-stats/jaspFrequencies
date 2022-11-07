@@ -57,21 +57,46 @@ Form
 	ColumnLayout
 	{
 
-		DropDown
+		RadioButtonGroup
 		{
-			label:				qsTr("Compare to")
-			name:				"testAgainst"
-			values:				
-			[
-				{ label: qsTr("Encompassing"),		value: "Encompassing"		},
-				{ label: qsTr("Null"),				value: "Null"				},
-				{ label: qsTr("Model 1"),			value: "Model 1"			}
-			]
-			indexDefaultValue:	0
-			
+			title:		qsTr("Bayes Factor Comparison")
+			name:		"bfComparison"
+
+			RadioButton
+			{
+				value:		"Encompassing"
+				label:		qsTr("Encompassing")
+				checked:	true
+			}
+
+			RadioButton
+			{
+				value:		"Null"
+				label:		qsTr("Null")
+			}
+
+			RadioButton
+			{
+				name:				"vs"
+				label:				qsTr("vs.")
+				childrenOnSameRow:	true
+
+				DropDown
+				{
+					source:				[ models ]
+					name:				"bfVsHypothesis"
+					id:					bfTypevsName
+					indexDefaultValue:	0
+				}
+			}
 		}
 
 		BayesFactorType { }
+
+	}
+
+	ColumnLayout
+	{
 
 		Group
 		{
@@ -93,28 +118,6 @@ Form
 						name:	"credibleIntervalInterval"
 					}
 				}
-			}
-		}
-	}
-
-	ColumnLayout
-	{
-		RadioButtonGroup
-		{
-			name	: "countProp"
-			title	: qsTr("Display")
-
-			RadioButton
-			{
-				value:		"descCounts"
-				label:		qsTr("Counts")
-				checked:	true
-			}
-
-			RadioButton
-			{
-				value:		"descProps"
-				label:		qsTr("Proportions")
 			}
 		}
 
@@ -141,6 +144,25 @@ Form
 				enabled:	descriptivesPlot.checked || posteriorPlot.checked
 				name:		"credibleIntervalPlot"
 				label:		qsTr("Credible interval")
+			}
+		}
+
+		RadioButtonGroup
+		{
+			name	: "countProp"
+			title	: qsTr("Display")
+
+			RadioButton
+			{
+				value:		"descCounts"
+				label:		qsTr("Counts")
+				checked:	true
+			}
+
+			RadioButton
+			{
+				value:		"descProps"
+				label:		qsTr("Proportions")
 			}
 		}
 	}
