@@ -98,7 +98,6 @@ Upgrades
 				}
 			}
 		}
-		ChangeRename{	from: "descriptivesPlot";						to: "descriptivesPlot"			}
 		ChangeRename{	from: "descriptivesPlotConfidenceInterval";		to: "descriptivesPlotCiLevel"	}
 	}
 
@@ -140,7 +139,6 @@ Upgrades
 				}
 			}
 		}
-		ChangeRename{	from: "descriptivesPlot";						to: "descriptivesPlot"			}
 		ChangeRename{	from: "descriptivesPlotCredibleInterval";		to: "descriptivesPlotCiLevel"	}
 	}
 
