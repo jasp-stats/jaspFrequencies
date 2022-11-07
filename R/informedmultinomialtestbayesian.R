@@ -15,13 +15,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# TODO:
-# - scale proportions for posterior when restricted?
-
 InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
   dataset            <- .multinomReadData(dataset, options)
-
   .multinomCheckErrors(dataset, options)
 
   .computeInformedMultinomialResults(jaspResults, dataset, options)
@@ -48,10 +44,6 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   if (!is.null(jaspResults[["models"]]))
     return()
 
-  # skip if all models are empty
-  if (all(unlist(lapply(options[["restrictedModels"]], function(x) nchar(x[["restrictionSyntax"]]) == 0))))
-    return()
-
   # skip if the input is not specified
   if (options[["factor"]] == "" || options[["counts"]] == "")
     return()
@@ -66,35 +58,48 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   modelsList <- list()
 
+  # fit an overall unrestricted model (for plotting the posterior)
+  modelsList[[1]] <- list(
+    "model" = try(multibridge::mult_bf_informed(
+      x             = dataset[,options[["counts"]]],
+      Hr            = paste0(levels(dataset[,options[["factor"]]]), collapse = ","),
+      a             = options[["priorCounts"]][[1]][["values"]],
+      factor_levels = dataset[,options[["factor"]]],
+      bf_type       = "BF0r",
+      nburnin       = options[["mcmcBurnin"]],
+      niter         = options[["mcmcBurnin"]] + options[["mcmcIter"]],
+      maxiter       = options[["bridgeIter"]],
+      seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
+    )),
+    "name"  = "unrestricted"
+  )
+
+  # estimate the restricted models
   for(i in seq_along(options[["restrictedModels"]])) {
 
     if (nchar(options[["restrictedModels"]][[i]][["restrictionSyntax"]]) == 0) {
 
-      modelsList[[i]] <- list(
+      modelsList[[i+1]] <- list(
         "model" = NULL,
         "name"  = options[["restrictedModels"]][[i]][["modelName"]]
       )
 
     } else {
 
-      tempFit <- try(multibridge::mult_bf_informed(
-        x             = dataset[,options[["counts"]]],
-        Hr            = options[["restrictedModels"]][[i]][["restrictionSyntax"]],
-        a             = options[["priorCounts"]][[1]][["values"]],
-        factor_levels = dataset[,options[["factor"]]],
-        bf_type       = "BF0r",
-        nburnin       = options[["mcmcBurnin"]],
-        niter         = options[["mcmcBurnin"]] + options[["mcmcIter"]],
-        maxiter       = options[["bridgeIter"]],
-        seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
-      ))
-
-
-      modelsList[[i]] <- list(
-        "model" = tempFit,
+      modelsList[[i+1]] <- list(
+        "model" = try(multibridge::mult_bf_informed(
+          x             = dataset[,options[["counts"]]],
+          Hr            = options[["restrictedModels"]][[i]][["restrictionSyntax"]],
+          a             = options[["priorCounts"]][[1]][["values"]],
+          factor_levels = dataset[,options[["factor"]]],
+          bf_type       = "BF0r",
+          nburnin       = options[["mcmcBurnin"]],
+          niter         = options[["mcmcBurnin"]] + options[["mcmcIter"]],
+          maxiter       = options[["bridgeIter"]],
+          seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
+        )),
         "name"  = options[["restrictedModels"]][[i]][["modelName"]]
       )
-
     }
 
     progressbarTick()
@@ -147,7 +152,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
     # extract marginal likelihood for the null and encompassing models from the first fit object
     # (and check that they match on all subsequent ones)
-    if (length(rowsList) == 0) {
+    if (i == 1) {
       rowsList[[1]] <- data.frame(
         model         = "Null",
         marglik       = models[[i]]$model$logml[["logmlH0"]],
@@ -161,16 +166,17 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
         marglikPrec   = NA
       )
     } else if (!all.equal(rowsList[[1]][["marglik"]], models[[i]]$model$logml[["logmlH0"]]) ||
-               !all.equal(rowsList[[2]][["marglik"]], models[[i]]$model$logml[["logmlHe"]]))
+               !all.equal(rowsList[[2]][["marglik"]], models[[i]]$model$logml[["logmlHe"]])) {
       stop("Marginal likelihoods of different models do not match.")
-
-    # add the alternative hypotheses
-    rowsList[[i + 2]] <- data.frame(
-      model        = models[[i]][["name"]],
-      marglik      = models[[i]]$model$logml[["logmlHr"]],
-      marglikError = models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
-      marglikPrec  = as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
-    )
+    } else {
+      # add the alternative hypotheses
+      rowsList[[i + 2]] <- data.frame(
+        model        = models[[i]][["name"]],
+        marglik      = models[[i]]$model$logml[["logmlHr"]],
+        marglikError = models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
+        marglikPrec  = as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
+      )
+    }
   }
 
   rowsFrame <- do.call(rbind, rowsList)
@@ -189,6 +195,8 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   summaryTable$setData(rowsFrame)
   summaryTable$addFootnote(gettextf("Model in each row (denoted as '1') is compared to the %1$s (denoted as 0).", bfComparison))
+  if(.chechIfAllRestrictedModelsNull(options))
+    summaryTable$addFootnote(gettext("Specify informed hypothesis tests in the `Order Restricted Hypotheses` section."))
 
   return()
 }
@@ -244,7 +252,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
   # Show empty Plot if no variable is selected
-  if(options[["factor"]] == "" && options[["counts"]] == "")
+  if(options[["factor"]] == "" || options[["counts"]] == "")
     return()
 
   plotData <- .createInformedMultBayesDescriptivesData(dataset, options, table = FALSE)
@@ -254,6 +262,29 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 }
 .createInformedMultBayesPosteriorPlot     <- function(jaspResults, dataset, options){
 
+  if(!is.null(jaspResults[["posteriorPlot"]]))
+    return()
+
+  # extract posterior summary from the unrestricted model and format it for the plotting function
+  tempModel             <- jaspResults[["models"]]$object[[1]]$model
+  tempModel$cred_level  <- options[["credibleIntervalPlot"]]
+  tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
+  colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
+
+  if (options[["countProp"]] == "descCounts")
+    tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[,options[["counts"]]])
+
+  posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
+  posteriorPlot$position <- 4
+  posteriorPlot$dependOn(c(.informedMultinomialDependency,  "countProp", "posteriorPlot", "credibleIntervalPlot"))
+  jaspResults[["posteriorPlot"]] <- posteriorPlot
+
+  posteriorPlot$plotObject <- .informedMultinomialPlot(tempSummary, options, descriptives = FALSE)
+
+  return()
+}
+.createInformedMultBayesPosteriorPlots    <- function(jaspResults, dataset, options){
+  # currently not used -- might be added later
   if(!is.null(jaspResults[["posteriorPlots"]]))
     return()
 
@@ -374,4 +405,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   p <- p + jaspGraphs::geom_rangeframe(sides = "b") + jaspGraphs::themeJaspRaw()
 
   return(p)
+}
+.chechIfAllRestrictedModelsNull           <- function(options){
+  return(all(unlist(lapply(options[["restrictedModels"]], function(x) nchar(trimws(x[["restrictionSyntax"]], "both")) == 0))))
 }
