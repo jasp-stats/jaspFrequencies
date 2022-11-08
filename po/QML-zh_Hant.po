@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-07 10:07+0000\n"
+"PO-Revision-Date: 2022-11-08 09:33+0000\n"
 "Last-Translator: Changya Hu <changyahu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "jasp/jaspfrequencies-qml/zh_Hant/>\n"
@@ -131,7 +131,7 @@ msgstr "與最佳模式比較"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to null model"
-msgstr "與虛無模式比較"
+msgstr "相較於虛無模型"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
@@ -836,7 +836,7 @@ msgstr "成分"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr "模式內容"
+msgstr "模型設定"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
