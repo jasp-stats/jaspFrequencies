@@ -35,8 +35,8 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     return(dataset)
   else {
     counts <- factors <- NULL
-    if(options$counts != "")
-      counts <- options$counts
+    if(options$count != "")
+      counts <- options$count
     if(length(options$modelTerms) > 0)
       factors <- options$modelTerms
     return(.readDataSetToEnd(columns.as.factor = factors,
@@ -54,9 +54,9 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     exitAnalysisIfErrors = TRUE
   )
 
-  if (options$counts != "") {
+  if (options$count != "") {
     args$type <- c(args$type, "infinity", "negativeValues")
-    args$missingValues.target <- c(options$counts, options$factors)
+    args$missingValues.target <- c(options$count, options$factors)
   }
   do.call(.hasErrors, args)
 }
@@ -67,16 +67,16 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     return(jaspResults[["Model"]]$object)
 
   modelTerms <- unlist(options$modelTerms)
-  if (options$counts == "")
+  if (options$count == "")
     dataset <- plyr::count(dataset)
 
   loglm.model <- list()
   empty.model <- list(loglm.fit = NULL, variables = NULL)
 
-  if (options$counts == "")
+  if (options$count == "")
     dependent.variable <- "freq"
   else
-    dependent.variable <- unlist(options$counts)
+    dependent.variable <- unlist(options$count)
 
   if (length(options$modelTerms) > 0) {
 
@@ -113,7 +113,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
 
       model.formula <- as.formula(model.definition)
 
-      if (options$counts == "")
+      if (options$count == "")
         names(dataset)[names(dataset) == "freq"] <- dependent.base64
 
       loglm.fit <- try(stats::glm(model.formula, family = poisson(),
@@ -129,7 +129,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     loglm.model <- empty.model
 
   jaspResults[["Model"]] <- createJaspState(loglm.model)
-  jaspResults[["Model"]]$dependOn(c("counts","modelTerms"))
+  jaspResults[["Model"]]$dependOn(c("count","modelTerms"))
 
   return(loglm.model)
 }
@@ -161,16 +161,16 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
           results[[ len.logreg ]]$df   <- " "
           results[[ len.logreg ]]$dev  <- " "
           results[[ len.logreg ]]$p    <- " "
-          if (options$VovkSellkeMPR)
-            results[[ len.logreg ]]$VovkSellkeMPR <- " "
+          if (options$vovkSellke)
+            results[[ len.logreg ]]$vovkSellke <- " "
         } else {
           results[[ len.logreg ]]$name <- model.name[var]
           results[[ len.logreg ]]$df   <- as.integer(loglm.estimates$Df[var])
           results[[ len.logreg ]]$dev  <- as.numeric(loglm.estimates$Deviance[var])
           pVal                         <- as.numeric(loglm.estimates$"Pr(>Chi)"[var])
           results[[ len.logreg ]]$p    <- pVal
-          if (options$VovkSellkeMPR)
-            results[[ len.logreg ]]$VovkSellkeMPR <- VovkSellkeMPR(pVal)
+          if (options$vovkSellke)
+            results[[ len.logreg ]]$vovkSellke <- VovkSellkeMPR(pVal)
         }
         results[[ len.logreg ]]$resDf <- as.integer(loglm.estimates$"Resid. Df"[var])
         res <- as.numeric(loglm.estimates$"Resid. Dev"[var])
@@ -198,7 +198,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     loglm.estimates    <- loglm.summary$coefficients
     loglm.coeff        <- loglm.estimates[,"Estimate"]
     loglm.estimates.SE <- loglm.estimates[,"Std. Error"]
-    sig    <- options$regressionCoefficientsConfidenceIntervalsInterval
+    sig    <- options$regressionCoefficientsCiLevel
     alpha  <- (1 - sig) / 2
     lower  <- loglm.coeff + stats::qnorm(alpha)*loglm.estimates.SE
     upper  <- loglm.coeff + stats::qnorm(1-alpha)*loglm.estimates.SE
@@ -226,21 +226,21 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
 
         Z <- as.numeric(loglm.estimates[i,3])
         p <- as.numeric(loglm.estimates[i,4])
-        if (options$VovkSellkeMPR)
-          VovkSellkeMPR <- VovkSellkeMPR(p)
+        if (options$vovkSellke)
+          vovkSellke <- VovkSellkeMPR(p)
         results[[len.logreg]] <- list(
           name  = name,
           Coeff = Coefficient,
           SE    = sd
         )
-        if(options$regressionCoefficientsConfidenceIntervals){
+        if(options$regressionCoefficientsCi){
           results[[len.logreg]]$Lower <- as.numeric(lower[i])
           results[[len.logreg]]$Upper <- as.numeric(upper[i])
         }
         results[[len.logreg]]$Z <- Z
         results[[len.logreg]]$p <- p
-        if(options$VovkSellkeMPR)
-          results[[len.logreg]]$VovkSellkeMPR <- VovkSellkeMPR
+        if(options$vovkSellke)
+          results[[len.logreg]]$vovkSellke <- vovkSellke
 
         len.logreg <- len.logreg + 1
       }
@@ -256,7 +256,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
 
   # Create table
   anovaTable <- createJaspTable(title = gettext("ANOVA"))
-  anovaTable$dependOn(c("counts", "modelTerms", "VovkSellkeMPR"))
+  anovaTable$dependOn(c("count", "modelTerms", "vovkSellke"))
   .regLogLinCitation(anovaTable)
   anovaTable$showSpecifiedColumnsOnly <- TRUE
   anovaTable$position <- 1
@@ -268,7 +268,7 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
   anovaTable$addColumnInfo(name = "resDf",  title = gettext("Residual df"),       type = "integer")
   anovaTable$addColumnInfo(name = "resDev", title = gettext("Residual Deviance"), type = "number")
   anovaTable$addColumnInfo(name = "p",      title = gettext("p"),                 type  = "pvalue")
-  if (options$VovkSellkeMPR)
+  if (options$vovkSellke)
     .regLogLinAddVovkSellke(anovaTable)
 
   jaspResults[["AnovaTable"]] <- anovaTable
@@ -290,9 +290,9 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
 
   # Create table
   coefficientsTable <- createJaspTable(title = gettext("Coefficients"))
-  dependList <- c("counts", "modelTerms", "regressionCoefficientsEstimates",
-                  "VovkSellkeMPR", "regressionCoefficientsConfidenceIntervals",
-                  "regressionCoefficientsConfidenceIntervalsInterval")
+  dependList <- c("count", "modelTerms", "regressionCoefficientsEstimates",
+                  "vovkSellke", "regressionCoefficientsCi",
+                  "regressionCoefficientsCiLevel")
   coefficientsTable$dependOn(dependList)
   .regLogLinCitation(coefficientsTable)
   coefficientsTable$showSpecifiedColumnsOnly <- TRUE
@@ -302,16 +302,16 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
   coefficientsTable$addColumnInfo(name = "name",    title = "",                        type = "string")
   coefficientsTable$addColumnInfo(name = "Coeff",   title = gettext("Estimate"),       type = "number", format = "dp:3")
   coefficientsTable$addColumnInfo(name = "SE",      title = gettext("Standard Error"), type = "number", format = "dp:3")
-  if(options$regressionCoefficientsConfidenceIntervals){
-    confIntVal <- options$regressionCoefficientsConfidenceIntervalsInterval
+  if(options$regressionCoefficientsCi){
+    confIntVal <- options$regressionCoefficientsCiLevel
     ci <- gettextf("%s%% Confidence Intervals",100*confIntVal)
     coefficientsTable$addColumnInfo(name = "Lower", title = gettext("Lower"), type = "number", overtitle = ci)
     coefficientsTable$addColumnInfo(name = "Upper", title = gettext("Upper"), type = "number", overtitle = ci)
   }
   coefficientsTable$addColumnInfo(name = "Z", title = gettext("Z"), type = "number")
   coefficientsTable$addColumnInfo(name = "p", title = gettext("p"), type = "pvalue")
-  if (options$VovkSellkeMPR)
-    coefficientsTable$addColumnInfo(name = "VovkSellkeMPR",  title = gettextf("VS-MPR%s", "\u002A"), type = "number")
+  if (options$vovkSellke)
+    coefficientsTable$addColumnInfo(name = "vovkSellke",  title = gettextf("VS-MPR%s", "\u002A"), type = "number")
 
   jaspResults[["CoefficientsTable"]] <- coefficientsTable
 
@@ -346,13 +346,15 @@ RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
     "resDf"  = char,
     "resDev" = char,
     "p"      = char)
-  if (options$VovkSellkeMPR)
-    line$VovkSellkeMPR <- char
+
+  if (options$vovkSellke)
+    line$vovkSellke <- char
+
   return(line)
 }
 
 .regLogLinAddVovkSellke <- function(table) {
-  table$addColumnInfo(name = "VovkSellkeMPR",  title = gettextf("VS-MPR%s","\u002A"), type = "number")
+  table$addColumnInfo(name = "vovkSellke",  title = gettextf("VS-MPR%s","\u002A"), type = "number")
   message <- gettextf("Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \
 the maximum possible odds in favor of H%1$s over H%2$s equals \
 1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \

@@ -101,7 +101,7 @@ test_that("Chi-Squared test table results match", {
   options$chiSquared <- TRUE
   options$chiSquaredContinuityCorrection <- TRUE
   options$likelihoodRatio <- TRUE
-  options$VovkSellkeMPR <- TRUE
+  options$vovkSellke <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabChisq"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -131,7 +131,7 @@ test_that("Log Odds Ratio table results match", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$oddsRatio <- TRUE
-  options$oddsRatioConfidenceIntervalInterval <- 0.90
+  options$oddsRatioCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabLogOdds"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -158,7 +158,7 @@ test_that("Kendall's Tau table results match", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$kendallsTauB <- TRUE
-  options$VovkSellkeMPR <- TRUE
+  options$vovkSellke <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabKendallTau"]][["data"]]
   jaspTools::expect_equal_tables(table,

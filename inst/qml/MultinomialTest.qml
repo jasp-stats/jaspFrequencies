@@ -25,33 +25,32 @@ import JASP.Widgets 1.0
 
 Form
 {
-	CheckBox {	name: "simulatepval"; checked: false; visible: false	}
 
 	VariablesForm
 	{
 		preferredHeight: 190 * preferencesModel.uiScale
 		marginBetweenVariablesLists: 15
 		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";		title: qsTr("Factor");			singleVariable: true; suggestedColumns: ["ordinal", "nominal"]	}
-		AssignedVariablesList {					name: "counts";		title: qsTr("Counts");			singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
-		AssignedVariablesList {	id: exProbVar;	name: "exProbVar";	title: qsTr("Expected Counts"); singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
+		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; suggestedColumns: ["ordinal", "nominal"]	}
+		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
+		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
 	}
 
 	RadioButtonGroup
 	{
 		id		: hypothesisGroup
-		name	: "hypothesis"
+		name	: "testValues"
 		title	: qsTr("Test Values")
 		enabled	: exProbVar.count == 0
 
 		Layout.columnSpan: 2
 
-		RadioButton {						value: "multinomialTest";	label: qsTr("Equal proportions (multinomial test)");	 checked: true	}
-		RadioButton {	id: expectedProbs;	value: "expectedProbs";		label: qsTr("Expected proportions (χ² test)"); 				  			}
+		RadioButton {						value: "equal";		label: qsTr("Equal proportions (multinomial test)");	 checked: true	}
+		RadioButton {	id: expectedProbs;	value: "custom";	label: qsTr("Custom expected proportions (χ² test)"); 				  	}
 
 		Chi2TestTableView
 		{
-			name			: "tableWidget"
+			name			: "testValuesCustom"
 			preferredWidth	: form.availableWidth - hypothesisGroup.leftPadding
 			visible			: expectedProbs.checked && factors.count > 0
 			source			: "factor"
@@ -65,28 +64,29 @@ Form
 
 		CheckBox
 		{
-			name	: "descriptives"; label: qsTr("Descriptives")
+			name	: "descriptivesTable"; label: qsTr("Descriptives")
 
 			CheckBox
 			{
-				name				: "confidenceInterval"; label: qsTr("Confidence interval")
-				childrenOnSameRow	: true
+				name:					"descriptivesTableCi"
+				label:					qsTr("Confidence interval")
+				childrenOnSameRow	:	true
 
-				CIField {	name: "confidenceIntervalInterval"	}
+				CIField {	name: "descriptivesTableCiLevel"	}
 			}
 		}
-        CheckBox {	name: "VovkSellkeMPR";	label: qsTr("Vovk-Sellke maximum p-ratio")		}
+		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio")		}
 	}
 
 	ColumnLayout
 	{
 		RadioButtonGroup
 		{
-			name	: "countProp"
+			name	: "descriptivesType"
 			title	: qsTr("Display")
 
-			RadioButton {	value: "descCounts";	label: qsTr("Counts");	checked: true	}
-			RadioButton {	value: "descProps";		label: qsTr("Proportions")				}
+			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true	}
+			RadioButton {	value: "proportions";	label: qsTr("Proportions")				}
 		}
 
 		Group
@@ -98,7 +98,7 @@ Form
 				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
 
-				CIField {	name: "descriptivesPlotConfidenceInterval"; label: qsTr("Confidence interval")	}
+				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval")	}
 			}
 		}
 	}

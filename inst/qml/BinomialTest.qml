@@ -36,10 +36,10 @@ Form
 	RadioButtonGroup
 	{
 		title: qsTr("Alt. Hypothesis")
-		name: "hypothesis"
-		RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true	}
-		RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value")					}
-		RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value")					}
+		name: "alternative"
+		RadioButton { value: "twoSided";	label: qsTr("≠ Test value"); checked: true	}
+		RadioButton { value: "greater";		label: qsTr("> Test value")					}
+		RadioButton { value: "less";		label: qsTr("< Test value")					}
 	}
 
 	Group
@@ -47,10 +47,11 @@ Form
 		title: qsTr("Additional Statisics")
 		CheckBox
 		{
-			name: "confidenceInterval";	label: qsTr("Confidence interval")
-			CIField { name: "confidenceIntervalInterval";	label: qsTr("Interval") }
+			name:	"ci"
+			label:	qsTr("Confidence interval")
+			CIField { name: "ciLevel";	label: qsTr("Interval") }
 		}
-		CheckBox { name: "VovkSellkeMPR"; label: qsTr("Vovk-Sellke maximum p-ratio") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
 	}
 
 	Group
@@ -58,9 +59,8 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "descriptivesPlots";					label: qsTr("Descriptive plots")
-			CIField { name: "descriptivesPlotsConfidenceInterval"; label: qsTr("Confidence interval") }
+			name: "descriptivesPlot";					label: qsTr("Descriptive plots")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
 		}
 	}
-
 }

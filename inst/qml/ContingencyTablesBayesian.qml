@@ -27,17 +27,12 @@ Form
 	plotWidth: 320
 	plotHeight: 240
 
-	CheckBox { visible: false ; name: "countsExpected"; checked: false }
-	CheckBox { visible: false ; name: "residualsUnstandardized"; checked: false }
-	CheckBox { visible: false ; name: "residualsPearson"; checked: false }
-	CheckBox { visible: false ; name: "residualsStandardized"; checked: false }
-
 	VariablesForm
 	{
 		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "rows";		title: qsTr("Rows");	suggestedColumns: ["ordinal", "nominal"] }
 		AssignedVariablesList { name: "columns";	title: qsTr("Columns");	suggestedColumns: ["ordinal", "nominal"] }
-        AssignedVariablesList { name: "counts";		title: qsTr("Counts");	suggestedColumns: ["scale", "ordinal"]; singleVariable: true }
+		AssignedVariablesList { name: "counts";		title: qsTr("Counts");	suggestedColumns: ["scale", "ordinal"]; singleVariable: true }
 		AssignedVariablesList { name: "layers";		title: qsTr("Layers");	suggestedColumns: ["ordinal", "nominal"]; listViewType: JASP.Layers; preferredHeight: 120 }
 	}
 
@@ -49,11 +44,11 @@ Form
 		{
 			name: "samplingModel"
 			title: qsTr("Sample")
-			RadioButton { value: "poisson";							label: qsTr("Poisson")											}
-			RadioButton { value: "jointMultinomial";				label: qsTr("Joint multinomial")								}
-			RadioButton { value: "independentMultinomialRowsFixed";	label: qsTr("Indep. multinomial, rows fixed"); checked: true	}
-			RadioButton { value: "independentMultinomialColumnsFixed"; label: qsTr("Indep. multinomial, columns fixed")				}
-			RadioButton { value: "hypergeometric";					label: qsTr("Hypergeometric (2x2 only)"); id: hypergeometric	}
+			RadioButton { value: "poisson";								label: qsTr("Poisson")											}
+			RadioButton { value: "jointMultinomial";					label: qsTr("Joint multinomial")								}
+			RadioButton { value: "independentMultinomialRowsFixed";		label: qsTr("Indep. multinomial, rows fixed"); checked: true	}
+			RadioButton { value: "independentMultinomialColumnsFixed";	label: qsTr("Indep. multinomial, columns fixed")				}
+			RadioButton { value: "hypergeometric";						label: qsTr("Hypergeometric (2x2 only)"); id: hypergeometric	}
 		}
 
 		Group
@@ -62,23 +57,23 @@ Form
 			CheckBox
 			{
 				name: "oddsRatio";	label: qsTr("Log odds ratio (2x2 only)")
-				CIField { name: "oddsRatioCredibleIntervalInterval"; label: qsTr("Credible interval") }
+				CIField { name: "oddsRatioCiLevel"; label: qsTr("Credible interval") }
 			}
 			CheckBox
 			{
-				name: "effectSize"; label: qsTr("Cramer's V"); debug: true
-				CIField { name: "effectSizeCredibleIntervalInterval"; label: qsTr("Credible interval"); debug: true }
+				name: "cramersV"; label: qsTr("Cramer's V"); debug: true
+				CIField { name: "cramersVCiLevel"; label: qsTr("Credible interval"); debug: true }
 			}
 		}
 
 		RadioButtonGroup
 		{
 			title: qsTr("Alt. Hypothesis")
-			name: "hypothesis"
+			name: "alternative"
 			enabled: !hypergeometric.checked
-			RadioButton { value: "groupsNotEqual";	label: qsTr("Group one ≠ Group two"); checked: true	}
-			RadioButton { value: "groupOneGreater";	label: qsTr("Group one > Group two")					}
-			RadioButton { value: "groupTwoGreater";	label: qsTr("Group one < Group two")					}
+			RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true	}
+			RadioButton { value: "greater";		label: qsTr("Group one > Group two")					}
+			RadioButton { value: "less";		label: qsTr("Group one < Group two")					}
 		}
 
 		Group
@@ -86,10 +81,10 @@ Form
 			title: qsTr("Plots")
 			CheckBox
 			{
-				name: "plotPosteriorOddsRatio";			label: qsTr("Log odds ratio (2x2 only)")
-				CheckBox { name: "plotPosteriorOddsRatioAdditionalInfo"; label: qsTr("Additional info"); checked: true }
+				name: "posteriorOddsRatioPlot";			label: qsTr("Log odds ratio (2x2 only)")
+				CheckBox { name: "posteriorOddsRatioPlotAdditionalInfo"; label: qsTr("Additional info"); checked: true }
 			}
-			CheckBox { name: "plotPosteriorEffectSize";	label: qsTr("Cramer's V"); debug: true }
+			CheckBox { name: "cramersVPlot";	label: qsTr("Cramer's V"); debug: true }
 		}
 
 		BayesFactorType {}
@@ -104,6 +99,22 @@ Form
 	Section
 	{
 		title: qsTr("Cells")
+
+		Group
+		{
+			title:	qsTr("Counts")
+			debug:	true
+			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
+		}
+
+		Group
+		{
+			title: qsTr("Residuals")
+			debug:	true
+			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized")	}
+			CheckBox { name: "residualsPearson";		label: qsTr("Pearson")			}
+			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized")		}
+		}
 
 		Group
 		{

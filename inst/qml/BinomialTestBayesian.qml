@@ -42,10 +42,10 @@ Form
 		RadioButtonGroup
 		{
 			title: qsTr("Direction")
-			name: "hypothesis"
-			RadioButton { value: "notEqualToTestValue";		label: qsTr("≠ Test value"); checked: true	}
-			RadioButton { value: "greaterThanTestValue";	label: qsTr("> Test value")					}
-			RadioButton { value: "lessThanTestValue";		label: qsTr("< Test value")					}
+			name: "alternative"
+			RadioButton { value: "twoSided";	label: qsTr("≠ Test value"); checked: true	}
+			RadioButton { value: "greater";		label: qsTr("> Test value")					}
+			RadioButton { value: "less";		label: qsTr("< Test value")					}
 		}
 
 		Group
@@ -60,15 +60,17 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "plotPriorAndPosterior";				label: qsTr("Prior and posterior")
-			CheckBox { name: "plotPriorAndPosteriorAdditionalInfo"; label: qsTr("Additional info"); checked: true }
+			name:	"priorPosteriorPlot"
+			label:	qsTr("Prior and posterior")
+			CheckBox { name: "priorPosteriorPlotAdditionalInfo";	label: qsTr("Additional info");	checked: true }
 		}
-		CheckBox { name: "plotSequentialAnalysis";		label: qsTr("Sequential analysis") }
-        CheckBox
-        {
-            name: "descriptivesPlots";					label: qsTr("Descriptive plots")
-            CIField { name: "descriptivesPlotsCredibleInterval"; label: qsTr("Credible interval") }
-        }
+		CheckBox { name: "bfSequentialPlot";	label: qsTr("Sequential analysis") }
+		CheckBox
+		{
+			name:	"descriptivesPlot"
+			label:	qsTr("Descriptive plots")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
+		}
 	}
 
 	BayesFactorType {}

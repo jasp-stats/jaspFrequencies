@@ -48,7 +48,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
     # Create table
     contTabBasBF <- createJaspTable(title = gettext("Bayesian Contingency Tables Tests"))
-    dependList <- c("samplingModel", "hypothesis", "bayesFactorType", "priorConcentration", "setSeed", "seed")
+    dependList <- c("samplingModel", "alternative", "bayesFactorType", "priorConcentration", "setSeed", "seed")
     contTabBasBF$dependOn(dependList)
     contTabBasBF$showSpecifiedColumnsOnly <- TRUE
     contTabBasBF$position <- 2
@@ -83,12 +83,12 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
     # Create table
     contTabBasLogOdds <- createJaspTable(title = gettext("Log Odds Ratio"))
-    dependList <- c("oddsRatio", "oddsRatioCredibleIntervalInterval", "hypothesis", "samplingModel", "priorConcentration", "setSeed", "seed")
+    dependList <- c("oddsRatio", "oddsRatioCiLevel", "alternative", "samplingModel", "priorConcentration", "setSeed", "seed")
     contTabBasLogOdds$dependOn(dependList)
     contTabBasLogOdds$showSpecifiedColumnsOnly <- TRUE
     contTabBasLogOdds$position <- 3
 
-    ci.label <- gettextf("%.0f%% Credible Interval", 100*options$oddsRatioCredibleIntervalInterval)
+    ci.label <- gettextf("%.0f%% Credible Interval", 100*options$oddsRatioCiLevel)
 
     # Add columns to table
     .crossTabLayersColumns(contTabBasLogOdds, analysis)
@@ -111,7 +111,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 }
 
 .contTabBasCramersV <- function(jaspResults, options, analyses, ready) {
-  if(!options$effectSize)
+  if(!options$cramersV)
     return()
 
   for (i in 1:nrow(analyses)){
@@ -121,11 +121,11 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       next
 
     # Create table
-    contTabBasCramersV <- createJaspTable(title = gettext("Cramer's V"), dependencies="effectSize")
+    contTabBasCramersV <- createJaspTable(title = gettext("Cramer's V"), dependencies="cramersV")
     contTabBasCramersV$showSpecifiedColumnsOnly <- TRUE
     contTabBasCramersV$position <- 4
 
-    ci <- gettextf("%.0f%% Credible Interval", 100 * options$effectSizeCredibleIntervalInterval)
+    ci <- gettextf("%.0f%% Credible Interval", 100 * options$cramersVCiLevel)
 
     # Add columns to table
     .crossTabLayersColumns(contTabBasCramersV, analysis)
@@ -147,13 +147,13 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
 # Log Odds Plot
 .contTabBasLogOddsPlot <- function(jaspResults, options, analyses, ready) {
-  if(!options$plotPosteriorOddsRatio)
+  if(!options$posteriorOddsRatioPlot)
     return()
 
   if (is.null(jaspResults[["oddsRatioPlots"]])) {
     oddsRatioPlots <- createJaspContainer(gettext("Log Odds Ratio Plots"))
-    oddsRatioPlots$dependOn(c("layers", "counts", "plotPosteriorOddsRatio", "hypothesis", "samplingModel",
-                                                "plotPosteriorOddsRatioAdditionalInfo", "priorConcentration",
+    oddsRatioPlots$dependOn(c("layers", "counts", "posteriorOddsRatioPlot", "alternative", "samplingModel",
+                                                "posteriorOddsRatioPlotAdditionalInfo", "priorConcentration",
                                                 "counts", "layers", "setSeed", "seed"))
     oddsRatioPlots$position <- 2
     .contTablesBayesianCitations(oddsRatioPlots)
@@ -222,16 +222,16 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     else if (is.infinite(BF10))     stop(gettext("The Bayes factor is infinite"))
   }
 
-  switch(options$hypothesis,
-    groupTwoGreater = {
+  switch(options$alternative,
+    less = {
       oneSided     <- "left"
       bfSubscripts <- c("BF['-'][0]", "BF[0]['-']")
     },
-    groupOneGreater = {
+    greater = {
       oneSided     <- "right"
       bfSubscripts <- c("BF['+'][0]", "BF[0]['+']")
     },
-    groupsNotEqual = {
+    twoSided = {
       oneSided     <- "notABoolean"
       bfSubscripts <- c("BF[1][0]", "BF[0][1]")
     }
@@ -260,13 +260,13 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   logOR       <- seq(min(xticks), max(xticks),length.out = 10000)
   dfLines     <- .dposteriorOR(logOR, mean(samples), sd(samples), oneSided)
   ppCri       <- c(result$lower.ci, result$upper.ci)
-  CriInterval <- options$oddsRatioCredibleIntervalInterval # todo: need this implemented
+  CriInterval <- options$oddsRatioCiLevel # todo: need this implemented
   CRItxt      <- paste0(100*CriInterval, "% CI: ")
   median      <- result$median
   medianTxt   <- gettext("median Log OR = ")
   xName       <- gettext("Log Odds Ratio")
 
-  if(options$plotPosteriorOddsRatioAdditionalInfo)
+  if(options$posteriorOddsRatioPlotAdditionalInfo)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = ppCri, median = median, bfSubscripts = bfSubscripts,
                                            CRItxt = CRItxt, medianTxt = medianTxt)
@@ -305,7 +305,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     bfList[[g]]   <- .contTabBasComputeBF(options, grp.mat[[g]], ready)
   analysisContainer[["bfList"]] <- createJaspState(bfList)
   analysisContainer[["bfList"]]$dependOn(c("samplingModel", "priorConcentration",
-                                           "hypothesis", "bayesFactorType", "setSeed", "seed"))
+                                           "alternative", "bayesFactorType", "setSeed", "seed"))
   return(bfList)
 }
 
@@ -356,13 +356,13 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
   }
 
 
-  if(options$hypothesis %in% c("groupOneGreater", "groupTwoGreater")){
+  if(options$alternative %in% c("greater", "less")){
     if(options$samplingModel %in% c("poisson", "jointMultinomial")){
       theta      <- as.data.frame(ch.result)
       odds.ratio <- (theta[,1]*theta[,4])/(theta[,2]*theta[,3])
       logOR      <- log(odds.ratio)
 
-      if(options$hypothesis == "groupOneGreater") prop.consistent <- 1 - mean(logOR < 0)
+      if(options$alternative == "greater") prop.consistent <- 1 - mean(logOR < 0)
       else                                        prop.consistent <- mean(logOR < 0)
 
     } else if(options$samplingModel %in% rowsOrCols) {
@@ -371,11 +371,11 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
       switch(options$samplingModel,
         independentMultinomialRowsFixed = {
-          if(options$hypothesis == "groupOneGreater") prop.consistent <- mean(theta[,1] > theta[,2])
+          if(options$alternative == "greater") prop.consistent <- mean(theta[,1] > theta[,2])
           else                                        prop.consistent <- mean(theta[,1] < theta[,2])
         },
         independentMultinomialColumnsFixed = {
-          if(options$hypothesis == "groupOneGreater") prop.consistent <- mean(theta[,1] > theta[,3])
+          if(options$alternative == "greater") prop.consistent <- mean(theta[,1] > theta[,3])
           else                                        prop.consistent <- mean(theta[,1] < theta[,3])
         }
       )
@@ -386,10 +386,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     }
   }
 
-  switch(options$hypothesis,
-    groupOneGreater = { bfTitleUniquePart <- "\u208A" }, #On my system these code points seem to be rendered as B+0, B0+ etc. Probably wrong then?
-    groupTwoGreater = { bfTitleUniquePart <- "\u208B" },
-    groupsNotEqual  = { bfTitleUniquePart <- "\u2081" }) # || options$samplingModel == "hypergeometric" used to be added here, but because it was an if - else if - else if covering all possibilities this was quite pointless. Maybe there is a bug here as well. I don't know about that.
+  switch(options$alternative,
+    greater   = { bfTitleUniquePart <- "\u208A" }, #On my system these code points seem to be rendered as B+0, B0+ etc. Probably wrong then?
+    less      = { bfTitleUniquePart <- "\u208B" },
+    twoSided  = { bfTitleUniquePart <- "\u2081" }) # || options$samplingModel == "hypergeometric" used to be added here, but because it was an if - else if - else if covering all possibilities this was quite pointless. Maybe there is a bug here as well. I don't know about that.
 
   #I am not adding the following bfTitle's to the translation strings because there is not a lot to translate and it would be neigh incomprehensible if all those unicode chars were %s...
   switch(options$bayesFactorType,
@@ -442,10 +442,10 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
       gp2 <- colnames(counts.matrix)[2]
     }
 
-    switch(options$hypothesis,
-      groupOneGreater = { equality <- gettext("is greater than") },
-      groupTwoGreater = { equality <- gettext("is less than")    },
-      groupsNotEqual  = { equality <- gettext("is not equal to") },
+    switch(options$alternative,
+      greater   = { equality <- gettext("is greater than") },
+      less      = { equality <- gettext("is less than")    },
+      twoSided  = { equality <- gettext("is not equal to") },
     )
 
     message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", gp1, equality, gp2)
@@ -492,11 +492,11 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
     stop(gettext("Invalid sampling model selected"))
 
   samples   <- log(odds.ratio.samples)
-  sig       <- options$oddsRatioCredibleIntervalInterval
+  sig       <- options$oddsRatioCiLevel
   alpha     <- (1 - sig) / 2
   quantiles <- .crossTabCIPlusMedian(credibleIntervalInterval = sig,
                                            mean = mean(samples), sd = sd(samples),
-                                           hypothesis = options$hypothesis)
+                                           alternative = options$alternative)
   median <- quantiles$ci.median
   lower  <- quantiles$ci.lower
   upper  <- quantiles$ci.upper
@@ -654,7 +654,7 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 
         CramersV.samples <- Cramer
         CramersV.median  <- stats::median(CramersV.samples)
-        sig   <- options$effectSizeCredibleIntervalInterval
+        sig   <- options$cramersVCiLevel
         alpha <- (1 - sig) / 2
         lower <- unname(stats::quantile(Cramer, p = alpha))
         upper <- unname(stats::quantile(Cramer, p = (1-alpha)))
@@ -703,21 +703,21 @@ ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...)
 }
 
 #CRI and Median
-.crossTabCIPlusMedian <- function(credibleIntervalInterval = .95, mean, sd, hypothesis = "groupsNotEqual") {
+.crossTabCIPlusMedian <- function(credibleIntervalInterval = .95, mean, sd, alternative = "twoSided") {
 
   lower <- (1 - credibleIntervalInterval) / 2
   upper <- 1 - lower
 
-  switch(hypothesis,
-    groupsNotEqual={
+  switch(alternative,
+    twoSided={
       quantiles <- qnorm(c(lower, .5, upper), mean, sd)
     },
-    groupOneGreater = {
+    greater = {
       rightArea <- pnorm(0, mean, sd, lower.tail = FALSE)
       leftArea  <- 1 - rightArea
       quantiles <- qnorm(leftArea + rightArea * c(lower, .5, upper), mean, sd)
     },
-    groupTwoGreater = {
+    less = {
       leftArea  <- pnorm(0, mean, sd)
       quantiles <- qnorm(leftArea * c(lower, .5, upper), mean, sd)
     }

@@ -37,7 +37,7 @@ test_that("Descriptives table results match", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$descriptives <- TRUE
+  options$descriptivesTable <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   table    <- results[["results"]][["abTestBayesianDescriptivesTable"]][["data"]]
@@ -57,10 +57,10 @@ test_that("Main table results, log odds neq 0", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$orEqualTo1Prob     <- 0.495
-  options$orGreaterThan1Prob <- 0.168
-  options$orLessThan1Prob    <- 0.168
-  options$orNotEqualTo1Prob  <- 0.168
+  options$priorModelProbabilityEqual     <- 0.495
+  options$priorModelProbabilityGreater   <- 0.168
+  options$priorModelProbabilityLess      <- 0.168
+  options$priorModelProbabilityTwoSided  <- 0.168
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   table    <- results[["results"]][["abTestBayesianTable"]][["data"]]
@@ -82,10 +82,10 @@ test_that("Main table results, only 2 hypotheses", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$orEqualTo1Prob     <- 0.5
-  options$orGreaterThan1Prob <- 0.5
-  options$orLessThan1Prob    <- 0
-  options$orNotEqualTo1Prob  <- 0
+  options$priorModelProbabilityEqual     <- 0.5
+  options$priorModelProbabilityGreater   <- 0.5
+  options$priorModelProbabilityLess      <- 0
+  options$priorModelProbabilityTwoSided  <- 0
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   table    <- results[["results"]][["abTestBayesianTable"]][["data"]]
@@ -101,11 +101,12 @@ test_that("Prior plot matches", {
   set.seed(0)
 
   options <- jaspTools::analysisOptions("ABTestBayesian")
-  options$orEqualTo1Prob     <- 0.5
-  options$orGreaterThan1Prob <- 0.5
-  options$orLessThan1Prob    <- 0
-  options$orNotEqualTo1Prob  <- 0
-  options$plotPriorOnly      <- TRUE
+  options$priorModelProbabilityEqual     <- 0.5
+  options$priorModelProbabilityGreater   <- 0.5
+  options$priorModelProbabilityLess      <- 0
+  options$priorModelProbabilityTwoSided  <- 0
+  options$priorPlot      <- TRUE
+  options$priorPlotType  <- "logOddsRatio"
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -123,11 +124,12 @@ test_that("Posterior plot matches", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$orEqualTo1Prob     <- 0.5
-  options$orGreaterThan1Prob <- 0.5
-  options$orLessThan1Prob    <- 0
-  options$orNotEqualTo1Prob  <- 0
-  options$plotPriorAndPosterior <- TRUE
+  options$priorModelProbabilityEqual     <- 0.5
+  options$priorModelProbabilityGreater <- 0.5
+  options$priorModelProbabilityLess    <- 0
+  options$priorModelProbabilityTwoSided  <- 0
+  options$priorPosteriorPlot <- TRUE
+  options$priorPosteriorPlotType <- "logOddsRatio"
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]
@@ -144,11 +146,11 @@ test_that("Sequential plot matches", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$orEqualTo1Prob     <- 0.5
-  options$orGreaterThan1Prob <- 0.5
-  options$orLessThan1Prob    <- 0
-  options$orNotEqualTo1Prob  <- 0
-  options$plotSequentialAnalysis <- TRUE
+  options$priorModelProbabilityEqual     <- 0.5
+  options$priorModelProbabilityGreater <- 0.5
+  options$priorModelProbabilityLess    <- 0
+  options$priorModelProbabilityTwoSided  <- 0
+  options$bfSequentialPlot <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -166,11 +168,11 @@ test_that("plotRobustness plot matches", {
   options$y1 <- "y1"
   options$n2 <- "n2"
   options$y2 <- "y2"
-  options$orEqualTo1Prob     <- 0.5
-  options$orGreaterThan1Prob <- 0.5
-  options$orLessThan1Prob    <- 0
-  options$orNotEqualTo1Prob  <- 0
-  options$plotRobustness     <- TRUE
+  options$priorModelProbabilityEqual     <- 0.5
+  options$priorModelProbabilityGreater   <- 0.5
+  options$priorModelProbabilityLess      <- 0
+  options$priorModelProbabilityTwoSided  <- 0
+  options$bfRobustnessPlot     <- TRUE
 
   results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]]
