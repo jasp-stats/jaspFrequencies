@@ -17,17 +17,17 @@
 
 InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
 
-  dataset            <- .multinomReadData(dataset, options)
+  dataset <- .multinomReadData(dataset, options)
   .multinomCheckErrors(dataset, options)
 
-  .computeInformedMultinomialResults(jaspResults, dataset, options)
-  .createInformedMultBayesMainTable(jaspResults, options)
+  .computeInformedMultResults(jaspResults, dataset, options)
+  .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
 
   if (options[["descriptivesTable"]])
-    .createInformedMultBayesDescriptivesTable(jaspResults, dataset, options)
+    .createInformedBayesDescriptivesTable(jaspResults, dataset, options, type = "multinomial")
 
   if (options[["descriptivesPlot"]])
-    .createInformedMultBayesDescriptivesPlot(jaspResults, dataset, options)
+    .createInformedBayesDescriptivesPlot(jaspResults, dataset, options, type = "multinomial")
 
   if (options[["posteriorPlot"]])
     .createInformedMultBayesPosteriorPlot(jaspResults, dataset, options)
@@ -35,10 +35,10 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   return()
 }
 
-.informedMultinomialDependency <- c("factor", "counts", "priorCounts", "models", "syntax",
+.informedMultDependency <- c("factor", "counts", "priorCounts", "models", "syntax",
                                     "bridgeSamples", "mcmcBurnin", "mcmcSamples", "setSeed", "seed")
 
-.computeInformedMultinomialResults        <- function(jaspResults, dataset, options){
+.computeInformedMultResults               <- function(jaspResults, dataset, options) {
 
   # skip if there is nothing new
   if (!is.null(jaspResults[["models"]]))
@@ -49,10 +49,10 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
     return()
 
   models <- createJaspState()
-  models$dependOn(.informedMultinomialDependency)
+  models$dependOn(.informedMultDependency)
   jaspResults[["models"]] <- models
 
-  if(length(options[["models"]]) > 0)
+  if (length(options[["models"]]) > 0)
     startProgressbar(length(options[["models"]]))
 
 
@@ -109,16 +109,20 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   return()
 }
-.createInformedMultBayesMainTable         <- function(jaspResults, options){
+.createInformedBayesMainTable             <- function(jaspResults, options, type) {
 
   if (!is.null(jaspResults[["summaryTable"]]))
     return()
 
   models <- jaspResults[["models"]]$object
 
-  summaryTable <- createJaspTable(title = gettext("Bayesian evaluation of multinomial order constraints "))
+  summaryTable <- createJaspTable(title = gettextf("Bayesian evaluation of %1$s order constraints", switch(
+    type,
+    multinomial = gettext("multinomial"),
+    binomial    = gettext("binomial")
+  )))
   summaryTable$position <- 1
-  summaryTable$dependOn(c(.informedMultinomialDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis"))
+  summaryTable$dependOn(c(.informedDependencies(type), "bayesFactorType", "bfComparison", "bfVsHypothesis"))
 
   if (options$bayesFactorType == "BF10")
     bfTitle <- gettextf("BF%s%s", "\u2081", "\u2080")
@@ -182,11 +186,11 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsFrame <- do.call(rbind, rowsList)
 
   # extract the Bayes factor comparison
-  if(options[["bfComparison"]]== "encompassing")
+  if (options[["bfComparison"]]== "encompassing")
     bfComparison <- "Encompassing"
-  else if(options[["bfComparison"]]== "null")
+  else if (options[["bfComparison"]]== "null")
     bfComparison <- "Null"
-  else if(options[["bfVsHypothesis"]] %in% rowsFrame$model)
+  else if (options[["bfVsHypothesis"]] %in% rowsFrame$model)
     bfComparison <- options[["bfVsHypothesis"]]
   else
     bfComparison <- "Encompassing"
@@ -197,20 +201,24 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   summaryTable$setData(rowsFrame)
   summaryTable$addFootnote(gettextf("Model in each row (denoted as '1') is compared to the %1$s (denoted as 0).", bfComparison))
-  if(.chechIfAllRestrictedModelsNull(options))
+  if (.chechIfAllRestrictedModelsNull(options))
     summaryTable$addFootnote(gettext("Specify informed hypothesis tests in the `Order Restricted Hypotheses` section."))
 
   return()
 }
-.createInformedMultBayesDescriptivesTable <- function(jaspResults, dataset, options){
+.createInformedBayesDescriptivesTable     <- function(jaspResults, dataset, options, type) {
 
-  if(!is.null(jaspResults[["descriptivesTable"]]))
+  if (!is.null(jaspResults[["descriptivesTable"]]))
     return()
 
   # Create Table
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
   descriptivesTable$position <- 2
-  descriptivesTable$dependOn(c("factor", "counts", "display", "descriptivesTable", "descriptivesTableCi", "descriptivesTableCiCoverage"))
+  descriptivesTable$dependOn(c("factor", "display", "descriptivesTable", "descriptivesTableCi", "descriptivesTableCiCoverage", switch(
+    type,
+    multinomial = "counts",
+    binomial    = c("successes", "sampleSize")
+  )))
 
   if (options[["display"]] == "counts")
     outType <- "integer"
@@ -229,42 +237,64 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   jaspResults[["descriptivesTable"]] <- descriptivesTable
 
   # Show empty Table if no variable is selected
-  if(options[["factor"]] == "")
+  if (options[["factor"]] == "")
     return()
 
   # compute and fill the table
-  descriptivesData <- .createInformedMultBayesDescriptivesData(dataset, options)
+  descriptivesData <- switch(
+    type,
+    multinomial = .createInformedMultBayesDescriptivesData(dataset, options, table = TRUE),
+    binomial    = .createInformedBinBayesDescriptivesData(dataset, options, table = TRUE)
+  )
   descriptivesTable$setData(descriptivesData)
 
-  if (options[["counts"]] != "" && options[["descriptivesTableCi"]]){
-    descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
-  }
+  if (type == "multinomial")
+    if (options[["counts"]] != "" && options[["descriptivesTableCi"]])
+      descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
+
+  if (type == "binomial")
+    if (options[["successes"]] != "" && options[["sampleSize"]] != "" && options[["descriptivesTableCi"]])
+      descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
 
   return()
 }
-.createInformedMultBayesDescriptivesPlot  <- function(jaspResults, dataset, options){
+.createInformedBayesDescriptivesPlot      <- function(jaspResults, dataset, options, type) {
 
-  if(!is.null(jaspResults[["descriptivesPlot"]]))
+  if (!is.null(jaspResults[["descriptivesPlot"]]))
     return()
 
   # Create Plot
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives plot"), width = 480, height = 320)
   descriptivesPlot$position <- 3
-  descriptivesPlot$dependOn(c(.informedMultinomialDependency, "display", "descriptivesPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  descriptivesPlot$dependOn(c("factor", "display", "descriptivesPlot", "descriptivesAndPosteriorPlotCiCoverage", switch(
+    type,
+    multinomial = "counts",
+    binomial    = c("successes", "sampleSize")
+  )))
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
   # Show empty Plot if no variable is selected
-  if(options[["factor"]] == "" || options[["counts"]] == "")
-    return()
+  if (type == "multinomial")
+    if (options[["factor"]] == "" || options[["counts"]] == "")
+      return()
 
-  plotData <- .createInformedMultBayesDescriptivesData(dataset, options, table = FALSE)
-  descriptivesPlot$plotObject <- .informedMultinomialPlot(plotData, options, descriptives = TRUE)
+  if (type == "binomial")
+    if (options[["factor"]] == "" || options[["successes"]] == "" || options[["sampleSize"]] == "")
+      return()
+
+
+  plotData <- switch(
+    type,
+    multinomial = .createInformedMultBayesDescriptivesData(dataset, options, table = FALSE),
+    binomial    = .createInformedBinBayesDescriptivesData(dataset, options, table = FALSE)
+  )
+  descriptivesPlot$plotObject <- .informedPlot(plotData, options, descriptives = TRUE)
 
   return()
 }
-.createInformedMultBayesPosteriorPlot     <- function(jaspResults, dataset, options){
+.createInformedMultBayesPosteriorPlot     <- function(jaspResults, dataset, options) {
 
-  if(!is.null(jaspResults[["posteriorPlot"]]))
+  if (!is.null(jaspResults[["posteriorPlot"]]))
     return()
 
   # extract posterior summary from the unrestricted model and format it for the plotting function
@@ -278,20 +308,20 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedMultinomialDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
-  posteriorPlot$plotObject <- .informedMultinomialPlot(tempSummary, options, descriptives = FALSE)
+  posteriorPlot$plotObject <- .informedPlot(tempSummary, options, descriptives = FALSE)
 
   return()
 }
-.createInformedMultBayesPosteriorPlots    <- function(jaspResults, dataset, options){
+.createInformedMultBayesPosteriorPlots    <- function(jaspResults, dataset, options) {
   # currently not used -- might be added later
-  if(!is.null(jaspResults[["posteriorPlots"]]))
+  if (!is.null(jaspResults[["posteriorPlots"]]))
     return()
 
   posteriorPlots <- createJaspContainer("Posterior plots")
-  posteriorPlots$dependOn(c(.informedMultinomialDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  posteriorPlots$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
   posteriorPlots$position <- 4
   jaspResults[["posteriorPlots"]] <- posteriorPlots
 
@@ -321,12 +351,12 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
     tempPlot$position <- i
     posteriorPlots[[models[[i]]$name]] <- tempPlot
 
-    tempPlot$plotObject <- .informedMultinomialPlot(tempSummary, options, descriptives = FALSE)
+    tempPlot$plotObject <- .informedPlot(tempSummary, options, descriptives = FALSE)
   }
 
   return()
 }
-.createInformedMultBayesDescriptivesData  <- function(dataset, options, table = TRUE){
+.createInformedMultBayesDescriptivesData  <- function(dataset, options, table = TRUE) {
 
   # Compute CI
   if (table && options[["counts"]] != "" && options[["descriptivesTableCi"]])
@@ -344,7 +374,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsList <- list()
 
   # Add rows
-  for (i in 1:nrow(dataset)){
+  for (i in 1:nrow(dataset)) {
 
     tempRow <- list(fact = dataset[i,options[["factor"]]])
 
@@ -363,7 +393,7 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
   rowsFrame <- do.call(rbind, rowsList)
   return(rowsFrame)
 }
-.informedMultinomialPlot                  <- function(plotData, options, descriptives = TRUE){
+.informedPlot                             <- function(plotData, options, descriptives = TRUE) {
 
   base_breaks_y <- function(x) {
     b <- pretty(c(0,x))
@@ -385,8 +415,8 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   # Determine y-axis margin: If CIs could not be computed, use observed counts
   plotFrame$yAxisMargin <- plotFrame$upperCI
-  for(i in 1:nrow(plotFrame)){
-    if(plotFrame$upperCI[i] == 0){
+  for(i in 1:nrow(plotFrame)) {
+    if (plotFrame$upperCI[i] == 0) {
       plotFrame$yAxisMargin[i] <- plotFrame$obs[i]
     }
   }
@@ -408,13 +438,20 @@ InformedMultinomialTestBayesian <- function(jaspResults, dataset, options, ...) 
 
   return(p)
 }
-.chechIfAllRestrictedModelsNull           <- function(options){
+.chechIfAllRestrictedModelsNull           <- function(options) {
   return(all(unlist(lapply(options[["models"]], function(x) nchar(trimws(x[["syntax"]], "both")) == 0))))
 }
-.decodeOptionsDisplay                    <- function(options){
+.decodeOptionsDisplay                     <- function(options) {
   switch(
     options[["display"]],
     "counts"      = "descCounts",
     "proportions" = "descProp"
   )
+}
+.informedDependencies                     <- function(type) {
+  return(switch(
+    type,
+    "binomial"    = .informedBinDependency,
+    "multinomial" = .informedMultDependency
+  ))
 }
