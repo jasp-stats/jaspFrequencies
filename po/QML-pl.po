@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-14 06:44+0000\n"
+"PO-Revision-Date: 2022-11-25 13:47+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pl/>\n"
@@ -87,11 +87,11 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
-msgstr ""
+msgstr "μ:"
 
 msgctxt "ABTestBayesian|"
 msgid "σ:"
-msgstr ""
+msgstr "σ:"
 
 msgctxt "ABTestBayesian|"
 msgid "Descriptives"
@@ -111,7 +111,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
@@ -183,7 +183,7 @@ msgstr ""
 
 msgctxt "BinomialTest|"
 msgid "Variables"
-msgstr ""
+msgstr "Zmienne"
 
 msgctxt "BinomialTest|"
 msgid "Test value: "
@@ -275,15 +275,15 @@ msgstr ""
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter a"
-msgstr ""
+msgstr "Beta prior: parametr a"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter b"
-msgstr ""
+msgstr "Beta prior: parametr b"
 
 msgctxt "ContingencyTables|"
 msgid "Rows"
@@ -307,7 +307,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "χ²"
-msgstr ""
+msgstr "χ²"
 
 msgctxt "ContingencyTables|"
 msgid "χ² continuity correction"
@@ -355,7 +355,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Lambda"
-msgstr ""
+msgstr "Lambda"
 
 msgctxt "ContingencyTables|"
 msgid "Uncertainty coefficient"
@@ -367,7 +367,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 msgctxt "ContingencyTables|"
 msgid "Somers' d"
@@ -387,7 +387,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Eta"
-msgstr ""
+msgstr "Eta"
 
 msgctxt "ContingencyTables|"
 msgid "Cochran's and Mantel-Haenszel statistics"
@@ -455,7 +455,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Options"
-msgstr ""
+msgstr "Opcje"
 
 msgctxt "ContingencyTables|"
 msgid "Row Order"
@@ -483,7 +483,7 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Liczebności"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
@@ -495,11 +495,11 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Sample"
-msgstr ""
+msgstr "Próba"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Poisson"
-msgstr ""
+msgstr "Poisson"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Joint multinomial"
@@ -559,7 +559,7 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
@@ -607,7 +607,7 @@ msgstr ""
 
 msgctxt "MultinomialTest|"
 msgid "Factor"
-msgstr ""
+msgstr "Czynnik"
 
 msgctxt "MultinomialTest|"
 msgid "Counts"
@@ -715,7 +715,7 @@ msgstr ""
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
@@ -731,7 +731,7 @@ msgstr ""
 
 msgctxt "RegressionLogLinear|"
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 msgctxt "RegressionLogLinear|"
 msgid "Components"
@@ -775,7 +775,7 @@ msgstr ""
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
@@ -795,7 +795,7 @@ msgstr ""
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
-msgstr ""
+msgstr "modele"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
@@ -803,7 +803,7 @@ msgstr ""
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Components"
@@ -879,4 +879,4 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
-msgstr ""
+msgstr "Pearson"
