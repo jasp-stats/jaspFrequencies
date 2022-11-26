@@ -3,28 +3,28 @@ msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2022-10-08 03:50\n"
 "PO-Revision-Date: 2022-11-26 00:43+0000\n"
-"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
-"jaspfrequencies-r/pl/>\n"
-"Language: pl\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.15-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Байесовское А/Б тестирование"
 
 msgid "Models"
-msgstr "Modele"
+msgstr "Модели"
 
 msgid "P(M)"
-msgstr "P(M)"
+msgstr ""
 
 msgid "P(M|data)"
-msgstr "P(M|data)"
+msgstr ""
 
 msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
 msgstr ""
@@ -42,13 +42,13 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr "Statystyki opisowe"
+msgstr ""
 
 msgid "Counts"
-msgstr "Liczebności"
+msgstr ""
 
 msgid "Total"
-msgstr "Całość"
+msgstr ""
 
 msgid "Proportion"
 msgstr ""
@@ -60,22 +60,22 @@ msgid "Group 2"
 msgstr ""
 
 msgid "Prior and Posterior"
-msgstr "Prior i posterior"
+msgstr ""
 
 msgid "Sequential Analysis"
 msgstr ""
 
 msgid "Bayes Factor Robustness Check"
-msgstr "Weryfikacja odporności współczynnika Bayesa"
+msgstr ""
 
 msgid "Prior"
-msgstr "Prior"
+msgstr ""
 
 msgid "thinning hides the last observation"
 msgstr ""
 
 msgid "n"
-msgstr "n"
+msgstr ""
 
 msgid "Posterior Probability"
 msgstr ""
@@ -93,25 +93,25 @@ msgid "Binomial Test"
 msgstr ""
 
 msgid "Variable"
-msgstr "Zmienna"
+msgstr ""
 
 msgid "Level"
-msgstr "Poziom"
+msgstr ""
 
 msgid "p"
-msgstr "p"
+msgstr ""
 
 msgid "VS-MPR"
-msgstr "VS-MPR"
+msgstr ""
 
 msgid "Lower"
-msgstr "Dolny"
+msgstr ""
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr "Górny"
+msgstr ""
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
@@ -162,7 +162,7 @@ msgid "Log Odds Ratio"
 msgstr ""
 
 msgid "Odds Ratio"
-msgstr "Iloraz szans"
+msgstr ""
 
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
@@ -180,7 +180,7 @@ msgid "Gamma"
 msgstr ""
 
 msgid "Standard Error"
-msgstr "Błąd standardowy"
+msgstr ""
 
 msgid "Kendall's Tau-b"
 msgstr ""
@@ -189,13 +189,13 @@ msgid "Z"
 msgstr ""
 
 msgid "VS-MPR%s"
-msgstr "VS-MPR%s"
+msgstr ""
 
 msgid "Value"
-msgstr "Wartość"
+msgstr ""
 
 msgid "df"
-msgstr "df"
+msgstr ""
 
 msgid "Expected count"
 msgstr ""
@@ -255,7 +255,7 @@ msgid "Count"
 msgstr ""
 
 msgid "N"
-msgstr "N"
+msgstr ""
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
@@ -276,7 +276,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr ""
 
 msgid "%.0f%% Credible Interval"
-msgstr "%.0f%% przedział wiarygodności"
+msgstr ""
 
 msgid "Log Odds Ratio Plots"
 msgstr ""
@@ -333,7 +333,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
 msgid "Posterior"
-msgstr "Posterior"
+msgstr ""
 
 msgid "Expected counts not supported without observed counts."
 msgstr ""
@@ -360,10 +360,10 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr "Czynnik"
+msgstr ""
 
 msgid "Observed"
-msgstr "Obserwowane"
+msgstr ""
 
 msgid "Expected: %s"
 msgstr ""
@@ -375,7 +375,7 @@ msgid "%s%% Confidence Interval"
 msgstr ""
 
 msgid "Descriptives Plot"
-msgstr "Wykresy opisowe"
+msgstr ""
 
 msgid "Observed counts"
 msgstr ""
@@ -414,13 +414,13 @@ msgid "Observed Proportions"
 msgstr ""
 
 msgid "(Intercept)"
-msgstr "(Wyraz wolny)"
+msgstr ""
 
 msgid "ANOVA"
-msgstr "ANOVA"
+msgstr ""
 
 msgid "Deviance"
-msgstr "Odchylenie"
+msgstr ""
 
 msgid "Residual df"
 msgstr ""
@@ -429,10 +429,10 @@ msgid "Residual Deviance"
 msgstr ""
 
 msgid "Coefficients"
-msgstr "Współczynniki"
+msgstr ""
 
 msgid "Estimate"
-msgstr "Oszacuj"
+msgstr ""
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
@@ -465,16 +465,16 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr "Porównanie modeli"
+msgstr ""
 
 msgid "BF<sub>10</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr ""
 
 msgid "BF<sub>01</sub>"
-msgstr "BF<sub>01</sub>"
+msgstr ""
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr "Log(BF<sub>10</sub>)"
+msgstr ""
 
 msgid "Posterior Summary Statistics"
 msgstr ""
@@ -483,7 +483,7 @@ msgid "P(incl|data)"
 msgstr ""
 
 msgid "Mean"
-msgstr "Średnia"
+msgstr ""
 
 msgid "Variance"
 msgstr ""
