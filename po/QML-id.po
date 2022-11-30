@@ -624,10 +624,6 @@ msgid "Equal proportions (multinomial test)"
 msgstr "Proporsi setara (uji multinomial)"
 
 msgctxt "MultinomialTest|"
-msgid "Expected proportions (χ² test)"
-msgstr "Proporsi harapan (uji χ²)"
-
-msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
 msgstr "Statistik Tambahan"
 
@@ -678,10 +674,6 @@ msgstr "Nilai Uji"
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
 msgstr "Proporsi setara"
-
-msgctxt "MultinomialTestBayesian|"
-msgid "Expected proportions"
-msgstr "Proporsi harapan"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
@@ -877,4 +869,61 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr "Log Rasio Odd"
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr "Harapan"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr "Residual"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr "Tidak terstandar"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr "Terstandar"
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
 msgstr ""

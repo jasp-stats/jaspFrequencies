@@ -621,10 +621,6 @@ msgid "Equal proportions (multinomial test)"
 msgstr "Gelijke proporties (multinomiale toets)"
 
 msgctxt "MultinomialTest|"
-msgid "Expected proportions (χ² test)"
-msgstr "Verwachte proporties (χ² toets)"
-
-msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
 msgstr "Aanvullende statistieken"
 
@@ -675,10 +671,6 @@ msgstr "Toetswaarden"
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
 msgstr "Gelijke proporties"
-
-msgctxt "MultinomialTestBayesian|"
-msgid "Expected proportions"
-msgstr "Verwachte proporties"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
@@ -875,3 +867,61 @@ msgstr "Richting"
 msgctxt "ContingencyTables|"
 msgid "Pearson"
 msgstr "Pearson"
+
+#, fuzzy
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr "Log Odds Ratio"
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr "Verwachte"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr "Residuen"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr "Ongestandardiseerd"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr "Pearson"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr "Gestandaardiseerd"
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
+msgstr ""

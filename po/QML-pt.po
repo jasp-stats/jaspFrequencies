@@ -545,10 +545,6 @@ msgid "Equal proportions"
 msgstr "Proporções iguais"
 
 msgctxt "MultinomialTestBayesian|"
-msgid "Expected proportions"
-msgstr "Proporções esperadas"
-
-msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
 msgstr "Estatísticas adicionais"
 
@@ -856,10 +852,6 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
 msgstr "Grupo 1 ≠ Grupo 2"
 
-msgctxt "MultinomialTest|"
-msgid "Expected proportions (χ² test)"
-msgstr "Proporções esperadas (teste χ²)"
-
 msgctxt "Description|"
 msgid "Analyses for count data"
 msgstr "Análises para dados de contagem"
@@ -874,4 +866,61 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr "Log de razões de chance"
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr "Esperado"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr "Resíduos"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr "Não padronizados"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr "Padronizados"
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
 msgstr ""

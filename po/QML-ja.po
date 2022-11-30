@@ -620,10 +620,6 @@ msgid "Equal proportions (multinomial test)"
 msgstr "等しい比率 (多項検定)"
 
 msgctxt "MultinomialTest|"
-msgid "Expected proportions (χ² test)"
-msgstr "期待される割合(χ²検定)"
-
-msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
 msgstr "その他の統計"
 
@@ -674,10 +670,6 @@ msgstr "検定統計量"
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
 msgstr "等しい比率"
-
-msgctxt "MultinomialTestBayesian|"
-msgid "Expected proportions"
-msgstr "期待される比率"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
@@ -873,4 +865,61 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr "対数オッズ比"
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr "期待値"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr "残差"
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr "非標準化"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr "標準化"
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
 msgstr ""
