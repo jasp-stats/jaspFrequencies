@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-26 00:43+0000\n"
+"PO-Revision-Date: 2022-12-13 19:49+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pl/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "Frequencies"
-msgstr ""
+msgstr "Częstości"
 
 msgctxt "Description|"
 msgid "Classical"
@@ -51,7 +51,7 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Bayesowski test A/B"
 
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
