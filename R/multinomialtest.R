@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-MultinomialTest <- function(jaspResults, dataset, options, ...) {
+MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
   # Read dataset
   dataset <- .multinomReadData(dataset, options)
 

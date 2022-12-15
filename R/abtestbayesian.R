@@ -16,7 +16,7 @@
 #
 
 
-ABTestBayesian <- function(jaspResults, dataset = NULL, options) {
+ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 
   ready <- (options$n1 != "" && options$y1 != "" && options$n2 != "" && options$y2 != "")
 

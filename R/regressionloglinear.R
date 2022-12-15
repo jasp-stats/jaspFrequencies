@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-RegressionLogLinear <- function(jaspResults, dataset = NULL , options, ...) {
+RegressionLogLinearInternal <- function(jaspResults, dataset = NULL , options, ...) {
   ready <- length(options$factors) != 0
 
   if (ready) {

@@ -21,7 +21,7 @@ gettextf <- function(fmt, ..., domain = NULL)  {
   return(sprintf(gettext(fmt, domain = domain), ...))
 }
 
-BinomialTest <- function(jaspResults, dataset = NULL, options, ...) {
+BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$variables) > 0
 
   # testValue is a formulaField: parse it and save the result in the state

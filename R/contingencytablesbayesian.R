@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-ContingencyTablesBayesian <- function(jaspResults, dataset = NULL, options, ...) {
+ContingencyTablesBayesianInternal <- function(jaspResults, dataset = NULL, options, ...) {
   dataset <- .crossTabReadData(dataset, options)
   ready <- !(length(options$rows) == 0 || length(options$columns) == 0)
 

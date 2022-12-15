@@ -16,7 +16,7 @@
 #
 
 
-MultinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
+MultinomialTestBayesianInternal <- function(jaspResults, dataset, options, ...) {
 
   dataset            <- .multinomReadData(dataset, options)
 
