@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-ContingencyTables <- function(jaspResults, dataset, options, ...) {
+ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   # Read dataset
   dataset <- .crossTabReadData(dataset, options)
 

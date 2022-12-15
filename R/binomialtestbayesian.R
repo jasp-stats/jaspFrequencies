@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-BinomialTestBayesian <- function(jaspResults, dataset = NULL, options, ...) {
+BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$variables) > 0 && .RCodeInOptionsIsOk(options[c("testValue", "priorA", "priorB")])
 
   # testValue, priorA & priorB are formulaFields: parse them and save the results in the state

@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-RegressionLogLinearBayesian <- function(jaspResults, dataset = NULL, options, ...) {
+RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$factors) > 1
   if(ready){
     dataset <- .basRegLogLinReadData(dataset, options)
