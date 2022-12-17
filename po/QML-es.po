@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-12-10 12:02+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15-dev\n"
 "X-Language: es\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -155,7 +161,7 @@ msgstr "Muestreo"
 
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
-msgstr "Número de muestras"
+msgstr "Nº muestras"
 
 msgctxt "ABTestBayesian|"
 msgid "Robustness Plot"
@@ -843,7 +849,7 @@ msgstr "Manual"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
-msgstr "Número de muestras"
+msgstr "Nº muestras"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
@@ -869,60 +875,54 @@ msgctxt "ContingencyTables|"
 msgid "Pearson"
 msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
 msgstr "Logaritmo de la Razón de Probabilidades"
 
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Razón de Probabilidades"
 
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
-msgstr ""
+msgstr "Riesgo Relativo"
 
 msgctxt "ABTestBayesian|"
 msgid "Absolute Risk"
-msgstr ""
+msgstr "Riesgo Absoluto"
 
 msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
-msgstr ""
+msgstr "p1 & p2"
 
 msgctxt "ABTestBayesian|"
 msgid "p1"
-msgstr ""
+msgstr "p1"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Expected"
 msgstr "Esperado"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Residuals"
 msgstr "Errores"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Unstandardized"
 msgstr "No tipificado"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Pearson"
 msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Standardized"
 msgstr "Tipificado"
 
 msgctxt "MultinomialTest|"
 msgid "Custom expected proportions (χ² test)"
-msgstr ""
+msgstr "Personalizar las proporciones esperadas (contraste χ²)"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
-msgstr ""
+msgstr "Personalizar las proporciones esperadas"
