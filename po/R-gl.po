@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-09-25 11:23+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -81,9 +81,6 @@ msgstr "Comprobación da Robustez do Factor de Bayes"
 
 msgid "Prior"
 msgstr "Previo"
-
-msgid "thinning hides the last observation"
-msgstr "o estreitamento oculta a última observación"
 
 msgid "n"
 msgstr "n"
@@ -170,13 +167,6 @@ msgstr "Un (ou máis) factor de Bayes é infinito"
 
 msgid "Undefined hypothesis"
 msgstr "Hipótese indefinida"
-
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
-msgstr ""
-"Tratando de crear un nome do contedor para análises múltiples. Cada análise "
-"ten o seu propio contedor."
 
 msgid "Contingency Tables"
 msgstr "Táboas de continxencia"
@@ -571,3 +561,13 @@ msgstr "Estatísticos de Resumo Posteriores para o Submodelo %s"
 
 msgid "%.0f%% Credible intervals"
 msgstr "Intervalos co %.0f%% de Credibilidade"
+
+#~ msgid "thinning hides the last observation"
+#~ msgstr "o estreitamento oculta a última observación"
+
+#~ msgid ""
+#~ "Attempting to create container name for multiple analyses. Each analysis "
+#~ "has its own container."
+#~ msgstr ""
+#~ "Tratando de crear un nome do contedor para análises múltiples. Cada "
+#~ "análise ten o seu propio contedor."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-12-15 17:32+0000\n"
 "Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
@@ -71,9 +71,6 @@ msgstr "Vérification de la robustesse du facteur de Bayes"
 
 msgid "Prior"
 msgstr "Précédent"
-
-msgid "thinning hides the last observation"
-msgstr ""
 
 msgid "n"
 msgstr "n"
@@ -151,11 +148,6 @@ msgid "One or more Bayes factors are infinite"
 msgstr ""
 
 msgid "Undefined hypothesis"
-msgstr ""
-
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
 msgstr ""
 
 msgid "Contingency Tables"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2022-10-08 03:50\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-12-11 19:49+0000\n"
 "Last-Translator: Коновалова Екатерина <ekatkon17@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
@@ -26,7 +26,9 @@ msgstr "P(M)"
 msgid "P(M|data)"
 msgstr "P(M|данные)"
 
-msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
+msgid ""
+"A positive log odds ratio means that the success rate in Group 2 is higher "
+"than in Group 1."
 msgstr ""
 "Положительное логарифмическое отношение шансов означает, что вероятность "
 "успеха в группе 2 выше, чем в группе 1."
@@ -73,10 +75,6 @@ msgstr "Проверка робастности коэффициента Бай�
 msgid "Prior"
 msgstr "Априорный"
 
-#, fuzzy
-msgid "thinning hides the last observation"
-msgstr "истончение скрывает последнее наблюдение"
-
 msgid "n"
 msgstr "n"
 
@@ -116,10 +114,14 @@ msgstr ""
 msgid "Upper"
 msgstr "Верхний"
 
-msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"less than %s."
 msgstr "Для всех тестов альтернативная гипотеза указывает, что доля меньше %s."
 
-msgid "For all tests, the alternative hypothesis specifies that the proportion is greater than %s."
+msgid ""
+"For all tests, the alternative hypothesis specifies that the proportion is "
+"greater than %s."
 msgstr ""
 "Для всех тестов альтернативная гипотеза указывает, что доля больше, чем %s."
 
@@ -133,7 +135,9 @@ msgstr "Описательные графики"
 msgid "Bayesian Binomial Test"
 msgstr "Байесовский биномиальный тест"
 
-msgid "%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s)."
+msgid ""
+"%1$s The shape of the prior distribution under the alternative hypothesis is "
+"specified by Beta(%2$s, %3$s)."
 msgstr ""
 
 msgid "Inferential Plots"
@@ -151,16 +155,16 @@ msgstr "Один или несколько коэффициентов Байес
 msgid "Undefined hypothesis"
 msgstr "Неопределенная гипотеза"
 
-msgid "Attempting to create container name for multiple analyses. Each analysis has its own container."
-msgstr ""
-
 msgid "Contingency Tables"
 msgstr "Таблицы сопряженности"
 
 msgid "Chi-Squared Tests"
 msgstr "Критерии хи-квадрат"
 
-msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
+msgid ""
+"Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
+"      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
 
 msgid "Log Odds Ratio"
@@ -237,7 +241,8 @@ msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
 "Фи-коэффициент доступен только для таблиц непредвиденных обстоятельств 2 на 2"
 
-msgid "Value could not be calculated - At least one row or column contains all zeros"
+msgid ""
+"Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
 "Не удалось рассчитать значение — по крайней мере одна строка или столбец "
 "содержат все нули"
@@ -257,7 +262,9 @@ msgstr "меньше, чем"
 msgid "is greater than"
 msgstr "больше, чем"
 
-msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
+msgid ""
+"For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
+"%2$s <em>%3$s</em>."
 msgstr ""
 
 msgid "Count"
@@ -266,7 +273,8 @@ msgstr "Подсчёт"
 msgid "N"
 msgstr "N"
 
-msgid "%s could not be calculated - At least one row or column contains all zeros"
+msgid ""
+"%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
 
 msgid "%s continuity correction"
@@ -355,13 +363,18 @@ msgstr ""
 msgid "No expected counts entered."
 msgstr "Ожидаемые значения не введены."
 
-msgid "Invalid counts: variable does not match the number of levels of the factor. When counts are specified, each row of the data set must represent a unique level of the factor."
+msgid ""
+"Invalid counts: variable does not match the number of levels of the factor. "
+"When counts are specified, each row of the data set must represent a unique "
+"level of the factor."
 msgstr ""
 "Неверный подсчет: переменная не соответствует количеству уровней фактора. "
 "Когда количество указано, каждая строка набора данных должна представлять "
 "уникальный уровень фактора."
 
-msgid "Invalid expected counts: variable does not match the number of levels of the factor."
+msgid ""
+"Invalid expected counts: variable does not match the number of levels of the "
+"factor."
 msgstr ""
 
 msgid "Invalid counts: variable must contain only integer values."
@@ -412,7 +425,9 @@ msgstr "Уровни"
 msgid "Credible"
 msgstr "Доверительный"
 
-msgid "Credible intervals are based on independent binomial distributions with flat priors."
+msgid ""
+"Credible intervals are based on independent binomial distributions with flat "
+"priors."
 msgstr ""
 "Доверительные интервалы основаны на независимых биномиальных распределениях "
 "с плоскими априорными значениями."
@@ -460,14 +475,20 @@ msgstr "Оценка"
 msgid "%s%% Confidence Intervals"
 msgstr ""
 
-msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \nthe maximum possible odds in favor of H%1$s over H%2$s equals \n1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n(Sellke, Bayarri, & Berger, 2001)."
+msgid ""
+"Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
+"the maximum possible odds in favor of H%1$s over H%2$s equals \n"
+"1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
 
 msgid "variables cannot be read"
 msgstr "переменные не могут быть прочитаны"
 
 #, fuzzy
-msgid "Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors."
+msgid ""
+"Cannot compute the results; a numerical error occurred during sampling. Try "
+"to change (e.g., simplify) the model or adjust priors."
 msgstr ""
 "Невозможно вычислить результаты; во время выборки произошла числовая ошибка. "
 "Попробуйте изменить (например, упростить) модель или скорректировать априоры."
@@ -524,3 +545,7 @@ msgstr ""
 
 msgid "%.0f%% Credible intervals"
 msgstr ""
+
+#, fuzzy
+#~ msgid "thinning hides the last observation"
+#~ msgstr "истончение скрывает последнее наблюдение"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-05-31 11:19+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -72,9 +72,6 @@ msgstr "ベイズファクターの頑健性チェック"
 
 msgid "Prior"
 msgstr "事前分布"
-
-msgid "thinning hides the last observation"
-msgstr "間引き(thinning)は最後の観測を隠します"
 
 msgid "n"
 msgstr "n"
@@ -153,13 +150,6 @@ msgstr "1つまたは複数のベイズファクターが無限大です"
 
 msgid "Undefined hypothesis"
 msgstr "未定義の仮説"
-
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
-msgstr ""
-"複数の分析に対してコンテナ名を作成しようとしています。各分析は独自のコンテナ"
-"を持っています。"
 
 msgid "Contingency Tables"
 msgstr "分割表"
@@ -539,3 +529,13 @@ msgstr "サブモデル%sの事後要約統計量"
 
 msgid "%.0f%% Credible intervals"
 msgstr "%.0f%% 信用区間"
+
+#~ msgid "thinning hides the last observation"
+#~ msgstr "間引き(thinning)は最後の観測を隠します"
+
+#~ msgid ""
+#~ "Attempting to create container name for multiple analyses. Each analysis "
+#~ "has its own container."
+#~ msgstr ""
+#~ "複数の分析に対してコンテナ名を作成しようとしています。各分析は独自のコンテ"
+#~ "ナを持っています。"

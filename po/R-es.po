@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-12-10 12:02+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -73,9 +73,6 @@ msgstr "Comprobación de Robustez del Factor de Bayes"
 
 msgid "Prior"
 msgstr "Previo"
-
-msgid "thinning hides the last observation"
-msgstr "el estrechamiento oculta la última observación"
 
 msgid "n"
 msgstr "n"
@@ -164,13 +161,6 @@ msgstr "Uno o más factores Bayesianos son infinitos"
 
 msgid "Undefined hypothesis"
 msgstr "Hipótesis no definida"
-
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
-msgstr ""
-"Intentando crear un nombre del contenedor para análisis múltiples. Cada "
-"análisis tiene su propio contenedor."
 
 msgid "Contingency Tables"
 msgstr "Tablas de Contingencia"
@@ -287,8 +277,8 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
-"Para todas las pruebas, la hipótesis alternativa especifica que el grupo <em>"
-"%1$s</em>%2$s<em>%3$s</em>."
+"Para todas las pruebas, la hipótesis alternativa especifica que el grupo "
+"<em>%1$s</em>%2$s<em>%3$s</em>."
 
 msgid "Count"
 msgstr "Recuentos"
@@ -569,3 +559,13 @@ msgstr "Estadísticos de Resumen Posteriores para el Submodelo %s"
 
 msgid "%.0f%% Credible intervals"
 msgstr "Intervalos con el %.0f%% de Credibilidad"
+
+#~ msgid "thinning hides the last observation"
+#~ msgstr "el estrechamiento oculta la última observación"
+
+#~ msgid ""
+#~ "Attempting to create container name for multiple analyses. Each analysis "
+#~ "has its own container."
+#~ msgstr ""
+#~ "Intentando crear un nombre del contenedor para análisis múltiples. Cada "
+#~ "análisis tiene su propio contenedor."

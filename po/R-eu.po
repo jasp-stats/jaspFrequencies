@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2022-09-14 15:22+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
@@ -81,9 +81,6 @@ msgstr "Bayes faktorearen sendotasuna egiaztatzea"
 
 msgid "Prior"
 msgstr "Aurrekoa"
-
-msgid "thinning hides the last observation"
-msgstr ""
 
 msgid "n"
 msgstr "n"
@@ -171,14 +168,6 @@ msgstr "Bayes faktore bat edo gehiago infinituak dira"
 #, fuzzy
 msgid "Undefined hypothesis"
 msgstr "Hipotesi mugagabea?"
-
-#, fuzzy
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
-msgstr ""
-"Analisi askotarako edukiontziaren izena sortzen saiatu. Analisi bakoitzak "
-"bere edukiontzia du."
 
 msgid "Contingency Tables"
 msgstr "Kontingentzia-taulak"
@@ -567,3 +556,11 @@ msgstr ""
 
 msgid "%.0f%% Credible intervals"
 msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "Attempting to create container name for multiple analyses. Each analysis "
+#~ "has its own container."
+#~ msgstr ""
+#~ "Analisi askotarako edukiontziaren izena sortzen saiatu. Analisi bakoitzak "
+#~ "bere edukiontzia du."

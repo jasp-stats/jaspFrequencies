@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-09-24 04:11\n"
+"POT-Creation-Date: 2022-12-17 03:29\n"
 "PO-Revision-Date: 2021-09-11 03:29+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -77,9 +77,6 @@ msgstr "Verificação de robustez do fator Bayes"
 
 msgid "Prior"
 msgstr "Anterior"
-
-msgid "thinning hides the last observation"
-msgstr "Aparando esconde a última observação"
 
 msgid "n"
 msgstr "n"
@@ -162,13 +159,6 @@ msgstr "Um ou mais fatores de Bayes são infinitos"
 
 msgid "Undefined hypothesis"
 msgstr "Hipótese não definida"
-
-msgid ""
-"Attempting to create container name for multiple analyses. Each analysis has "
-"its own container."
-msgstr ""
-"Tentativa de criar o nome do contêiner para análises múltiplas. Cada análise "
-"tem seu próprio contêiner."
 
 msgid "Contingency Tables"
 msgstr "Tabelas de Contingência"
@@ -283,8 +273,8 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
-"Para todos os testes, a hipótese alternativa especifica que o grupo <em>"
-"%1$s</em> %2$s <em>%3$s</em>."
+"Para todos os testes, a hipótese alternativa especifica que o grupo "
+"<em>%1$s</em> %2$s <em>%3$s</em>."
 
 #, fuzzy
 msgid "Count"
@@ -562,3 +552,13 @@ msgstr "Estatísticas de resumo posteriores para submodel %s"
 
 msgid "%.0f%% Credible intervals"
 msgstr "%.0f%% Intervalo de credibilidade"
+
+#~ msgid "thinning hides the last observation"
+#~ msgstr "Aparando esconde a última observação"
+
+#~ msgid ""
+#~ "Attempting to create container name for multiple analyses. Each analysis "
+#~ "has its own container."
+#~ msgstr ""
+#~ "Tentativa de criar o nome do contêiner para análises múltiplas. Cada "
+#~ "análise tem seu próprio contêiner."
