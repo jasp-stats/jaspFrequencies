@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-29 10:17+0000\n"
-"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
+"PO-Revision-Date: 2022-12-30 10:50+0000\n"
+"Last-Translator: Laurent Paradis-Charette <lpcharette@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/fr/>\n"
 "Language: fr\n"
@@ -35,7 +35,7 @@ msgstr "Test Multinomial"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
-msgstr "Tableaux de Contingence"
+msgstr "Tableaux de contingence"
 
 #, fuzzy
 msgctxt "Description|"
