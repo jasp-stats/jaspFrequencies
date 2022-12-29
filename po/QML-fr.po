@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-12-30 10:50+0000\n"
-"Last-Translator: Laurent Paradis-Charette <lpcharette@gmail.com>\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/fr/>\n"
 "Language: fr\n"
@@ -63,10 +63,9 @@ msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
 msgstr "Test Multinomial de Bayes"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
-msgstr "Tableaux de Contingence de Bayes"
+msgstr "Tableaux de contingence de Bayésienne"
 
 #, fuzzy
 msgctxt "Description|"
