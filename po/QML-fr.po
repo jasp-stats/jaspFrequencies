@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-30 10:50+0000\n"
-"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
-"jaspfrequencies-qml/fr/>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
@@ -232,9 +226,10 @@ msgctxt "BinomialTest|"
 msgid "Interval"
 msgstr "Intervalle"
 
+#, fuzzy
 msgctxt "BinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "BinomialTest|"
 msgid "Plots"
@@ -334,17 +329,19 @@ msgctxt "ContingencyTables|"
 msgid "Likelihood ratio"
 msgstr ""
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Ratio p maximal de Vovk-Sellke"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
 msgstr ""
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Ratio de probabilité Log"
 
 msgctxt "ContingencyTables|"
 msgid "Confidence interval"
