@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 03:29\n"
-"PO-Revision-Date: 2022-12-18 07:58+0000\n"
-"Last-Translator: Елизавета <elizaveta_alekseeva_23@mail.ru>\n"
+"PO-Revision-Date: 2023-01-04 19:48+0000\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ru/>\n"
 "Language: ru\n"
@@ -42,14 +42,15 @@ msgstr "Логарифмическое отношение шансов > 0"
 msgid "Log odds ratio < 0"
 msgstr "Логарифмическое отношение шансов < 0"
 
+#, fuzzy
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "Логарифмическое отношение шансов %s 0"
 
 msgid "Descriptives"
 msgstr "Описательные статистики"
 
 msgid "Counts"
-msgstr "Подсчёты"
+msgstr "Количество"
 
 msgid "Total"
 msgstr "Итого"
@@ -82,7 +83,7 @@ msgid "Posterior Probability"
 msgstr "Апостериорная вероятность"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | data) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr "Невозможно проверить гипотезу о том, что значение критерия больше 1."
@@ -109,7 +110,7 @@ msgid "Lower"
 msgstr "Нижний"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% ДИ Пропорции"
 
 msgid "Upper"
 msgstr "Верхний"
@@ -131,7 +132,6 @@ msgstr "Пропорции проверены на соответствие зн
 msgid "Descriptives Plots"
 msgstr "Описательные графики"
 
-#, fuzzy
 msgid "Bayesian Binomial Test"
 msgstr "Байесовский биномиальный тест"
 
@@ -183,7 +183,7 @@ msgid "Ordinal Gamma"
 msgstr "Порядковая гамма"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95%% Доверительные интервалы"
 
 msgid "Gamma"
 msgstr "Гамма-распределение"
@@ -198,7 +198,7 @@ msgid "Z"
 msgstr "Z"
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
 msgstr "Значение"
@@ -210,13 +210,13 @@ msgid "Expected count"
 msgstr "Ожидаемый счёт"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% в строке"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% в столбце"
 
 msgid "%% of total"
-msgstr ""
+msgstr "%% от общего"
 
 msgid "Unstandardized residuals"
 msgstr "Нестандартизованные остатки"
@@ -227,15 +227,14 @@ msgstr "Остатки Пирсона"
 msgid "Standardized residuals"
 msgstr "Стандартизованные остатки"
 
-#, fuzzy
 msgid "Contingency coefficient"
-msgstr "Коэффициент непредвиденных обстоятельств"
+msgstr "Коэффициент сопряженности"
 
 msgid "Phi-coefficient"
 msgstr "Фи-коэффициент"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "V-Крамера"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
@@ -266,6 +265,8 @@ msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что группа <em>%1$s</"
+"em> %2$s <em>%3$s</em>."
 
 msgid "Count"
 msgstr "Подсчёт"
@@ -276,9 +277,11 @@ msgstr "N"
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"%s не может быть рассчитан - по крайней мере одна строка или столбец "
+"содержат все нули"
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s коррекция непрерывности"
 
 msgid "Likelihood ratio"
 msgstr "Отношение правдоподобия"
@@ -289,19 +292,17 @@ msgstr "Соотношение шансов ограничено таблица�
 msgid "Fisher's exact test"
 msgstr "Точный критерий Фишера"
 
-#, fuzzy
 msgid "Bayesian Contingency Tables Tests"
-msgstr "Байесовские тесты таблиц непредвиденных обстоятельств"
+msgstr "Байесовские критерии для таблиц сопряженности"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Достоверный интервал"
 
 msgid "Log Odds Ratio Plots"
 msgstr "Графики логарифмических отношений шансов"
 
-#, fuzzy
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr "Отношение шансов ограничено 2 x 2 анализами"
+msgstr "Коэффициент отношения шансов ограничено анализами 2 x 2"
 
 msgid "Odds ratio for this model not yet implemented"
 msgstr "Соотношение шансов для этой модели еще не реализовано"
@@ -316,17 +317,18 @@ msgid "The Bayes factor is infinite"
 msgstr "Коэффициент Байеса бесконечен"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "медиана Log OR ="
 
 msgid "Poisson"
 msgstr "Распределение Пуассона"
 
 #, fuzzy
 msgid "Joint multinomial"
-msgstr "Мультиномиальное соединение"
+msgstr "Совместный полином"
 
+#, fuzzy
 msgid "Independent multinomial"
-msgstr ""
+msgstr "Независимый полином"
 
 msgid "Hypergeometric"
 msgstr "Гипергеометрический"
@@ -352,13 +354,13 @@ msgid "Odd ratio for this model not yet implemented"
 msgstr "Соотношение шансов для этой модели еще не реализовано"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "V Крамера для этой модели еще не реализован"
 
 msgid "Posterior"
 msgstr "Апостериорный"
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "Ожидаемые значения не рассчитываются без наблюдаемых значений."
 
 msgid "No expected counts entered."
 msgstr "Ожидаемые значения не введены."
@@ -376,6 +378,8 @@ msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
 msgstr ""
+"Неверные ожидаемые значения: переменная не соответствует количеству уровней "
+"фактора."
 
 msgid "Invalid counts: variable must contain only integer values."
 msgstr ""
@@ -383,7 +387,7 @@ msgstr ""
 "значения."
 
 msgid "Invalid counts: less than 1 observation."
-msgstr "Недействительные подсчёты: менее 1 наблюдения."
+msgstr "Недействительные значения: менее 1 наблюдения."
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
@@ -399,7 +403,7 @@ msgid "Observed"
 msgstr "Наблюдаемый"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "Ожидается: %s"
 
 msgid "Expected"
 msgstr "Ожидаемый"
@@ -411,13 +415,13 @@ msgid "Descriptives Plot"
 msgstr "Описательный график"
 
 msgid "Observed counts"
-msgstr "Наблюдаемые подсчёты"
+msgstr "Наблюдаемые значения"
 
 msgid "Observed proportions"
 msgstr "Наблюдаемые пропорции"
 
 msgid "Bayesian Multinomial Test"
-msgstr "Байесовский мультиномиальный тест"
+msgstr "Байесовский полиномиальный тест"
 
 msgid "Levels"
 msgstr "Уровни"
@@ -432,21 +436,20 @@ msgstr ""
 "Доверительные интервалы основаны на независимых биномиальных распределениях "
 "с плоскими априорными значениями."
 
-#, fuzzy
 msgid "Confidence"
 msgstr "Доверительный"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s Интервал"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "Не удалось вычислить %s интервалов."
 
 msgid "Descriptives plot"
 msgstr "Описательный график"
 
 msgid "Observed Counts"
-msgstr "Наблюдаемые подсчёты"
+msgstr "Наблюдаемые значения"
 
 msgid "Observed Proportions"
 msgstr "Наблюдаемые пропорции"
@@ -473,7 +476,7 @@ msgid "Estimate"
 msgstr "Оценка"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% доверительные интервалы"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -481,6 +484,10 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Максимальное значение <em>p</em> критерия Вовк-Селлке: исходя из значения "
+"<em>p</em>, максимально возможные шансы в пользу H%1$s над H%2$s равны 1/ (-"
+"e <em>p</em> log(<em>p</em>)) для <em>p</em> %3$s.37 (Sellke, Bayarri, & "
+"Berger, 2001)."
 
 msgid "variables cannot be read"
 msgstr "переменные не могут быть прочитаны"
@@ -494,42 +501,41 @@ msgstr ""
 "Попробуйте изменить (например, упростить) модель или скорректировать априоры."
 
 msgid "R Package error: %s"
-msgstr ""
+msgstr "Ошибка пакета R: %s"
 
-#, fuzzy
 msgid "R Package error: Cannot retrieve table probabilities"
 msgstr "Ошибка пакета R: невозможно получить таблицы вероятностей"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "Общее количество посещенных моделей = %i"
 
 msgid "Submodel specified is not within possible submodels"
 msgstr "Указанная подмодель не входит в число возможных подмоделей"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>Формула модели:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em> Вероятность апостериорной модели =</em>"
 
 msgid "Model Comparison"
 msgstr "Сравнение моделей"
 
+#, fuzzy
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr "Апостериорная сводная статистика"
 
-#, fuzzy
 msgid "P(incl|data)"
-msgstr "P(включая|данные)"
+msgstr "P(incl|data)"
 
 msgid "Mean"
 msgstr "Среднее"
@@ -538,13 +544,13 @@ msgid "Variance"
 msgstr "Дисперсия"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% Достоверные интервалы"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "Апостериорная сводная статистика для подмодели %s"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% Достоверные интервалы"
 
 #, fuzzy
 #~ msgid "thinning hides the last observation"
