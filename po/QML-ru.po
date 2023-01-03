@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-11 21:47+0000\n"
-"Last-Translator: Коновалова Екатерина <ekatkon17@gmail.com>\n"
+"PO-Revision-Date: 2023-01-04 18:49+0000\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/ru/>\n"
 "Language: ru\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
@@ -308,7 +308,7 @@ msgstr "Столбцы"
 
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr "Подсчёты"
+msgstr "Количество"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
@@ -423,7 +423,7 @@ msgstr "Ожидаемый"
 
 msgctxt "ContingencyTables|"
 msgid "Hide small counts"
-msgstr "Скрыть мелкие подсчёты"
+msgstr "Скрыть маленькие значения"
 
 msgctxt "ContingencyTables|"
 msgid "Less than"
@@ -499,7 +499,7 @@ msgstr "Столбцы"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr "Подсчёты"
+msgstr "Количество"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
@@ -628,11 +628,11 @@ msgstr "Фактор"
 
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr "Подсчёты"
+msgstr "Количество"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
-msgstr "Ожидаемые подсчёты"
+msgstr "Ожидаемые значения"
 
 msgctxt "MultinomialTest|"
 msgid "Test Values"
@@ -686,11 +686,11 @@ msgstr "Фактор"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr "Подсчёты"
+msgstr "Количество"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
-msgstr "Ожидаемые подсчёты"
+msgstr "Ожидаемые значения"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Test Values"
@@ -743,7 +743,7 @@ msgstr "Фактор не указан"
 
 msgctxt "RegressionLogLinear|"
 msgid "Counts (optional)"
-msgstr "Подсчёты (необязательно)"
+msgstr "Значения (необязательно)"
 
 msgctxt "RegressionLogLinear|"
 msgid "Factors"
@@ -786,9 +786,10 @@ msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Максимальное p-отношение Вовк-Селлке"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Counts (optional)"
-msgstr "Подсчёты (необязательно)"
+msgstr "Значения (необязательно)"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Factors"
