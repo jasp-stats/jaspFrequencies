@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-01-02 03:48+0000\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
@@ -31,7 +37,6 @@ msgctxt "Description|"
 msgid "Contingency Tables"
 msgstr "Tableaux de contingence"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Log-Linear Regression"
 msgstr "Régression Log-Linéaire"
@@ -50,21 +55,19 @@ msgstr "Test A/B"
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Test Bayésien A/B"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr "Test Multinomial de Bayes"
+msgstr "Test Multinomial Bayésien"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
 msgstr "Tableaux de contingence de Bayésienne"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr "Régression Log-Linéaire de Bayes"
+msgstr "Régression Bayésienne Log-Linéaire"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
