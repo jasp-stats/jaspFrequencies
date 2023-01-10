@@ -649,8 +649,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     } else
       row[[colName]] <- chi.result[[val]]
   }
-  else
-    row[[colName]] <- "."
 
   return(row)
 }
