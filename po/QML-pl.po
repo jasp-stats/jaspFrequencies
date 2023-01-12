@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-22 15:49+0000\n"
+"PO-Revision-Date: 2023-01-13 12:30+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pl/>\n"
@@ -483,7 +483,7 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr "Liczebności"
+msgstr "Liczebność"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
