@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-01-13 12:30+0000\n"
+"Last-Translator: Sophie Berkhout <s.w.berkhout@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 "X-Language: nl\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -868,60 +874,54 @@ msgctxt "ContingencyTables|"
 msgid "Pearson"
 msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
 msgstr "Log Odds Ratio"
 
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Odds Ratio"
 
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
-msgstr ""
+msgstr "Relatief Risico"
 
 msgctxt "ABTestBayesian|"
 msgid "Absolute Risk"
-msgstr ""
+msgstr "Absoluut Risico"
 
 msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
-msgstr ""
+msgstr "p1 & p2"
 
 msgctxt "ABTestBayesian|"
 msgid "p1"
-msgstr ""
+msgstr "p1"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Expected"
-msgstr "Verwachte"
+msgstr "Verwacht"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Residuals"
 msgstr "Residuen"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Unstandardized"
-msgstr "Ongestandardiseerd"
+msgstr "Ongestandaardiseerd"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Pearson"
 msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Standardized"
 msgstr "Gestandaardiseerd"
 
 msgctxt "MultinomialTest|"
 msgid "Custom expected proportions (χ² test)"
-msgstr ""
+msgstr "Aangepaste verwachte proporties (χ² toets)"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
-msgstr ""
+msgstr "Aangepaste verwachte proporties"
