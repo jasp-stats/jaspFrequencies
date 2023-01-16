@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-13 12:30+0000\n"
-"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
-"jaspfrequencies-qml/pl/>\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 "X-Language: pl\n"
-"X-Generator: Weblate 4.15.1-dev\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
@@ -294,9 +288,10 @@ msgctxt "ContingencyTables|"
 msgid "Columns"
 msgstr ""
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr ""
+msgstr "Liczebność"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
@@ -586,9 +581,10 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Total"
 msgstr ""
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Options"
-msgstr ""
+msgstr "Opcje"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row Order"
@@ -610,9 +606,10 @@ msgctxt "MultinomialTest|"
 msgid "Factor"
 msgstr "Czynnik"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr ""
+msgstr "Liczebność"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
@@ -624,10 +621,6 @@ msgstr ""
 
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
-msgstr ""
-
-msgctxt "MultinomialTest|"
-msgid "Expected proportions (χ² test)"
 msgstr ""
 
 msgctxt "MultinomialTest|"
@@ -662,13 +655,15 @@ msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
 msgstr ""
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
-msgstr ""
+msgstr "Czynnik"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Liczebność"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
@@ -680,10 +675,6 @@ msgstr ""
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
-msgstr ""
-
-msgctxt "MultinomialTestBayesian|"
-msgid "Expected proportions"
 msgstr ""
 
 msgctxt "MultinomialTestBayesian|"
@@ -881,3 +872,56 @@ msgstr ""
 msgctxt "ContingencyTables|"
 msgid "Pearson"
 msgstr "Pearson"
+
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr ""
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr ""
+
+#, fuzzy
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr "Pearson"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr ""
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr ""
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
+msgstr ""
