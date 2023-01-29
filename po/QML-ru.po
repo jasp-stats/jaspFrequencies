@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-29 16:13+0000\n"
+"PO-Revision-Date: 2023-01-31 20:42+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/ru/>\n"
@@ -73,15 +73,15 @@ msgstr "Успехи Группа 1"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr ""
+msgstr "Размер выборки Группа 1"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr ""
+msgstr "Успехи Группа 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr ""
+msgstr "Размер выборки Группа 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
@@ -121,7 +121,7 @@ msgstr "Проверка робастности коэффициента Бай�
 
 msgctxt "ABTestBayesian|"
 msgid "Order"
-msgstr ""
+msgstr "Порядок"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
@@ -162,7 +162,7 @@ msgstr "Выборка"
 
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
-msgstr ""
+msgstr "№ выборок"
 
 msgctxt "ABTestBayesian|"
 msgid "Robustness Plot"
@@ -170,7 +170,7 @@ msgstr "График робастности"
 
 msgctxt "ABTestBayesian|"
 msgid "No. Steps"
-msgstr ""
+msgstr "№ Шагов"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
