@@ -2,19 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2022-12-17 03:29\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-01-31 20:41+0000\n"
+"Last-Translator: Ünal Halit ÖZDEN <uozden@ticaret.edu.tr>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Bayesci A/B Testi"
 
 msgid "Models"
-msgstr ""
+msgstr "Modeller"
 
 msgid "P(M)"
 msgstr ""
@@ -40,25 +43,25 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Tanımsal"
 
 msgid "Counts"
 msgstr ""
 
 msgid "Total"
-msgstr ""
+msgstr "Toplam"
 
 msgid "Proportion"
-msgstr ""
+msgstr "Oran"
 
 msgid "Group 1"
-msgstr ""
+msgstr "Grup 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "Grup 2"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Önceki ve Sonraki"
 
 msgid "Sequential Analysis"
 msgstr ""
@@ -67,10 +70,10 @@ msgid "Bayes Factor Robustness Check"
 msgstr ""
 
 msgid "Prior"
-msgstr ""
+msgstr "Önceki"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
 msgstr ""
@@ -85,16 +88,16 @@ msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr ""
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "Binom Testi"
 
 msgid "Variable"
-msgstr ""
+msgstr "Değişken"
 
 msgid "Level"
 msgstr ""
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
@@ -106,7 +109,7 @@ msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Üst"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
@@ -122,7 +125,7 @@ msgid "Proportions tested against value: %s."
 msgstr ""
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Tanımlayıcı Grafikler"
 
 msgid "Bayesian Binomial Test"
 msgstr ""
@@ -133,7 +136,7 @@ msgid ""
 msgstr ""
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Çıkarımsal Grafikler"
 
 msgid "Population proportion"
 msgstr ""
@@ -259,7 +262,7 @@ msgid "Count"
 msgstr ""
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
@@ -429,7 +432,7 @@ msgid "(Intercept)"
 msgstr ""
 
 msgid "ANOVA"
-msgstr ""
+msgstr "ANOVA"
 
 msgid "Deviance"
 msgstr ""
