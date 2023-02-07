@@ -19,7 +19,7 @@
 
 BinomialTestBayesian <- function(
           data = NULL,
-          version = "0.17",
+          version = "0.17.1",
           formula = NULL,
           alternative = "twoSided",
           bayesFactorType = "BF10",

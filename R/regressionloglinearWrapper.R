@@ -19,7 +19,7 @@
 
 RegressionLogLinear <- function(
           data = NULL,
-          version = "0.17",
+          version = "0.17.1",
           formula = NULL,
           count = "",
           factors = list(),
