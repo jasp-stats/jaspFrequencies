@@ -559,15 +559,15 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 }
 
 
-# copied from abtest because the following crashes:
-f <- tempfile()
-grDevices::png(f)
-abtest::plot_posterior(abtest::ab_test(list(y1=3,y2=3,n1=5,n2=5)))
-grDevices::dev.control("enable")
-out <- grDevices::recordPlot()
-grDevices::dev.off()
-if (file.exists(f)) file.remove(f)
-gridGraphics::grid.echo(out)
+# copied from abtest because the following crashes (see https://github.com/jasp-stats/INTERNAL-jasp/issues/2238)
+# f <- tempfile()
+# grDevices::png(f)
+# abtest::plot_posterior(abtest::ab_test(list(y1=3,y2=3,n1=5,n2=5)))
+# grDevices::dev.control("enable")
+# out <- grDevices::recordPlot()
+# grDevices::dev.off()
+# if (file.exists(f)) file.remove(f)
+# gridGraphics::grid.echo(out)
 abtest_plot_posterior <- function (x, what = "logor", hypothesis = "H1", ci = 0.95, p1lab = "p1",
           p2lab = "p2", p1adj = 0.44, p2adj = 0.56, ...)
 {
