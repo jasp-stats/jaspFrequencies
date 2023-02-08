@@ -308,7 +308,8 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   )
 
   plotFunc <- function() {
-    abtest::plot_posterior(x = ab_obj, what = what, hypothesis = "H1")
+    # abtest::plot_posterior(x = ab_obj, what = what, hypothesis = "H1")
+    abtest_plot_posterior(x = ab_obj, what = what, hypothesis = "H1")
   }
 
   return(plotFunc)
@@ -555,4 +556,264 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 .abTestmakeLabels <- function(legendText, probs) {
   # so it is only translated once, .3f is inherited from abtest
   gettextf("P(%1$s | data) = %2$.3f", legendText, probs)
+}
+
+
+# copied from abtest because the following crashes (see https://github.com/jasp-stats/INTERNAL-jasp/issues/2238)
+# f <- tempfile()
+# grDevices::png(f)
+# abtest::plot_posterior(abtest::ab_test(list(y1=3,y2=3,n1=5,n2=5)))
+# grDevices::dev.control("enable")
+# out <- grDevices::recordPlot()
+# grDevices::dev.off()
+# if (file.exists(f)) file.remove(f)
+# gridGraphics::grid.echo(out)
+abtest_plot_posterior <- function (x, what = "logor", hypothesis = "H1", ci = 0.95, p1lab = "p1",
+          p2lab = "p2", p1adj = 0.44, p2adj = 0.56, ...)
+{
+  fitdist    <- abtest:::fitdist
+  dposterior <- abtest:::dposterior
+  qposterior <- abtest:::qposterior
+  dprior     <- abtest:::dprior
+  qprior     <- abtest:::qprior
+
+  if (!(what %in% c("logor", "or", "rrisk", "arisk", "p1p2"))) {
+    stop("what needs to be either \"logor\", \"or\", \"rrisk\", \"arisk\",\n         or \"p1p2",
+         call. = FALSE)
+  }
+  if (!(hypothesis %in% c("H1", "H+", "H-"))) {
+    stop("hypothesis needs to be either \"H1\", \"H+\", or \"H-\"",
+         call. = FALSE)
+  }
+  lwd <- 2
+  cexPoints <- 1.5
+  cexAxis <- 1.2
+  cexYlab <- 1.5
+  cexXlab <- 1.5
+  cexTextBF <- 1.4
+  cexCI <- 1.1
+  cexLegend <- 1.2
+  lwdAxis <- 1.2
+  if (x$input$posterior) {
+    post_samples <- x$post$H1
+  }
+  else {
+    x <- abtest:::ab_test(data = x$input$data, prior_par = x$input$prior_par,
+                 prior_prob = x$input$prior_prob, nsamples = x$input$nsamples,
+                 is_df = x$input$is_df, posterior = TRUE)
+  }
+  if (what == "p1p2") {
+    post_samples <- switch(hypothesis, H1 = x$post$H1, `H+` = x$post$Hplus,
+                           `H-` = x$post$Hminus)
+    fit1 <- fitdist(post_samples = post_samples, what = "p1")
+    fit2 <- fitdist(post_samples = post_samples, what = "p2")
+    pci <- c((1 - ci)/2, 1 - (1 - ci)/2)
+    CIlow1 <- qposterior(p = pci[1], what = "p1", hypothesis = hypothesis,
+                         fit = fit1)
+    CIhigh1 <- qposterior(p = pci[2], what = "p1", hypothesis = hypothesis,
+                          fit = fit1)
+    medianPosterior1 <- qposterior(p = 0.5, what = "p1",
+                                   hypothesis = hypothesis, fit = fit1)
+    CIlow2 <- qposterior(p = pci[1], what = "p2", hypothesis = hypothesis,
+                         fit = fit2)
+    CIhigh2 <- qposterior(p = pci[2], what = "p2", hypothesis = hypothesis,
+                          fit = fit2)
+    medianPosterior2 <- qposterior(p = 0.5, what = "p2",
+                                   hypothesis = hypothesis, fit = fit2)
+    if (abs(CIhigh1 - CIlow1) < 0.01 && abs(CIhigh2 - CIlow2) <
+        0.01) {
+      qlow1 <- qposterior(p = 0.001, what = "p1", hypothesis = hypothesis,
+                          fit = fit1)
+      qhigh1 <- qposterior(p = 0.999, what = "p1", hypothesis = hypothesis,
+                           fit = fit1)
+      qlow2 <- qposterior(p = 0.001, what = "p2", hypothesis = hypothesis,
+                          fit = fit2)
+      qhigh2 <- qposterior(p = 0.999, what = "p2", hypothesis = hypothesis,
+                           fit = fit2)
+      xlim <- c(min(CIlow1, CIlow2, qlow1, qlow2), max(CIhigh1,
+                                                       CIhigh2, qhigh1, qhigh2))
+    }
+    else {
+      xlim <- c(0, 1)
+    }
+    xticks <- pretty(xlim, n = 5)
+    xlim <- range(xticks)
+    stretch <- ifelse(hypothesis == "H1", 1.2, 1.32)
+    xx <- seq(min(xticks), max(xticks), length.out = 1000)
+    priorLine1 <- dprior(x1 = xx, x2 = NULL, prior_par = x$input$prior_par,
+                         what = "p1", hypothesis = hypothesis)
+    priorLine2 <- dprior(x1 = xx, x2 = NULL, prior_par = x$input$prior_par,
+                         what = "p2", hypothesis = hypothesis)
+    postLine1 <- dposterior(x = xx, what = "p1", hypothesis = hypothesis,
+                            fit = fit1)
+    postLine2 <- dposterior(x = xx, what = "p2", hypothesis = hypothesis,
+                            fit = fit2)
+    dpriormax1 <- max(priorLine1)
+    dpriormax2 <- max(priorLine2)
+    dpostmax1 <- max(postLine1)
+    dpostmax2 <- max(postLine2)
+    ylim <- c(0, stretch * max(c(dpriormax1, dpriormax2,
+                                 dpostmax1, dpostmax2)))
+    yticks <- pretty(ylim)
+    yticks <- c(yticks, yticks[length(yticks)] + diff(yticks[(length(yticks) -
+                                                                1):length(yticks)]), yticks[length(yticks)] + 2 *
+                  diff(yticks[(length(yticks) - 1):length(yticks)]))
+    ylim <- range(yticks)
+  }
+  else {
+    post_samples <- x$post$H1
+    fit <- fitdist(post_samples = post_samples, what = what)
+    prior_range <- qprior(p = c(0.05, 0.95), prior_par = x$input$prior_par,
+                          what = what, hypothesis = "H1")
+    post_range <- qposterior(p = c(0.001, 0.999), what = what,
+                             hypothesis = "H1", fit = fit)
+    xticks <- pretty(c(prior_range, post_range))
+    xlim <- range(xticks)
+    stretch <- ifelse(hypothesis == "H1", 1.2, 1.32)
+    xx <- seq(min(xticks), max(xticks), length.out = 1000)
+    priorLine <- dprior(x1 = xx, x2 = NULL, prior_par = x$input$prior_par,
+                        what = what, hypothesis = hypothesis)
+    postLine <- dposterior(x = xx, what = what, hypothesis = hypothesis,
+                           fit = fit)
+    dpriormax <- max(priorLine)
+    dpostmax <- max(postLine)
+    pci <- c((1 - ci)/2, 1 - (1 - ci)/2)
+    CIlow <- qposterior(p = pci[1], what = what, hypothesis = hypothesis,
+                        fit = fit)
+    CIhigh <- qposterior(p = pci[2], what = what, hypothesis = hypothesis,
+                         fit = fit)
+    ylim <- c(0, max(stretch * c(dpriormax, dpostmax)))
+    yticks <- pretty(ylim)
+    xlim <- c(min(CIlow, range(xticks)[1]), max(range(xticks)[2],
+                                                CIhigh))
+    plot(1, 1, xlim = xlim, ylim = ylim, ylab = "", xlab = "",
+         type = "n", axes = FALSE)
+    yCI <- grconvertY(max(dpriormax, dpostmax), "user",
+                      "ndc") + 0.04
+    yCI <- grconvertY(yCI, "ndc", "user")
+    medianPosterior <- qposterior(p = 0.5, what = what,
+                                  hypothesis = hypothesis, fit = fit)
+    if ((yCI > yticks[length(yticks) - 2] && diff(yticks[(length(yticks) -
+                                                          1):length(yticks)])/diff(range(yticks)) < 1/6) ||
+        (yCI > yticks[length(yticks) - 1])) {
+      yticks <- c(yticks, yticks[length(yticks)] + diff(yticks[(length(yticks) -
+                                                                  1):length(yticks)]))
+      ylim <- range(yticks)
+    }
+  }
+  yticks <- pretty(ylim)
+  ylim <- range(yticks)
+  ylabels <- as.character(yticks)
+  xlab <- switch(what, logor = "Log Odds Ratio", or = "Odds Ratio",
+                 rrisk = "Relative Risk", arisk = "Absolute Risk")
+  op <- par(mar = c(5.6, 5, 7, 4) + 0.1, las = 1, xpd = TRUE)
+  plot(1, 1, xlim = xlim, ylim = ylim, ylab = "", xlab = "",
+       type = "n", axes = FALSE)
+  if (what == "p1p2") {
+    col_trans1 <- rgb(0, 0, 0, alpha = 0.5)
+    col_trans2 <- rgb(0, 0, 0, alpha = 0.8)
+    lines(xx, postLine1, lwd = lwd, col = col_trans1)
+    lines(xx, postLine2, lwd = lwd, col = col_trans2)
+    lines(xx, priorLine1, lwd = lwd, lty = 3, col = col_trans1)
+    lines(xx, priorLine2, lwd = lwd, lty = 3, col = col_trans2)
+    yCI1 <- grconvertY(max(dpriormax1, dpriormax2, dpostmax1,
+                           dpostmax2), "user", "ndc") + 0.03
+    yCI1 <- grconvertY(yCI1, "ndc", "user")
+    yCI2 <- grconvertY(max(dpriormax1, dpriormax2, dpostmax1,
+                           dpostmax2), "user", "ndc") + 0.06
+    yCI2 <- grconvertY(yCI2, "ndc", "user")
+    arrows(CIlow1, yCI1, CIhigh1, yCI1, angle = 90, code = 3,
+           length = 0.1, lwd = lwd, col = col_trans1)
+    arrows(CIlow2, yCI2, CIhigh2, yCI2, angle = 90, code = 3,
+           length = 0.1, lwd = lwd, col = col_trans2)
+    medianText1 <- formatC(medianPosterior1, digits = 3,
+                           format = "f")
+    medianText2 <- formatC(medianPosterior2, digits = 3,
+                           format = "f")
+    offsetTopPart <- 0.06
+    yy <- grconvertY(0.756 + offsetTopPart, "ndc", "user")
+    yy2 <- grconvertY(0.812 + offsetTopPart, "ndc", "user")
+    textci <- as.character(ci)
+    percentage <- strsplit(textci, split = "0.")[[1]][2]
+    CIText1 <- paste0(percentage, "% CI: [", bquote(.(formatC(CIlow1,
+                                                              3, format = "f"))), ", ", bquote(.(formatC(CIhigh1,
+                                                                                                         3, format = "f"))), "]")
+    CIText2 <- paste0(percentage, "% CI: [", bquote(.(formatC(CIlow2,
+                                                              3, format = "f"))), ", ", bquote(.(formatC(CIhigh2,
+                                                                                                         3, format = "f"))), "]")
+    medianLegendText1 <- paste("median =", medianText1)
+    medianLegendText2 <- paste("median =", medianText2)
+    text(min(xticks), yy2, medianLegendText1, cex = 1.1,
+         pos = 4, col = col_trans1)
+    text(min(xticks), yy, CIText1, cex = 1.1, pos = 4, col = col_trans1)
+    text(max(xticks), yy2, medianLegendText2, cex = 1.1,
+         pos = 2, col = col_trans2)
+    text(max(xticks), yy, CIText2, cex = 1.1, pos = 2, col = col_trans2)
+    index <- which.min(c(medianPosterior1, medianPosterior2,
+                         1 - medianPosterior1, 1 - medianPosterior2))
+    legendPosition <- switch(index, `1` = max(xticks), `2` = max(xticks),
+                             `3` = min(xticks), `4` = min(xticks))
+    legend(legendPosition, max(yticks), legend = c("Posterior",
+                                                   "Prior"), lty = c(1, 3), bty = "n", lwd = rep(lwd,
+                                                                                                 2), cex = cexLegend, xjust = ifelse(all.equal(legendPosition,
+                                                                                                                                               max(xticks)), 1, 0), yjust = 1, x.intersp = 0.6,
+           seg.len = 1.2)
+    # START OF CHANGES
+    # original
+    # mtext(c(p1lab, "&", p2lab), col = c(col_trans1, "black", col_trans2), adj = c(p1adj, 0.5, p2adj), side = 1, cex = cexXlab, line = 2.5)
+    mtext(p1lab, col = col_trans1, adj = p1adj, side = 1, cex = cexXlab, line = 2.5)
+    mtext("&",   col = "black",    adj = 0.5,   side = 1, cex = cexXlab, line = 2.5)
+    mtext(p2lab, col = col_trans2, adj = p2adj, side = 1, cex = cexXlab, line = 2.5)
+    # END OF CHANGES
+  }
+  else {
+    lines(xx, postLine, lwd = lwd)
+    lines(xx, priorLine, lwd = lwd, lty = 3)
+    arrows(CIlow, yCI, CIhigh, yCI, angle = 90, code = 3,
+           length = 0.1, lwd = lwd)
+    medianText <- formatC(medianPosterior, digits = 3, format = "f")
+    offsetTopPart <- 0.06
+    yy <- grconvertY(0.756 + offsetTopPart, "ndc", "user")
+    yy2 <- grconvertY(0.812 + offsetTopPart, "ndc", "user")
+    textci <- as.character(ci)
+    percentage <- strsplit(textci, split = "0.")[[1]][2]
+    CIText <- paste0(percentage, "% CI: [", bquote(.(formatC(CIlow,
+                                                             3, format = "f"))), ", ", bquote(.(formatC(CIhigh,
+                                                                                                        3, format = "f"))), "]")
+    medianLegendText <- paste("median =", medianText)
+    text(max(xticks), yy2, medianLegendText, cex = 1.1,
+         pos = 2)
+    text(max(xticks), yy, CIText, cex = 1.1, pos = 2)
+    if (medianPosterior <= mean(xlim)) {
+      legendPosition <- max(xticks)
+      legend(legendPosition, max(yticks), legend = c("Posterior",
+                                                     "Prior"), lty = c(1, 3), bty = "n", lwd = rep(lwd,
+                                                                                                   2), cex = cexLegend, xjust = 1, yjust = 1, x.intersp = 0.6,
+             seg.len = 1.2)
+    }
+    else {
+      legendPosition <- min(xticks)
+      legend(legendPosition, max(yticks), legend = c("Posterior",
+                                                     "Prior"), lty = c(1, 3), bty = "n", lwd = rep(lwd,
+                                                                                                   2), cex = cexLegend, xjust = 0, yjust = 1, x.intersp = 0.6,
+             seg.len = 1.2)
+    }
+    mtext(xlab, side = 1, cex = cexXlab, line = 2.5)
+  }
+  axis(1, at = xticks, cex.axis = cexAxis, lwd = lwdAxis)
+  axis(2, at = yticks, labels = ylabels, cex.axis = cexAxis,
+       lwd = lwdAxis)
+  if (nchar(ylabels[length(ylabels)]) > 4) {
+    mtext(text = "Density", side = 2, las = 0, cex = cexYlab,
+          line = 4)
+  }
+  else if (nchar(ylabels[length(ylabels)]) == 4) {
+    mtext(text = "Density", side = 2, las = 0, cex = cexYlab,
+          line = 3.25)
+  }
+  else if (nchar(ylabels[length(ylabels)]) < 4) {
+    mtext(text = "Density", side = 2, las = 0, cex = cexYlab,
+          line = 2.85)
+  }
+  par(op)
 }
