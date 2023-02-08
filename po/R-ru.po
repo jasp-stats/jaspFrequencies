@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 03:29\n"
-"PO-Revision-Date: 2023-01-31 20:41+0000\n"
+"PO-Revision-Date: 2023-02-09 18:39+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ru/>\n"
@@ -63,17 +63,21 @@ msgstr "Группа 1"
 msgid "Group 2"
 msgstr "Группа 2"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Априорный и апостериорный"
+msgstr "Приор и Постериор"
 
+#, fuzzy
 msgid "Sequential Analysis"
-msgstr "Последовательный анализ"
+msgstr "Последовательная проверка гипотез"
 
+#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr "Проверка робастности коэффициента Байеса"
+msgstr "Проверка робастности фактора Байеса"
 
+#, fuzzy
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
 msgid "n"
 msgstr "n"
@@ -105,14 +109,16 @@ msgstr "p"
 msgid "VS-MPR"
 msgstr "VS-MPR"
 
+#, fuzzy
 msgid "Lower"
-msgstr "Нижний"
+msgstr "Нижняя граница"
 
 msgid "%s%% CI for Proportion"
 msgstr "%s%% ДИ Пропорции"
 
+#, fuzzy
 msgid "Upper"
-msgstr "Верхний"
+msgstr "Верхняя граница"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
@@ -139,8 +145,9 @@ msgid ""
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
 
+#, fuzzy
 msgid "Inferential Plots"
-msgstr "Выводные графики"
+msgstr "Графики"
 
 msgid "Population proportion"
 msgstr "Популяционная доля"
@@ -314,7 +321,7 @@ msgid "The Bayes factor is undefined"
 msgstr "Коэффициент Байеса не определён"
 
 msgid "The Bayes factor is too small"
-msgstr "Коэффициент Байеса слишком мал"
+msgstr "Фактор Байеса слишком мал"
 
 msgid "The Bayes factor is infinite"
 msgstr "Коэффициент Байеса бесконечен"
@@ -359,8 +366,9 @@ msgstr "Соотношение шансов для этой модели еще 
 msgid "Cramer's V for this model not yet implemented"
 msgstr "V Крамера для этой модели еще не реализован"
 
+#, fuzzy
 msgid "Posterior"
-msgstr "Апостериорный"
+msgstr "Постериор"
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Ожидаемые значения не рассчитываются без наблюдаемых значений."
@@ -458,7 +466,7 @@ msgid "Observed Proportions"
 msgstr "Наблюдаемые пропорции"
 
 msgid "(Intercept)"
-msgstr "(Перехват)"
+msgstr "(Интерцепт)"
 
 msgid "ANOVA"
 msgstr "Дисперсионный анализ"
