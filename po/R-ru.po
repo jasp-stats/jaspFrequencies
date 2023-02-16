@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2022-12-17 03:29\n"
-"PO-Revision-Date: 2023-02-09 18:39+0000\n"
+"PO-Revision-Date: 2023-02-16 13:03+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ru/>\n"
@@ -14,8 +14,9 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.16-dev\n"
 
+#, fuzzy
 msgid "Bayesian A/B Test"
-msgstr "Байесовское А/Б тестирование"
+msgstr "Байесовское A/B тестирование"
 
 msgid "Models"
 msgstr "Модели"
@@ -23,8 +24,9 @@ msgstr "Модели"
 msgid "P(M)"
 msgstr "P(M)"
 
+#, fuzzy
 msgid "P(M|data)"
-msgstr "P(M|данные)"
+msgstr "P(M|data)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -82,8 +84,9 @@ msgstr "Приор"
 msgid "n"
 msgstr "n"
 
+#, fuzzy
 msgid "Posterior Probability"
-msgstr "Апостериорная вероятность"
+msgstr "Постериорная вероятность"
 
 msgid "P(%1$s | data) = %2$.3f"
 msgstr "P(%1$s | data) = %2$.3f"
@@ -95,7 +98,7 @@ msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr "Невозможно проверить гипотезу о том, что значение критерия меньше 0."
 
 msgid "Binomial Test"
-msgstr "Биномиальный тест"
+msgstr "Биномиальный критерий"
 
 msgid "Variable"
 msgstr "Переменная"
@@ -109,27 +112,28 @@ msgstr "p"
 msgid "VS-MPR"
 msgstr "VS-MPR"
 
-#, fuzzy
 msgid "Lower"
 msgstr "Нижняя граница"
 
-msgid "%s%% CI for Proportion"
-msgstr "%s%% ДИ Пропорции"
-
 #, fuzzy
+msgid "%s%% CI for Proportion"
+msgstr "%s%% ДИ для Пропорции"
+
 msgid "Upper"
 msgstr "Верхняя граница"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
-msgstr "Для всех тестов альтернативная гипотеза указывает, что доля меньше %s."
+msgstr ""
+"Для всех критериев альтернативная гипотеза указывает, что доля меньше %s."
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
 msgstr ""
-"Для всех тестов альтернативная гипотеза указывает, что доля больше, чем %s."
+"Для всех критериев альтернативная гипотеза указывает, что доля больше, чем "
+"%s."
 
 msgid "Proportions tested against value: %s."
 msgstr "Пропорции проверены на соответствие значению: %s."
@@ -137,36 +141,46 @@ msgstr "Пропорции проверены на соответствие зн
 msgid "Descriptives Plots"
 msgstr "Описательные графики"
 
+#, fuzzy
 msgid "Bayesian Binomial Test"
-msgstr "Байесовский биномиальный тест"
+msgstr "Байесовский биномиальный критерий"
 
+#, fuzzy
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s Форма априорного распределения при альтернативной гипотезе определяется "
+"значением Beta (%2$s, %3$s)."
 
 #, fuzzy
 msgid "Inferential Plots"
 msgstr "Графики"
 
+#, fuzzy
 msgid "Population proportion"
 msgstr "Популяционная доля"
 
+#, fuzzy
 msgid "One or more Bayes factors cannot be computed"
-msgstr "Невозможно вычислить один или несколько коэффициентов Байеса"
+msgstr "Невозможно вычислить один или несколько факторов Байеса"
 
+#, fuzzy
 msgid "One or more Bayes factors are infinite"
-msgstr "Один или несколько коэффициентов Байеса бесконечны"
+msgstr "Один или несколько факторов Байеса бесконечны"
 
+#, fuzzy
 msgid "Undefined hypothesis"
 msgstr "Неопределенная гипотеза"
 
 msgid "Contingency Tables"
 msgstr "Таблицы сопряженности"
 
+#, fuzzy
 msgid "Chi-Squared Tests"
-msgstr "Критерии хи-квадрат"
+msgstr "Критерии X%s"
 
+#, fuzzy
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
@@ -177,32 +191,38 @@ msgstr ""
 "      максимально возможные шансы в пользу H%1$s над H%2$s равны %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 
+#, fuzzy
 msgid "Log Odds Ratio"
 msgstr "Логарифмическое отношение шансов"
 
+#, fuzzy
 msgid "Odds Ratio"
 msgstr "Отношение шансов"
 
+#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% Доверительные интервалы"
 
 msgid "Nominal"
 msgstr "Номинативная шкала"
 
+#, fuzzy
 msgid "Ordinal Gamma"
 msgstr "Порядковая гамма"
 
 msgid "95%% Confidence Intervals"
 msgstr "95%% Доверительные интервалы"
 
+#, fuzzy
 msgid "Gamma"
-msgstr "Гамма-распределение"
+msgstr "Гамма"
 
 msgid "Standard Error"
 msgstr "Стандартная ошибка"
 
+#, fuzzy
 msgid "Kendall's Tau-b"
-msgstr "Коэффициент Кендалл Тау-Би"
+msgstr "Коэффициент Кендалла (Tau-b)"
 
 msgid "Z"
 msgstr "Z"
@@ -216,8 +236,9 @@ msgstr "Значение"
 msgid "df"
 msgstr "df"
 
+#, fuzzy
 msgid "Expected count"
-msgstr "Ожидаемый счёт"
+msgstr "Ожидаемая частота"
 
 msgid "%% within row"
 msgstr "%% в строке"
@@ -231,6 +252,7 @@ msgstr "%% от общего"
 msgid "Unstandardized residuals"
 msgstr "Нестандартизованные остатки"
 
+#, fuzzy
 msgid "Pearson residuals"
 msgstr "Остатки Пирсона"
 
@@ -262,8 +284,9 @@ msgstr "Лямбда (строки)"
 msgid "Lambda (columns)"
 msgstr "Лямбда (столбцы)"
 
+#, fuzzy
 msgid "Lambda (symmetric)"
-msgstr "Лямбда (симметричный)"
+msgstr "Лямбда (симметричная)"
 
 msgid "is less than"
 msgstr "меньше, чем"
@@ -471,8 +494,9 @@ msgstr "(Интерцепт)"
 msgid "ANOVA"
 msgstr "Дисперсионный анализ"
 
+#, fuzzy
 msgid "Deviance"
-msgstr "Девиантность"
+msgstr "Отклонение"
 
 msgid "Residual df"
 msgstr "Остаточный df"
