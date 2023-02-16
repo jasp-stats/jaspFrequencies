@@ -1,10 +1,16 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-02-16 13:03+0000\n"
+"Last-Translator: fedder <fedor.derish@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.16-dev\n"
 "X-Language: ru\n"
 "X-Qt-Contexts: true\n"
 
@@ -18,11 +24,12 @@ msgstr "Классический анализ"
 
 msgctxt "Description|"
 msgid "Binomial Test"
-msgstr "Биномиальный тест"
+msgstr "Биномиальный критерий"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Multinomial Test"
-msgstr "Мультиномиальный тест"
+msgstr "Мультиномиальный критерий"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
@@ -36,21 +43,23 @@ msgctxt "Description|"
 msgid "Bayesian"
 msgstr "Байесовский анализ"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Binomial Test"
-msgstr "Байесовский биноминальный тест"
+msgstr "Байесовский биномиальный тест"
 
 msgctxt "Description|"
 msgid "A/B Test"
-msgstr "А/Б тестирование"
+msgstr "A/B тестирование"
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr "Байесовское А/Б тестирование"
+msgstr "Байесовское A/B тестирование"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr "Байесовский мультиномиальный тест"
+msgstr "Байесовский мультиномиальный критерий"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
@@ -63,23 +72,27 @@ msgstr "Байесовская логарифмическая линейная �
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
-msgstr "Успехи Группа 1"
+msgstr "Успехи Группы 1"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr "Размер выборки Группа 1"
+msgstr "Размер выборки Группы 1"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr "Успехи Группа 2"
+msgstr "Успехи Группы 2"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr "Размер выборки Группа 2"
+msgstr "Размер выборки Группы 2"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr ""
+msgstr "Нормальный приор логарифмических шансов"
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
@@ -97,22 +110,27 @@ msgctxt "ABTestBayesian|"
 msgid "Plots"
 msgstr "Графики"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
-msgstr "Априорный и апостериорный"
+msgstr "Приор и постериор"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
-msgstr "Последовательный анализ"
+msgstr "Последовательная проверка гипотез"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
-msgstr "Проверка робастности коэффициента Байеса"
+msgstr "Проверка робастности фактора Байеса"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Order"
 msgstr "Порядок"
@@ -127,29 +145,34 @@ msgstr "Сравнить с нулевой моделью"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
-msgstr "Расширенные опции"
+msgstr "Дополнительные параметры"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
 msgstr "Вероятность априорной модели"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
 msgstr "Логарифмическое отношение шансов = 0"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
 msgstr "Логарифмическое отношение шансов > 0"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
 msgstr "Логарифмическое отношение шансов < 0"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
 msgstr "Логарифмическое отношение шансов ≠ 0"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
 msgstr "Выборка"
@@ -162,6 +185,7 @@ msgctxt "ABTestBayesian|"
 msgid "Robustness Plot"
 msgstr "График робастности"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "No. Steps"
 msgstr "№ Шагов"
@@ -171,13 +195,15 @@ msgctxt "ABTestBayesian|"
 msgid "Step Range"
 msgstr "Диапазон шагов"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "lower:"
-msgstr "ниже:"
+msgstr "нижняя граница:"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "upper:"
-msgstr "выше:"
+msgstr "верхняя граница:"
 
 msgctxt "BinomialTest|"
 msgid "Variables"
@@ -208,7 +234,7 @@ msgstr "< Значения критерия"
 
 msgctxt "BinomialTest|"
 msgid "Additional Statisics"
-msgstr "Дополнительная статистика"
+msgstr "Дополнительные статистики"
 
 msgctxt "BinomialTest|"
 msgid "Confidence interval"
@@ -259,17 +285,19 @@ msgctxt "BinomialTestBayesian|"
 msgid "Plots"
 msgstr "Графики"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Prior and posterior"
-msgstr "Априорный и апостериорный"
+msgstr "Приор и постериор"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Additional info"
 msgstr "Дополнительная информация"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Sequential analysis"
-msgstr "Последовательный анализ"
+msgstr "Последовательная проверка гипотез"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Descriptive plots"
