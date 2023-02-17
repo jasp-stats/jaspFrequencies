@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-16 13:03+0000\n"
+"PO-Revision-Date: 2023-02-18 03:28+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/ru/>\n"
@@ -26,10 +26,9 @@ msgctxt "Description|"
 msgid "Binomial Test"
 msgstr "Биномиальный критерий"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Multinomial Test"
-msgstr "Мультиномиальный критерий"
+msgstr "Полиномиальный критерий"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
@@ -37,7 +36,7 @@ msgstr "Таблицы сопряженности"
 
 msgctxt "Description|"
 msgid "Log-Linear Regression"
-msgstr "Логарифмическая линейная регрессия"
+msgstr "Лог-линейная регрессия"
 
 msgctxt "Description|"
 msgid "Bayesian"
@@ -59,7 +58,7 @@ msgstr "Байесовское A/B тестирование"
 #, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr "Байесовский мультиномиальный критерий"
+msgstr "Байесовский полиномиальный критерий"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
@@ -67,7 +66,7 @@ msgstr "Байесовские таблицы сопряженности"
 
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr "Байесовская логарифмическая линейная регрессия"
+msgstr "Байесовская лог-линейная регрессия"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
@@ -152,25 +151,24 @@ msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
 msgstr "Вероятность априорной модели"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr "Логарифмическое отношение шансов = 0"
+msgstr "Лог-отношение шансов = 0"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr "Логарифмическое отношение шансов > 0"
+msgstr "Лог-отношение шансов > 0"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr "Логарифмическое отношение шансов < 0"
+msgstr "Лог-отношение шансов < 0"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr "Логарифмическое отношение шансов ≠ 0"
+msgstr "Лог-отношение шансов ≠ 0"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
@@ -179,16 +177,15 @@ msgstr "Выборка"
 
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
-msgstr "№ выборок"
+msgstr "Кол-во выборок"
 
 msgctxt "ABTestBayesian|"
 msgid "Robustness Plot"
 msgstr "График робастности"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "No. Steps"
-msgstr "№ Шагов"
+msgstr "Кол-во шагов"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
@@ -303,23 +300,25 @@ msgctxt "BinomialTestBayesian|"
 msgid "Descriptive plots"
 msgstr "Описательные графики"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Доверительный интервал"
+msgstr "Достоверный интервал"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
 #, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter a"
-msgstr "Предыдущая бета-версия: параметр a"
+msgstr "Бета приор: параметр a"
 
 #, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter b"
-msgstr "Предыдущая бета-версия: параметр б"
+msgstr "Бета-приор: параметр б"
 
 msgctxt "ContingencyTables|"
 msgid "Rows"
@@ -329,9 +328,10 @@ msgctxt "ContingencyTables|"
 msgid "Columns"
 msgstr "Столбцы"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr "Количество"
+msgstr "Количественные переменные"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
@@ -347,13 +347,12 @@ msgstr "χ²"
 
 msgctxt "ContingencyTables|"
 msgid "χ² continuity correction"
-msgstr "χ² коррекция непрерывности"
+msgstr "χ² с коррекцией на непрерывность"
 
 msgctxt "ContingencyTables|"
 msgid "Likelihood ratio"
 msgstr "Отношение правдоподобия"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Максимальное p-отношение Вовк-Селлке"
@@ -368,81 +367,92 @@ msgstr "Альт. Гипотеза (точный критерий Фишера)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
-msgstr "Группа один ≠ Группа два"
+msgstr "Группа 1 ≠ Группа 2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr "Группа один > Группа два"
+msgstr "Группа 1 > Группа 2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr "Группа один < Группа два"
+msgstr "Группа 1 < Группа 2"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Nominal"
-msgstr "Номинативная шкала"
+msgstr "Номинативное"
 
 #, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Contingency coefficient"
-msgstr "Коэффициент непредвиденных обстоятельств"
+msgstr "Коэффициент сопряженности"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Phi and Cramer's V"
-msgstr ""
+msgstr "Фи и V-Крамера"
 
 msgctxt "ContingencyTables|"
 msgid "Lambda"
 msgstr "Лямбда"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Uncertainty coefficient"
 msgstr "Коэффициент неопределенности"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Ordinal"
-msgstr "Порядковая шкала"
+msgstr "Для порядковых шкал"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Gamma"
-msgstr "Гамма-распределение"
+msgstr "Гамма-корреляция"
 
 msgctxt "ContingencyTables|"
 msgid "Somers' d"
 msgstr "d Сомерса"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Kendall's tau-b"
-msgstr "Тау-б Кендалла"
+msgstr "Корреляции Кендалла (tau-b)"
 
 #, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Kendall's tau-c"
-msgstr "Тау-си Кендалла"
+msgstr "Корреляции Кендалла (tau-с)"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Nominal By Interval"
-msgstr ""
+msgstr "Номинальная, преобразованная от интервальной"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Eta"
-msgstr ""
+msgstr "Эта"
 
 msgctxt "ContingencyTables|"
 msgid "Cochran's and Mantel-Haenszel statistics"
-msgstr "Статистика Кокрана и Мантеля-Хензеля"
+msgstr "Статистики Кокрана и Мантеля-Хензеля"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr "Тестовое общее отношение шансов равно"
+msgstr "Критерий равенства общего соотношения шансов"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Cells"
-msgstr "Клетки"
+msgstr "Ячейки"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Expected"
-msgstr "Ожидаемый"
+msgstr "Ожидаемые"
 
 msgctxt "ContingencyTables|"
 msgid "Hide small counts"
@@ -454,12 +464,13 @@ msgstr "Меньше, чем"
 
 msgctxt "ContingencyTables|"
 msgid "Z-Test"
-msgstr ""
+msgstr "Z-критерий"
 
 msgctxt "ContingencyTables|"
 msgid "Compare column proportions"
 msgstr "Сравнить пропорции столбцов"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Adjust p-values"
 msgstr "Скорректировать p-значения"
@@ -478,7 +489,7 @@ msgstr "Столбец"
 
 msgctxt "ContingencyTables|"
 msgid "Total"
-msgstr "Итого"
+msgstr "Всего"
 
 msgctxt "ContingencyTables|"
 msgid "Residuals"
@@ -486,11 +497,11 @@ msgstr "Остатки"
 
 msgctxt "ContingencyTables|"
 msgid "Unstandardized"
-msgstr "Нестандартизованный"
+msgstr "Нестандартизованные"
 
 msgctxt "ContingencyTables|"
 msgid "Standardized"
-msgstr "Стандартизованный"
+msgstr "Стандартизованные"
 
 msgctxt "ContingencyTables|"
 msgid "Options"
@@ -498,7 +509,7 @@ msgstr "Параметры"
 
 msgctxt "ContingencyTables|"
 msgid "Row Order"
-msgstr "Порядок строк"
+msgstr "Упорядочить строки"
 
 msgctxt "ContingencyTables|"
 msgid "Ascending"
@@ -510,7 +521,7 @@ msgstr "По убыванию"
 
 msgctxt "ContingencyTables|"
 msgid "Column Order"
-msgstr "Порядок столбцов"
+msgstr "Упорядочить столбцы"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Rows"
@@ -520,9 +531,10 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Columns"
 msgstr "Столбцы"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr "Количество"
+msgstr "Значения"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
@@ -532,46 +544,53 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Statistics"
 msgstr "Статистики"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Sample"
-msgstr "Образец"
+msgstr "Выборка"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Poisson"
-msgstr "Распределение Пуассона"
+msgstr "Пуассона"
 
 #, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Joint multinomial"
-msgstr "Мультиномиальное соединение"
+msgstr "Совместный полином"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, rows fixed"
-msgstr ""
+msgstr "Незав. полином, фикс. строки"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, columns fixed"
-msgstr ""
+msgstr "Незав. полином, фикс. столбцы"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Hypergeometric (2x2 only)"
 msgstr "Гипергеометрический (только 2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
-msgstr "Дополнительная статистика"
+msgstr "Дополнительные статистики"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr "Логарифмическое отношение шансов (только 2x2)"
+msgstr "Лог-отношение шансов (только 2x2)"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
-msgstr "Доверительный интервал"
+msgstr "Достоверный интервал"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cramer's V"
-msgstr ""
+msgstr "V-Крамера"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
@@ -579,15 +598,15 @@ msgstr "Альт. гипотеза"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
-msgstr "Группа один ≠ Группа два"
+msgstr "Группа 1 ≠ Группа 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr "Группа один > Группа два"
+msgstr "Группа 1 > Группа 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr "Группа один < Группа два"
+msgstr "Группа 1 < Группа 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
@@ -599,15 +618,16 @@ msgstr "Дополнительная информация"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
-msgstr "Предварительная концентрация"
+msgstr "Априорная концентрация"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cells"
-msgstr "Клетки"
+msgstr "Ячейки"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Percentages"
@@ -615,15 +635,15 @@ msgstr "Проценты"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row"
-msgstr "Строка"
+msgstr "По строкам"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column"
-msgstr "Столбец"
+msgstr "По столбцам"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Total"
-msgstr "Итого"
+msgstr "Всего"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Options"
@@ -631,7 +651,7 @@ msgstr "Параметры"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row Order"
-msgstr "Порядок строк"
+msgstr "Упорядочить строки"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Ascending"
@@ -643,16 +663,18 @@ msgstr "По убыванию"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column Order"
-msgstr "Порядок столбцов"
+msgstr "Упорядочить столбцы"
 
 msgctxt "MultinomialTest|"
 msgid "Factor"
 msgstr "Фактор"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr "Количество"
+msgstr "Значения"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
 msgstr "Ожидаемые значения"
@@ -661,13 +683,14 @@ msgctxt "MultinomialTest|"
 msgid "Test Values"
 msgstr "Значения критерия"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
-msgstr "Равные пропорции (мультиномиальный тест)"
+msgstr "Равные пропорции (полиномиальный критерий)"
 
 msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
-msgstr "Дополнительная статистика"
+msgstr "Дополнительные статистики"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives"
@@ -682,10 +705,9 @@ msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Максимальное p-отношение Вовк-Селлке"
 
-#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Display"
-msgstr "Отображение"
+msgstr "Показать"
 
 msgctxt "MultinomialTest|"
 msgid "Proportions"
@@ -695,18 +717,21 @@ msgctxt "MultinomialTest|"
 msgid "Plots"
 msgstr "Графики"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
-msgstr "Описательный график"
+msgstr "График описательных статистик"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
 msgstr "Фактор"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr "Количество"
+msgstr "Значения"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
 msgstr "Ожидаемые значения"
@@ -721,20 +746,21 @@ msgstr "Равные пропорции"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
-msgstr "Дополнительная статистика"
+msgstr "Дополнительные статистики"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives"
 msgstr "Описательные статистики"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Доверительный интервал"
+msgstr "Достоверный интервал"
 
 #, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Display"
-msgstr "Отображение"
+msgstr "Показать"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Proportions"
@@ -744,13 +770,15 @@ msgctxt "MultinomialTestBayesian|"
 msgid "Plots"
 msgstr "Графики"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
-msgstr "Описательный график"
+msgstr "График описательных статистик"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
@@ -772,9 +800,10 @@ msgctxt "RegressionLogLinear|"
 msgid "Components"
 msgstr "Компоненты"
 
+#, fuzzy
 msgctxt "RegressionLogLinear|"
 msgid "Model Terms"
-msgstr "Термины модели"
+msgstr "Модель"
 
 msgctxt "RegressionLogLinear|"
 msgid "Statistics"
@@ -796,7 +825,6 @@ msgctxt "RegressionLogLinear|"
 msgid "Interval"
 msgstr "Интервал"
 
-#, fuzzy
 msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
 msgstr "Максимальное p-отношение Вовк-Селлке"
@@ -810,10 +838,12 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Factors"
 msgstr "Факторы"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Prior"
-msgstr "Априорный"
+msgstr "Приор"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
 msgstr "Вид"
@@ -835,9 +865,10 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
 msgstr "модели"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr ""
+msgstr "Апостериорная вер."
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
@@ -847,9 +878,10 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Components"
 msgstr "Компоненты"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr "Термины модели"
+msgstr "Модель"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
@@ -863,6 +895,7 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Estimates"
 msgstr "Оценки"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Credible intervals"
 msgstr "Достоверные интервалы"
@@ -875,13 +908,14 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Submodel"
 msgstr "Подмодель"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Advanced"
-msgstr "Расширенный"
+msgstr "Дополнительно"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Samples"
-msgstr ""
+msgstr "Выборки"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Auto"
@@ -889,28 +923,32 @@ msgstr "Авто"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Manual"
-msgstr "Руководство"
+msgstr "Вручную"
 
 #, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
-msgstr "№ выборок"
+msgstr "Кол-во выборок"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
 msgstr "Отношение шансов (только 2x2)"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr "Логарифмическое отношение шансов"
+msgstr "Лог-отношение шансов"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Analyses for count data"
-msgstr "Анализ данных подсчёта"
+msgstr "Анализ для рассчитанных данных"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
-msgstr "Уровень #"
+msgstr "Уровень"
 
 #, fuzzy
 msgctxt "BinomialTestBayesian|"
@@ -924,27 +962,30 @@ msgstr "Пирсона"
 #, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
-msgstr "Логарифмическое отношение шансов"
+msgstr "Лог-отношение шансов"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Отношение шансов"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
-msgstr ""
+msgstr "Косвенный риск"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Absolute Risk"
-msgstr ""
+msgstr "Абсолютный риск"
 
 msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
-msgstr ""
+msgstr "p1 & p2"
 
 msgctxt "ABTestBayesian|"
 msgid "p1"
-msgstr ""
+msgstr "p1"
 
 #, fuzzy
 msgctxt "ContingencyTablesBayesian|"
@@ -956,10 +997,9 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Residuals"
 msgstr "Остатки"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Unstandardized"
-msgstr "Нестандартизованный"
+msgstr "Нестандартизованные"
 
 #, fuzzy
 msgctxt "ContingencyTablesBayesian|"
@@ -969,12 +1009,14 @@ msgstr "Пирсона"
 #, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Standardized"
-msgstr "Стандартизованный"
+msgstr "Стандартизованные"
 
+#, fuzzy
 msgctxt "MultinomialTest|"
 msgid "Custom expected proportions (χ² test)"
-msgstr ""
+msgstr "Настраиваемые ожидаемые значения (χ²)"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
-msgstr ""
+msgstr "Настраиваемые ожидаемые значения"
