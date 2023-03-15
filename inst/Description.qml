@@ -82,7 +82,7 @@ Description
 
 	Analysis
 	{
-		menu:	qsTr("Informed Binomial Test")
+		menu:	qsTr("Informed Multi-Binomial Test")
 		title:	qsTr("Informed Bayesian Multi-Binomial Test")
 		func:	"InformedBinomialTestBayesian"
 	}
