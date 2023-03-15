@@ -47,7 +47,7 @@ Form
 
 		AssignedVariablesList
 		{
-			name:				"counts"
+			name:				"count"
 			title:				qsTr("Counts")
 			singleVariable:		true
 			suggestedColumns:	["scale", "ordinal"]

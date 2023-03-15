@@ -50,7 +50,7 @@ Form
 			name:				"successes"
 			title:				qsTr("Successes")
 			singleVariable:		true
-			suggestedColumns:	["ordinal", "nominal"]
+			suggestedColumns:	["ordinal", "scale"]
 		}
 
 		AssignedVariablesList
@@ -58,7 +58,7 @@ Form
 			name:				"sampleSize"
 			title:				qsTr("Sample Size")
 			singleVariable:		true
-			suggestedColumns:	["scale", "ordinal"]
+			suggestedColumns:	["ordinal", "scale"]
 		}
 	}
 

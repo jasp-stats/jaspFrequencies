@@ -15,13 +15,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-InformedBinomialTestBayesian <- function(jaspResults, dataset, options, ...) {
+InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, ...) {
 
   dataset <- .informedBinReadData(dataset, options)
   .informedBinCheckErrors(dataset, options)
 
   .computeInformedBinResults(jaspResults, dataset, options)
-  .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
+  .createInformedBayesMainTable(jaspResults, options, type = "binomial")
 
   if (options[["descriptivesTable"]])
     .createInformedBayesDescriptivesTable(jaspResults, dataset, options, type = "binomial")
