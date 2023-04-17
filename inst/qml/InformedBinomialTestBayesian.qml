@@ -187,6 +187,7 @@ Form
 			source			: "factor"
 			visible			: factors.count > 0
 
+			minimum				: 1
 			showAddButton		: false
 			showDeleteButton	: false
 			colHeader			: qsTr("")
