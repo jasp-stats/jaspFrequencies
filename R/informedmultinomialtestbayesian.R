@@ -61,10 +61,10 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # fit an overall unrestricted model (for plotting the posterior)
   modelsList[[1]] <- list(
     "model" = try(multibridge::mult_bf_informed(
-      x             = dataset[,options[["count"]]],
-      Hr            = paste0(levels(dataset[,options[["factor"]]]), collapse = ","),
+      x             = dataset[[options[["count"]]]],
+      Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
-      factor_levels = dataset[,options[["factor"]]],
+      factor_levels = dataset[[options[["factor"]]]],
       bf_type       = "BF0r",
       nburnin       = options[["mcmcBurnin"]],
       niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
@@ -88,10 +88,10 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::mult_bf_informed(
-          x             = dataset[,options[["count"]]],
+          x             = dataset[[options[["count"]]]],
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
-          factor_levels = dataset[,options[["factor"]]],
+          factor_levels = dataset[[options[["factor"]]]],
           bf_type       = "BF0r",
           nburnin       = options[["mcmcBurnin"]],
           niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
@@ -304,7 +304,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
   if (options[["display"]] == "counts")
-    tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[,options[["count"]]])
+    tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[[options[["count"]]]])
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
@@ -345,7 +345,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
     if (options[["display"]] == "counts")
-      tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[,options[["count"]]])
+      tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[[options[["count"]]]])
 
     tempPlot <- createJaspPlot(title = models[[i]]$name, width = 480, height = 320)
     tempPlot$position <- i
@@ -360,16 +360,16 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   # Compute CI
   if (table && options[["count"]] != "" && options[["descriptivesTableCi"]])
-    tempCI <- .multComputeCIs(dataset[,options[["count"]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+    tempCI <- .multComputeCIs(dataset[[options[["count"]]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else if (!table && options[["count"]] != "")
-    tempCI <- .multComputeCIs(dataset[,options[["count"]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+    tempCI <- .multComputeCIs(dataset[[options[["count"]]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else
     tempCI <- NULL
 
   if (options[["display"]] == "counts")
     stdConst <- 1
   else
-    stdConst <- sum(dataset[,options[["count"]]])
+    stdConst <- sum(dataset[[options[["count"]]]])
 
   rowsList <- list()
 

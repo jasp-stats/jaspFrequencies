@@ -134,12 +134,12 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   # fit an overall unrestricted model (for plotting the posterior)
   modelsList[[1]] <- list(
     "model" = try(multibridge::binom_bf_informed(
-      x             = dataset[,options[["successes"]]],
-      n             = dataset[,options[["sampleSize"]]],
-      Hr            = paste0(levels(dataset[,options[["factor"]]]), collapse = ","),
+      x             = dataset[[options[["successes"]]]],
+      n             = dataset[[options[["sampleSize"]]]],
+      Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
       b             = options[["priorCounts"]][[2]][["values"]],
-      factor_levels = dataset[,options[["factor"]]],
+      factor_levels = dataset[[options[["factor"]]]],
       bf_type       = "BF0r",
       nburnin       = options[["mcmcBurnin"]],
       niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
@@ -163,12 +163,12 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::binom_bf_informed(
-          x             = dataset[,options[["successes"]]],
-          n             = dataset[,options[["sampleSize"]]],
+          x             = dataset[[options[["successes"]]]],
+          n             = dataset[[options[["sampleSize"]]]],
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           b             = options[["priorCounts"]][[2]][["values"]],
-          factor_levels = dataset[,options[["factor"]]],
+          factor_levels = dataset[[options[["factor"]]]],
           bf_type       = "BF0r",
           nburnin       = options[["mcmcBurnin"]],
           niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
@@ -193,14 +193,14 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempSummary           <- data.frame(
-    fact     = levels(dataset[,options[["factor"]]]),
-    observed = (options[["priorCounts"]][[1]][["values"]] + dataset[,options[["successes"]]]) / (options[["priorCounts"]][[1]][["values"]] + dataset[,options[["successes"]]] + options[["priorCounts"]][[2]][["values"]] + (dataset[,options[["sampleSize"]]]-dataset[,options[["successes"]]])),
-    lowerCI  = stats::qbeta(p = (1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[,options[["successes"]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[,options[["sampleSize"]]]-dataset[,options[["successes"]]])),
-    upperCI  = stats::qbeta(p = 1-(1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[,options[["successes"]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[,options[["sampleSize"]]]-dataset[,options[["successes"]]]))
+    fact     = levels(dataset[[options[["factor"]]]]),
+    observed = (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]]) / (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]] + options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
+    lowerCI  = stats::qbeta(p = (1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
+    upperCI  = stats::qbeta(p = 1-(1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]]))
   )
 
   if (options[["display"]] == "counts")
-    tempSummary[,2:4] <- tempSummary[,2:4] * matrix(dataset[,options[["sampleSize"]]], nrow = nrow(dataset), ncol = 3, byrow = FALSE)
+    tempSummary[,2:4] <- tempSummary[,2:4] * matrix(dataset[[options[["sampleSize"]]]], nrow = nrow(dataset), ncol = 3, byrow = FALSE)
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
@@ -215,9 +215,9 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   # Compute CI
   if (table && options[["successes"]] != "" && options[["sampleSize"]] != "" && options[["descriptivesTableCi"]])
-    tempCI <- .binComputeCIs(dataset[,options[["successes"]]], dataset[,options[["sampleSize"]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+    tempCI <- .binComputeCIs(dataset[[options[["successes"]]]], dataset[[options[["sampleSize"]]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else if (!table && options[["successes"]] != "" && options[["sampleSize"]] != "")
-    tempCI <- .binComputeCIs(dataset[,options[["successes"]]], dataset[,options[["sampleSize"]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+    tempCI <- .binComputeCIs(dataset[[options[["successes"]]]], dataset[[options[["sampleSize"]]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else
     tempCI <- NULL
 
@@ -225,8 +225,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   if (options[["successes"]] != "" && options[["sampleSize"]] != "") {
 
     rowsFrame <- data.frame(
-      fact     = dataset[,options[["factor"]]],
-      observed = if (options[["display"]] == "counts") dataset[,options[["successes"]]] else dataset[,options[["successes"]]] / dataset[,options[["sampleSize"]]]
+      fact     = dataset[[options[["factor"]]]],
+      observed = if (options[["display"]] == "counts") dataset[[options[["successes"]]]] else dataset[[options[["successes"]]]] / dataset[[options[["sampleSize"]]]]
     )
 
     if (!is.null(tempCI)) {
