@@ -19,6 +19,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   dataset <- .multinomReadData(dataset, options)
   .multinomCheckErrors(dataset, options)
+  dataset <- .multinomAggregateData(dataset, options)
 
   .computeInformedMultResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
@@ -38,6 +39,18 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 .informedMultDependency <- c("factor", "count", "priorCounts", "models", "syntax",
                                     "bridgeSamples", "mcmcBurnin", "mcmcSamples", "setSeed", "seed")
 
+.multinomAggregateData                    <- function(dataset, options){
+
+  if(length(dataset[[options[["factor"]]]]) != length(levels(dataset[[options[["factor"]]]]))){
+
+    frequencies <- table(dataset[[options[["factor"]]]])
+    dataset     <- cbind.data.frame(factor(names(frequencies), levels = levels(dataset[[options[["factor"]]]])), as.numeric(frequencies))
+    colnames(dataset) <- c(options[["factor"]], "__jaspComputedCounts")
+
+  }
+
+  return(dataset)
+}
 .computeInformedMultResults               <- function(jaspResults, dataset, options) {
 
   # skip if there is nothing new
@@ -45,7 +58,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     return()
 
   # skip if the input is not specified
-  if (options[["factor"]] == "" || options[["count"]] == "")
+  if (options[["factor"]] == "" || (options[["count"]] == "" && is.null(dataset[["__jaspComputedCounts"]])))
     return()
 
   models <- createJaspState()
@@ -61,7 +74,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # fit an overall unrestricted model (for plotting the posterior)
   modelsList[[1]] <- list(
     "model" = try(multibridge::mult_bf_informed(
-      x             = dataset[[options[["count"]]]],
+      x             = if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]],
       Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
       factor_levels = dataset[[options[["factor"]]]],
@@ -88,7 +101,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::mult_bf_informed(
-          x             = dataset[[options[["count"]]]],
+          x             = if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]],
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           factor_levels = dataset[[options[["factor"]]]],
@@ -249,7 +262,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   descriptivesTable$setData(descriptivesData)
 
   if (type == "multinomial")
-    if (options[["count"]] != "" && options[["descriptivesTableCi"]])
+    if (!(!options[["count"]] != "" && is.null(dataset[["__jaspComputedCounts"]])) && options[["descriptivesTableCi"]])
       descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
 
   if (type == "binomial")
@@ -275,7 +288,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   # Show empty Plot if no variable is selected
   if (type == "multinomial")
-    if (options[["factor"]] == "" || options[["count"]] == "")
+    if (options[["factor"]] == "" || (options[["count"]] == "" && is.null(dataset[["__jaspComputedCounts"]])))
       return()
 
   if (type == "binomial")
@@ -304,7 +317,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
   if (options[["display"]] == "counts")
-    tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[[options[["count"]]]])
+    tempSummary[,2:4] <- tempSummary[,2:4] * sum(if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]])
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
@@ -345,7 +358,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
     if (options[["display"]] == "counts")
-      tempSummary[,2:4] <- tempSummary[,2:4] * sum(dataset[[options[["count"]]]])
+      tempSummary[,2:4] <- tempSummary[,2:4] * sum(if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]])
 
     tempPlot <- createJaspPlot(title = models[[i]]$name, width = 480, height = 320)
     tempPlot$position <- i
@@ -358,18 +371,20 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 }
 .createInformedMultBayesDescriptivesData  <- function(dataset, options, table = TRUE) {
 
+  counts <- if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]]
+
   # Compute CI
-  if (table && options[["count"]] != "" && options[["descriptivesTableCi"]])
-    tempCI <- .multComputeCIs(dataset[[options[["count"]]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
-  else if (!table && options[["count"]] != "")
-    tempCI <- .multComputeCIs(dataset[[options[["count"]]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+  if (table && options[["descriptivesTableCi"]])
+    tempCI <- .multComputeCIs(counts, options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+  else if (!table)
+    tempCI <- .multComputeCIs(counts, options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else
     tempCI <- NULL
 
   if (options[["display"]] == "counts")
     stdConst <- 1
   else
-    stdConst <- sum(dataset[[options[["count"]]]])
+    stdConst <- sum(counts)
 
   rowsList <- list()
 
@@ -379,8 +394,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     tempRow <- list(fact = dataset[i,options[["factor"]]])
 
     # skip if the input is not specified
-    if (options[["count"]] != "") {
-      tempRow[["observed"]] <- dataset[i,options[["count"]]] / stdConst
+    if (!(options[["count"]] != "" && is.null(dataset[["__jaspComputedCounts"]]))) {
+      tempRow[["observed"]] <- counts[i] / stdConst
       if (!is.null(tempCI)) {
         tempRow[["lowerCI"]] <- tempCI[i,"lowerCI"]
         tempRow[["upperCI"]] <- tempCI[i,"upperCI"]

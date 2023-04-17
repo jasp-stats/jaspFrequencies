@@ -99,6 +99,10 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
       if (any(successes > sampleSize))
         return(gettext("Sample size must be larger then the number of successes."))
+
+      if (length(dataset[[options[["factor"]]]]) != length(levels(dataset[[options[["factor"]]]])))
+        return(gettext("Factor must contain unique levels that map the successes to sample size."))
+
     }
   )
 
