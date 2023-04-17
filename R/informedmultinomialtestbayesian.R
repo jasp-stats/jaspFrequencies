@@ -25,10 +25,10 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
 
   if (options[["descriptivesTable"]])
-    .createInformedBayesDescriptivesTable(jaspResults, dataset, options, type = "multinomial")
+    .createInformedMultBayesDescriptivesTable(jaspResults, dataset, options)
 
   if (options[["descriptivesPlot"]])
-    .createInformedBayesDescriptivesPlot(jaspResults, dataset, options, type = "multinomial")
+    .createInformedMultBayesDescriptivesPlot(jaspResults, dataset, options)
 
   if (options[["posteriorPlot"]])
     .createInformedMultBayesPosteriorPlot(jaspResults, dataset, options)
@@ -219,7 +219,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   return()
 }
-.createInformedBayesDescriptivesTable     <- function(jaspResults, dataset, options, type) {
+.createInformedMultBayesDescriptivesTable <- function(jaspResults, dataset, options) {
 
   if (!is.null(jaspResults[["descriptivesTable"]]))
     return()
@@ -227,51 +227,33 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # Create Table
   descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
   descriptivesTable$position <- 2
-  descriptivesTable$dependOn(c("factor", "display", "descriptivesTable", "descriptivesTableCi", "descriptivesTableCiCoverage", switch(
-    type,
-    multinomial = "counts",
-    binomial    = c("successes", "sampleSize")
-  )))
+  descriptivesTable$dependOn(c("factor", "descriptivesDisplay", "descriptivesTable", "count"))
 
-  if (options[["display"]] == "counts")
+  if (options[["descriptivesDisplay"]] == "counts") {
     outType <- "integer"
-  else
+    outText <- gettext("Observed counts")
+  } else {
     outType <- "number"
+    outText <- gettext("Observed proportions")
+  }
 
   descriptivesTable$addColumnInfo(name = "fact",     title = options[["factor"]], type = "string")
-  descriptivesTable$addColumnInfo(name = "observed", title = gettext("Observed"), type = outType)
-
-  if (options[["descriptivesTableCi"]]) {
-    overTitle <- gettextf("%1$s%% Credible Interval", paste0(100 * options[["descriptivesTableCiCoverage"]]))
-    descriptivesTable$addColumnInfo(name = "lowerCI", title = gettext("Lower"), type = "number", overtitle = overTitle)
-    descriptivesTable$addColumnInfo(name = "upperCI", title = gettext("Upper"), type = "number", overtitle = overTitle)
-  }
+  descriptivesTable$addColumnInfo(name = "observed", title = outText,             type = outType)
 
   jaspResults[["descriptivesTable"]] <- descriptivesTable
 
-  # Show empty Table if no variable is selected
-  if (options[["factor"]] == "")
+
+  # show empty Table if no variable is selected
+  if (is.null(jaspResults[["models"]]))
     return()
 
-  # compute and fill the table
-  descriptivesData <- switch(
-    type,
-    multinomial = .createInformedMultBayesDescriptivesData(dataset, options, table = TRUE),
-    binomial    = .createInformedBinBayesDescriptivesData(dataset, options, table = TRUE)
-  )
-  descriptivesTable$setData(descriptivesData)
+  tempTable <- .createInformedMultDescriptivesData(jaspResults, options)
 
-  if (type == "multinomial")
-    if (!(!options[["count"]] != "" && is.null(dataset[["__jaspComputedCounts"]])) && options[["descriptivesTableCi"]])
-      descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
-
-  if (type == "binomial")
-    if (options[["successes"]] != "" && options[["sampleSize"]] != "" && options[["descriptivesTableCi"]])
-      descriptivesTable$addFootnote(gettext("Credible intervals are based on independent binomial distributions with flat priors."))
+  descriptivesTable$setData(tempTable)
 
   return()
 }
-.createInformedBayesDescriptivesPlot      <- function(jaspResults, dataset, options, type) {
+.createInformedMultBayesDescriptivesPlot  <- function(jaspResults, dataset, options) {
 
   if (!is.null(jaspResults[["descriptivesPlot"]]))
     return()
@@ -279,29 +261,16 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # Create Plot
   descriptivesPlot <- createJaspPlot(title = gettext("Descriptives plot"), width = 480, height = 320)
   descriptivesPlot$position <- 3
-  descriptivesPlot$dependOn(c("factor", "display", "descriptivesPlot", "descriptivesAndPosteriorPlotCiCoverage", switch(
-    type,
-    multinomial = "counts",
-    binomial    = c("successes", "sampleSize")
-  )))
+  descriptivesPlot$dependOn(c("factor", "descriptivesDisplay", "descriptivesPlot", "count"))
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
-  # Show empty Plot if no variable is selected
-  if (type == "multinomial")
-    if (options[["factor"]] == "" || (options[["count"]] == "" && is.null(dataset[["__jaspComputedCounts"]])))
-      return()
+  # show empty plot if no variable is selected
+  if (is.null(jaspResults[["models"]]))
+    return()
 
-  if (type == "binomial")
-    if (options[["factor"]] == "" || options[["successes"]] == "" || options[["sampleSize"]] == "")
-      return()
+  plotData <- .createInformedMultDescriptivesData(jaspResults, options)
 
-
-  plotData <- switch(
-    type,
-    multinomial = .createInformedMultBayesDescriptivesData(dataset, options, table = FALSE),
-    binomial    = .createInformedBinBayesDescriptivesData(dataset, options, table = FALSE)
-  )
-  descriptivesPlot$plotObject <- .informedPlot(plotData, options, descriptives = TRUE)
+  descriptivesPlot$plotObject <- .createInformedMultPlot(plotData, options, descriptives = TRUE)
 
   return()
 }
@@ -312,19 +281,17 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempModel             <- jaspResults[["models"]]$object[[1]]$model
-  tempModel$cred_level  <- options[["descriptivesAndPosteriorPlotCiCoverage"]]
+  tempModel$cred_level  <- options[["posteriorPlotCiCoverage"]]
   tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
-  if (options[["display"]] == "counts")
-    tempSummary[,2:4] <- tempSummary[,2:4] * sum(if(options[["count"]] != "") dataset[[options[["count"]]]] else dataset[["__jaspComputedCounts"]])
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
-  posteriorPlot$plotObject <- .informedPlot(tempSummary, options, descriptives = FALSE)
+  posteriorPlot$plotObject <- .createInformedMultPlot(tempSummary, options, descriptives = FALSE)
 
   return()
 }
@@ -334,7 +301,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     return()
 
   posteriorPlots <- createJaspContainer("Posterior plots")
-  posteriorPlots$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  posteriorPlots$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
   posteriorPlots$position <- 4
   jaspResults[["posteriorPlots"]] <- posteriorPlots
 
@@ -353,7 +320,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
     # extract posterior summary and format it for the plotting function
     tempModel             <- models[[i]]$model
-    tempModel$cred_level  <- options[["descriptivesAndPosteriorPlotCiCoverage"]]
+    tempModel$cred_level  <- options[["posteriorPlotCiCoverage"]]
     tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
     colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
@@ -377,7 +344,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   if (table && options[["descriptivesTableCi"]])
     tempCI <- .multComputeCIs(counts, options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else if (!table)
-    tempCI <- .multComputeCIs(counts, options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
+    tempCI <- .multComputeCIs(counts, options[["posteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
   else
     tempCI <- NULL
 
@@ -408,7 +375,21 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   rowsFrame <- do.call(rbind, rowsList)
   return(rowsFrame)
 }
-.informedPlot                             <- function(plotData, options, descriptives = TRUE) {
+.createInformedMultDescriptivesData       <- function(jaspResults, options) {
+
+  model <- jaspResults[["models"]]$object[[1]]$model
+
+  tempTable <- data.frame(
+    "fact"     = model[["restrictions"]][["full_model"]][["parameters_full"]],
+    "observed" = model[["restrictions"]][["full_model"]][["counts_full"]]
+  )
+
+  if (options[["descriptivesDisplay"]] == "proportions")
+    tempTable[["observed"]] <- tempTable[["observed"]] / sum(tempTable[["observed"]])
+
+  return(tempTable)
+}
+.createInformedMultPlot                   <- function(plotData, options, descriptives = TRUE) {
 
   base_breaks_y <- function(x) {
     b <- pretty(c(0,x))
@@ -420,7 +401,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # Counts or props
   yname <- sprintf("%1$s %2$s",
     if (descriptives) gettext("Observed") else gettext("Estimated"),
-    if (options[["display"]] == "counts") gettext("Counts") else gettext("Proportions")
+    if (descriptives && options[["descriptivesDisplay"]] == "counts") gettext("Counts") else gettext("Proportions")
   )
 
   # Prepare data for plotting
@@ -429,22 +410,24 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   plotFrame$fact <- factor(plotFrame$fact, levels = rev(plotFrame$fact))
 
   # Determine y-axis margin: If CIs could not be computed, use observed counts
-  plotFrame$yAxisMargin <- plotFrame$upperCI
-  for(i in 1:nrow(plotFrame)) {
-    if (plotFrame$upperCI[i] == 0) {
-      plotFrame$yAxisMargin[i] <- plotFrame$obs[i]
-    }
-  }
+  if (!is.null(plotFrame$upperCI))
+    plotFrame$yAxisMargin <-  plotFrame$upperCI
+  else
+    plotFrame$yAxisMargin <-  plotFrame$observed
+
 
   # Create plot
   p <- ggplot2::ggplot(data = plotFrame,
                        mapping = ggplot2::aes(x = fact, y = observed)) +
     ggplot2::geom_bar(stat = "identity", size = 0.75, colour="black",
-                      fill = "grey") +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = plotFrame[["lowerCI"]],
-                                        ymax = plotFrame[["upperCI"]]),
-                           size = 0.75, width = 0.3) +
-    base_breaks_y(plotFrame$yAxisMargin) +
+                      fill = "grey")
+
+  if (!descriptives)
+    p <-  p + ggplot2::geom_errorbar(ggplot2::aes(ymin = plotFrame[["lowerCI"]],
+                                                  ymax = plotFrame[["upperCI"]]),
+                                     size = 0.75, width = 0.3)
+
+  p <- p + base_breaks_y(plotFrame$yAxisMargin) +
     ggplot2::xlab(options[["factor"]]) +
     ggplot2::ylab(yname) +
     ggplot2::coord_flip()

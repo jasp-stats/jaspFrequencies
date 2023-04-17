@@ -106,68 +106,58 @@ Form
 	ColumnLayout
 	{
 
-		CheckBox
+		Group
 		{
-			name:	"descriptivesTable"
-			label:	qsTr("Descriptives")
+			title:	"Descriptives"
 
 			CheckBox
 			{
-				name:				"descriptivesTableCi"
-				label:				qsTr("Credible interval")
-				childrenOnSameRow:	true
-
-				CIField
-				{
-					name:	"descriptivesTableCiCoverage"
-				}
+				name:	"descriptivesTable"
+				label:	qsTr("Table")
 			}
-		}
-
-		Group
-		{
-			title	: qsTr("Plots")
 
 			CheckBox
 			{
 				name:		"descriptivesPlot"
 				id:			descriptivesPlot
-				label:		qsTr("Descriptives")
+				label:		qsTr("Plot")
 			}
 
-			CheckBox
+			RadioButtonGroup
 			{
-				name:		"posteriorPlot"
-				id:			posteriorPlot
-				label:		qsTr("Posterior")
+				name	: "descriptivesDisplay"
+				title	: qsTr("Display")
+
+				RadioButton
+				{
+					value:		"counts"
+					label:		qsTr("Counts")
+					checked:	true
+				}
+
+				RadioButton
+				{
+					value:		"proportions"
+					label:		qsTr("Proportions")
+				}
 			}
+		}
+	
+
+		CheckBox
+		{
+			name:		"posteriorPlot"
+			id:			posteriorPlot
+			label:		qsTr("Posterior plot")
 
 			CIField
 			{
-				enabled:	descriptivesPlot.checked || posteriorPlot.checked
-				name:		"descriptivesAndPosteriorPlotCiCoverage"
+				name:		"posteriorPlotCiCoverage"
 				label:		qsTr("Credible interval")
 			}
 		}
 
-		RadioButtonGroup
-		{
-			name	: "display"
-			title	: qsTr("Display")
 
-			RadioButton
-			{
-				value:		"counts"
-				label:		qsTr("Counts")
-				checked:	true
-			}
-
-			RadioButton
-			{
-				value:		"proportions"
-				label:		qsTr("Proportions")
-			}
-		}
 	}
 
 	ExpanderButton

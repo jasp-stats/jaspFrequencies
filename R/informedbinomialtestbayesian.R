@@ -19,15 +19,14 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   dataset <- .informedBinReadData(dataset, options)
   .informedBinCheckErrors(dataset, options)
-
   .computeInformedBinResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "binomial")
 
   if (options[["descriptivesTable"]])
-    .createInformedBayesDescriptivesTable(jaspResults, dataset, options, type = "binomial")
+    .createInformedBinBayesDescriptivesTable(jaspResults, dataset, options)
 
   if (options[["descriptivesPlot"]])
-    .createInformedBayesDescriptivesPlot(jaspResults, dataset, options, type = "binomial")
+    .createInformedBinBayesDescriptivesPlot(jaspResults, dataset, options)
 
   if (options[["posteriorPlot"]])
     .createInformedBinBayesPosteriorPlot(jaspResults, dataset, options)
@@ -190,6 +189,64 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   return()
 }
+.createInformedBinBayesDescriptivesTable  <- function(jaspResults, dataset, options) {
+
+  if (!is.null(jaspResults[["descriptivesTable"]]))
+    return()
+
+  # Create Table
+  descriptivesTable <- createJaspTable(title = gettext("Descriptives"))
+  descriptivesTable$position <- 2
+  descriptivesTable$dependOn(c("factor", "descriptivesDisplay", "descriptivesTable", "successes", "sampleSize"))
+
+  if (options[["descriptivesDisplay"]] == "counts") {
+    outType <- "integer"
+    outText <- gettext("Observed counts")
+  } else {
+    outType <- "number"
+    outText <- gettext("Observed proportions")
+  }
+
+
+  descriptivesTable$addColumnInfo(name = "fact",     title = options[["factor"]],    type = "string")
+  descriptivesTable$addColumnInfo(name = "observed", title = outText,                type = outType)
+  descriptivesTable$addColumnInfo(name = "size",     title = gettext("Sample size"), type = "integer")
+
+  jaspResults[["descriptivesTable"]] <- descriptivesTable
+
+
+  # show empty Table if no variable is selected
+  if (is.null(jaspResults[["models"]]))
+    return()
+
+  tempTable <- .createInformedBinBayesDescriptivesData(jaspResults, options)
+
+  descriptivesTable$setData(tempTable)
+
+  return()
+}
+.createInformedBinBayesDescriptivesPlot   <- function(jaspResults, dataset, options) {
+
+  if (!is.null(jaspResults[["descriptivesPlot"]]))
+    return()
+
+  # Create Plot
+  descriptivesPlot <- createJaspPlot(title = gettext("Descriptives plot"), width = 480, height = 320)
+  descriptivesPlot$position <- 3
+  descriptivesPlot$dependOn(c("factor", "descriptivesDisplay", "descriptivesPlot", "successes", "sampleSize"))
+
+  jaspResults[["descriptivesPlot"]] <- descriptivesPlot
+
+  # show empty plot if no variable is selected
+  if (is.null(jaspResults[["models"]]))
+    return()
+
+  plotData <- .createInformedBinBayesDescriptivesData(jaspResults, options)
+
+  descriptivesPlot$plotObject <- .createInformedBinBayesPlot(plotData, options, descriptives = TRUE)
+
+  return()
+}
 .createInformedBinBayesPosteriorPlot      <- function(jaspResults, dataset, options) {
 
   if (!is.null(jaspResults[["posteriorPlot"]]))
@@ -199,50 +256,95 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   tempSummary           <- data.frame(
     fact     = levels(dataset[[options[["factor"]]]]),
     observed = (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]]) / (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]] + options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
-    lowerCI  = stats::qbeta(p = (1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
-    upperCI  = stats::qbeta(p = 1-(1-options[["descriptivesAndPosteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]]))
+    lowerCI  = stats::qbeta(p = (1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
+    upperCI  = stats::qbeta(p = 1-(1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]]))
   )
-
-  if (options[["display"]] == "counts")
-    tempSummary[,2:4] <- tempSummary[,2:4] * matrix(dataset[[options[["sampleSize"]]]], nrow = nrow(dataset), ncol = 3, byrow = FALSE)
 
   posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
   posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedBinDependency,  "display", "posteriorPlot", "descriptivesAndPosteriorPlotCiCoverage"))
+  posteriorPlot$dependOn(c(.informedBinDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
-  posteriorPlot$plotObject <- .informedPlot(tempSummary, options, descriptives = FALSE)
+  posteriorPlot$plotObject <- .createInformedBinBayesPlot(tempSummary, options, descriptives = FALSE)
 
   return()
 }
-.createInformedBinBayesDescriptivesData   <- function(dataset, options, table = TRUE) {
+.createInformedBinBayesDescriptivesData   <- function(jaspResults, options) {
 
-  # Compute CI
-  if (table && options[["successes"]] != "" && options[["sampleSize"]] != "" && options[["descriptivesTableCi"]])
-    tempCI <- .binComputeCIs(dataset[[options[["successes"]]]], dataset[[options[["sampleSize"]]]], options[["descriptivesTableCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
-  else if (!table && options[["successes"]] != "" && options[["sampleSize"]] != "")
-    tempCI <- .binComputeCIs(dataset[[options[["successes"]]]], dataset[[options[["sampleSize"]]]], options[["descriptivesAndPosteriorPlotCiCoverage"]], ifErrorReturn = 0, scale = .decodeOptionsDisplay(options))
-  else
-    tempCI <- NULL
+  model <- jaspResults[["models"]]$object[[1]]$model
 
-  # Add rows
-  if (options[["successes"]] != "" && options[["sampleSize"]] != "") {
+  tempTable <- data.frame(
+    "fact"     = model[["restrictions"]][["full_model"]][["parameters_full"]],
+    "observed" = model[["restrictions"]][["full_model"]][["counts_full"]],
+    "size"     = model[["restrictions"]][["full_model"]][["total_full"]]
+  )
 
-    rowsFrame <- data.frame(
-      fact     = dataset[[options[["factor"]]]],
-      observed = if (options[["display"]] == "counts") dataset[[options[["successes"]]]] else dataset[[options[["successes"]]]] / dataset[[options[["sampleSize"]]]]
-    )
+  if (options[["descriptivesDisplay"]] == "proportions")
+    tempTable[["observed"]] <- tempTable[["observed"]] / tempTable[["size"]]
 
-    if (!is.null(tempCI)) {
-      rowsFrame$lowerCI <- tempCI[,"lowerCI"]
-      rowsFrame$upperCI <- tempCI[,"upperCI"]
-    }
+  return(tempTable)
+}
+.createInformedBinBayesPlot               <- function(plotData, options, descriptives = TRUE) {
 
-  } else {
-    rowsFrame <- data.frame()
+  base_breaks_y <- function(x) {
+    b <- pretty(c(0,x))
+    d <- data.frame(x=-Inf, xend=-Inf, y=min(b), yend=max(b))
+    list(ggplot2::geom_segment(data=d, ggplot2::aes(x=x, y=y, xend=xend, yend=yend), size = 0.75, inherit.aes=FALSE),
+         ggplot2::scale_y_continuous(breaks=b))
   }
 
-  return(rowsFrame)
+  # Counts or props
+  yname <- sprintf("%1$s %2$s",
+                   if (descriptives) gettext("Observed") else gettext("Estimated"),
+                   if (descriptives && options[["descriptivesDisplay"]] == "counts") gettext("Counts") else gettext("Proportions")
+  )
+
+  # Prepare data for plotting
+  plotFrame <- plotData
+  # We need to reverse the factor's levels because of the coord_flip later
+  plotFrame$fact <- factor(plotFrame$fact, levels = rev(plotFrame$fact))
+
+  # Determine y-axis margin: If CIs could not be computed, use observed counts
+  if (descriptives && options[["descriptivesDisplay"]] == "counts")
+    plotFrame$yAxisMargin <- plotFrame$size
+  else if (!is.null(plotFrame$upperCI))
+    plotFrame$yAxisMargin <- plotFrame$upperCI
+  else
+    plotFrame$yAxisMargin <- plotFrame$observed
+
+  if (descriptives && options[["descriptivesDisplay"]] == "counts") {
+    plotFrameMax <- plotFrame
+    plotFrameMax$observed <- plotFrameMax$size - plotFrameMax$observed
+    plotFrameMax$split <- "max"
+    plotFrame$split    <- "obs"
+    plotFrame <- rbind(plotFrame, plotFrameMax)
+    plotFrame$split <- factor(plotFrame$split, levels = c("max", "obs"))
+  }
+
+  # Create plot
+  p <- ggplot2::ggplot(data = plotFrame)
+
+  if (descriptives && options[["descriptivesDisplay"]] == "counts")
+    p <- p + ggplot2::geom_bar(mapping = ggplot2::aes(x = fact, y = observed, fill = split),
+                               stat = "identity", size = 0.75, colour = "black") +
+    ggplot2::scale_discrete_manual(aesthetics = "fill", values  = c("obs" = "grey", "max" = "white"))
+  else
+    p <- p + ggplot2::geom_bar(mapping = ggplot2::aes(x = fact, y = observed),
+                           stat = "identity", size = 0.75, colour="black", fill = "grey")
+
+
+  if (!descriptives)
+    p <-  p + ggplot2::geom_errorbar(ggplot2::aes(x = fact, ymin = plotFrame[["lowerCI"]], ymax = plotFrame[["upperCI"]]),
+                                     size = 0.75, width = 0.3)
+
+  p <- p + base_breaks_y(plotFrame$yAxisMargin) +
+    ggplot2::xlab(options[["factor"]]) +
+    ggplot2::ylab(yname) +
+    ggplot2::coord_flip()
+
+  p <- p + jaspGraphs::geom_rangeframe(sides = "b") + jaspGraphs::themeJaspRaw()
+
+  return(p)
 }
 .binComputeCIs                            <- function(successes, sampleSize, CI, ifErrorReturn = NaN, scale) {
 
