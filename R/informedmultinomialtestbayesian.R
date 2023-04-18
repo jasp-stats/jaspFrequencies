@@ -209,7 +209,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     bfComparison <- "Encompassing"
 
   # compute Bayes factors
-  rowsFrame$bf <- exp(rowsFrame$marglik[rowsFrame$model == bfComparison] - rowsFrame$marglik)
+  rowsFrame$bf <- exp(rowsFrame$marglik - rowsFrame$marglik[rowsFrame$model == bfComparison])
   rowsFrame$bf <- .recodeBFtype(rowsFrame$bf, options[["bayesFactorType"]])
 
   summaryTable$setData(rowsFrame)
