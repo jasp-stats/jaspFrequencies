@@ -279,17 +279,20 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   if (!is.null(jaspResults[["posteriorPlot"]]))
     return()
 
+  posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
+  posteriorPlot$position <- 4
+  posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
+  jaspResults[["posteriorPlot"]] <- posteriorPlot
+
+  if (is.null(jaspResults[["models"]]))
+    return()
+
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempModel             <- jaspResults[["models"]]$object[[1]]$model
   tempModel$cred_level  <- options[["posteriorPlotCiCoverage"]]
   tempSummary           <- summary(tempModel)[["estimates"]][,c("factor_level", "median", "lower", "upper")]
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
-
-  posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
-  posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
-  jaspResults[["posteriorPlot"]] <- posteriorPlot
 
   posteriorPlot$plotObject <- .createInformedMultPlot(tempSummary, options, descriptives = FALSE)
 

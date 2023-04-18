@@ -252,6 +252,14 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   if (!is.null(jaspResults[["posteriorPlot"]]))
     return()
 
+  posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
+  posteriorPlot$position <- 4
+  posteriorPlot$dependOn(c(.informedBinDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
+  jaspResults[["posteriorPlot"]] <- posteriorPlot
+
+  if (is.null(jaspResults[["models"]]))
+    return()
+
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempSummary           <- data.frame(
     fact     = levels(dataset[[options[["factor"]]]]),
@@ -259,11 +267,6 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
     lowerCI  = stats::qbeta(p = (1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
     upperCI  = stats::qbeta(p = 1-(1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]]))
   )
-
-  posteriorPlot <- createJaspPlot(title = gettext("Unrestricted posterior plot"), width = 480, height = 320)
-  posteriorPlot$position <- 4
-  posteriorPlot$dependOn(c(.informedBinDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
-  jaspResults[["posteriorPlot"]] <- posteriorPlot
 
   posteriorPlot$plotObject <- .createInformedBinBayesPlot(tempSummary, options, descriptives = FALSE)
 
