@@ -244,7 +244,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
 
   # show empty Table if no variable is selected
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   tempTable <- .createInformedMultDescriptivesData(jaspResults, options)
@@ -265,7 +265,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
   # show empty plot if no variable is selected
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   plotData <- .createInformedMultDescriptivesData(jaspResults, options)
@@ -284,7 +284,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   posteriorPlot$dependOn(c(.informedMultDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   # extract posterior summary from the unrestricted model and format it for the plotting function

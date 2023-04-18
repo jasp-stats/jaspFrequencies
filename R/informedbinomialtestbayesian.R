@@ -216,7 +216,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
 
   # show empty Table if no variable is selected
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   tempTable <- .createInformedBinBayesDescriptivesData(jaspResults, options)
@@ -238,7 +238,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   jaspResults[["descriptivesPlot"]] <- descriptivesPlot
 
   # show empty plot if no variable is selected
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   plotData <- .createInformedBinBayesDescriptivesData(jaspResults, options)
@@ -257,7 +257,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   posteriorPlot$dependOn(c(.informedBinDependency,  "display", "posteriorPlot", "posteriorPlotCiCoverage"))
   jaspResults[["posteriorPlot"]] <- posteriorPlot
 
-  if (is.null(jaspResults[["models"]]))
+  if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
   # extract posterior summary from the unrestricted model and format it for the plotting function
