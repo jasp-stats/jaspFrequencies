@@ -75,6 +75,20 @@ Description
 
 	Analysis
 	{
+		menu:	qsTr("Informed Multinomial Test")
+		title:	qsTr("Informed Bayesian Multinomial Test")
+		func:	"InformedMultinomialTestBayesian"
+	}
+
+	Analysis
+	{
+		menu:	qsTr("Informed Multi-Binomial Test")
+		title:	qsTr("Informed Bayesian Multi-Binomial Test")
+		func:	"InformedBinomialTestBayesian"
+	}
+
+	Analysis
+	{
 		menu:	qsTr("Contingency Tables")
 		title:	qsTr("Bayesian Contingency Tables")
 		func:	"ContingencyTablesBayesian"

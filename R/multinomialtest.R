@@ -39,7 +39,7 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
     fact <- options$factor
     if (options$count != "") {
       asnum <- options$count
-      if (options$expectedCount != "")
+      if (!is.null(options$expectedCount) && options$expectedCount != "")
         asnum <- c(asnum, options$expectedCount)
     }
   }
