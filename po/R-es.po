@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
 "POT-Creation-Date: 2023-04-22 03:28\n"
-"PO-Revision-Date: 2023-01-07 10:35+0000\n"
+"PO-Revision-Date: 2023-04-22 23:57+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/es/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Contraste bayesiano A/B"
@@ -368,20 +368,21 @@ msgstr "V de Cramer para este modelo aún no implementado"
 msgid "Posterior"
 msgstr "Posterior"
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr "Recuentos no válidos: la variable debe contener solo valores enteros."
+msgstr "Aciertos no válidos: la variable debe contener solo valores enteros."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr "Recuentos no válidos: la variable debe contener solo valores enteros."
+msgstr ""
+"Tamaño muestral no válido: la variable debe contener solo valores enteros."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "El tamaño muestral debe ser mayor que el número de aciertos."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"El factor debe contener niveles únicos que representen los aciertos con el "
+"tamaño muestral."
 
 msgid "Observed counts"
 msgstr "Recuentos observados"
@@ -390,51 +391,53 @@ msgid "Observed proportions"
 msgstr "Proporciones observadas"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Tamaño de la muestra"
 
 msgid "Descriptives plot"
-msgstr "Gráfico descriptivo"
+msgstr "Gráfico de descriptivos"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Gráfico posterior sin restricciones"
 
 msgid "Observed"
 msgstr "Observado"
 
-#, fuzzy
 msgid "Estimated"
-msgstr "Estimar"
+msgstr "Estimado"
 
-#, fuzzy
 msgid "Proportions"
-msgstr "Proporción"
+msgstr "Proporciones"
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Evaluación bayesiana de %1$s restricciones de orden"
 
 msgid "BF%s%s"
-msgstr ""
+msgstr "FB%s%s"
 
 msgid "Log(BF%s%s)"
-msgstr ""
+msgstr "Log(FB%s%s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log marglik"
 
 msgid "Error"
-msgstr ""
+msgstr "Fallo"
 
 msgid "Error %"
-msgstr ""
+msgstr "Fallo %"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"El modelo de cada fila (denotado como '1') se compara con el %1$s (denotado "
+"como 0)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Especificar contrastes de hipótesis informados en la sección `Hipótesis de "
+"Restricciones de Orden`."
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Los recuentos esperados no se admiten sin los recuentos observados."
