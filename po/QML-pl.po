@@ -1,10 +1,16 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-22 23:56+0000\n"
+"Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
+"Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: pl\n"
 "X-Qt-Contexts: true\n"
 
@@ -50,15 +56,15 @@ msgstr "Bayesowski test A/B"
 
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "Bayesowski test wielomianowy"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
-msgstr ""
+msgstr "Bayesowskie tabele krzyżowe"
 
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr ""
+msgstr "Bayesowska regresja log-liniowa"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
@@ -74,7 +80,7 @@ msgstr ""
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr ""
+msgstr "Wielkość próby Grupa 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
@@ -90,11 +96,11 @@ msgstr "σ:"
 
 msgctxt "ABTestBayesian|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Statystyki opisowe"
 
 msgctxt "ABTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "Wykresy"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
@@ -102,7 +108,7 @@ msgstr "Prior i posterior"
 
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analiza sekwencyjna"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior"
@@ -110,19 +116,19 @@ msgstr "Prior"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Weryfikacja odporności współczynnika Bayesa"
 
 msgctxt "ABTestBayesian|"
 msgid "Order"
-msgstr ""
+msgstr "Kolejność"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
-msgstr ""
+msgstr "Porównaj z najlepszym modelem"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to null model"
-msgstr ""
+msgstr "Porównaj z modelem zerowym"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
