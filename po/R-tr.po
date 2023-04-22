@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2023-01-31 20:41+0000\n"
 "Last-Translator: Ünal Halit ÖZDEN <uozden@ticaret.edu.tr>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
@@ -343,6 +343,71 @@ msgstr ""
 msgid "Posterior"
 msgstr ""
 
+msgid "Invalid successes: variable must contain only integer values."
+msgstr ""
+
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr ""
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr ""
+
+msgid "Observed proportions"
+msgstr ""
+
+msgid "Sample size"
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr ""
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+msgid "Observed"
+msgstr ""
+
+msgid "Estimated"
+msgstr ""
+
+#, fuzzy
+msgid "Proportions"
+msgstr "Oran"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr ""
 
@@ -375,9 +440,6 @@ msgstr ""
 msgid "Factor"
 msgstr ""
 
-msgid "Observed"
-msgstr ""
-
 msgid "Expected: %s"
 msgstr ""
 
@@ -388,12 +450,6 @@ msgid "%s%% Confidence Interval"
 msgstr ""
 
 msgid "Descriptives Plot"
-msgstr ""
-
-msgid "Observed counts"
-msgstr ""
-
-msgid "Observed proportions"
 msgstr ""
 
 msgid "Bayesian Multinomial Test"
@@ -417,9 +473,6 @@ msgid "%1$s%% %2$s Interval"
 msgstr ""
 
 msgid "Could not compute %s Intervals."
-msgstr ""
-
-msgid "Descriptives plot"
 msgstr ""
 
 msgid "Observed Counts"

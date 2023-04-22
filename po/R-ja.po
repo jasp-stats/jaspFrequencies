@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2023-04-21 17:51+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -350,6 +350,74 @@ msgstr "このモデルのクラメールの Vはまだ実装されていませ�
 msgid "Posterior"
 msgstr "事後分布"
 
+#, fuzzy
+msgid "Invalid successes: variable must contain only integer values."
+msgstr "無効なカウント: 変数は整数だけでなければなりません。"
+
+#, fuzzy
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr "無効なカウント: 変数は整数だけでなければなりません。"
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr "観測度数"
+
+msgid "Observed proportions"
+msgstr "観察された比率"
+
+msgid "Sample size"
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr "記述的プロット"
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+msgid "Observed"
+msgstr "観測された"
+
+#, fuzzy
+msgid "Estimated"
+msgstr "推定"
+
+#, fuzzy
+msgid "Proportions"
+msgstr "比率"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr "期待度数は、観測度数なしではサポートされません。"
 
@@ -384,9 +452,6 @@ msgstr "信頼区間を計算できませんでした。"
 msgid "Factor"
 msgstr "要因"
 
-msgid "Observed"
-msgstr "観測された"
-
 msgid "Expected: %s"
 msgstr "期待値: %s"
 
@@ -398,12 +463,6 @@ msgstr "%s%% 信頼区間"
 
 msgid "Descriptives Plot"
 msgstr "記述統計量プロット"
-
-msgid "Observed counts"
-msgstr "観測度数"
-
-msgid "Observed proportions"
-msgstr "観察された比率"
 
 msgid "Bayesian Multinomial Test"
 msgstr "ベイジアン多項検定"
@@ -427,9 +486,6 @@ msgstr "%1$s%% %2$s 区間"
 
 msgid "Could not compute %s Intervals."
 msgstr "%s 区間を計算できませんでした。"
-
-msgid "Descriptives plot"
-msgstr "記述的プロット"
 
 msgid "Observed Counts"
 msgstr "観測度数"

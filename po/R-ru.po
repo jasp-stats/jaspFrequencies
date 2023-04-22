@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2023-02-21 05:38+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
@@ -192,8 +192,8 @@ msgid ""
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
-"Максимальное <em>p-отношение</em> Вовка-Селлке: на основе "
-"<em>p-значения</em>,\n"
+"Максимальное <em>p-отношение</em> Вовка-Селлке: на основе <em>p-значения</"
+"em>,\n"
 "      максимально возможные шансы в пользу H%1$s над H%2$s равны %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 
@@ -415,6 +415,80 @@ msgstr "V-Крамера для этой модели еще не реализо
 msgid "Posterior"
 msgstr "Постериор"
 
+#, fuzzy
+msgid "Invalid successes: variable must contain only integer values."
+msgstr ""
+"Недопустимые значения: переменная должна содержать только целочисленные "
+"значения."
+
+#, fuzzy
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr ""
+"Недопустимые значения: переменная должна содержать только целочисленные "
+"значения."
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr "Наблюдаемые значения"
+
+msgid "Observed proportions"
+msgstr "Наблюдаемые пропорции"
+
+msgid "Sample size"
+msgstr ""
+
+#, fuzzy
+msgid "Descriptives plot"
+msgstr "График описательных статистик"
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+#, fuzzy
+msgid "Observed"
+msgstr "Наблюдаемые"
+
+#, fuzzy
+msgid "Estimated"
+msgstr "Оценка"
+
+#, fuzzy
+msgid "Proportions"
+msgstr "Пропорции"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr "Ожидаемые значения не рассчитываются без наблюдаемых значений."
 
@@ -456,10 +530,6 @@ msgid "Factor"
 msgstr "Фактор"
 
 #, fuzzy
-msgid "Observed"
-msgstr "Наблюдаемые"
-
-#, fuzzy
 msgid "Expected: %s"
 msgstr "Ожидаемые: %s"
 
@@ -474,12 +544,6 @@ msgstr "%s%% Доверительный интервал"
 #, fuzzy
 msgid "Descriptives Plot"
 msgstr "График описательных статистик"
-
-msgid "Observed counts"
-msgstr "Наблюдаемые значения"
-
-msgid "Observed proportions"
-msgstr "Наблюдаемые пропорции"
 
 msgid "Bayesian Multinomial Test"
 msgstr "Байесовский полиномиальный критерий"
@@ -507,10 +571,6 @@ msgstr "%1$s%% %2$s Интервал"
 
 msgid "Could not compute %s Intervals."
 msgstr "Не удалось вычислить %s интервалов."
-
-#, fuzzy
-msgid "Descriptives plot"
-msgstr "График описательных статистик"
 
 msgid "Observed Counts"
 msgstr "Наблюдаемые значения"

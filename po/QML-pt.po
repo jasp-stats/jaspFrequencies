@@ -924,3 +924,261 @@ msgstr ""
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
 msgstr ""
+
+msgctxt "Description|"
+msgid "Informed Multinomial Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Informed Bayesian Multinomial Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Informed Multi-Binomial Test"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Informed Bayesian Multi-Binomial Test"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Factor"
+msgstr "Fator"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Successes"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sample Size"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Bayes Factor Comparison"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Encompassing"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Null"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "vs."
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Table"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Display"
+msgstr "Exibir"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Counts"
+msgstr "Contagem"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Proportions"
+msgstr "Proporções"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Posterior plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Intervalo de credibilidade"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior"
+msgstr "Anterior"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "Nenhum fator especificado"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Level #"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Order Restricted Hypotheses"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
+"Enter each restriction of one hypothesis on a new line,\n"
+"e.g., Low <= Mid <= High\n"
+"where 'Low'/'Mid'/'High' are the factor level names.\n"
+"Click on the 'plus' icon to add more hypotheses. \n"
+"Click the information icon for more examples."
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Click to learn more about the syntax for order restrictions."
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Model 1"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
+"Ctrl + Enter to apply. Click on the blue button above for help on the "
+"restriction syntax"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Advanced"
+msgstr "Avançado"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Estimation settings"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Burnin (MCMC)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Iterations (MCMC)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Factor"
+msgstr "Fator"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Counts"
+msgstr "Contagem"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Bayes Factor Comparison"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Encompassing"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Null"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "vs."
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Table"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Display"
+msgstr "Exibir"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Proportions"
+msgstr "Proporções"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Posterior plot"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "Intervalo de credibilidade"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior"
+msgstr "Anterior"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "Nenhum fator especificado"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Level #"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Order Restricted Hypotheses"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid ""
+"Enter each restriction of one hypothesis on a new line,\n"
+"e.g., Low <= Mid <= High\n"
+"where 'Low'/'Mid'/'High' are the factor level names.\n"
+"Click on the 'plus' icon to add more hypotheses. \n"
+"Click the information icon for more examples."
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Click to learn more about the syntax for order restrictions."
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Model 1"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid ""
+"Ctrl + Enter to apply. Click on the blue button above for help on the "
+"restriction syntax"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Advanced"
+msgstr "Avançado"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Estimation settings"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Burnin (MCMC)"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Iterations (MCMC)"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Maximum samples (bridgesampling)"
+msgstr ""

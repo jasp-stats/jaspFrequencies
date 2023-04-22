@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2023-04-14 19:50+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
@@ -362,6 +362,76 @@ msgstr "V Cramera nie zostało jeszcze zaimplementowane dla tego modelu"
 msgid "Posterior"
 msgstr "Posterior"
 
+#, fuzzy
+msgid "Invalid successes: variable must contain only integer values."
+msgstr ""
+"Nieprawidłowe liczebności: zmienna może zawierać tylko wartości całkowite."
+
+#, fuzzy
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr ""
+"Nieprawidłowe liczebności: zmienna może zawierać tylko wartości całkowite."
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr "Liczebności obserwowane"
+
+msgid "Observed proportions"
+msgstr "Proporcje obserwowane"
+
+msgid "Sample size"
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr "Wykresy opisowe"
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+msgid "Observed"
+msgstr "Obserwowane"
+
+#, fuzzy
+msgid "Estimated"
+msgstr "Oszacowanie"
+
+#, fuzzy
+msgid "Proportions"
+msgstr "Proporcja"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr "Wartości oczekiwane nie są obsługiwane bez wartości obserwowanych."
 
@@ -400,9 +470,6 @@ msgstr "Nie można obliczyć przedziałów ufności."
 msgid "Factor"
 msgstr "Czynnik"
 
-msgid "Observed"
-msgstr "Obserwowane"
-
 msgid "Expected: %s"
 msgstr "Oczekiwane: %s"
 
@@ -414,12 +481,6 @@ msgstr "%s%% Przedział ufności"
 
 msgid "Descriptives Plot"
 msgstr "Wykresy opisowe"
-
-msgid "Observed counts"
-msgstr "Liczebności obserwowane"
-
-msgid "Observed proportions"
-msgstr "Proporcje obserwowane"
 
 msgid "Bayesian Multinomial Test"
 msgstr "Bayesowski test wielomianowy"
@@ -445,9 +506,6 @@ msgstr "%1$s%% przedział %2$s"
 
 msgid "Could not compute %s Intervals."
 msgstr "Nie można obliczyć przedziałów %s."
-
-msgid "Descriptives plot"
-msgstr "Wykresy opisowe"
 
 msgid "Observed Counts"
 msgstr "Liczebności obserwowane"
@@ -485,8 +543,8 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
-"Maksymalna wartość <em>p</em> Vovka-Sellkego: Na podstawie wartości "
-"<em>p</em>\n"
+"Maksymalna wartość <em>p</em> Vovka-Sellkego: Na podstawie wartości <em>p</"
+"em>\n"
 "maksymalne możliwe szanse na korzyść H%1$s nad H%2$s wynoszą\n"
 "1/(-e <em>p</em> log(<em>p</em>)) dla <em>p</em> %3$s .37\n"
 "(Sellke, Bayarri i Berger, 2001)."

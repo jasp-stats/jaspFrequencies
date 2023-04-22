@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2021-09-11 03:29+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -364,6 +364,74 @@ msgstr "O V de Cramer para esse modelo ainda não foi implementado"
 msgid "Posterior"
 msgstr "Posterior"
 
+#, fuzzy
+msgid "Invalid successes: variable must contain only integer values."
+msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+
+#, fuzzy
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr "Contagens observadas"
+
+msgid "Observed proportions"
+msgstr "Proporções observadas"
+
+msgid "Sample size"
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr "Diagramas Descritivos"
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+msgid "Observed"
+msgstr "Observado"
+
+#, fuzzy
+msgid "Estimated"
+msgstr "Estimativa"
+
+#, fuzzy
+msgid "Proportions"
+msgstr "Proporção"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr "Contagens esperadas não suportadas sem contagens observadas."
 
@@ -403,9 +471,6 @@ msgstr "Não foi possível calcular os intervalos de confiança."
 msgid "Factor"
 msgstr "Fator"
 
-msgid "Observed"
-msgstr "Observado"
-
 msgid "Expected: %s"
 msgstr "Esperado: %s"
 
@@ -417,12 +482,6 @@ msgstr "%s%% Intervalo de Confiança"
 
 msgid "Descriptives Plot"
 msgstr "Diagramas Descritivos"
-
-msgid "Observed counts"
-msgstr "Contagens observadas"
-
-msgid "Observed proportions"
-msgstr "Proporções observadas"
 
 msgid "Bayesian Multinomial Test"
 msgstr "Teste Multinomial Bayesiano"
@@ -448,9 +507,6 @@ msgstr "%1$s%% %2$s Intervalo"
 
 msgid "Could not compute %s Intervals."
 msgstr "Não foi possível calcular o %s Intervalos."
-
-msgid "Descriptives plot"
-msgstr "Diagramas Descritivos"
 
 msgid "Observed Counts"
 msgstr "Contagens Observadas"

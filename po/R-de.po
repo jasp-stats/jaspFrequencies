@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2022-12-17 03:29\n"
+"POT-Creation-Date: 2023-04-22 03:28\n"
 "PO-Revision-Date: 2023-01-18 12:50+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
@@ -365,6 +365,76 @@ msgstr "Cramers V ist für dieses Modell noch nicht implementiert"
 msgid "Posterior"
 msgstr "Posterior"
 
+#, fuzzy
+msgid "Invalid successes: variable must contain only integer values."
+msgstr ""
+"Ungültige Häufigkeiten: Die Variable darf nur ganzzahlige Werte enthalten."
+
+#, fuzzy
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr ""
+"Ungültige Häufigkeiten: Die Variable darf nur ganzzahlige Werte enthalten."
+
+msgid "Sample size must be larger then the number of successes."
+msgstr ""
+
+msgid ""
+"Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Observed counts"
+msgstr "Beobachtete Anzahlen"
+
+msgid "Observed proportions"
+msgstr "Beobachgtete Anteile"
+
+msgid "Sample size"
+msgstr ""
+
+msgid "Descriptives plot"
+msgstr "Deskriptives Diagramm"
+
+msgid "Unrestricted posterior plot"
+msgstr ""
+
+msgid "Observed"
+msgstr "Beobachtet"
+
+#, fuzzy
+msgid "Estimated"
+msgstr "Schätzung"
+
+#, fuzzy
+msgid "Proportions"
+msgstr "Anteil"
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr ""
+
+msgid "BF%s%s"
+msgstr ""
+
+msgid "Log(BF%s%s)"
+msgstr ""
+
+msgid "Log marglik"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Error %"
+msgstr ""
+
+msgid ""
+"Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+
+msgid ""
+"Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
+"section."
+msgstr ""
+
 msgid "Expected counts not supported without observed counts."
 msgstr "Keine erwarteten Häufigkeiten ohne beobachtete Häufigkeiten."
 
@@ -403,9 +473,6 @@ msgstr "Konnte keine Konfidenzintervalle berechnen."
 msgid "Factor"
 msgstr "Faktor"
 
-msgid "Observed"
-msgstr "Beobachtet"
-
 msgid "Expected: %s"
 msgstr "Erwartet: %s"
 
@@ -417,12 +484,6 @@ msgstr "%s%% Konfidenzintervall"
 
 msgid "Descriptives Plot"
 msgstr "Deskriptive Diagramme"
-
-msgid "Observed counts"
-msgstr "Beobachtete Anzahlen"
-
-msgid "Observed proportions"
-msgstr "Beobachgtete Anteile"
 
 msgid "Bayesian Multinomial Test"
 msgstr "Bayesscher Multinomial-Test"
@@ -448,9 +509,6 @@ msgstr "%1$s%% %2$s Intervall"
 
 msgid "Could not compute %s Intervals."
 msgstr "Konnte %s Intervalle nicht berechnen."
-
-msgid "Descriptives plot"
-msgstr "Deskriptives Diagramm"
 
 msgid "Observed Counts"
 msgstr "Beobachtete Häufigkeiten"
