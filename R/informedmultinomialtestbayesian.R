@@ -190,8 +190,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
       rowsList[[i + 2]] <- data.frame(
         model        = models[[i]][["name"]],
         marglik      = models[[i]]$model$logml[["logmlHr"]],
-        marglikError = models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
-        marglikPrec  = as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
+        marglikError = if(length(models[[i]]$model$bridge_output) == 0) NA else models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
+        marglikPrec  = if(length(models[[i]]$model$bridge_output) == 0) NA else as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
       )
     }
   }
