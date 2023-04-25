@@ -156,7 +156,12 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     return()
   else if (any(unlist(lapply(models, jaspBase::isTryError)))) {
     errors <- models[unlist(lapply(models, jaspBase::isTryError))]
-    summaryTable$setError(paste0("Error in ", errors[[1]][["name"]], ": ", errors[[1]][["model"]]))
+
+    if(any(grepl("checkFactorLevelsInOR", sapply(errors, function(e) e[["model"]]))))
+      summaryTable$setError(gettext("Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."))
+    else
+      summaryTable$setError(paste0("Error in ", errors[[1]][["name"]], ": ", errors[[1]][["model"]]))
+
     return()
   }
 
