@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-26 17:52+0000\n"
+"PO-Revision-Date: 2023-04-29 03:25+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pl/>\n"
@@ -68,7 +68,7 @@ msgstr "Bayesowska regresja log-liniowa"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
-msgstr ""
+msgstr "Sukcesy (Grupa 1)"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
@@ -76,7 +76,7 @@ msgstr "Wielkość próby Grupa 1"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr ""
+msgstr "Sukcesy (Grupa 2)"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
@@ -84,7 +84,7 @@ msgstr "Wielkość próby Grupa 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr ""
+msgstr "Norm. rozkład a priori dla log. ilorazu szans"
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
@@ -188,7 +188,7 @@ msgstr "Zmienne"
 
 msgctxt "BinomialTest|"
 msgid "Test value: "
-msgstr "Wartość testu: "
+msgstr "Wartość testowana: "
 
 msgctxt "BinomialTest|"
 msgid "Alt. Hypothesis"
@@ -196,15 +196,15 @@ msgstr "Hipoteza alt."
 
 msgctxt "BinomialTest|"
 msgid "≠ Test value"
-msgstr "≠ Wartość testu"
+msgstr "≠ Wartość testowana"
 
 msgctxt "BinomialTest|"
 msgid "> Test value"
-msgstr "> Wartość testu"
+msgstr "> Wartość testowana"
 
 msgctxt "BinomialTest|"
 msgid "< Test value"
-msgstr "< Wartość testu"
+msgstr "< Wartość testowana"
 
 msgctxt "BinomialTest|"
 msgid "Additional Statisics"
@@ -232,7 +232,7 @@ msgstr "Wykresy opisowe"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Test value: "
-msgstr "Wartość testu: "
+msgstr "Wartość testowana: "
 
 msgctxt "BinomialTestBayesian|"
 msgid "Alt. Hypothesis"
@@ -240,15 +240,15 @@ msgstr "Hipoteza alt."
 
 msgctxt "BinomialTestBayesian|"
 msgid "≠ Test value"
-msgstr "≠ Wartość testu"
+msgstr "≠ Wartość testowana"
 
 msgctxt "BinomialTestBayesian|"
 msgid "> Test value"
-msgstr "> Wartość testu"
+msgstr "> Wartość testowana"
 
 msgctxt "BinomialTestBayesian|"
 msgid "< Test value"
-msgstr "< Wartość testu"
+msgstr "< Wartość testowana"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Plots"
@@ -396,7 +396,7 @@ msgstr "Statystyki Cochrana i Mantela-Haenszela"
 
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr ""
+msgstr "Sprawdź równość wspólnego ilorazu szans"
 
 msgctxt "ContingencyTables|"
 msgid "Cells"
@@ -564,7 +564,7 @@ msgstr "Prior"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
-msgstr ""
+msgstr "Koncentracja"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cells"
@@ -620,7 +620,7 @@ msgstr "Liczebność oczekiwana"
 
 msgctxt "MultinomialTest|"
 msgid "Test Values"
-msgstr "Wartość testu"
+msgstr "Wartości testowane"
 
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
@@ -672,7 +672,7 @@ msgstr "Liczebność oczekiwana"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Test Values"
-msgstr "Wartość testu"
+msgstr "Wartości testowane"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
@@ -792,7 +792,7 @@ msgstr "modele"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr "Prawdop. a posteriori"
+msgstr "Prawd. a posteriori"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
@@ -804,7 +804,7 @@ msgstr "Składowe"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr ""
+msgstr "Składniki modelu"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
@@ -840,7 +840,7 @@ msgstr "Próbki"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Auto"
-msgstr ""
+msgstr "Automatycznie"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Manual"
@@ -928,19 +928,19 @@ msgstr "Niestandardowe proporcje oczekiwane"
 
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr "Test wielomianowy z informacją"
+msgstr "Informacyjny test wielomianowy"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr "Bayesowski test wielomianowy z informacją"
+msgstr "Informacyjny bayesowski test wielomianowy"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr "Wielokrotny test dwumianowy z informacją"
+msgstr "Informacyjny wielokrotny test dwumianowy"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr "Bayesowski wielokrotny test dwumianowy z informacją"
+msgstr "Informacyjny bayesowski wielokrotny test dwumianowy"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
@@ -948,7 +948,7 @@ msgstr "Czynnik"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Sukcesy"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
@@ -960,11 +960,11 @@ msgstr "Porównanie współczynników Bayesa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Model obejmujący"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr "Hipoteza zerowa"
+msgstr "Model zerowy"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
@@ -1008,7 +1008,7 @@ msgstr "Nie określono czynnika"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
-msgstr ""
+msgstr " "
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
@@ -1066,7 +1066,7 @@ msgstr "Iteracje (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Maksymalna liczba próbek (próbkowanie mostkowe)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
@@ -1082,11 +1082,11 @@ msgstr "Porównanie współczynników Bayesa"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Model obejmujący"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr "Hipoteza zerowa"
+msgstr "Model zerowy"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
