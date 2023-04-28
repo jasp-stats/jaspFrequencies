@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2023-04-22 03:28\n"
-"PO-Revision-Date: 2023-04-14 19:50+0000\n"
+"PO-Revision-Date: 2023-04-29 03:26+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesowski test A/B"
@@ -86,12 +86,12 @@ msgstr "P(%1$s | dane) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr ""
-"Nie można przetestować hipotezy wskazującej, że wartość testowa jest większa "
-"niż 1."
+"Nie można przetestować hipotezy wskazującej, że wartość testowana jest "
+"większa niż 1."
 
 msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr ""
-"Nie można przetestować hipotezy wskazującej, że wartość testowa jest "
+"Nie można przetestować hipotezy wskazującej, że wartość testowana jest "
 "mniejsza niż 0."
 
 msgid "Binomial Test"
@@ -152,7 +152,7 @@ msgid "Inferential Plots"
 msgstr "Wykresy inferencyjne"
 
 msgid "Population proportion"
-msgstr ""
+msgstr "Proporcja populacji"
 
 msgid "One or more Bayes factors cannot be computed"
 msgstr "Nie można obliczyć jednego lub więcej współczynników Bayesa"
@@ -174,6 +174,11 @@ msgid ""
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Maksymalna wartość <em>p</em> Vovka-Sellke'go : Na podstawie wartości "
+"<em>p</em>,\n"
+"      maksymalne możliwe szanse na korzyść H%1$s w stosunku do H%2$s wynoszą "
+"%3$s\n"
+"      (Sellke, Bayarri i Berger, 2001)."
 
 msgid "Log Odds Ratio"
 msgstr "Logarytm ilorazu szans"
@@ -336,10 +341,11 @@ msgid "Independent multinomial"
 msgstr "Niezależny wielomian"
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "Hipergeometryczny"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
 msgstr ""
+"Test hipergeometrycznych tabel krzyżowych jest ograniczony do tabel 2 x 2"
 
 msgid "Proportion test restricted to 2 x 2 tables"
 msgstr "Test proporcji ograniczony do tabel 2x2"
@@ -362,22 +368,23 @@ msgstr "V Cramera nie zostało jeszcze zaimplementowane dla tego modelu"
 msgid "Posterior"
 msgstr "Posterior"
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
 msgstr ""
-"Nieprawidłowe liczebności: zmienna może zawierać tylko wartości całkowite."
+"Nieprawidłowa liczba sukcesów: zmienna może zawierać tylko wartości "
+"całkowite."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
 msgstr ""
-"Nieprawidłowe liczebności: zmienna może zawierać tylko wartości całkowite."
+"Nieprawidłowa wielkość próby: zmienna może zawierać tylko wartości całkowite."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "Wielkość próby musi być większa niż liczba sukcesów."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"Czynnik musi zawierać unikalne poziomy, które reprezentują liczbę sukcesów "
+"względem rozmiaru próby."
 
 msgid "Observed counts"
 msgstr "Liczebności obserwowane"
@@ -386,51 +393,53 @@ msgid "Observed proportions"
 msgstr "Proporcje obserwowane"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Wielkość próby"
 
 msgid "Descriptives plot"
 msgstr "Wykresy opisowe"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Nieograniczony wykres a posteriori"
 
 msgid "Observed"
 msgstr "Obserwowane"
 
-#, fuzzy
 msgid "Estimated"
-msgstr "Oszacowanie"
+msgstr "Oszacowane"
 
-#, fuzzy
 msgid "Proportions"
-msgstr "Proporcja"
+msgstr "Proporcje"
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Bayesowska analiza ograniczeń kolejności %1$s"
 
 msgid "BF%s%s"
-msgstr ""
+msgstr "BF%s%s"
 
 msgid "Log(BF%s%s)"
-msgstr ""
+msgstr "Log(BF%s%s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log. prawd. brzegowe"
 
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
 msgid "Error %"
-msgstr ""
+msgstr "Błąd %"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"Model w każdym wierszu (oznaczony jako \"1\") jest porównywany z %1$s ("
+"oznaczonym jako \"0\")."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Określ informacyjne testy hipotez w sekcji \"Hipotezy z ograniczeniami "
+"kolejności\"."
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Wartości oczekiwane nie są obsługiwane bez wartości obserwowanych."
@@ -523,10 +532,10 @@ msgid "Deviance"
 msgstr "Odchylanie"
 
 msgid "Residual df"
-msgstr ""
+msgstr "DF reszt"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "Odchylenie reszt"
 
 msgid "Coefficients"
 msgstr "Współczynniki"
@@ -577,7 +586,7 @@ msgid "<em>Model formula:</em>"
 msgstr "<em>Formuła modelu:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>Prawdopodobieństwo modelu a posteriori =</em>"
 
 msgid "Model Comparison"
 msgstr "Porównanie modeli"
