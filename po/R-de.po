@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2023-04-22 03:28\n"
-"PO-Revision-Date: 2023-01-18 12:50+0000\n"
+"PO-Revision-Date: 2023-04-22 23:56+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/de/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.15.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesscher A/B-Test"
@@ -365,22 +365,21 @@ msgstr "Cramers V ist für dieses Modell noch nicht implementiert"
 msgid "Posterior"
 msgstr "Posterior"
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
-"Ungültige Häufigkeiten: Die Variable darf nur ganzzahlige Werte enthalten."
+msgstr "Ungültige Erfolge: Variable darf nur ganzzahlige Werte enthalten."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
 msgstr ""
-"Ungültige Häufigkeiten: Die Variable darf nur ganzzahlige Werte enthalten."
+"Ungültiger Stichprobenumfang: Variable darf nur ganzzahlige Werte enthalten."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "Der Stichprobenumfang muss größer sein als die Anzahl der Erfolge."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"Faktor muss eindeutige Stufen enthalten, die die Erfolge dem "
+"Stichprobenumfang zuordnen."
 
 msgid "Observed counts"
 msgstr "Beobachtete Anzahlen"
@@ -389,51 +388,56 @@ msgid "Observed proportions"
 msgstr "Beobachgtete Anteile"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Stichprobenumfang"
 
 msgid "Descriptives plot"
 msgstr "Deskriptives Diagramm"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Diagramm Unbeschränkter Posterior"
 
 msgid "Observed"
 msgstr "Beobachtet"
 
-#, fuzzy
 msgid "Estimated"
 msgstr "Schätzung"
 
 #, fuzzy
 msgid "Proportions"
-msgstr "Anteil"
+msgstr "Anteile"
 
+#, fuzzy
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Bayessche Auswertung von %1$s Reihenfolgebeschränkungen"
 
 msgid "BF%s%s"
-msgstr ""
+msgstr "BF%s%s"
 
 msgid "Log(BF%s%s)"
-msgstr ""
+msgstr "Log(BF%s%s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log Marg-Lik"
 
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 msgid "Error %"
-msgstr ""
+msgstr "Fehler %"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"Modell in jeder Zeile (bezeichnet als '1') wird verglichen mit dem %1$s ("
+"bezeichnet als 0)."
 
+#, fuzzy
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Spezifizieren Sie informierte Hypothesentests im Abschnitt 'Eingeschränkte "
+"Hypothesen ordnen'."
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Keine erwarteten Häufigkeiten ohne beobachtete Häufigkeiten."
