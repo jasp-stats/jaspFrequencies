@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-22 23:56+0000\n"
-"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
-"jaspfrequencies-qml/de/>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Language: de\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -1011,10 +1005,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Kein Faktor spezifiziert"
 
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""
-
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
@@ -1077,29 +1067,34 @@ msgctxt "InformedMultinomialTestBayesian|"
 msgid "Counts"
 msgstr ""
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayesfaktor-Vergleich"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
 msgstr ""
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Null"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabelle"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Diagramm"
 
 #, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
@@ -1180,4 +1175,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
 msgstr ""

@@ -1015,10 +1015,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Tidak ada faktor yang ditentukan"
 
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""
-
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
@@ -1186,4 +1182,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
 msgstr ""

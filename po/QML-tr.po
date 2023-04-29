@@ -1011,10 +1011,6 @@ msgid "No factor specified"
 msgstr ""
 
 msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""
-
-msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
 msgstr ""
 
@@ -1171,4 +1167,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
 msgstr ""

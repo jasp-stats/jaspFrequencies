@@ -1023,10 +1023,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "無可設定之因子"
 
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""
-
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
@@ -1194,4 +1190,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
 msgstr ""

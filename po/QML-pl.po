@@ -1034,7 +1034,8 @@ msgstr ""
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr "Kliknij, aby dowiedzieć się więcej o składni dla ograniczeń kolejności."
+msgstr ""
+"Kliknij, aby dowiedzieć się więcej o składni dla ograniczeń kolejności."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
@@ -1148,7 +1149,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr "Kliknij, aby dowiedzieć się więcej o składni dla ograniczeń kolejności."
+msgstr ""
+"Kliknij, aby dowiedzieć się więcej o składni dla ograniczeń kolejności."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
