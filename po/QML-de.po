@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-22 23:56+0000\n"
+"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: de\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -922,36 +928,35 @@ msgstr "Benutzerdefinierte erwartete Anteile"
 
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr ""
+msgstr "Informierter Multinomial-Test"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr ""
+msgstr "Informierter Bayesscher Multinomial-Test"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr ""
+msgstr "Informierter Multi-Binomial-Test"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr ""
+msgstr "Informierter Bayesscher Multi-Binomial-Test"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
 msgstr "Faktor"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Erfolge"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
-msgstr ""
+msgstr "Stichprobenumfang"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayesfaktor-Vergleich"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
@@ -959,28 +964,29 @@ msgstr ""
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Null"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabelle"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Diagramm"
 
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Display"
 msgstr "Anzeigen"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Häufigkeiten"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"

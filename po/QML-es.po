@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-22 23:56+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: es\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -651,7 +657,7 @@ msgstr "Gráficos"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
-msgstr "Gráfico descriptivo"
+msgstr "Gráfico de descriptivos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
@@ -699,7 +705,7 @@ msgstr "Gráficos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
-msgstr "Gráfico descriptivo"
+msgstr "Gráfico de descriptivos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
@@ -923,103 +929,95 @@ msgstr "Personalizar las proporciones esperadas"
 
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr ""
+msgstr "Contraste Multinomial Informado"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr ""
+msgstr "Contraste Multinomial Bayesiano Informado"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr ""
+msgstr "Contraste Multi-Binomial Informado"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr ""
+msgstr "Contraste Multi-Binomial Bayesiano Informado"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
 msgstr "Factor"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Aciertos"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
-msgstr ""
+msgstr "Tamaño de la Muestra"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Comparación del Factor de Bayes"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Abarcamiento"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulo"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabla"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Gráfico"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Display"
 msgstr "Mostrar"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
 msgstr "Recuentos"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"
 msgstr "Proporciones"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Gráfica posterior"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Intervalo de credibilidad"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior"
 msgstr "Previo"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Ningún factor especificado"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
-msgstr ""
+msgstr "  "
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
 msgstr "Nivel #"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Hipótesis de Restricciones de Orden"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
@@ -1029,113 +1027,112 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Introduce cada restricción de hipótesis en una nueva línea,\n"
+"p.e. Bajo <= Medio <= Alto\n"
+"donde 'Bajo'/'Medio'/'Alto' son los nombres del nivel del factor.\n"
+"Haga click en el icono 'más' para añadir más hipótesis. \n"
+"Haga click en el icono de información para obtener más ejemplos."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
 msgstr ""
+"Hacer click para saber más sobre la sintaxis para las restricciones de orden."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Modelo 1"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ctrl + Intro para aplicar. Haga click en el botón azul de arriba para "
+"obtener ayuda sobre la sintaxis de las restricciones"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Avanzado"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Configuraciones de la estimación"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Calentamiento (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iteraciones (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Muestras máximas (muestreo puente)"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
 msgstr "Factor"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Counts"
 msgstr "Recuentos"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Comparación del Factor de Bayes"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Abarcamiento"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulo"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabla"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Gráfico"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Display"
 msgstr "Mostrar"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Proportions"
 msgstr "Proporciones"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Gráfica posterior"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Intervalo de credibilidad"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior"
 msgstr "Previo"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Ningún factor especificado"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Level #"
 msgstr "Nivel #"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Hipótesis de Restricciones de Orden"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
@@ -1145,38 +1142,45 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Introduce cada restricción de hipótesis en una nueva línea,\n"
+"p.e. Bajo <= Medio <= Alto\n"
+"donde 'Bajo'/'Medio'/'Alto' son los nombres del nivel del factor.\n"
+"Haga click en el icono 'más' para añadir más hipótesis. \n"
+"Haga click en el icono de información para obtener más ejemplos."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
 msgstr ""
+"Hacer click para saber más sobre la sintaxis para las restricciones de orden."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Modelo 1"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ctrl + Intro para aplicar. Haga click en el botón azul de arriba para "
+"obtener ayuda sobre la sintaxis de las restricciones"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Avanzado"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Configuraciones de la estimación"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Calentamiento (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iteraciones (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Muestras máximas (muestreo puente)"
