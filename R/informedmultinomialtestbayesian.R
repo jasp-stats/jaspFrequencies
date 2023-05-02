@@ -156,7 +156,12 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     return()
   else if (any(unlist(lapply(models, jaspBase::isTryError)))) {
     errors <- models[unlist(lapply(models, jaspBase::isTryError))]
-    summaryTable$setError(paste0("Error in ", errors[[1]][["name"]], ": ", errors[[1]][["model"]]))
+
+    if(any(grepl("checkFactorLevelsInOR", sapply(errors, function(e) e[["model"]]))))
+      summaryTable$setError(gettext("Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."))
+    else
+      summaryTable$setError(paste0("Error in ", errors[[1]][["name"]], ": ", errors[[1]][["model"]]))
+
     return()
   }
 
@@ -190,8 +195,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
       rowsList[[i + 2]] <- data.frame(
         model        = models[[i]][["name"]],
         marglik      = models[[i]]$model$logml[["logmlHr"]],
-        marglikError = models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
-        marglikPrec  = as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
+        marglikError = if(length(models[[i]]$model$bridge_output) == 0) NA else models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
+        marglikPrec  = if(length(models[[i]]$model$bridge_output) == 0) NA else as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
       )
     }
   }
