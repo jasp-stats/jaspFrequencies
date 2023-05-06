@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.2\n"
-"POT-Creation-Date: 2023-04-22 03:28\n"
+"POT-Creation-Date: 2023-05-06 03:27\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -377,6 +377,9 @@ msgid "Error"
 msgstr ""
 
 msgid "Error %"
+msgstr ""
+
+msgid "Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."
 msgstr ""
 
 msgid "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."

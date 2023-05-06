@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2023-04-22 03:28\n"
+"POT-Creation-Date: 2023-05-06 03:27\n"
 "PO-Revision-Date: 2023-05-05 21:50+0000\n"
 "Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
@@ -397,6 +397,11 @@ msgid "Error"
 msgstr ""
 
 msgid "Error %"
+msgstr ""
+
+msgid ""
+"Please double check if the factor level names in the 'Order Restricted "
+"Hypotheses' section match the factor levels in your data set."
 msgstr ""
 
 msgid ""

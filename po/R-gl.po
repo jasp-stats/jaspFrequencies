@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-04-22 03:28\n"
+"POT-Creation-Date: 2023-05-06 03:27\n"
 "PO-Revision-Date: 2023-04-22 23:57+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -428,6 +428,11 @@ msgstr "Fallo"
 
 msgid "Error %"
 msgstr "Fallo %"
+
+msgid ""
+"Please double check if the factor level names in the 'Order Restricted "
+"Hypotheses' section match the factor levels in your data set."
+msgstr ""
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
