@@ -1007,10 +1007,6 @@ msgid "No factor specified"
 msgstr "Non se especificou o factor"
 
 msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr "  "
-
-msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
 msgstr "Nivel #"
 
