@@ -180,7 +180,7 @@ Form
 			minimum				: 1
 			showAddButton		: false
 			showDeleteButton	: false
-			colHeader			: qsTr("")
+			colHeader			: ""
 			cornerText			: qsTr("Level #")
 			itemType			: JASP.Integer
 
