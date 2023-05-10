@@ -1179,7 +1179,3 @@ msgstr "Iterationen (MCMC)"
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
 msgstr "Maximum Samples (Bridgesampling)"
-
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""

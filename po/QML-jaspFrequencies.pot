@@ -1154,7 +1154,3 @@ msgstr ""
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
 msgstr ""
-
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
-msgstr ""

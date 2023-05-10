@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-05-09 13:24+0000\n"
-"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
-"jaspfrequencies-qml/fr/>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
@@ -261,9 +255,10 @@ msgctxt "BinomialTestBayesian|"
 msgid "Plots"
 msgstr "Diagramme"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Prior et postérieur"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Additional info"
@@ -281,9 +276,10 @@ msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Intervalle de crédibilité"
 
+#, fuzzy
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter a"
@@ -581,9 +577,10 @@ msgctxt "ContingencyTablesBayesian|"
 msgid "Additional info"
 msgstr "Information additionnelle"
 
+#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
@@ -730,9 +727,10 @@ msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
 msgstr "Graphique descriptif"
 
+#, fuzzy
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
@@ -794,9 +792,10 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "Factors"
 msgstr "Facteurs"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
@@ -1019,9 +1018,10 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Intervalle de crédibilité"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
@@ -1134,9 +1134,10 @@ msgctxt "InformedMultinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Intervalle de crédibilité"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 #, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
@@ -1194,8 +1195,4 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
-
-msgctxt "InformedBinomialTestBayesian|"
-msgid ""
 msgstr ""
