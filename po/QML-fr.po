@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-05-09 13:24+0000\n"
+"Last-Translator: Josée Turcotte <jturcotte@laurentienne.ca>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: fr\n"
 "X-Qt-Contexts: true\n"
 
@@ -79,9 +85,10 @@ msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
 msgstr "Groupe 2 Taille de l'échantillon"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr ""
+msgstr "Distribution normale prior pour le rapport de cotes logarithmique"
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
@@ -101,25 +108,23 @@ msgstr "Diagramme"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Prior et postérieur"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Analyse séquentielle"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Prior"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Vérification de la robustesse du facteur de Bayes"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Order"
-msgstr "Commande"
+msgstr "Ordre"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
@@ -137,25 +142,21 @@ msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
 msgstr ""
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr "Ratio de probabilité Log = 0"
+msgstr "Log odds ratio = 0"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr "Ratio de probabilité Log > 0"
+msgstr "Log odds ratio > 0"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr "Ratio de probabilité Log < 0"
+msgstr "Log odds ratio < 0"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr "Ratio de probabilité Log ≠ 0"
+msgstr "Log odds ratio ≠ 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
