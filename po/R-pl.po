@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2023-05-06 03:27\n"
-"PO-Revision-Date: 2023-05-09 15:49+0000\n"
+"PO-Revision-Date: 2023-05-12 15:49+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pl/>\n"
@@ -24,7 +24,7 @@ msgid "P(M)"
 msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr "P(M|data)"
+msgstr "P(M|dane)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -49,7 +49,7 @@ msgid "Descriptives"
 msgstr "Statystyki opisowe"
 
 msgid "Counts"
-msgstr "Liczebność"
+msgstr "Liczebności"
 
 msgid "Total"
 msgstr "Całość"
@@ -110,7 +110,7 @@ msgid "VS-MPR"
 msgstr "VS-MPR"
 
 msgid "Lower"
-msgstr "Dolny"
+msgstr "Dolna granica"
 
 msgid "%s%% CI for Proportion"
 msgstr "%s%% PU dla proporcji"
@@ -220,7 +220,7 @@ msgid "df"
 msgstr "df"
 
 msgid "Expected count"
-msgstr "Liczebność oczekiwana"
+msgstr "Liczebności oczekiwane"
 
 msgid "%% within row"
 msgstr "%% w wierszu"
@@ -241,7 +241,7 @@ msgid "Standardized residuals"
 msgstr "Reszty standaryzowane"
 
 msgid "Contingency coefficient"
-msgstr "Współczynnik kontyngencji (C)"
+msgstr "Współczynnik kontyngencji"
 
 msgid "Phi-coefficient"
 msgstr "Współczynnik Phi"
@@ -281,7 +281,7 @@ msgstr ""
 "%2$s <em>%3$s</em>."
 
 msgid "Count"
-msgstr "Liczebność"
+msgstr "Liczebności"
 
 msgid "N"
 msgstr "N"
@@ -612,7 +612,7 @@ msgid "Posterior Summary Statistics"
 msgstr "Statystyki podsumowujące a posteriori"
 
 msgid "P(incl|data)"
-msgstr "P(incl|data)"
+msgstr "P(incl|dane)"
 
 msgid "Mean"
 msgstr "Średnia"
