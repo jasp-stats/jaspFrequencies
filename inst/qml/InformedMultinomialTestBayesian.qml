@@ -149,13 +149,38 @@ Form
 			}
 		}
 
+		CheckBox
+		{
+			name:	"sequentialAnalysisPlot";
+			label:	qsTr("Sequential analysis plot")
+
+			RadioButtonGroup
+			{
+				name	: "sequentialAnalysisPlotType"
+				title	: qsTr("Display")
+
+				RadioButton
+				{
+					value:		"bayesFactor"
+					label:		qsTr("Bayes factors")
+					checked:	true
+				}
+
+				RadioButton
+				{
+					value:		"posteriorProbability"
+					label:		qsTr("Posterior probability")
+				}
+			}
+		}
+
 
 	}
 
 	ExpanderButton
 	{
-		title	: qsTr("Prior")
-
+		title	: qsTr("Prior Distribution")
+		
 		Text
 		{
 			visible: factors.count == 0
@@ -175,6 +200,34 @@ Form
 			colHeader			: qsTr("Counts")
 			cornerText			: qsTr("Level #")
 			itemType			: JASP.Integer
+		}
+	}
+
+	ExpanderButton
+	{
+		title	: qsTr("Prior Model Probability")
+
+		Chi2TestTableView
+		{
+			name:					"priorModelProbability"
+			id:						priorModelProbability
+			initialColumnCount: 	1
+			property var alwaysAvailable:
+			[
+				{ label:	"Encompassing",		value: "encompassing"},
+				{ label:	"Null",				value: "null"}
+			]
+
+			source:	[models, {values: priorModelProbability.alwaysAvailable}]
+
+			minimum				: 1
+			showAddButton		: false
+			showDeleteButton	: false
+			colHeader			: ""
+			cornerText			: qsTr("Model")
+			itemType			: JASP.Double
+
+			function getColHeaderText(headerText, colIndex) { return "Prior weight"}
 		}
 	}
 
