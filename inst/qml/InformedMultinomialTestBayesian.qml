@@ -207,7 +207,7 @@ Form
 	{
 		title	: qsTr("Prior Model Probability")
 
-		Chi2TestTableView
+		SimpleTableView
 		{
 			name:					"priorModelProbability"
 			id:						priorModelProbability
@@ -218,12 +218,13 @@ Form
 				{ label:	"Null",				value: "null"}
 			]
 
-			source:	[models, {values: priorModelProbability.alwaysAvailable}]
+			source:	[{values: priorModelProbability.alwaysAvailable}, models]
 
 			minimum				: 1
 			showAddButton		: false
 			showDeleteButton	: false
-			colHeader			: ""
+			buttonResetEnabled:	true
+			//colHeader			: ""
 			cornerText			: qsTr("Model")
 			itemType			: JASP.Double
 
@@ -316,6 +317,20 @@ Form
 			}
 		}
 
-		SetSeed { }
+		Group
+		{
+
+			SetSeed { }
+
+			IntegerField
+			{
+				label: 			qsTr("Sequential analysis: number of steps")
+				name: 			"sequentialAnalysisNumberOfSteps"
+				defaultValue: 	10
+				min:			0
+				fieldWidth: 	50
+			}
+
+		}
 	}
 }
