@@ -21,8 +21,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   .multinomCheckErrors(dataset, options)
   dataset <- .multinomAggregateData(dataset, options)
 
-  saveRDS(options, file = "C:/JASP/options.RDS")
-  saveRDS(dataset, file = "C:/JASP/dataset.RDS")
+  #saveRDS(options, file = "C:/JASP/options.RDS")
+  #saveRDS(dataset, file = "C:/JASP/dataset.RDS")
 
   .computeInformedMultResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
