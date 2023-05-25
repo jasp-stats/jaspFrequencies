@@ -19,10 +19,11 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   dataset <- .multinomReadData(dataset, options)
   .multinomCheckErrors(dataset, options)
+  options <- .informedBayesParsePriorModelProbability(options)
   dataset <- .multinomAggregateData(dataset, options)
 
-  saveRDS(options, file = "C:/JASP/options.RDS")
-  saveRDS(dataset, file = "C:/JASP/dataset.RDS")
+  # saveRDS(options, file = "C:/JASP/options.RDS")
+  # saveRDS(dataset, file = "C:/JASP/dataset.RDS")
 
   .computeInformedMultResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
@@ -45,7 +46,39 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 .informedMultDependency <- c("factor", "count", "priorCounts", "models", "syntax",
                                     "bridgeSamples", "mcmcBurnin", "mcmcSamples", "setSeed", "seed")
 
-.multinomAggregateData                    <- function(dataset, options){
+.informedBayesParsePriorModelProbability  <- function(options) {
+
+  # prepare output holder
+  options[["priorModelProbability"]][[1]][["valuesParsed"]] <- rep(NA, length(options[["priorModelProbability"]][[1]][["levels"]]))
+
+  # parse the settings
+  for(i in seq_along(options[["priorModelProbability"]][[1]][["levels"]])){
+
+    tempVal <- eval(parse(text = options[["priorModelProbability"]][[1]][["values"]][i]))
+
+    # check the input is valid
+    if(is.numeric(tempVal) && length(tempVal) == 1 && tempVal > 0)
+      options[["priorModelProbability"]][[1]][["valuesParsed"]][i] <- tempVal
+    else
+      .quitAnalysis(gettextf(
+        "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be parsed into a positive number. Please, check the input.",
+        options[["priorModelProbability"]][[1]][["levels"]][i],
+        options[["priorModelProbability"]][[1]][["values"]][i]
+      ))
+  }
+  return(options)
+}
+.informedBayesNumberOfModels              <- function(jaspResults, options) {
+
+  models <- jaspResults[["models"]]$object
+
+  if(length(models) == 1){
+    return(options[["includeNullModel"]] + options[["includeEncompassingModel"]])
+  }else{
+    return(options[["includeNullModel"]] + options[["includeEncompassingModel"]] + sum(sapply(2:length(models), function(m) !is.null(models[[m]][["model"]]))))
+  }
+}
+.multinomAggregateData                    <- function(dataset, options) {
 
   if (length(dataset[[options[["factor"]]]]) != length(levels(dataset[[options[["factor"]]]]))) {
 
@@ -273,7 +306,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     binomial    = gettext("binomial")
   )))
   summaryTable$position <- 1
-  summaryTable$dependOn(c(.informedDependencies(type), "bayesFactorType", "bfComparison", "bfVsHypothesis", "priorModelProbability"))
+  summaryTable$dependOn(c(.informedDependencies(type), "bayesFactorType", "bfComparison", "bfVsHypothesis", "priorModelProbability", "includeNullModel", "includeEncompassingModel"))
 
   if (options$bayesFactorType == "BF10")
     bfTitle <- gettextf("BF%s%s", "\u2081", "\u2080")
@@ -293,7 +326,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   jaspResults[["summaryTable"]] <- summaryTable
 
-  if (is.null(models))
+  if (is.null(models) || .informedBayesNumberOfModels(jaspResults, options) == 0)
     return()
   else if (any(unlist(lapply(models, jaspBase::isTryError)))) {
     errors <- models[unlist(lapply(models, jaspBase::isTryError))]
@@ -316,28 +349,30 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     # extract marginal likelihood for the null and encompassing models from the first fit object
     # (and check that they match on all subsequent ones)
     if (i == 1) {
-      rowsList[[1]] <- data.frame(
-        model         = "Null",
-        marglik       = models[[i]]$model$logml[["logmlH0"]],
-        marglikError  = NA,
-        marglikPrec   = NA
-      )
-      rowsList[[2]] <- data.frame(
-        model         = "Encompassing",
-        marglik       = models[[i]]$model$logml[["logmlHe"]],
-        marglikError  = NA,
-        marglikPrec   = NA
-      )
-    } else if (!all.equal(rowsList[[1]][["marglik"]], models[[i]]$model$logml[["logmlH0"]]) ||
-               !all.equal(rowsList[[2]][["marglik"]], models[[i]]$model$logml[["logmlHe"]])) {
-      stop("Marginal likelihoods of different models do not match.")
+      if (options[["includeNullModel"]])
+        rowsList[[length(rowsList) + 1]] <- data.frame(
+          model         = "Null",
+          marglik       = models[[i]]$model$logml[["logmlH0"]],
+          marglikError  = NA,
+          marglikPrec   = NA,
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Null"]
+        )
+      if (options[["includeEncompassingModel"]])
+        rowsList[[length(rowsList) + 1]] <- data.frame(
+          model         = "Encompassing",
+          marglik       = models[[i]]$model$logml[["logmlHe"]],
+          marglikError  = NA,
+          marglikPrec   = NA,
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Encompassing"]
+        )
     } else {
       # add the alternative hypotheses
-      rowsList[[i + 2]] <- data.frame(
+      rowsList[[length(rowsList) + 1]] <- data.frame(
         model        = models[[i]][["name"]],
         marglik      = models[[i]]$model$logml[["logmlHr"]],
         marglikError = if(length(models[[i]]$model$bridge_output) == 0) NA else models[[i]]$model$bridge_output[[1]]$post$error_measures$re2,
-        marglikPrec  = if(length(models[[i]]$model$bridge_output) == 0) NA else as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE))
+        marglikPrec  = if(length(models[[i]]$model$bridge_output) == 0) NA else as.numeric(gsub("%", "", models[[i]]$model$bridge_output[[1]]$post$error_measures$percentage, fixed = TRUE)),
+        priorProb    = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == models[[i]][["name"]]]
       )
     }
   }
@@ -345,7 +380,6 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   rowsFrame <- do.call(rbind, rowsList)
 
   # compute posterior probabilities
-  rowsFrame$priorProb <- options[["priorModelProbability"]][[1]][["values"]][options[["priorModelProbability"]][[1]][["levels"]] %in% rowsFrame$model]
   rowsFrame$priorProb <- rowsFrame$priorProb / sum(rowsFrame$priorProb)
   rowsFrame$postProb  <- bridgesampling::post_prob(rowsFrame$marglik, prior_prob = rowsFrame$priorProb)
 
@@ -502,12 +536,29 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   .computeInformedMultSequentialResults(jaspResults, dataset, options)
   sequentialAnalysisResults <- jaspResults[["sequentialAnalysisResults"]]$object
 
+  # create an empty plot in case the selection is restricted
+  if (is.null(jaspResults[["models"]]$object) || .informedBayesNumberOfModels(jaspResults, options) < 2) {
+    tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+    tempPlot$dependOn(c(".informedMultDependency", "includeNullModel", "includeEncompassingModel"))
+    tempPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+    tempPlot$setError(gettext("At least two models need to be specified."))
+    return()
+  }
+
+  # remove unused hypotheses
+  if (!options[["includeNullModel"]])
+    sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Null",]
+  if (!options[["includeEncompassingModel"]])
+    sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Encompassing",]
+
   if (options[["sequentialAnalysisPlotType"]] == "bayesFactor") {
 
     # create plot container
     sequentialAnalysisPlot <- createJaspContainer(gettext("Sequential analysis"))
     sequentialAnalysisPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
-                                      "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "sequentialAnalysisNumberOfSteps"))
+                                      "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "sequentialAnalysisNumberOfSteps",
+                                      "includeNullModel", "includeEncompassingModel"))
     sequentialAnalysisPlot$position <- 5
     jaspResults[["sequentialAnalysisPlot"]] <- sequentialAnalysisPlot
 
@@ -552,7 +603,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   } else if(options[["sequentialAnalysisPlotType"]] == "posteriorProbability") {
 
     # compute posterior probabilities
-    priorProb <- options[["priorModelProbability"]][[1]][["values"]][options[["priorModelProbability"]][[1]][["levels"]] %in% unique(sequentialAnalysisResults$model)]
+    priorProb <- options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] %in% unique(sequentialAnalysisResults$model)]
     priorProb <- priorProb / sum(priorProb)
     postProb  <- do.call(rbind, lapply(unique(sequentialAnalysisResults$step), function(step) {
 
@@ -577,7 +628,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     # create plot
     tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
     tempPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
-                                      "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps"))
+                        "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps",
+                        "includeNullModel", "includeEncompassingModel"))
     tempPlot$position <- 5
     jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
     tempPlot$plotObject <- .createInformedMultPlotSequentialProb(postProb)
