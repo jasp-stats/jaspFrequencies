@@ -138,7 +138,7 @@ Form
 			title: qsTr("Residuals")
 			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized")	}
 			CheckBox { name: "residualsPearson";		label: qsTr("Pearson")			}
-			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized")		}
+			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized (adjusted Pearson)")		}
 		}
 
 		Group
