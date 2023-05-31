@@ -22,8 +22,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   options <- .informedBayesParsePriorModelProbability(options)
   dataset <- .multinomAggregateData(dataset, options)
 
-  # saveRDS(options, file = "C:/JASP/options.RDS")
-  # saveRDS(dataset, file = "C:/JASP/dataset.RDS")
+  saveRDS(options, file = "C:/JASP/options.RDS")
+  saveRDS(dataset, file = "C:/JASP/dataset.RDS")
 
   .computeInformedMultResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "multinomial")
@@ -383,15 +383,8 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   rowsFrame$priorProb <- rowsFrame$priorProb / sum(rowsFrame$priorProb)
   rowsFrame$postProb  <- bridgesampling::post_prob(rowsFrame$marglik, prior_prob = rowsFrame$priorProb)
 
-  # extract the Bayes factor comparison
-  if (options[["bfComparison"]]== "encompassing")
-    bfComparison <- "Encompassing"
-  else if (options[["bfComparison"]]== "null")
-    bfComparison <- "Null"
-  else if (options[["bfVsHypothesis"]] %in% rowsFrame$model)
-    bfComparison <- options[["bfVsHypothesis"]]
-  else
-    bfComparison <- "Encompassing"
+  # extract the Bayes factor comparison (select comparison that's specified AND not ommitted)
+  bfComparison    <- .selectAvailableBfComparison(options, rowsFrame$model)
 
   # compute Bayes factors
   rowsFrame$bfInclusion <- (rowsFrame$postProb / (1-rowsFrame$postProb)) / (rowsFrame$priorProb / (1 - rowsFrame$priorProb))
@@ -564,14 +557,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
     # extract BF type and Bayes factor comparison
     bfTypeIgnoreLog <- if (options[["bayesFactorType"]] == "BF01") "BF01" else "BF10"
-    if (options[["bfComparison"]]== "encompassing")
-      bfComparison <- "Encompassing"
-    else if (options[["bfComparison"]]== "null")
-      bfComparison <- "Null"
-    else if (options[["bfVsHypothesis"]] %in% unique(sequentialAnalysisResults$model))
-      bfComparison <- options[["bfVsHypothesis"]]
-    else
-      bfComparison <- "Encompassing"
+    bfComparison    <- .selectAvailableBfComparison(options, unique(sequentialAnalysisResults$model))
 
     for (hypothesis in unique(sequentialAnalysisResults$model)) {
 
@@ -765,4 +751,18 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     "binomial"    = .informedBinDependency,
     "multinomial" = .informedMultDependency
   ))
+}
+.selectAvailableBfComparison              <- function(options, models){
+
+  # extract the Bayes factor comparison (select comparison that's specified AND not ommitted)
+  if (options[["bfComparison"]] == "encompassing" && "Encompassing" %in% models)
+    bfComparison <- "Encompassing"
+  else if (options[["bfComparison"]] == "null" && "Null" %in% models)
+    bfComparison <- "Null"
+  else if (options[["bfVsHypothesis"]] %in% models)
+    bfComparison <- options[["bfVsHypothesis"]]
+  else
+    bfComparison <- models[1]
+
+  return(bfComparison)
 }
