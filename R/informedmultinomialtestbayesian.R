@@ -532,7 +532,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   # create an empty plot in case the selection is restricted
   if (is.null(jaspResults[["models"]]$object) || .informedBayesNumberOfModels(jaspResults, options) < 2) {
     tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
-    tempPlot$dependOn(c(".informedMultDependency", "includeNullModel", "includeEncompassingModel"))
+    tempPlot$dependOn(c(.informedMultDependency, "includeNullModel", "includeEncompassingModel"))
     tempPlot$position <- 5
     jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
     tempPlot$setError(gettext("At least two models need to be specified."))
