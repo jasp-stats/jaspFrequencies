@@ -7,7 +7,7 @@ Description
 	title		: qsTr("Frequencies")
 	description	: qsTr("Analyses for count data")
 	icon		: "analysis-classical-crosstabs.svg"
-	version			: "0.18.0"
+	version			: "0.18.1"
 	author		: "JASP Team"
 	maintainer	: "JASP Team <info@jasp-stats.org>"
 	website		: "jasp-stats.org"
