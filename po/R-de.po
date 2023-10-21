@@ -410,11 +410,11 @@ msgstr "Anteile"
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Bayessche Auswertung von %1$s Reihenfolgebeschränkungen"
 
-msgid "BF%s%s"
-msgstr "BF%s%s"
+msgid "BF%1$s%2$s"
+msgstr "BF%1$s%2$s"
 
-msgid "Log(BF%s%s)"
-msgstr "Log(BF%s%s)"
+msgid "Log(BF%1$s%2$s)"
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
 msgstr "Log Marg-Lik"

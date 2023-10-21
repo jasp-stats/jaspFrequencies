@@ -411,10 +411,10 @@ msgstr "Proportions"
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
 
-msgid "BF%s%s"
+msgid "BF%1$s%2$s"
 msgstr "FB%s%s"
 
-msgid "Log(BF%s%s)"
+msgid "Log(BF%1$s%2$s)"
 msgstr "Log(FB%s%s)"
 
 msgid "Log marglik"
