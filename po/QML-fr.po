@@ -29,7 +29,7 @@ msgstr "Test Multinomial"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
-msgstr "Tableaux de contingence"
+msgstr "Tables de contingence"
 
 msgctxt "Description|"
 msgid "Log-Linear Regression"
@@ -466,10 +466,6 @@ msgstr "Résidus"
 msgctxt "ContingencyTables|"
 msgid "Unstandardized"
 msgstr "Non standardisé"
-
-msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "Standardisé"
 
 msgctxt "ContingencyTables|"
 msgid "Options"
@@ -1195,4 +1191,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
 msgstr ""

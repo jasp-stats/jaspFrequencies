@@ -306,11 +306,11 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   summaryTable$dependOn(c(.informedDependencies(type), "bayesFactorType", "bfComparison", "bfVsHypothesis", "priorModelProbability", "includeNullModel", "includeEncompassingModel"))
 
   if (options$bayesFactorType == "BF10")
-    bfTitle <- gettextf("BF%s%s", "\u2081", "\u2080")
+    bfTitle <- gettextf("BF%1$s%2$s", "\u2081", "\u2080")
   else if (options$bayesFactorType == "BF01")
-    bfTitle <- gettextf("BF%s%s", "\u2080", "\u2081")
+    bfTitle <- gettextf("BF%1$s%2$s", "\u2080", "\u2081")
   else
-    bfTitle <- gettextf("Log(BF%s%s)", "\u2081", "\u2080")
+    bfTitle <- gettextf("Log(BF%1$s%2$s)", "\u2081", "\u2080")
 
   summaryTable$addColumnInfo(name = "model",         title = "",                        type = "string")
   summaryTable$addColumnInfo(name = "marglik",       title = gettext("Log marglik"),    type = "number")

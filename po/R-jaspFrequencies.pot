@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspFrequencies 0.17.2\n"
-"POT-Creation-Date: 2023-05-06 03:27\n"
+"Project-Id-Version: jaspFrequencies 0.18.1\n"
+"POT-Creation-Date: 2023-09-30 03:28\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -364,10 +364,10 @@ msgstr ""
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
 
-msgid "BF%s%s"
+msgid "BF%1$s%2$s"
 msgstr ""
 
-msgid "Log(BF%s%s)"
+msgid "Log(BF%1$s%2$s)"
 msgstr ""
 
 msgid "Log marglik"

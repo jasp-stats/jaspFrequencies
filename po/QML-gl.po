@@ -470,7 +470,7 @@ msgstr "Valor a probar: "
 
 msgctxt "BinomialTest|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese alternativa"
 
 msgctxt "BinomialTest|"
 msgid "≠ Test value"
@@ -506,7 +506,7 @@ msgstr "Gráficas descritivas"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese alternativa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "≠ Test value"
@@ -633,10 +633,6 @@ msgid "Unstandardized"
 msgstr "Non tipificado"
 
 msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "Tipificado"
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr "Opcións"
 
@@ -678,7 +674,7 @@ msgstr "Intervalo de credibilidade do"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese alternativa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
@@ -1171,3 +1167,7 @@ msgstr "Iteracións (MCMC)"
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
 msgstr "Mostras máximas (mostraxe ponte)"
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
+msgstr "Tipificado (axustado por Pearson)"

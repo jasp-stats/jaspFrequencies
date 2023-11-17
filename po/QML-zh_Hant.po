@@ -455,10 +455,6 @@ msgid "Pearson"
 msgstr "皮爾森"
 
 msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "標準化"
-
-msgctxt "ContingencyTables|"
 msgid "Percentages"
 msgstr "百分比"
 
@@ -1190,4 +1186,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
 msgstr ""

@@ -94,7 +94,7 @@ msgstr "Deskriptive Statistik"
 
 msgctxt "ABTestBayesian|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
@@ -218,11 +218,11 @@ msgstr "Vovk-Sellke-Maximum-p-Quotient"
 
 msgctxt "BinomialTest|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "BinomialTest|"
 msgid "Descriptive plots"
-msgstr "Deskriptive Abbildungen"
+msgstr "Deskriptive Diagramme"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Test value: "
@@ -246,7 +246,7 @@ msgstr "< Testwert"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior and posterior"
@@ -262,7 +262,7 @@ msgstr "Sequentielle Analyse"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Descriptive plots"
-msgstr "Deskriptive Abbildungen"
+msgstr "Deskriptive Diagramme"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
@@ -445,10 +445,6 @@ msgid "Unstandardized"
 msgstr "Unstandardisiert"
 
 msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "Standardisiert"
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr "Optionen"
 
@@ -546,7 +542,7 @@ msgstr "Gruppe eins < Gruppe zwei"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional info"
@@ -646,11 +642,11 @@ msgstr "Proportionen"
 
 msgctxt "MultinomialTest|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
-msgstr "Deskriptive Abbildungen"
+msgstr "Deskriptives Diagramm"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
@@ -694,11 +690,11 @@ msgstr "Verhältnisse"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Plots"
-msgstr "Abbildungen"
+msgstr "Diagramme"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
-msgstr "Deskriptive Abbildungen"
+msgstr "Deskriptives Diagramm"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
@@ -766,7 +762,7 @@ msgstr "Prior"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
-msgstr "Vorm"
+msgstr "Formparameter"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Scale"
@@ -980,9 +976,10 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
 msgstr "Häufigkeiten"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Anteile"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior plot"
@@ -1004,7 +1001,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
 msgstr "Stufe #"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
 msgstr "Reihenfolgebeschränkungs-Hypothesen"
@@ -1098,9 +1094,10 @@ msgctxt "InformedMultinomialTestBayesian|"
 msgid "Display"
 msgstr "Anzeigen"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Anteile"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior plot"
@@ -1178,3 +1175,7 @@ msgstr "Iterationen (MCMC)"
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
 msgstr "Maximum Samples (Bridgesampling)"
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
+msgstr "Standardisiert (angepasst Pearson)"

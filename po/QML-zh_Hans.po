@@ -456,10 +456,6 @@ msgid "Unstandardized"
 msgstr "未标准化的"
 
 msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "标准化的"
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr "选项"
 
@@ -1171,4 +1167,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
 msgstr ""

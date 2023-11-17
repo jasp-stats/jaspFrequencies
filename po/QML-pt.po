@@ -341,10 +341,6 @@ msgid "Unstandardized"
 msgstr "Não padronizados"
 
 msgctxt "ContingencyTables|"
-msgid "Standardized"
-msgstr "Padronizados"
-
-msgctxt "ContingencyTables|"
 msgid "Options"
 msgstr "Opções"
 
@@ -1177,4 +1173,8 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
 msgstr ""
