@@ -327,7 +327,7 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   plot$dependOn(c("bfSequentialPlot", "bayesFactorType"))
 
   container[[plotName]] <- plot
-browser()
+
   hypForPlots <- .binomHypothesisForPlots(hyp)
 
   p <- try({

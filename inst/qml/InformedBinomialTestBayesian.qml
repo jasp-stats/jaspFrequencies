@@ -187,7 +187,7 @@ Form
 
 	ExpanderButton
 	{
-		qsTr("Prior Distribution")
+		title:	qsTr("Prior Distribution")
 
 		Text
 		{
@@ -286,7 +286,7 @@ Form
 		}
 	}
 
-		Section
+	Section
 	{
 		columns: 	2
 		title: 		qsTr("Advanced")
@@ -327,6 +327,45 @@ Form
 			}
 		}
 
-		SetSeed { }
+		Group
+		{
+
+			SetSeed { }
+
+			Group
+			{
+				title:		qsTr("Sequential analysis")
+				
+				IntegerField
+				{
+					label: 			qsTr("Number of steps")
+					name: 			"sequentialAnalysisNumberOfSteps"
+					defaultValue: 	10
+					min:			0
+					fieldWidth: 	50
+				}
+			}
+
+			Group
+			{
+				title:		qsTr("Include")
+
+				CheckBox
+				{
+					name:		"includeNullModel"
+					id:			includeNullModel
+					label:		qsTr("Null model")
+					checked:	true
+				}
+				
+				CheckBox
+				{
+					name:		"includeEncompassingModel"
+					id:			includeEncompassingModel
+					label:		qsTr("Encompassing model")
+					checked:	true
+				}
+			}
+		}
 	}
 }
