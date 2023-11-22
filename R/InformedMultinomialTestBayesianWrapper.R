@@ -17,21 +17,30 @@
 
 # This is a generated file. Don't change it
 
-RegressionLogLinear <- function(
+InformedMultinomialTestBayesian <- function(
           data = NULL,
           version = "0.18.2",
-          formula = NULL,
+          bayesFactorType = "BF10",
+          bfComparison = "encompassing",
+          bfVsHypothesis = "",
+          bridgeSamples = 1000,
           count = "",
-          factors = list(),
-          modelTerms = list(),
+          descriptivesDisplay = "counts",
+          descriptivesPlot = FALSE,
+          descriptivesTable = FALSE,
+          factor = "",
+          mcmcBurnin = 500,
+          mcmcSamples = 5000,
+          models = list(list(modelName = "Model 1", syntax = "")),
           plotHeight = 320,
           plotWidth = 480,
-          regressionCoefficientsCi = FALSE,
-          regressionCoefficientsCiLevel = 0.95,
-          regressionCoefficientsEstimates = FALSE,
-          vovkSellke = FALSE) {
+          posteriorPlot = FALSE,
+          posteriorPlotCiCoverage = 0.95,
+          priorCounts = list(list(levels = list(), name = "data 1", values = list())),
+          seed = 1,
+          setSeed = FALSE) {
 
-   defaultArgCalls <- formals(jaspFrequencies::RegressionLogLinear)
+   defaultArgCalls <- formals(jaspFrequencies::InformedMultinomialTestBayesian)
    defaultArgs <- lapply(defaultArgCalls, eval)
    options <- as.list(match.call())[-1L]
    options <- lapply(options, eval)
@@ -40,16 +49,9 @@ RegressionLogLinear <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
-   if (!is.null(formula)) {
-      if (!inherits(formula, "formula")) {
-         formula <- as.formula(formula)
-      }
-      options$formula <- jaspBase::jaspFormula(formula, data)
-   }
-
-   optionsWithFormula <- c("count", "factors", "modelTerms")
+   optionsWithFormula <- c("bfVsHypothesis", "count", "factor", "models", "priorCounts")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspFrequencies::RegressionLogLinear", data, options, version))
+   return(jaspBase::runWrappedAnalysis("jaspFrequencies::InformedMultinomialTestBayesian", data, options, version))
 }

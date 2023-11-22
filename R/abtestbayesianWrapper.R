@@ -19,7 +19,7 @@
 
 ABTestBayesian <- function(
           data = NULL,
-          version = "0.17.1",
+          version = "0.18.2",
           bayesFactorOrder = "bestModelTop",
           bayesFactorType = "BF10",
           bfRobustnessPlot = FALSE,
