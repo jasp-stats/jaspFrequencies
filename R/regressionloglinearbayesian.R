@@ -48,10 +48,9 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
     # So, we shift the first level to be the last level to keep the output consistent
     for (fac in factors) {
       var <- dataset[[fac]]
-      lev <- base::levels(var)
-      if (length(lev) > 1) {
-        newLev <- c(lev[2:length(lev)], lev[1])
-        dataset[[fac]] <- base::factor(var, levels = newLev)
+      if (nlevels(var) > 1) {
+        lev <- levels(var)
+        dataset[[fac]] <- factor(var, levels = c(lev[-1], lev[1]))
       }
     }
   }
