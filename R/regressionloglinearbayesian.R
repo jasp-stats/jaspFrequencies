@@ -34,17 +34,29 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
 
 # Preprocessing functions
 .basRegLogLinReadData <- function(dataset, options) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
+  if (is.null(dataset)) {
     counts <- factors <- NULL
     if(options$count != "")
       counts <- options$count
     if(length(options$modelTerms) > 0)
       factors <- options$factors
-    return(.readDataSetToEnd(columns.as.factor = factors,
-                             columns.as.numeric = counts))
+    dataset <- .readDataSetToEnd(columns.as.factor = factors,
+                                 columns.as.numeric = counts)
+
+    # conting uses the last level as the reference level,
+    # but elsewhere we use the first level instead.
+    # So, we shift the first level to be the last level to keep the output consistent
+    for (fac in factors) {
+      var <- dataset[[fac]]
+      lev <- base::levels(var)
+      if (length(lev) > 1) {
+        newLev <- c(lev[2:length(lev)], lev[1])
+        dataset[[fac]] <- base::factor(var, levels = newLev)
+      }
+    }
   }
+
+  return(dataset)
 }
 
 .basRegLogLinCheckErrors <- function(dataset, options) {
