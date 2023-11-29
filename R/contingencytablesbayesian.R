@@ -559,8 +559,8 @@ ContingencyTablesBayesianInternal <- function(jaspResults, dataset = NULL, optio
 
     if (!identical(dim(counts.matrix), as.integer(c(2,2)))) {
       message <- gettext("Odds ratio restricted to 2 x 2 tables")
-      analysisContainer[["contTabBasLogOdds"]]$addFootnote(message)
-
+      analysisContainer[["contTabBasLogOdds"]]$setError(message)
+      return()
     } else if ( options$samplingModel == "hypergeometric") {
       row[["value[oddsRatio]"]] <- NaN
       row[["low[oddsRatio]"]]   <- row[["up[oddsRatio]"]] <- "" #Really? What order is this evaluated in?
