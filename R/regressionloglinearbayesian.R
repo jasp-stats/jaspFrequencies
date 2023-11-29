@@ -176,7 +176,7 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
       if(grepl(pattern = "the leading minor of order [0-9]+ is not positive definite", x = msg)) {
         msg <- gettext("Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors.")
       }
-      stop(gettextf("R Package error: %s", msg))
+      stop(gettextf("R package 'conting' error: %s <br> It is possible that a numerical error occured during sampling. Try to change (e.g., simplify) the model, adjust priors, change seed, or change the number of MCMC samples.", msg))
     }
   }
 
