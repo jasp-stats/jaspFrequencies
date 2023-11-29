@@ -34,17 +34,28 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
 
 # Preprocessing functions
 .basRegLogLinReadData <- function(dataset, options) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
+  if (is.null(dataset)) {
     counts <- factors <- NULL
     if(options$count != "")
       counts <- options$count
     if(length(options$modelTerms) > 0)
       factors <- options$factors
-    return(.readDataSetToEnd(columns.as.factor = factors,
-                             columns.as.numeric = counts))
+    dataset <- .readDataSetToEnd(columns.as.factor = factors,
+                                 columns.as.numeric = counts)
+
+    # conting uses the last level as the reference level,
+    # but elsewhere we use the first level instead.
+    # So, we shift the first level to be the last level to keep the output consistent
+    for (fac in factors) {
+      var <- dataset[[fac]]
+      if (nlevels(var) > 1) {
+        lev <- levels(var)
+        dataset[[fac]] <- factor(var, levels = c(lev[-1], lev[1]))
+      }
+    }
   }
+
+  return(dataset)
 }
 
 .basRegLogLinCheckErrors <- function(dataset, options) {
@@ -164,7 +175,7 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
       if(grepl(pattern = "the leading minor of order [0-9]+ is not positive definite", x = msg)) {
         msg <- gettext("Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors.")
       }
-      stop(gettextf("R Package error: %s", msg))
+      stop(gettextf("R package 'conting' error: %s <br> It is possible that a numerical error occured during sampling. Try to change (e.g., simplify) the model, adjust priors, change seed, or change the number of MCMC samples.", msg))
     }
   }
 
