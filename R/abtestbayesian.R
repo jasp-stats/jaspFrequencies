@@ -68,15 +68,15 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   #   The (numeric) columns given as dependent/covariates/wlsWeights
 
   if (!is.null(dataset))
-    return(dataset)
+    return (dataset)
 
   asNum             <- c(options$n1, options$y1, options$n2, options$y2)
-  dataset           <- .readDataSetToEnd(columns.as.numeric = asNum, excluse.na.listwise = asNum)
+  dataset           <- .readDataSetToEnd(columns.as.numeric = asNum, exclude.na.listwise = asNum)
   new_names         <- setNames(c("n1", "n2", "y1", "y2"),
-                                c(.v(options$n1), .v(options$n2), .v(options$y1), .v(options$y2)))
+                                c(options$n1, options$n2, options$y1, options$y2))
   colnames(dataset) <- stringr::str_replace_all(colnames(dataset), new_names)
 
-  return(dataset)
+  return (dataset)
 }
 
 
