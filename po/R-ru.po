@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2023-05-06 03:27\n"
+"POT-Creation-Date: 2023-12-02 03:26\n"
 "PO-Revision-Date: 2023-02-21 05:38+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
@@ -634,8 +634,14 @@ msgstr ""
 "Невозможно вычислить результаты; во время выборки произошла числовая ошибка. "
 "Попробуйте изменить (например, упростить) модель или скорректировать априоры."
 
-msgid "R Package error: %s"
-msgstr "Ошибка пакета R: %s"
+#, fuzzy
+msgid ""
+"R package 'conting' error: %s <br> It is possible that a numerical error "
+"occured during sampling. Try to change (e.g., simplify) the model, adjust "
+"priors, change seed, or change the number of MCMC samples."
+msgstr ""
+"Невозможно вычислить результаты; во время выборки произошла числовая ошибка. "
+"Попробуйте изменить (например, упростить) модель или скорректировать априоры."
 
 msgid "R Package error: Cannot retrieve table probabilities"
 msgstr "Ошибка пакета R: невозможно получить таблицы вероятностей"
@@ -689,6 +695,9 @@ msgstr "Апостериорная сводная статистика для п
 #, fuzzy
 msgid "%.0f%% Credible intervals"
 msgstr "%.0f%% Достоверные интервалы"
+
+#~ msgid "R Package error: %s"
+#~ msgstr "Ошибка пакета R: %s"
 
 #, fuzzy
 #~ msgid "thinning hides the last observation"
