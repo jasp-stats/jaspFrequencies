@@ -19,6 +19,9 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   dataset <- .informedBinReadData(dataset, options)
   .informedBinCheckErrors(dataset, options)
+  options <- .informedBayesParsePriorModelProbability(options)
+  dataset <- .binomialAggregateData(dataset, options)
+
   .computeInformedBinResults(jaspResults, dataset, options)
   .createInformedBayesMainTable(jaspResults, options, type = "binomial")
 
@@ -30,6 +33,9 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   if (options[["posteriorPlot"]])
     .createInformedBinBayesPosteriorPlot(jaspResults, dataset, options)
+
+  if (options[["sequentialAnalysisPlot"]])
+    .createInformedBinSequentialAnalysisPlot(jaspResults, dataset, options)
 
   return()
 }
@@ -79,9 +85,38 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   return(dataset)
 }
+.binomialAggregateData  <- function(dataset, options) {
+
+  if (length(dataset[[options[["factor"]]]]) != length(levels(dataset[[options[["factor"]]]])) && options[["successes"]] != "") {
+
+    if (options[["sampleSize"]] != "")
+      .quitAnalysis("No `Sample Size` should be provided in case the individual successes for a given factor level are specified.")
+
+    individualDataFactor    <- dataset[[options[["factor"]]]]
+    individualDataSuccesses <- dataset[[options[["successes"]]]]
+
+    if (length(unique(individualDataSuccesses)) != 2)
+      .quitAnalysis(gettext("The `Success` must have two levels if the `Sample Size` is not specified."))
+
+    frequencies       <- table(individualDataFactor, individualDataSuccesses)
+    sampleSize        <- rowSums(frequencies)
+    dataset           <- data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])))
+    colnames(dataset) <- options[["factor"]]
+
+    attr(dataset, "individual") <- TRUE
+    attr(dataset, "successes")  <- frequencies[,2]
+    attr(dataset, "sampleSize") <- sampleSize
+    attr(dataset, "individualDataFactor")    <- individualDataFactor
+    attr(dataset, "individualDataSuccesses") <- individualDataSuccesses
+  } else {
+    attr(dataset, "individual") <- FALSE
+  }
+
+  return(dataset)
+}
 .informedBinCheckErrors <- function(dataset, options) {
 
-  if (options[["factor"]] == "" || options[["successes"]] == "" || options[["sampleSize"]] == "")
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
     return()
 
   customChecks <- list(
@@ -121,7 +156,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
     return()
 
   # skip if the input is not specified
-  if (options[["factor"]] == "" || options[["successes"]] == "" || options[["sampleSize"]] == "")
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
     return()
 
   models <- createJaspState()
@@ -137,8 +172,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   # fit an overall unrestricted model (for plotting the posterior)
   modelsList[[1]] <- list(
     "model" = try(multibridge::binom_bf_informed(
-      x             = dataset[[options[["successes"]]]],
-      n             = dataset[[options[["sampleSize"]]]],
+      x             = .informedExtractSuccesses(dataset, options),
+      n             = .informedExtractSampleSize(dataset, options),
       Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
       b             = options[["priorCounts"]][[2]][["values"]],
@@ -166,8 +201,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::binom_bf_informed(
-          x             = dataset[[options[["successes"]]]],
-          n             = dataset[[options[["sampleSize"]]]],
+          x             = .informedExtractSuccesses(dataset, options),
+          n             = .informedExtractSampleSize(dataset, options),
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           b             = options[["priorCounts"]][[2]][["values"]],
@@ -188,6 +223,139 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   models$object <- modelsList
 
   return()
+}
+.computeInformedBinSequentialResults      <- function(jaspResults, dataset, options) {
+
+  # skip if there is nothing new
+  if (!is.null(jaspResults[["sequentialAnalysisResults"]]))
+    return()
+
+  # skip if the input is not specified
+  # skip if the input is not specified
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
+    return()
+
+  # skip if the data are only aggregated
+  if (!attr(dataset, "individual"))
+    return()
+
+  sequential <- createJaspState()
+  sequential$dependOn(c(.informedMultDependency, "sequentialAnalysisNumberOfSteps"))
+  jaspResults[["sequentialAnalysisResults"]] <- sequential
+
+  # extract data
+  individualDataFactor    <- attr(dataset, "individualDataFactor")
+  individualDataSuccesses <- attr(dataset, "individualDataSuccesses")
+
+  # specify sequential steps (do all if 0)
+  if(options[["sequentialAnalysisNumberOfSteps"]] == 0)
+    steps <- 1:length(individualDataFactor)
+  else
+    steps <- unique(round(c(seq.int(0, length(individualDataFactor), length.out = options[["sequentialAnalysisNumberOfSteps"]]), length(individualDataFactor))))[-1]
+
+  startProgressbar(length(steps), label = gettext("Performing sequential analysis."))
+
+  out <- list()
+  for (step in steps){
+
+    tempOutput <- list()
+
+    ### prepare data
+    frequencies          <- table(individualDataFactor[1:step], individualDataSuccesses[1:step])
+    sampleSize           <- rowSums(frequencies)
+    seqDataset           <- data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])), frequencies[,2], sampleSize)
+    colnames(seqDataset) <- c(options[["factor"]], "successes", "sampleSize")
+
+
+    ### fit models & extract margliks
+    # fit an overall unrestricted model (for plotting the posterior)
+    model0 <- try(multibridge::binom_bf_informed(
+      x             = seqDataset[["successes"]],
+      n             = seqDataset[["sampleSize"]],
+      Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
+      a             = options[["priorCounts"]][[1]][["values"]],
+      b             = options[["priorCounts"]][[2]][["values"]],
+      factor_levels = seqDataset[[options[["factor"]]]],
+      bf_type       = "BF0r",
+      nburnin       = options[["mcmcBurnin"]],
+      niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
+      maxiter       = options[["bridgeSamples"]],
+      seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
+    ))
+
+    # extract margliks
+    if (jaspBase::isTryError(model0)) {
+      tempOutput[[1]] <- data.frame(
+        model         = "Null",
+        marglik       = NA
+      )
+      tempOutput[[2]] <- data.frame(
+        model         = "Encompassing",
+        marglik       = NA
+      )
+    } else {
+      tempOutput[[1]] <- data.frame(
+        model         = "Null",
+        marglik       = model0$logml[["logmlH0"]]
+      )
+      tempOutput[[2]] <- data.frame(
+        model         = "Encompassing",
+        marglik       = model0$logml[["logmlHe"]]
+      )
+    }
+
+
+    # estimate the restricted models & extract margliks
+    for(i in seq_along(options[["models"]])) {
+
+      if (nchar(options[["models"]][[i]][["syntax"]]) == 0) {
+
+        next
+
+      } else {
+
+        model1 <- try(multibridge::binom_bf_informed(
+          x             = seqDataset[["successes"]],
+          n             = seqDataset[["sampleSize"]],
+          Hr            = options[["models"]][[i]][["syntax"]],
+          a             = options[["priorCounts"]][[1]][["values"]],
+          b             = options[["priorCounts"]][[2]][["values"]],
+          factor_levels = seqDataset[[options[["factor"]]]],
+          bf_type       = "BF0r",
+          nburnin       = options[["mcmcBurnin"]],
+          niter         = options[["mcmcBurnin"]] + options[["mcmcSamples"]],
+          maxiter       = options[["bridgeSamples"]],
+          seed          = if (options[["setSeed"]]) .getSeedJASP(options) else sample.int(.Machine$integer.max, 1),
+        ))
+
+        # extract margliks
+        if (jaspBase::isTryError(model1)) {
+          tempOutput[[i+2]] <- data.frame(
+            model         = options[["models"]][[i]][["modelName"]],
+            marglik       = NA
+          )
+        } else {
+          tempOutput[[i+2]] <- data.frame(
+            model         = options[["models"]][[i]][["modelName"]],
+            marglik       = model1$logml[["logmlHr"]]
+          )
+        }
+      }
+    }
+
+    ### store sequential summary
+    tempOutput      <- do.call(rbind, tempOutput)
+    tempOutput$step <- step
+    out[[step]]     <- tempOutput
+
+    progressbarTick()
+  }
+
+  out <- do.call(rbind, out)
+  sequential$object <- out
+
+  return()
+
 }
 .createInformedBinBayesDescriptivesTable  <- function(jaspResults, dataset, options) {
 
@@ -260,17 +428,127 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
+  successes  <- .informedExtractSuccesses(dataset, options)
+  sampleSize <- .informedExtractSampleSize(dataset, options)
+  priorAlpha <- options[["priorCounts"]][[1]][["values"]]
+  priorBeta  <- options[["priorCounts"]][[2]][["values"]]
+
   # extract posterior summary from the unrestricted model and format it for the plotting function
   tempSummary           <- data.frame(
     fact     = levels(dataset[[options[["factor"]]]]),
-    observed = (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]]) / (options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]] + options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
-    lowerCI  = stats::qbeta(p = (1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]])),
-    upperCI  = stats::qbeta(p = 1-(1-options[["posteriorPlotCiCoverage"]])/2, shape1 = options[["priorCounts"]][[1]][["values"]] + dataset[[options[["successes"]]]], shape2 = options[["priorCounts"]][[2]][["values"]] + (dataset[[options[["sampleSize"]]]]-dataset[[options[["successes"]]]]))
+    observed = (priorAlpha + successes) / (priorAlpha + successes + priorBeta + (sampleSize-successes)),
+    lowerCI  = stats::qbeta(p = (1-options[["posteriorPlotCiCoverage"]])/2,   shape1 = priorAlpha + successes, shape2 = priorBeta + (sampleSize-successes)),
+    upperCI  = stats::qbeta(p = 1-(1-options[["posteriorPlotCiCoverage"]])/2, shape1 = priorAlpha + successes, shape2 = priorBeta + (sampleSize-successes))
   )
 
   posteriorPlot$plotObject <- .createInformedBinBayesPlot(tempSummary, options, descriptives = FALSE)
 
   return()
+}
+.createInformedBinSequentialAnalysisPlot  <- function(jaspResults, dataset, options) {
+
+  if (!is.null(jaspResults[["sequentialAnalysisPlot"]]))
+    return()
+
+
+  # create/obtain sequential analysis
+  .computeInformedBinSequentialResults(jaspResults, dataset, options)
+  sequentialAnalysisResults <- jaspResults[["sequentialAnalysisResults"]]$object
+
+  # create an empty plot in case the selection is restricted
+  if (is.null(jaspResults[["models"]]$object) || .informedBayesNumberOfModels(jaspResults, options) < 2) {
+    tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+    tempPlot$dependOn(c(.informedMultDependency, "includeNullModel", "includeEncompassingModel"))
+    tempPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+    tempPlot$setError(gettext("At least two models need to be specified."))
+    return()
+  }
+
+  # remove unused hypotheses
+  if (!options[["includeNullModel"]])
+    sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Null",]
+  if (!options[["includeEncompassingModel"]])
+    sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Encompassing",]
+
+  if (options[["sequentialAnalysisPlotType"]] == "bayesFactor") {
+
+    # create plot container
+    sequentialAnalysisPlot <- createJaspContainer(gettext("Sequential analysis"))
+    sequentialAnalysisPlot$dependOn(c(.informedBinDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
+                                      "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "sequentialAnalysisNumberOfSteps",
+                                      "includeNullModel", "includeEncompassingModel"))
+    sequentialAnalysisPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- sequentialAnalysisPlot
+
+    # extract BF type and Bayes factor comparison
+    bfTypeIgnoreLog <- if (options[["bayesFactorType"]] == "BF01") "BF01" else "BF10"
+    bfComparison    <- .selectAvailableBfComparison(options, unique(sequentialAnalysisResults$model))
+
+    for (hypothesis in unique(sequentialAnalysisResults$model)) {
+
+      if (hypothesis == bfComparison)
+        next
+
+      # create sequential figures for individual hypotheses
+      tempPlot <- createJaspPlot(title = gettext(paste0(hypothesis, " vs. ", bfComparison)), width = 480, height = 320)
+      sequentialAnalysisPlot[[hypothesis]] <- tempPlot
+
+      tempData <- data.frame(
+        x = c(0, sequentialAnalysisResults$step[sequentialAnalysisResults$model == bfComparison]),
+        y = c(0, sequentialAnalysisResults$marglik[sequentialAnalysisResults$model == hypothesis] -
+                sequentialAnalysisResults$marglik[sequentialAnalysisResults$model == bfComparison])
+      )
+      if (bfTypeIgnoreLog == "BF01")
+        tempData$y <- - tempData$y
+
+      tempPlot$plotObject <- jaspGraphs::PlotRobustnessSequential(
+        dfLines    = tempData,
+        xName      = "n",
+        BF         = exp(tempData$y[nrow(tempData)]),
+        bfType     = bfTypeIgnoreLog,
+        hypothesis = "equal")
+    }
+
+    return()
+
+  } else if(options[["sequentialAnalysisPlotType"]] == "posteriorProbability") {
+
+    # compute posterior probabilities
+    priorProb <- options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] %in% unique(sequentialAnalysisResults$model)]
+    priorProb <- priorProb / sum(priorProb)
+    postProb  <- do.call(rbind, lapply(unique(sequentialAnalysisResults$step), function(step) {
+
+      logLik    <- sequentialAnalysisResults$marglik[sequentialAnalysisResults$step == step]
+      postProb  <- bridgesampling::post_prob(logLik, prior_prob = priorProb)
+
+      return(data.frame(
+        model    = sequentialAnalysisResults$model[sequentialAnalysisResults$step == step],
+        step     = step,
+        postProb = postProb
+      ))
+    }))
+    postProb  <- rbind(
+      data.frame(
+        model    = unique(sequentialAnalysisResults$model),
+        step     = 0,
+        postProb = priorProb
+      ),
+      postProb
+    )
+
+    # create plot
+    tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+    tempPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
+                        "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps",
+                        "includeNullModel", "includeEncompassingModel"))
+    tempPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+    tempPlot$plotObject <- .createInformedMultPlotSequentialProb(postProb)
+
+
+    return()
+  }
 }
 .createInformedBinBayesDescriptivesData   <- function(jaspResults, options) {
 
@@ -363,4 +641,19 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   }
 
   return(ciDf)
+}
+.informedExtractColumn     <- function(dataset, options, column) {
+  if (attr(dataset, "individual"))
+    return(attr(dataset, column))
+  else
+    return(dataset[[options[[column]]]])
+}
+.informedExtractSampleSize <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "sampleSize")
+}
+.informedExtractSuccesses  <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "successes")
+}
+.informedExtractCount      <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "count")
 }

@@ -157,12 +157,37 @@ Form
 			}
 		}
 
+		CheckBox
+		{
+			name:	"sequentialAnalysisPlot";
+			label:	qsTr("Sequential analysis plot")
+
+			RadioButtonGroup
+			{
+				name	: "sequentialAnalysisPlotType"
+				title	: qsTr("Display")
+
+				RadioButton
+				{
+					value:		"bayesFactor"
+					label:		qsTr("Bayes factors")
+					checked:	true
+				}
+
+				RadioButton
+				{
+					value:		"posteriorProbability"
+					label:		qsTr("Posterior probability")
+				}
+			}
+		}
+
 
 	}
 
 	ExpanderButton
 	{
-		title	: qsTr("Prior")
+		title:	qsTr("Prior Distribution")
 
 		Text
 		{
@@ -185,6 +210,35 @@ Form
 			itemType			: JASP.Integer
 
 			function getColHeaderText(headerText, colIndex) { return colHeader + (colIndex == 0 ? "Successes": "Failures")}
+		}
+	}
+
+
+	ExpanderButton
+	{
+		title	: qsTr("Prior Model Probability")
+		
+		Chi2TestTableView
+		{
+			name:					"priorModelProbability"
+			id:						priorModelProbability
+			initialColumnCount: 	1
+			property var alwaysAvailable:
+			[
+				{ label:	"Encompassing",		value: "encompassing"},
+				{ label:	"Null",				value: "null"}
+			]
+
+			source:	[models, {values: priorModelProbability.alwaysAvailable}]
+
+			minimum				: 1
+			showAddButton		: false
+			showDeleteButton	: false
+			colHeader			: ""
+			cornerText			: qsTr("Model")
+			itemType			: JASP.Double
+
+			function getColHeaderText(headerText, colIndex) { return "Prior weight"}
 		}
 	}
 
@@ -232,7 +286,7 @@ Form
 		}
 	}
 
-		Section
+	Section
 	{
 		columns: 	2
 		title: 		qsTr("Advanced")
@@ -273,6 +327,45 @@ Form
 			}
 		}
 
-		SetSeed { }
+		Group
+		{
+
+			SetSeed { }
+
+			Group
+			{
+				title:		qsTr("Sequential analysis")
+				
+				IntegerField
+				{
+					label: 			qsTr("Number of steps")
+					name: 			"sequentialAnalysisNumberOfSteps"
+					defaultValue: 	10
+					min:			0
+					fieldWidth: 	50
+				}
+			}
+
+			Group
+			{
+				title:		qsTr("Include")
+
+				CheckBox
+				{
+					name:		"includeNullModel"
+					id:			includeNullModel
+					label:		qsTr("Null model")
+					checked:	true
+				}
+				
+				CheckBox
+				{
+					name:		"includeEncompassingModel"
+					id:			includeEncompassingModel
+					label:		qsTr("Encompassing model")
+					checked:	true
+				}
+			}
+		}
 	}
 }

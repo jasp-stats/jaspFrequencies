@@ -64,19 +64,39 @@ Form
 
 			RadioButton
 			{
-				value:		"encompassing"
-				label:		qsTr("Encompassing")
-				checked:	true
-			}
-
-			RadioButton
-			{
+				id:			bfComparisonNull
 				value:		"null"
 				label:		qsTr("Null")
+				checked:	true
+				enabled:	includeNullModel.checked
+				onEnabledChanged:	
+				{
+					if (!enabled && checked) 
+					{
+						if (bfComparisonEncompassing.enabled)
+							bfComparisonEncompassing.checked = true 
+						else
+							bfComparisonVs.checked = true
+					}
+				}
 			}
 
 			RadioButton
 			{
+				id:			bfComparisonEncompassing
+				value:		"encompassing"
+				label:		qsTr("Encompassing")
+				enabled:	includeEncompassingModel.checked
+				onEnabledChanged:	
+				{
+					if (!enabled && checked) 
+						bfComparisonVs.checked = true
+				}
+			}
+
+			RadioButton
+			{
+				id:           		bfComparisonVs
 				name:				"vs"
 				label:				qsTr("vs.")
 				childrenOnSameRow:	true
@@ -149,13 +169,38 @@ Form
 			}
 		}
 
+		CheckBox
+		{
+			name:	"sequentialAnalysisPlot";
+			label:	qsTr("Sequential analysis plot")
+
+			RadioButtonGroup
+			{
+				name	: "sequentialAnalysisPlotType"
+				title	: qsTr("Display")
+
+				RadioButton
+				{
+					value:		"bayesFactor"
+					label:		qsTr("Bayes factors")
+					checked:	true
+				}
+
+				RadioButton
+				{
+					value:		"posteriorProbability"
+					label:		qsTr("Posterior probability")
+				}
+			}
+		}
+
 
 	}
 
 	ExpanderButton
 	{
-		title	: qsTr("Prior")
-
+		title	: qsTr("Prior Distribution")
+		
 		Text
 		{
 			visible: factors.count == 0
@@ -175,6 +220,46 @@ Form
 			colHeader			: qsTr("Counts")
 			cornerText			: qsTr("Level #")
 			itemType			: JASP.Integer
+		}
+	}
+
+	ExpanderButton
+	{
+		title	: qsTr("Prior Model Probability")
+
+		SimpleTableView
+		{
+			name:					"priorModelProbability"
+			id:						priorModelProbability
+			initialColumnCount: 	1
+			property var alwaysAvailable:
+			includeNullModel.checked && includeEncompassingModel.checked ?
+			[
+				{ label:	"Null",				value: "null"},
+				{ label:	"Encompassing",		value: "encompassing"}
+			]
+			: !includeNullModel.checked && includeEncompassingModel.checked ?
+			[
+				{ label:	"Encompassing",		value: "encompassing"}
+			]
+			: includeNullModel.checked && !includeEncompassingModel.checked ?
+			[
+				{ label:	"Null",		value: "null"}
+			]
+			:
+			[]
+
+			source:	[{values: priorModelProbability.alwaysAvailable}, models]
+
+			minimum				: 1
+			showAddButton		: false
+			showDeleteButton	: false
+			buttonResetEnabled	: true
+			//colHeader			: ""
+			cornerText			: qsTr("Model")
+			itemType			: JASP.String
+
+			function getColHeaderText(headerText, colIndex) { return "Prior weight"}
 		}
 	}
 
@@ -239,30 +324,69 @@ Form
 				defaultValue: 	500
 				min:			50
 				max: 			1000000
-				fieldWidth: 	50
+				fieldWidth: 	75
 			}
 
 			IntegerField
 			{
 				label: 			qsTr("Iterations (MCMC)")
 				name: 			"mcmcSamples"
-				defaultValue: 	5000
+				defaultValue: 	10000
 				min:			100
 				max: 			1000000
-				fieldWidth: 	50
+				fieldWidth: 	75
 			}
 
 			IntegerField
 			{
 				label: 			qsTr("Maximum samples (bridgesampling)")
 				name: 			"bridgeSamples"
-				defaultValue: 	1000
+				defaultValue: 	10000
 				min:			5
 				max: 			1000000
-				fieldWidth: 	50
+				fieldWidth: 	75
 			}
 		}
 
-		SetSeed { }
+		Group
+		{
+
+			SetSeed { }
+
+			Group
+			{
+				title:		qsTr("Sequential analysis")
+				
+				IntegerField
+				{
+					label: 			qsTr("Number of steps")
+					name: 			"sequentialAnalysisNumberOfSteps"
+					defaultValue: 	10
+					min:			0
+					fieldWidth: 	50
+				}
+			}
+
+			Group
+			{
+				title:		qsTr("Include")
+
+				CheckBox
+				{
+					name:		"includeNullModel"
+					id:			includeNullModel
+					label:		qsTr("Null model")
+					checked:	true
+				}
+				
+				CheckBox
+				{
+					name:		"includeEncompassingModel"
+					id:			includeEncompassingModel
+					label:		qsTr("Encompassing model")
+					checked:	true
+				}
+			}
+		}
 	}
 }
