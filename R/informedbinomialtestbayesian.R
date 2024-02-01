@@ -96,10 +96,10 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
     individualDataSuccesses <- dataset[[options[["successes"]]]]
 
     if (length(unique(individualDataSuccesses)) != 2)
-      .quitAnalysis("The `Success` must have two levels if the `Sample Size` is not specified.")
+      .quitAnalysis(gettext("The `Success` must have two levels if the `Sample Size` is not specified."))
 
     frequencies       <- table(individualDataFactor, individualDataSuccesses)
-    sampleSize        <- apply(frequencies, 1, sum)
+    sampleSize        <- rowSums(frequencies)
     dataset           <- cbind.data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])), frequencies[,2], sampleSize)
     colnames(dataset) <- c(options[["factor"]], "__jaspComputedSuccesses", "__jaspComputedSampleSize")
 
