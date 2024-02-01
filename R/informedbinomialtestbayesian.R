@@ -100,13 +100,14 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
     frequencies       <- table(individualDataFactor, individualDataSuccesses)
     sampleSize        <- rowSums(frequencies)
-    dataset           <- cbind.data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])), frequencies[,2], sampleSize)
-    colnames(dataset) <- c(options[["factor"]], "__jaspComputedSuccesses", "__jaspComputedSampleSize")
+    dataset           <- data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])))
+    colnames(dataset) <- options[["factor"]]
 
     attr(dataset, "individual") <- TRUE
+    attr(dataset, "successes")  <- frequencies[,2]
+    attr(dataset, "sampleSize") <- sampleSize
     attr(dataset, "individualDataFactor")    <- individualDataFactor
     attr(dataset, "individualDataSuccesses") <- individualDataSuccesses
-
   } else {
     attr(dataset, "individual") <- FALSE
   }
@@ -115,7 +116,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 }
 .informedBinCheckErrors <- function(dataset, options) {
 
-  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(dataset[["__jaspComputedSampleSize"]])))
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
     return()
 
   customChecks <- list(
@@ -155,7 +156,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
     return()
 
   # skip if the input is not specified
-  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(dataset[["__jaspComputedSampleSize"]])))
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
     return()
 
   models <- createJaspState()
@@ -171,8 +172,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   # fit an overall unrestricted model (for plotting the posterior)
   modelsList[[1]] <- list(
     "model" = try(multibridge::binom_bf_informed(
-      x             = if (attr(dataset, "individual")) dataset[["__jaspComputedSuccesses"]]  else dataset[[options[["successes"]]]],
-      n             = if (attr(dataset, "individual")) dataset[["__jaspComputedSampleSize"]] else dataset[[options[["sampleSize"]]]],
+      x             = .informedExtractSuccesses(dataset, options),
+      n             = .informedExtractSampleSize(dataset, options),
       Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
       b             = options[["priorCounts"]][[2]][["values"]],
@@ -200,8 +201,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
       modelsList[[i+1]] <- list(
         "model" = try(multibridge::binom_bf_informed(
-          x             = if (attr(dataset, "individual")) dataset[["__jaspComputedSuccesses"]]  else dataset[[options[["successes"]]]],
-          n             = if (attr(dataset, "individual")) dataset[["__jaspComputedSampleSize"]] else dataset[[options[["sampleSize"]]]],
+          x             = .informedExtractSuccesses(dataset, options),
+          n             = .informedExtractSampleSize(dataset, options),
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           b             = options[["priorCounts"]][[2]][["values"]],
@@ -231,7 +232,7 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
   # skip if the input is not specified
   # skip if the input is not specified
-  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(dataset[["__jaspComputedSampleSize"]])))
+  if (options[["factor"]] == "" || options[["successes"]] == "" || (options[["sampleSize"]] == "" && is.null(attr(dataset, "sampleSize"))))
     return()
 
   # skip if the data are only aggregated
@@ -261,16 +262,16 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
 
     ### prepare data
     frequencies          <- table(individualDataFactor[1:step], individualDataSuccesses[1:step])
-    sampleSize           <- apply(frequencies, 1, sum)
-    seqDataset           <- cbind.data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])), frequencies[,2], sampleSize)
-    colnames(seqDataset) <- c(options[["factor"]], "__jaspComputedSuccesses", "__jaspComputedSampleSize")
+    sampleSize           <- rowSums(frequencies)
+    seqDataset           <- data.frame(factor(rownames(frequencies), levels = levels(dataset[[options[["factor"]]]])), frequencies[,2], sampleSize)
+    colnames(seqDataset) <- c(options[["factor"]], "successes", "sampleSize")
 
 
     ### fit models & extract margliks
     # fit an overall unrestricted model (for plotting the posterior)
     model0 <- try(multibridge::binom_bf_informed(
-      x             = seqDataset[["__jaspComputedSuccesses"]],
-      n             = seqDataset[["__jaspComputedSampleSize"]],
+      x             = seqDataset[["successes"]],
+      n             = seqDataset[["sampleSize"]],
       Hr            = paste0(levels(dataset[[options[["factor"]]]]), collapse = ","),
       a             = options[["priorCounts"]][[1]][["values"]],
       b             = options[["priorCounts"]][[2]][["values"]],
@@ -314,8 +315,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
       } else {
 
         model1 <- try(multibridge::binom_bf_informed(
-          x             = seqDataset[["__jaspComputedSuccesses"]],
-          n             = seqDataset[["__jaspComputedSampleSize"]],
+          x             = seqDataset[["successes"]],
+          n             = seqDataset[["sampleSize"]],
           Hr            = options[["models"]][[i]][["syntax"]],
           a             = options[["priorCounts"]][[1]][["values"]],
           b             = options[["priorCounts"]][[2]][["values"]],
@@ -427,8 +428,8 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   if (is.null(jaspResults[["models"]]) || jaspBase::isTryError(jaspResults[["models"]]$object[[1]]$model))
     return()
 
-  successes  <- if (attr(dataset, "individual")) dataset[["__jaspComputedSuccesses"]]  else dataset[[options[["successes"]]]]
-  sampleSize <- if (attr(dataset, "individual")) dataset[["__jaspComputedSampleSize"]] else dataset[[options[["sampleSize"]]]]
+  successes  <- .informedExtractSuccesses(dataset, options)
+  sampleSize <- .informedExtractSampleSize(dataset, options)
   priorAlpha <- options[["priorCounts"]][[1]][["values"]]
   priorBeta  <- options[["priorCounts"]][[2]][["values"]]
 
@@ -640,4 +641,19 @@ InformedBinomialTestBayesianInternal <- function(jaspResults, dataset, options, 
   }
 
   return(ciDf)
+}
+.informedExtractColumn     <- function(dataset, options, column) {
+  if (attr(dataset, "individual"))
+    return(attr(dataset, column))
+  else
+    return(dataset[[options[[column]]]])
+}
+.informedExtractSampleSize <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "sampleSize")
+}
+.informedExtractSuccesses  <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "successes")
+}
+.informedExtractCount      <- function(dataset, options) {
+  .informedExtractColumn(dataset, options, "count")
 }
