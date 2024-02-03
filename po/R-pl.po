@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2023-12-02 03:26\n"
+"POT-Creation-Date: 2024-02-03 03:27\n"
 "PO-Revision-Date: 2023-12-12 15:06+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
@@ -368,6 +368,10 @@ msgstr "V Cramera nie zostało jeszcze zaimplementowane dla tego modelu"
 msgid "Posterior"
 msgstr "Posterior"
 
+msgid ""
+"The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr ""
+
 msgid "Invalid successes: variable must contain only integer values."
 msgstr ""
 "Nieprawidłowa liczba sukcesów: zmienna może zawierać tylko wartości "
@@ -386,6 +390,10 @@ msgstr ""
 "Czynnik musi zawierać unikalne poziomy, które reprezentują liczbę sukcesów "
 "względem rozmiaru próby."
 
+#, fuzzy
+msgid "Performing sequential analysis."
+msgstr "Analiza sekwencyjna"
+
 msgid "Observed counts"
 msgstr "Liczebności obserwowane"
 
@@ -401,6 +409,16 @@ msgstr "Wykresy opisowe"
 msgid "Unrestricted posterior plot"
 msgstr "Nieograniczony wykres a posteriori"
 
+#, fuzzy
+msgid "Sequential analysis"
+msgstr "Analiza sekwencyjna"
+
+msgid "At least two models need to be specified."
+msgstr ""
+
+msgid "vs."
+msgstr ""
+
 msgid "Observed"
 msgstr "Obserwowane"
 
@@ -409,6 +427,11 @@ msgstr "Oszacowane"
 
 msgid "Proportions"
 msgstr "Proporcje"
+
+msgid ""
+"Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
+"parsed into a positive number. Please, check the input."
+msgstr ""
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Bayesowska analiza ograniczeń kolejności %1$s"
@@ -427,6 +450,14 @@ msgstr "Błąd"
 
 msgid "Error %"
 msgstr "Błąd %"
+
+#, fuzzy
+msgid "P(M|Data)"
+msgstr "P(M|dane)"
+
+#, fuzzy
+msgid "BF<sub>M</sub>"
+msgstr "BF<sub>10</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "

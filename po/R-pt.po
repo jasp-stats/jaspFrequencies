@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2023-12-02 03:26\n"
+"POT-Creation-Date: 2024-02-03 03:27\n"
 "PO-Revision-Date: 2021-09-11 03:29+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
@@ -364,6 +364,10 @@ msgstr "O V de Cramer para esse modelo ainda não foi implementado"
 msgid "Posterior"
 msgstr "Posterior"
 
+msgid ""
+"The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr ""
+
 #, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
 msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
@@ -378,6 +382,10 @@ msgstr ""
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+
+#, fuzzy
+msgid "Performing sequential analysis."
+msgstr "Análise sequencial"
 
 msgid "Observed counts"
 msgstr "Contagens observadas"
@@ -394,6 +402,16 @@ msgstr "Diagramas Descritivos"
 msgid "Unrestricted posterior plot"
 msgstr ""
 
+#, fuzzy
+msgid "Sequential analysis"
+msgstr "Análise sequencial"
+
+msgid "At least two models need to be specified."
+msgstr ""
+
+msgid "vs."
+msgstr ""
+
 msgid "Observed"
 msgstr "Observado"
 
@@ -404,6 +422,11 @@ msgstr "Estimativa"
 #, fuzzy
 msgid "Proportions"
 msgstr "Proporção"
+
+msgid ""
+"Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
+"parsed into a positive number. Please, check the input."
+msgstr ""
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
@@ -422,6 +445,14 @@ msgstr ""
 
 msgid "Error %"
 msgstr ""
+
+#, fuzzy
+msgid "P(M|Data)"
+msgstr "P(M|dado)"
+
+#, fuzzy
+msgid "BF<sub>M</sub>"
+msgstr "BF<sub>10</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "

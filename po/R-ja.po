@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2023-12-02 03:26\n"
+"POT-Creation-Date: 2024-02-03 03:27\n"
 "PO-Revision-Date: 2023-04-21 17:51+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -350,6 +350,10 @@ msgstr "このモデルのクラメールの Vはまだ実装されていませ�
 msgid "Posterior"
 msgstr "事後分布"
 
+msgid ""
+"The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr ""
+
 #, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
 msgstr "無効なカウント: 変数は整数だけでなければなりません。"
@@ -364,6 +368,10 @@ msgstr ""
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+
+#, fuzzy
+msgid "Performing sequential analysis."
+msgstr "逐次解析"
 
 msgid "Observed counts"
 msgstr "観測度数"
@@ -380,6 +388,16 @@ msgstr "記述的プロット"
 msgid "Unrestricted posterior plot"
 msgstr ""
 
+#, fuzzy
+msgid "Sequential analysis"
+msgstr "逐次解析"
+
+msgid "At least two models need to be specified."
+msgstr ""
+
+msgid "vs."
+msgstr ""
+
 msgid "Observed"
 msgstr "観測された"
 
@@ -390,6 +408,11 @@ msgstr "推定"
 #, fuzzy
 msgid "Proportions"
 msgstr "比率"
+
+msgid ""
+"Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
+"parsed into a positive number. Please, check the input."
+msgstr ""
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
@@ -408,6 +431,14 @@ msgstr ""
 
 msgid "Error %"
 msgstr ""
+
+#, fuzzy
+msgid "P(M|Data)"
+msgstr "P(M|データ)"
+
+#, fuzzy
+msgid "BF<sub>M</sub>"
+msgstr "BF<sub>10</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "

@@ -999,11 +999,6 @@ msgstr "信用区間"
 
 #, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
-msgid "Prior"
-msgstr "事前分布"
-
-#, fuzzy
-msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "要因の指定なし"
 
@@ -1115,11 +1110,6 @@ msgstr "信用区間"
 
 #, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
-msgid "Prior"
-msgstr "事前分布"
-
-#, fuzzy
-msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "要因の指定なし"
 
@@ -1178,4 +1168,96 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Standardized (adjusted Pearson)"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "事前モデル確率"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Model"
+msgstr "モデル"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Number of steps"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Include"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Null model"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Encompassing model"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "事前モデル確率"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Model"
+msgstr "モデル"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Number of steps"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Include"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Null model"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Encompassing model"
 msgstr ""

@@ -989,10 +989,6 @@ msgid "Credible interval"
 msgstr "Przedział wiarygodności"
 
 msgctxt "InformedBinomialTestBayesian|"
-msgid "Prior"
-msgstr "Prior"
-
-msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Nie określono czynnika"
 
@@ -1104,10 +1100,6 @@ msgid "Credible interval"
 msgstr "Przedział wiarygodności"
 
 msgctxt "InformedMultinomialTestBayesian|"
-msgid "Prior"
-msgstr "Prior"
-
-msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Nie określono czynnika"
 
@@ -1173,3 +1165,97 @@ msgstr "Maks. liczba próbek (prób. mostkowe)"
 msgctxt "ContingencyTables|"
 msgid "Standardized (adjusted Pearson)"
 msgstr "Standaryzowany (skorygowany Pearson)"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "Prawdopodobieństwo a priori modelu"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Model"
+msgstr "Model"
+
+#, fuzzy
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Analiza sekwencyjna"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Number of steps"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Include"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Null model"
+msgstr ""
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Encompassing model"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr ""
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "Prawdopodobieństwo a priori modelu"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Model"
+msgstr "Model"
+
+#, fuzzy
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "Analiza sekwencyjna"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Number of steps"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Include"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Null model"
+msgstr ""
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Encompassing model"
+msgstr ""

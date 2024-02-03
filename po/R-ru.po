@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2023-12-02 03:26\n"
+"POT-Creation-Date: 2024-02-03 03:27\n"
 "PO-Revision-Date: 2023-02-21 05:38+0000\n"
 "Last-Translator: fedder <fedor.derish@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
@@ -415,6 +415,10 @@ msgstr "V-Крамера для этой модели еще не реализо
 msgid "Posterior"
 msgstr "Постериор"
 
+msgid ""
+"The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr ""
+
 #, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
 msgstr ""
@@ -434,6 +438,10 @@ msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
 
+#, fuzzy
+msgid "Performing sequential analysis."
+msgstr "Последовательная проверка гипотез"
+
 msgid "Observed counts"
 msgstr "Наблюдаемые значения"
 
@@ -451,6 +459,16 @@ msgid "Unrestricted posterior plot"
 msgstr ""
 
 #, fuzzy
+msgid "Sequential analysis"
+msgstr "Последовательная проверка гипотез"
+
+msgid "At least two models need to be specified."
+msgstr ""
+
+msgid "vs."
+msgstr ""
+
+#, fuzzy
 msgid "Observed"
 msgstr "Наблюдаемые"
 
@@ -461,6 +479,11 @@ msgstr "Оценка"
 #, fuzzy
 msgid "Proportions"
 msgstr "Пропорции"
+
+msgid ""
+"Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
+"parsed into a positive number. Please, check the input."
+msgstr ""
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
@@ -479,6 +502,14 @@ msgstr ""
 
 msgid "Error %"
 msgstr ""
+
+#, fuzzy
+msgid "P(M|Data)"
+msgstr "P(M|data)"
+
+#, fuzzy
+msgid "BF<sub>M</sub>"
+msgstr "BF<sub>10</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "

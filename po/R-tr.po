@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2023-12-02 03:26\n"
+"POT-Creation-Date: 2024-02-03 03:27\n"
 "PO-Revision-Date: 2023-01-31 20:41+0000\n"
 "Last-Translator: Ünal Halit ÖZDEN <uozden@ticaret.edu.tr>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
@@ -343,6 +343,10 @@ msgstr ""
 msgid "Posterior"
 msgstr ""
 
+msgid ""
+"The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr ""
+
 msgid "Invalid successes: variable must contain only integer values."
 msgstr ""
 
@@ -354,6 +358,9 @@ msgstr ""
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
+msgstr ""
+
+msgid "Performing sequential analysis."
 msgstr ""
 
 msgid "Observed counts"
@@ -371,6 +378,15 @@ msgstr ""
 msgid "Unrestricted posterior plot"
 msgstr ""
 
+msgid "Sequential analysis"
+msgstr ""
+
+msgid "At least two models need to be specified."
+msgstr ""
+
+msgid "vs."
+msgstr ""
+
 msgid "Observed"
 msgstr ""
 
@@ -380,6 +396,11 @@ msgstr ""
 #, fuzzy
 msgid "Proportions"
 msgstr "Oran"
+
+msgid ""
+"Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
+"parsed into a positive number. Please, check the input."
+msgstr ""
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
@@ -397,6 +418,12 @@ msgid "Error"
 msgstr ""
 
 msgid "Error %"
+msgstr ""
+
+msgid "P(M|Data)"
+msgstr ""
+
+msgid "BF<sub>M</sub>"
 msgstr ""
 
 msgid ""
