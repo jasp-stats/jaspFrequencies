@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-02-03 13:21+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 "X-Language: es\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -1169,94 +1175,88 @@ msgstr "Estandarizado (ajustado por Pearson)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Gráfico del Análisis Secuencial"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Factores de Bayes"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Probabilidad posterior"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribución previa"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Model Probability"
 msgstr "Probabilidad del Modelo Previo"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model"
 msgstr "Modelo"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Análisis secuencial"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Número de pasos"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Incluir"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Modelo nulo"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Modelo incluyente"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Gráfico del Análisis Secuencial"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Factores de Bayes"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Probabilidad posterior"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribución previa"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Model Probability"
 msgstr "Probabilidad del Modelo Previo"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model"
 msgstr "Modelo"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Análisis secuencial"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Número de pasos"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Incluir"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Modelo nulo"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Modelo incluyente"
