@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-02-03 03:27\n"
-"PO-Revision-Date: 2024-01-11 18:06+0000\n"
+"PO-Revision-Date: 2024-02-05 17:01+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/de/>\n"
@@ -365,9 +365,12 @@ msgstr "Cramers V ist für dieses Modell noch nicht implementiert"
 msgid "Posterior"
 msgstr "Posterior"
 
+#, fuzzy
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"`Erfolg` muss zwei Stufen haben, sofern der `Stichprobenumfang` nicht "
+"angegeben ist."
 
 msgid "Invalid successes: variable must contain only integer values."
 msgstr "Ungültige Erfolge: Variable darf nur ganzzahlige Werte enthalten."
@@ -387,7 +390,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Performing sequential analysis."
-msgstr "Sequenzielle Analyse"
+msgstr "Sequenzielle Analyse wird ausgeführt."
 
 msgid "Observed counts"
 msgstr "Beobachtete Anzahlen"
@@ -404,7 +407,6 @@ msgstr "Deskriptives Diagramm"
 msgid "Unrestricted posterior plot"
 msgstr "Diagramm unbeschränkter Posterior"
 
-#, fuzzy
 msgid "Sequential analysis"
 msgstr "Sequenzielle Analyse"
 
@@ -412,7 +414,7 @@ msgid "At least two models need to be specified."
 msgstr ""
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr "Beobachtet"
@@ -428,6 +430,9 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"Die Eingabe der Prior-Modellwahrscheinlichkeit für die Hypothese '%1$' (%2$s)"
+" konnte nicht in eine positive Zahl übersetzt werden. Bitte überprüfen Sie "
+"die Eingabe."
 
 #, fuzzy
 msgid "Bayesian evaluation of %1$s order constraints"
@@ -448,21 +453,18 @@ msgstr "Fehler"
 msgid "Error %"
 msgstr "Fehler %"
 
-#, fuzzy
 msgid "P(M|Data)"
 msgstr "P(M|Daten)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "BF<sub>M</sub>"
 
-#, fuzzy
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
-"Bitte überprüfen Sie, ob die Namen der Faktorebenen im Abschnitt "
-"'Reihenfolgebeschränkungs-Hypothesen' mit den Faktorebenen in Ihrem "
+"Bitte überprüfen Sie, ob die Namen der Faktorstufen im Abschnitt "
+"'Reihenfolgebeschränkungs-Hypothesen' mit den Faktorstufen in Ihrem "
 "Datensatz übereinstimmen."
 
 msgid ""
