@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2024-02-03 03:27\n"
-"PO-Revision-Date: 2023-12-12 15:06+0000\n"
+"PO-Revision-Date: 2024-02-07 15:01+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pl/>\n"
@@ -10,9 +10,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesowski test A/B"
@@ -371,6 +371,8 @@ msgstr "Posterior"
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"'Sukces' musi mieć dwa poziomy, jeżeli 'Wielkość próby' nie została "
+"określona."
 
 msgid "Invalid successes: variable must contain only integer values."
 msgstr ""
@@ -390,9 +392,8 @@ msgstr ""
 "Czynnik musi zawierać unikalne poziomy, które reprezentują liczbę sukcesów "
 "względem rozmiaru próby."
 
-#, fuzzy
 msgid "Performing sequential analysis."
-msgstr "Analiza sekwencyjna"
+msgstr "Wykonywanie analizy sekwencyjnej."
 
 msgid "Observed counts"
 msgstr "Liczebności obserwowane"
@@ -409,15 +410,14 @@ msgstr "Wykresy opisowe"
 msgid "Unrestricted posterior plot"
 msgstr "Nieograniczony wykres a posteriori"
 
-#, fuzzy
 msgid "Sequential analysis"
 msgstr "Analiza sekwencyjna"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Należy określić przynajmniej dwa modele."
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr "Obserwowane"
@@ -432,6 +432,9 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"Prawdopodobieństwo początkowe modelu dla hipotezy '%1$s' (%2$s) nie mogło "
+"zostać zinterpretowane jako liczba dodatnia. Proszę sprawdzić wprowadzone "
+"dane."
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Bayesowska analiza ograniczeń kolejności %1$s"
@@ -451,11 +454,9 @@ msgstr "Błąd"
 msgid "Error %"
 msgstr "Błąd %"
 
-#, fuzzy
 msgid "P(M|Data)"
-msgstr "P(M|dane)"
+msgstr "P(M|Dane)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
 msgstr "BF<sub>10</sub>"
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
 "POT-Creation-Date: 2024-02-03 03:27\n"
-"PO-Revision-Date: 2023-12-03 09:02+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"PO-Revision-Date: 2024-02-03 13:21+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/es/>\n"
 "Language: es\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Contraste bayesiano A/B"
@@ -371,6 +371,7 @@ msgstr "Posterior"
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"El `Acierto` debe tener dos niveles si el `Tamaño Muestral` no se especifica."
 
 msgid "Invalid successes: variable must contain only integer values."
 msgstr "Aciertos no válidos: la variable debe contener solo valores enteros."
@@ -388,9 +389,8 @@ msgstr ""
 "El factor debe contener niveles únicos que representen los aciertos con el "
 "tamaño muestral."
 
-#, fuzzy
 msgid "Performing sequential analysis."
-msgstr "Análisis Secuencial"
+msgstr "Realizando el análisis secuencial."
 
 msgid "Observed counts"
 msgstr "Recuentos observados"
@@ -407,15 +407,14 @@ msgstr "Gráfico de descriptivos"
 msgid "Unrestricted posterior plot"
 msgstr "Gráfico posterior sin restricciones"
 
-#, fuzzy
 msgid "Sequential analysis"
-msgstr "Análisis Secuencial"
+msgstr "Análisis secuencial"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Al menos, se necesita especificar dos modelos."
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr "Observado"
@@ -430,6 +429,9 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"La entrada de la probabilidad del modelo previo para la hipótesis '%1$s' "
+"(%2$s) no se puede analizar como número positivo. Por favor, comprueba la "
+"entrada."
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Evaluación bayesiana de %1$s restricciones de orden"
@@ -449,13 +451,11 @@ msgstr "Fallo"
 msgid "Error %"
 msgstr "Fallo %"
 
-#, fuzzy
 msgid "P(M|Data)"
 msgstr "P(M|datos)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "FB<sub>10</sub>"
+msgstr "FB<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
