@@ -42,8 +42,9 @@ Form
 
 		RadioButtonGroup
 		{
-			title: qsTr("Direction")
-			name: "alternative"
+			id:		alternative
+			title:	qsTr("Direction")
+			name:	"alternative"
 			RadioButton { value: "twoSided";	label: qsTr("≠ Test value"); checked: true	}
 			RadioButton { value: "greater";		label: qsTr("> Test value")					}
 			RadioButton { value: "less";		label: qsTr("< Test value")					}
@@ -74,5 +75,5 @@ Form
 		}
 	}
 
-	BayesFactorType {}
+	BayesFactorType { correlated: alternative.value }
 }
