@@ -458,7 +458,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-msgid "Error %"
+msgid "Error %%"
 msgstr ""
 
 #, fuzzy
