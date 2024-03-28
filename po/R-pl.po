@@ -451,8 +451,8 @@ msgstr "Log. prawd. brzegowe"
 msgid "Error"
 msgstr "Błąd"
 
-msgid "Error %"
-msgstr "Błąd %"
+msgid "Error %%"
+msgstr "Błąd %%"
 
 msgid "P(M|Data)"
 msgstr "P(M|Dane)"

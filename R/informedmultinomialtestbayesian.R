@@ -316,7 +316,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   summaryTable$addColumnInfo(name = "model",         title = "",                        type = "string")
   summaryTable$addColumnInfo(name = "marglik",       title = gettext("Log marglik"),    type = "number")
   summaryTable$addColumnInfo(name = "marglikError",  title = gettext("Error"),          type = "number")
-  summaryTable$addColumnInfo(name = "marglikPrec",   title = gettext("Error %"),        type = "number")
+  summaryTable$addColumnInfo(name = "marglikPrec",   title = gettextf("Error %%"),      type = "number")
   summaryTable$addColumnInfo(name = "priorProb",     title = gettext("P(M)"),           type = "number")
   summaryTable$addColumnInfo(name = "postProb",      title = gettext("P(M|Data)"),      type = "number")
   summaryTable$addColumnInfo(name = "bfInclusion",   title = gettext("BF<sub>M</sub>"), type = "number")

@@ -448,8 +448,8 @@ msgstr "Log marglik"
 msgid "Error"
 msgstr "Fallo"
 
-msgid "Error %"
-msgstr "Fallo %"
+msgid "Error %%"
+msgstr "Fallo %%"
 
 msgid "P(M|Data)"
 msgstr "P(M|datos)"

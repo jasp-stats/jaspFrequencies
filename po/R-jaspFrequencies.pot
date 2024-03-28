@@ -394,7 +394,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-msgid "Error %"
+msgid "Error %%"
 msgstr ""
 
 msgid "P(M|Data)"

@@ -446,8 +446,8 @@ msgstr ""
 msgid "Error"
 msgstr "Erreur"
 
-msgid "Error %"
-msgstr "% d'erreur"
+msgid "Error %%"
+msgstr "%% d'erreur"
 
 #, fuzzy
 msgid "P(M|Data)"
