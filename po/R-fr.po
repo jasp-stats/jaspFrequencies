@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2024-02-03 03:27\n"
-"PO-Revision-Date: 2024-02-19 17:01+0000\n"
+"PO-Revision-Date: 2024-04-07 21:10+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/fr/>\n"
@@ -212,7 +212,6 @@ msgstr "VS-MPR%s"
 msgid "Value"
 msgstr "Valeur"
 
-#, fuzzy
 msgid "df"
 msgstr "ddl"
 
