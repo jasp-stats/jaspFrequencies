@@ -19,7 +19,7 @@
 
 MultinomialTest <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           count = "",
           descriptivesPlot = FALSE,
           descriptivesPlotCiLevel = 0.95,

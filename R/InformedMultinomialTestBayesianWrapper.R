@@ -19,25 +19,31 @@
 
 InformedMultinomialTestBayesian <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           bayesFactorType = "BF10",
-          bfComparison = "encompassing",
-          bfVsHypothesis = "",
-          bridgeSamples = 1000,
+          bfComparison = "null",
+          bfVsHypothesis = "Model 1",
+          bridgeSamples = 10000,
           count = "",
           descriptivesDisplay = "counts",
           descriptivesPlot = FALSE,
           descriptivesTable = FALSE,
           factor = "",
+          includeEncompassingModel = TRUE,
+          includeNullModel = TRUE,
           mcmcBurnin = 500,
-          mcmcSamples = 5000,
+          mcmcSamples = 10000,
           models = list(list(modelName = "Model 1", syntax = "")),
           plotHeight = 320,
           plotWidth = 480,
           posteriorPlot = FALSE,
           posteriorPlotCiCoverage = 0.95,
           priorCounts = list(list(levels = list(), name = "data 1", values = list())),
+          priorModelProbability = list(list(levels = list("Null", "Encompassing", "Model 1"), name = "data 1", values = list("1", "1", "1"))),
           seed = 1,
+          sequentialAnalysisNumberOfSteps = 10,
+          sequentialAnalysisPlot = FALSE,
+          sequentialAnalysisPlotType = "bayesFactor",
           setSeed = FALSE) {
 
    defaultArgCalls <- formals(jaspFrequencies::InformedMultinomialTestBayesian)
@@ -49,7 +55,7 @@ InformedMultinomialTestBayesian <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
-   optionsWithFormula <- c("bfVsHypothesis", "count", "factor", "models", "priorCounts")
+   optionsWithFormula <- c("bfVsHypothesis", "count", "factor", "models", "priorCounts", "priorModelProbability")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 

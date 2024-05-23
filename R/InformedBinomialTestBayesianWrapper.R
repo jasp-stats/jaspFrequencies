@@ -19,15 +19,17 @@
 
 InformedBinomialTestBayesian <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           bayesFactorType = "BF10",
           bfComparison = "encompassing",
-          bfVsHypothesis = "",
+          bfVsHypothesis = "Model 1",
           bridgeSamples = 1000,
           descriptivesDisplay = "counts",
           descriptivesPlot = FALSE,
           descriptivesTable = FALSE,
           factor = "",
+          includeEncompassingModel = TRUE,
+          includeNullModel = TRUE,
           mcmcBurnin = 500,
           mcmcSamples = 5000,
           models = list(list(modelName = "Model 1", syntax = "")),
@@ -36,8 +38,12 @@ InformedBinomialTestBayesian <- function(
           posteriorPlot = FALSE,
           posteriorPlotCiCoverage = 0.95,
           priorCounts = list(list(levels = list(), name = "data 1", values = list()), list(levels = list(), name = "data 2", values = list())),
+          priorModelProbability = list(list(levels = list("Model 1", "Encompassing", "Null"), name = "data 1", values = list(1, 1, 1))),
           sampleSize = "",
           seed = 1,
+          sequentialAnalysisNumberOfSteps = 10,
+          sequentialAnalysisPlot = FALSE,
+          sequentialAnalysisPlotType = "bayesFactor",
           setSeed = FALSE,
           successes = "") {
 
@@ -50,7 +56,7 @@ InformedBinomialTestBayesian <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
-   optionsWithFormula <- c("bfVsHypothesis", "factor", "models", "priorCounts", "sampleSize", "successes")
+   optionsWithFormula <- c("bfVsHypothesis", "factor", "models", "priorCounts", "priorModelProbability", "sampleSize", "successes")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
