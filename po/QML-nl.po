@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-05-23 21:57+0000\n"
+"Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/nl/>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Language: nl\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -918,93 +924,87 @@ msgstr "Aangepaste verwachte proporties"
 
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr ""
+msgstr "Geïnformeerde Multinomiale Toets"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr ""
+msgstr "Geïnformeerde Bayesiaanse Multinomiale Toets"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr ""
+msgstr "Geïnformeerde Multi-Binomiale Toets"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr ""
+msgstr "Geïnformeerde Bayesiaanse Multi-Binomiale Toets"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
 msgstr "Factor"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Successen"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
-msgstr ""
+msgstr "Steekproefgrootte"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayes Factor Vergelijking"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Omvattend"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Null"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabel"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Figuur"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Display"
 msgstr "Weergeven"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
 msgstr "Aantallen"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proporties"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Posterior figuur"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Geloofwaardigheidsinterval"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Geen factor gespecificeerd"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
 msgstr "Niveau #"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Volgorde Beperkte Hypotheses"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
@@ -1014,107 +1014,107 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Voer elke beperking van een hypothese in op een nieuwe regel,\n"
+"bijv. Laag <= Midden <= Hoog\n"
+"waarbij 'Laag'/'Midden'/'Hoog' de namen van de factorniveaus zijn.\n"
+"Klik op het 'plus'-pictogram om meer hypothesen toe te voegen. \n"
+"Klik op het informatiepictogram voor meer voorbeelden."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Klik voor meer informatie over de syntax voor volgordebeperkingen."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Model 1"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ctrl + Enter om toe te passen. Klik op de blauwe knop hierboven voor hulp "
+"bij de syntax voor beperkingen"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Geavanceerd"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Schattingsopties"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Inbranding (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iteraties (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Maximum trekkingen (bridgesampling)"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
 msgstr "Factor"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Counts"
 msgstr "Aantallen"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayes Factor Vergelijking"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Omvattend"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Null"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabel"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Figuur"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Display"
 msgstr "Weergeven"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proporties"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Posterior figuur"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Credible interval"
 msgstr "Geloofwaardigheidsinterval"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Geen factor gespecificeerd"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Level #"
 msgstr "Niveau #"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Volgorde Beperkte Hypotheses"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
@@ -1124,136 +1124,136 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Voer elke beperking van een hypothese in op een nieuwe regel,\n"
+"bijv. Laag <= Midden <= Hoog\n"
+"waarbij 'Laag'/'Midden'/'Hoog' de namen van de factorniveaus zijn.\n"
+"Klik op het 'plus'-pictogram om meer hypothesen toe te voegen. \n"
+"Klik op het informatiepictogram voor meer voorbeelden."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Klik voor meer informatie over de syntax voor volgorde beperkingen."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Model 1"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ctrl + Enter om toe te passen. Klik op de blauwe knop hierboven voor hulp "
+"bij de syntax voor beperkingen"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Geavanceerd"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Schattingsopties"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Inbranding (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iteraties (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Maximum trekkingen (bridgesampling)"
 
 msgctxt "ContingencyTables|"
 msgid "Standardized (adjusted Pearson)"
-msgstr ""
+msgstr "Gestandaardiseerd (aangepaste Pearson)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Sequentiële analysefiguur"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Bayes factoren"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Posterior kans"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Prior-verdeling"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr "Prior Model Kans"
+msgstr "Prior Modelkans"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model"
 msgstr "Model"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Sequentiële analyse"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Aantal stappen"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Opnemen"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Nulmodel"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Omvattend model"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Sequentiële analysefiguur"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Bayes factoren"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Posterior kans"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Prior-verdeling"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr "Prior Model Kans"
+msgstr "Prior Modelkans"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model"
 msgstr "Model"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Sequentiële analyse"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Aantal stappen"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Opnemen"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Nulmodel"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Omvattend model"
