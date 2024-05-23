@@ -19,7 +19,7 @@
 
 ContingencyTablesBayesian <- function(
           data = NULL,
-          version = "0.18.2",
+          version = "0.19",
           formula = NULL,
           alternative = "twoSided",
           bayesFactorType = "BF10",
