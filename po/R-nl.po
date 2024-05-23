@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-02-03 03:27\n"
-"PO-Revision-Date: 2023-05-04 19:40+0000\n"
+"PO-Revision-Date: 2024-05-23 21:58+0000\n"
 "Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/nl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesiaanse A/B Toets"
@@ -365,27 +365,28 @@ msgstr "Posterior"
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"De `Success` moet twee niveaus hebben als de `Steekproefgrootte` niet is "
+"opgegeven."
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
-"Ongeldig aantallen: de variabele kan alleen uit gehele waarden bestaan."
+msgstr "Ongeldig successen: variabele moet alleen uit gehele waarden bestaan."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
 msgstr ""
-"Ongeldig aantallen: de variabele kan alleen uit gehele waarden bestaan."
+"Ongeldig steekproefgrootte: variabele moet alleen uit gehele getallen "
+"bestaan."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "De steekproefgrootte moet groter zijn dan het aantal successen."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"Factor moet unieke niveaus bevatten die de successen in kaart brengen voor "
+"de steekproefgrootte."
 
-#, fuzzy
 msgid "Performing sequential analysis."
-msgstr "Sequentiële Analyse"
+msgstr "Sequentiële analyse uitvoeren."
 
 msgid "Observed counts"
 msgstr "Geobserveerde aantallen"
@@ -400,73 +401,76 @@ msgid "Descriptives plot"
 msgstr "Beschrijvend diagram"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Onbeperkte posterior figuur"
 
-#, fuzzy
 msgid "Sequential analysis"
-msgstr "Sequentiële Analyse"
+msgstr "Sequentiële analyse"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Er moeten minstens twee modellen worden gespecificeerd."
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr "Geobserveerd"
 
-#, fuzzy
 msgid "Estimated"
-msgstr "Schatting"
+msgstr "Geschat"
 
-#, fuzzy
 msgid "Proportions"
-msgstr "Proportie"
+msgstr "Proporties"
 
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"Prior model kansinput voor de '%1$s' hypothese (%2$s) kon niet worden "
+"verwerkt tot een positief getal. Controleer de invoer."
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Bayesiaanse evaluatie van %1$s volgordebeperkingen"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log marglik"
 
 msgid "Error"
-msgstr ""
+msgstr "Fout"
 
 msgid "Error %%"
-msgstr ""
+msgstr "Fout %%"
 
-#, fuzzy
 msgid "P(M|Data)"
 msgstr "P(M|data)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"Controleer of de namen van de factorniveaus in het gedeelte 'Volgorde "
+"Beperkte Hypothesen' zijn gematched met de factorniveaus in je dataset."
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"Het model in elke rij (aangeduid als '1') wordt vergeleken met de %1$s ("
+"aangeduid als 0)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Geef geïnformeerde hypothesetoetsen op in het gedeelte `Volgorde Beperkte "
+"Hypothesen`."
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Verwachte aantallen niet ondersteund zonder geobserveerde aantallen."
@@ -597,15 +601,16 @@ msgstr ""
 "tijdens de steekproeftrekking. Probeer het model te wijzigen (bv. "
 "vereenvoudigen) of de priors aan te passen."
 
-#, fuzzy
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
-"Kan de resultaten niet berekenen; er is een numerieke fout opgetreden "
-"tijdens de steekproeftrekking. Probeer het model te wijzigen (bv. "
-"vereenvoudigen) of de priors aan te passen."
+"Fout uit het R pakket 'conting': %s <br> Het is mogelijk dat er een "
+"numerieke fout is opgetreden tijdens het trekken. Probeer het model te "
+"veranderen (bijv. vereenvoudigen), de prior aan te passen, de beginwaarde "
+"voor de toevalsgenerator te veranderen of het aantal MCMC-trekkingen te "
+"veranderen."
 
 msgid "R Package error: Cannot retrieve table probabilities"
 msgstr "R Package fout: kan tabelkansen niet ophalen"
