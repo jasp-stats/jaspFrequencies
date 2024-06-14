@@ -28,9 +28,9 @@ Form
 		preferredHeight: 190 * preferencesModel.uiScale
 		marginBetweenVariablesLists: 15
 		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; suggestedColumns: ["ordinal", "nominal"]	}
-		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
-		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; suggestedColumns: ["scale", "ordinal"]	}
+		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]	}
+		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"]	}
+		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"]	}
 	}
 
 	RadioButtonGroup

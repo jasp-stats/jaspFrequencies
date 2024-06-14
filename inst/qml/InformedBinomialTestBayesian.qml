@@ -42,7 +42,7 @@ Form
 			name:				"factor"
 			title:				qsTr("Factor")
 			singleVariable:		true
-			suggestedColumns:	["ordinal", "nominal"]
+			allowedColumns:		["nominal"]
 		}
 
 		AssignedVariablesList
@@ -50,7 +50,7 @@ Form
 			name:				"successes"
 			title:				qsTr("Successes")
 			singleVariable:		true
-			suggestedColumns:	["ordinal", "scale"]
+			allowedColumns:		["scale"]
 		}
 
 		AssignedVariablesList
@@ -58,7 +58,7 @@ Form
 			name:				"sampleSize"
 			title:				qsTr("Sample Size")
 			singleVariable:		true
-			suggestedColumns:	["ordinal", "scale"]
+			allowedColumns:		["scale"]
 		}
 	}
 
