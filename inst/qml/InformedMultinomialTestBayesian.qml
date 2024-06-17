@@ -42,7 +42,7 @@ Form
 			name:				"factor"
 			title:				qsTr("Factor")
 			singleVariable:		true
-			suggestedColumns:	["ordinal", "nominal"]
+			allowedColumns:		["nominal"]
 		}
 
 		AssignedVariablesList
@@ -50,7 +50,7 @@ Form
 			name:				"count"
 			title:				qsTr("Counts")
 			singleVariable:		true
-			suggestedColumns:	["scale", "ordinal"]
+			allowedColumns:		["scale"]
 		}
 	}
 
