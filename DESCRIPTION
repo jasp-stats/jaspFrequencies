@@ -12,6 +12,7 @@ Encoding: UTF-8
 Imports:
   abtest (>= 0.2.1),
   BayesFactor,
+  bridgesampling,
   conting,
   multibridge,
   ggplot2,
