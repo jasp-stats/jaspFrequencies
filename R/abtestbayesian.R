@@ -366,20 +366,6 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
     sigma_range = sigma_range,
     bftype      = options$bfRobustnessPlotType
   ))
-
-  # plotFunc <- function() {
-  #
-  #   abtest::plot_robustness(
-  #     x           = ab_obj,
-  #     mu_steps    = options$bfRobustnessPlotStepsPriorMean,
-  #     sigma_steps = options$bfRobustnessPlotStepsPriorSd,
-  #     mu_range    = mu_range,
-  #     sigma_range = sigma_range,
-  #     bftype      = options$bfRobustnessPlotType
-  #   )
-  # }
-
-  return (plotFunc)
 }
 
 
@@ -957,7 +943,6 @@ plot_robustness_ggplot2 <- function(x,
     ggplot2::scale_fill_stepsn(
       colorbarName,
       breaks       = colorBreaks,
-      # minor_breaks = minorColorBreaks,
       limits       = colorLimits,
       labels       = colorLabels,
       colors = grDevices::hcl.colors(nTicks, "YlOrRd", rev = TRUE)) +
@@ -969,11 +954,10 @@ plot_robustness_ggplot2 <- function(x,
     ggplot2::theme(
       legend.position     = "right",
       axis.title.y.left   = ggplot2::element_text(angle = 0, vjust = .5),
-      # legend.key        = element_rect(color = "black", fill = NA, size = 1),
       legend.frame        = ggplot2::element_rect(color = "black", fill = NA, size = .4),
       legend.ticks        = ggplot2::element_line(size = .5),
       legend.ticks.length = ggplot2::unit(1.0, "cm"),
-      panel.border        = ggplot2::element_rect(colour = "black", fill=NA, size=.5),
+      panel.border        = ggplot2::element_rect(colour = "black", fill = NA, size = .5),
       plot.margin         = ggplot2::margin(10, 10, 10, 10, "pt")
     )
 }
