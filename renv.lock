@@ -187,7 +187,6 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "vandenman",
       "RemoteRepo": "conting",
-      "RemoteRef": "HEAD",
       "RemoteSha": "03a4eb9a687e015d602022a01d4e638324c110c8"
     },
     "corpcor": {
@@ -433,7 +432,6 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteRef": "HEAD",
       "RemoteSha": "7de02c442478e028fe2036e3b906059bf504c13e"
     },
     "jaspGraphs": {
@@ -444,7 +442,6 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteRef": "HEAD",
       "RemoteSha": "e439c080e3841e0719c00ce35c376b34c833b546"
     },
     "jpeg": {
