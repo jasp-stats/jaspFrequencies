@@ -96,7 +96,7 @@
     },
     "askpass": {
       "Package": "askpass",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository"
     },
     "backports": {
@@ -171,7 +171,7 @@
     },
     "commonmark": {
       "Package": "commonmark",
-      "Version": "1.9.1",
+      "Version": "1.9.2",
       "Source": "Repository"
     },
     "contfrac": {
@@ -206,7 +206,7 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.2",
+      "Version": "5.2.3",
       "Source": "Repository"
     },
     "data.table": {
@@ -326,7 +326,7 @@
     },
     "glue": {
       "Package": "glue",
-      "Version": "1.7.0",
+      "Version": "1.8.0",
       "Source": "Repository"
     },
     "gnm": {
@@ -417,7 +417,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "24d4ae8eb2efcaae974b6c900ebf1c64020bb90e"
+      "RemoteSha": "79632a237c7bf6bb9b6c8fdf30cc59abccb923d1"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -441,7 +441,7 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.8",
+      "Version": "1.8.9",
       "Source": "Repository"
     },
     "knitr": {
@@ -466,7 +466,7 @@
     },
     "lavaan": {
       "Package": "lavaan",
-      "Version": "0.6-18",
+      "Version": "0.6-19",
       "Source": "Repository"
     },
     "lifecycle": {
@@ -541,12 +541,12 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository"
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.1",
+      "Version": "2.2.2",
       "Source": "Repository"
     },
     "pbapply": {
@@ -666,7 +666,7 @@
     },
     "rbibutils": {
       "Package": "rbibutils",
-      "Version": "2.2.16",
+      "Version": "2.3",
       "Source": "Repository"
     },
     "readxl": {
@@ -776,7 +776,7 @@
     },
     "sys": {
       "Package": "sys",
-      "Version": "3.4.2",
+      "Version": "3.4.3",
       "Source": "Repository"
     },
     "systemfonts": {
@@ -816,7 +816,7 @@
     },
     "tseries": {
       "Package": "tseries",
-      "Version": "0.10-57",
+      "Version": "0.10-58",
       "Source": "Repository"
     },
     "utf8": {
@@ -861,7 +861,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.47",
+      "Version": "0.48",
       "Source": "Repository"
     },
     "xml2": {
