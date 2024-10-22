@@ -160,8 +160,8 @@ test_that("Sequential plot matches", {
 
 
 test_that("plotRobustness plot matches", {
-  skip("Have to set a global theme.")
   set.seed(0)
+  testthat::skip_on_os("mac")
 
   options <- jaspTools::analysisOptions("ABTestBayesian")
   options$n1 <- "n1"
@@ -173,8 +173,9 @@ test_that("plotRobustness plot matches", {
   options$priorModelProbabilityLess      <- 0
   options$priorModelProbabilityTwoSided  <- 0
   options$bfRobustnessPlot     <- TRUE
+  options$bfRobustnessPlotType <- "BF10"
 
-  results  <- jaspTools::runAnalysis("ABTestBayesian", "ab_data.csv", options)
+  results  <- jaspTools::runAnalysis("ABTestBayesian", testthat::test_path("ab_data.csv"), options)
   testPlot <- results[["state"]][["figures"]][[1]]
 
   jaspTools::expect_equal_plots(testPlot, "robustness")

@@ -16,6 +16,7 @@ Imports:
   conting,
   multibridge,
   ggplot2,
+  interp,
   jaspBase,
   jaspGraphs,
   plyr,
