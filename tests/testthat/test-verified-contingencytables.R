@@ -18,7 +18,7 @@ test_that("Main table results match R, SPSS, SAS, Minitab", {
 
   jaspTools::expect_equal_tables(
     "test"=resultTable,
-    "ref"=list("TRUE", 32, 19, "Fiction", 51, 20, 29, "Nonfiction", 49, "TRUE",
+    "ref"=list( 32, 19, "Fiction", 51, 20, 29, "Nonfiction", 49,
                52, 48, "Total", 100)
   )
 })
