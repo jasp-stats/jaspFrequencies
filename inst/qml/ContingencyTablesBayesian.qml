@@ -107,7 +107,7 @@ Form
 		Group
 		{
 			title:	qsTr("Counts")
-			debug:	true
+			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true }
 			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
 		}
 
@@ -127,6 +127,8 @@ Form
 			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
 			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
 		}
+
+		CheckBox { name: "tableMargin";		label: qsTr("Table margin");		checked: true }
 	}
 
 	Section

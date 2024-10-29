@@ -114,6 +114,7 @@ Form
 		Group
 		{
 			title: qsTr("Counts")
+			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true }
 			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
 			CheckBox
 			{
@@ -148,6 +149,9 @@ Form
 			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
 			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
 		}
+
+		
+		CheckBox { name: "tableMargin";		label: qsTr("Table margin");		checked: true }
 	}
 
 	Section
