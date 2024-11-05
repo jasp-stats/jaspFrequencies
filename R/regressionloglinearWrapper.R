@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,11 +19,11 @@
 
 RegressionLogLinear <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
-          count = "",
-          factors = list(),
-          modelTerms = list(),
+          count = list(types = list(), value = ""),
+          factors = list(types = list(), value = NULL),
+          modelTerms = list(optionKey = "components", types = list(), value = list()),
           plotHeight = 320,
           plotWidth = 480,
           regressionCoefficientsCi = FALSE,

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,13 +19,13 @@
 
 ContingencyTablesBayesian <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
           alternative = "twoSided",
           bayesFactorType = "BF10",
           columnOrder = "ascending",
-          columns = list(),
-          counts = "",
+          columns = list(types = list(), value = NULL),
+          counts = list(types = list(), value = ""),
           countsExpected = FALSE,
           cramersV = FALSE,
           cramersVCiLevel = 0.95,
@@ -45,7 +45,7 @@ ContingencyTablesBayesian <- function(
           residualsStandardized = FALSE,
           residualsUnstandardized = FALSE,
           rowOrder = "ascending",
-          rows = list(),
+          rows = list(types = list(), value = NULL),
           samplingModel = "independentMultinomialRowsFixed",
           seed = 1,
           setSeed = FALSE) {

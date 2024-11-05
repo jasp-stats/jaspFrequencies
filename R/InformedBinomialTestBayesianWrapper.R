@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 InformedBinomialTestBayesian <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           bayesFactorType = "BF10",
           bfComparison = "encompassing",
           bfVsHypothesis = "Model 1",
@@ -27,7 +27,7 @@ InformedBinomialTestBayesian <- function(
           descriptivesDisplay = "counts",
           descriptivesPlot = FALSE,
           descriptivesTable = FALSE,
-          factor = "",
+          factor = list(types = list(), value = ""),
           includeEncompassingModel = TRUE,
           includeNullModel = TRUE,
           mcmcBurnin = 500,
@@ -38,14 +38,14 @@ InformedBinomialTestBayesian <- function(
           posteriorPlot = FALSE,
           posteriorPlotCiCoverage = 0.95,
           priorCounts = list(list(levels = list(), name = "data 1", values = list()), list(levels = list(), name = "data 2", values = list())),
-          priorModelProbability = list(list(levels = list("Model 1", "Encompassing", "Null"), name = "data 1", values = list(1, 1, 1))),
-          sampleSize = "",
+          priorModelProbability = list(list(levels = list(), name = "data 1", values = list())),
+          sampleSize = list(types = list(), value = ""),
           seed = 1,
           sequentialAnalysisNumberOfSteps = 10,
           sequentialAnalysisPlot = FALSE,
           sequentialAnalysisPlotType = "bayesFactor",
           setSeed = FALSE,
-          successes = "") {
+          successes = list(types = list(), value = "")) {
 
    defaultArgCalls <- formals(jaspFrequencies::InformedBinomialTestBayesian)
    defaultArgs <- lapply(defaultArgCalls, eval)

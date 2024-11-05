@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,16 +19,16 @@
 
 InformedMultinomialTestBayesian <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           bayesFactorType = "BF10",
           bfComparison = "null",
           bfVsHypothesis = "Model 1",
           bridgeSamples = 10000,
-          count = "",
+          count = list(types = list(), value = ""),
           descriptivesDisplay = "counts",
           descriptivesPlot = FALSE,
           descriptivesTable = FALSE,
-          factor = "",
+          factor = list(types = list(), value = ""),
           includeEncompassingModel = TRUE,
           includeNullModel = TRUE,
           mcmcBurnin = 500,

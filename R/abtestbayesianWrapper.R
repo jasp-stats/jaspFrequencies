@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 ABTestBayesian <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           bayesFactorOrder = "bestModelTop",
           bayesFactorType = "BF10",
           bfRobustnessPlot = FALSE,
@@ -32,8 +32,8 @@ ABTestBayesian <- function(
           bfRobustnessPlotUpperPriorSd = 1,
           bfSequentialPlot = FALSE,
           descriptivesTable = FALSE,
-          n1 = "",
-          n2 = "",
+          n1 = list(types = list(), value = ""),
+          n2 = list(types = list(), value = ""),
           normalPriorMean = 0,
           normalPriorSd = 1,
           plotHeight = 320,
@@ -49,8 +49,8 @@ ABTestBayesian <- function(
           samples = 10000,
           seed = 1,
           setSeed = FALSE,
-          y1 = "",
-          y2 = "") {
+          y1 = list(types = list(), value = ""),
+          y2 = list(types = list(), value = "")) {
 
    defaultArgCalls <- formals(jaspFrequencies::ABTestBayesian)
    defaultArgs <- lapply(defaultArgCalls, eval)

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 BinomialTestBayesian <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
           alternative = "twoSided",
           bayesFactorType = "BF10",
@@ -33,7 +33,7 @@ BinomialTestBayesian <- function(
           priorPosteriorPlot = FALSE,
           priorPosteriorPlotAdditionalInfo = TRUE,
           testValue = "0.5",
-          variables = list()) {
+          variables = list(types = list(), value = NULL)) {
 
    defaultArgCalls <- formals(jaspFrequencies::BinomialTestBayesian)
    defaultArgs <- lapply(defaultArgCalls, eval)

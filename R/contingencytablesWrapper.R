@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,16 +19,16 @@
 
 ContingencyTables <- function(
           data = NULL,
-          version = "0.19",
+          version = "0.19.2",
           formula = NULL,
           byIntervalEta = FALSE,
           chiSquared = TRUE,
           chiSquaredContinuityCorrection = FALSE,
           cochranAndMantel = FALSE,
           columnOrder = "ascending",
-          columns = list(),
+          columns = list(types = list(), value = NULL),
           contingencyCoefficient = FALSE,
-          counts = "",
+          counts = list(types = list(), value = ""),
           countsExpected = FALSE,
           countsHiddenSmallCounts = FALSE,
           countsHiddenSmallCountsThreshold = 5,
@@ -52,7 +52,7 @@ ContingencyTables <- function(
           residualsStandardized = FALSE,
           residualsUnstandardized = FALSE,
           rowOrder = "ascending",
-          rows = list(),
+          rows = list(types = list(), value = NULL),
           somersD = FALSE,
           testOddsRatioEquals = 1,
           uncertaintyCoefficient = FALSE,

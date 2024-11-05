@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2022 University of Amsterdam
+# Copyright (C) 2013-2024 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,16 +19,16 @@
 
 MultinomialTest <- function(
           data = NULL,
-          version = "0.19",
-          count = "",
+          version = "0.19.2",
+          count = list(types = list(), value = ""),
           descriptivesPlot = FALSE,
           descriptivesPlotCiLevel = 0.95,
           descriptivesTable = FALSE,
           descriptivesTableCi = FALSE,
           descriptivesTableCiLevel = 0.95,
           descriptivesType = "counts",
-          expectedCount = "",
-          factor = "",
+          expectedCount = list(types = list(), value = ""),
+          factor = list(types = list(), value = ""),
           plotHeight = 320,
           plotWidth = 480,
           testValues = "equal",
