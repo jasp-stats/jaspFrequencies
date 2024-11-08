@@ -233,6 +233,9 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     groupList                             <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready) # Compute/get Group List
     res                                   <- try(.crossTabTestsRows(analysisContainer, groupList$rows, groupList, options, ready, counts.fp))
 
+    if (ready && !.crossTabIs2x2(table(dataset[[analysis[["columns"]]]], dataset[[analysis[["rows"]]]])))
+      crossTabChisq$addFootnote(gettext("Continuity correction is available only for 2x2 tables."))
+
     .crossTabSetErrorOrFill(res, crossTabChisq)
   }
 }
@@ -717,18 +720,22 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   return(unlist(rowNames))
 }
 
+.crossTabIs2x2 <- function(counts.matrix) {
+  return(all(dim(counts.matrix) == 2L))
+}
+
 .crossTabMainNote <- function(options) {
 
-  if (options$countsObserved)               outputType <- gettext("observed counts")
-  else if (options$countsExpected)          outputType <- gettext("expected counts")
-  else if (options$percentagesRow)          outputType <- gettext("row percentages")
-  else if (options$percentagesColumn)       outputType <- gettext("column percentages")
-  else if (options$percentagesTotal)        outputType <- gettext("total percentages")
-  else if (options$residualsUnstandardized) outputType <- gettext("unstandardized residuals")
-  else if (options$residualsPearson)        outputType <- gettext("Pearson residuals")
-  else if (options$residualsStandardized)   outputType <- gettext("standardized residuals")
+  if (options$countsObserved)               return(gettext("Each cell displays the observed counts"))
+  else if (options$countsExpected)          return(gettext("Each cell displays the expected counts"))
+  else if (options$percentagesRow)          return(gettext("Each cell displays the row percentages"))
+  else if (options$percentagesColumn)       return(gettext("Each cell displays column percentages"))
+  else if (options$percentagesTotal)        return(gettext("Each cell displays total percentages"))
+  else if (options$residualsUnstandardized) return(gettext("Each cell displays unstandardized residuals"))
+  else if (options$residualsPearson)        return(gettext("Each cell displays Pearson residuals"))
+  else if (options$residualsStandardized)   return(gettext("Each cell displays standardized residuals"))
 
-  return(gettextf("Each cell displays the %1$s.", outputType))
+  stop("unreachable point in .crossTabMainNote was reached!")
 }
 
 # Group matrix
@@ -1080,7 +1087,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
       row[["type[chiSquared-cc]"]] <- gettextf("%s continuity correction", "\u03A7\u00B2")
 
-      if (ready) {
+      if (ready && .crossTabIs2x2(counts.matrix)) {
 
         chi.result <- try({
           chi.result <- stats::chisq.test(counts.matrix)
