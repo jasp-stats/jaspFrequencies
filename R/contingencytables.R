@@ -135,7 +135,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
     # Create table
     crossTabMain <- createJaspTable(title = gettext("Contingency Tables"))
-    crossTabMain$dependOn(c("countsExpected", "countsObserved", "tableMargin", "percentagesRow",  "percentagesColumn",
+    crossTabMain$dependOn(c("countsExpected", "countsObserved", "marginShowTotals", "percentagesRow",  "percentagesColumn",
                             "percentagesTotal", "rowOrder", "columnOrder", "residualsUnstandardized",
                             "residualsPearson", "residualsStandardized"))
     crossTabMain$showSpecifiedColumnsOnly <- TRUE
@@ -168,7 +168,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     # Totals columns
     totalTitle <- gettext("Total")
 
-    if (options$tableMargin && (counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn ||
+    if (options$marginShowTotals && (counts.fp || options$countsExpected || options$percentagesRow || options$percentagesColumn ||
          options$percentagesTotal || options$residualsUnstandardized || options$residualsPearson || options$residualsStandardized)) {
       if (options$countsObserved)          crossTabMain$addColumnInfo(name = "total[counts]",                   title = totalTitle, type = "number",  format = "sf:4;dp:2")
       if (options$countsExpected)          crossTabMain$addColumnInfo(name = "total[expected]",                 title = totalTitle, type = "number",  format = "sf:4;dp:2")
@@ -178,7 +178,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       if (options$residualsUnstandardized) crossTabMain$addColumnInfo(name = "total[unstandardized.residuals]", title = totalTitle, type = "number",  format = "sf:4;dp:2")
       if (options$residualsPearson)        crossTabMain$addColumnInfo(name = "total[pearson.residuals]",        title = totalTitle, type = "number",  format = "sf:4;dp:2")
       if (options$residualsStandardized)   crossTabMain$addColumnInfo(name = "total[standardized.residuals]",   title = totalTitle, type = "number",  format = "sf:4;dp:2")
-    } else if (options$tableMargin)
+    } else if (options$marginShowTotals)
       if (options$countsObserved)          crossTabMain$addColumnInfo(name = "total[counts]",                   title = totalTitle, type = "integer")
 
     analysisContainer[["crossTabMain"]] <- crossTabMain
@@ -943,11 +943,11 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       names(row)  <- paste0(names(row),"[counts]")
       sum         <- sum(counts.matrix)
 
-      if(options$tableMargin && (counts.fp || options$countsExpected || options$percentagesRow ||
+      if(options$marginShowTotals && (counts.fp || options$countsExpected || options$percentagesRow ||
          options$percentagesColumn || options$percentagesTotal || options$residualsUnstandardized ||
          options$residualsPearson || options$residualsStandardized))
         row[["total[counts]"]] <- sum
-      else  if (options$tableMargin)
+      else  if (options$marginShowTotals)
         row[["total[counts]"]] <- as.integer(sum)
 
       if (options$countsObserved)
@@ -986,7 +986,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
           options$residualsStandardized))
       row[[".isNewGroup"]] <- TRUE
 
-    if (options$tableMargin) {
+    if (options$marginShowTotals) {
       row                       <- .crossTabLayerNames(row, group)
       rows[[length(rows) + 1]]  <- row
     }

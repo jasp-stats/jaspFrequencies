@@ -128,7 +128,11 @@ Form
 			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
 		}
 
-		CheckBox { name: "tableMargin";		label: qsTr("Table margin");		checked: true }
+		Group
+		{
+			title: qsTr("Margin")
+			CheckBox { name: "marginShowTotals";		label: qsTr("Show totals");		checked: true }
+		}
 	}
 
 	Section
