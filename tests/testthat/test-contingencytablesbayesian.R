@@ -19,12 +19,12 @@ test_that("Main table results match", {
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("TRUE", 320, 495, "control", "f", 815, 334, 202, "experimental",
-         "f", 536, "TRUE", 654, 697, "Total", "f", 1351,
-         "TRUE", 253, 182, "control", "m", 435, 494, 270, "experimental",
-         "m", 764, "TRUE", 747, 452, "Total", "m", 1199,
-         "TRUE", 573, 677, "control", "Total", 1250, 828, 472,
-         "experimental", "Total", 1300, "TRUE", 1401, 1149,
+    list( 320, 495, "control", "f", 815, 334, 202, "experimental",
+         "f", 536,  654, 697, "Total", "f", 1351,
+          253, 182, "control", "m", 435, 494, 270, "experimental",
+         "m", 764,  747, 452, "Total", "m", 1199,
+          573, 677, "control", "Total", 1250, 828, 472,
+         "experimental", "Total", 1300,  1401, 1149,
          "Total", "Total", 2550)
   )
 })
