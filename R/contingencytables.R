@@ -224,6 +224,9 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     groupList                             <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready) # Compute/get Group List
     res                                   <- try(.crossTabTestsRows(analysisContainer, groupList$rows, groupList, options, ready, counts.fp))
 
+    if (ready && !.crossTabIs2x2(table(dataset[[analysis[["columns"]]]], dataset[[analysis[["rows"]]]])))
+      crossTabChisq$addFootnote(gettext("Continuity correction is available only for 2x2 tables."))
+
     .crossTabSetErrorOrFill(res, crossTabChisq)
   }
 }
@@ -708,6 +711,10 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   return(unlist(rowNames))
 }
 
+.crossTabIs2x2 <- function(counts.matrix) {
+  return(all(dim(counts.matrix) == 2L))
+}
+
 # Group matrix
 .crossTabGroupMatrices <- function(dataset, rows, columns, groups, counts = NULL,
                                    rowOrderDescending = FALSE,
@@ -1052,7 +1059,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
       row[["type[chiSquared-cc]"]] <- gettextf("%s continuity correction", "\u03A7\u00B2")
 
-      if (ready) {
+      if (ready && .crossTabIs2x2(counts.matrix)) {
 
         chi.result <- try({
           chi.result <- stats::chisq.test(counts.matrix)
