@@ -186,6 +186,10 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     groupList                           <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready) # Compute/get Group List
     res                                 <- try(.crossTabCountsRows(analysisContainer, analysis$rows, groupList, options, ready, counts.fp))
 
+    if (sum(options$countsObserved, options$countsExpected, options$percentagesRow, options$percentagesColumn,
+            options$percentagesTotal, options$residualsUnstandardized, options$residualsPearson, options$residualsStandardized) == 1)
+      crossTabMain$addFootnote(.crossTabMainNote(options))
+
     .crossTabSetErrorOrFill(res, crossTabMain)
   }
 }
@@ -711,6 +715,20 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 .crossTabRowName <- function(groups) {
   rowNames <- lapply(groups, function(x) paste(c("row", unlist(x)), collapse="-"))
   return(unlist(rowNames))
+}
+
+.crossTabMainNote <- function(options) {
+
+  if (options$countsObserved)               outputType <- gettext("observed counts")
+  else if (options$countsExpected)          outputType <- gettext("expected counts")
+  else if (options$percentagesRow)          outputType <- gettext("row percentages")
+  else if (options$percentagesColumn)       outputType <- gettext("column percentages")
+  else if (options$percentagesTotal)        outputType <- gettext("total percentages")
+  else if (options$residualsUnstandardized) outputType <- gettext("unstandardized residuals")
+  else if (options$residualsPearson)        outputType <- gettext("Pearson residuals")
+  else if (options$residualsStandardized)   outputType <- gettext("standardized residuals")
+
+  return(gettextf("Each cell displays the %1$s.", outputType))
 }
 
 # Group matrix
