@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2024-09-28 11:50+0000\n"
+"PO-Revision-Date: 2024-11-10 09:00+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/gl/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.8.2\n"
 "X-Virgin-Header: remove this line if you change anything in the header.\n"
 "X-Language: gl_ES\n"
 "X-Source-Language: C\n"
@@ -185,7 +185,7 @@ msgstr ""
 "      (Sellke, Bayarri & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "A corrección de continuidade só está dispoñible para táboas 2x2."
 
 msgid "Log Odds Ratio"
 msgstr "Logaritmo da Razón de Probabilidades"
@@ -289,31 +289,28 @@ msgstr ""
 "%2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Cada cela presenta os recontos observados"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Cada cela presenta os recontos agardados"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Cada cela presenta as porcentaxes por filas"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Cada cela presenta as porcentaxes por columnas"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Cada cela presenta as porcentaxes totais"
 
-#, fuzzy
 msgid "Each cell displays unstandardized residuals"
-msgstr "Erros non tipificados"
+msgstr "Cada cela presenta os erros sen tipificar"
 
-#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr "Erros de Pearson"
+msgstr "Cada cela presenta os erros de Pearson"
 
-#, fuzzy
 msgid "Each cell displays standardized residuals"
-msgstr "Erros non tipificados"
+msgstr "Cada cela presenta os erros tipificados"
 
 msgid "Count"
 msgstr "Recontos"
