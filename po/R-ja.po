@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2024-07-02 17:09+0000\n"
 "Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
@@ -166,6 +166,9 @@ msgstr ""
 "      H%1$sがH%2$sよりも有利になる可能性の最大オッズは%3$sに等しくなります\n"
 "      (Sellke, Bayarri, & Berger, 2001)。"
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "対数オッズ比"
 
@@ -263,6 +266,30 @@ msgid ""
 msgstr ""
 "すべての検定について、対立仮説はグループ <em>%1$s </em> %2$s <em>%3$s</em>を"
 "指定します。"
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+msgid "Each cell displays unstandardized residuals"
+msgstr ""
+
+msgid "Each cell displays Pearson residuals"
+msgstr ""
+
+msgid "Each cell displays standardized residuals"
+msgstr ""
 
 #, fuzzy
 msgid "Count"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: JASP 0.9.2\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2024-09-28 11:50+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
@@ -178,6 +178,9 @@ msgstr ""
 "igual a %3$s\n"
 "       (Sellke, Bayarri & Berger, 2001)."
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "Logaritmo de la Razón de Probabilidades"
 
@@ -279,6 +282,33 @@ msgid ""
 msgstr ""
 "Para todas las pruebas, la hipótesis alternativa especifica que el grupo "
 "<em>%1$s</em>%2$s<em>%3$s</em>."
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+#, fuzzy
+msgid "Each cell displays unstandardized residuals"
+msgstr "Errores no tipificados"
+
+#, fuzzy
+msgid "Each cell displays Pearson residuals"
+msgstr "Errores de Pearson"
+
+#, fuzzy
+msgid "Each cell displays standardized residuals"
+msgstr "Errores no tipificados"
 
 msgid "Count"
 msgstr "Recuentos"
@@ -429,9 +459,9 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
-"La entrada de la probabilidad del modelo previo para la hipótesis '%1$s' "
-"(%2$s) no se puede analizar como número positivo. Por favor, comprueba la "
-"entrada."
+"La entrada de la probabilidad del modelo previo para la hipótesis "
+"'%1$s' (%2$s) no se puede analizar como número positivo. Por favor, "
+"comprueba la entrada."
 
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Evaluación bayesiana de %1$s restricciones de orden"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2024-04-09 13:34+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
@@ -180,6 +180,9 @@ msgstr ""
 "%3$s\n"
 "      (Sellke, Bayarri i Berger, 2001)."
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "Logarytm ilorazu szans"
 
@@ -279,6 +282,33 @@ msgid ""
 msgstr ""
 "Dla wszystkich testów hipoteza alternatywna zakłada, że grupa <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+#, fuzzy
+msgid "Each cell displays unstandardized residuals"
+msgstr "Reszty niestandaryzowane"
+
+#, fuzzy
+msgid "Each cell displays Pearson residuals"
+msgstr "Reszty Pearsona"
+
+#, fuzzy
+msgid "Each cell displays standardized residuals"
+msgstr "Reszty niestandaryzowane"
 
 msgid "Count"
 msgstr "Liczebności"

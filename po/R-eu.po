@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2022-09-14 15:22+0000\n"
 "Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
@@ -185,6 +185,9 @@ msgstr ""
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "Log Odds Ratioa"
 
@@ -286,6 +289,30 @@ msgstr "hau baino handiagoa da"
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
+msgstr ""
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+msgid "Each cell displays unstandardized residuals"
+msgstr ""
+
+msgid "Each cell displays Pearson residuals"
+msgstr ""
+
+msgid "Each cell displays standardized residuals"
 msgstr ""
 
 #, fuzzy

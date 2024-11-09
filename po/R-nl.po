@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2024-05-23 21:58+0000\n"
 "Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
@@ -175,6 +175,9 @@ msgstr ""
 "gelijk aan %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "Log Odds Ratio"
 
@@ -274,6 +277,33 @@ msgid ""
 msgstr ""
 "Voor alle toetsen specificeert de alternatieve hypothese dat groep <em>%1$s</"
 "em> %2$s <em>%3$s</em>."
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+#, fuzzy
+msgid "Each cell displays unstandardized residuals"
+msgstr "Niet-gestandaardiseerde residuen"
+
+#, fuzzy
+msgid "Each cell displays Pearson residuals"
+msgstr "Pearson residuen"
+
+#, fuzzy
+msgid "Each cell displays standardized residuals"
+msgstr "Niet-gestandaardiseerde residuen"
 
 msgid "Count"
 msgstr "Aantal"
@@ -462,8 +492,8 @@ msgstr ""
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
-"Het model in elke rij (aangeduid als '1') wordt vergeleken met de %1$s ("
-"aangeduid als 0)."
+"Het model in elke rij (aangeduid als '1') wordt vergeleken met de %1$s "
+"(aangeduid als 0)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "

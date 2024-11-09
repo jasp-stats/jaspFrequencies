@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
-"POT-Creation-Date: 2024-02-03 03:27\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: 2024-04-26 11:07+0000\n"
 "Last-Translator: Thomas Langkamp <thomas.lassdiesonnerein@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
@@ -176,6 +176,9 @@ msgstr ""
 "gegeben durch %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr "Log-Chancenverhältnis"
 
@@ -275,6 +278,33 @@ msgid ""
 msgstr ""
 "Für alle Tests gibt die Alternativhypothese an, dass Gruppe <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+#, fuzzy
+msgid "Each cell displays unstandardized residuals"
+msgstr "Unstandardisierte Residuen"
+
+#, fuzzy
+msgid "Each cell displays Pearson residuals"
+msgstr "Pearson-Residuen"
+
+#, fuzzy
+msgid "Each cell displays standardized residuals"
+msgstr "Unstandardisierte Residuen"
 
 msgid "Count"
 msgstr "Anzahl"
@@ -429,9 +459,9 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
-"Die Eingabe der Prior-Modellwahrscheinlichkeit für die Hypothese '%1$s' (%2$s)"
-" konnte nicht in eine positive Zahl übersetzt werden. Bitte überprüfen Sie "
-"die Eingabe."
+"Die Eingabe der Prior-Modellwahrscheinlichkeit für die Hypothese "
+"'%1$s' (%2$s) konnte nicht in eine positive Zahl übersetzt werden. Bitte "
+"überprüfen Sie die Eingabe."
 
 #, fuzzy
 msgid "Bayesian evaluation of %1$s order constraints"

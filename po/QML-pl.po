@@ -1253,3 +1253,27 @@ msgstr "Model zerowy"
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
 msgstr "Model obejmujący"
+
+msgctxt "ContingencyTables|"
+msgid "Observed"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Margin"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Show totals"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Observed"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Margin"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Show totals"
+msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
-"POT-Creation-Date: 2024-10-19 03:31\n"
+"POT-Creation-Date: 2024-11-09 03:30\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,6 +148,9 @@ msgstr ""
 msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
 
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr ""
+
 msgid "Log Odds Ratio"
 msgstr ""
 
@@ -239,6 +242,30 @@ msgid "is greater than"
 msgstr ""
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
+msgstr ""
+
+msgid "Each cell displays the observed counts"
+msgstr ""
+
+msgid "Each cell displays the expected counts"
+msgstr ""
+
+msgid "Each cell displays the row percentages"
+msgstr ""
+
+msgid "Each cell displays column percentages"
+msgstr ""
+
+msgid "Each cell displays total percentages"
+msgstr ""
+
+msgid "Each cell displays unstandardized residuals"
+msgstr ""
+
+msgid "Each cell displays Pearson residuals"
+msgstr ""
+
+msgid "Each cell displays standardized residuals"
 msgstr ""
 
 msgid "Count"

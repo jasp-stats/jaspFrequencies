@@ -1277,3 +1277,27 @@ msgstr ""
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
 msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Observed"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Margin"
+msgstr ""
+
+msgctxt "ContingencyTables|"
+msgid "Show totals"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Observed"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Margin"
+msgstr ""
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Show totals"
+msgstr ""
