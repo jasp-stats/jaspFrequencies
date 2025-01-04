@@ -2,589 +2,644 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-01-04 21:55+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "பேய்சியன் ஏ/பி சோதனை"
 
 msgid "Models"
-msgstr ""
+msgstr "மாதிரிகள்"
 
 msgid "P(M)"
-msgstr ""
+msgstr "பி (மீ)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "பி (எம் | தரவு)"
 
 msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
 msgstr ""
+"நேர்மறையான பதிவு முரண்பாடுகள் விகிதம் என்பது குழு 2 இல் உள்ள செய் விகிதம் குழு 1 ஐ வி"
+"ட அதிகமாக உள்ளது."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகிதம் = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகிதம்> 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகிதம் <0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகிதம் %s 0"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "விளக்கமான"
 
 msgid "Counts"
-msgstr ""
+msgstr "எண்ணிக்கைகள்"
 
 msgid "Total"
-msgstr ""
+msgstr "மொத்தம்"
 
 msgid "Proportion"
-msgstr ""
+msgstr "விகிதம்"
 
 msgid "Group 1"
-msgstr ""
+msgstr "குழு 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "குழு 2"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "முன் மற்றும் பின்புறம்"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "பேயச் காரணி வலுவான சோதனை"
 
 msgid "Prior"
-msgstr ""
+msgstr "முன்"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "பின்புற நிகழ்தகவு"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P ( %1$s | தரவு) = %2 $ .3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
+msgstr "சோதனை மதிப்பு 1 ஐ விட அதிகமாக உள்ளது என்ற கருதுகோளை சோதிக்க முடியாது."
 
 msgid "Cannot test the hypothesis that the test value is less than 0."
-msgstr ""
+msgstr "சோதனை மதிப்பு 0 ஐ விடக் குறைவாக உள்ளது என்ற கருதுகோளை சோதிக்க முடியாது."
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "பைனோமியல் சோதனை"
 
 msgid "Variable"
-msgstr ""
+msgstr "மாறக்கூடிய"
 
 msgid "Level"
-msgstr ""
+msgstr "நிலை"
 
 msgid "p"
-msgstr ""
+msgstr "ப"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "Vs -mpr"
 
 msgid "Lower"
-msgstr ""
+msgstr "கீழ்"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "விகிதாச்சாரத்திற்கு%s %% தொஒ"
 
 msgid "Upper"
-msgstr ""
+msgstr "மேல்"
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் விகிதாச்சாரத்திற்கு %s க்கும் குறைவாக இருப்பதைக்"
+" குறிப்பிடுகிறது."
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is greater than %s."
 msgstr ""
+"அனைத்து சோதனைகளுக்கும், மாற்று கருதுகோள் விகிதாச்சாரத்தை %s ஐ விட அதிகமாக உள்ளது "
+"என்பதைக் குறிப்பிடுகிறது."
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "மதிப்புக்கு எதிராக சோதிக்கப்பட்ட விகிதாச்சாரம்: %s."
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "விளக்கங்கள் அடுக்கு"
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "பேய்சியன் பைனோமியல் சோதனை"
 
 msgid "%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s மாற்று கருதுகோளின் கீழ் முந்தைய விநியோகத்தின் வடிவம் பீட்டா ( %2$s, %3$s) ஆல் "
+"குறிப்பிடப்படுகிறது."
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "அனுமான அடுக்கு"
 
 msgid "Population proportion"
-msgstr ""
+msgstr "மக்கள் தொகை விகிதம்"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட பேயச் காரணிகளைக் கணக்கிட முடியாது"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "ஒன்று அல்லது அதற்கு மேற்பட்ட பேயச் காரணிகள் எல்லையற்றவை"
 
 msgid "Undefined hypothesis"
-msgstr ""
+msgstr "வரையறுக்கப்படாத கருதுகோள்"
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "தற்செயல் அட்டவணைகள்"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "சி-சதுர சோதனை"
 
 msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-sellke அதிகபட்சம் <em> ப </em> -ரேடியோ: <em> ப </em> ஐ அடிப்படையாகக் "
+"கொண்டது-மதிப்பு,\n"
+" H%2$s க்கு மேல் h%1$s க்கு ஆதரவாக அதிகபட்ச சாத்தியமான முரண்பாடுகள்%3$s க்கு சமம்\n"
+" (SELLKE, BAYARRI, & பெர்கர், 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "தொடர்ச்சியான திருத்தம் 2x2 அட்டவணைகளுக்கு மட்டுமே கிடைக்கிறது."
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகிதம்"
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "முரண்பாடுகள் விகிதம்"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f %% நம்பிக்கை இடைவெளிகள்"
 
 msgid "Nominal"
-msgstr ""
+msgstr "பெயரளவு"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "ஆர்டினல் காமா"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95 %% நம்பிக்கை இடைவெளிகள்"
 
 msgid "Gamma"
-msgstr ""
+msgstr "காமா"
 
 msgid "Standard Error"
-msgstr ""
+msgstr "நிலையான பிழை"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "கெண்டலின் த au-பி"
 
 msgid "Z"
-msgstr ""
+msgstr "சட்"
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "Vs-mpr%s"
 
 msgid "Value"
 msgstr ""
 
 msgid "df"
-msgstr ""
+msgstr "டி.எஃப்"
 
 msgid "Expected count"
-msgstr ""
+msgstr "எதிர்பார்க்கப்படும் எண்ணிக்கை"
 
 msgid "%% within row"
-msgstr ""
+msgstr "வரிசையில் %%"
 
 msgid "%% within column"
-msgstr ""
+msgstr "நெடுவரிசைக்குள் %%"
 
 msgid "%% of total"
-msgstr ""
+msgstr "மொத்தம் %%"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "நிலையற்ற எச்சங்கள்"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "பியர்சன் எச்சங்கள்"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "தரப்படுத்தப்பட்ட எச்சங்கள்"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "தற்செயல் குணகம்"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi- குணகம்"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "க்ரேமரின் வி"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "PHI குணகம் 2 முதல் 2 தற்செயல் அட்டவணைகளுக்கு மட்டுமே கிடைக்கிறது"
 
 msgid "Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"மதிப்பைக் கணக்கிட முடியவில்லை - குறைந்தது ஒரு வரிசை அல்லது நெடுவரிசையில் அனைத்து "
+"பூச்சியங்களும் உள்ளன"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "லாம்ப்டா (வரிசைகள்)"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "லாம்ப்டா (நெடுவரிசைகள்)"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "லாம்ப்டா (சமச்சீர்)"
 
 msgid "is less than"
-msgstr ""
+msgstr "விட குறைவாக உள்ளது"
 
 msgid "is greater than"
-msgstr ""
+msgstr "விட பெரியது"
 
 msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
 msgstr ""
+"எல்லா சோதனைகளுக்கும், மாற்று கருதுகோள் அந்தக் குழுவைக் குறிப்பிடுகிறது <em>%1$s "
+"</em>%2$s <em>%3$s </em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் கவனிக்கப்பட்ட எண்ணிக்கையைக் காண்பிக்கும்"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் எதிர்பார்த்த எண்ணிக்கையைக் காட்டுகிறது"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் வரிசை சதவீதங்களைக் காட்டுகிறது"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் நெடுவரிசை சதவீதங்களைக் காட்டுகிறது"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் மொத்த சதவீதங்களைக் காட்டுகிறது"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் நிலையற்ற எச்சங்களைக் காட்டுகிறது"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் பியர்சன் எச்சங்களைக் காட்டுகிறது"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "ஒவ்வொரு கலமும் தரப்படுத்தப்பட்ட எச்சங்களைக் காட்டுகிறது"
 
 msgid "Count"
-msgstr ""
+msgstr "எண்ணுங்கள்"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"%களை கணக்கிட முடியவில்லை - குறைந்தது ஒரு வரிசை அல்லது நெடுவரிசையில் அனைத்து "
+"பூச்சியங்களும் உள்ளன"
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s தொடர்ச்சியான திருத்தம்"
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "நிகழ்தகவு விகிதம்"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "முரண்பாடுகள் விகிதம் 2 ஃச் 2 அட்டவணைகளுக்கு கட்டுப்படுத்தப்பட்டுள்ளது"
 
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "ஃபிசரின் சரியான சோதனை"
 
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "பேய்சியன் தற்செயல் அட்டவணைகள் சோதனைகள்"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f %% நம்பகமான இடைவெளி"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "பதிவு முரண்பாடுகள் விகித அடுக்குகள்"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
 msgstr ""
+"முரண்பாடுகள் விகிதம் 2 ஃச் 2 பகுப்பாய்வுகளுக்கு மட்டுப்படுத்தப்பட்டுள்ளது"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "இந்த மாதிரிக்கான முரண்பாடுகள் விகிதம் இன்னும் செயல்படுத்தப்படவில்லை"
 
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "பேயச் காரணி வரையறுக்கப்படவில்லை"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "பேயச் காரணி மிகவும் சிறியது"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "பேயச் காரணி எல்லையற்றது"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "சராசரி பதிவு அல்லது ="
 
 msgid "Poisson"
-msgstr ""
+msgstr "பாய்சன்"
 
 msgid "Joint multinomial"
-msgstr ""
+msgstr "கூட்டு பன்முக"
 
 msgid "Independent multinomial"
-msgstr ""
+msgstr "சுயாதீனமான பன்முக"
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "ஐப்பர்சோமெட்ரிக்"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
 msgstr ""
+"ஐப்பர்சோமெட்ரிக் தற்செயல் அட்டவணைகள் சோதனை 2 ஃச் 2 அட்டவணைகளுக்கு கட்டுப்படுத்தப்பட்டுள்ளது"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "விகிதம் சோதனை 2 ஃச் 2 அட்டவணைகளுக்கு கட்டுப்படுத்தப்பட்டுள்ளது"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "சமமாக இல்லை"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "தவறான மாதிரி மாதிரி தேர்ந்தெடுக்கப்பட்டது"
 
 msgid "Odds ratio"
-msgstr ""
+msgstr "முரண்பாடுகள் விகிதம்"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "இந்த மாதிரிக்கான ஒற்றைப்படை விகிதம் இன்னும் செயல்படுத்தப்படவில்லை"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "இந்த மாதிரிக்கான க்ரேமரின் வி இன்னும் செயல்படுத்தப்படவில்லை"
 
 msgid "Posterior"
-msgstr ""
+msgstr "பின்புறம்"
 
 msgid "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"`மாதிரி அளவு` குறிப்பிடப்படாவிட்டால்` வெற்றி` இரண்டு நிலைகளைக் கொண்டிருக்க வேண்டும்."
 
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
+msgstr "தவறான வெற்றிகள்: மாறி முழு எண் மதிப்புகளை மட்டுமே கொண்டிருக்க வேண்டும்."
 
 msgid "Invalid sample size: variable must contain only integer values."
 msgstr ""
+"தவறான மாதிரி அளவு: மாறி முழு எண் மதிப்புகளை மட்டுமே கொண்டிருக்க வேண்டும்."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "மாதிரி அளவு பெரியதாக இருக்க வேண்டும், பின்னர் வெற்றிகளின் எண்ணிக்கை."
 
 msgid "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"காரணி தனித்துவமான அளவைக் கொண்டிருக்க வேண்டும், அவை வெற்றிகளை மாதிரி அளவிற்கு "
+"வரைபடமாக்குகின்றன."
 
 msgid "Performing sequential analysis."
-msgstr ""
+msgstr "தொடர்ச்சியான பகுப்பாய்வு செய்கிறார்."
 
 msgid "Observed counts"
-msgstr ""
+msgstr "கவனிக்கப்பட்ட எண்ணிக்கைகள்"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "கவனிக்கப்பட்ட விகிதாச்சாரம்"
 
 msgid "Sample size"
 msgstr ""
 
 msgid "Descriptives plot"
-msgstr ""
+msgstr "விளக்கங்கள் சூழ்ச்சி"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "கட்டுப்பாடற்ற பின்புற சூழ்ச்சி"
 
 msgid "Sequential analysis"
-msgstr ""
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "குறைந்தது இரண்டு மாதிரிகள் குறிப்பிடப்பட வேண்டும்."
 
 msgid "vs."
-msgstr ""
+msgstr "Vs."
 
 msgid "Observed"
-msgstr ""
+msgstr "கவனிக்கப்பட்டது"
 
 msgid "Estimated"
-msgstr ""
+msgstr "மதிப்பிடப்பட்டது"
 
 msgid "Proportions"
-msgstr ""
+msgstr "விகிதாச்சாரம்"
 
 msgid "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be parsed into a positive number. Please, check the input."
 msgstr ""
+"'%1$s' கருதுகோளுக்கான (%2$s) முந்தைய மாதிரி நிகழ்தகவு உள்ளீட்டை நேர்மறையான எண்ணாக "
+"பாகுபடுத்த முடியவில்லை. தயவுசெய்து, உள்ளீட்டைச் சரிபார்க்கவும்."
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "%1$s ஆர்டர் தடைகளின் பேய்சியன் மதிப்பீடு"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "பதிவு (BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "லாக் பாலிக்"
 
 msgid "Error"
-msgstr ""
+msgstr "பிழை"
 
 msgid "Error %%"
-msgstr ""
+msgstr "பிழை %%"
 
 msgid "P(M|Data)"
-msgstr ""
+msgstr "பி (எம் | தரவு)"
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "பி.எஃப் <சப்> எம் </துணை>"
 
 msgid "Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"'ஆர்டர் தடைசெய்யப்பட்ட கருதுகோள்கள்' பிரிவில் உள்ள காரணி நிலை பெயர்கள் உங்கள் தரவு "
+"தொகுப்பில் உள்ள காரணி நிலைகளுடன் பொருந்துமா என்பதை இருமுறை சரிபார்க்கவும்."
 
 msgid "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"ஒவ்வொரு வரிசையிலும் மாதிரி ('1' எனக் குறிக்கப்படுகிறது) %1$s உடன் ஒப்பிடப்படுகிறது ("
+"0 எனக் குறிக்கப்படுகிறது)."
 
 msgid "Specify informed hypothesis tests in the `Order Restricted Hypotheses` section."
 msgstr ""
+"`வரிசை தடைசெய்யப்பட்ட கருதுகோள்கள்` பிரிவில் தகவலறிந்த கருதுகோள் சோதனைகளைக் "
+"குறிப்பிடவும்."
 
 msgid "Expected counts not supported without observed counts."
 msgstr ""
+"கவனிக்கப்பட்ட எண்ணிக்கைகள் இல்லாமல் எதிர்பார்க்கப்படும் எண்ணிக்கைகள் ஆதரிக்கப்படவில்லை."
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "எதிர்பார்க்கப்படும் எண்ணிக்கைகள் எதுவும் நுழையவில்லை."
 
 msgid "Invalid counts: variable does not match the number of levels of the factor. When counts are specified, each row of the data set must represent a unique level of the factor."
 msgstr ""
+"தவறான எண்ணிக்கைகள்: மாறி காரணியின் அளவுகளின் எண்ணிக்கையுடன் பொருந்தவில்லை. எண்ணிக்கைகள் "
+"குறிப்பிடப்படும்போது, தரவு தொகுப்பின் ஒவ்வொரு வரிசையும் காரணியின் தனித்துவமான அளவைக் "
+"குறிக்க வேண்டும்."
 
 msgid "Invalid expected counts: variable does not match the number of levels of the factor."
 msgstr ""
+"தவறான எதிர்பார்க்கப்பட்ட எண்ணிக்கைகள்: மாறி காரணியின் அளவுகளின் எண்ணிக்கையுடன் "
+"பொருந்தவில்லை."
 
 msgid "Invalid counts: variable must contain only integer values."
 msgstr ""
+"தவறான எண்ணிக்கைகள்: மாறி முழு எண் மதிப்புகளை மட்டுமே கொண்டிருக்க வேண்டும்."
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "தவறான எண்ணிக்கைகள்: 1 அவதானிப்புக்கும் குறைவானது."
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr ""
+"நம்பிக்கை இடைவெளிகள் சுயாதீனமான இருமுனை விநியோகங்களை அடிப்படையாகக் கொண்டவை."
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "நம்பிக்கை இடைவெளிகளைக் கணக்கிட முடியவில்லை."
 
 msgid "Factor"
-msgstr ""
+msgstr "காரணி"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "எதிர்பார்க்கப்படுகிறது: %s"
 
 msgid "Expected"
-msgstr ""
+msgstr "எதிர்பார்க்கப்படுகிறது"
 
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "%s %% நம்பிக்கை இடைவெளி"
 
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "விளக்கங்கள் சூழ்ச்சி"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "பேய்சியன் மல்டினோமியல் சோதனை"
 
 msgid "Levels"
-msgstr ""
+msgstr "நிலைகள்"
 
 msgid "Credible"
-msgstr ""
+msgstr "நம்பத்தகுந்த"
 
 msgid "Credible intervals are based on independent binomial distributions with flat priors."
 msgstr ""
+"நம்பத்தகுந்த இடைவெளிகள் தட்டையான முன்னோடிகளுடன் சுயாதீனமான இருமுனை விநியோகங்களை "
+"அடிப்படையாகக் கொண்டவை."
 
 msgid "Confidence"
-msgstr ""
+msgstr "நம்பிக்கை"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s %%%2$s இடைவெளி"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "%s இடைவெளிகளைக் கணக்கிட முடியவில்லை."
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "கவனிக்கப்பட்ட எண்ணிக்கைகள்"
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "கவனிக்கப்பட்ட விகிதாச்சாரம்"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(இடைமறிப்பு)"
 
 msgid "ANOVA"
-msgstr ""
+msgstr "அனோவா"
 
 msgid "Deviance"
-msgstr ""
+msgstr "விலகல்"
 
 msgid "Residual df"
-msgstr ""
+msgstr "மீதமுள்ள டி.எஃப்"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "மீதமுள்ள விலகல்"
 
 msgid "Coefficients"
-msgstr ""
+msgstr "குணகங்கள்"
 
 msgid "Estimate"
-msgstr ""
+msgstr "மதிப்பீடு"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s %% நம்பிக்கை இடைவெளிகள்"
 
 msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \nthe maximum possible odds in favor of H%1$s over H%2$s equals \n1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk -sellke அதிகபட்சம் <em> ப </em> -ரேடியோ: <em> ப </em> ஐ அடிப்படையாகக் கொண்டது"
+" -மதிப்பு,\n"
+" H%2$s க்கு மேல் h%1$s க்கு ஆதரவாக அதிகபட்ச முரண்பாடுகள்\n"
+" <em> பி </em> %3$s .37 க்கான 1/(-மற்றும் <em> ப </em> பதிவு (<em> ப </em>))\n"
+" (SELLKE, BAYARRI, & பெர்கர், 2001)."
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "மாறிகள் படிக்க முடியாது"
 
 msgid "Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors."
 msgstr ""
+"முடிவுகளை கணக்கிட முடியாது; மாதிரியின் போது ஒரு எண் பிழை ஏற்பட்டது. மாதிரியை மாற்ற "
+"முயற்சிக்கவும் (எ.கா., எளிமைப்படுத்தவும்) அல்லது ப்ரியர்களை சரிசெய்யவும்."
 
 msgid "R package 'conting' error: %s <br> It is possible that a numerical error occured during sampling. Try to change (e.g., simplify) the model, adjust priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"ஆர் தொகுப்பு 'கான்டிங்' பிழை: %s <br> மாதிரியின் போது ஒரு எண் பிழை ஏற்பட வாய்ப்புள்ளது"
+". மாதிரியை மாற்ற முயற்சிக்கவும் (எ.கா., எளிமைப்படுத்தவும்), ப்ரியர்களை சரிசெய்யவும், "
+"விதைகளை மாற்றவும் அல்லது MCMC மாதிரிகளின் எண்ணிக்கையை மாற்றவும் முயற்சிக்கவும்."
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "ஆர் தொகுப்பு பிழை: அட்டவணை நிகழ்தகவுகளை மீட்டெடுக்க முடியாது"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "பார்வையிட்ட மொத்த மாதிரிகளின் எண்ணிக்கை = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "குறிப்பிடப்பட்ட சப்மோடெல் சாத்தியமான துணைமடிப்புகளுக்குள் இல்லை"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em> மாதிரி சூத்திரம்: </em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em> பின்புற மாதிரி நிகழ்தகவு = </em>"
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "மாதிரி ஒப்பீடு"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "பி.எஃப் <சப்> 10 </ சப்>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "பி.எஃப் <சப்> 01 </ சப்>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "பதிவு (பி.எஃப் <சப்> 10 </ சப்>)"
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "பின்புற சுருக்கம் புள்ளிவிவரங்கள்"
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "பி (உள்ளிட்ட | தரவு)"
 
 msgid "Mean"
-msgstr ""
+msgstr "இடை, சராசரி"
 
 msgid "Variance"
-msgstr ""
+msgstr "மாறுபாட்டெண்"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s %% நம்பகமான இடைவெளிகள்"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "துணை %s க்கான பின்புற சுருக்கம் புள்ளிவிவரங்கள்"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f %% நம்பகமான இடைவெளிகள்"
