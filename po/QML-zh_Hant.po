@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-01-10 22:00+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspfrequencies-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.10-dev\n"
 "X-Language: zh_Hant\n"
 "X-Qt-Contexts: true\n"
 
@@ -326,7 +332,7 @@ msgstr "概似比"
 
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke最大p-比率"
+msgstr "Vovk-Sellke 最大 p 比率"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
@@ -660,7 +666,7 @@ msgstr "信賴區間"
 
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke 最大p-比率"
+msgstr "Vovk-Sellke 最大 p 比率"
 
 msgctxt "MultinomialTest|"
 msgid "Display"
@@ -780,7 +786,7 @@ msgstr "區間"
 
 msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr "Vovk-Sellke 最大p-比率"
+msgstr "Vovk-Sellke 最大 p 比率"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Counts (optional)"
@@ -1021,7 +1027,7 @@ msgstr "水準數"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "順序限制假設"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
@@ -1132,7 +1138,7 @@ msgstr "水準數"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "順序限制假設"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
