@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-10 22:00+0000\n"
+"PO-Revision-Date: 2025-01-11 03:30+0000\n"
 "Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-qml/zh_Hant/>\n"
@@ -862,7 +862,7 @@ msgstr "子模式"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Advanced"
-msgstr "進階的"
+msgstr "進階設定"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Samples"
