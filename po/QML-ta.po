@@ -1,0 +1,1281 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-01-04 21:55+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "Frequencies"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Classical"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Binomial Test"
+msgstr "பைனோமியல் சோதனை"
+
+msgctxt "Description|"
+msgid "Multinomial Test"
+msgstr "பன்முக சோதனை"
+
+msgctxt "Description|"
+msgid "Contingency Tables"
+msgstr "தற்செயல் அட்டவணைகள்"
+
+msgctxt "Description|"
+msgid "Log-Linear Regression"
+msgstr "பதிவு-நேரியல் பின்னடைவு"
+
+msgctxt "Description|"
+msgid "Bayesian"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian Binomial Test"
+msgstr "பேய்சியன் பைனோமியல் சோதனை"
+
+msgctxt "Description|"
+msgid "A/B Test"
+msgstr "ஏ/பி சோதனை"
+
+msgctxt "Description|"
+msgid "Bayesian A/B Test"
+msgstr "பேய்சியன் ஏ/பி சோதனை"
+
+msgctxt "Description|"
+msgid "Bayesian Multinomial Test"
+msgstr "பேய்சியன் மல்டினோமியல் சோதனை"
+
+msgctxt "Description|"
+msgid "Bayesian Contingency Tables"
+msgstr "பேய்சியன் தற்செயல் அட்டவணைகள்"
+
+msgctxt "Description|"
+msgid "Bayesian Log-Linear Regression"
+msgstr "பேய்சியன் பதிவு-நேரியல் பின்னடைவு"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 1"
+msgstr "வெற்றிகள் குழு 1"
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 1"
+msgstr "மாதிரி அளவு குழு 1"
+
+msgctxt "ABTestBayesian|"
+msgid "Successes Group 2"
+msgstr "வெற்றிகள் குழு 2"
+
+msgctxt "ABTestBayesian|"
+msgid "Sample Size Group 2"
+msgstr "மாதிரி அளவு குழு 2"
+
+msgctxt "ABTestBayesian|"
+msgid "Normal Prior on Log Odds Ratio"
+msgstr "பதிவு முரண்பாடுகள் விகிதத்தில் இயல்பானது"
+
+msgctxt "ABTestBayesian|"
+msgid "μ:"
+msgstr "எம்:"
+
+msgctxt "ABTestBayesian|"
+msgid "σ:"
+msgstr "கள்:"
+
+msgctxt "ABTestBayesian|"
+msgid "Descriptives"
+msgstr "விளக்கமான"
+
+msgctxt "ABTestBayesian|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior and posterior"
+msgstr "முன் மற்றும் பின்புறம்"
+
+msgctxt "ABTestBayesian|"
+msgid "Sequential analysis"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior"
+msgstr "முன்"
+
+msgctxt "ABTestBayesian|"
+msgid "Bayes factor robustness check"
+msgstr "பேயச் காரணி வலுவான சோதனை"
+
+msgctxt "ABTestBayesian|"
+msgid "Order"
+msgstr "ஒழுங்கு"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to best model"
+msgstr "சிறந்த மாதிரியுடன் ஒப்பிடுக"
+
+msgctxt "ABTestBayesian|"
+msgid "Compare to null model"
+msgstr "சுழிய மாதிரியுடன் ஒப்பிடுக"
+
+msgctxt "ABTestBayesian|"
+msgid "Advanced Options"
+msgstr "மேம்பட்ட விருப்பங்கள்"
+
+msgctxt "ABTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "முன் மாதிரி நிகழ்தகவு"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio = 0"
+msgstr "பதிவு முரண்பாடுகள் விகிதம் = 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio > 0"
+msgstr "பதிவு முரண்பாடுகள் விகிதம்> 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio < 0"
+msgstr "பதிவு முரண்பாடுகள் விகிதம் <0"
+
+msgctxt "ABTestBayesian|"
+msgid "Log odds ratio ≠ 0"
+msgstr "பதிவு முரண்பாடுகள் விகிதம் ≠ 0"
+
+msgctxt "ABTestBayesian|"
+msgid "Sampling"
+msgstr "மாதிரி எடுத்தல்"
+
+msgctxt "ABTestBayesian|"
+msgid "No. samples"
+msgstr "இல்லை மாதிரிகள்"
+
+msgctxt "ABTestBayesian|"
+msgid "Robustness Plot"
+msgstr "வலுவான சூழ்ச்சி"
+
+msgctxt "ABTestBayesian|"
+msgid "No. Steps"
+msgstr "இல்லை"
+
+msgctxt "ABTestBayesian|"
+msgid "Step Range"
+msgstr "படி வரம்பு"
+
+msgctxt "ABTestBayesian|"
+msgid "lower:"
+msgstr "கீழ்:"
+
+msgctxt "ABTestBayesian|"
+msgid "upper:"
+msgstr "மேல்:"
+
+msgctxt "BinomialTest|"
+msgid "Variables"
+msgstr "மாறிகள்"
+
+msgctxt "BinomialTest|"
+msgid "Test value: "
+msgstr "சோதனை மதிப்பு: "
+
+msgctxt "BinomialTest|"
+msgid "Alt. Hypothesis"
+msgstr "ஆல்ட். கருதுகோள்"
+
+msgctxt "BinomialTest|"
+msgid "≠ Test value"
+msgstr "தேர்வு சோதனை மதிப்பு"
+
+msgctxt "BinomialTest|"
+msgid "> Test value"
+msgstr "> சோதனை மதிப்பு"
+
+msgctxt "BinomialTest|"
+msgid "< Test value"
+msgstr "<சோதனை மதிப்பு"
+
+msgctxt "BinomialTest|"
+msgid "Additional Statisics"
+msgstr "கூடுதல் புள்ளிவிவரங்கள்"
+
+msgctxt "BinomialTest|"
+msgid "Confidence interval"
+msgstr "நம்பிக்கை இடைவெளி"
+
+msgctxt "BinomialTest|"
+msgid "Interval"
+msgstr "இடைவேளை"
+
+msgctxt "BinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "VOVK-SELLKE அதிகபட்ச பி-கணக்கீடு"
+
+msgctxt "BinomialTest|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "BinomialTest|"
+msgid "Descriptive plots"
+msgstr "விளக்கக் கதைகள்"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Test value: "
+msgstr "சோதனை மதிப்பு: "
+
+msgctxt "BinomialTestBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "ஆல்ட். கருதுகோள்"
+
+msgctxt "BinomialTestBayesian|"
+msgid "≠ Test value"
+msgstr "தேர்வு சோதனை மதிப்பு"
+
+msgctxt "BinomialTestBayesian|"
+msgid "> Test value"
+msgstr "> சோதனை மதிப்பு"
+
+msgctxt "BinomialTestBayesian|"
+msgid "< Test value"
+msgstr "<சோதனை மதிப்பு"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior and posterior"
+msgstr "முன் மற்றும் பின்புறம்"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Additional info"
+msgstr "கூடுதல் செய்தி"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Descriptive plots"
+msgstr "விளக்கக் கதைகள்"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "நம்பகமான இடைவெளி"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Prior"
+msgstr "முன்"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter a"
+msgstr "பீட்டா முன்: அளவுரு a"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Beta prior: parameter b"
+msgstr "பீட்டா முன்: அளவுரு ஆ"
+
+msgctxt "ContingencyTables|"
+msgid "Rows"
+msgstr "வரிசைகள்"
+
+msgctxt "ContingencyTables|"
+msgid "Columns"
+msgstr "நெடுவரிசைகள்"
+
+msgctxt "ContingencyTables|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "ContingencyTables|"
+msgid "Layers"
+msgstr "அடுக்குகள்"
+
+msgctxt "ContingencyTables|"
+msgid "Statistics"
+msgstr "புள்ளிவிவரங்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "χ²"
+msgstr "X²"
+
+msgctxt "ContingencyTables|"
+msgid "χ² continuity correction"
+msgstr "χ² தொடர்ச்சியான திருத்தம்"
+
+msgctxt "ContingencyTables|"
+msgid "Likelihood ratio"
+msgstr "நிகழ்தகவு விகிதம்"
+
+msgctxt "ContingencyTables|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "VOVK-SELLKE அதிகபட்ச பி-கணக்கீடு"
+
+msgctxt "ContingencyTables|"
+msgid "Confidence interval"
+msgstr "நம்பிக்கை இடைவெளி"
+
+msgctxt "ContingencyTables|"
+msgid "Alt. Hypothesis (Fisher's exact test)"
+msgstr "ஆல்ட். கருதுகோள் (ஃபிசரின் சரியான சோதனை)"
+
+msgctxt "ContingencyTables|"
+msgid "Group one ≠ Group two"
+msgstr "குழு ஒன்று ≠ குழு இரண்டு"
+
+msgctxt "ContingencyTables|"
+msgid "Group one > Group two"
+msgstr "குழு ஒன்று> குழு இரண்டு"
+
+msgctxt "ContingencyTables|"
+msgid "Group one < Group two"
+msgstr "குழு ஒன்று <குழு இரண்டு"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal"
+msgstr "பெயரளவு"
+
+msgctxt "ContingencyTables|"
+msgid "Contingency coefficient"
+msgstr "தற்செயல் குணகம்"
+
+msgctxt "ContingencyTables|"
+msgid "Phi and Cramer's V"
+msgstr "ஃபை மற்றும் க்ராமரின் வி"
+
+msgctxt "ContingencyTables|"
+msgid "Lambda"
+msgstr "லாம்ப்டா"
+
+msgctxt "ContingencyTables|"
+msgid "Uncertainty coefficient"
+msgstr "நிச்சயமற்ற குணகம்"
+
+msgctxt "ContingencyTables|"
+msgid "Ordinal"
+msgstr "சாதாரண"
+
+msgctxt "ContingencyTables|"
+msgid "Gamma"
+msgstr "காமா"
+
+msgctxt "ContingencyTables|"
+msgid "Somers' d"
+msgstr "சோமர்சின் டி"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-b"
+msgstr "கெண்டலின் த au-பி"
+
+msgctxt "ContingencyTables|"
+msgid "Kendall's tau-c"
+msgstr "கெண்டலின் த au-சி"
+
+msgctxt "ContingencyTables|"
+msgid "Nominal By Interval"
+msgstr "இடைவெளி மூலம் பெயரளவு"
+
+msgctxt "ContingencyTables|"
+msgid "Eta"
+msgstr "மற்றும்"
+
+msgctxt "ContingencyTables|"
+msgid "Cochran's and Mantel-Haenszel statistics"
+msgstr "கோக்ரான் மற்றும் மாண்டல்-எய்ன்ச்சல் புள்ளிவிவரங்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "Test common odds ratio equals"
+msgstr "சோதனை பொதுவான முரண்பாடுகள் விகிதம் சமம்"
+
+msgctxt "ContingencyTables|"
+msgid "Cells"
+msgstr "செல்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "Expected"
+msgstr "எதிர்பார்க்கப்படுகிறது"
+
+msgctxt "ContingencyTables|"
+msgid "Hide small counts"
+msgstr "சிறிய எண்ணிக்கையை மறைக்கவும்"
+
+msgctxt "ContingencyTables|"
+msgid "Less than"
+msgstr "குறைவாக"
+
+msgctxt "ContingencyTables|"
+msgid "Z-Test"
+msgstr "Z- சோதனை"
+
+msgctxt "ContingencyTables|"
+msgid "Compare column proportions"
+msgstr "நெடுவரிசை விகிதாச்சாரத்தை ஒப்பிடுக"
+
+msgctxt "ContingencyTables|"
+msgid "Adjust p-values"
+msgstr "பி-மதிப்புகளை சரிசெய்யவும்"
+
+msgctxt "ContingencyTables|"
+msgid "Percentages"
+msgstr "சதவீதங்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "Row"
+msgstr "நிரை"
+
+msgctxt "ContingencyTables|"
+msgid "Column"
+msgstr "நெடுவரிசை"
+
+msgctxt "ContingencyTables|"
+msgid "Total"
+msgstr "மொத்தம்"
+
+msgctxt "ContingencyTables|"
+msgid "Residuals"
+msgstr "எஞ்சியவர்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "Unstandardized"
+msgstr "நிலையற்ற"
+
+msgctxt "ContingencyTables|"
+msgid "Options"
+msgstr "விருப்பங்கள்"
+
+msgctxt "ContingencyTables|"
+msgid "Row Order"
+msgstr "வரிசை வரிசை"
+
+msgctxt "ContingencyTables|"
+msgid "Ascending"
+msgstr "ஏறுதல்"
+
+msgctxt "ContingencyTables|"
+msgid "Descending"
+msgstr "இறங்கு"
+
+msgctxt "ContingencyTables|"
+msgid "Column Order"
+msgstr "நெடுவரிசை வரிசை"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Rows"
+msgstr "வரிசைகள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Columns"
+msgstr "நெடுவரிசைகள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Layers"
+msgstr "அடுக்குகள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Statistics"
+msgstr "புள்ளிவிவரங்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Sample"
+msgstr "மாதிரி"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Poisson"
+msgstr "பாய்சன்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Joint multinomial"
+msgstr "கூட்டு பன்முக"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, rows fixed"
+msgstr "விடுதலை. பன்முக, வரிசைகள் சரி செய்யப்பட்டன"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Indep. multinomial, columns fixed"
+msgstr "விடுதலை. மல்டினோமியல், நெடுவரிசைகள் சரி செய்யப்பட்டன"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Hypergeometric (2x2 only)"
+msgstr "ஐப்பர்சோமெட்ரிக் (2x2 மட்டும்)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional Statistics"
+msgstr "கூடுதல் புள்ளிவிவரங்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Log odds ratio (2x2 only)"
+msgstr "பதிவு முரண்பாடுகள் விகிதம் (2x2 மட்டும்)"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Credible interval"
+msgstr "நம்பகமான இடைவெளி"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cramer's V"
+msgstr "க்ரேமரின் வி"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Alt. Hypothesis"
+msgstr "ஆல்ட். கருதுகோள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one ≠ Group two"
+msgstr "குழு ஒன்று ≠ குழு இரண்டு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one > Group two"
+msgstr "குழு ஒன்று> குழு இரண்டு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Group one < Group two"
+msgstr "குழு ஒன்று <குழு இரண்டு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Additional info"
+msgstr "கூடுதல் செய்தி"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior"
+msgstr "முன்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Prior concentration"
+msgstr "முன் செறிவு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Cells"
+msgstr "செல்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Percentages"
+msgstr "சதவீதங்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row"
+msgstr "நிரை"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column"
+msgstr "நெடுவரிசை"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Total"
+msgstr "மொத்தம்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Options"
+msgstr "விருப்பங்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Row Order"
+msgstr "வரிசை வரிசை"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Ascending"
+msgstr "ஏறுதல்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Descending"
+msgstr "இறங்கு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Column Order"
+msgstr "நெடுவரிசை வரிசை"
+
+msgctxt "MultinomialTest|"
+msgid "Factor"
+msgstr "காரணி"
+
+msgctxt "MultinomialTest|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "MultinomialTest|"
+msgid "Expected Counts"
+msgstr "எதிர்பார்க்கப்படும் எண்ணிக்கைகள்"
+
+msgctxt "MultinomialTest|"
+msgid "Test Values"
+msgstr "சோதனை மதிப்புகள்"
+
+msgctxt "MultinomialTest|"
+msgid "Equal proportions (multinomial test)"
+msgstr "சம விகிதாச்சாரங்கள் (பன்முக சோதனை)"
+
+msgctxt "MultinomialTest|"
+msgid "Additional Statistics"
+msgstr "கூடுதல் புள்ளிவிவரங்கள்"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives"
+msgstr "விளக்கமான"
+
+msgctxt "MultinomialTest|"
+msgid "Confidence interval"
+msgstr "நம்பிக்கை இடைவெளி"
+
+msgctxt "MultinomialTest|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "VOVK-SELLKE அதிகபட்ச பி-கணக்கீடு"
+
+msgctxt "MultinomialTest|"
+msgid "Display"
+msgstr "காட்சி"
+
+msgctxt "MultinomialTest|"
+msgid "Proportions"
+msgstr "விகிதாச்சாரம்"
+
+msgctxt "MultinomialTest|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "MultinomialTest|"
+msgid "Descriptives plot"
+msgstr "விளக்கங்கள் சூழ்ச்சி"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Factor"
+msgstr "காரணி"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Expected Counts"
+msgstr "எதிர்பார்க்கப்படும் எண்ணிக்கைகள்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Test Values"
+msgstr "சோதனை மதிப்புகள்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Equal proportions"
+msgstr "சம விகிதங்கள்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Additional Statistics"
+msgstr "கூடுதல் புள்ளிவிவரங்கள்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives"
+msgstr "விளக்கமான"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "நம்பகமான இடைவெளி"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Display"
+msgstr "காட்சி"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Proportions"
+msgstr "விகிதாச்சாரம்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Plots"
+msgstr "அடுக்கு"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Descriptives plot"
+msgstr "விளக்கங்கள் சூழ்ச்சி"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Prior"
+msgstr "முன்"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "எந்த காரணியும் குறிப்பிடப்படவில்லை"
+
+msgctxt "RegressionLogLinear|"
+msgid "Counts (optional)"
+msgstr "எண்ணிக்கைகள் (விரும்பினால்)"
+
+msgctxt "RegressionLogLinear|"
+msgid "Factors"
+msgstr "காரணிகள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model"
+msgstr "மாதிரியுரு"
+
+msgctxt "RegressionLogLinear|"
+msgid "Components"
+msgstr "கூறுகள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Model Terms"
+msgstr "மாதிரி விதிமுறைகள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Statistics"
+msgstr "புள்ளிவிவரங்கள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Regression Coefficient"
+msgstr "பின்னடைவு குணகம்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Estimates"
+msgstr "மதிப்பீடுகள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Confidence intervals"
+msgstr "நம்பிக்கை இடைவெளிகள்"
+
+msgctxt "RegressionLogLinear|"
+msgid "Interval"
+msgstr "இடைவேளை"
+
+msgctxt "RegressionLogLinear|"
+msgid "Vovk-Sellke maximum p-ratio"
+msgstr "VOVK-SELLKE அதிகபட்ச பி-கணக்கீடு"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Counts (optional)"
+msgstr "எண்ணிக்கைகள் (விரும்பினால்)"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Factors"
+msgstr "காரணிகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Prior"
+msgstr "முன்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Shape"
+msgstr "வடிவம்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Scale"
+msgstr "அளவு"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Cut-offs"
+msgstr "மாதிரி கட்-ஆஃப்கள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Display best"
+msgstr "சிறப்பாகக் காண்பி"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "models"
+msgstr "மாதிரிகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Posterior prob."
+msgstr "பின்புற ஆய்வு."
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model"
+msgstr "மாதிரியுரு"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Components"
+msgstr "கூறுகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Model Terms"
+msgstr "மாதிரி விதிமுறைகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Statistics"
+msgstr "புள்ளிவிவரங்கள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Regression Coefficients"
+msgstr "பின்னடைவு குணகங்கள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Estimates"
+msgstr "மதிப்பீடுகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Credible intervals"
+msgstr "நம்பகமான இடைவெளிகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Interval"
+msgstr "இடைவேளை"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Submodel"
+msgstr "சப்மோடல்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Advanced"
+msgstr "மேம்பட்ட"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Samples"
+msgstr "மாதிரிகள்"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Auto"
+msgstr "தானி"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "Manual"
+msgstr "கையேடு"
+
+msgctxt "RegressionLogLinearBayesian|"
+msgid "No. samples"
+msgstr "இல்லை மாதிரிகள்"
+
+msgctxt "ContingencyTables|"
+msgid "Odds ratio (2x2 only)"
+msgstr "முரண்பாடுகள் விகிதம் (2x2 மட்டும்)"
+
+msgctxt "ContingencyTables|"
+msgid "Log Odds Ratio"
+msgstr "பதிவு முரண்பாடுகள் விகிதம்"
+
+msgctxt "Description|"
+msgid "Analyses for count data"
+msgstr "எண்ணிக்கை தரவுகளுக்கான பகுப்பாய்வு"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Level #"
+msgstr "நிலை #"
+
+msgctxt "BinomialTestBayesian|"
+msgid "Direction"
+msgstr "திசை"
+
+msgctxt "ContingencyTables|"
+msgid "Pearson"
+msgstr "பியர்சன்"
+
+msgctxt "ABTestBayesian|"
+msgid "Log Odds Ratio"
+msgstr "பதிவு முரண்பாடுகள் விகிதம்"
+
+msgctxt "ABTestBayesian|"
+msgid "Odds Ratio"
+msgstr "முரண்பாடுகள் விகிதம்"
+
+msgctxt "ABTestBayesian|"
+msgid "Relative Risk"
+msgstr "உறவினர் இடர்"
+
+msgctxt "ABTestBayesian|"
+msgid "Absolute Risk"
+msgstr "முழுமையான இடர்"
+
+msgctxt "ABTestBayesian|"
+msgid "p1 & p2"
+msgstr "பி 1 மற்றும் பி 2"
+
+msgctxt "ABTestBayesian|"
+msgid "p1"
+msgstr "பி 1"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Expected"
+msgstr "எதிர்பார்க்கப்படுகிறது"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Residuals"
+msgstr "எஞ்சியவர்கள்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Unstandardized"
+msgstr "நிலையற்ற"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Pearson"
+msgstr "பியர்சன்"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Standardized"
+msgstr "தரப்படுத்தப்பட்ட"
+
+msgctxt "MultinomialTest|"
+msgid "Custom expected proportions (χ² test)"
+msgstr "தனிப்பயன் எதிர்பார்க்கப்படும் விகிதாச்சாரங்கள் (χ² சோதனை)"
+
+msgctxt "MultinomialTestBayesian|"
+msgid "Custom expected proportions"
+msgstr "தனிப்பயன் எதிர்பார்க்கப்படும் விகிதாச்சாரம்"
+
+msgctxt "Description|"
+msgid "Informed Multinomial Test"
+msgstr "தகவலறிந்த பன்முக சோதனை"
+
+msgctxt "Description|"
+msgid "Informed Bayesian Multinomial Test"
+msgstr "தகவலறிந்த பேய்சியன் மல்டினோமியல் சோதனை"
+
+msgctxt "Description|"
+msgid "Informed Multi-Binomial Test"
+msgstr "தகவலறிந்த பல பைனோமியல் சோதனை"
+
+msgctxt "Description|"
+msgid "Informed Bayesian Multi-Binomial Test"
+msgstr "தகவலறிந்த பேய்சியன் மல்டி-பினோமியல் சோதனை"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Factor"
+msgstr "காரணி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Successes"
+msgstr "வெற்றிகள்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sample Size"
+msgstr "மாதிரி அளவு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Bayes Factor Comparison"
+msgstr "பேயச் காரணி ஒப்பீடு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Encompassing"
+msgstr "உள்ளடக்கியது"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Null"
+msgstr "சுழியம்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "vs."
+msgstr "Vs."
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Table"
+msgstr "அட்டவணை"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Plot"
+msgstr "சூழ்ச்சி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Display"
+msgstr "காட்சி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Proportions"
+msgstr "விகிதாச்சாரம்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Posterior plot"
+msgstr "பின்புற சூழ்ச்சி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "நம்பகமான இடைவெளி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "எந்த காரணியும் குறிப்பிடப்படவில்லை"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Level #"
+msgstr "நிலை #"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Order Restricted Hypotheses"
+msgstr "தடைசெய்யப்பட்ட கருதுகோள்களை ஒழுங்கு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
+"Enter each restriction of one hypothesis on a new line,\n"
+"e.g., Low <= Mid <= High\n"
+"where 'Low'/'Mid'/'High' are the factor level names.\n"
+"Click on the 'plus' icon to add more hypotheses. \n"
+"Click the information icon for more examples."
+msgstr ""
+"ஒரு கருதுகோளின் ஒவ்வொரு கட்டுப்பாட்டையும் ஒரு புதிய வரியில் உள்ளிடவும்,\n"
+" எ.கா., குறைந்த <= நடுப்பகுதி <= உயர்\n"
+" 'குறைந்த'/'நடுப்பகுதி'/'உயர்' காரணி நிலை பெயர்கள்.\n"
+" மேலும் கருதுகோள்களைச் சேர்க்க 'பிளச்' ஐகானைக் சொடுக்கு செய்க.\n"
+" மேலும் எடுத்துக்காட்டுகளுக்கு செய்தி ஐகானைக் சொடுக்கு செய்க."
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Click to learn more about the syntax for order restrictions."
+msgstr "ஆர்டர் கட்டுப்பாடுகளுக்கான தொடரியல் பற்றி மேலும் அறிய சொடுக்கு செய்க."
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Model 1"
+msgstr "மாதிரி 1"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid ""
+"Ctrl + Enter to apply. Click on the blue button above for help on the "
+"restriction syntax"
+msgstr ""
+"கட்டுப்பாடு + விண்ணப்பிக்க Enter. கட்டுப்பாட்டு தொடரியல் உதவிக்கு மேலே உள்ள நீல பொத்தானைக் "
+"சொடுக்கு செய்க"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Advanced"
+msgstr "மேம்பட்ட"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Estimation settings"
+msgstr "மதிப்பீட்டு அமைப்புகள்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Burnin (MCMC)"
+msgstr "பர்னின் (எம்.சி.எம்.சி)"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Iterations (MCMC)"
+msgstr "மறு செய்கைகள் (எம்.சி.எம்.சி)"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Maximum samples (bridgesampling)"
+msgstr "அதிகபட்ச மாதிரிகள் (பிரிட்செம்ப்ளிங்)"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Factor"
+msgstr "காரணி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Counts"
+msgstr "எண்ணிக்கைகள்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Bayes Factor Comparison"
+msgstr "பேயச் காரணி ஒப்பீடு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Encompassing"
+msgstr "உள்ளடக்கியது"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Null"
+msgstr "சுழியம்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "vs."
+msgstr "Vs."
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Table"
+msgstr "அட்டவணை"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Plot"
+msgstr "சூழ்ச்சி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Display"
+msgstr "காட்சி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Proportions"
+msgstr "விகிதாச்சாரம்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Posterior plot"
+msgstr "பின்புற சூழ்ச்சி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Credible interval"
+msgstr "நம்பகமான இடைவெளி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "No factor specified"
+msgstr "எந்த காரணியும் குறிப்பிடப்படவில்லை"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Level #"
+msgstr "நிலை #"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Order Restricted Hypotheses"
+msgstr "தடைசெய்யப்பட்ட கருதுகோள்களை ஒழுங்கு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid ""
+"Enter each restriction of one hypothesis on a new line,\n"
+"e.g., Low <= Mid <= High\n"
+"where 'Low'/'Mid'/'High' are the factor level names.\n"
+"Click on the 'plus' icon to add more hypotheses. \n"
+"Click the information icon for more examples."
+msgstr ""
+"ஒரு கருதுகோளின் ஒவ்வொரு கட்டுப்பாட்டையும் ஒரு புதிய வரியில் உள்ளிடவும்,\n"
+" எ.கா., குறைந்த <= நடுப்பகுதி <= உயர்\n"
+" 'குறைந்த'/'நடுப்பகுதி'/'உயர்' காரணி நிலை பெயர்கள்.\n"
+" மேலும் கருதுகோள்களைச் சேர்க்க 'பிளச்' ஐகானைக் சொடுக்கு செய்க.\n"
+" மேலும் எடுத்துக்காட்டுகளுக்கு செய்தி ஐகானைக் சொடுக்கு செய்க."
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Click to learn more about the syntax for order restrictions."
+msgstr "ஆர்டர் கட்டுப்பாடுகளுக்கான தொடரியல் பற்றி மேலும் அறிய சொடுக்கு செய்க."
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Model 1"
+msgstr "மாதிரி 1"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid ""
+"Ctrl + Enter to apply. Click on the blue button above for help on the "
+"restriction syntax"
+msgstr ""
+"கட்டுப்பாடு + விண்ணப்பிக்க Enter. கட்டுப்பாட்டு தொடரியல் உதவிக்கு மேலே உள்ள நீல பொத்தானைக் "
+"சொடுக்கு செய்க"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Advanced"
+msgstr "மேம்பட்ட"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Estimation settings"
+msgstr "மதிப்பீட்டு அமைப்புகள்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Burnin (MCMC)"
+msgstr "பர்னின் (எம்.சி.எம்.சி)"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Iterations (MCMC)"
+msgstr "மறு செய்கைகள் (எம்.சி.எம்.சி)"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Maximum samples (bridgesampling)"
+msgstr "அதிகபட்ச மாதிரிகள் (பிரிட்செம்ப்ளிங்)"
+
+msgctxt "ContingencyTables|"
+msgid "Standardized (adjusted Pearson)"
+msgstr "தரப்படுத்தப்பட்ட (சரிசெய்யப்பட்ட பியர்சன்)"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு சூழ்ச்சி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr "பேயச் காரணிகள்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr "பின்புற நிகழ்தகவு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr "முன் வழங்கல்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "முன் மாதிரி நிகழ்தகவு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Model"
+msgstr "மாதிரியுரு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Number of steps"
+msgstr "படிகளின் எண்ணிக்கை"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Include"
+msgstr "அடங்கும்"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Null model"
+msgstr "சுழிய மாதிரி"
+
+msgctxt "InformedBinomialTestBayesian|"
+msgid "Encompassing model"
+msgstr "மாதிரியை உள்ளடக்கியது"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis plot"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு சூழ்ச்சி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Bayes factors"
+msgstr "பேயச் காரணிகள்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Posterior probability"
+msgstr "பின்புற நிகழ்தகவு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Distribution"
+msgstr "முன் வழங்கல்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Prior Model Probability"
+msgstr "முன் மாதிரி நிகழ்தகவு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Model"
+msgstr "மாதிரியுரு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Sequential analysis"
+msgstr "தொடர்ச்சியான பகுப்பாய்வு"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Number of steps"
+msgstr "படிகளின் எண்ணிக்கை"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Include"
+msgstr "அடங்கும்"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Null model"
+msgstr "சுழிய மாதிரி"
+
+msgctxt "InformedMultinomialTestBayesian|"
+msgid "Encompassing model"
+msgstr "மாதிரியை உள்ளடக்கியது"
+
+msgctxt "ContingencyTables|"
+msgid "Observed"
+msgstr "கவனிக்கப்பட்டது"
+
+msgctxt "ContingencyTables|"
+msgid "Margin"
+msgstr "விளிம்பு"
+
+msgctxt "ContingencyTables|"
+msgid "Show totals"
+msgstr "மொத்தத்தைக் காட்டு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Observed"
+msgstr "கவனிக்கப்பட்டது"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Margin"
+msgstr "விளிம்பு"
+
+msgctxt "ContingencyTablesBayesian|"
+msgid "Show totals"
+msgstr "மொத்தத்தைக் காட்டு"
