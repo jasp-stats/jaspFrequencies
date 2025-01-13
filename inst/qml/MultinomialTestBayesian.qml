@@ -102,7 +102,7 @@ Form
 		}
 	}
 
-	ExpanderButton
+	Section
 	{
 		title	: qsTr("Prior")
 
