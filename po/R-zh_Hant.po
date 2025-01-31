@@ -2,13 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-02-01 03:30+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
@@ -41,13 +44,13 @@ msgid "Descriptives"
 msgstr ""
 
 msgid "Counts"
-msgstr ""
+msgstr "計次"
 
 msgid "Total"
-msgstr ""
+msgstr "總計"
 
 msgid "Proportion"
-msgstr ""
+msgstr "比例"
 
 msgid "Group 1"
 msgstr ""
@@ -83,13 +86,13 @@ msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr ""
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "二項式檢定"
 
 msgid "Variable"
-msgstr ""
+msgstr "變項"
 
 msgid "Level"
-msgstr ""
+msgstr "水準"
 
 msgid "p"
 msgstr ""
@@ -101,7 +104,7 @@ msgid "Lower"
 msgstr ""
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "比例的%s%%信賴區間"
 
 msgid "Upper"
 msgstr ""
@@ -113,13 +116,13 @@ msgid "For all tests, the alternative hypothesis specifies that the proportion i
 msgstr ""
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "比例檢定之檢定值設定為： %s。"
 
 msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "貝氏二項式檢定"
 
 msgid "%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s)."
 msgstr ""
@@ -128,7 +131,7 @@ msgid "Inferential Plots"
 msgstr ""
 
 msgid "Population proportion"
-msgstr ""
+msgstr "母體比例"
 
 msgid "One or more Bayes factors cannot be computed"
 msgstr ""
@@ -371,10 +374,10 @@ msgid "Performing sequential analysis."
 msgstr ""
 
 msgid "Observed counts"
-msgstr ""
+msgstr "觀察次數"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "觀察比例"
 
 msgid "Sample size"
 msgstr ""
@@ -401,7 +404,7 @@ msgid "Estimated"
 msgstr ""
 
 msgid "Proportions"
-msgstr ""
+msgstr "比例"
 
 msgid "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be parsed into a positive number. Please, check the input."
 msgstr ""
@@ -482,7 +485,7 @@ msgid "Bayesian Multinomial Test"
 msgstr ""
 
 msgid "Levels"
-msgstr ""
+msgstr "水準"
 
 msgid "Credible"
 msgstr ""
@@ -503,7 +506,7 @@ msgid "Observed Counts"
 msgstr ""
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "觀察比例"
 
 msgid "(Intercept)"
 msgstr ""
