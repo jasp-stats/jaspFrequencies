@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-02-13 21:02+0000\n"
-"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"PO-Revision-Date: 2025-02-23 11:09+0000\n"
+"Last-Translator: 陳寬裕 <pf.kuan.yu.chen@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10-rc\n"
+"X-Generator: Weblate 5.10.1-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
@@ -41,7 +41,7 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "描述性統計"
 
 msgid "Counts"
 msgstr "計次"
@@ -119,7 +119,7 @@ msgid "Proportions tested against value: %s."
 msgstr "比例檢定之檢定值設定為： %s。"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "描述性統計圖"
 
 msgid "Bayesian Binomial Test"
 msgstr "貝氏二項式檢定"
@@ -143,10 +143,10 @@ msgid "Undefined hypothesis"
 msgstr ""
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "交叉表"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "卡方檢定表"
 
 msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
@@ -188,13 +188,13 @@ msgid "VS-MPR%s"
 msgstr "VS-MPR %s"
 
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 msgid "df"
 msgstr ""
 
 msgid "Expected count"
-msgstr ""
+msgstr "期望次數"
 
 msgid "%% within row"
 msgstr ""
@@ -248,10 +248,10 @@ msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</
 msgstr ""
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "每個儲存格(細格)將可顯示觀察次數"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "每個儲存格(細格)將可顯示期望次數"
 
 msgid "Each cell displays the row percentages"
 msgstr ""
@@ -272,7 +272,7 @@ msgid "Each cell displays standardized residuals"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "次數"
 
 msgid "N"
 msgstr ""
@@ -281,10 +281,10 @@ msgid "%s could not be calculated - At least one row or column contains all zero
 msgstr ""
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s 連續校正"
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "概似比"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
 msgstr ""
@@ -398,7 +398,7 @@ msgid "vs."
 msgstr ""
 
 msgid "Observed"
-msgstr ""
+msgstr "觀察次數"
 
 msgid "Estimated"
 msgstr ""
@@ -470,7 +470,7 @@ msgid "Factor"
 msgstr ""
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "期望: %s"
 
 msgid "Expected"
 msgstr ""
@@ -482,7 +482,7 @@ msgid "Descriptives Plot"
 msgstr "描述性統計圖"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "貝氏多項式檢定"
 
 msgid "Levels"
 msgstr "水準"
@@ -503,7 +503,7 @@ msgid "Could not compute %s Intervals."
 msgstr ""
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "觀察次數"
 
 msgid "Observed Proportions"
 msgstr "觀察比例"
