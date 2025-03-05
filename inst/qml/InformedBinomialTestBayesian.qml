@@ -269,16 +269,12 @@ Form
 			optionKey:			"modelName"
 			Layout.columnSpan:	2
 
-			content: Group
+			content: TextArea
 			{
-				TextArea
-				{
-					name:				"syntax"
-					width:				models.width
-					textType:			JASP.TextTypeModel
-					trim:				true
-					applyScriptInfo:	qsTr("Ctrl + Enter to apply. Click on the blue button above for help on the restriction syntax")
-				}
+				name:				"syntax"
+				textType:			JASP.TextTypeModel
+				trim:				true
+				applyScriptInfo:	qsTr("Ctrl + Enter to apply. Click on the blue button above for help on the restriction syntax")
 			}
 		}
 	}
