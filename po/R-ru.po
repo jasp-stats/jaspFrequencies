@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-03-16 12:05+0000\n"
+"PO-Revision-Date: 2025-03-17 13:06+0000\n"
 "Last-Translator: MikeWinny <winny63@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ru/>\n"
@@ -59,7 +59,7 @@ msgid "Counts"
 msgstr "Количество"
 
 msgid "Total"
-msgstr "Всего"
+msgstr "Общий"
 
 msgid "Proportion"
 msgstr "Доля"
@@ -82,9 +82,8 @@ msgstr "Последовательная проверка гипотез"
 msgid "Bayes Factor Robustness Check"
 msgstr "Проверка робастности фактора Байеса"
 
-#, fuzzy
 msgid "Prior"
-msgstr "Приор"
+msgstr "Априорное распределение"
 
 msgid "n"
 msgstr "n"
@@ -437,9 +436,8 @@ msgstr "Соотношение шансов для этой модели еще 
 msgid "Cramer's V for this model not yet implemented"
 msgstr "V-Крамера для этой модели еще не реализован"
 
-#, fuzzy
 msgid "Posterior"
-msgstr "Постериор"
+msgstr "Апостериорное распределение"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
@@ -475,7 +473,7 @@ msgid "Observed proportions"
 msgstr "Наблюдаемые пропорции"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Размер выборки"
 
 #, fuzzy
 msgid "Descriptives plot"
