@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-19 23:04+0000\n"
+"PO-Revision-Date: 2025-03-20 18:49+0000\n"
 "Last-Translator: Uğur ÇELİK <prof_ugur@hotmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/tr/>\n"
@@ -19,7 +19,7 @@ msgstr "Frekanslar"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr "Classical"
+msgstr "Klasik"
 
 msgctxt "Description|"
 msgid "Binomial Test"
@@ -39,7 +39,7 @@ msgstr "Log-Doğrusal Regresyon"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr "Bayesçi"
+msgstr "Bayes"
 
 msgctxt "Description|"
 msgid "Bayesian Binomial Test"
