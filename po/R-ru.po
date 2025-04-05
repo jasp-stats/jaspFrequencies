@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-03-17 13:06+0000\n"
-"Last-Translator: MikeWinny <winny63@gmail.com>\n"
+"PO-Revision-Date: 2025-04-02 18:57+0000\n"
+"Last-Translator: Иван Рудаков <riv@polygene.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ru/>\n"
 "Language: ru\n"
@@ -24,9 +24,8 @@ msgstr "Модели"
 msgid "P(M)"
 msgstr "P(M)"
 
-#, fuzzy
 msgid "P(M|data)"
-msgstr "P(M|data)"
+msgstr "P(M|данные)"
 
 #, fuzzy
 msgid ""
@@ -83,7 +82,7 @@ msgid "Bayes Factor Robustness Check"
 msgstr "Проверка робастности фактора Байеса"
 
 msgid "Prior"
-msgstr "Априорное распределение"
+msgstr "Априорная вероятность"
 
 msgid "n"
 msgstr "n"
@@ -526,9 +525,8 @@ msgstr ""
 msgid "Error %%"
 msgstr ""
 
-#, fuzzy
 msgid "P(M|Data)"
-msgstr "P(M|data)"
+msgstr "P(M|Данные)"
 
 #, fuzzy
 msgid "BF<sub>M</sub>"
