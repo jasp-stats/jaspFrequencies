@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-19 11:43+0000\n"
+"PO-Revision-Date: 2025-04-21 16:31+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/es/>\n"
@@ -613,7 +613,7 @@ msgstr "Recuentos"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
-msgstr "Recuentos Esperados"
+msgstr "Recuentos esperados"
 
 msgctxt "MultinomialTest|"
 msgid "Test Values"
@@ -665,7 +665,7 @@ msgstr "Recuentos"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
-msgstr "Recuentos Esperados"
+msgstr "Recuentos esperados"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Test Values"
