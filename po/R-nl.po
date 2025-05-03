@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-04-19 11:43+0000\n"
+"PO-Revision-Date: 2025-05-03 03:35+0000\n"
 "Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/nl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 5.11.1-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesiaanse A/B Toets"
@@ -176,7 +176,7 @@ msgstr ""
 "      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "Continuïteitscorrectie is alleen beschikbaar voor 2x2 tabellen."
 
 msgid "Log Odds Ratio"
 msgstr "Log Odds Ratio"
@@ -279,31 +279,28 @@ msgstr ""
 "em> %2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Elke cel geeft de geobserveerde aantallen weer"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Elke cel geeft de verwachte aantallen weer"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Elke cel geeft de rijpercentages weer"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Elke cel geeft de kolompercentages weer"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Elke cel geeft de totaalpercentages weer"
 
-#, fuzzy
 msgid "Each cell displays unstandardized residuals"
-msgstr "Niet-gestandaardiseerde residuen"
+msgstr "Elke cel toont niet-gestandaardiseerde residuen"
 
-#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr "Pearson residuen"
+msgstr "Elke cel toont Pearson residuen"
 
-#, fuzzy
 msgid "Each cell displays standardized residuals"
-msgstr "Niet-gestandaardiseerde residuen"
+msgstr "Elke cel toont gestandaardiseerde residuen"
 
 msgid "Count"
 msgstr "Aantal"
