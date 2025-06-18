@@ -1,10 +1,16 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-06-19 07:03+0000\n"
+"Last-Translator: Иван Рудаков <riv@polygene.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.12.1\n"
 "X-Language: ru\n"
 "X-Qt-Contexts: true\n"
 
@@ -138,7 +144,7 @@ msgstr "Сравнить с нулевой моделью"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
-msgstr "Дополнительные параметры"
+msgstr "Дополнительные Параметры"
 
 #, fuzzy
 msgctxt "ABTestBayesian|"
@@ -1027,7 +1033,6 @@ msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
 msgstr ""
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
 msgstr "Фактор"
@@ -1145,7 +1150,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
 msgstr ""
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
 msgstr "Фактор"
