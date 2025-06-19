@@ -31,7 +31,7 @@ Form
 	VariablesForm
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
-		AvailableVariablesList { name: "allVariablesList" }
+		AvailableVariablesList { name: "allVariablesList"; info: qsTr("In this box the dependent variable is selected") }
 		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); allowedColumns: [ "nominal"] }
 	}
 
