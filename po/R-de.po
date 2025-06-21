@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-06-10 15:01+0000\n"
+"PO-Revision-Date: 2025-06-15 10:01+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/de/>\n"
@@ -392,11 +392,10 @@ msgstr "Cramers V ist für dieses Modell noch nicht implementiert"
 msgid "Posterior"
 msgstr "Posterior"
 
-#, fuzzy
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
-"Der `Erfolg` muss zwei Stufen haben, sofern der `Stichprobenumfang` nicht "
+"Der `Erfolg` muss zwei Stufen haben, wenn der `Stichprobenumfang` nicht "
 "angegeben ist."
 
 msgid "Invalid successes: variable must contain only integer values."
@@ -448,7 +447,6 @@ msgstr "Beobachtet"
 msgid "Estimated"
 msgstr "Schätzung"
 
-#, fuzzy
 msgid "Proportions"
 msgstr "Anteile"
 
@@ -460,7 +458,6 @@ msgstr ""
 "'%1$s' (%2$s) konnte nicht in eine positive Zahl übersetzt werden. Bitte "
 "überprüfen Sie die Eingabe."
 
-#, fuzzy
 msgid "Bayesian evaluation of %1$s order constraints"
 msgstr "Bayessche Auswertung von %1$s Reihenfolgebeschränkungen"
 
@@ -499,7 +496,6 @@ msgstr ""
 "Modell in jeder Zeile (bezeichnet als '1') wird verglichen mit dem %1$s "
 "(bezeichnet als 0)."
 
-#, fuzzy
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
