@@ -353,7 +353,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
           marglik       = models[[i]]$model$logml[["logmlH0"]],
           marglikError  = NA,
           marglikPrec   = NA,
-          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Null"]
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "null"]
         )
       if (options[["includeEncompassingModel"]])
         rowsList[[length(rowsList) + 1]] <- data.frame(
@@ -361,7 +361,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
           marglik       = models[[i]]$model$logml[["logmlHe"]],
           marglikError  = NA,
           marglikPrec   = NA,
-          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Encompassing"]
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "encompassing"]
         )
     } else {
       # add the alternative hypotheses
