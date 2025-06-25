@@ -21,7 +21,7 @@ InformedBinomialTestBayesian <- function(
           data = NULL,
           version = "0.19.2",
           bayesFactorType = "BF10",
-          bfComparison = "encompassing",
+          bfComparison = "Encompassing",
           bfVsHypothesis = "Model 1",
           bridgeSamples = 1000,
           descriptivesDisplay = "counts",

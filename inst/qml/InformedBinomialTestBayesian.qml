@@ -69,14 +69,14 @@ Form
 
 			RadioButton
 			{
-				value:		"encompassing"
+				value:		"Encompassing"
 				label:		qsTr("Encompassing")
 				checked:	true
 			}
 
 			RadioButton
 			{
-				value:		"null"
+				value:		"Null"
 				label:		qsTr("Null")
 			}
 
@@ -222,8 +222,8 @@ Form
 			initialColumnCount: 	1
 			property var alwaysAvailable:
 			[
-				{ label:	"Encompassing",		value: "encompassing"},
-				{ label:	"Null",				value: "null"}
+				{ label:	"Encompassing",		value: "Encompassing"},
+				{ label:	"Null",				value: "Null"}
 			]
 
 			source:	[models, {values: priorModelProbability.alwaysAvailable}]

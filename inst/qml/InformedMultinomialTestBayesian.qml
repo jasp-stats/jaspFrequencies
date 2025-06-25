@@ -63,7 +63,7 @@ Form
 			RadioButton
 			{
 				id:			bfComparisonNull
-				value:		"null"
+				value:		"Null"
 				label:		qsTr("Null")
 				checked:	true
 				enabled:	includeNullModel.checked
@@ -233,16 +233,16 @@ Form
 			property var alwaysAvailable:
 			includeNullModel.checked && includeEncompassingModel.checked ?
 			[
-				{ label:	"Null",				value: "null"},
-				{ label:	"Encompassing",		value: "encompassing"}
+				{ label:	"Null",				value: "Null"},
+				{ label:	"Encompassing",		value: "Encompassing"}
 			]
 			: !includeNullModel.checked && includeEncompassingModel.checked ?
 			[
-				{ label:	"Encompassing",		value: "encompassing"}
+				{ label:	"Encompassing",		value: "Encompassing"}
 			]
 			: includeNullModel.checked && !includeEncompassingModel.checked ?
 			[
-				{ label:	"Null",		value: "null"}
+				{ label:	"Null",		value: "Null"}
 			]
 			:
 			[]

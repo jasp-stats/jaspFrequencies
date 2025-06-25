@@ -21,7 +21,7 @@ InformedMultinomialTestBayesian <- function(
           data = NULL,
           version = "0.19.2",
           bayesFactorType = "BF10",
-          bfComparison = "null",
+          bfComparison = "Null",
           bfVsHypothesis = "Model 1",
           bridgeSamples = 10000,
           count = list(types = list(), value = ""),

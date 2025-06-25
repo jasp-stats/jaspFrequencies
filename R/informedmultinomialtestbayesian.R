@@ -753,9 +753,9 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 .selectAvailableBfComparison              <- function(options, models){
 
   # extract the Bayes factor comparison (select comparison that's specified AND not ommitted)
-  if (options[["bfComparison"]] == "encompassing" && "Encompassing" %in% models)
+  if (options[["bfComparison"]] == "Encompassing" && "Encompassing" %in% models)
     bfComparison <- "Encompassing"
-  else if (options[["bfComparison"]] == "null" && "Null" %in% models)
+  else if (options[["bfComparison"]] == "Null" && "Null" %in% models)
     bfComparison <- "Null"
   else if (options[["bfVsHypothesis"]] %in% models)
     bfComparison <- options[["bfVsHypothesis"]]
