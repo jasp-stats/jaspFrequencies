@@ -353,7 +353,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
           marglik       = models[[i]]$model$logml[["logmlH0"]],
           marglikError  = NA,
           marglikPrec   = NA,
-          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "null"]
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Null"]
         )
       if (options[["includeEncompassingModel"]])
         rowsList[[length(rowsList) + 1]] <- data.frame(
@@ -361,7 +361,7 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
           marglik       = models[[i]]$model$logml[["logmlHe"]],
           marglikError  = NA,
           marglikPrec   = NA,
-          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "encompassing"]
+          priorProb     = options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] == "Encompassing"]
         )
     } else {
       # add the alternative hypotheses
@@ -753,9 +753,9 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 .selectAvailableBfComparison              <- function(options, models){
 
   # extract the Bayes factor comparison (select comparison that's specified AND not ommitted)
-  if (options[["bfComparison"]] == "encompassing" && "Encompassing" %in% models)
+  if (options[["bfComparison"]] == "Encompassing" && "Encompassing" %in% models)
     bfComparison <- "Encompassing"
-  else if (options[["bfComparison"]] == "null" && "Null" %in% models)
+  else if (options[["bfComparison"]] == "Null" && "Null" %in% models)
     bfComparison <- "Null"
   else if (options[["bfVsHypothesis"]] %in% models)
     bfComparison <- options[["bfVsHypothesis"]]
