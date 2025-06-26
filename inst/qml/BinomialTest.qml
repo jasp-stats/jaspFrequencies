@@ -36,15 +36,15 @@ Form
 		AssignedVariablesList { name: "counts";    title: qsTr("Counts (optional)"); allowedColumns: ["scale"]; singleVariable: true }
 	}
 
-	FormulaField { name: "testValue"; label: qsTr("Test value: "); value: "0.5" ; min: 0; max: 1; Layout.columnSpan: 2 }
+	FormulaField { name: "testValue"; label: qsTr("Test value: "); value: "0.5" ; min: 0; max: 1; Layout.columnSpan: 2; info: qsTr("The proportion of the variable you will test under the null hypothesis") }
 
 	RadioButtonGroup
 	{
 		title: qsTr("Alt. Hypothesis")
 		name: "alternative"
-		RadioButton { value: "twoSided";	label: qsTr("≠ Test value"); checked: true	}
-		RadioButton { value: "greater";		label: qsTr("> Test value")					}
-		RadioButton { value: "less";		label: qsTr("< Test value")					}
+		RadioButton { value: "twoSided";	label: qsTr("≠ Test value"); checked: true; info: qsTr("Two-sided alternative hypothesis that the proportion is not equal to test value")		}
+		RadioButton { value: "greater";		label: qsTr("> Test value"); 				info: qsTr("One-sided alternative hypothesis that the proportion is larger than the test value")	}
+		RadioButton { value: "less";		label: qsTr("< Test value"); 				info: qsTr("One-sided alternative hypothesis that the proportion is smaller than the test value")	}
 	}
 
 	Group
@@ -54,9 +54,10 @@ Form
 		{
 			name:	"ci"
 			label:	qsTr("Confidence interval")
+			info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95")
 			CIField { name: "ciLevel";	label: qsTr("Interval") }
 		}
-		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio") }
+		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null") }
 	}
 
 	Group
@@ -64,8 +65,8 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "descriptivesPlot";					label: qsTr("Descriptives plots")
-			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval") }
+			name: "descriptivesPlot";					label: qsTr("Descriptives plots"); 	info: qsTr("Visualises the proportion and confidence interval of the two different values of your dichotomous variable")
+			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95")}
 		}
 	}
 }
