@@ -55,14 +55,14 @@ Form
 			title: qsTr("Regression Coefficient")
 			CheckBox
 			{
-				name: "regressionCoefficientsEstimates";	label: qsTr("Estimates")
+				name: "regressionCoefficientsEstimates";	label: qsTr("Estimates"); info: qsTr("Displays estimates of the regression coefficients along with their standard errors, Z-values, and associated p-values")
 				CheckBox
 				{
-					name: "regressionCoefficientsCi";	label: qsTr("Confidence intervals")
+					name: "regressionCoefficientsCi";	label: qsTr("Confidence intervals"); info: qsTr("Visualises the proportion and confidence interval of the two different values of your dichotomous variable")
 					CIField { name: "regressionCoefficientsCiLevel"; label: qsTr("Interval") }
 				}
 			}
 		}
-		CheckBox { name: "vovkSellke"; label: qsTr("Vovk-Sellke maximum p-ratio") }
+		CheckBox { name: "vovkSellke"; label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null") }
 	}
 }

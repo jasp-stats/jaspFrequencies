@@ -35,7 +35,7 @@ Form
 		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); allowedColumns: [ "nominal"] }
 	}
 
-	FormulaField { name: "testValue"; label: qsTr("Test value: "); value: "0.5" ; min: 0; max: 1; Layout.columnSpan: 2; info: qsTr("The proportion of the variable you will test under the null hypothesis") }
+	FormulaField { name: "testValue"; label: qsTr("Test value: "); value: "0.5" ; min: 0; max: 1; Layout.columnSpan: 2; info: qsTr("The proportion of the variable under the null hypothesis - the baseline for comparison") }
 
 	RadioButtonGroup
 	{
