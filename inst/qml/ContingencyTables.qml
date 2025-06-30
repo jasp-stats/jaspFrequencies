@@ -43,29 +43,28 @@ Form
 
 		Group
 		{
-			CheckBox { name: "chiSquared";						label: qsTr("χ²"); checked: true			}
-			CheckBox { name: "chiSquaredContinuityCorrection";	label: qsTr("χ² continuity correction")	}
-			CheckBox { name: "likelihoodRatio";					label: qsTr("Likelihood ratio")			}
-			CheckBox { name: "vovkSellke";					label: qsTr("Vovk-Sellke maximum p-ratio") }
+			CheckBox { name: "chiSquared";						label: qsTr("χ²"); checked: true;			info: qsTr("Pearson’s chi-squared test for independence")	}
+			CheckBox { name: "chiSquaredContinuityCorrection";	label: qsTr("χ² continuity correction");	info: qsTr("Applies Yates’ correction for continuity (for 2×2 tables)")	}
+			CheckBox { name: "likelihoodRatio";					label: qsTr("Likelihood ratio");			info: qsTr("Calculates the likelihood of the data under the alternative hypothesis divided by the likelihood of the data under the null hypothesis")	}
+			CheckBox { name: "vovkSellke";						label: qsTr("Vovk-Sellke maximum p-ratio");	info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null")	}
 		}
 
 		Group
 		{
 		    CheckBox
 			{
-				name: "oddsRatio"; label: qsTr("Odds ratio (2x2 only)")
+				name: "oddsRatio"; label: qsTr("Odds ratio (2x2 only)"); info: qsTr("Displays the odds ratio for 2×2 tables (ad/bc)")	
 				CheckBox
 				{
-					name: "oddsRatioAsLogOdds";     label: qsTr("Log Odds Ratio");	checked: true
+					name: "oddsRatioAsLogOdds";     label: qsTr("Log Odds Ratio");	checked: true; info: qsTr("Shows the log-transformed odds ratio")	
 				}
-				CIField { name: "oddsRatioCiLevel"; label: qsTr("Confidence interval") }
+				CIField { name: "oddsRatioCiLevel"; label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95")	 }
 				RadioButtonGroup
-				{
-					title: qsTr("Alt. Hypothesis (Fisher's exact test)")
 					name: "oddsRatioAlternative"
-					RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true	}
-					RadioButton { value: "greater";		label: qsTr("Group one > Group two")				}
-					RadioButton { value: "less";		label: qsTr("Group one < Group two")				}
+					info: qsTr("Choose your fighter! Pick your alternative hypothesis")
+					RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true; 	info: qsTr("Two-sided alternative hypothesis that the proportion of group 1 is not equal to the proportion of group 2")		}
+					RadioButton { value: "greater";		label: qsTr("Group one > Group two"); 					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is greater than the proportion of group 2")		}
+					RadioButton { value: "less";		label: qsTr("Group one < Group two"); 					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is less than the proportion of group 2")		}
 				}
 			}
 		}
@@ -73,18 +72,18 @@ Form
 		Group
 		{
 			title: qsTr("Nominal")
-			CheckBox { name: "contingencyCoefficient" ; label: qsTr("Contingency coefficient")				}
-			CheckBox { name: "phiAndCramersV";			label: qsTr("Phi and Cramer's V")					}
-			CheckBox { name: "lambda";					label: qsTr("Lambda");								}
+			CheckBox { name: "contingencyCoefficient" ; label: qsTr("Contingency coefficient"); 				info: qsTr("Measure of association for nominal variables (based on χ²)")					}
+			CheckBox { name: "phiAndCramersV";			label: qsTr("Phi and Cramer's V"); 						info: qsTr("Effect size for nominal association; Phi (2×2), Cramer’s V (larger tables)")	}
+			CheckBox { name: "lambda";					label: qsTr("Lambda");									info: qsTr("Proportion reduction in error measure for nominal data")						}
 			CheckBox { name: "uncertaintyCoefficient";	label: qsTr("Uncertainty coefficient");	debug: true }
 		}
 
 		Group
 		{
 			title: qsTr("Ordinal")
-			CheckBox { name: "gamma";			label: qsTr("Gamma")						}
+			CheckBox { name: "gamma";			label: qsTr("Gamma");							info: qsTr("Measure of ordinal association based on concordant/discordant pairs")	}
 			CheckBox { name: "somersD";			label: qsTr("Somers' d");		debug: true	}
-			CheckBox { name: "kendallsTauB";	label: qsTr("Kendall's tau-b")			}
+			CheckBox { name: "kendallsTauB";	label: qsTr("Kendall's tau-b"); 				info: qsTr("Ordinal correlation adjusting for ties")	}
 			CheckBox { name: "kendallsTauC";	label: qsTr("Kendall's tau-c");	debug: true }
 		}
 
@@ -114,8 +113,8 @@ Form
 		Group
 		{
 			title: qsTr("Counts")
-			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true }
-			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
+			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true;  info: qsTr("Show actual counts from the data")	 }
+			CheckBox { name: "countsExpected";	label: qsTr("Expected"); 					info: qsTr("Show counts expected under the null hypothesis")	 }
 			CheckBox
 			{
 				name: "countsHiddenSmallCounts"; label: qsTr("Hide small counts"); debug: true
@@ -137,23 +136,23 @@ Form
 		Group
 		{
 			title: qsTr("Residuals")
-			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized")	}
-			CheckBox { name: "residualsPearson";		label: qsTr("Pearson")			}
-			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized (adjusted Pearson)")		}
+			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized"); 					info: qsTr("Difference between observed and expected counts")			}
+			CheckBox { name: "residualsPearson";		label: qsTr("Pearson"); 						info: qsTr("Standardized residuals based on Pearson’s χ²")				}
+			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized (adjusted Pearson)"); info: qsTr("Adjusted residuals accounting for row/column totals")		}
 		}
 
 		Group
 		{
 			title: qsTr("Percentages")
-			CheckBox { name: "percentagesRow";		label: qsTr("Row")		}
-			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
-			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
+			CheckBox { name: "percentagesRow";		label: qsTr("Row");		info: qsTr("Show row-wise percentages")		}
+			CheckBox { name: "percentagesColumn";	label: qsTr("Column");	info: qsTr("Show column-wise percentages")	}
+			CheckBox { name: "percentagesTotal";	label: qsTr("Total");	info: qsTr("Show percentages of total")		}
 		}
 
 		Group
 		{
 			title: qsTr("Margin")
-			CheckBox { name: "marginShowTotals";		label: qsTr("Show totals");		checked: true }
+			CheckBox { name: "marginShowTotals";		label: qsTr("Show totals");		checked: true; 	info: qsTr("Show row and column totals")	 }
 		}
 
 	}
@@ -166,15 +165,14 @@ Form
 		{
 			name: "rowOrder"
 			title: qsTr("Row Order")
-			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true	}
-			RadioButton { value: "descending";	label: qsTr("Descending")				}
-		}
+			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true; 	info: qsTr("In numerical order")					}
+			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Makes your data go topsy-turvy")		}
 		RadioButtonGroup
 		{
 			name: "columnOrder"
 			title: qsTr("Column Order")
-			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true	}
-			RadioButton { value: "descending";	label: qsTr("Descending")				}
+			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Size matters")									}
+			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("What your data looks like in the mirror")		}
 		}
 	}
 }

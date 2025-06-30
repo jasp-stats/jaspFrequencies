@@ -42,8 +42,8 @@ Form
 
 		Layout.columnSpan: 2
 
-		RadioButton {						value: "equal";		label: qsTr("Equal proportions (multinomial test)");	 checked: true	}
-		RadioButton {	id: expectedProbs;	value: "custom";	label: qsTr("Custom expected proportions (χ² test)"); 				  	}
+		RadioButton {						value: "equal";		label: qsTr("Equal proportions (multinomial test)");	 checked: true;		info: qsTr("Checks if observed counts across categories are uniformly distributed. It compares observed counts to what we'd expect by chance using a chi-squared test. A significant difference suggests the categories aren't equally likely")					}
+		RadioButton {	id: expectedProbs;	value: "custom";	label: qsTr("Custom expected proportions (χ² test)"); 				  		info: qsTr("Checks if observed counts match a specific expected distribution. By default, it tests for a uniform distribution, but you can set your own expectations. A significant difference suggests the actual distribution doesn’t fit the expected one")	}
 
 		Chi2TestTableView
 		{
@@ -61,18 +61,19 @@ Form
 
 		CheckBox
 		{
-			name	: "descriptivesTable"; label: qsTr("Descriptives")
+			name	: "descriptivesTable"; label: qsTr("Descriptives"); info: qsTr("Displays the descriptives of the observed and expected counts as well as the confidence intervals of the observed values")	
 
 			CheckBox
 			{
 				name:					"descriptivesTableCi"
 				label:					qsTr("Confidence interval")
 				childrenOnSameRow	:	true
+				info: 					qsTr("Coverage of the confidence intervals in percentages. The default value is 95")
 
 				CIField {	name: "descriptivesTableCiLevel"	}
 			}
 		}
-		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio")		}
+		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null")		}
 	}
 
 	ColumnLayout
@@ -82,8 +83,8 @@ Form
 			name	: "descriptivesType"
 			title	: qsTr("Display")
 
-			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true	}
-			RadioButton {	value: "proportions";	label: qsTr("Proportions")				}
+			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true; info: qsTr("Display the descriptives as counts!")		}
+			RadioButton {	value: "proportions";	label: qsTr("Proportions"); 		   info: qsTr("Display the descriptives as a proportion!")	}
 		}
 
 		Group
@@ -94,8 +95,9 @@ Form
 			{
 				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
+				info	: qsTr("Plots the frequencies and the confidence intervals of the observed counts")
 
-				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval")	}
+				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95")	}
 			}
 		}
 	}
