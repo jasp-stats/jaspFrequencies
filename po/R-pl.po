@@ -284,31 +284,28 @@ msgstr ""
 "%2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr "Każda komórka zawiera liczebności obserwowane"
+msgstr "Komórki zawierają liczebności obserwowane"
 
 msgid "Each cell displays the expected counts"
-msgstr "Każda komórka zawiera liczebności oczekiwane"
+msgstr "Komórki zawierają liczebności oczekiwane"
 
 msgid "Each cell displays the row percentages"
 msgstr "Komórki zawierają procenty w wierszu"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Komórki zawierają procenty w kolumnie"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Komórki zawierają procenty całości"
 
-#, fuzzy
 msgid "Each cell displays unstandardized residuals"
-msgstr "Reszty niestandaryzowane"
+msgstr "Komórki zawierają reszty niestandaryzowane"
 
-#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr "Reszty Pearsona"
+msgstr "Komórki zawierają reszty Pearsona"
 
-#, fuzzy
 msgid "Each cell displays standardized residuals"
-msgstr "Reszty niestandaryzowane"
+msgstr "Komórki zawierają reszty standaryzowane"
 
 msgid "Count"
 msgstr "Liczebności"
