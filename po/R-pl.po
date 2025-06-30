@@ -284,13 +284,13 @@ msgstr ""
 "%2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr "Każda komórka wyświetla liczebności obserwowane"
+msgstr "Każda komórka zawiera liczebności obserwowane"
 
 msgid "Each cell displays the expected counts"
-msgstr "Każda komórka wyświetla liczebności oczekiwane"
+msgstr "Każda komórka zawiera liczebności oczekiwane"
 
 msgid "Each cell displays the row percentages"
-msgstr "Każda komórka wyświetla procenty w wierszu"
+msgstr "Komórki zawierają procenty w wierszu"
 
 msgid "Each cell displays column percentages"
 msgstr ""
