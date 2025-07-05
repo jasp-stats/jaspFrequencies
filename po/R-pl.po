@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.17.0\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2024-04-09 13:34+0000\n"
+"PO-Revision-Date: 2025-06-30 11:54+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesowski test A/B"
@@ -181,7 +181,7 @@ msgstr ""
 "      (Sellke, Bayarri i Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "Poprawka na ciągłość jest dostępna tylko dla tabeli 2×2."
 
 msgid "Log Odds Ratio"
 msgstr "Logarytm ilorazu szans"
@@ -284,31 +284,28 @@ msgstr ""
 "%2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Komórki zawierają liczebności obserwowane"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Komórki zawierają liczebności oczekiwane"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Komórki zawierają procenty w wierszu"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Komórki zawierają procenty w kolumnie"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Komórki zawierają procenty całości"
 
-#, fuzzy
 msgid "Each cell displays unstandardized residuals"
-msgstr "Reszty niestandaryzowane"
+msgstr "Komórki zawierają reszty niestandaryzowane"
 
-#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr "Reszty Pearsona"
+msgstr "Komórki zawierają reszty Pearsona"
 
-#, fuzzy
 msgid "Each cell displays standardized residuals"
-msgstr "Reszty niestandaryzowane"
+msgstr "Komórki zawierają reszty standaryzowane"
 
 msgid "Count"
 msgstr "Liczebności"
