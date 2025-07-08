@@ -23,14 +23,17 @@ import JASP.Controls
 
 Form
 {
+	info: qsTr("The multinomial test allows the user to test whether an observed distribution of cell counts corresponds to an expected distribution.\n" + "## " + "Assumptions\n" + "- The variable of interest should be categorical.")
+
 	VariablesForm
 	{
 		preferredHeight: 190 * preferencesModel.uiScale
 		marginBetweenVariablesLists: 15
+		info: qsTr("**Input**")
 		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]; 	info: qsTr("The categorical variable we are interested in")	}
-		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"];	info: qsTr("The variable that contains the count data")	}
-		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"];	info: qsTr("If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis")	}
+		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]; 	info: qsTr("The categorical variable we are interested in.")	}
+		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"];	info: qsTr("The variable that contains the count data.")	}
+		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"];	info: qsTr("If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis.")	}
 	}
 
 	RadioButtonGroup
@@ -42,8 +45,8 @@ Form
 
 		Layout.columnSpan: 2
 
-		RadioButton {						value: "equal";		label: qsTr("Equal proportions (multinomial test)");	 checked: true;		info: qsTr("Checks if observed counts across categories are uniformly distributed. It compares observed counts to what we'd expect by chance using a chi-squared test. A significant difference suggests the categories aren't equally likely")					}
-		RadioButton {	id: expectedProbs;	value: "custom";	label: qsTr("Custom expected proportions (χ² test)"); 				  		info: qsTr("Checks if observed counts match a specific expected distribution. By default, it tests for a uniform distribution, but you can set your own expectations. A significant difference suggests the actual distribution doesn’t fit the expected one")	}
+		RadioButton {						value: "equal";		label: qsTr("Equal proportions (multinomial test)");	 checked: true;		info: qsTr("Checks if observed counts across categories are uniformly distributed. It compares observed counts to what we'd expect by chance using a chi-squared test. A significant difference suggests the categories aren't equally likely.")				}
+		RadioButton {	id: expectedProbs;	value: "custom";	label: qsTr("Custom expected proportions (χ² test)"); 				  		info: qsTr("Checks if observed counts match a specific expected distribution. By default, it tests for a uniform distribution, but you can set your own expectations. A significant difference suggests the actual distribution doesn’t fit the expected one.")	}
 
 		Chi2TestTableView
 		{
@@ -61,19 +64,19 @@ Form
 
 		CheckBox
 		{
-			name	: "descriptivesTable"; label: qsTr("Descriptives"); info: qsTr("Displays the descriptives of the observed and expected counts as well as the confidence intervals of the observed values")	
+			name	: "descriptivesTable"; label: qsTr("Descriptives"); info: qsTr("Displays the descriptives of the observed and expected counts as well as the confidence intervals of the observed values.")	
 
 			CheckBox
 			{
 				name:					"descriptivesTableCi"
 				label:					qsTr("Confidence interval")
 				childrenOnSameRow	:	true
-				info: 					qsTr("Coverage of the confidence intervals in percentages. The default value is 95")
+				info: 					qsTr("Coverage of the confidence intervals in percentages. The default value is 95.")
 
 				CIField {	name: "descriptivesTableCiLevel"	}
 			}
 		}
-		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null")		}
+		CheckBox {	name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.")		}
 	}
 
 	ColumnLayout
@@ -83,8 +86,8 @@ Form
 			name	: "descriptivesType"
 			title	: qsTr("Display")
 
-			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true; info: qsTr("Display the descriptives as counts!")		}
-			RadioButton {	value: "proportions";	label: qsTr("Proportions"); 		   info: qsTr("Display the descriptives as a proportion!")	}
+			RadioButton {	value: "counts";		label: qsTr("Counts");	checked: true; info: qsTr("Displays the descriptives as counts.")		}
+			RadioButton {	value: "proportions";	label: qsTr("Proportions"); 		   info: qsTr("Displays the descriptives as a proportion.")	}
 		}
 
 		Group
@@ -95,9 +98,9 @@ Form
 			{
 				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
-				info	: qsTr("Plots the frequencies and the confidence intervals of the observed counts")
+				info	: qsTr("Plots the frequencies and the confidence intervals of the observed counts.")
 
-				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95")	}
+				CIField {	name: "descriptivesPlotCiLevel"; label: qsTr("Confidence interval"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95.")	}
 			}
 		}
 	}

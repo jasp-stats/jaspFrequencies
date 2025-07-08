@@ -65,6 +65,7 @@ Form
 				id:			bfComparisonNull
 				value:		"null"
 				label:		qsTr("Null")
+				info:		qsTr("Compares each model to the null (equal proportions).")
 				checked:	true
 				enabled:	includeNullModel.checked
 				onEnabledChanged:	
@@ -84,6 +85,7 @@ Form
 				id:			bfComparisonEncompassing
 				value:		"encompassing"
 				label:		qsTr("Encompassing")
+				info:		qsTr("Compares each model to an encompassing (broad) model that includes all others.")
 				enabled:	includeEncompassingModel.checked
 				onEnabledChanged:	
 				{
@@ -97,6 +99,7 @@ Form
 				id:           		bfComparisonVs
 				name:				"vs"
 				label:				qsTr("vs.")
+				info:				qsTr("Compares each model against a specific selected model.")
 				childrenOnSameRow:	true
 
 				DropDown
@@ -124,6 +127,7 @@ Form
 			{
 				name:	"descriptivesTable"
 				label:	qsTr("Table")
+				info:	qsTr("Displays a summary table of observed counts or proportions.")
 			}
 
 			CheckBox
@@ -131,6 +135,7 @@ Form
 				name:		"descriptivesPlot"
 				id:			descriptivesPlot
 				label:		qsTr("Plot")
+				info:		qsTr("Shows a plot of observed counts or proportions.")
 			}
 
 			RadioButtonGroup
@@ -143,12 +148,14 @@ Form
 					value:		"counts"
 					label:		qsTr("Counts")
 					checked:	true
+					info: 		qsTr("Displays the descriptives as counts.")
 				}
 
 				RadioButton
 				{
 					value:		"proportions"
 					label:		qsTr("Proportions")
+					info: 		qsTr("Displays the descriptives as a proportion.")
 				}
 			}
 		}
@@ -159,6 +166,7 @@ Form
 			name:		"posteriorPlot"
 			id:			posteriorPlot
 			label:		qsTr("Posterior plot")
+			info: 		qsTr("Displays the posterior distribution with credible intervals.")
 
 			CIField
 			{
@@ -171,6 +179,7 @@ Form
 		{
 			name:	"sequentialAnalysisPlot";
 			label:	qsTr("Sequential analysis plot")
+			info: 	qsTr("Displays the development of the Bayes factor or posterior probability as the data come in.")
 
 			RadioButtonGroup
 			{
@@ -181,6 +190,7 @@ Form
 				{
 					value:		"bayesFactor"
 					label:		qsTr("Bayes factors")
+					info:		qsTr("Displays the progression of Bayes factor values.")
 					checked:	true
 				}
 
@@ -188,6 +198,7 @@ Form
 				{
 					value:		"posteriorProbability"
 					label:		qsTr("Posterior probability")
+					info:		qsTr("Displays the progression of the posterior probability.")
 				}
 			}
 		}
@@ -315,6 +326,7 @@ Form
 			{
 				label: 			qsTr("Burnin (MCMC)")
 				name: 			"mcmcBurnin"
+				info:			"Number of initial MCMC samples to discard before analysis begins, allowing the chain to stabilize."
 				defaultValue: 	500
 				min:			50
 				max: 			1000000
@@ -325,6 +337,7 @@ Form
 			{
 				label: 			qsTr("Iterations (MCMC)")
 				name: 			"mcmcSamples"
+				info:			"Total number of MCMC samples used for estimating the posterior after burn-in."
 				defaultValue: 	10000
 				min:			100
 				max: 			1000000
@@ -335,6 +348,7 @@ Form
 			{
 				label: 			qsTr("Maximum samples (bridgesampling)")
 				name: 			"bridgeSamples"
+				info:			"Max number of samples used to estimate marginal likelihoods for computing Bayes factors."
 				defaultValue: 	10000
 				min:			5
 				max: 			1000000
@@ -355,6 +369,7 @@ Form
 				{
 					label: 			qsTr("Number of steps")
 					name: 			"sequentialAnalysisNumberOfSteps"
+					info:			"Number of data points at which the Bayes factor is updated during sequential analysis."
 					defaultValue: 	10
 					min:			0
 					fieldWidth: 	50

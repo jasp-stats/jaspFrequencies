@@ -48,11 +48,11 @@ Form
 		{
 			name: "samplingModel"
 			title: qsTr("Sample")
-			RadioButton { value: "poisson";								label: qsTr("Poisson")											}
-			RadioButton { value: "jointMultinomial";					label: qsTr("Joint multinomial")								}
-			RadioButton { value: "independentMultinomialRowsFixed";		label: qsTr("Indep. multinomial, rows fixed"); checked: true	}
-			RadioButton { value: "independentMultinomialColumnsFixed";	label: qsTr("Indep. multinomial, columns fixed")				}
-			RadioButton { value: "hypergeometric";						label: qsTr("Hypergeometric (2x2 only)"); id: hypergeometric	}
+			RadioButton { value: "poisson";								label: qsTr("Poisson");											info: qsTr("Assumes independent Poisson-distributed counts for each cell.")	}
+			RadioButton { value: "jointMultinomial";					label: qsTr("Joint multinomial");								info: qsTr("Assumes all cell counts come from one multinomial distribution.")	}
+			RadioButton { value: "independentMultinomialRowsFixed";		label: qsTr("Indep. multinomial, rows fixed"); checked: true;	info: qsTr("Each row is a separate multinomial distribution; row totals are fixed.")	}
+			RadioButton { value: "independentMultinomialColumnsFixed";	label: qsTr("Indep. multinomial, columns fixed");				info: qsTr("Each column is a separate multinomial distribution; column totals are fixed.")	}
+			RadioButton { value: "hypergeometric";						label: qsTr("Hypergeometric (2x2 only)"); id: hypergeometric;	info: qsTr("Assumes fixed row and column totals; suitable for exact tests.")	}
 		}
 
 		Group
@@ -60,8 +60,8 @@ Form
 			title: qsTr("Additional Statistics")
 			CheckBox
 			{
-				name: "oddsRatio";	label: qsTr("Log odds ratio (2x2 only)")
-				CIField { name: "oddsRatioCiLevel"; label: qsTr("Credible interval") }
+				name: "oddsRatio";	label: qsTr("Log odds ratio (2x2 only)");	info: qsTr("Displays the odds ratio for 2×2 tables (ad/bc) with a credible interval.")
+				CIField { name: "oddsRatioCiLevel"; label: qsTr("Credible interval"); info: qsTr("Range where the true log odds ratio likely falls, given the data.") }
 			}
 			CheckBox
 			{
@@ -75,9 +75,9 @@ Form
 			title: qsTr("Alt. Hypothesis")
 			name: "alternative"
 			enabled: !hypergeometric.checked
-			RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true	}
-			RadioButton { value: "greater";		label: qsTr("Group one > Group two")					}
-			RadioButton { value: "less";		label: qsTr("Group one < Group two")					}
+			RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true; 	info: qsTr("Two-sided alternative hypothesis that the proportion of group 1 is not equal to the proportion of group 2.")	}
+			RadioButton { value: "greater";		label: qsTr("Group one > Group two");					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is greater than the proportion of group 2.")	}
+			RadioButton { value: "less";		label: qsTr("Group one < Group two");					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is less than the proportion of group 2.")	}
 		}
 
 		Group
@@ -85,7 +85,7 @@ Form
 			title: qsTr("Plots")
 			CheckBox
 			{
-				name: "posteriorOddsRatioPlot";			label: qsTr("Log odds ratio (2x2 only)")
+				name: "posteriorOddsRatioPlot";			label: qsTr("Log odds ratio (2x2 only)");		info: qsTr("Displays a graphical summary of the log odds ratio.")
 				CheckBox { name: "posteriorOddsRatioPlotAdditionalInfo"; label: qsTr("Additional info"); checked: true }
 			}
 			CheckBox { name: "cramersVPlot";	label: qsTr("Cramer's V"); debug: true }
@@ -96,7 +96,7 @@ Form
 		Group
 		{
 			title: qsTr("Prior")
-			DoubleField { name: "priorConcentration"; label: qsTr("Prior concentration"); defaultValue: 1; min: 1; decimals: 1 }
+			DoubleField { name: "priorConcentration"; label: qsTr("Prior concentration"); defaultValue: 1; min: 1; decimals: 1; info: qsTr("Controls how strongly the prior favours equal proportions.") }
 		}
 	}
 
@@ -107,8 +107,8 @@ Form
 		Group
 		{
 			title:	qsTr("Counts")
-			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true }
-			CheckBox { name: "countsExpected";	label: qsTr("Expected") }
+			CheckBox { name: "countsObserved";	label: qsTr("Observed");	checked: true;	info: qsTr("Show actual counts from the data.") }
+			CheckBox { name: "countsExpected";	label: qsTr("Expected");					info: qsTr("Show counts expected under the null hypothesis.") }
 		}
 
 		Group
@@ -123,15 +123,15 @@ Form
 		Group
 		{
 			title: qsTr("Percentages")
-			CheckBox { name: "percentagesRow";		label: qsTr("Row")		}
-			CheckBox { name: "percentagesColumn";	label: qsTr("Column")	}
-			CheckBox { name: "percentagesTotal";	label: qsTr("Total")	}
+			CheckBox { name: "percentagesRow";		label: qsTr("Row");		info: qsTr("Shows row-wise percentages.")		}
+			CheckBox { name: "percentagesColumn";	label: qsTr("Column");	info: qsTr("Shows column-wise percentages.")	}
+			CheckBox { name: "percentagesTotal";	label: qsTr("Total");	info: qsTr("Shows percentages of total.")		}
 		}
 
 		Group
 		{
 			title: qsTr("Margin")
-			CheckBox { name: "marginShowTotals";		label: qsTr("Show totals");		checked: true }
+			CheckBox { name: "marginShowTotals";		label: qsTr("Show totals");		checked: true;		info: qsTr("Shows row and column totals.") }
 		}
 	}
 
@@ -143,15 +143,15 @@ Form
 		{
 			name: "rowOrder"
 			title: qsTr("Row Order")
-			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true	}
-			RadioButton { value: "descending";	label: qsTr("Descending")				}
+			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Rows sorted in numerical order.")	}
+			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Opposite of above.")	}
 		}
 		RadioButtonGroup
 		{
 			name: "columnOrder"
 			title: qsTr("Column Order")
-			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true	}
-			RadioButton { value: "descending";	label: qsTr("Descending")				}
+			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Opposite of below.")	}
+			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Columns sorted in reverse numerical order.")	}
 		}
 
 		SetSeed{}

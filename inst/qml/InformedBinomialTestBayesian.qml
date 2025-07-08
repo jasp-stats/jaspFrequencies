@@ -71,6 +71,7 @@ Form
 			{
 				value:		"encompassing"
 				label:		qsTr("Encompassing")
+				info:		qsTr("Compares each model to an encompassing (broad) model that includes all others.")
 				checked:	true
 			}
 
@@ -78,12 +79,14 @@ Form
 			{
 				value:		"null"
 				label:		qsTr("Null")
+				info:		qsTr("Compares each model to the null (equal proportions).")
 			}
 
 			RadioButton
 			{
 				name:				"vs"
 				label:				qsTr("vs.")
+				info:				qsTr("Compares each model against a specific selected model.")
 				childrenOnSameRow:	true
 
 				DropDown

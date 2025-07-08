@@ -23,16 +23,18 @@ import JASP.Controls
 
 Form
 {
+	info: qsTr("The Bayesian A/B test allows one to monitor the evidence for the hypotheses that an intervention or treatment has either a positive effect, a negative effect or no effect.")
+
 	VariablesForm
 	{
 		preferredHeight: 260 * preferencesModel.uiScale
 		marginBetweenVariablesLists	: 15
-
+		info: qsTr("**Input**\n" + "1. Each of the below elements needs to be an integer.\n" + "2. A cumulative sequence of successes/trials can also be given as input.")
 		AvailableVariablesList	{ name: "allVariablesList" }
-		AssignedVariablesList	{ name: "y1";	title: qsTr("Successes Group 1");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of successes in group 1 (control condition)") 		}
-		AssignedVariablesList	{ name: "n1";	title: qsTr("Sample Size Group 1");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of trials in group 1 (control condition)") 			}
-		AssignedVariablesList	{ name: "y2";	title: qsTr("Successes Group 2");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of successes in group 2 (experimental condition)") 	}
-		AssignedVariablesList	{ name: "n2";	title: qsTr("Sample Size Group 2");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of trials in group 2 (experimental condition)") 		}
+		AssignedVariablesList	{ name: "y1";	title: qsTr("Successes Group 1");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of successes in group 1 (control condition).") 		}
+		AssignedVariablesList	{ name: "n1";	title: qsTr("Sample Size Group 1");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of trials in group 1 (control condition).") 			}
+		AssignedVariablesList	{ name: "y2";	title: qsTr("Successes Group 2");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of successes in group 2 (experimental condition).") 	}
+		AssignedVariablesList	{ name: "n2";	title: qsTr("Sample Size Group 2");	singleVariable: true;	allowedColumns: ["scale"]; 	info: qsTr("Number of trials in group 2 (experimental condition).") 	}
 	}
 
 	ColumnLayout
@@ -43,15 +45,15 @@ Form
 		{
 			title	: qsTr("Normal Prior on Log Odds Ratio")
 
-			DoubleField { label: qsTr("\u03bc:"); name: "normalPriorMean";		defaultValue: 0;	negativeValues: true; 	info: qsTr("Specifies the mean for the normal prior on the test-relevant log odds ratio")				}
-			DoubleField { label: qsTr("\u03c3:"); name: "normalPriorSd";		defaultValue: 1;							info: qsTr("Specifies the standard deviation for the normal prior on the test-relevant log odds ratio") }
+			DoubleField { label: qsTr("\u03bc:"); name: "normalPriorMean";		defaultValue: 0;	negativeValues: true; 	info: qsTr("Specifies the mean for the normal prior on the test-relevant log odds ratio.")					}
+			DoubleField { label: qsTr("\u03c3:"); name: "normalPriorSd";		defaultValue: 1;							info: qsTr("Specifies the standard deviation for the normal prior on the test-relevant log odds ratio.")	}
 		}
 
 		CheckBox
 		{
 			name	: "descriptivesTable";
 			label	: qsTr("Descriptives")
-			info	: qsTr("Displays the counts and proportion for each group")
+			info	: qsTr("Displays the counts and proportion for each group.")
 		}
 	}
 
@@ -64,7 +66,7 @@ Form
 			{
 				name	: "priorPosteriorPlot"
 				label	: qsTr("Prior and posterior")
-				info	: qsTr("Displays the prior and posterior density for the quantity of interest")
+				info	: qsTr("Displays the prior and posterior density for the quantity of interest.")
 				childrenOnSameRow: true
 
 				DropDown
@@ -86,14 +88,14 @@ Form
 			{
 				name	: "bfSequentialPlot"
 				label	: qsTr("Sequential analysis")
-				info	: qsTr("Displays the development of posterior probabilities as the data come in. The probability wheels visualize prior and posterior probabilities of the hypotheses")
+				info	: qsTr("Displays the development of posterior probabilities as the data come in. The probability wheels visualize prior and posterior probabilities of the hypotheses.")
 			}
 
 			CheckBox
 			{
 				name	: "priorPlot"
 				label	: qsTr("Prior")
-				info	: qsTr("Plot parameter prior distributions")
+				info	: qsTr("Plots parameter prior distributions.")
 				childrenOnSameRow: true
 
 				DropDown
@@ -117,7 +119,7 @@ Form
 			{
 				name				: "bfRobustnessPlot"
 				label				: qsTr("Bayes factor robustness check")
-				info				: qsTr("Displays the prior sensitivity analysis")
+				info				: qsTr("Displays the prior sensitivity analysis.")
 				childrenOnSameRow	: true
 
 				DropDown
@@ -134,8 +136,8 @@ Form
 			name	: "bayesFactorOrder"
 			title	: qsTr("Order")
 			info	: qsTr("Compares each model against the model selected")
-			RadioButton { value: "bestModelTop";	label: qsTr("Compare to best model");	checked: true	}
-			RadioButton { value: "nullModelTop";	label: qsTr("Compare to null model")	}
+			RadioButton { value: "bestModelTop";	label: qsTr("Compare to best model.");	checked: true	}
+			RadioButton { value: "nullModelTop";	label: qsTr("Compare to null model.")	}
 		}
 	}
 
@@ -149,17 +151,17 @@ Form
 			Group
 			{
 				title: qsTr("Prior Model Probability")
-				info:  qsTr("Specify the prior probabilities for the four hypotheses")
-				DoubleField { name: "priorModelProbabilityEqual";		label: qsTr("Log odds ratio = 0");	defaultValue: 0.5;		max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability is identical (there is no effect)")	}
-				DoubleField { name: "priorModelProbabilityGreater";		label: qsTr("Log odds ratio > 0");	defaultValue: 0.25;		max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability in the experimental condition is higher than in the control condition")	}
-				DoubleField { name: "priorModelProbabilityLess";		label: qsTr("Log odds ratio < 0");		defaultValue: 0.25;	max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability in the experimental condition is lower than in the control condition")	}
-				DoubleField { name: "priorModelProbabilityTwoSided";	label: qsTr("Log odds ratio \u2260 0");	defaultValue: 0;	max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability differs between the control and experimental condition, but does not specify which one is higher")	}
+				info:  qsTr("Specifies the prior probabilities for the four hypotheses.")
+				DoubleField { name: "priorModelProbabilityEqual";		label: qsTr("Log odds ratio = 0");	defaultValue: 0.5;		max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability is identical (there is no effect).")	}
+				DoubleField { name: "priorModelProbabilityGreater";		label: qsTr("Log odds ratio > 0");	defaultValue: 0.25;		max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability in the experimental condition is higher than in the control condition.")	}
+				DoubleField { name: "priorModelProbabilityLess";		label: qsTr("Log odds ratio < 0");		defaultValue: 0.25;	max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability in the experimental condition is lower than in the control condition.")	}
+				DoubleField { name: "priorModelProbabilityTwoSided";	label: qsTr("Log odds ratio \u2260 0");	defaultValue: 0;	max: 1;	min: 0;	decimals: 3;	info:  qsTr("Specifies that the 'success' probability differs between the control and experimental condition, but does not specify which one is higher.")	}
 			}
 
 			Group
 			{
 				title: qsTr("Sampling")
-				IntegerField { name: "samples"; label: qsTr("No. samples"); defaultValue: 10000; min: 100; fieldWidth: 50; info:  qsTr("Specifies the number of importance samples for obtaining log marginal likelihood for (H+) and (H-) and the number of posterior samples")}
+				IntegerField { name: "samples"; label: qsTr("No. samples"); defaultValue: 10000; min: 100; fieldWidth: 50; info:  qsTr("Specifies the number of importance samples for obtaining log marginal likelihood for (H+) and (H-) and the number of posterior samples.")}
 			}
 
 			SetSeed {}
@@ -174,16 +176,17 @@ Form
 				Group
 				{
 					title	: qsTr("No. Steps")
-					IntegerField { label: qsTr("\u03bc:"); name: "bfRobustnessPlotStepsPriorMean";	defaultValue: 5; min: 3;	info:  qsTr("Specifies in how many discrete steps the \u03bc step range is partitioned") }
-					IntegerField { label: qsTr("\u03c3:"); name: "bfRobustnessPlotStepsPriorSd";	defaultValue: 5; min: 3;	info:  qsTr("Specifies in how many discrete steps the \u03c3 step range is partitioned") }
+					IntegerField { label: qsTr("\u03bc:"); name: "bfRobustnessPlotStepsPriorMean";	defaultValue: 5; min: 3;	info:  qsTr("Specifies in how many discrete steps the \u03bc step range is partitioned.") }
+					IntegerField { label: qsTr("\u03c3:"); name: "bfRobustnessPlotStepsPriorSd";	defaultValue: 5; min: 3;	info:  qsTr("Specifies in how many discrete steps the \u03c3 step range is partitioned.") }
 				}
 
 				Group
 				{
 					title	: qsTr("Step Range")
+					info: qsTr("Specifies the range of \u03bc and \u03c3 values to consider.")
 					columns : 3
 
-					Label { text: "\u03bc:"; Layout.fillHeight: true; verticalAlignment: Text.AlignVCenter; info: qsTr("Specifies the range of \u03bc values to consider") }
+					Label { text: "\u03bc:"; Layout.fillHeight: true; verticalAlignment: Text.AlignVCenter}
 					DoubleField
 					{
 						id				: muLower
@@ -206,7 +209,7 @@ Form
 						inclusive		: JASP.None
 					}
 
-					Label { text: "\u03c3:"; Layout.fillHeight: true; verticalAlignment: Text.AlignVCenter; info: qsTr("Specifies the range of \u03c3 values to consider") }
+					Label { text: "\u03c3:"; Layout.fillHeight: true; verticalAlignment: Text.AlignVCenter}
 					DoubleField
 					{
 						id				: sigmaLower
