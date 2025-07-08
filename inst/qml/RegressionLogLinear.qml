@@ -22,6 +22,8 @@ import JASP.Controls
 
 Form
 {
+	info: qsTr("Log-linear regression models the logarithm of the dependent variable as a linear combination of independent variables. It is useful for handling skewed data and multiplicative relationships.")
+	
 	Formula
 	{
 		rhs: "modelTerms"
@@ -55,14 +57,14 @@ Form
 			title: qsTr("Regression Coefficient")
 			CheckBox
 			{
-				name: "regressionCoefficientsEstimates";	label: qsTr("Estimates"); info: qsTr("Displays estimates of the regression coefficients along with their standard errors, Z-values, and associated p-values")
+				name: "regressionCoefficientsEstimates";	label: qsTr("Estimates"); info: qsTr("Displays estimates of the regression coefficients along with their standard errors, Z-values, and associated p-values.")
 				CheckBox
 				{
-					name: "regressionCoefficientsCi";	label: qsTr("Confidence intervals"); info: qsTr("Visualises the proportion and confidence interval of the two different values of your dichotomous variable")
+					name: "regressionCoefficientsCi";	label: qsTr("Confidence intervals"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95.")
 					CIField { name: "regressionCoefficientsCiLevel"; label: qsTr("Interval") }
 				}
 			}
 		}
-		CheckBox { name: "vovkSellke"; label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null") }
+		CheckBox { name: "vovkSellke"; label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.") }
 	}
 }
