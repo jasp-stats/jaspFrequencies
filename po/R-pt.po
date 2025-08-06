@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-08-04 22:01+0000\n"
+"PO-Revision-Date: 2025-08-06 04:02+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
@@ -52,7 +52,7 @@ msgid "Descriptives"
 msgstr "Descritivas"
 
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgid "Total"
 msgstr "Total"
@@ -70,7 +70,7 @@ msgid "Prior and Posterior"
 msgstr "Anterior e Posterior"
 
 msgid "Sequential Analysis"
-msgstr "Análise sequencial"
+msgstr "Análise Sequencial"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "Verificação de robustez do fator Bayes"
@@ -198,7 +198,7 @@ msgid "95%% Confidence Intervals"
 msgstr "95%% Intervalos de Confiança"
 
 msgid "Gamma"
-msgstr "Gamma"
+msgstr "Gama"
 
 msgid "Standard Error"
 msgstr "Erro Padrão"
@@ -303,7 +303,6 @@ msgstr ""
 msgid "Each cell displays standardized residuals"
 msgstr ""
 
-#, fuzzy
 msgid "Count"
 msgstr "Contagem"
 
@@ -395,13 +394,12 @@ msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+msgstr "Sucessos inválidos: a variável deve conter apenas valores inteiros."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+msgstr ""
+"Tamanho de amostra inválido: a variável deve conter apenas valores inteiros."
 
 msgid "Sample size must be larger then the number of successes."
 msgstr ""
@@ -420,7 +418,7 @@ msgid "Observed proportions"
 msgstr "Proporções observadas"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Tamanho da amostra"
 
 msgid "Descriptives plot"
 msgstr "Diagramas Descritivos"
@@ -428,7 +426,6 @@ msgstr "Diagramas Descritivos"
 msgid "Unrestricted posterior plot"
 msgstr ""
 
-#, fuzzy
 msgid "Sequential analysis"
 msgstr "Análise sequencial"
 
@@ -456,10 +453,10 @@ msgid "Bayesian evaluation of %1$s order constraints"
 msgstr ""
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
 msgstr ""
@@ -470,13 +467,11 @@ msgstr ""
 msgid "Error %%"
 msgstr ""
 
-#, fuzzy
 msgid "P(M|Data)"
-msgstr "P(M|dado)"
+msgstr "P(M|Dados)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
