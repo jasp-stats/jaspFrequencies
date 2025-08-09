@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-09 03:42+0000\n"
+"PO-Revision-Date: 2025-08-10 18:02+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pt/>\n"
@@ -412,7 +412,7 @@ msgstr "Hipergeométria (apenas 2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
-msgstr "Estatísticas adicionais"
+msgstr "Estatísticas Adicionais"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
@@ -496,7 +496,7 @@ msgstr "Proporções iguais (teste multinomial)"
 
 msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
-msgstr "Estatísticas adicionais"
+msgstr "Estatísticas Adicionais"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives"
@@ -548,7 +548,7 @@ msgstr "Proporções iguais"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
-msgstr "Estatísticas adicionais"
+msgstr "Estatísticas Adicionais"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives"
