@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-08-09 03:42+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: pt\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -118,7 +124,7 @@ msgstr "Estatísticas Adicionais"
 
 msgctxt "BinomialTest|"
 msgid "Confidence interval"
-msgstr "Intervalo de Confiança"
+msgstr "Intervalo de confiança"
 
 msgctxt "BinomialTest|"
 msgid "Interval"
@@ -142,7 +148,7 @@ msgstr "Valor do teste: "
 
 msgctxt "BinomialTestBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese Alt."
 
 msgctxt "BinomialTestBayesian|"
 msgid "> Test value"
@@ -214,7 +220,7 @@ msgstr "Razão de verossimilhança"
 
 msgctxt "ContingencyTables|"
 msgid "Confidence interval"
-msgstr "Intervalo de Confiança"
+msgstr "Intervalo de confiança"
 
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -226,11 +232,11 @@ msgstr "Hipótese Alternativa (Teste exato de Fisher)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr "Grupo 1 > Grupo 2"
+msgstr "Grupo um > Grupo dois"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr "Grupo 1 < Grupo 2"
+msgstr "Grupo um < Grupo dois"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal"
@@ -346,7 +352,7 @@ msgstr "Opções"
 
 msgctxt "ContingencyTables|"
 msgid "Row Order"
-msgstr "Ordem das linhas"
+msgstr "Ordem das Linhas"
 
 msgctxt "ContingencyTables|"
 msgid "Ascending"
@@ -422,15 +428,15 @@ msgstr "V de Cramer"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
-msgstr "Hipótese Alternativa"
+msgstr "Hipótese Alt."
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr "Grupo 1 > Grupo 2"
+msgstr "Grupo um > Grupo dois"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr "Grupo 1 < Grupo 2"
+msgstr "Grupo um < Grupo dois"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
@@ -454,7 +460,7 @@ msgstr "Opções"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row Order"
-msgstr "Ordem das linhas"
+msgstr "Ordem das Linhas"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Ascending"
@@ -498,7 +504,7 @@ msgstr "Descritivas"
 
 msgctxt "MultinomialTest|"
 msgid "Confidence interval"
-msgstr "Intervalo de Confiança"
+msgstr "Intervalo de confiança"
 
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
@@ -722,7 +728,7 @@ msgstr "No. de Etapas"
 
 msgctxt "ABTestBayesian|"
 msgid "Step Range"
-msgstr "Sequência de etapas"
+msgstr "Amplitude do Passo"
 
 msgctxt "ABTestBayesian|"
 msgid "lower:"
@@ -842,11 +848,11 @@ msgstr "Log de razões de chance"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
-msgstr "Grupo 1 ≠ Grupo 2"
+msgstr "Grupo um ≠ Grupo dois"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
-msgstr "Grupo 1 ≠ Grupo 2"
+msgstr "Grupo um ≠ Grupo dois"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
@@ -854,162 +860,151 @@ msgstr "Análises para dados de contagem"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Nível #"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Direction"
-msgstr ""
+msgstr "Direção"
 
 msgctxt "ContingencyTables|"
 msgid "Pearson"
-msgstr ""
+msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
 msgstr "Log de razões de chance"
 
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Razão de Chances"
 
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
-msgstr ""
+msgstr "Risco Relativo"
 
 msgctxt "ABTestBayesian|"
 msgid "Absolute Risk"
-msgstr ""
+msgstr "Risco Absoluto"
 
 msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
-msgstr ""
+msgstr "p1 & p2"
 
 msgctxt "ABTestBayesian|"
 msgid "p1"
-msgstr ""
+msgstr "p1"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Expected"
 msgstr "Esperado"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Residuals"
 msgstr "Resíduos"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Unstandardized"
 msgstr "Não padronizados"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Pearson"
-msgstr ""
+msgstr "Pearson"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Standardized"
 msgstr "Padronizados"
 
 msgctxt "MultinomialTest|"
 msgid "Custom expected proportions (χ² test)"
-msgstr ""
+msgstr "Proporções esperadas personalizadas (teste χ²)"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
-msgstr ""
+msgstr "Proporções esperadas personalizadas"
 
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr ""
+msgstr "Teste Multinomial Informado"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr ""
+msgstr "Teste Multinomial Informado Bayesiano"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr ""
+msgstr "Teste Multi-Bionmial Informado"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr ""
+msgstr "Teste Multi-Bionmial Informado Bayesiano"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
 msgstr "Fator"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Sucessos"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
-msgstr ""
+msgstr "Tamanho de Amostra"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Comparação do Fator de Bayes"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Abrangendo"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulo"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabela"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Gráfico"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Display"
 msgstr "Exibir"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"
 msgstr "Proporções"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Gráfico posterior"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo credível"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Nenhum fator especificado"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Nível #"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Hipóteses de Ordem Restrita"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
@@ -1019,107 +1014,107 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Insira cada restrição de uma hipótese em uma nova linha,\n"
+"e.g., Baixo <= Médio <= Alto\n"
+"onde 'Baixo'/'Médio'/'Alto' são os nomes dos níveis dos fatores.\n"
+"Clique no ícone de 'mais' para adicionar mais hipóteses.\n"
+"Clique no ícone de informações para mais exemplos."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Clique para saber mais sobre a sintaxe para restrições de ordem."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Modelo 1"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ctrl + Enter para aplicar. Clique no botão azul acima para obter ajuda sobre "
+"a sintaxe de restrição"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Avançado"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Configurações de estimação"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Burnin (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iterações (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Amostras máximas (amostragem de ponte)"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
 msgstr "Fator"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Comparação do Fator de Bayes"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Abrangente"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulo"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Tabela"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Gráfico"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Display"
 msgstr "Exibir"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Proportions"
 msgstr "Proporções"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Gráfico posterior"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr "Intervalo de credibilidade"
+msgstr "Intervalo credível"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
 msgstr "Nenhum fator especificado"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Nível #"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Hipóteses de Ordem Restrita"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
@@ -1129,160 +1124,160 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Insira cada restrição de uma hipótese em uma nova linha,\n"
+"por exemplo, Baixo <= Médio <= Alto\n"
+"onde 'Baixo'/'Médio'/'Alto' são os nomes dos níveis dos fatores.\n"
+"Clique no ícone de 'mais' para adicionar mais hipóteses.\n"
+"Clique no ícone de informações para mais exemplos."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Clique para saber mais sobre a sintaxe para restrições de ordem."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "Modelo 1"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Pressione Ctrl+Enter para aplicar. Clique no botão azul acima para obter "
+"ajuda sobre a sintaxe de restrições"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Advanced"
 msgstr "Avançado"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Configurações de estimação"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Burnin (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iterações (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Amostras máximas (amostragem de ponte)"
 
 msgctxt "ContingencyTables|"
 msgid "Standardized (adjusted Pearson)"
-msgstr ""
+msgstr "Padronizado (ajustado por Pearson)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Gráfico de análise sequencial"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Fatores de Bayes"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Probabilidade posterior"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribuição Anterior"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr "Probabilidade do modelo anterior"
+msgstr "Probabilidade do Modelo Anterior"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model"
 msgstr "Modelo"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Análise sequencial"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Número de passos"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Incluir"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Modelo nulo"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Modelo abrangente"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Gráfico de análise sequencial"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Fatores de Bayes"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Probabilidade posterior"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribuição Anterior"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr "Probabilidade do modelo anterior"
+msgstr "Probabilidade do Modelo Anterior"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model"
 msgstr "Modelo"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis"
 msgstr "Análise sequencial"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Número de passos"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Incluir"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Modelo nulo"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Modelo abrangente"
 
 msgctxt "ContingencyTables|"
 msgid "Observed"
-msgstr ""
+msgstr "Observado"
 
 msgctxt "ContingencyTables|"
 msgid "Margin"
-msgstr ""
+msgstr "Margem"
 
 msgctxt "ContingencyTables|"
 msgid "Show totals"
-msgstr ""
+msgstr "Mostrar totais"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Observed"
-msgstr ""
+msgstr "Observado"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Margin"
-msgstr ""
+msgstr "Margem"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Show totals"
-msgstr ""
+msgstr "Mostrar totais"
