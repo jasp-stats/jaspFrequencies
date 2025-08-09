@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2021-09-11 03:29+0000\n"
-"Last-Translator: JASP Stats <b.boutin@uva.nl>\n"
+"PO-Revision-Date: 2025-08-07 22:02+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/pt/>\n"
 "Language: pt\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: en_US\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -52,7 +52,7 @@ msgid "Descriptives"
 msgstr "Descritivas"
 
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgid "Total"
 msgstr "Total"
@@ -70,7 +70,7 @@ msgid "Prior and Posterior"
 msgstr "Anterior e Posterior"
 
 msgid "Sequential Analysis"
-msgstr "Análise sequencial"
+msgstr "Análise Sequencial"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "Verificação de robustez do fator Bayes"
@@ -144,6 +144,8 @@ msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s A forma da distribuição anterior sob a hipótese alternativa é "
+"especificada por Beta(%2$s, %3$s)."
 
 msgid "Inferential Plots"
 msgstr "Diagramas de inferência"
@@ -177,7 +179,7 @@ msgstr ""
 "      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "A correção de continuidade está disponível apenas para tabelas 2x2."
 
 msgid "Log Odds Ratio"
 msgstr "Log de razões de chance"
@@ -198,10 +200,10 @@ msgid "95%% Confidence Intervals"
 msgstr "95%% Intervalos de Confiança"
 
 msgid "Gamma"
-msgstr "Gamma"
+msgstr "Gama"
 
 msgid "Standard Error"
-msgstr "Erro padrão"
+msgstr "Erro Padrão"
 
 msgid "Kendall's Tau-b"
 msgstr "Tau-b de Kendall"
@@ -231,13 +233,13 @@ msgid "%% of total"
 msgstr "%% do total"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "Resíduos não padronizados"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Resíduos de Pearson"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "Resultados Padronizados"
 
 msgid "Contingency coefficient"
 msgstr "Coeficiente de contingência"
@@ -280,30 +282,29 @@ msgstr ""
 "<em>%1$s</em> %2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Cada célula mostra as contagens observadas"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Cada célula mostra as contagens esperadas"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Cada célula mostra as porcentagens da linha"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Cada célula mostra as porcentagens da coluna"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Cada célula mostra as porcentagens totais"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "Cada célula mostra os resíduos não padronizados"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "Cada célula mostra os resíduos de Pearson"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "Cada célula mostra os resíduos padronizados"
 
-#, fuzzy
 msgid "Count"
 msgstr "Contagem"
 
@@ -394,25 +395,26 @@ msgstr "Posterior"
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"O `Sucesso` deve ter dois níveis se o `Tamanho de Amostra`não é especificado."
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+msgstr "Sucessos inválidos: a variável deve conter apenas valores inteiros."
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr "Contagens inválidas: a variável deve conter apenas valores inteiros."
+msgstr ""
+"Tamanho de amostra inválido: a variável deve conter apenas valores inteiros."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "O Tamanho de Amostra deve ser maior do que o número de sucessos."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"O fator deve conter níveis exclusivos que mapeiem os sucessos ao tamanho de "
+"amostra."
 
-#, fuzzy
 msgid "Performing sequential analysis."
-msgstr "Análise sequencial"
+msgstr "Realizando análise sequencial."
 
 msgid "Observed counts"
 msgstr "Contagens observadas"
@@ -421,79 +423,82 @@ msgid "Observed proportions"
 msgstr "Proporções observadas"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Tamanho da amostra"
 
 msgid "Descriptives plot"
 msgstr "Diagramas Descritivos"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Gráfico posterior irrestrito"
 
-#, fuzzy
 msgid "Sequential analysis"
 msgstr "Análise sequencial"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Pelo menos dois modelos precisam ser especificados."
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr "Observado"
 
-#, fuzzy
 msgid "Estimated"
-msgstr "Estimativa"
+msgstr "Estimado"
 
-#, fuzzy
 msgid "Proportions"
-msgstr "Proporção"
+msgstr "Proporções"
 
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"A entrada de probabilidade do modelo anterior para a hipótese '%1$s' (%2$s) "
+"não pôde ser analisada em um número positivo. Por favor, verifique a entrada."
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Avaliação Bayesiana de %1$s restrições de ordem"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log MargLik"
 
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 msgid "Error %%"
-msgstr ""
+msgstr "Erro %%"
 
-#, fuzzy
 msgid "P(M|Data)"
-msgstr "P(M|dado)"
+msgstr "P(M|Dados)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"Por favor, verifique se os nomes dos fatores na seção 'Hipóteses de Ordem "
+"Restrita' correspondem aos níveis de fatores no seu conjunto de dados."
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"O modelo em cada linha (denotada como '1') é comparada com %1$s (denotado "
+"como 0)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Especifique testes de hipóteses informados na seção `Ordenar Hipóteses "
+"Restritas`."
 
 msgid "Expected counts not supported without observed counts."
 msgstr "Contagens esperadas não suportadas sem contagens observadas."
@@ -578,7 +583,7 @@ msgid "Observed Proportions"
 msgstr "Proporções Observadas"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(Intercepto)"
 
 msgid "ANOVA"
 msgstr "ANOVA"
@@ -620,12 +625,19 @@ msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
 msgstr ""
+"Não é possível calcular os resultados; ocorreu um erro numérico durante a "
+"amostragem. Tente alterar (e.g., simplificar) o modelo ou ajustar os valores "
+"anteriores."
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"Erro 'conting' no pacote R: %s <br> É possível que tenha ocorrido um erro "
+"numérico durante a amostragem. Tente alterar (e.g., simplificar) o modelo, "
+"ajustar os anteriores, alterar a semente ou alterar o número de amostras "
+"MCMC."
 
 msgid "R Package error: Cannot retrieve table probabilities"
 msgstr "Erro de pacote R: não é possível recuperar as probabilidades da tabela"
