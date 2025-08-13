@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-10 18:02+0000\n"
+"PO-Revision-Date: 2025-08-14 18:01+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pt/>\n"
@@ -596,7 +596,7 @@ msgstr "Componentes"
 
 msgctxt "RegressionLogLinear|"
 msgid "Model Terms"
-msgstr "Termos do modelo"
+msgstr "Termos do Modelo"
 
 msgctxt "RegressionLogLinear|"
 msgid "Statistics"
@@ -668,7 +668,7 @@ msgstr "Componentes"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr "Termos do modelo"
+msgstr "Termos do Modelo"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
