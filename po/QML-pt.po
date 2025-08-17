@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-17 17:01+0000\n"
+"PO-Revision-Date: 2025-08-18 21:02+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/pt/>\n"
@@ -204,7 +204,7 @@ msgstr "Colunas"
 
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
@@ -376,7 +376,7 @@ msgstr "Colunas"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
@@ -480,7 +480,7 @@ msgstr "Fator"
 
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
@@ -532,7 +532,7 @@ msgstr "Fator"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr "Contagem"
+msgstr "Contagens"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
