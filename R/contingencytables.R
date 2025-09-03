@@ -243,7 +243,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 .crossTabOdds <- function(jaspResults, dataset, options, analyses, ready){
   if (!options$oddsRatio)
     return ()
-
   for (i in 1:nrow(analyses)) {
     analysis <- analyses[i,]
     analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
@@ -461,7 +460,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
                             table$addColumnInfo(name = paste0("low[",   fold, "]"),   title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
                             table$addColumnInfo(name = paste0("up[",    fold, "]"),   title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
                             table$addColumnInfo(name = paste0("p[",     fold, "]"),   title = gettext("p"),              type = "pvalue")
-
 }
 
 .crossTabNominalAddColInfo <- function(table, fold){
@@ -1162,7 +1160,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       group <- NULL
 
     row <- list()
-    row[["type[oddsRatio]"]] <- "Odds ratio"
+    row[["type[oddsRatio]"]] <- analysisContainer[["crossTabLogOdds"]]$title
     if (ready) {
       if ( ! identical(dim(counts.matrix),as.integer(c(2,2)))) {
         row[["value[oddsRatio]"]] <- NaN
