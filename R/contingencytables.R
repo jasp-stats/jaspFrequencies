@@ -698,6 +698,18 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
 .crossTabOddsNote <- function(crossTabOdds, groupList, options, ready){
   if(ready){
+    row_group_levels <- dimnames(groupList$group.matrices[[1]])[[1]]
+    col_group_levels <- dimnames(groupList$group.matrices[[1]])[[2]]
+    if(!options$oddsRatioAsLogOdds) {
+      message <- gettextf("Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is less likely in group <em>%2$s</em>",
+                          col_group_levels[1], row_group_levels[1])
+      crossTabOdds$addFootnote(message)
+    }
+    else {
+      message <- gettextf("Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> is less likely in group <em>%2$s</em>",
+                          col_group_levels[1], row_group_levels[1])
+      crossTabOdds$addFootnote(message)
+    }
     if(length(groupList$group.matrices) >= 1  & options[["oddsRatioAlternative"]] != "twoSided"){
 
       gp1 <- dimnames(groupList$group.matrices[[1]])[[1]][1]
@@ -706,8 +718,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       if(options[["oddsRatioAlternative"]] == "less") lessIsMore <- gettext("is less than")
       else                                      lessIsMore <- gettext("is greater than")
 
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", gp1, lessIsMore, gp2)
-
+      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", row_group_levels[1], lessIsMore, row_group_levels[2])
       crossTabOdds$addFootnote(message)
     }
   }
