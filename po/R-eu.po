@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2024-11-09 03:30\n"
-"PO-Revision-Date: 2025-09-02 09:01+0000\n"
+"PO-Revision-Date: 2025-09-05 08:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.1-dev\n"
+"X-Generator: Weblate 5.13.1-rc\n"
 
 #, fuzzy
 msgid "Bayesian A/B Test"
@@ -25,9 +25,8 @@ msgstr "Ereduak"
 msgid "P(M)"
 msgstr "P(M)"
 
-#, fuzzy
 msgid "P(M|data)"
-msgstr "P(M|data)"
+msgstr "P(M|datuak)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -52,7 +51,6 @@ msgstr "%s 0 log odds ratioa"
 msgid "Descriptives"
 msgstr "Deskribatzaileak"
 
-#, fuzzy
 msgid "Counts"
 msgstr "Zenbaketak"
 
@@ -68,16 +66,14 @@ msgstr "1. taldea"
 msgid "Group 2"
 msgstr "2. taldea"
 
-#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Aurrekoa eta ondorengoa"
+msgstr "Aurrekoa eta Ondorengoa"
 
 msgid "Sequential Analysis"
-msgstr "Analisi sekuentziala"
+msgstr "Analisi Sekuentziala"
 
-#, fuzzy
 msgid "Bayes Factor Robustness Check"
-msgstr "Bayes faktorearen sendotasuna egiaztatzea"
+msgstr "Bayes Faktorearen Sendotasuna Egiaztatzea"
 
 msgid "Prior"
 msgstr "Aurrekoa"
@@ -86,11 +82,10 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior Probability"
-msgstr "Ondorengo probabilitatea"
+msgstr "Ondorengo Probabilitatea"
 
-#, fuzzy
 msgid "P(%1$s | data) = %2$.3f"
-msgstr "P(%1$s | data) = %2$.3f"
+msgstr "P(%1$s | datuak) = %2$.3f"
 
 #, fuzzy
 msgid "Cannot test the hypothesis that the test value is greater than 1."
@@ -103,7 +98,7 @@ msgstr ""
 "Ezin da frogatu saiakuntzaren balioa 0 baino txikiagoa dela dioen hipotesia."
 
 msgid "Binomial Test"
-msgstr "Proba binomiala"
+msgstr "Proba Binomiala"
 
 msgid "Variable"
 msgstr "Aldagaia"
@@ -128,29 +123,38 @@ msgstr "%s%% CI for Proportion"
 msgid "Upper"
 msgstr "Goikoa"
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
 msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du proportzioa %a baino "
+"txikiagoa dela."
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
 msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du proportzioa %a baino "
+"handiagoa dela."
 
+#, fuzzy
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "Balioaren arabera probatutako proportzioak: %a."
 
 msgid "Descriptives Plots"
-msgstr "Grafiko deskribatzaileak"
+msgstr "Grafiko Deskribatzaileak"
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "Bayesiar Binomial Testa"
 
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s Aurreko banaketaren forma hipotesi alternatiboarenpean Beta(%2$s, %3$s) "
+"bidez zehazten da."
 
 msgid "Inferential Plots"
 msgstr "Grafiko inferentzialak"
@@ -186,7 +190,7 @@ msgstr ""
 "      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "Jarraitutasun-zuzenketa 2x2 tauletarako bakarrik dago eskuragarri."
 
 msgid "Log Odds Ratio"
 msgstr "Log Odds Ratioa"
@@ -194,15 +198,16 @@ msgstr "Log Odds Ratioa"
 msgid "Odds Ratio"
 msgstr "Odds Ratioa"
 
+#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0aren%% Konfiantza Tarteak"
 
 #, fuzzy
 msgid "Nominal"
 msgstr "Nominala"
 
 msgid "Ordinal Gamma"
-msgstr "Gamma ordinala"
+msgstr "Gamma Ordinala"
 
 #, fuzzy
 msgid "95%% Confidence Intervals"
@@ -212,7 +217,7 @@ msgid "Gamma"
 msgstr "Gamma"
 
 msgid "Standard Error"
-msgstr "Errore estandarra"
+msgstr "Errore Estandarra"
 
 msgid "Kendall's Tau-b"
 msgstr "Kendall's Tau-b"
@@ -232,25 +237,25 @@ msgid "df"
 msgstr "askatasun-mailak"
 
 msgid "Expected count"
-msgstr ""
+msgstr "Espero zen kopurua"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% lerroan"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% zutabearen barruan"
 
 msgid "%% of total"
-msgstr ""
+msgstr "Guztizkoaren %%"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "Hondakin estandarizatu gabeak"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Pearsonen hondakinak"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "Hondakin estandarizatuak"
 
 msgid "Contingency coefficient"
 msgstr "Kontingentzia-koefizientea"
@@ -286,34 +291,39 @@ msgstr "baino gutxiago da"
 msgid "is greater than"
 msgstr "hau baino handiagoa da"
 
+#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
+"Proba guztietarako, hipotesi alternatiboak zehazten du <em>%1$s</em> %2$s "
+"<em>%3$s</em> taldea dela."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Gelaxka bakoitzak behatutako zenbaketak erakusten ditu"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Gelaxka bakoitzak espero diren zenbaketak erakusten ditu"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Gelaxka bakoitzak lerro ehunekoak erakusten ditu"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Gelaxka bakoitzak zutabeen ehunekoak erakusten ditu"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Gelaxka bakoitzak ehuneko osoak erakusten ditu"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "Gelaxka bakoitzak hondakin estandarizatu gabeak erakusten ditu"
 
+#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "Gelaxka bakoitzak Pearson hondakinak erakusten ditu"
 
+#, fuzzy
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "Gelaxka bakoitzak hondakin estandarizatuak erakusten ditu"
 
 #, fuzzy
 msgid "Count"
@@ -328,11 +338,13 @@ msgstr ""
 "%s ezin izan da kalkulatu - gutxienez errenkada edo zutabe batek ditu zero "
 "guztiak"
 
+#, fuzzy
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s jarraitutasun zuzenketa"
 
+#, fuzzy
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "Egiaztasun ratioa"
 
 #, fuzzy
 msgid "Odds ratio restricted to 2 x 2 tables"
@@ -347,10 +359,11 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Sinesgarritasun Tartea"
 
+#, fuzzy
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "Log Odds Ratio Grafikoak"
 
 #, fuzzy
 msgid "Odds ratio restricted to 2 x 2 analyses"
@@ -370,17 +383,20 @@ msgstr "Bayes faktorea txikiegia da"
 msgid "The Bayes factor is infinite"
 msgstr "Bayes faktorea infinitua da"
 
+#, fuzzy
 msgid "median Log OR ="
-msgstr ""
+msgstr "mediana Log ORa ="
 
 msgid "Poisson"
 msgstr "Poisson"
 
+#, fuzzy
 msgid "Joint multinomial"
-msgstr ""
+msgstr "Multinomio bateratua"
 
+#, fuzzy
 msgid "Independent multinomial"
-msgstr ""
+msgstr "Multinomial independentea"
 
 msgid "Hypergeometric"
 msgstr "Hipergeometrikoa"
