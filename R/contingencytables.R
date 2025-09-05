@@ -261,8 +261,8 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
     # Add columns to table
     .crossTabLayersColumns( crossTabOdds, analysis)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label, oddsTitle = title)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label, oddsTitle = title)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label, oddsTitle = "Estimate")
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label, oddsTitle = "Estimate")
 
     analysisContainer[["crossTabLogOdds"]] <- crossTabOdds
     analysis                               <- as.list(analysis)
