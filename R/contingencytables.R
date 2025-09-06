@@ -711,10 +711,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       crossTabOdds$addFootnote(message)
     }
     if(length(groupList$group.matrices) >= 1  & options[["oddsRatioAlternative"]] != "twoSided"){
-
-      gp1 <- dimnames(groupList$group.matrices[[1]])[[1]][1]
-      gp2 <- dimnames(groupList$group.matrices[[1]])[[1]][2]
-
       if(options[["oddsRatioAlternative"]] == "less") lessIsMore <- gettext("is less than")
       else                                      lessIsMore <- gettext("is greater than")
 
