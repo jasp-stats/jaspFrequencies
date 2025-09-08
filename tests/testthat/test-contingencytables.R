@@ -135,7 +135,7 @@ test_that("Log Odds Ratio table results match", {
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabLogOdds"]][["data"]]
   jaspTools::expect_equal_tables(table,
-    list("Odds ratio", -0.329205575243527, -0.998167649205055, 0.339756498718001,"",
+    list("Log Odds Ratio", -0.329205575243527, -0.998167649205055, 0.339756498718001,"",
          "Fisher's exact test ", -0.325882968750928, -1.07370478788709,
          0.415368461868818, 0.5435617)
   )

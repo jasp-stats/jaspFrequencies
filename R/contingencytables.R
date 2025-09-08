@@ -243,7 +243,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 .crossTabOdds <- function(jaspResults, dataset, options, analyses, ready){
   if (!options$oddsRatio)
     return ()
-
   for (i in 1:nrow(analyses)) {
     analysis <- analyses[i,]
     analysisContainer <- jaspResults[[.crossTabCreateContainerName(analysis)]]
@@ -262,8 +261,8 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
     # Add columns to table
     .crossTabLayersColumns( crossTabOdds, analysis)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label, oddsTitle = title)
-    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label, oddsTitle = title)
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "oddsRatio",  ci.label, oddsTitle = "Estimate")
+    .crossTabOddsAddColInfo(crossTabOdds, fold = "FisherTest", ci.label, oddsTitle = "Estimate")
 
     analysisContainer[["crossTabLogOdds"]] <- crossTabOdds
     analysis                               <- as.list(analysis)
@@ -461,7 +460,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
                             table$addColumnInfo(name = paste0("low[",   fold, "]"),   title = gettext("Lower"),          type = "number", overtitle = ci.label, format = "dp:3")
                             table$addColumnInfo(name = paste0("up[",    fold, "]"),   title = gettext("Upper"),          type = "number", overtitle = ci.label, format = "dp:3")
                             table$addColumnInfo(name = paste0("p[",     fold, "]"),   title = gettext("p"),              type = "pvalue")
-
 }
 
 .crossTabNominalAddColInfo <- function(table, fold){
@@ -700,16 +698,23 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
 .crossTabOddsNote <- function(crossTabOdds, groupList, options, ready){
   if(ready){
+    row_group_levels <- dimnames(groupList$group.matrices[[1]])[[1]]
+    col_group_levels <- dimnames(groupList$group.matrices[[1]])[[2]]
+    if(!options$oddsRatioAsLogOdds) {
+      message <- gettextf("Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is less likely in group <em>%2$s</em>",
+                          col_group_levels[1], row_group_levels[1])
+      crossTabOdds$addFootnote(message)
+    }
+    else {
+      message <- gettextf("Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> is less likely in group <em>%2$s</em>",
+                          col_group_levels[1], row_group_levels[1])
+      crossTabOdds$addFootnote(message)
+    }
     if(length(groupList$group.matrices) >= 1  & options[["oddsRatioAlternative"]] != "twoSided"){
-
-      gp1 <- dimnames(groupList$group.matrices[[1]])[[1]][1]
-      gp2 <- dimnames(groupList$group.matrices[[1]])[[1]][2]
-
       if(options[["oddsRatioAlternative"]] == "less") lessIsMore <- gettext("is less than")
       else                                      lessIsMore <- gettext("is greater than")
 
-      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", gp1, lessIsMore, gp2)
-
+      message <- gettextf("For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>.", row_group_levels[1], lessIsMore, row_group_levels[2])
       crossTabOdds$addFootnote(message)
     }
   }
@@ -1162,7 +1167,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
       group <- NULL
 
     row <- list()
-    row[["type[oddsRatio]"]] <- "Odds ratio"
+    row[["type[oddsRatio]"]] <- analysisContainer[["crossTabLogOdds"]]$title
     if (ready) {
       if ( ! identical(dim(counts.matrix),as.integer(c(2,2)))) {
         row[["value[oddsRatio]"]] <- NaN
