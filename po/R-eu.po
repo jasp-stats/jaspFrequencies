@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
-"POT-Creation-Date: 2024-11-09 03:30\n"
+"POT-Creation-Date: 2025-09-13 03:32\n"
 "PO-Revision-Date: 2025-09-05 08:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
@@ -283,6 +283,18 @@ msgstr "Lambda (zutabeak)"
 
 msgid "Lambda (symmetric)"
 msgstr "Lambda (simetrikoa)"
+
+msgid ""
+"Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is "
+"more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
+"less likely in group <em>%2$s</em>"
+msgstr ""
+
+msgid ""
+"Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
+"is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
+"is less likely in group <em>%2$s</em>"
+msgstr ""
 
 #, fuzzy
 msgid "is less than"
