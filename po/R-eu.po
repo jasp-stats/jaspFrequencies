@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-05 08:01+0000\n"
+"PO-Revision-Date: 2025-09-15 18:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.1-rc\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, fuzzy
 msgid "Bayesian A/B Test"
@@ -49,7 +49,7 @@ msgid "Log odds ratio %s 0"
 msgstr "%s 0 log odds ratioa"
 
 msgid "Descriptives"
-msgstr "Deskribatzaileak"
+msgstr "Deskribapenak"
 
 msgid "Counts"
 msgstr "Zenbaketak"
@@ -67,13 +67,13 @@ msgid "Group 2"
 msgstr "2. taldea"
 
 msgid "Prior and Posterior"
-msgstr "Aurrekoa eta Ondorengoa"
+msgstr "Aurrekoa eta ondorengoa"
 
 msgid "Sequential Analysis"
 msgstr "Analisi Sekuentziala"
 
 msgid "Bayes Factor Robustness Check"
-msgstr "Bayes Faktorearen Sendotasuna Egiaztatzea"
+msgstr "Bayes faktorearen sendotasun egiaztapena"
 
 msgid "Prior"
 msgstr "Aurrekoa"
@@ -144,7 +144,7 @@ msgid "Proportions tested against value: %s."
 msgstr "Balioaren arabera probatutako proportzioak: %a."
 
 msgid "Descriptives Plots"
-msgstr "Grafiko Deskribatzaileak"
+msgstr "Deskribapen grafikoak"
 
 msgid "Bayesian Binomial Test"
 msgstr "Bayesiar Binomial Testa"
@@ -157,7 +157,7 @@ msgstr ""
 "bidez zehazten da."
 
 msgid "Inferential Plots"
-msgstr "Grafiko inferentzialak"
+msgstr "Inferentziazko grafikoak"
 
 msgid "Population proportion"
 msgstr "Biztanleriaren proportzioa"
@@ -371,7 +371,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%.0f%% Sinesgarritasun Tartea"
+msgstr "%0f%% Sinesgarritasun tartea"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
