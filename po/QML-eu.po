@@ -1,249 +1,254 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-09-17 10:01+0000\n"
+"Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14-dev\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "Frequencies"
-msgstr ""
+msgstr "Maiztasunak"
 
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "Klasikoa"
 
 msgctxt "Description|"
 msgid "Binomial Test"
-msgstr ""
+msgstr "Proba Binomiala"
 
 msgctxt "Description|"
 msgid "Multinomial Test"
-msgstr ""
+msgstr "Proba Multinomiala"
 
 msgctxt "Description|"
 msgid "Contingency Tables"
-msgstr ""
+msgstr "Kontingentzia Taulak"
 
 msgctxt "Description|"
 msgid "Log-Linear Regression"
-msgstr ""
+msgstr "Erregresio Log-Lineala"
 
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "Bayesiarra"
 
 msgctxt "Description|"
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "Bayesiar Proba Binomiala"
 
 msgctxt "Description|"
 msgid "A/B Test"
-msgstr ""
+msgstr "A/B Testa"
 
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Bayesiar A/B Testa"
 
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "Bayesiar Multinomial Testa"
 
 msgctxt "Description|"
 msgid "Bayesian Contingency Tables"
-msgstr ""
+msgstr "Bayesiar Kontingentzia Taulak"
 
 msgctxt "Description|"
 msgid "Bayesian Log-Linear Regression"
-msgstr ""
+msgstr "Bayesiar Log-Linear Erregresioa"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 1"
-msgstr ""
+msgstr "1. Arrakasta Taldea"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 1"
-msgstr ""
+msgstr "Laginaren Tamaina 1. taldea"
 
 msgctxt "ABTestBayesian|"
 msgid "Successes Group 2"
-msgstr ""
+msgstr "2. Arrakasta Taldea"
 
 msgctxt "ABTestBayesian|"
 msgid "Sample Size Group 2"
-msgstr ""
+msgstr "Laginaren Tamainaren 2. Taldea"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr ""
+msgstr "Logramoko Odds Ratioaren Aurreko Normala"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "μ:"
-msgstr ""
+msgstr "μ:"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "σ:"
-msgstr ""
+msgstr "σ:"
 
 msgctxt "ABTestBayesian|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskribapenak"
 
 msgctxt "ABTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Aurrekoa eta ondorengoa"
 
 msgctxt "ABTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisi sekuentziala"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgctxt "ABTestBayesian|"
 msgid "Bayes factor robustness check"
-msgstr ""
+msgstr "Bayes faktorearen sendotasunaren egiaztapena"
 
 msgctxt "ABTestBayesian|"
 msgid "Order"
-msgstr ""
+msgstr "Ordena"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to best model"
-msgstr ""
+msgstr "Konparatu eredu onenarekin"
 
 msgctxt "ABTestBayesian|"
 msgid "Compare to null model"
-msgstr ""
+msgstr "Konparatu eredu nuluarekin"
 
 msgctxt "ABTestBayesian|"
 msgid "Advanced Options"
-msgstr ""
+msgstr "Aukera aurreratuak"
 
 msgctxt "ABTestBayesian|"
 msgid "Prior Model Probability"
-msgstr ""
+msgstr "Aurreko ereduaren probabilitatea"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Log odds ratioa = 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Log odds ratioa > 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Log odds ratioa < 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr ""
+msgstr "Log odds ratioa ≠ 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
-msgstr ""
+msgstr "Laginketa"
 
 msgctxt "ABTestBayesian|"
 msgid "No. samples"
-msgstr ""
+msgstr "Lagin kopurua"
 
 msgctxt "ABTestBayesian|"
 msgid "Robustness Plot"
-msgstr ""
+msgstr "Sendotasun Grafikoa"
 
 msgctxt "ABTestBayesian|"
 msgid "No. Steps"
-msgstr ""
+msgstr "Urrats kopurua"
 
 msgctxt "ABTestBayesian|"
 msgid "Step Range"
-msgstr ""
+msgstr "Urrats-tartea"
 
 msgctxt "ABTestBayesian|"
 msgid "lower:"
-msgstr ""
+msgstr "beheago:"
 
 msgctxt "ABTestBayesian|"
 msgid "upper:"
-msgstr ""
+msgstr "goikoa:"
 
 msgctxt "BinomialTest|"
 msgid "Variables"
-msgstr ""
+msgstr "Aldagaiak"
 
 msgctxt "BinomialTest|"
 msgid "Test value: "
-msgstr ""
+msgstr "Proba-balioa: "
 
 msgctxt "BinomialTest|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipotesi alternatiboa"
 
 msgctxt "BinomialTest|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Proba-balioa"
 
 msgctxt "BinomialTest|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Proba-balioa"
 
 msgctxt "BinomialTest|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Proba-balioa"
 
 msgctxt "BinomialTest|"
 msgid "Additional Statisics"
-msgstr ""
+msgstr "Estatistiko Gehiago"
 
 msgctxt "BinomialTest|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Konfiantza-tartea"
 
 msgctxt "BinomialTest|"
 msgid "Interval"
-msgstr ""
+msgstr "Tartea"
 
 msgctxt "BinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximoa den p-erlazioa"
 
 msgctxt "BinomialTest|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "BinomialTest|"
 msgid "Descriptive plots"
-msgstr ""
+msgstr "Grafiko deskribatzaileak"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Test value: "
-msgstr ""
+msgstr "Proba-balioa: "
 
 msgctxt "BinomialTestBayesian|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipotesi alternatiboa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "≠ Test value"
-msgstr ""
+msgstr "≠ Proba-balioa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "> Test value"
-msgstr ""
+msgstr "> Probaren balioa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "< Test value"
-msgstr ""
+msgstr "< Probaren balioa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Plots"
@@ -251,755 +256,769 @@ msgstr ""
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior and posterior"
-msgstr ""
+msgstr "Aurrekoa eta ondorengoa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Additional info"
-msgstr ""
+msgstr "Informazio gehigarria"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisi sekuentziala"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Descriptive plots"
-msgstr ""
+msgstr "Grafiko deskribatzaileak"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Tarte sinesgarria"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter a"
-msgstr ""
+msgstr "Beta aurrekoa: a parametroa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Beta prior: parameter b"
-msgstr ""
+msgstr "Beta aurrekoa: b parametroa"
 
 msgctxt "ContingencyTables|"
 msgid "Rows"
-msgstr ""
+msgstr "Errenkadak"
 
 msgctxt "ContingencyTables|"
 msgid "Columns"
-msgstr ""
+msgstr "Zutabeak"
 
 msgctxt "ContingencyTables|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "ContingencyTables|"
 msgid "Layers"
-msgstr ""
+msgstr "Geruzak"
 
 msgctxt "ContingencyTables|"
 msgid "Statistics"
-msgstr ""
+msgstr "Estatistikoak"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "χ²"
-msgstr ""
+msgstr "χ²"
 
 msgctxt "ContingencyTables|"
 msgid "χ² continuity correction"
-msgstr ""
+msgstr "χ² jarraitutasun zuzenketa"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "Egiaztasun ratioa"
 
 msgctxt "ContingencyTables|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximoaren p-ratioa"
 
 msgctxt "ContingencyTables|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Konfiantza-tartea"
 
 msgctxt "ContingencyTables|"
 msgid "Alt. Hypothesis (Fisher's exact test)"
-msgstr ""
+msgstr "Hipotesi alternatiboa (Fisherren proba zehatza)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
-msgstr ""
+msgstr "Lehen taldea ≠ Bigarren taldea"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr ""
+msgstr "Lehen taldea > Bigarren taldea"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr ""
+msgstr "Lehen taldea < Bigarren taldea"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal"
-msgstr ""
+msgstr "Nominala"
 
 msgctxt "ContingencyTables|"
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "Kontingentzia-koefizientea"
 
 msgctxt "ContingencyTables|"
 msgid "Phi and Cramer's V"
-msgstr ""
+msgstr "Phi eta Cramer-en V"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Lambda"
-msgstr ""
+msgstr "Lambda"
 
 msgctxt "ContingencyTables|"
 msgid "Uncertainty coefficient"
-msgstr ""
+msgstr "Ziurgabetasun-koefizientea"
 
 msgctxt "ContingencyTables|"
 msgid "Ordinal"
-msgstr ""
+msgstr "Ordinala"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 msgctxt "ContingencyTables|"
 msgid "Somers' d"
-msgstr ""
+msgstr "Somers-en d"
 
 msgctxt "ContingencyTables|"
 msgid "Kendall's tau-b"
-msgstr ""
+msgstr "Kendall-en tau-b"
 
 msgctxt "ContingencyTables|"
 msgid "Kendall's tau-c"
-msgstr ""
+msgstr "Kendall-en tau-c"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal By Interval"
-msgstr ""
+msgstr "Nominala Tarteka"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Eta"
-msgstr ""
+msgstr "Eta"
 
 msgctxt "ContingencyTables|"
 msgid "Cochran's and Mantel-Haenszel statistics"
-msgstr ""
+msgstr "Cochran-en eta Mantel-Haenszel-en estatistikoak"
 
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr ""
+msgstr "Probatu odds ratio komuna berdin"
 
 msgctxt "ContingencyTables|"
 msgid "Cells"
-msgstr ""
+msgstr "Gelaxkak"
 
 msgctxt "ContingencyTables|"
 msgid "Expected"
-msgstr ""
+msgstr "Espero zena"
 
 msgctxt "ContingencyTables|"
 msgid "Hide small counts"
-msgstr ""
+msgstr "Ezkutatu zenbaketa txikiak"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Less than"
-msgstr ""
+msgstr "Baino gutxiago"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Z-Test"
-msgstr ""
+msgstr "Z-Test"
 
 msgctxt "ContingencyTables|"
 msgid "Compare column proportions"
-msgstr ""
+msgstr "Zutabeen proportzioak alderatu"
 
 msgctxt "ContingencyTables|"
 msgid "Adjust p-values"
-msgstr ""
+msgstr "p-balioak egokitu"
 
 msgctxt "ContingencyTables|"
 msgid "Percentages"
-msgstr ""
+msgstr "Ehunekoak"
 
 msgctxt "ContingencyTables|"
 msgid "Row"
-msgstr ""
+msgstr "Errenkada"
 
 msgctxt "ContingencyTables|"
 msgid "Column"
-msgstr ""
+msgstr "Zutabea"
 
 msgctxt "ContingencyTables|"
 msgid "Total"
-msgstr ""
+msgstr "Guztira"
 
 msgctxt "ContingencyTables|"
 msgid "Residuals"
-msgstr ""
+msgstr "Hondarrak"
 
 msgctxt "ContingencyTables|"
 msgid "Unstandardized"
-msgstr ""
+msgstr "Estandarizatu gabe"
 
 msgctxt "ContingencyTables|"
 msgid "Options"
-msgstr ""
+msgstr "Aukerak"
 
 msgctxt "ContingencyTables|"
 msgid "Row Order"
-msgstr ""
+msgstr "Errenkada Ordena"
 
 msgctxt "ContingencyTables|"
 msgid "Ascending"
-msgstr ""
+msgstr "Goranzkoa"
 
 msgctxt "ContingencyTables|"
 msgid "Descending"
-msgstr ""
+msgstr "Beheranzkoa"
 
 msgctxt "ContingencyTables|"
 msgid "Column Order"
-msgstr ""
+msgstr "Zutabe Ordena"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Rows"
-msgstr ""
+msgstr "Errenkadak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Columns"
-msgstr ""
+msgstr "Zutabeak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Layers"
-msgstr ""
+msgstr "Geruzak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Statistics"
-msgstr ""
+msgstr "Estatistikoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Sample"
-msgstr ""
+msgstr "Lagina"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Poisson"
-msgstr ""
+msgstr "Poisson"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Joint multinomial"
-msgstr ""
+msgstr "Multinomial bateratua"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, rows fixed"
-msgstr ""
+msgstr "Multinomial independentea, errenkadak finkoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, columns fixed"
-msgstr ""
+msgstr "Multinomial independentea, zutabeak finkoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Hypergeometric (2x2 only)"
-msgstr ""
+msgstr "Hipergeometrikoa (2x2 bakarrik)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estatistiko gehigarriak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr ""
+msgstr "Log odds ratioa (2x2 bakarrik)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Sinesgarritasun tartea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cramer's V"
-msgstr ""
+msgstr "Cramerren V"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Alt. Hypothesis"
-msgstr ""
+msgstr "Hipotesi alternatiboa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
-msgstr ""
+msgstr "Lehen taldea ≠ Bigarren taldea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr ""
+msgstr "Lehen taldea > Bigarren taldea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr ""
+msgstr "Lehen taldea < Bigarren taldea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional info"
-msgstr ""
+msgstr "Informazio gehigarria"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Prior concentration"
-msgstr ""
+msgstr "Aurreko kontzentrazioa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Cells"
-msgstr ""
+msgstr "Gelaxkak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Percentages"
-msgstr ""
+msgstr "Ehunekoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row"
-msgstr ""
+msgstr "Errenkada"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column"
-msgstr ""
+msgstr "Zutabea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Total"
-msgstr ""
+msgstr "Guztira"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Options"
-msgstr ""
+msgstr "Aukerak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Row Order"
-msgstr ""
+msgstr "Lerro Ordena"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Ascending"
-msgstr ""
+msgstr "Goranzkoa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Descending"
-msgstr ""
+msgstr "Beheranzkoa"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Column Order"
-msgstr ""
+msgstr "Zutabe Ordena"
 
 msgctxt "MultinomialTest|"
 msgid "Factor"
-msgstr ""
+msgstr "Faktorea"
 
 msgctxt "MultinomialTest|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "MultinomialTest|"
 msgid "Expected Counts"
-msgstr ""
+msgstr "Espero diren Zenbaketak"
 
 msgctxt "MultinomialTest|"
 msgid "Test Values"
-msgstr ""
+msgstr "Proba Balioak"
 
 msgctxt "MultinomialTest|"
 msgid "Equal proportions (multinomial test)"
-msgstr ""
+msgstr "Proportzio berdinak (multinomial test)"
 
 msgctxt "MultinomialTest|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estatistiko Gehigarriak"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskribapenak"
 
 msgctxt "MultinomialTest|"
 msgid "Confidence interval"
-msgstr ""
+msgstr "Konfiantza tartea"
 
 msgctxt "MultinomialTest|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximoaren p-ratioa"
 
 msgctxt "MultinomialTest|"
 msgid "Display"
-msgstr ""
+msgstr "Erakutsi"
 
 msgctxt "MultinomialTest|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proportzioak"
 
 msgctxt "MultinomialTest|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "MultinomialTest|"
 msgid "Descriptives plot"
-msgstr ""
+msgstr "Grafiko deskriptiboak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Factor"
-msgstr ""
+msgstr "Factorea"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Expected Counts"
-msgstr ""
+msgstr "Espero diren Zenbaketak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Test Values"
-msgstr ""
+msgstr "Proba Balioak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Equal proportions"
-msgstr ""
+msgstr "Proportzio berdinak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Additional Statistics"
-msgstr ""
+msgstr "Estatistiko Gehigarriak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskribapenak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Tarte sinesgarria"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Display"
-msgstr ""
+msgstr "Erakutsi"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proportzioak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Descriptives plot"
-msgstr ""
+msgstr "Grafiko deskribatzaileak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "No factor specified"
-msgstr ""
+msgstr "Ez da faktorerik zehaztu"
 
 msgctxt "RegressionLogLinear|"
 msgid "Counts (optional)"
-msgstr ""
+msgstr "Zenbaketak (aukerakoa)"
 
 msgctxt "RegressionLogLinear|"
 msgid "Factors"
-msgstr ""
+msgstr "Faktoreak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Model"
-msgstr ""
+msgstr "Eredua"
 
 msgctxt "RegressionLogLinear|"
 msgid "Components"
-msgstr ""
+msgstr "Osagaiak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Model Terms"
-msgstr ""
+msgstr "Ereduaren Terminoak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Statistics"
-msgstr ""
+msgstr "Estatistikoak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Regression Coefficient"
-msgstr ""
+msgstr "Erregresio Koefizientea"
 
 msgctxt "RegressionLogLinear|"
 msgid "Estimates"
-msgstr ""
+msgstr "Estimazioak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Confidence intervals"
-msgstr ""
+msgstr "Konfiantza tarteak"
 
 msgctxt "RegressionLogLinear|"
 msgid "Interval"
-msgstr ""
+msgstr "Tartea"
 
 msgctxt "RegressionLogLinear|"
 msgid "Vovk-Sellke maximum p-ratio"
-msgstr ""
+msgstr "Vovk-Sellke maximoa den p-ratioa"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Counts (optional)"
-msgstr ""
+msgstr "Zenbaketak (aukerakoak)"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Factors"
-msgstr ""
+msgstr "Faktoreak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Prior"
-msgstr ""
+msgstr "Aurrekoa"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Shape"
-msgstr ""
+msgstr "Forma"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Scale"
-msgstr ""
+msgstr "Eskala"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Cut-offs"
-msgstr ""
+msgstr "Ereduaren Mozketak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Display best"
-msgstr ""
+msgstr "Erakutsi onena"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
-msgstr ""
+msgstr "ereduak"
 
+#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr ""
+msgstr "Atzeko probabilitatea"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
-msgstr ""
+msgstr "Eredua"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Components"
-msgstr ""
+msgstr "Osagaiak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model Terms"
-msgstr ""
+msgstr "Ereduaren Terminoak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Statistics"
-msgstr ""
+msgstr "Estatistikoak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Regression Coefficients"
-msgstr ""
+msgstr "Erregresio Koefizienteak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Estimates"
-msgstr ""
+msgstr "Estimazioak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Credible intervals"
-msgstr ""
+msgstr "Tarte sinesgarriak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Interval"
-msgstr ""
+msgstr "Tartea"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Submodel"
-msgstr ""
+msgstr "Azpieredua"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Advanced"
-msgstr ""
+msgstr "Aurreratua"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Samples"
-msgstr ""
+msgstr "Laginak"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Auto"
-msgstr ""
+msgstr "Automatikoa"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Manual"
-msgstr ""
+msgstr "Eskuzkoa"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "No. samples"
-msgstr ""
+msgstr "Lagin kopurua"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr ""
+msgstr "Odds ratioa (2x2 bakarrik)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Odds Ratioaren Logaritmoa"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
-msgstr ""
+msgstr "Zenbaketa datuen analisiak"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Maila #"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Direction"
-msgstr ""
+msgstr "Norabidea"
 
+#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Pearson"
-msgstr ""
+msgstr "Pearson"
 
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Log Odds Ratioa"
 
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Odds Ratioa"
 
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
-msgstr ""
+msgstr "Arrisku Erlatiboa"
 
 msgctxt "ABTestBayesian|"
 msgid "Absolute Risk"
-msgstr ""
+msgstr "Arrisku Absolutua"
 
 msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
-msgstr ""
+msgstr "p1 eta p2"
 
+#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "p1"
-msgstr ""
+msgstr "p1"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Expected"
-msgstr ""
+msgstr "Espero zena"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Residuals"
-msgstr ""
+msgstr "Hondarrak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Unstandardized"
-msgstr ""
+msgstr "Estandarizatu gabea"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Pearson"
-msgstr ""
+msgstr "Pearson"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Standardized"
-msgstr ""
+msgstr "Estandarizatua"
 
 msgctxt "MultinomialTest|"
 msgid "Custom expected proportions (χ² test)"
-msgstr ""
+msgstr "Espero diren proportzio pertsonalizatuak (χ² testa)"
 
 msgctxt "MultinomialTestBayesian|"
 msgid "Custom expected proportions"
-msgstr ""
+msgstr "Espero diren proportzio pertsonalizatuak"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Informed Multinomial Test"
-msgstr ""
+msgstr "Informatutako Multinomial Testa"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multinomial Test"
-msgstr ""
+msgstr "Informatutako Bayesiar Multinomial Testa"
 
 msgctxt "Description|"
 msgid "Informed Multi-Binomial Test"
-msgstr ""
+msgstr "Informatutako Multi-Binomial Testa"
 
 msgctxt "Description|"
 msgid "Informed Bayesian Multi-Binomial Test"
-msgstr ""
+msgstr "Informatutako Bayesiar Multi-Binomial Testa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Factor"
-msgstr ""
+msgstr "Faktorea"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Successes"
-msgstr ""
+msgstr "Arrakastak"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sample Size"
-msgstr ""
+msgstr "Laginaren Tamaina"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayes Faktorearen Konparaketa"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Inguruan"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulua"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Taula"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Grafikoa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Display"
-msgstr ""
+msgstr "Erakutsi"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proportzioak"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Atzeko grafikoa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Sinesgarritasun tartea"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "No factor specified"
-msgstr ""
+msgstr "Ez da faktorerik zehaztu"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Maila #"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Ordenatu Mugatutako Hipotesiak"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
@@ -1009,100 +1028,111 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Sartu hipotesi baten murrizketa bakoitza lerro berri batean,\n"
+"adibidez, Baxua <= Ertaina <= Altua\n"
+"non 'Baxua'/'Ertaina'/'Altua' faktore mailen izenak diren.\n"
+"Egin klik 'gehi' ikonoan hipotesi gehiago gehitzeko.\n"
+"Egin klik informazio ikonoan adibide gehiago ikusteko."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Egin klik ordena-murrizketen sintaxiari buruz gehiago jakiteko."
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "1. eredua"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ktrl + Sartu aplikatzeko. Egin klik goiko botoi urdinean murrizketen "
+"sintaxiari buruzko laguntza lortzeko"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Advanced"
-msgstr ""
+msgstr "Aurreratua"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Estimazio-ezarpenak"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Burnin (MCMC)"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iterazioen (MCMC)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Lagin maximoak (zubi-laginketa)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Factor"
-msgstr ""
+msgstr "Faktorea"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Counts"
-msgstr ""
+msgstr "Zenbaketak"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes Factor Comparison"
-msgstr ""
+msgstr "Bayes faktorearen konparaketa"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing"
-msgstr ""
+msgstr "Inguruan"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null"
-msgstr ""
+msgstr "Nulua"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Table"
-msgstr ""
+msgstr "Taula"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Plot"
-msgstr ""
+msgstr "Grafikoa"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Display"
-msgstr ""
+msgstr "Erakutsi"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Proportions"
-msgstr ""
+msgstr "Proportzioak"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Atzeko grafikoa"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Credible interval"
-msgstr ""
+msgstr "Tarte sinesgarria"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "No factor specified"
-msgstr ""
+msgstr "Ez da faktorerik zehaztu"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Level #"
-msgstr ""
+msgstr "Maila #"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Order Restricted Hypotheses"
-msgstr ""
+msgstr "Ordena Mugatutako Hipotesiak"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
@@ -1112,153 +1142,164 @@ msgid ""
 "Click on the 'plus' icon to add more hypotheses. \n"
 "Click the information icon for more examples."
 msgstr ""
+"Sartu hipotesi baten murrizketa bakoitza lerro berri batean,\n"
+"adibidez, Baxua <= Ertaina <= Altua\n"
+"non 'Baxua'/'Ertaina'/'Altua' faktore-mailaren izenak diren.\n"
+"Egin klik 'gehi' ikonoan hipotesi gehiago gehitzeko.\n"
+"Egin klik informazio ikonoan adibide gehiago ikusteko."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
+msgstr "Egin klik ordena-murrizketen sintaxiari buruz gehiago jakiteko."
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
-msgstr ""
+msgstr "1. eredua"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid ""
 "Ctrl + Enter to apply. Click on the blue button above for help on the "
 "restriction syntax"
 msgstr ""
+"Ktrl + Sartu aplikatzeko. Egin klik goiko botoi urdinean murrizketa-"
+"sintaxiari buruzko laguntza lortzeko"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Advanced"
-msgstr ""
+msgstr "Aurreratua"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Estimation settings"
-msgstr ""
+msgstr "Estimazio-ezarpenak"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Burnin (MCMC)"
-msgstr ""
+msgstr "Burnin (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Iterations (MCMC)"
-msgstr ""
+msgstr "Iterazioak (MCMC)"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Maximum samples (bridgesampling)"
-msgstr ""
+msgstr "Lagin maximoak (zubi-laginketa)"
 
 msgctxt "ContingencyTables|"
 msgid "Standardized (adjusted Pearson)"
-msgstr ""
+msgstr "Estandarizatua (Pearson doitua)"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Analisi sekuentzialaren grafikoa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Bayes faktoreak"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Atzeko probabilitatea"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Aurreko banaketa"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr ""
+msgstr "Aurreko ereduaren probabilitatea"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model"
-msgstr ""
+msgstr "Eredua"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisi sekuentziala"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Pauso kopurua"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Sartu"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Eredu nulua"
 
+#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Inguruko??? eredua"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis plot"
-msgstr ""
+msgstr "Analisi grafiko sekuentziala"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Bayes factors"
-msgstr ""
+msgstr "Bayes faktoreak"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Posterior probability"
-msgstr ""
+msgstr "Atzeko ¿ondorengo? probabilitatea"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Aurreko Banaketa"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Prior Model Probability"
-msgstr ""
+msgstr "Aurreko Ereduaren Probabilitatea"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model"
-msgstr ""
+msgstr "Eredua"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisi sekuentziala"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Number of steps"
-msgstr ""
+msgstr "Pauso kopurua"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Include"
-msgstr ""
+msgstr "Sartu"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Null model"
-msgstr ""
+msgstr "Eredu nulua"
 
+#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Encompassing model"
-msgstr ""
+msgstr "Eredu inguratzailea ????"
 
 msgctxt "ContingencyTables|"
 msgid "Observed"
-msgstr ""
+msgstr "Behatuta"
 
 msgctxt "ContingencyTables|"
 msgid "Margin"
-msgstr ""
+msgstr "Marjina"
 
 msgctxt "ContingencyTables|"
 msgid "Show totals"
-msgstr ""
+msgstr "Erakutsi guztirakoak"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Observed"
-msgstr ""
+msgstr "Behatuta"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Margin"
-msgstr ""
+msgstr "Marjina"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Show totals"
-msgstr ""
+msgstr "Erakutsi guztirakoak"
