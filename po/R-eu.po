@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-18 08:01+0000\n"
+"PO-Revision-Date: 2025-09-19 15:02+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -46,8 +46,9 @@ msgstr "Log odds ratioa < 0"
 msgid "Log odds ratio %s 0"
 msgstr "%s 0 log odds ratioa"
 
+#, fuzzy
 msgid "Descriptives"
-msgstr "Deskribatzaileak"
+msgstr "Deskriptiboak"
 
 msgid "Counts"
 msgstr "Zenbaketak"
@@ -64,8 +65,9 @@ msgstr "1. taldea"
 msgid "Group 2"
 msgstr "2. taldea"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Aurrekoa eta ondorengoa"
+msgstr "Aurreko eta ondorengo"
 
 msgid "Sequential Analysis"
 msgstr "Analisi Sekuentziala"
@@ -107,7 +109,6 @@ msgstr "Maila"
 msgid "p"
 msgstr "p"
 
-#, fuzzy
 msgid "VS-MPR"
 msgstr "VS-MPR"
 
@@ -229,8 +230,9 @@ msgstr "VS-MPR%s"
 msgid "Value"
 msgstr "Balioa"
 
+#, fuzzy
 msgid "df"
-msgstr "ag askatasun graduak"
+msgstr "ag (df)"
 
 msgid "Expected count"
 msgstr "Espero zen kopurua"
@@ -437,7 +439,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr "Eredu honen Cramer-en V oraindik ez da inplementatu"
 
 msgid "Posterior"
-msgstr "Atzekoa"
+msgstr "Atzekoa  ¿edo ondorengoa?"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
@@ -490,7 +492,7 @@ msgid "vs."
 msgstr "vs."
 
 msgid "Observed"
-msgstr "Behatutakoa"
+msgstr "Behatuta"
 
 msgid "Estimated"
 msgstr "Kalkulatutakoa"
@@ -628,9 +630,8 @@ msgstr "Behatutako zenbaketak"
 msgid "Observed Proportions"
 msgstr "Behatutako proportzioak"
 
-#, fuzzy
 msgid "(Intercept)"
-msgstr "(Ebakidura)"
+msgstr "(Ebakidura)  ???"
 
 msgid "ANOVA"
 msgstr "ANOVA"
@@ -700,7 +701,7 @@ msgid "<em>Posterior model probability =</em>"
 msgstr "<em>Atzeko modeloaren probabilitatea =</em>"
 
 msgid "Model Comparison"
-msgstr "Modeloen Konparaketa"
+msgstr "Ereduen Konparaketa"
 
 msgid "BF<sub>10</sub>"
 msgstr "BF<sub>10</sub>"
@@ -714,9 +715,8 @@ msgstr "Log(BF<sub>10</sub>)"
 msgid "Posterior Summary Statistics"
 msgstr "Atzeko laburpen estatistikak"
 
-#, fuzzy
 msgid "P(incl|data)"
-msgstr "P(incl|data)"
+msgstr "P(barne|datuak)"
 
 msgid "Mean"
 msgstr "Batez bestekoa"
