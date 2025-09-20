@@ -375,7 +375,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%0f%% Sinesgarritasun tartea"
+msgstr "%.0f%% Sinesgarritasun tartea"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
@@ -594,7 +594,7 @@ msgid "Expected"
 msgstr "Espero zena"
 
 msgid "%s%% Confidence Interval"
-msgstr "%s% Konfiantza tartea"
+msgstr "%s%% Konfiantza tartea"
 
 msgid "Descriptives Plot"
 msgstr "Deskribapen grafikoa"
