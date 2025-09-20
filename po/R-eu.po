@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-05 08:01+0000\n"
+"PO-Revision-Date: 2025-09-19 15:02+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -11,17 +11,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.13.1-rc\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #, fuzzy
 msgid "Bayesian A/B Test"
 msgstr "A/B proba bayesiarra"
 
-#, fuzzy
 msgid "Models"
 msgstr "Ereduak"
 
-#, fuzzy
 msgid "P(M)"
 msgstr "P(M)"
 
@@ -48,8 +46,9 @@ msgstr "Log odds ratioa < 0"
 msgid "Log odds ratio %s 0"
 msgstr "%s 0 log odds ratioa"
 
+#, fuzzy
 msgid "Descriptives"
-msgstr "Deskribatzaileak"
+msgstr "Deskriptiboak"
 
 msgid "Counts"
 msgstr "Zenbaketak"
@@ -66,14 +65,15 @@ msgstr "1. taldea"
 msgid "Group 2"
 msgstr "2. taldea"
 
+#, fuzzy
 msgid "Prior and Posterior"
-msgstr "Aurrekoa eta Ondorengoa"
+msgstr "Aurreko eta ondorengo"
 
 msgid "Sequential Analysis"
 msgstr "Analisi Sekuentziala"
 
 msgid "Bayes Factor Robustness Check"
-msgstr "Bayes Faktorearen Sendotasuna Egiaztatzea"
+msgstr "Bayes faktorearen sendotasun egiaztapena"
 
 msgid "Prior"
 msgstr "Aurrekoa"
@@ -109,7 +109,6 @@ msgstr "Maila"
 msgid "p"
 msgstr "p"
 
-#, fuzzy
 msgid "VS-MPR"
 msgstr "VS-MPR"
 
@@ -144,7 +143,7 @@ msgid "Proportions tested against value: %s."
 msgstr "Balioaren arabera probatutako proportzioak: %a."
 
 msgid "Descriptives Plots"
-msgstr "Grafiko Deskribatzaileak"
+msgstr "Deskribapen grafikoak"
 
 msgid "Bayesian Binomial Test"
 msgstr "Bayesiar Binomial Testa"
@@ -157,7 +156,7 @@ msgstr ""
 "bidez zehazten da."
 
 msgid "Inferential Plots"
-msgstr "Grafiko inferentzialak"
+msgstr "Inferentziazko grafikoak"
 
 msgid "Population proportion"
 msgstr "Biztanleriaren proportzioa"
@@ -225,7 +224,6 @@ msgstr "Kendall's Tau-b"
 msgid "Z"
 msgstr "Z"
 
-#, fuzzy
 msgid "VS-MPR%s"
 msgstr "VS-MPR%s"
 
@@ -234,7 +232,7 @@ msgstr "Balioa"
 
 #, fuzzy
 msgid "df"
-msgstr "askatasun-mailak"
+msgstr "ag (df)"
 
 msgid "Expected count"
 msgstr "Espero zen kopurua"
@@ -289,12 +287,18 @@ msgid ""
 "more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
 "less likely in group <em>%2$s</em>"
 msgstr ""
+"Odds-Ratioak honako hau adierazten du: <br> (Erlazioa > 1): <em>%1$s</em> "
+"taldea litekeena da <em>%2$s</em> taldean. <br>(Erlazioa < 1): <em>%1$s</em> "
+"taldea litekeena da <em>%2$s</em> taldean"
 
 msgid ""
 "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
 "is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
 "is less likely in group <em>%2$s</em>"
 msgstr ""
+"Odds-Ratioak honako hau adierazten du:<br>(Erlazioa > 0): <em>%1$s</em> "
+"taldea litekeena da <em>%2$s</em> taldean. <br>(Erlazioa < 0): <em>%1$s</em> "
+"taldea litekeena da <em>%2$s</em> taldean"
 
 #, fuzzy
 msgid "is less than"
@@ -371,7 +375,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%.0f%% Sinesgarritasun Tartea"
+msgstr "%0f%% Sinesgarritasun tartea"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
@@ -414,225 +418,241 @@ msgid "Hypergeometric"
 msgstr "Hipergeometrikoa"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Hipergeometriako kontingentzia-taulen proba 2 x 2 tauletara mugatuta"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Proportzio-proba 2 x 2 tauletara mugatuta"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "ez da berdina"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "Laginketa-eredu baliogabea hautatu da"
 
 msgid "Odds ratio"
-msgstr ""
+msgstr "Odds Ratioa"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "Eredu honen Odds Ratioa oraindik ez da inplementatu"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "Eredu honen Cramer-en V oraindik ez da inplementatu"
 
 msgid "Posterior"
-msgstr ""
+msgstr "Atzekoa  ¿edo ondorengoa?"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"`Arrakasta`-k bi maila izan behar ditu `Laginaren Tamaina` zehaztu gabe "
+"badago."
 
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
+msgstr "Arrakasta baliogabeak: aldagaiak balio osoak bakarrik izan behar ditu."
 
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr ""
+msgstr "Arrakasta baliogabeak: aldagaiak balio osoak bakarrik izan behar ditu."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "Laginaren tamaina arrakasta kopurua baino handiagoa izan behar da."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"Faktoreak arrakastak laginaren tamainarekin lotzen dituzten maila bakarrak "
+"izan behar ditu."
 
 #, fuzzy
 msgid "Performing sequential analysis."
 msgstr "Analisi sekuentziala"
 
 msgid "Observed counts"
-msgstr ""
+msgstr "Behatutako zenbaketak"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "Behatutako proportzioak"
 
 msgid "Sample size"
-msgstr ""
+msgstr "Laginaren tamaina"
 
 msgid "Descriptives plot"
-msgstr ""
+msgstr "Grafiko deskriptiboa"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Atzeko grafiko mugagabea"
 
 #, fuzzy
 msgid "Sequential analysis"
 msgstr "Analisi sekuentziala"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Gutxienez bi eredu zehaztu behar dira."
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
-msgstr ""
+msgstr "Behatuta"
 
 msgid "Estimated"
-msgstr ""
+msgstr "Kalkulatutakoa"
 
-#, fuzzy
 msgid "Proportions"
-msgstr "Proportzioa"
+msgstr "Proportzioak"
 
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"'%1$s' hipotesirako aurreko ereduaren probabilitate sarrera (%2$s) ezin izan "
+"da zenbaki positibo batean analizatu. Mesedez, egiaztatu sarrera."
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "%1$s ordena murrizketen ebaluazio bayesiarra"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Log marglik"
 
 msgid "Error"
-msgstr ""
+msgstr "Errorea"
 
 msgid "Error %%"
-msgstr ""
+msgstr "Errorea %%"
 
-#, fuzzy
 msgid "P(M|Data)"
-msgstr "P(M|data)"
+msgstr "P(M|Datuak)"
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"Mesedez, egiaztatu berriro 'Ordena Mugatutako Hipotesiak' ataleko faktore-"
+"mailen izenak zure datu-multzoko faktore-mailekin bat datozen."
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"Errenkada bakoitzeko eredua ('1' gisa adierazita) %1$s-ekin alderatzen da (0 "
+"gisa adierazita)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Zehaztu hipotesi-proba informatuak `Ordena Mugatutako Hipotesiak` atalean."
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "Espero diren zenbaketak ez dira onartzen behatutako zenbaketarik gabe."
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "Espero ez diren zenbaketarik sartuta."
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"Zenbaketa baliogabeak: aldagaia ez dator bat faktorearen maila kopuruarekin. "
+"Zenbaketak zehazten direnean, datu-multzoko errenkada bakoitzak faktorearen "
+"maila bakar bat ordezkatu behar du."
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
 msgstr ""
+"Espero diren zenbaketa baliogabeak: aldagaia ez dator bat faktorearen maila "
+"kopuruarekin."
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "Zenbaketa baliogabeak: aldagaiak balio osoak bakarrik izan behar ditu."
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "Zenbaketa baliogabeak: behaketa 1 baino gutxiago."
 
 msgid "Confidence intervals are based on independent binomial distributions."
-msgstr ""
+msgstr "Konfiantza-tarteak banaketa binomial independenteetan oinarritzen dira."
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "Ezin izan dira konfiantza-tarteak kalkulatu."
 
 msgid "Factor"
-msgstr ""
+msgstr "Faktorea"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "Espero zena: %s"
 
 msgid "Expected"
-msgstr ""
+msgstr "Espero zena"
 
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "%s% Konfiantza tartea"
 
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "Deskribapen grafikoa"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "Bayesiar multinomial proba"
 
 msgid "Levels"
-msgstr ""
+msgstr "Mailak"
 
 msgid "Credible"
-msgstr ""
+msgstr "Sinesgarria"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
 msgstr ""
+"Tarte sinesgarriak aurrizki lauak dituzten banaketa binomial "
+"independenteetan oinarritzen dira."
 
 msgid "Confidence"
-msgstr ""
+msgstr "Konfiantza"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s Tartea"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "Ezin izan dira %s tarte kalkulatu."
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "Behatutako zenbaketak"
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "Behatutako proportzioak"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(Ebakidura)  ???"
 
 msgid "ANOVA"
 msgstr "ANOVA"
 
 msgid "Deviance"
-msgstr ""
+msgstr "Desbideratzea"
 
 msgid "Residual df"
-msgstr ""
+msgstr "Hondar ag (askatasun graduak)"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "Hondar Desbideratzea"
 
 msgid "Coefficients"
-msgstr ""
+msgstr "Koefizienteak"
 
 msgid "Estimate"
-msgstr ""
+msgstr "Estimazioa"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% Konfiantza tarteak"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -640,53 +660,63 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke gehienezko <em>p</em>-erlazioa: <em>p</em>-balioan oinarrituta,\n"
+"H%1$s-ren aldeko gehienezko probabilitatea H%2$s-ren gainetik berdina da\n"
+"1/(-e <em>p</em> log(<em>p</em>)) <em>p</em> %3$s-rako .37\n"
+"(Sellke, Bayarri, & Berger, 2001)."
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "aldagaiak ezin dira irakurri"
 
 msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
 msgstr ""
+"Emaitzak ezin dira kalkulatu; errore numeriko bat gertatu da laginketan "
+"zehar. Saiatu eredua aldatzen (adibidez, sinplifikatzen) edo aurrekoak "
+"doitzen."
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"R paketearen 'conting' errorea: %s <br> Baliteke errore numeriko bat gertatu "
+"izana laginketan zehar. Saiatu eredua aldatzen (adibidez, sinplifikatzen), "
+"aurrekoak doitzen, hazia aldatzen edo MCMC laginen kopurua aldatzen."
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "R paketearen errorea: Ezin dira taularen probabilitateak berreskuratu"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "Bisitatutako modelo kopuru osoa = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "Zehaztutako azpimodeloa ez dago azpimodelo posibleen artean"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>Modeloaren formula:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>Atzeko modeloaren probabilitatea =</em>"
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "Ereduen Konparaketa"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "Atzeko laburpen estatistikak"
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(barne|datuak)"
 
 msgid "Mean"
 msgstr "Batez bestekoa"
@@ -695,13 +725,13 @@ msgid "Variance"
 msgstr "Bariantza"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% Sinesgarritasun tarteak"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "%s Azpimodelorako Atzeko Laburpen Estatistikoak"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% Sinesgarritasun-tarteak"
 
 #, fuzzy
 #~ msgid ""
