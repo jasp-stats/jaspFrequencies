@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-21 06:54+0000\n"
+"PO-Revision-Date: 2025-09-22 09:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -159,7 +159,7 @@ msgid "Inferential Plots"
 msgstr "Inferentziazko grafikoak"
 
 msgid "Population proportion"
-msgstr "Biztanleriaren proportzioa"
+msgstr "Populazio proportzioa"
 
 #, fuzzy
 msgid "One or more Bayes factors cannot be computed"
@@ -340,9 +340,8 @@ msgstr "Gelaxka bakoitzak Pearson hondakinak erakusten ditu"
 msgid "Each cell displays standardized residuals"
 msgstr "Gelaxka bakoitzak hondakin estandarizatuak erakusten ditu"
 
-#, fuzzy
 msgid "Count"
-msgstr "Zenbaketak"
+msgstr "Zenbaketa"
 
 msgid "N"
 msgstr "N"
@@ -438,7 +437,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr "Eredu honen Cramer-en V oraindik ez da inplementatu"
 
 msgid "Posterior"
-msgstr "Atzekoa  ¿edo ondorengoa?"
+msgstr "Ondorengoa"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
@@ -593,7 +592,7 @@ msgid "Expected"
 msgstr "Espero zena"
 
 msgid "%s%% Confidence Interval"
-msgstr "%s%% Konfiantza tartea"
+msgstr "%s%% Konfiantza-tartea"
 
 msgid "Descriptives Plot"
 msgstr "Deskribapen grafikoa"
