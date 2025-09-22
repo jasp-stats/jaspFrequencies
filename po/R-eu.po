@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-22 09:01+0000\n"
+"PO-Revision-Date: 2025-09-23 10:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -46,7 +46,6 @@ msgstr "Log odds ratioa < 0"
 msgid "Log odds ratio %s 0"
 msgstr "%s 0 log odds ratioa"
 
-#, fuzzy
 msgid "Descriptives"
 msgstr "Deskriptiboak"
 
@@ -65,7 +64,6 @@ msgstr "1. taldea"
 msgid "Group 2"
 msgstr "2. taldea"
 
-#, fuzzy
 msgid "Prior and Posterior"
 msgstr "Aurreko eta ondorengo"
 
@@ -373,7 +371,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%.0f%% Sinesgarritasun tartea"
+msgstr "%0f%% Tarte sinesgarria"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
