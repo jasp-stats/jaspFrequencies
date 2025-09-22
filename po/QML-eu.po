@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-17 10:01+0000\n"
+"PO-Revision-Date: 2025-09-23 14:01+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/eu/>\n"
@@ -84,12 +84,10 @@ msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
 msgstr "Logramoko Odds Ratioaren Aurreko Normala"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "μ:"
 msgstr "μ:"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "σ:"
 msgstr "σ:"
@@ -252,7 +250,7 @@ msgstr "< Probaren balioa"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Plots"
-msgstr ""
+msgstr "Grafikoak"
 
 msgctxt "BinomialTestBayesian|"
 msgid "Prior and posterior"
@@ -306,14 +304,13 @@ msgctxt "ContingencyTables|"
 msgid "Statistics"
 msgstr "Estatistikoak"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "χ²"
 msgstr "χ²"
 
 msgctxt "ContingencyTables|"
 msgid "χ² continuity correction"
-msgstr "χ² jarraitutasun zuzenketa"
+msgstr "χ² jarraitutasun-zuzenketa"
 
 #, fuzzy
 msgctxt "ContingencyTables|"
@@ -356,7 +353,6 @@ msgctxt "ContingencyTables|"
 msgid "Phi and Cramer's V"
 msgstr "Phi eta Cramer-en V"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Lambda"
 msgstr "Lambda"
@@ -369,7 +365,6 @@ msgctxt "ContingencyTables|"
 msgid "Ordinal"
 msgstr "Ordinala"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Gamma"
 msgstr "Gamma"
@@ -390,7 +385,6 @@ msgctxt "ContingencyTables|"
 msgid "Nominal By Interval"
 msgstr "Nominala Tarteka"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Eta"
 msgstr "Eta"
@@ -415,7 +409,6 @@ msgctxt "ContingencyTables|"
 msgid "Hide small counts"
 msgstr "Ezkutatu zenbaketa txikiak"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Less than"
 msgstr "Baino gutxiago"
@@ -794,10 +787,9 @@ msgctxt "RegressionLogLinearBayesian|"
 msgid "models"
 msgstr "ereduak"
 
-#, fuzzy
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Posterior prob."
-msgstr "Atzeko probabilitatea"
+msgstr "Ondorengo probabilitatea"
 
 msgctxt "RegressionLogLinearBayesian|"
 msgid "Model"
@@ -875,7 +867,6 @@ msgctxt "BinomialTestBayesian|"
 msgid "Direction"
 msgstr "Norabidea"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Pearson"
 msgstr "Pearson"
@@ -900,7 +891,6 @@ msgctxt "ABTestBayesian|"
 msgid "p1 & p2"
 msgstr "p1 eta p2"
 
-#, fuzzy
 msgctxt "ABTestBayesian|"
 msgid "p1"
 msgstr "p1"
