@@ -371,7 +371,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr "Bayesiar kontingentzia-tauletako probak"
 
 msgid "%.0f%% Credible Interval"
-msgstr "%0f%% Tarte sinesgarria"
+msgstr "%.0f%% Tarte sinesgarria"
 
 #, fuzzy
 msgid "Log Odds Ratio Plots"
