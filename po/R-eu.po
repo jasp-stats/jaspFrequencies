@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-23 10:01+0000\n"
-"Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
+"PO-Revision-Date: 2025-10-01 09:01+0000\n"
+"Last-Translator: Ángel Prieto <angel.prieto.fi@gmail.com>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgid "Bayesian A/B Test"
 msgstr "A/B proba bayesiarra"
 
 msgid "Models"
-msgstr "Ereduak"
+msgstr "Modeloak"
 
 msgid "P(M)"
 msgstr "P(M)"
@@ -47,7 +47,7 @@ msgid "Log odds ratio %s 0"
 msgstr "%s 0 log odds ratioa"
 
 msgid "Descriptives"
-msgstr "Deskriptiboak"
+msgstr "Deskribapenak"
 
 msgid "Counts"
 msgstr "Zenbaketak"
@@ -68,7 +68,7 @@ msgid "Prior and Posterior"
 msgstr "Aurreko eta ondorengo"
 
 msgid "Sequential Analysis"
-msgstr "Analisi Sekuentziala"
+msgstr "Analisi sekuentziala"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "Bayes faktorearen sendotasun egiaztapena"
@@ -105,20 +105,20 @@ msgid "Level"
 msgstr "Maila"
 
 msgid "p"
-msgstr "p"
+msgstr "or"
 
 msgid "VS-MPR"
 msgstr "VS-MPR"
 
 msgid "Lower"
-msgstr "Behekoa"
+msgstr "Beheko"
 
 #, fuzzy
 msgid "%s%% CI for Proportion"
 msgstr "%s%% CI for Proportion"
 
 msgid "Upper"
-msgstr "Goikoa"
+msgstr "Goiko"
 
 #, fuzzy
 msgid ""
@@ -214,7 +214,7 @@ msgid "Gamma"
 msgstr "Gamma"
 
 msgid "Standard Error"
-msgstr "Errore Estandarra"
+msgstr "Errore estandarra"
 
 msgid "Kendall's Tau-b"
 msgstr "Kendall's Tau-b"
@@ -229,7 +229,7 @@ msgid "Value"
 msgstr "Balioa"
 
 msgid "df"
-msgstr "ag"
+msgstr "df"
 
 msgid "Expected count"
 msgstr "Espero zen kopurua"
@@ -435,7 +435,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr "Eredu honen Cramer-en V oraindik ez da inplementatu"
 
 msgid "Posterior"
-msgstr "Ondorengoa"
+msgstr "Atzekoa"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
@@ -488,10 +488,10 @@ msgid "vs."
 msgstr "vs."
 
 msgid "Observed"
-msgstr "Behatuta"
+msgstr "Behatuak"
 
 msgid "Estimated"
-msgstr "Kalkulatutakoa"
+msgstr "Kalkulatua"
 
 msgid "Proportions"
 msgstr "Proportzioak"
@@ -510,7 +510,7 @@ msgid "BF%1$s%2$s"
 msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr "Log(BF%1$s%2$s)"
+msgstr "Erregistroa(BF%1$s%2$s)"
 
 msgid "Log marglik"
 msgstr "Log marglik"
