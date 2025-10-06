@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-09-19 15:01+0000\n"
-"Last-Translator: Tahir Enes Gedik <tegedik@gmail.com>\n"
+"PO-Revision-Date: 2025-10-07 21:01+0000\n"
+"Last-Translator: Hamza Yalçin <h.yalcin08@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/tr/>\n"
 "Language: tr\n"
@@ -63,16 +63,16 @@ msgid "Group 2"
 msgstr "Grup 2"
 
 msgid "Prior and Posterior"
-msgstr "Önceki ve Sonraki"
+msgstr "Önsel ve Sonsal"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Sıralı Analiz"
 
 msgid "Bayes Factor Robustness Check"
-msgstr "Bayes faktörü sağlamlık kontrolü"
+msgstr "Bayes Faktörü Sağlamlık Kontrolü"
 
 msgid "Prior"
-msgstr "Önceki"
+msgstr "Önsel"
 
 msgid "n"
 msgstr "n"
@@ -96,13 +96,13 @@ msgid "Variable"
 msgstr "Değişken"
 
 msgid "Level"
-msgstr "Seviye"
+msgstr "Düzey"
 
 msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
-msgstr "VS-MPR"
+msgstr "VS-MPO"
 
 msgid "Lower"
 msgstr "Alt"
@@ -171,7 +171,7 @@ msgid "Log Odds Ratio"
 msgstr ""
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "Odds Oranı"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
@@ -198,13 +198,13 @@ msgid "Z"
 msgstr ""
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPO%s"
 
 msgid "Value"
-msgstr ""
+msgstr "Değer"
 
 msgid "df"
-msgstr "sd (serbestlik derecesi)"
+msgstr "sd"
 
 msgid "Expected count"
 msgstr ""
@@ -382,7 +382,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
 msgid "Posterior"
-msgstr ""
+msgstr "Sonsal"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
@@ -429,7 +429,7 @@ msgid "vs."
 msgstr ""
 
 msgid "Observed"
-msgstr ""
+msgstr "Gözlemlenen"
 
 msgid "Estimated"
 msgstr ""
@@ -465,7 +465,7 @@ msgid "P(M|Data)"
 msgstr ""
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
@@ -511,7 +511,7 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr ""
+msgstr "Faktör"
 
 msgid "Expected: %s"
 msgstr ""
@@ -520,7 +520,7 @@ msgid "Expected"
 msgstr ""
 
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "%%%s Güven Aralığı"
 
 msgid "Descriptives Plot"
 msgstr ""
@@ -557,7 +557,7 @@ msgid "Observed Proportions"
 msgstr ""
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(Kesme Noktası)"
 
 msgid "ANOVA"
 msgstr "ANOVA"
@@ -575,7 +575,7 @@ msgid "Coefficients"
 msgstr "Katsayılar"
 
 msgid "Estimate"
-msgstr "Kestirim (Tahmin)"
+msgstr "Kestirim"
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
@@ -617,22 +617,22 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "Model Karşılaştırması"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
 msgid "P(incl|data)"
-msgstr "P(incl|veri)"
+msgstr "P(dahil|veri)"
 
 msgid "Mean"
 msgstr "Ortalama"
