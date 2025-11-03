@@ -23,14 +23,17 @@ import JASP.Controls
 
 Form
 {
+	info: qsTr("The Bayesian multinomial test allows the user to test whether an observed distribution of cell counts corresponds to an expected distribution.\n" + "## " + "Assumptions\n" + "- The variable of interest should be categorical.")
+
 	VariablesForm
 	{
 		preferredHeight: 190 * preferencesModel.uiScale
 		marginBetweenVariablesLists	: 15
+		info: qsTr("**Input**")
 		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]	}
-		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"]	}
-		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"]	}
+		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]; 	info: qsTr("The categorical variable we are interested in.")	}
+		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"]; 	info: qsTr("The variable that contains the count data.")	}
+		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"]; 	info: qsTr("If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis.") }
 	}
 
 	RadioButtonGroup
@@ -42,8 +45,8 @@ Form
 
 		Layout.columnSpan: 2
 
-		RadioButton {	value: "equal";		label: qsTr("Equal proportions");			checked: true				}
-		RadioButton {	value: "custom";	label: qsTr("Custom expected proportions"); id: expectedProbs			}
+		RadioButton {	value: "equal";		label: qsTr("Equal proportions");			checked: true;		info: qsTr("Checks if observed counts across categories are uniformly distributed (the null hypothesis). A significant difference suggests the categories aren't equally likely.")	}
+		RadioButton {	value: "custom";	label: qsTr("Custom expected proportions"); id: expectedProbs;	info: qsTr("Checks if observed counts match a specific expected distribution (the null hypothesis). By default, it tests for a uniform distribution, but you can set your own expectations. A significant difference suggests the actual distribution doesn’t fit the expected one.")	}
 
 		Chi2TestTableView
 		{
@@ -67,9 +70,10 @@ Form
 			{
 				name	: "descriptivesTable"
 				label	: qsTr("Descriptives")
+				info	: qsTr("Displays a table containing the categories of interest, the observed values and the expected values under the specified hypotheses.")
 				CheckBox
 				{
-					name				: "descriptivesTableCi"; label: qsTr("Credible interval")
+					name				: "descriptivesTableCi"; label: qsTr("Credible interval"); info: qsTr("Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.")
 					childrenOnSameRow	: true
 
 					CIField { name: "descriptivesTableCiLevel" }
@@ -85,8 +89,8 @@ Form
 			name	: "descriptivesType"
 			title	: qsTr("Display")
 
-			RadioButton { value: "counts";		label: qsTr("Counts");	checked: true	}
-			RadioButton { value: "proportions";	label: qsTr("Proportions")				}
+			RadioButton { value: "counts";		label: qsTr("Counts");	checked: true;  info: qsTr("Displays the descriptives as counts.")		}
+			RadioButton { value: "proportions";	label: qsTr("Proportions");				info: qsTr("Displays the descriptives as a proportion.")	}
 		}
 
 		Group
@@ -96,8 +100,9 @@ Form
 			{
 				name	: "descriptivesPlot"
 				label	: qsTr("Descriptives plot")
+				info	: qsTr("Displays the frequency of the reported counts and the corresponding credible intervals for every level of the variable of interest.")
 
-				CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Credible interval") }
+				CIField { name: "descriptivesPlotCiLevel"; label: qsTr("Credible interval"); info: qsTr("A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.") }
 			}
 		}
 	}
@@ -105,6 +110,7 @@ Form
 	Section
 	{
 		title	: qsTr("Prior")
+		info	: qsTr("Option to adjust the prior distribution for the vector of cell probabilities.")
 
 		Text
 		{
