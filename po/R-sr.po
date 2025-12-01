@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-08-25 12:03+0000\n"
+"PO-Revision-Date: 2025-12-01 06:16+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/sr/>\n"
@@ -10,15 +10,16 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.13\n"
+"Plural-Forms: nplurals=3; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 5.15-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Bayesian A/Б тест"
 
 msgid "Models"
-msgstr ""
+msgstr "Модели"
 
 #, fuzzy
 msgid "P(M)"
@@ -31,54 +32,56 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
+"Позитиван логаритамски однос шанси значи да је стопа успеха у Групи 2 већа "
+"него у Групи 1."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Логаритамски однос шанси = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Логаритамски однос шанси > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Логаритамски однос шанси < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "Логаритамски однос шанси %s 0"
 
 msgid "Descriptives"
 msgstr "Дескриптивна"
 
 msgid "Counts"
-msgstr ""
+msgstr "Бројеви"
 
 msgid "Total"
-msgstr ""
+msgstr "Укупно"
 
 msgid "Proportion"
-msgstr ""
+msgstr "Пропорција"
 
 msgid "Group 1"
-msgstr ""
+msgstr "Група 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "Група 2"
 
 msgid "Prior and Posterior"
 msgstr "Претходна и задња"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Секвенцијална анализа"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Провера робусности Бајесовог фактора"
 
 msgid "Prior"
-msgstr ""
+msgstr "Претходни"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "Постериорна вероватноћа"
 
 msgid "P(%1$s | data) = %2$.3f"
 msgstr ""
@@ -105,13 +108,13 @@ msgid "VS-MPR"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Нижи"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Виши"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
@@ -130,7 +133,7 @@ msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "Bayesian биномни тест"
 
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
@@ -313,7 +316,7 @@ msgid "%s continuity correction"
 msgstr ""
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "Количник веродостојности"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
 msgstr ""
@@ -510,7 +513,7 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr ""
+msgstr "Фактор"
 
 msgid "Expected: %s"
 msgstr ""
@@ -519,7 +522,7 @@ msgid "Expected"
 msgstr ""
 
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "%s%% Интервал поверења"
 
 msgid "Descriptives Plot"
 msgstr ""
@@ -528,7 +531,7 @@ msgid "Bayesian Multinomial Test"
 msgstr ""
 
 msgid "Levels"
-msgstr ""
+msgstr "Нивои"
 
 msgid "Credible"
 msgstr ""
@@ -572,7 +575,7 @@ msgid "Coefficients"
 msgstr ""
 
 msgid "Estimate"
-msgstr "Проценити"
+msgstr "Процена"
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
