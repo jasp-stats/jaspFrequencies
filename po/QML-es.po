@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-12-12 17:00+0000\n"
-"Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-qml/es/>\n"
 "Language: es\n"
@@ -84,7 +84,8 @@ msgstr "Tamaño de muestra Grupo 2"
 
 msgctxt "ABTestBayesian|"
 msgid "Normal Prior on Log Odds Ratio"
-msgstr "Distribución Previa Normal para el Logaritmo de la Razón de Odds"
+msgstr ""
+"Distribución Previa Normal para el Logaritmo de la Razón de Probabilidades"
 
 msgctxt "ABTestBayesian|"
 msgid "μ:"
@@ -140,19 +141,19 @@ msgstr "Probabilidad del Modelo Previo"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio = 0"
-msgstr "Logaritmo de la razón de odds = 0"
+msgstr "Logaritmo de la razón de probabilidades = 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio > 0"
-msgstr "Logaritmo de la razón de odds > 0"
+msgstr "Logaritmo de la razón de probabilidades > 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio < 0"
-msgstr "Logaritmo de la razón de odds < 0"
+msgstr "Logaritmo de la razón de probabilidades < 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Log odds ratio ≠ 0"
-msgstr "Logaritmo de la razón de odds ≠ 0"
+msgstr "Logaritmo de la razón de probabilidades ≠ 0"
 
 msgctxt "ABTestBayesian|"
 msgid "Sampling"
@@ -396,7 +397,7 @@ msgstr "Estadísticos de Cochran y de Mantel-Haenszel"
 
 msgctxt "ContingencyTables|"
 msgid "Test common odds ratio equals"
-msgstr "Contrastar la igualdad común de la razón de odds"
+msgstr "Contrastar la igualdad común de la razón de probabilidades"
 
 msgctxt "ContingencyTables|"
 msgid "Cells"
@@ -520,7 +521,7 @@ msgstr "Estadísticos Adicionales"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr "Logaritmo de la razón de odds (solo 2x2)"
+msgstr "Logaritmo de la razón de probabilidades (solo 2x2)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
@@ -848,11 +849,11 @@ msgstr "Nº muestras"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr "Razón de odds (solo 2x2)"
+msgstr "Razón de probabilidades (solo 2x2)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
-msgstr "Logaritmo de la Razón de Odds"
+msgstr "Logaritmo de la Razón de Probabilidades"
 
 msgctxt "Description|"
 msgid "Analyses for count data"
@@ -872,11 +873,11 @@ msgstr "Pearson"
 
 msgctxt "ABTestBayesian|"
 msgid "Log Odds Ratio"
-msgstr "Logaritmo de la Razón de Odds"
+msgstr "Logaritmo de la Razón de Probabilidades"
 
 msgctxt "ABTestBayesian|"
 msgid "Odds Ratio"
-msgstr "Razón de Odds"
+msgstr "Razón de Probabilidades"
 
 msgctxt "ABTestBayesian|"
 msgid "Relative Risk"
