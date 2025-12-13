@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-12-05 21:00+0000\n"
+"PO-Revision-Date: 2025-12-12 17:00+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/sr/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 5.15-dev\n"
 
 msgid "Bayesian A/B Test"
-msgstr "Bayesian A/Б тест"
+msgstr "Бејзов A/Б тест"
 
 msgid "Models"
 msgstr "Модели"
@@ -70,7 +70,7 @@ msgid "Sequential Analysis"
 msgstr "Секвенцијална анализа"
 
 msgid "Bayes Factor Robustness Check"
-msgstr "Провера робусности Бајесовог фактора"
+msgstr "Провера робусности Бејзовог фактора"
 
 msgid "Prior"
 msgstr "Претходни"
@@ -100,7 +100,7 @@ msgid "Level"
 msgstr ""
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
@@ -131,7 +131,7 @@ msgid "Descriptives Plots"
 msgstr ""
 
 msgid "Bayesian Binomial Test"
-msgstr "Bayesian биномни тест"
+msgstr "Бејзов биномни тест"
 
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
@@ -202,7 +202,7 @@ msgid "VS-MPR%s"
 msgstr ""
 
 msgid "Value"
-msgstr ""
+msgstr "Вредност"
 
 msgid "df"
 msgstr "df"
@@ -341,7 +341,7 @@ msgid "The Bayes factor is undefined"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Бејзов фактор је премали"
 
 msgid "The Bayes factor is infinite"
 msgstr ""
@@ -427,7 +427,7 @@ msgid "At least two models need to be specified."
 msgstr ""
 
 msgid "vs."
-msgstr ""
+msgstr "наспрам"
 
 msgid "Observed"
 msgstr ""
@@ -526,7 +526,7 @@ msgid "Descriptives Plot"
 msgstr ""
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "Бејзов мултиномни тест"
 
 msgid "Levels"
 msgstr "Нивои"
