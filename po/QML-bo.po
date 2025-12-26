@@ -1,21 +1,25 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-12-26 11:35+0000\n"
+"Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
+"Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/bo/>\n"
 "Language: bo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "Frequencies"
-msgstr ""
+msgstr "ཟློས་ཕྱོད།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Classical"
-msgstr ""
+msgstr "སྲོལ་རྒྱུན།"
 
 msgctxt "Description|"
 msgid "Binomial Test"
@@ -33,21 +37,24 @@ msgctxt "Description|"
 msgid "Log-Linear Regression"
 msgstr ""
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian"
-msgstr ""
+msgstr "བྷེ་ཡེ་སི།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "བྷེ་ཡེ་སིའི་གཉིས་ཚན་ཚོད་ལྟ།"
 
 msgctxt "Description|"
 msgid "A/B Test"
 msgstr ""
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "བྷེ་ཡེ་སིའི་ A/B ཚོད་ལྟ།"
 
 msgctxt "Description|"
 msgid "Bayesian Multinomial Test"
