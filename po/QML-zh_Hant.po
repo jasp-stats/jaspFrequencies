@@ -227,7 +227,7 @@ msgid "Plots"
 msgstr "圖"
 
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "描述性統計圖"
 
 msgctxt "BinomialTestBayesian|"
@@ -284,7 +284,7 @@ msgid "Sequential analysis"
 msgstr "順序分析"
 
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "描述性統計圖"
 
 msgctxt "BinomialTestBayesian|"

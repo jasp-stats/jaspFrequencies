@@ -333,7 +333,7 @@ msgid "Test value: "
 msgstr "Valor a probar: "
 
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Gráficas descritivas"
 
 msgctxt "MultinomialTestBayesian|"
@@ -501,7 +501,7 @@ msgid "Plots"
 msgstr "Gráficas"
 
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Gráficas descritivas"
 
 msgctxt "BinomialTestBayesian|"

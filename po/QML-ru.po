@@ -245,7 +245,7 @@ msgid "Plots"
 msgstr "Графики"
 
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Описательные графики"
 
 #, fuzzy
@@ -291,7 +291,7 @@ msgid "Sequential analysis"
 msgstr "Последовательная проверка гипотез"
 
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Описательные графики"
 
 #, fuzzy
