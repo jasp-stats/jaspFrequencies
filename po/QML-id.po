@@ -223,7 +223,7 @@ msgid "Plots"
 msgstr "Plot"
 
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Plot deskriptif"
 
 msgctxt "BinomialTestBayesian|"
@@ -263,7 +263,7 @@ msgid "Sequential analysis"
 msgstr "Analisis sekuensial"
 
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "Plot deskriptif"
 
 msgctxt "BinomialTestBayesian|"

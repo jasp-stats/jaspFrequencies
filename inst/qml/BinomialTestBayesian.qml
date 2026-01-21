@@ -70,7 +70,7 @@ Form
 		CheckBox
 		{
 			name:	"descriptivesPlot"
-			label:	qsTr("Descriptive plots")
+			label:	qsTr("Descriptives plots")
 			CIField { name: "descriptivesPlotCiLevel";	label: qsTr("Credible interval") }
 		}
 	}

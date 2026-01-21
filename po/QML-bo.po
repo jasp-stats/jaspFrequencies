@@ -273,7 +273,7 @@ msgstr "དཔེ་རིས།"
 
 #, fuzzy
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "འགྲེལ་བརྗོད་དཔེ་རིས།"
 
 #, fuzzy
@@ -323,7 +323,7 @@ msgstr "རིམ་འགྲོས་དབྱེ་ཞིབ།"
 
 #, fuzzy
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "འགྲེལ་བརྗོད་དཔེ་རིས།"
 
 #, fuzzy

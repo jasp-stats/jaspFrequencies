@@ -225,7 +225,7 @@ msgid "Plots"
 msgstr "அடுக்கு"
 
 msgctxt "BinomialTest|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "விளக்கக் கதைகள்"
 
 msgctxt "BinomialTestBayesian|"
@@ -265,7 +265,7 @@ msgid "Sequential analysis"
 msgstr "தொடர்ச்சியான பகுப்பாய்வு"
 
 msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
+msgid "Descriptives plots"
 msgstr "விளக்கக் கதைகள்"
 
 msgctxt "BinomialTestBayesian|"
