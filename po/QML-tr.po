@@ -221,10 +221,6 @@ msgctxt "BinomialTest|"
 msgid "Plots"
 msgstr "Grafikler"
 
-msgctxt "BinomialTest|"
-msgid "Descriptive plots"
-msgstr ""
-
 msgctxt "BinomialTestBayesian|"
 msgid "Test value: "
 msgstr ""
@@ -261,10 +257,6 @@ msgstr ""
 
 msgctxt "BinomialTestBayesian|"
 msgid "Sequential analysis"
-msgstr ""
-
-msgctxt "BinomialTestBayesian|"
-msgid "Descriptive plots"
 msgstr ""
 
 msgctxt "BinomialTestBayesian|"
@@ -1271,4 +1263,12 @@ msgstr ""
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Show totals"
+msgstr ""
+
+msgctxt "BinomialTest|"
+msgid "Descriptives plots"
+msgstr ""
+
+msgctxt "BinomialTestBayesian|"
+msgid "Descriptives plots"
 msgstr ""
