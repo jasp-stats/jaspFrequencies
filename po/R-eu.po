@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.15.0\n"
 "POT-Creation-Date: 2025-09-13 03:32\n"
-"PO-Revision-Date: 2025-10-01 09:02+0000\n"
+"PO-Revision-Date: 2026-02-12 11:09+0000\n"
 "Last-Translator: Jose Ramon Rueda <joseramon.rueda@ehu.eus>\n"
 "Language-Team: Basque <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/eu/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14-dev\n"
+"X-Generator: Weblate 5.16-dev\n"
 
 #, fuzzy
 msgid "Bayesian A/B Test"
@@ -85,12 +85,9 @@ msgstr "Ondorengo Probabilitatea"
 msgid "P(%1$s | data) = %2$.3f"
 msgstr "P(%1$s | datuak) = %2$.3f"
 
-#, fuzzy
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
-"Ezin da frogatu testaren balioa 1 baino handiagoa dela dioen hipotesia."
+msgstr "Ezin da frogatu testaren balioa 1 baino handiagoa dela dioen hipotesia."
 
-#, fuzzy
 msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr ""
 "Ezin da frogatu saiakuntzaren balioa 0 baino txikiagoa dela dioen hipotesia."
@@ -113,14 +110,12 @@ msgstr "VS-MPR"
 msgid "Lower"
 msgstr "Beheko"
 
-#, fuzzy
 msgid "%s%% CI for Proportion"
-msgstr "%s%% CI for Proportion"
+msgstr "proportziorako %s%% KT"
 
 msgid "Upper"
 msgstr "Goiko"
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
@@ -128,7 +123,6 @@ msgstr ""
 "Proba guztietarako, hipotesi alternatiboak zehazten du proportzioa %a baino "
 "txikiagoa dela."
 
-#, fuzzy
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
@@ -136,7 +130,6 @@ msgstr ""
 "Proba guztietarako, hipotesi alternatiboak zehazten du proportzioa %a baino "
 "handiagoa dela."
 
-#, fuzzy
 msgid "Proportions tested against value: %s."
 msgstr "Balioaren arabera probatutako proportzioak: %a."
 
@@ -159,16 +152,14 @@ msgstr "Inferentziazko grafikoak"
 msgid "Population proportion"
 msgstr "Populazio proportzioa"
 
-#, fuzzy
 msgid "One or more Bayes factors cannot be computed"
-msgstr "Bayes faktore bat edo gehiago ezin dira zenbatu"
+msgstr "Bayes faktore bat edo gehiago ezin dira kalkulatu"
 
 msgid "One or more Bayes factors are infinite"
 msgstr "Bayes faktore bat edo gehiago infinituak dira"
 
-#, fuzzy
 msgid "Undefined hypothesis"
-msgstr "Hipotesi mugagabea?"
+msgstr "Hipotesi zehaztugabea"
 
 msgid "Contingency Tables"
 msgstr "Kontingentzia-taulak"
@@ -195,20 +186,17 @@ msgstr "Log Odds Ratioa"
 msgid "Odds Ratio"
 msgstr "Odds Ratioa"
 
-#, fuzzy
 msgid "%.0f%% Confidence Intervals"
-msgstr "%.0aren%% Konfiantza Tarteak"
+msgstr "%.aren%% Konfiantza Tarteak"
 
-#, fuzzy
 msgid "Nominal"
 msgstr "Nominala"
 
 msgid "Ordinal Gamma"
 msgstr "Gamma Ordinala"
 
-#, fuzzy
 msgid "95%% Confidence Intervals"
-msgstr "% 95, konfiantza-tarteak"
+msgstr "%% 95 Konfiantza-tarteak"
 
 msgid "Gamma"
 msgstr "Gamma"
@@ -217,7 +205,7 @@ msgid "Standard Error"
 msgstr "Errore estandarra"
 
 msgid "Kendall's Tau-b"
-msgstr "Kendall's Tau-b"
+msgstr "Kendallen Tau-b"
 
 msgid "Z"
 msgstr "Z"
@@ -258,9 +246,8 @@ msgstr "Kontingentzia-koefizientea"
 msgid "Phi-coefficient"
 msgstr "Phi-koefizientea"
 
-#, fuzzy
 msgid "Cramer's V"
-msgstr "Cramer's V"
+msgstr "Crameren V"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr "Phi koefizientea 2 kontingentzia-taulako soilik erabil daiteke"
@@ -297,7 +284,6 @@ msgstr ""
 "taldea litekeena da <em>%2$s</em> taldean. <br>(Erlazioa < 0): <em>%1$s</em> "
 "taldea litekeena da <em>%2$s</em> taldean"
 
-#, fuzzy
 msgid "is less than"
 msgstr "baino gutxiago da"
 
@@ -330,9 +316,8 @@ msgstr "Gelaxka bakoitzak ehuneko osoak erakusten ditu"
 msgid "Each cell displays unstandardized residuals"
 msgstr "Gelaxka bakoitzak hondakin estandarizatu gabeak erakusten ditu"
 
-#, fuzzy
 msgid "Each cell displays Pearson residuals"
-msgstr "Gelaxka bakoitzak Pearson hondakinak erakusten ditu"
+msgstr "Gelaxka bakoitzak Pearsonen hondarrak erakusten ditu"
 
 #, fuzzy
 msgid "Each cell displays standardized residuals"
