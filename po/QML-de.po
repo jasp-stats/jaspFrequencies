@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-02-15 13:09+0000\n"
+"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16-dev\n"
 "X-Language: de\n"
 "X-Source-Language: American English\n"
 "X-Qt-Contexts: true\n"
@@ -1200,7 +1206,6 @@ msgctxt "InformedBinomialTestBayesian|"
 msgid "Number of steps"
 msgstr "Anzahl von Schritten"
 
-#, fuzzy
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Include"
 msgstr "Einschließen"
@@ -1246,7 +1251,6 @@ msgctxt "InformedMultinomialTestBayesian|"
 msgid "Number of steps"
 msgstr "Anzahl von Schritten"
 
-#, fuzzy
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Include"
 msgstr "Einschließen"
@@ -1264,24 +1268,22 @@ msgctxt "ContingencyTables|"
 msgid "Observed"
 msgstr "Beobachtet"
 
-#, fuzzy
 msgctxt "ContingencyTables|"
 msgid "Margin"
 msgstr "Rand"
 
 msgctxt "ContingencyTables|"
 msgid "Show totals"
-msgstr ""
+msgstr "Gesamte anzeigen"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Observed"
 msgstr "Beobachtet"
 
-#, fuzzy
 msgctxt "ContingencyTablesBayesian|"
 msgid "Margin"
 msgstr "Rand"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Show totals"
-msgstr ""
+msgstr "Gesamte anzeigen"
