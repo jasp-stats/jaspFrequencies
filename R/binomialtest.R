@@ -196,11 +196,11 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Add footnote: Alternative hypothesis
   if (options$alternative == "less")
-    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValueUnparsed)
+    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValue)
   else if (options$alternative == "greater")
-    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValueUnparsed)
+    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValue)
   else
-    note <- gettextf("Proportions tested against value: %s.", options$testValueUnparsed)
+    note <- gettextf("Proportions tested against value: %s.", options$testValue)
 
   binomialTable$addFootnote(message = note)
 

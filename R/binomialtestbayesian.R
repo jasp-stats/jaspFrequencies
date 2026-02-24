@@ -119,11 +119,11 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   binomTable$addColumnInfo(name = bfType,       title = bfTitle,               type = "number")
 
   if (options$alternative == "less")
-    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValueUnparsed)
+    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is less than %s.", options$testValue)
   else if (options$alternative == "greater")
-    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValueUnparsed)
+    note <- gettextf("For all tests, the alternative hypothesis specifies that the proportion is greater than %s.", options$testValue)
   else
-    note <- gettextf("Proportions tested against value: %s.", options$testValueUnparsed)
+    note <- gettextf("Proportions tested against value: %s.", options$testValue)
 
   note <- gettextf("%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s).", note, options[["priorAUnparsed"]], options[["priorBUnparsed"]])
 
