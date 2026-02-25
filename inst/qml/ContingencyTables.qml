@@ -45,10 +45,12 @@ Form
 
 		Group
 		{
-			CheckBox { name: "chiSquared";						label: qsTr("χ²"); checked: true;			info: qsTr("Pearson’s chi-squared test for independence.")	}
-			CheckBox { name: "chiSquaredContinuityCorrection";	label: qsTr("χ² continuity correction");	info: qsTr("Applies Yates’ correction for continuity (for 2×2 tables).")	}
-			CheckBox { name: "likelihoodRatio";					label: qsTr("Likelihood ratio");			info: qsTr("Calculates the likelihood of the data under the alternative hypothesis divided by the likelihood of the data under the null hypothesis.")	}
-			CheckBox { name: "vovkSellke";						label: qsTr("Vovk-Sellke maximum p-ratio");	info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.")	}
+			CheckBox { name: "chiSquared";						                label: qsTr("χ²"); checked: true;			              info: qsTr("Pearson’s chi-squared test for independence.")	}
+			CheckBox { name: "chiSquaredContinuityCorrection";	      label: qsTr("χ² continuity correction");	          info: qsTr("Applies Yates’ correction for continuity (for 2×2 tables).")	}
+			CheckBox { name: "mcNemarChiSquared";						          label: qsTr("McNemar's χ² test");                   info: qsTr("Tests equality of two marginal proportions in paired nominal data.")  }
+			CheckBox { name: "mcNemarChiSquaredContinuityCorrection";	label: qsTr("McNemar's χ² continuity correction");  info: qsTr("Corrects for error introduced when approximating a discrete distribution with a continuous one in McNemar's test.") 	}
+			CheckBox { name: "likelihoodRatio";					              label: qsTr("Likelihood ratio");			              info: qsTr("Calculates the likelihood of the data under the alternative hypothesis divided by the likelihood of the data under the null hypothesis.")	}
+			CheckBox { name: "vovkSellke";						                label: qsTr("Vovk-Sellke maximum p-ratio");	        info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.")	}
 		}
 
 		Group

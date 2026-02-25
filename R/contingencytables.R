@@ -175,7 +175,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
 #All the following .crossTabBlabla functions look suspiciously similar, they can probably be all merged to a very large extent...
 .crossTabChisq <- function(jaspResults, dataset, options, analyses, ready) {
-  if(!(options$chiSquared || options$chiSquaredContinuityCorrection || options$likelihoodRatio))
+  if(!(options$chiSquared || options$chiSquaredContinuityCorrection || options$mcNemarChiSquared || options$mcNemarChiSquaredContinuityCorrection || options$likelihoodRatio))
     return()
 
   for (i in 1:nrow(analyses)){
@@ -186,7 +186,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
     # Create table
     crossTabChisq <- createJaspTable(title = gettext("Chi-Squared Tests"))
-    crossTabChisq$dependOn(c("chiSquared", "chiSquaredContinuityCorrection", "likelihoodRatio", "vovkSellke"))
+    crossTabChisq$dependOn(c("chiSquared", "chiSquaredContinuityCorrection", "mcNemarChiSquared", "mcNemarChiSquaredContinuityCorrection", "likelihoodRatio", "vovkSellke"))
     crossTabChisq$showSpecifiedColumnsOnly <- TRUE
     crossTabChisq$position <- 2
 
@@ -195,10 +195,12 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     # Add columns to table
     .crossTabLayersColumns(crossTabChisq, analysis)
 
-    if (options$chiSquared)                       .crossTabChisqAddColInfo(fold = "chiSquared",     crossTabChisq, options)
-    if (options$chiSquaredContinuityCorrection)   .crossTabChisqAddColInfo(fold = "chiSquared-cc",  crossTabChisq, options)
-    if (options$likelihoodRatio)                  .crossTabChisqAddColInfo(fold = "likelihood",     crossTabChisq, options)
-                                                  .crossTabChisqAddColInfo(fold = "N",              crossTabChisq, options, counts.fp)
+    if (options$chiSquared)                             .crossTabChisqAddColInfo(fold = "chiSquared",           crossTabChisq, options)
+    if (options$chiSquaredContinuityCorrection)         .crossTabChisqAddColInfo(fold = "chiSquared-cc",        crossTabChisq, options)
+    if (options$mcNemarChiSquared)                      .crossTabChisqAddColInfo(fold = "mcNemarChiSquared",    crossTabChisq, options)
+    if (options$mcNemarChiSquaredContinuityCorrection)  .crossTabChisqAddColInfo(fold = "mcNemarChiSquared-cc", crossTabChisq, options)
+    if (options$likelihoodRatio)                        .crossTabChisqAddColInfo(fold = "likelihood",           crossTabChisq, options)
+                                                        .crossTabChisqAddColInfo(fold = "N",                    crossTabChisq, options, counts.fp)
 
     if(options$vovkSellke){
       message <- gettextf("Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,
@@ -1095,6 +1097,64 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
           pVal                          <- unname(chi.result$p.value)
           row[["p[chiSquared-cc]"]]     <- pVal
           row[["MPR[chiSquared-cc]"]]   <- VovkSellkeMPR(pVal)
+        }
+
+      } else
+        row[["value[chiSquared-cc]"]] <- "."
+    }
+
+    if (options$mcNemarChiSquared) {
+
+      row[["type[mcNemarChiSquared]"]] <- "McNemar's \u03A7\u00B2"
+
+      if (ready) {
+
+        chi.result <- try({
+          chi.result <- stats::mcnemar.test(counts.matrix, correct = FALSE)
+        })
+
+        if (isTryError(chi.result) || is.na(chi.result$statistic)) {
+          row[["value[mcNemarChiSquared]"]] <- NaN
+          row[["df[mcNemarChiSquared]"]]    <- " "
+          row[["p[mcNemarChiSquared]"]]     <- " "
+          row[["MPR[mcNemarChiSquared]"]]   <- " "
+
+          message <- gettextf("%s could not be calculated - At least one row or column contains all zeros", "\u03A7\u00B2")
+          analysisContainer[["crossTabChisq"]]$addFootnote(message, rowNames = row.rownames[g], colNames = "value[chiSquared]")
+        } else {
+          row[["value[mcNemarChiSquared]"]] <- unname(chi.result$statistic)
+          row[["df[mcNemarChiSquared]"]]    <- unname(chi.result$parameter)
+          row[["p[mcNemarChiSquared]"]]     <- unname(chi.result$p.value)
+          row[["MPR[mcNemarChiSquared]"]]   <- VovkSellkeMPR(row[["p[mcNemarChiSquared]"]])
+        }
+      } else
+        row[["value[chiSquared]"]] <- "."
+    }
+
+    if (options$mcNemarChiSquaredContinuityCorrection) {
+
+      row[["type[mcNemarChiSquared-cc]"]] <- gettextf("McNemar's %s continuity correction", "\u03A7\u00B2")
+
+      if (ready && .crossTabIs2x2(counts.matrix)) {
+
+        chi.result <- try({
+          chi.result <- stats::mcnemar.test(counts.matrix)
+        })
+
+        if (isTryError(chi.result) || is.na(chi.result$statistic)) {
+          row[["value[mcNemarChiSquared-cc]"]] <- NaN
+          row[["df[mcNemarChiSquared-cc]"]]    <- " "
+          row[["p[mcNemarChiSquared-cc]"]]     <- " "
+          row[["MPR[mcNemarChiSquared-cc]"]]   <- " "
+
+          message <- gettextf("%s could not be calculated - At least one row or column contains all zeros", "\u03A7\u00B2")
+          analysisContainer[["crossTabChisq"]]$addFootnote(message, rowNames = row.rownames[g], colNames = "value[chiSquared-cc]")
+        } else {
+          row[["value[mcNemarChiSquared-cc]"]] <- unname(chi.result$statistic)
+          row[["df[mcNemarChiSquared-cc]"]]    <- unname(chi.result$parameter)
+          pVal                                 <- unname(chi.result$p.value)
+          row[["p[mcNemarChiSquared-cc]"]]     <- pVal
+          row[["MPR[mcNemarChiSquared-cc]"]]   <- VovkSellkeMPR(pVal)
         }
 
       } else
