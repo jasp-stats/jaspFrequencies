@@ -16,13 +16,11 @@
 #
 
 MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
-  # Read dataset
-  dataset <- .multinomReadData(dataset, options)
-
   ready   <- options$factor != ""
 
   # Error checking
-  .multinomCheckErrors(dataset, options)
+  if (ready)
+    .multinomCheckErrors(dataset, options)
 
   # Output tables and plots
   .multinomialMainTable(        jaspResults, dataset, options, ready)
@@ -30,51 +28,6 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
   .multinomialDescriptivesPlot( jaspResults, dataset, options, ready)
 
   return()
-}
-
-# Preprocessing functions ----
-.multinomReadData <- function(dataset, options) {
-  fact <- asnum <- NULL
-  if (options$factor != "") {
-    fact <- options$factor
-    if (options$count != "") {
-      asnum <- options$count
-      if (!is.null(options$expectedCount) && options$expectedCount != "")
-        asnum <- c(asnum, options$expectedCount)
-    }
-  }
-
-  if (is.null(dataset)) {
-    dataset <- .readDataSetToEnd(columns.as.numeric = asnum, columns.as.factor = fact,
-                                 exclude.na.listwise = NULL)
-  } else {
-    dataset <- .vdf(dataset, columns.as.numeric = asnum, columns.as.factor = fact)
-  }
-
-  # Reorder the rows of the factor and the counts (and expected probabilities) if the user changes the factor level order in JASP.
-  # This ensures the ordering in tables and plots also changes appropriately.
-  if (options$factor != "" && options$count != "") {
-    factLevelOrder        <- as.character(dataset[[.v(options$factor)]])
-
-    # the following condition holds when `count` are specified but the data set is not in aggregated form
-    # the error is subsequently caught in  .multinomCheckErrors
-    # we need to escape this function early because the operations under this check assume that the data set is already in aggregated form
-    if(length(unique(factLevelOrder)) != length(factLevelOrder)) return(dataset)
-
-    levelOrderUserWants   <- options$testValuesCustom[[1]]$levels
-    whatUserWantsToWhatIs <- match(levelOrderUserWants, factLevelOrder)
-
-    if (!identical(sort(whatUserWantsToWhatIs), whatUserWantsToWhatIs))
-      dataset[seq_along(factLevelOrder), ] <- dataset[whatUserWantsToWhatIs, ]
-
-    # For syntax mode the analysis will be called from RStudio and the factor levels may not match the testValuesCustom.
-    factValues <- as.character(dataset[[.v(options$factor)]])
-    facLevels  <- levels(dataset[[.v(options$factor)]])
-    if (length(facLevels) == length(factValues) && !identical(factValues, facLevels))
-      levels(dataset[[.v(options$factor)]]) <- factValues
-  }
-
-  return(dataset)
 }
 
 .multinomCheckErrors <- function(dataset, options) {

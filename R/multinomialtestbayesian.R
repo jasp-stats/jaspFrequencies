@@ -18,8 +18,6 @@
 
 MultinomialTestBayesianInternal <- function(jaspResults, dataset, options, ...) {
 
-  dataset            <- .multinomReadData(dataset, options)
-
   .multinomCheckErrors(dataset, options)
 
   multinomialResults <- .computeMultinomialResults(jaspResults, dataset, options)
