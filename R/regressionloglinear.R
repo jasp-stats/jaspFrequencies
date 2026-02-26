@@ -45,20 +45,28 @@ RegressionLogLinearInternal <- function(jaspResults, dataset = NULL , options, .
 }
 
 .regLogLinCheckErrors <- function(dataset, options) {
-  # Error Check 1: missingvalues, modelInteractions and infinity/missing check for counts
-  args <- list(
-    dataset = dataset,
-    type    = c("missingValues", "modelInteractions"),
-    modelInteractions.modelTerms = options$modelTerms,
-    missingValues.target = options$factors,
-    exitAnalysisIfErrors = TRUE
-  )
 
   if (options$count != "") {
-    args$type <- c(args$type, "infinity", "negativeValues")
-    args$missingValues.target <- c(options$count, options$factors)
+    .hasErrors(
+      dataset = dataset,
+      type    = c("missingValues", "modelInteractions", "factorLevels", "infinity", "negativeValues"),
+      infinity.target     = options$count,
+      negativeValues.target = options$count,
+      factorLevels.target = options$factors,
+      factorLevels.amount = " < 2",
+      modelInteractions.modelTerms = options$modelTerms,
+      exitAnalysisIfErrors = TRUE
+    )
+  } else {
+    .hasErrors(
+      dataset = dataset,
+      type    = c("missingValues", "modelInteractions", "factorLevels"),
+      factorLevels.target = options$factors,
+      factorLevels.amount = " < 2",
+      modelInteractions.modelTerms = options$modelTerms,
+      exitAnalysisIfErrors = TRUE
+    )
   }
-  do.call(.hasErrors, args)
 }
 
 # Compute results ----

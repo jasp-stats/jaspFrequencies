@@ -59,22 +59,29 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
 }
 
 .basRegLogLinCheckErrors <- function(dataset, options) {
-  # Error Check 1
-  args <- list(
-    dataset = dataset,
-    type    = c("missingValues", "modelInteractions"),
-    modelInteractions.modelTerms = options$modelTerms,
-    missingValues.target = options$factors,
-    exitAnalysisIfErrors = TRUE
-  )
 
   if (options$count != "") {
+    .hasErrors(
+      dataset = dataset,
+      type    = c("missingValues", "modelInteractions", "factorLevels", "infinity", "negativeValues"),
+      infinity.target     = options$count,
+      negativeValues.target = options$count,
+      factorLevels.target = options$factors,
+      factorLevels.amount = " < 2",
+      modelInteractions.modelTerms = options$modelTerms,
+      exitAnalysisIfErrors = TRUE
+    )
+  } else {
+    .hasErrors(
+      dataset = dataset,
+      type    = c("missingValues", "modelInteractions", "factorLevels"),
+      factorLevels.target = options$factors,
+      factorLevels.amount = " < 2",
+      modelInteractions.modelTerms = options$modelTerms,
+      exitAnalysisIfErrors = TRUE
+    )
 
-    args$type <- c(args$type, "infinity", "negativeValues")
-    args$missingValues.target <- c(options$count, options$factors)
   }
-
-  do.call(.hasErrors, args)
 }
 
 # Compute results
