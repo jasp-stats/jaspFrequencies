@@ -32,7 +32,7 @@ Form
 	{
 		preferredHeight: jaspTheme.smallDefaultVariablesFormHeight
 		AvailableVariablesList { name: "allVariablesList" }
-		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); allowedColumns: [ "nominal"] }
+		AssignedVariablesList { name: "variables"; title: qsTr("Variables"); allowedColumns: [ "nominal"]; maxLevels:  50}
 	}
 
 	FormulaField { name: "testValue"; label: qsTr("Test value: "); value: "0.5" ; min: 0; max: 1; Layout.columnSpan: 2 }

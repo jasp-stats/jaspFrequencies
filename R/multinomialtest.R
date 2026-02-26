@@ -111,6 +111,10 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
 
         if (sum(counts) == 0)
           return(gettext("Invalid counts: less than 1 observation."))
+
+        if (max(counts) > 10e7)
+          return(gettext("Invalid counts: maximum value (10e7) exceeded."))
+
       }
     }
   )
@@ -155,8 +159,7 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
       counts <- dataset[[.v(options$count)]]
       # omit count entries for which factor variable is NA
       counts <- counts[!is.na(factorVariable)]
-      c <- dataset[[.v(options$count)]]
-      factorVariable <- factor(rep(factorVariable, c),
+      factorVariable <- factor(rep(factorVariable, counts),
                                levels = levels(factorVariable))
     }
 
