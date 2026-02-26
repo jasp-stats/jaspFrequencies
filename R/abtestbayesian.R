@@ -194,6 +194,15 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
     }
   }
 
+  # Handle extreme BF values (Inf) that occur with very strong evidence
+  # Inf would be serialized as NaN, so we cap it to a large displayable value
+  maxBf <- 1e+300
+  for (r in 1:rowCount) {
+    if (is.infinite(output.rows[[r]]$BF)) {
+      output.rows[[r]]$BF <- maxBf
+    }
+  }
+
   abTestBayesianTable$addRows(output.rows)
 }
 
