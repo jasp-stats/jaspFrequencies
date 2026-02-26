@@ -17,7 +17,6 @@
 
 InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, options, ...) {
 
-  dataset <- .multinomReadData(dataset, options)
   .multinomCheckErrors(dataset, options)
   options <- .informedBayesParsePriorModelProbability(options)
   dataset <- .multinomAggregateData(dataset, options)

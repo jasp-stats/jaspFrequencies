@@ -17,10 +17,9 @@
 
 RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, options, ...) {
   ready <- length(options$factors) > 1
-  if(ready){
-    dataset <- .basRegLogLinReadData(dataset, options)
+  if(ready)
     .basRegLogLinCheckErrors(dataset, options)
-  }
+
   # Container
   .basRegLogLinContainer(jaspResults, dataset, options)
   container <- jaspResults[["Container"]]
@@ -30,32 +29,6 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
   .basRegLogLinSubSummaryTable(container, dataset, options, ready)
 
   return()
-}
-
-# Preprocessing functions
-.basRegLogLinReadData <- function(dataset, options) {
-  if (is.null(dataset)) {
-    counts <- factors <- NULL
-    if(options$count != "")
-      counts <- options$count
-    if(length(options$modelTerms) > 0)
-      factors <- options$factors
-    dataset <- .readDataSetToEnd(columns.as.factor = factors,
-                                 columns.as.numeric = counts)
-
-    # conting uses the last level as the reference level,
-    # but elsewhere we use the first level instead.
-    # So, we shift the first level to be the last level to keep the output consistent
-    for (fac in factors) {
-      var <- dataset[[fac]]
-      if (nlevels(var) > 1) {
-        lev <- levels(var)
-        dataset[[fac]] <- factor(var, levels = c(lev[-1], lev[1]))
-      }
-    }
-  }
-
-  return(dataset)
 }
 
 .basRegLogLinCheckErrors <- function(dataset, options) {

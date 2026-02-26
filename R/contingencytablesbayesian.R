@@ -16,7 +16,6 @@
 #
 
 ContingencyTablesBayesianInternal <- function(jaspResults, dataset = NULL, options, ...) {
-  dataset <- .crossTabReadData(dataset, options)
   ready <- !(length(options$rows) == 0 || length(options$columns) == 0)
 
   if(ready)
