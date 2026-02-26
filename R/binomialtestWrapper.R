@@ -24,6 +24,7 @@ BinomialTest <- function(
           alternative = "twoSided",
           ci = FALSE,
           ciLevel = 0.95,
+          count = "",
           descriptivesPlot = FALSE,
           descriptivesPlotCiLevel = 0.95,
           plotHeight = 320,
