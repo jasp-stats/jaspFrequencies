@@ -16,8 +16,6 @@
 #
 
 ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
-  # Read dataset
-  dataset <- .crossTabReadData(dataset, options)
 
   ready <- !(length(options$rows) == 0 || length(options$columns) == 0)
 
@@ -39,25 +37,6 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   .crossTabKendallTau(jaspResults, dataset, options, analyses, ready)
 
   return()
-}
-
-# Preprocessing functions
-.crossTabReadData <- function(dataset, options) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
-    layer.variables <- c()
-    for (layer in options$layers)
-      layer.variables <- c(layer.variables, unlist(layer$variables))
-    counts.var <- options$counts
-    if (counts.var == "")
-      counts.var <- NULL
-
-    factors <- c(unlist(options$rows), unlist(options$columns), layer.variables)
-
-    return(.readDataSetToEnd(columns.as.factor  = factors,
-                             columns.as.numeric = counts.var))
-  }
 }
 
 .crossTabCheckErrors <- function(dataset, options) {
