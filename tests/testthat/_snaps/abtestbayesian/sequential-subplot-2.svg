@@ -18,6 +18,7 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='576.00' style='stroke-width: 0.00; stroke: none;' />
 </g>
 <defs>
   <clipPath id='cpMC4wMHw3MjAuMDB8MTcuMzB8NTc2LjAw'>
@@ -27,8 +28,8 @@
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MTcuMzB8NTc2LjAw)'>
 <circle cx='54.55' cy='169.68' r='3.56' style='stroke-width: 0.71; fill: #1EAF84; fill-opacity: 0.33;' />
 <circle cx='54.55' cy='296.65' r='3.56' style='stroke-width: 0.71; fill: #717171; fill-opacity: 0.33;' />
-<text x='76.36' y='173.47' style='font-size: 11.04px; font-family: sans;' textLength='99.85px' lengthAdjust='spacingAndGlyphs'>P(H+ | data) = 0.500</text>
-<text x='76.36' y='300.45' style='font-size: 11.04px; font-family: sans;' textLength='99.54px' lengthAdjust='spacingAndGlyphs'>P(H0 | data) = 0.500</text>
+<text x='76.36' y='173.46' style='font-size: 11.00px; font-family: sans;' textLength='99.49px' lengthAdjust='spacingAndGlyphs'>P(H+ | data) = 0.500</text>
+<text x='76.36' y='300.44' style='font-size: 11.00px; font-family: sans;' textLength='99.18px' lengthAdjust='spacingAndGlyphs'>P(H0 | data) = 0.500</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
 <text x='0.00' y='14.56' style='font-size: 13.20px; font-family: sans;' textLength='118.89px' lengthAdjust='spacingAndGlyphs'>sequential-subplot-2</text>
