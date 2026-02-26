@@ -42,7 +42,11 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   if (!is.null(dataset)) {
     return(dataset)
   } else {
-    return(.readDataSetToEnd(columns.as.factor = options$variables))
+    count.var <- options$count
+    if (count.var == "")
+      count.var <- NULL
+    return(.readDataSetToEnd(columns.as.factor = options$variables,
+                             columns.as.numeric = count.var))
   }
 }
 
@@ -66,6 +70,33 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
     exitAnalysisIfErrors = TRUE
   )
 
+  # Error Check 2: Validate counts option if provided
+  if (options$count != "") {
+    # Check for negative values in counts
+    .hasErrors(
+      dataset              = dataset,
+      type                 = "negativeValues",
+      negativeValues.target = options$count,
+      exitAnalysisIfErrors = TRUE
+    )
+
+    # Check that the number of counts matches the number of levels
+    checkCountsMatch <- function() {
+      data <- na.omit(dataset[[.v(options$variables)]])
+      counts <- dataset[[.v(options$count)]]
+      nlevels <- nlevels(as.factor(data))
+      ncounts <- length(counts)
+      if (nlevels != ncounts)
+        return(gettextf("Counts variable does not match the number of levels of the factor. The factor has %1$s levels but counts has %2$s values.", nlevels, ncounts))
+    }
+
+    .hasErrors(
+      dataset              = dataset,
+      custom               = checkCountsMatch,
+      exitAnalysisIfErrors = TRUE
+    )
+  }
+
 }
 
 # Results functions ----
@@ -77,39 +108,81 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   results <- list()
   hyp <- .binomTransformHypothesis(options$alternative)
 
+  # Check if counts are provided
+  useCounts <- options$count != ""
+
   for (variable in options$variables) {
 
     results[[variable]] <- list()
 
-    data <- na.omit(dataset[[.v(variable)]])
+    if (useCounts) {
+      # When counts are provided, each row represents a level
+      data <- na.omit(dataset[[.v(variable)]])
+      countsData <- na.omit(dataset[[.v(options$count)]])
 
-    for (level in levels(data)) {
+      # Total is the sum of all counts
+      total <- sum(countsData)
 
-      counts <- sum(data == level)
-      tableResults <- stats::binom.test(
-        x           = counts,
-        n           = length(data),
-        p           = options$testValue,
-        alternative = hyp,
-        conf.level  = options$ciLevel
-      )
+      for (i in seq_along(data)) {
+        level <- as.character(data[i])
+        counts <- countsData[i]
 
-      # sometimes p.value becomes true or false, convert this to 1 or 0
-      p <- as.numeric(tableResults$p.value)
+        tableResults <- stats::binom.test(
+          x           = counts,
+          n           = total,
+          p           = options$testValue,
+          alternative = hyp,
+          conf.level  = options$ciLevel
+        )
 
-      # Add results for each level of each variable to results object
-      results[[variable]][[level]] <- list(
-        variable      = variable,
-        level         = level,
-        counts        = counts,
-        total         = length(data),
-        proportion    = counts / length(data),
-        p             = p,
-        vovkSellke    = VovkSellkeMPR(p),
-        lowerCI       = tableResults$conf.int[1],
-        upperCI       = tableResults$conf.int[2]
-      )
+        # sometimes p.value becomes true or false, convert this to 1 or 0
+        p <- as.numeric(tableResults$p.value)
 
+        # Add results for each level to results object
+        results[[variable]][[level]] <- list(
+          variable      = variable,
+          level         = level,
+          counts        = counts,
+          total         = total,
+          proportion    = counts / total,
+          p             = p,
+          vovkSellke    = VovkSellkeMPR(p),
+          lowerCI       = tableResults$conf.int[1],
+          upperCI       = tableResults$conf.int[2]
+        )
+      }
+    } else {
+      # Original logic: count occurrences of each level in the data
+      data <- na.omit(dataset[[.v(variable)]])
+
+      for (level in levels(data)) {
+
+        counts <- sum(data == level)
+        tableResults <- stats::binom.test(
+          x           = counts,
+          n           = length(data),
+          p           = options$testValue,
+          alternative = hyp,
+          conf.level  = options$ciLevel
+        )
+
+        # sometimes p.value becomes true or false, convert this to 1 or 0
+        p <- as.numeric(tableResults$p.value)
+
+        # Add results for each level of each variable to results object
+        results[[variable]][[level]] <- list(
+          variable      = variable,
+          level         = level,
+          counts        = counts,
+          total         = length(data),
+          proportion    = counts / length(data),
+          p             = p,
+          vovkSellke    = VovkSellkeMPR(p),
+          lowerCI       = tableResults$conf.int[1],
+          upperCI       = tableResults$conf.int[2]
+        )
+
+      }
     }
 
   }
@@ -117,7 +190,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Save results to state
   jaspResults[["binomTableResults"]] <- createJaspState(results)
   jaspResults[["binomTableResults"]]$dependOn(
-    c("variables", "testValue", "alternative", "ciLevel")
+    c("variables", "testValue", "alternative", "ciLevel", "count")
   )
 
   # Return results object
@@ -168,7 +241,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Create table
   binomialTable <- createJaspTable(title = gettext("Binomial Test"))
   binomialTable$dependOn(c("variables", "testValue", "alternative", "ci",
-                                  "ciLevel", "vovkSellke"))
+                                  "ciLevel", "vovkSellke", "count"))
 
   binomialTable$showSpecifiedColumnsOnly <- TRUE
 
