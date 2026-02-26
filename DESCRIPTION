@@ -21,8 +21,7 @@ Imports:
   jaspGraphs,
   plyr,
   stringr,
-  vcd,
-  vcdExtra
+  vcd
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs,

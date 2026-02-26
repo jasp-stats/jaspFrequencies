@@ -1659,23 +1659,6 @@
         "utils"
       ]
     },
-    "vcdExtra": {
-      "Package": "vcdExtra",
-      "Version": "0.8.7",
-      "Source": "Repository",
-      "Requirements": [
-        "ca",
-        "gnm",
-        "grDevices",
-        "grid",
-        "MASS",
-        "R",
-        "rgl",
-        "stats",
-        "utils",
-        "vcd"
-      ]
-    },
     "vctrs": {
       "Package": "vctrs",
       "Version": "0.7.0",

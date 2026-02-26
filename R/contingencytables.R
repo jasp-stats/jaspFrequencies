@@ -1289,6 +1289,51 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   return(list(rows = nominal.rows, rownames = row.rownames))
 }
 
+# See https://github.com/cran/vcdExtra/blob/10bd55cf7f74fe4b42ff154228b58d4ed885dfad/R/GKgamma.R#L47
+# vcdExtra imports rgl, which needs some (big) X11 libraries. But as only GKgamma is needed from vcdExtra, we just copy the code here.
+GKgamma<-function(x, level=0.95)
+{
+    # x is a matrix of counts.  You can use output of crosstabs or xtabs in R.
+    # Confidence interval calculation and output from Greg Rodd
+
+    # Check for using S-PLUS and output is from crosstabs (needs >= S-PLUS 6.0)
+    if(is.null(version$language) && inherits(x, "crosstabs")) { oldClass(x)<-NULL; attr(x, "marginals")<-NULL}
+
+    ## TODO: add tests for matrix or table
+
+    n <- nrow(x)
+    m <- ncol(x)
+    pi.c<-pi.d<-matrix(0, nrow=n, ncol=m)
+
+    row.x<-row(x)
+    col.x<-col(x)
+
+    for(i in 1:(n)){
+        for(j in 1:(m)){
+            pi.c[i, j]<-sum(x[row.x<i & col.x<j]) + sum(x[row.x>i & col.x>j])
+            pi.d[i, j]<-sum(x[row.x<i & col.x>j]) + sum(x[row.x>i & col.x<j])
+        }
+    }
+
+    C <- sum(pi.c*x)/2
+    D <- sum(pi.d*x)/2
+
+    psi<-2*(D*pi.c-C*pi.d)/(C+D)^2
+    sigma2<-sum(x*psi^2)-sum(x*psi)^2
+
+    gamma <- (C - D)/(C + D)
+    pr2 <- 1 - (1 - level)/2
+    CI <- qnorm(pr2) * sqrt(sigma2) * c(-1, 1) + gamma
+
+    result <- list(gamma = gamma, C = C, D = D, sigma = sqrt(sigma2),
+        CIlevel = level,
+        CI = c(max(CI[1], -1), min(CI[2], 1))
+        )
+    class(result) <- "GKgamma"
+    result
+}
+
+
 .crossTabGammaRows <- function(analysisContainer, var.name, groupList, options, ready) {
   ordinal.rows   <- list()
   group.matrices <- groupList$group.matrices
@@ -1302,7 +1347,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
     row <- list()
     if(ready) {
-      chi.result <- try({ chi.result <- vcdExtra::GKgamma(counts.matrix) }) # in for a penny in for a dime I guess
+      chi.result <- try({ chi.result <- GKgamma(counts.matrix) }) # in for a penny in for a dime I guess
       if (isTryError(chi.result)) {
         row[["value[gammaCoef]"]] <- NaN
       } else {
