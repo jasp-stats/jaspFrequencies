@@ -587,22 +587,42 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   } else if(options[["sequentialAnalysisPlotType"]] == "posteriorProbability") {
 
     # compute posterior probabilities
-    priorProb <- options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] %in% unique(sequentialAnalysisResults$model)]
+    models <- unique(sequentialAnalysisResults$model)
+
+    if (length(models) == 0) {
+      tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+      tempPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
+                          "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps",
+                          "includeNullModel", "includeEncompassingModel"))
+      tempPlot$position <- 5
+      jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+      tempPlot$setError(gettext("At least two models need to be specified."))
+      return()
+    }
+
+    priorProb <- options[["priorModelProbability"]][[1]][["valuesParsed"]][options[["priorModelProbability"]][[1]][["levels"]] %in% models]
     priorProb <- priorProb / sum(priorProb)
-    postProb  <- do.call(rbind, lapply(unique(sequentialAnalysisResults$step), function(step) {
+    steps     <- unique(sequentialAnalysisResults$step)
 
-      logLik    <- sequentialAnalysisResults$marglik[sequentialAnalysisResults$step == step]
-      postProb  <- bridgesampling::post_prob(logLik, prior_prob = priorProb)
+    postProb <- if (length(steps) > 0) {
+      do.call(rbind, lapply(steps, function(step) {
 
-      return(data.frame(
-        model    = sequentialAnalysisResults$model[sequentialAnalysisResults$step == step],
-        step     = step,
-        postProb = postProb
-      ))
-    }))
+        logLik    <- sequentialAnalysisResults$marglik[sequentialAnalysisResults$step == step]
+        postProb  <- bridgesampling::post_prob(logLik, prior_prob = priorProb)
+
+        return(data.frame(
+          model    = sequentialAnalysisResults$model[sequentialAnalysisResults$step == step],
+          step     = step,
+          postProb = postProb
+        ))
+      }))
+    } else {
+      data.frame(model = character(0), step = numeric(0), postProb = numeric(0))
+    }
+
     postProb  <- rbind(
       data.frame(
-        model    = unique(sequentialAnalysisResults$model),
+        model    = models,
         step     = 0,
         postProb = priorProb
       ),
