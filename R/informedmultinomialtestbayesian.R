@@ -525,7 +525,20 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   # create/obtain sequential analysis
   .computeInformedMultSequentialResults(jaspResults, dataset, options)
-  sequentialAnalysisResults <- jaspResults[["sequentialAnalysisResults"]]$object
+  sequentialState <- jaspResults[["sequentialAnalysisResults"]]
+
+  if (is.null(sequentialState) || is.null(sequentialState$object) || !is.data.frame(sequentialState$object) || nrow(sequentialState$object) == 0) {
+    tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+    tempPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
+                        "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps",
+                        "includeNullModel", "includeEncompassingModel"))
+    tempPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+    tempPlot$setError(gettext("Sequential analysis requires individual-level data (not aggregated counts)."))
+    return()
+  }
+
+  sequentialAnalysisResults <- sequentialState$object
 
   # create an empty plot in case the selection is restricted
   if (is.null(jaspResults[["models"]]$object) || .informedBayesNumberOfModels(jaspResults, options) < 2) {
@@ -542,6 +555,17 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
     sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Null",]
   if (!options[["includeEncompassingModel"]])
     sequentialAnalysisResults <- sequentialAnalysisResults[sequentialAnalysisResults$model != "Encompassing",]
+
+  if (nrow(sequentialAnalysisResults) == 0) {
+    tempPlot <- createJaspPlot(title = gettext("Sequential analysis"), width = 480, height = 320)
+    tempPlot$dependOn(c(.informedMultDependency, "bayesFactorType", "bfComparison", "bfVsHypothesis",
+                        "sequentialAnalysisPlot", "sequentialAnalysisPlotType", "priorModelProbability", "sequentialAnalysisNumberOfSteps",
+                        "includeNullModel", "includeEncompassingModel"))
+    tempPlot$position <- 5
+    jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
+    tempPlot$setError(gettext("At least one model needs to be included in the sequential analysis plot."))
+    return()
+  }
 
   if (options[["sequentialAnalysisPlotType"]] == "bayesFactor") {
 
