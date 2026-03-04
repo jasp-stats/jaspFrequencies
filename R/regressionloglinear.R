@@ -18,10 +18,9 @@
 RegressionLogLinearInternal <- function(jaspResults, dataset = NULL , options, ...) {
   ready <- length(options$factors) != 0
 
-  if (ready) {
-    dataset <- .regLogLinReadData(dataset, options)
+  if (ready)
     .regLogLinCheckErrors(dataset, options)
-  }
+
   # Output tables
   .regLogLinAnovaTable(        jaspResults, dataset, options, ready)
   .regLogLinCoefficientsTable (jaspResults, dataset, options, ready)
@@ -29,20 +28,6 @@ RegressionLogLinearInternal <- function(jaspResults, dataset = NULL , options, .
   return()
 }
 
-# Preprocessing functions ----
-.regLogLinReadData <- function(dataset, options) {
-  if (!is.null(dataset))
-    return(dataset)
-  else {
-    counts <- factors <- NULL
-    if(options$count != "")
-      counts <- options$count
-    if(length(options$modelTerms) > 0)
-      factors <- options$modelTerms
-    return(.readDataSetToEnd(columns.as.factor = factors,
-                             columns.as.numeric = counts))
-  }
-}
 
 .regLogLinCheckErrors <- function(dataset, options) {
 
@@ -373,9 +358,9 @@ the maximum possible odds in favor of H%1$s over H%2$s equals \
 .regLogLinBuildLookup <- function(dataset, factors) {
   table <- list()
   for (v in factors) {
-    levels <- levels(dataset[[ .v(v) ]])
+    levels <- levels(dataset[[ v ]])
     for (l in levels) {
-      mangled.name <- paste(.v(v), l, sep = "")
+      mangled.name <- paste(v, l, sep = "")
       actual       <- c(v, l)
       table[[mangled.name]] <- actual
     }

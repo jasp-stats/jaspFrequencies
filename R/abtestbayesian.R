@@ -20,10 +20,6 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 
   ready <- (options$n1 != "" && options$y1 != "" && options$n2 != "" && options$y2 != "")
 
-  ### READ DATA                ###
-  if (ready)
-    dataset <- .abTestBayesianReadData(dataset, options)
-
   ### This function is shared with summary stats a/b test
   .abTestMain(jaspResults, dataset, options, ready)
 }
@@ -55,30 +51,6 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   if (options$priorPlot)
     .abTestPlotPriorOnly(jaspResults, options, position = 6)
 }
-
-
-.abTestBayesianReadData <- function(dataset, options) {
-  # Get the relevant data
-  #
-  # Args:
-  #   dataset: dataset object
-  #   options: a list of user options
-  #
-  # Return:
-  #   The (numeric) columns given as dependent/covariates/wlsWeights
-
-  if (!is.null(dataset))
-    return (dataset)
-
-  asNum             <- c(options$n1, options$y1, options$n2, options$y2)
-  dataset           <- .readDataSetToEnd(columns.as.numeric = asNum, exclude.na.listwise = asNum)
-  new_names         <- setNames(c("n1", "n2", "y1", "y2"),
-                                c(options$n1, options$n2, options$y1, options$y2))
-  colnames(dataset) <- stringr::str_replace_all(colnames(dataset), new_names)
-
-  return (dataset)
-}
-
 
 .abTestBayesianTableMain <- function(jaspResults, ab_obj, options, ready, position) {
 

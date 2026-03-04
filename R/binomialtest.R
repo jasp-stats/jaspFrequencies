@@ -27,23 +27,11 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # testValue is a formulaField: parse it and save the result in the state
   options <- .parseAndStoreFormulaOptions(jaspResults, options, "testValue")
 
-  if (ready) {
-    dataset <- .binomReadData(dataset, options)
-
+  if (ready)
     .binomCheckErrors(dataset, options)
-  }
 
   .binomTableMain(       jaspResults, dataset, options, ready)
   .binomPlotsDescriptive(jaspResults, dataset, options, ready)
-}
-
-# Preprocessing functions ----
-.binomReadData <- function(dataset, options) {
-  if (!is.null(dataset)) {
-    return(dataset)
-  } else {
-    return(.readDataSetToEnd(columns.as.factor = options$variables))
-  }
 }
 
 .binomCheckErrors <- function(dataset, options) {

@@ -21,11 +21,8 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   # testValue, priorA & priorB are formulaFields: parse them and save the results in the state
   options <- .parseAndStoreFormulaOptions(jaspResults, options, c("testValue", "priorA", "priorB"))
 
-  if (ready) {
-    dataset <- .binomReadData(dataset, options)
-
+  if (ready)
     .binomCheckErrors(dataset, options)
-  }
 
   # Output tables and plots
   .bayesBinomTableMain(       jaspResults, dataset, options, ready)

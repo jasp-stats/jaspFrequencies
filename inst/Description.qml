@@ -6,7 +6,7 @@ Description
 	title		: qsTr("Frequencies")
 	description	: qsTr("Analyses for count data")
 	icon		: "analysis-classical-crosstabs.svg"
-	preloadData	: false
+	preloadData	: true
 	hasWrappers	: true
 
 	GroupTitle
