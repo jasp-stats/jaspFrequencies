@@ -28,7 +28,7 @@ Form
 		preferredHeight: 190 * preferencesModel.uiScale
 		marginBetweenVariablesLists: 15
 		AvailableVariablesList {				name: "allVariablesList" }
-		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]	}
+		AssignedVariablesList {	id: factors;	name: "factor";			title: qsTr("Factor");			singleVariable: true; allowedColumns: ["nominal"]; maxLevels: 32	}
 		AssignedVariablesList {					name: "count";			title: qsTr("Counts");			singleVariable: true; allowedColumns: ["scale"]	}
 		AssignedVariablesList {	id: exProbVar;	name: "expectedCount";	title: qsTr("Expected Counts"); singleVariable: true; allowedColumns: ["scale"]	}
 	}
