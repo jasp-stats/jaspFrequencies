@@ -167,19 +167,40 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
 
     hyps <- .multinomialHypotheses(dataset, options, nlev)
 
-    # create a named list with as values the chi-square result objects
-    chisqResults <- lapply(hyps, function(h) {
-      # catch warning message and append to object if necessary
-      csr  <- warn <- NULL
-      # need to improve this try statement
-      csr  <- withCallingHandlers(
-                chisq.test(x = dataTable, p = h, rescale.p = TRUE,
-                           simulate.p.value = FALSE),
-                warning = function(w) warn <<- w$message
-      )
-      csr[["warn"]] <- warn
-      return(csr)
-    })
+    if (length(dataTable) < 2) {
+      warn <- gettext("Chi-square test requires at least two factor levels with observations.")
+      chisqResults <- lapply(hyps, function(h) {
+        expected <- as.numeric(h)
+        if (sum(expected) > 0)
+          expected <- expected / sum(expected) * sum(dataTable)
+        else
+          expected <- rep(0, length(expected))
+
+        return(list(
+          statistic = c("X-squared" = NA_real_),
+          parameter = c("df" = NA_real_),
+          p.value   = NA_real_,
+          observed  = dataTable,
+          expected  = expected,
+          warn      = warn
+        ))
+      })
+      names(chisqResults) <- names(hyps)
+    } else {
+      # create a named list with as values the chi-square result objects
+      chisqResults <- lapply(hyps, function(h) {
+        # catch warning message and append to object if necessary
+        csr  <- warn <- NULL
+        # need to improve this try statement
+        csr  <- withCallingHandlers(
+                  chisq.test(x = dataTable, p = h, rescale.p = TRUE,
+                             simulate.p.value = FALSE),
+                  warning = function(w) warn <<- w$message
+        )
+        csr[["warn"]] <- warn
+        return(csr)
+      })
+    }
   }
   # Save results to state
   jaspResults[["stateChisqResults"]] <- createJaspState(chisqResults)
@@ -527,4 +548,3 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
   if(isTryError(res))
     table$setError(.extractErrorMessage(res))
 }
-
