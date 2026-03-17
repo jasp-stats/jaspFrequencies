@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.5\n"
 "POT-Creation-Date: 2026-02-28 04:01\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-03-18 03:09+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
@@ -57,16 +59,16 @@ msgid "Group 2"
 msgstr ""
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "Priori dan Posterior"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "Analisis Sekuensial"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "Faktor Bayes dan Pemeriksaan Kekuatan"
 
 msgid "Prior"
-msgstr ""
+msgstr "Priori"
 
 msgid "n"
 msgstr ""
@@ -117,7 +119,7 @@ msgid "Proportions tested against value: %s."
 msgstr ""
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "Diagram Deskriptif"
 
 msgid "Bayesian Binomial Test"
 msgstr ""
@@ -126,7 +128,7 @@ msgid "%1$s The shape of the prior distribution under the alternative hypothesis
 msgstr ""
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "Diagram Inferensial"
 
 msgid "Population proportion"
 msgstr ""
@@ -180,7 +182,7 @@ msgid "Kendall's Tau-b"
 msgstr ""
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "VS-MPR%s"
 msgstr ""
@@ -300,7 +302,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr ""
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% Interval Kredibel"
 
 msgid "Log Odds Ratio Plots"
 msgstr ""
@@ -315,7 +317,7 @@ msgid "The Bayes factor is undefined"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "Faktor Bayes terlalu kecil"
 
 msgid "The Bayes factor is infinite"
 msgstr ""
@@ -357,7 +359,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
 msgid "Posterior"
-msgstr ""
+msgstr "Posterior"
 
 msgid "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
