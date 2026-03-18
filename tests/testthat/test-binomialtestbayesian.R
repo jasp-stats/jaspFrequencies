@@ -3,6 +3,7 @@ context("Binomial Test Bayesian")
 test_that("Main table results match", {
   options <- jaspTools::analysisOptions("BinomialTestBayesian")
   options$variables <- "contBinom"
+  options$variables.types <- "nominal"
   options$bayesFactorType <- "BF01"
   options$alternative <- "twoSided"
   options$priorA <- 1
@@ -22,6 +23,7 @@ test_that("Prior posterior plots match", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
+  options$variables.types <- "nominal"
   options$priorPosteriorPlot <- TRUE
   options$priorPosteriorPlotAdditionalInfo <- TRUE
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
@@ -39,6 +41,7 @@ test_that("Sequential analysis plots match - BF10", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
+  options$variables.types <- "nominal"
   options$bfSequentialPlot <- TRUE
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
 
@@ -55,6 +58,7 @@ test_that("Sequential analysis plots match - BF01", {
   options$priorB <- 1
   options$testValue <- 0.5
   options$variables <- "contBinom"
+  options$variables.types <- "nominal"
   options$bfSequentialPlot <- TRUE
   options$bayesFactorType <- "BF01"
   results <- jaspTools::runAnalysis("BinomialTestBayesian", "test.csv", options)
