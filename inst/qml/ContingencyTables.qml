@@ -33,7 +33,7 @@ Form
 		AvailableVariablesList { name: "allVariablesList" }
 		AssignedVariablesList { name: "rows";		title: qsTr("Rows");	allowedColumns: ["nominal"] }
 		AssignedVariablesList { name: "columns";	title: qsTr("Columns");	allowedColumns: ["nominal"] }
-		AssignedVariablesList { name: "counts";		title: qsTr("Counts");	allowedColumns: ["scale"]; singleVariable: true }
+		AssignedVariablesList { name: "counts";		title: qsTr("Counts (optional)");	allowedColumns: ["scale"]; singleVariable: true }
 		AssignedVariablesList { name: "layers";		title: qsTr("Layers");	allowedColumns: ["nominal"]; listViewType: JASP.Layers; preferredHeight: 120 }
 	}
 

@@ -27,11 +27,29 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # testValue is a formulaField: parse it and save the result in the state
   options <- .parseAndStoreFormulaOptions(jaspResults, options, "testValue")
 
-  if (ready)
+  if (ready) {
+    dataset <- .binomExpandIfCounts(dataset, options)
     .binomCheckErrors(dataset, options)
+  }
 
   .binomTableMain(       jaspResults, dataset, options, ready)
   .binomPlotsDescriptive(jaspResults, dataset, options, ready)
+}
+
+.binomExpandIfCounts <- function(dataset, options) {
+  if (options$counts == "")
+    return(dataset)
+
+  .hasErrors(
+    dataset              = dataset,
+    type                 = c("negativeValues", "infinity"),
+    all.target           = options$counts,
+    exitAnalysisIfErrors = TRUE
+  )
+
+  counts <- dataset[[.v(options$counts)]]
+  dataset <- dataset[rep(seq_len(nrow(dataset)), counts), , drop = FALSE]
+  return(dataset)
 }
 
 .binomCheckErrors <- function(dataset, options) {
@@ -105,7 +123,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Save results to state
   jaspResults[["binomTableResults"]] <- createJaspState(results)
   jaspResults[["binomTableResults"]]$dependOn(
-    c("variables", "testValue", "alternative", "ciLevel")
+    c("variables", "counts", "testValue", "alternative", "ciLevel")
   )
 
   # Return results object
@@ -155,7 +173,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   binomialTable <- createJaspTable(title = gettext("Binomial Test"))
-  binomialTable$dependOn(c("variables", "testValue", "alternative", "ci",
+  binomialTable$dependOn(c("variables", "counts", "testValue", "alternative", "ci",
                                   "ciLevel", "vovkSellke"))
 
   binomialTable$showSpecifiedColumnsOnly <- TRUE
@@ -224,7 +242,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(jaspResults[["containerPlots"]])) {
     jaspResults[["containerPlots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlot", "testValue", ciName))
+    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlot", "counts", "testValue", ciName))
   }
 
   plotContainer <- jaspResults[["containerPlots"]]
