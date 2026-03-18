@@ -12,6 +12,9 @@ test_that("Main table results match", {
     name = "Layer 1",
     variables = "facGender"
   ))
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
+  options$counts.types <- "scale"
   options$countsExpected           <- TRUE
   options$percentagesRow           <- TRUE
   options$percentagesColumn        <- TRUE
@@ -80,6 +83,8 @@ test_that("Multiple row and column variables give multiple main tables", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- c("facExperim", "facGender")
   options$columns <- c("contBinom", "facFive")
+  options$rows.types <- c("nominal", "nominal")
+  options$columns.types <- c("nominal", "nominal")
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
 
   table1 <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
@@ -98,6 +103,9 @@ test_that("Chi-Squared test table results match", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$counts <- "facFifty"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
+  options$counts.types <- "scale"
   options$chiSquared <- TRUE
   options$chiSquaredContinuityCorrection <- TRUE
   options$likelihoodRatio <- TRUE
@@ -116,6 +124,8 @@ test_that("Nominal table results match", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$contingencyCoefficient <- TRUE
   options$phiAndCramersV <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
@@ -130,6 +140,8 @@ test_that("Log Odds Ratio table results match", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$oddsRatio <- TRUE
   options$oddsRatioCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
@@ -145,6 +157,8 @@ test_that("Ordinal Gamma table results match", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$gamma <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabGamma"]][["data"]]
@@ -157,6 +171,8 @@ test_that("Kendall's Tau table results match", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$kendallsTauB <- TRUE
   options$vovkSellke <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
@@ -196,6 +212,9 @@ test_that("Analysis handles errors", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$counts <- "contNormal"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
+  options$counts.types <- "scale"
   results <- jaspTools::runAnalysis("ContingencyTables", "test.csv", options)
   errorMsg <- results[["results"]][["errorMessage"]]
   expect_is(errorMsg, "character")
@@ -207,6 +226,8 @@ options$columns <- "V2"
 options$contingencyCoefficient <- TRUE
 options$phiAndCramersV <- TRUE
 options$rows <- "V1"
+options$rows.types <- "nominal"
+options$columns.types <- "nominal"
 set.seed(1)
 # data is a random sample from https://github.com/jasp-stats/jasp-issues/issues/811
 dataset <- structure(list(V1 = c(1L, 2L, 1L, 2L, 1L, 0L, 2L, 0L, 0L, 1L), V2 = c(0L, 0L, 1L, 0L, 0L, 1L, 0L, 1L, 1L, 0L)), row.names = c(NA, -10L), class = "data.frame")

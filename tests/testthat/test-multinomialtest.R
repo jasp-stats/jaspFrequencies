@@ -6,6 +6,7 @@ test_that("Main table results match", {
   options$descriptivesType <- "proportions"
   options$descriptivesTable <- TRUE
   options$factor <- "facOutlier"
+  options$factor.types <- "nominal"
   options$testValues <- "custom"
   options$testValuesCustom <- list(
     list(
@@ -37,6 +38,7 @@ test_that("Main table results match", {
 test_that("Descriptives plot matches", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facFive"
+  options$factor.types <- "nominal"
   options$descriptivesPlot <- TRUE
   results <- jaspTools::runAnalysis("MultinomialTest", "test.csv", options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
@@ -46,7 +48,9 @@ test_that("Descriptives plot matches", {
 test_that("Analysis handles errors - Negative Values", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
+  options$factor.types <- "nominal"
   options$count  <- "contNormal"
+  options$count.types <- "scale"
   options$testValuesCustom <- list(
     list(
       levels = list("control", "experimental"),
@@ -62,7 +66,9 @@ test_that("Analysis handles errors - Negative Values", {
 test_that("Analysis handles errors - wrong levels", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
+  options$factor.types <- "nominal"
   options$count  <- "debSame"
+  options$count.types <- "scale"
   options$testValluesCustom <- list(
     list(
       levels = list("control", "experimental"),
@@ -78,7 +84,9 @@ test_that("Analysis handles errors - wrong levels", {
 test_that("Analysis handles errors - Infinities", {
   options <- jaspTools::analysisOptions("MultinomialTest")
   options$factor <- "facExperim"
+  options$factor.types <- "nominal"
   options$count  <- "debInf"
+  options$count.types <- "scale"
   options$testValuesCustom <- list(
     list(
       levels = list("control", "experimental"),

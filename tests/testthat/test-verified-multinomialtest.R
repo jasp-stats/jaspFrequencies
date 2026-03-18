@@ -5,7 +5,9 @@ test_that("Main table results match R, SPSS, SAS", {
   options <- jaspTools::analysisOptions("MultinomialTest")
 
   options$count <- "Count"
+  options$count.types <- "scale"
   options$factor <- "Color"
+  options$factor.types <- "nominal"
   options$testValues <- "custom"
   options$descriptivesPlot <- TRUE
   options$testValuesCustom <- list(

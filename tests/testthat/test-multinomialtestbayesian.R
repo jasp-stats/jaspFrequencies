@@ -3,6 +3,7 @@ context("Multinomial Test Bayesian")
 test_that("Main table results match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor          <- "contBinom"
+  options$factor.types     <- "nominal"
   options$bayesFactorType <- "BF10"
   options$testValues      <- "equal"
   options$priorCounts <- list(list(levels = paste0('level', 1:2),
@@ -18,6 +19,7 @@ test_that("Main table results match", {
 test_that("Descriptives table results match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "debString"
+  options$factor.types <- "nominal"
   options$descriptivesType <- "proportions"
   options$descriptivesTable <- TRUE
   options$descriptivesTableCi <- TRUE
@@ -35,6 +37,7 @@ test_that("Descriptives table results match", {
 test_that("Descriptives plots match", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "contBinom"
+  options$factor.types <- "nominal"
   options$descriptivesType <- "proportions"
   options$descriptivesTableCi <- TRUE
   options$descriptivesPlot <- TRUE
@@ -49,7 +52,9 @@ test_that("Descriptives plots match", {
 test_that("Bayesian Multinomial Test table results match in short data format", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "Month"
+  options$factor.types <- "nominal"
   options$count  <- "Stress.frequency"
+  options$count.types <- "scale"
   options$testValuesCustom <- list(list(levels = c("1", "2", "3", "4", "5", "6", "7", "8",
                                               "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"), name = "H₀ (a)",
                                    values = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -68,8 +73,11 @@ test_that("Bayesian Multinomial Test table results match in short data format", 
 test_that("Descriptives table correctly shows reordered factor levels", {
   options <- jaspTools::analysisOptions("MultinomialTestBayesian")
   options$factor <- "Month"
+  options$factor.types <- "nominal"
   options$count  <- "Stress.frequency"
+  options$count.types <- "scale"
   options$expectedCount <- "Expected.counts"
+  options$expectedCount.types <- "scale"
   options$descriptivesTable <- TRUE
   options$testValuesCustom <- list(list(levels = c("3", "1", "2", "4", "5", "6", "7", "8",
                                               "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"), name = "H₀ (a)",
@@ -81,7 +89,7 @@ test_that("Descriptives table correctly shows reordered factor levels", {
                                               1, 1)))
   results <- jaspTools::runAnalysis("MultinomialTestBayesian", "Memory of Life Stresses.csv", options)
   table <- results[["results"]][["multinomialDescriptivesTable"]][["data"]]
-  jaspTools::expect_equal_tables(table[1:4], list(7, 3, 14, 17, 1, 15, 5, 2, 11, 15, 4, 17))
+  jaspTools::expect_equal_tables(table[1:4], list(17, 1, 15, 5, 2, 11, 7, 3, 14, 15, 4, 17))
 })
 
 

@@ -4,6 +4,8 @@ test_that("Main table results match", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$count <- "facFifty"
   options$factors <- c("contBinom", "facGender")
+  options$count.types <- "scale"
+  options$factors.types <- c("nominal", "nominal")
   options$modelTerms <- list(
     list(components="contBinom"),
     list(components="facGender"),
@@ -24,6 +26,8 @@ test_that("Coefficients table matches", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$count <- "facFifty"
   options$factors <- c("contBinom", "facFive")
+  options$count.types <- "scale"
+  options$factors.types <- c("nominal", "nominal")
   options$modelTerms <- list(
     list(components="contBinom"),
     list(components="facFive"),
@@ -60,7 +64,9 @@ test_that("Coefficients table matches", {
 test_that("Analysis handles errors - infinity", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$factors <- "facGender"
+  options$factors.types <- "nominal"
   options$count <- "debInf"
+  options$count.types <- "scale"
   results <- jaspTools::runAnalysis("RegressionLogLinear", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError")
@@ -69,6 +75,7 @@ test_that("Analysis handles errors - infinity", {
 test_that("Analysis handles errors - missing values (factors)", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$factors <- "debBinMiss20"
+  options$factors.types <- "nominal"
   options$modelTerms <- list(
     list(components="debBinMiss20")
   )
@@ -80,7 +87,9 @@ test_that("Analysis handles errors - missing values (factors)", {
 test_that("Analysis handles errors - missing values (counts)", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$factors <- "contBinom"
+  options$factors.types <- "nominal"
   options$count <- "debMiss30"
+  options$count.types <- "scale"
   results <- jaspTools::runAnalysis("RegressionLogLinear", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError")
@@ -89,7 +98,9 @@ test_that("Analysis handles errors - missing values (counts)", {
 test_that("Analysis handles errors - negatives", {
   options <- jaspTools::analysisOptions("RegressionLogLinear")
   options$factors <- "facGender"
+  options$factors.types <- "nominal"
   options$count <- "contNormal"
+  options$count.types <- "scale"
   results <- jaspTools::runAnalysis("RegressionLogLinear", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError")

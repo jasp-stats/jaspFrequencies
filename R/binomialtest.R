@@ -47,7 +47,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
     exitAnalysisIfErrors = TRUE
   )
 
-  counts <- dataset[[.v(options$counts)]]
+  counts <- dataset[[options$counts]]
   dataset <- dataset[rep(seq_len(nrow(dataset)), counts), , drop = FALSE]
   return(dataset)
 }
@@ -87,7 +87,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
     results[[variable]] <- list()
 
-    data <- na.omit(dataset[[.v(variable)]])
+    data <- na.omit(dataset[[variable]])
 
     for (level in levels(data)) {
 

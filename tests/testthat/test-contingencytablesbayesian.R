@@ -16,6 +16,9 @@ test_that("Main table results match", {
     name = "Layer 1",
     variables = "facGender")
   )
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
+  options$counts.types <- "scale"
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   table <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
   jaspTools::expect_equal_tables(table,
@@ -33,6 +36,8 @@ test_that("Multiple row and column variables give multiple main tables", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- c("facExperim", "facGender")
   options$columns <- c("contBinom", "facFive")
+  options$rows.types <- c("nominal", "nominal")
+  options$columns.types <- c("nominal", "nominal")
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
 
   table1 <- results[["results"]][["container_facExperim_contBinom"]][["collection"]][["container_facExperim_contBinom_crossTabMain"]][["data"]]
@@ -50,6 +55,8 @@ test_that("Bayesian Contingency Tables Tests table results match", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$priorConcentration <- 1.5
 
   samplingModels <- c("poisson", "jointMultinomial", "independentMultinomialRowsFixed",
@@ -75,6 +82,8 @@ test_that("Bayesian Contingency Tables Tests table results match - different hyp
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$priorConcentration <- 1.5
 
   samplingModels <- c("poisson", "jointMultinomial", "independentMultinomialRowsFixed",
@@ -117,6 +126,8 @@ test_that("Log Odds Ratio table results match", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$oddsRatio <- TRUE
   options$oddsRatioCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
@@ -131,6 +142,8 @@ test_that("Cramer's V table results match", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$cramersV <- TRUE
   options$cramersVCiLevel <- 0.90
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
@@ -145,6 +158,8 @@ test_that("Log Odds Ratio Plot matches", {
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facExperim"
   options$columns <- "contBinom"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$posteriorOddsRatioPlot <- TRUE
   options$posteriorOddsRatioPlotAdditionalInfo <- TRUE
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
@@ -156,6 +171,9 @@ test_that("Analysis handles errors", {
   options$rows <- "facExperim"
   options$columns <- "contBinom"
   options$counts <- "contNormal"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
+  options$counts.types <- "scale"
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
   errorMsg <- results[["results"]][["errorMessage"]]
   expect_is(errorMsg, "character")
@@ -165,6 +183,8 @@ test_that("Hypergeometric contingency table does not crash for not 2x2 tables", 
   options <- jaspTools::analysisOptions("ContingencyTablesBayesian")
   options$rows <- "facFive"
   options$columns <- "facGender"
+  options$rows.types <- "nominal"
+  options$columns.types <- "nominal"
   options$samplingModel <- "hypergeometric"
   results <- jaspTools::runAnalysis("ContingencyTablesBayesian", "test.csv", options)
 

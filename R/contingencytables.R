@@ -476,7 +476,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   # if no layers are specified, groups is null
   if (length(analysis) >= 3) {  # if layers are specified
 
-    lvls <- unique(subdataset[[ analysis[[3]] ]])
+    lvls <- levels(subdataset[[ analysis[[3]] ]])
 
     if (length(lvls) < 2)
       lvls <- ""

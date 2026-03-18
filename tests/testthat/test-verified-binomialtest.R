@@ -4,11 +4,12 @@ context("Binomial Test -- Verification project")
 test_that("Main table results match R, SPSS, SAS and MiniTab", {
   options <- jaspTools::analysisOptions("BinomialTest")
   options$variables <- "Guesses"
+  options$variables.types <- "nominal"
   options$testValue <- 0.25
-  
+
   results <- jaspTools::runAnalysis("BinomialTest", "BinomialTest.csv", options)
   resultTable <- results[["results"]][["binomialTable"]][["data"]]
-  
+
   jaspTools::expect_equal_tables(
     "test"=resultTable,
     "ref"=list("TRUE", 3, 0, 0.718432426452637, 0.3, 10, "Guesses", "FALSE",
