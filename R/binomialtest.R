@@ -28,8 +28,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   options <- .parseAndStoreFormulaOptions(jaspResults, options, "testValue")
 
   if (ready) {
-    dataset <- .binomReadData(dataset, options)
-
+    dataset <- .binomExpandIfCounts(dataset, options)
     .binomCheckErrors(dataset, options)
   }
 
@@ -37,13 +36,22 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   .binomPlotsDescriptive(jaspResults, dataset, options, ready)
 }
 
-# Preprocessing functions ----
-.binomReadData <- function(dataset, options) {
-  if (!is.null(dataset)) {
+.binomExpandIfCounts <- function(dataset, options) {
+  if (options$counts == "")
     return(dataset)
-  } else {
-    return(.readDataSetToEnd(columns.as.factor = options$variables))
-  }
+
+  countsCol <- dataset[[options$counts]]
+
+  .hasErrors(
+    dataset              = dataset,
+    type                 = c("negativeValues", "infinity"),
+    all.target           = options$counts,
+    exitAnalysisIfErrors = TRUE
+  )
+
+  countsInt <- round(countsCol)
+  dataset   <- dataset[rep(seq_len(nrow(dataset)), countsInt), , drop = FALSE]
+  return(dataset)
 }
 
 .binomCheckErrors <- function(dataset, options) {
@@ -117,7 +125,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Save results to state
   jaspResults[["binomTableResults"]] <- createJaspState(results)
   jaspResults[["binomTableResults"]]$dependOn(
-    c("variables", "testValue", "alternative", "ciLevel")
+    c("variables", "counts", "testValue", "alternative", "ciLevel")
   )
 
   # Return results object
@@ -167,7 +175,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create table
   binomialTable <- createJaspTable(title = gettext("Binomial Test"))
-  binomialTable$dependOn(c("variables", "testValue", "alternative", "ci",
+  binomialTable$dependOn(c("variables", "counts", "testValue", "alternative", "ci",
                                   "ciLevel", "vovkSellke"))
 
   binomialTable$showSpecifiedColumnsOnly <- TRUE
@@ -236,7 +244,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   if (is.null(jaspResults[["containerPlots"]])) {
     jaspResults[["containerPlots"]] <- createJaspContainer(gettext("Descriptives Plots"))
-    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlot", "testValue", ciName))
+    jaspResults[["containerPlots"]]$dependOn(c("descriptivesPlot", "counts", "testValue", ciName))
   }
 
   plotContainer <- jaspResults[["containerPlots"]]

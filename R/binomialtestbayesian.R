@@ -22,8 +22,7 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   options <- .parseAndStoreFormulaOptions(jaspResults, options, c("testValue", "priorA", "priorB"))
 
   if (ready) {
-    dataset <- .binomReadData(dataset, options)
-
+    dataset <- .binomExpandIfCounts(dataset, options)
     .binomCheckErrors(dataset, options)
   }
 
@@ -71,7 +70,7 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   # Save results to state
   jaspResults[["binomResults"]] <- createJaspState(results)
   jaspResults[["binomResults"]]$dependOn(
-    c("variables", "testValue", "alternative", "priorA", "priorB")
+    c("variables", "counts", "testValue", "alternative", "priorA", "priorB")
   )
 
   # Return results object
@@ -84,7 +83,7 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
     return()
 
   binomTable <- createJaspTable(gettext("Bayesian Binomial Test"))
-  binomTable$dependOn(c("variables", "testValue", "alternative", "bayesFactorType", "priorA", "priorB"))
+  binomTable$dependOn(c("variables", "counts", "testValue", "alternative", "bayesFactorType", "priorA", "priorB"))
   binomTable$position <- 1
   binomTable$showSpecifiedColumnsOnly <- TRUE
 
@@ -248,7 +247,7 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
 
   if (is.null(jaspResults[["inferentialPlots"]])) {
     inferentialPlots <- createJaspContainer(gettext("Inferential Plots"))
-    inferentialPlots$dependOn(c("testValue", "priorA", "priorB", "alternative"))
+    inferentialPlots$dependOn(c("counts", "testValue", "priorA", "priorB", "alternative"))
     inferentialPlots$position <- 2
     jaspResults[["inferentialPlots"]] <- inferentialPlots
   } else {
