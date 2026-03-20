@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.5\n"
 "POT-Creation-Date: 2026-02-28 04:01\n"
-"PO-Revision-Date: 2026-03-20 12:47+0000\n"
+"PO-Revision-Date: 2026-03-21 04:05+0000\n"
 "Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/id/>\n"
@@ -92,22 +92,22 @@ msgid "Variable"
 msgstr ""
 
 msgid "Level"
-msgstr ""
+msgstr "Tingkat"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
 msgstr ""
 
 msgid "Lower"
-msgstr ""
+msgstr "Bawah"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "Atas"
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
@@ -176,7 +176,7 @@ msgid "Gamma"
 msgstr ""
 
 msgid "Standard Error"
-msgstr ""
+msgstr "Galat Standar"
 
 msgid "Kendall's Tau-b"
 msgstr ""
@@ -533,10 +533,10 @@ msgid "Residual Deviance"
 msgstr ""
 
 msgid "Coefficients"
-msgstr ""
+msgstr "Koefisien"
 
 msgid "Estimate"
-msgstr ""
+msgstr "Estimasi"
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
