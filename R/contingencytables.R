@@ -340,7 +340,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     if (!is.null(analysisContainer[["crossTabKendallTau"]]))
       next
 
-    # Create table
+    # Create table for Kendall's Tau
     crossTabKendallTau <- createJaspTable(title = "Kendall's Tau")
     crossTabKendallTau$dependOn(c("kendallsTauB", "vovkSellke", "rowOrder", "columnOrder"))
     crossTabKendallTau$showSpecifiedColumnsOnly <- TRUE
