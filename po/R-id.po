@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.5\n"
 "POT-Creation-Date: 2026-02-28 04:01\n"
-"PO-Revision-Date: 2026-03-24 13:09+0000\n"
+"PO-Revision-Date: 2026-03-27 14:09+0000\n"
 "Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/id/>\n"
@@ -41,7 +41,7 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "Deskriptif"
 
 msgid "Counts"
 msgstr ""
@@ -185,7 +185,7 @@ msgid "Z"
 msgstr "Z"
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
 msgstr "Nilai"
@@ -401,7 +401,7 @@ msgid "At least two models need to be specified."
 msgstr ""
 
 msgid "vs."
-msgstr ""
+msgstr "vs."
 
 msgid "Observed"
 msgstr ""
@@ -437,7 +437,7 @@ msgid "P(M|Data)"
 msgstr ""
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "BF<sub>M</sub>"
 
 msgid "Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."
 msgstr ""
@@ -476,7 +476,7 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr ""
+msgstr "Faktor"
 
 msgid "Expected: %s"
 msgstr ""
@@ -521,7 +521,7 @@ msgid "(Intercept)"
 msgstr ""
 
 msgid "ANOVA"
-msgstr ""
+msgstr "ANOVA"
 
 msgid "Deviance"
 msgstr ""
@@ -569,16 +569,16 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "Perbandingan Model"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
