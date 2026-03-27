@@ -2,7 +2,7 @@ Package: jaspFrequencies
 Type: Package
 Title: Frequencies Module for JASP
 Version: 0.96.1
-Date: 2026-03-19
+Date: 2026-03-27
 Author: JASP Team
 Website: jasp-stats.org
 Maintainer: JASP Team <info@jasp-stats.org>
