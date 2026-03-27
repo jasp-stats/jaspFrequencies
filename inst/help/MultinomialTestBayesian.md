@@ -12,31 +12,26 @@ The Bayesian multinomial test allows the user to test whether an observed distri
 #### Assignment Box
 - Factor: The categorical variable we are interested in.
 - Counts (optional): The variable that contains the count data.
-- Expected Counts (optional): When the data set contains a variable which reflects the expectations of cell counts, that column can be entered here. The values in this variable will be interpreted as the null hypothesis.
-
+- Expected Counts (optional): If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis.
 
 #### Test Values
-- Equal proportions: In the Bayesian multinomial test we test the null hypothesis that the cell probabilities are uniformly distributed. The null hypothesis is tested against the alternative hypothesis which states that all category proportions are free to vary.
-- Expected proportions: Here, we specify the null hypothesis that the cell probabilites are equal to a particular expected distribution. By default the first hypothesis constitutes the null hypothesis from the Bayesian multinomial test, but the expected counts can be changed manually. The null hypothesis is tested against the alternative hypothesis which states that all category proportions are free to vary. The specification of multiple hypotheses is possible.
-
-#### Bayes Factor
-- *BF10*: Bayes factor to quantify evidence for the alternative hypothesis relative to the null hypothesis.
-- *BF01*: Bayes factor to quantify evidence for the null hypothesis relative to the alternative hypothesis.
-- *Log(BF10)*: Natural logarithm of *BF10*.
+- Equal proportions: Checks if observed counts across categories are uniformly distributed (the null hypothesis). A significant difference suggests the categories aren't equally likely.
+- Custom expected proportions: Checks if observed counts match a specific expected distribution (the null hypothesis). By default, it tests for a uniform distribution, but you can set your own expectations. A significant difference suggests the actual distribution doesn't fit the expected one.
 
 #### Additional statistics
-- Descriptives: Option to display the descriptives of the data; the observed and expected counts as well as the credible intervals of the observed values.
-- Credible interval: Default is 95%. Note that the credible intervals are based on independent binomial distributions with flat priors. The computation of the credible intervals are based on a procedure first given by Clopper and Pearson (1934). This procedure assumes a Beta(0,1) prior distribution when computing the lower bound of the credible interval, and a Beta(1, 0) distribution when computing the upper bound for the credible interval.
+- Descriptives: Displays a table containing the categories of interest, the observed values and the expected values under the specified hypotheses.
+  - Credible interval: Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
 
 #### Display
-- Counts: With this option the descriptives are displayed as absolute counts.
-- Proportions: With this option the descriptives are displayed as a proportion of the total number of counts.
-- Plots:
-  - Descriptive plot: Plots the frequencies and the credible intervals of the observed counts.
+- Counts: Displays the descriptives as counts.
+- Proportions: Displays the descriptives as a proportion.
+
+#### Plots
+- Descriptives plot: Displays the frequency of the reported counts and the corresponding credible intervals for every level of the variable of interest.
+  - Credible interval: A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
 
 ### Prior
-Option to adjust the prior distribution for the vector of cell probabilities. 
-- *Dirichlet*: For *K* categories, the default prior is Dirichlet(alpha_*1*, alpha_*2*, ..., alpha_*K*) with all alpha parameters set to 1. Note that the parameters of the *Dirichlet distribution* reflect prior counts, which implies that all values must be non-negative.
+Option to adjust the prior distribution for the vector of cell probabilities.
 
 ### Output
 ---

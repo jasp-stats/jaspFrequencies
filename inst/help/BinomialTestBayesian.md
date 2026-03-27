@@ -9,25 +9,22 @@ The Bayesian binomial test allows you to test whether a proportion of a dichotom
 ### Input
 ---------
 
-- Test value: The proportion of the variable under the null hypothesis. By default, this is set to 0.5.
+- Test value: The proportion of the variable under the null hypothesis - the baseline for comparison.
 
 #### Alt. Hypothesis
-- Direction
-  - *&ne; Test value*: Two-sided alternative hypothesis that the proportion is not equal to test value.
-  - *&gt; Test value*: One-sided alternative hypothesis that the proportion is larger than the test value.
-  - *&lt; Test value*: One-sided alternative hypothesis that the proportion is smaller than the test value.
+- *&ne; Test value*: Two-sided alternative hypothesis that the proportion is not equal to test value.
+- *&gt; Test value*: One-sided alternative hypothesis that the proportion is larger than the test value.
+- *&lt; Test value*: One-sided alternative hypothesis that the proportion is smaller than the test value.
 
-- Prior: **Beta** parameters *a* and *b* for the prior distribution under the alternative hypothesis. By default they are set to '1' each. This corresponds to a uniform prior distribution. See Learn Bayes module for more information and alternatives.
-
-#### Bayes Factor
-- BF<sub>10</sub>: By selecting this option, the Bayes factor will show evidence for the alternative hypothesis relative to the null hypothesis. This option is selected by default.
-- BF<sub>01</sub> : By selecting this option, the Bayes factor will show evidence for the null hypothesis relative to the alternative hypothesis. This is equal to 1/BF<sub>10</sub>.
-- Log(BF<sub>10</sub>) : By selecting this option, the natural logarithm of BF<sub>10</sub>, BF<sub>m</sub>, BF<sub>Inclusion</sub>, BF<sub>10, U</sub> will be displayed in the output.
+- Beta prior: parameter a: Sets how much prior belief you have in success. When a = b = 1, this corresponds to a uniform prior distribution.
+- Beta prior: parameter b: Sets how much prior belief you have in failure. When a = b = 1, this corresponds to a uniform prior distribution.
 
 #### Plots
 - Prior and posterior: Displays the prior and posterior density of the population proportion under the alternative hypothesis.
-    - Additional info: Adds the Bayes factor computed with the user-defined prior; adds a probability wheel depicting the odds of the data under the null vs. alternative hypothesis; adds the median and the 95% credible interval of the posterior density of the effect size.
+    - Additional info: Shows the Bayes factor using the chosen prior, a probability wheel showing evidence for each hypothesis, and the median with 95% credible interval of the effect size.
 - Sequential analysis: Displays the development of the Bayes factor as the data come in using the user-defined prior.
+- Descriptives plots: Display descriptives plots.
+  - Credible interval: Display central credible intervals. A credible interval shows the probability that the true effect size lies within certain values. The default credible interval is set at 95%.
 
 
 ### Output

@@ -326,7 +326,7 @@ Form
 			{
 				label: 			qsTr("Burnin (MCMC)")
 				name: 			"mcmcBurnin"
-				info:			"Number of initial MCMC samples to discard before analysis begins, allowing the chain to stabilize."
+				info:			qsTr("Number of initial MCMC samples to discard before analysis begins, allowing the chain to stabilize.")
 				defaultValue: 	500
 				min:			50
 				max: 			1000000
@@ -337,7 +337,7 @@ Form
 			{
 				label: 			qsTr("Iterations (MCMC)")
 				name: 			"mcmcSamples"
-				info:			"Total number of MCMC samples used for estimating the posterior after burn-in."
+				info:			qsTr("Total number of MCMC samples used for estimating the posterior after burn-in.")
 				defaultValue: 	10000
 				min:			100
 				max: 			1000000
@@ -348,7 +348,7 @@ Form
 			{
 				label: 			qsTr("Maximum samples (bridgesampling)")
 				name: 			"bridgeSamples"
-				info:			"Max number of samples used to estimate marginal likelihoods for computing Bayes factors."
+				info:			qsTr("Max number of samples used to estimate marginal likelihoods for computing Bayes factors.")
 				defaultValue: 	10000
 				min:			5
 				max: 			1000000
@@ -369,7 +369,7 @@ Form
 				{
 					label: 			qsTr("Number of steps")
 					name: 			"sequentialAnalysisNumberOfSteps"
-					info:			"Number of data points at which the Bayes factor is updated during sequential analysis."
+					info:			qsTr("Number of data points at which the Bayes factor is updated during sequential analysis.")
 					defaultValue: 	10
 					min:			0
 					fieldWidth: 	50

@@ -282,4 +282,46 @@ Upgrades
 		ChangeRename{	from: "sigma_stepsize_lower";				to: "bfRobustnessPlotLowerPriorSd"		}
 		ChangeRename{	from: "sigma_stepsize_upper";				to: "bfRobustnessPlotUpperPriorSd"		}
 	}
+
+	Upgrade
+	{
+		functionName:		"InformedBinomialTestBayesian"
+		fromVersion:		"0.19.2"
+		toVersion:			"0.20.0"
+
+		ChangeJS
+		{
+			name:		"bfComparison"
+			jsFunction:	function(options)
+			{
+				switch(options["bfComparison"])
+				{
+					case "Encompassing":	return "encompassing";
+					case "Null":			return "null";
+					default:				return options["bfComparison"];
+				}
+			}
+		}
+	}
+
+	Upgrade
+	{
+		functionName:		"InformedMultinomialTestBayesian"
+		fromVersion:		"0.19.2"
+		toVersion:			"0.20.0"
+
+		ChangeJS
+		{
+			name:		"bfComparison"
+			jsFunction:	function(options)
+			{
+				switch(options["bfComparison"])
+				{
+					case "Null":			return "null";
+					case "Encompassing":	return "encompassing";
+					default:				return options["bfComparison"];
+				}
+			}
+		}
+	}
 }

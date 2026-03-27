@@ -65,7 +65,7 @@ Form
 				{
 					title: qsTr("Alt. Hypothesis (Fisher's exact test)")
 					name: "oddsRatioAlternative"
-					info: qsTr("Choose your fighter! Pick your alternative hypothesis")
+					info: qsTr("Specify the direction of the alternative hypothesis for Fisher's exact test.")
 					RadioButton { value: "twoSided";	label: qsTr("Group one ≠ Group two"); checked: true; 	info: qsTr("Two-sided alternative hypothesis that the proportion of group 1 is not equal to the proportion of group 2.")		}
 					RadioButton { value: "greater";		label: qsTr("Group one > Group two"); 					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is greater than the proportion of group 2.")		}
 					RadioButton { value: "less";		label: qsTr("Group one < Group two"); 					info: qsTr("One-sided alternative hypothesis that the proportion of group 1 is less than the proportion of group 2.")		}
@@ -140,9 +140,9 @@ Form
 		Group
 		{
 			title: qsTr("Residuals")
-			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized"); 					info: qsTr("Difference between observed and expected counts.")			}
-			CheckBox { name: "residualsPearson";		label: qsTr("Pearson"); 						info: qsTr("Standardized residuals based on Pearson’s χ².")				}
-			CheckBox { name: "residualsStandardized";	label: qsTr("Standardized (adjusted Pearson)"); info: qsTr("Adjusted residuals accounting for row/column totals.")		}
+			CheckBox { name: "residualsUnstandardized";	label: qsTr("Unstandardized"); 					info: qsTr("Computed by (observed - expected).")			}
+			CheckBox { name: "residualsPearson";		label: qsTr("Pearson"); 						info: qsTr("Standardized residuals; computed by (observed - expected) / √(expected).")				}
+			CheckBox { name: "residualsStandardized";	label: qsTr("Adjusted Pearson"); info: qsTr("Accounts for row/column totals; computed by (observed - expected) / √(expected × (1 - row marginal proportion) × (1 - column marginal proportion)).")		}
 		}
 
 		Group
@@ -170,14 +170,14 @@ Form
 			name: "rowOrder"
 			title: qsTr("Row Order")
 			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true; 	info: qsTr("Rows sorted in numerical order.")		}
-			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Makes your data go topsy-turvy.")		}
+			RadioButton { value: "descending";		label: qsTr("Descending");					info: qsTr("Rows sorted in reverse numerical order.")		}
 		}
 		RadioButtonGroup
 		{
 			name: "columnOrder"
 			title: qsTr("Column Order")
 			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Columns sorted in numerical order.")				}
-			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("What your data looks like in the mirror.")		}
+			RadioButton { value: "descending";		label: qsTr("Descending");					info: qsTr("Columns sorted in reverse numerical order.")		}
 		}
 	}
 }

@@ -8,7 +8,7 @@ The binomial test allows the user to test whether a proportion of a dichotomous 
 
 ### Input 
 ----
-- Test value: The proportion of the variable under the null hypothesis.
+- Test value: The proportion of the variable under the null hypothesis - the baseline for comparison.
 
 #### Alt. Hypothesis
 - *&ne; Test value*: Two-sided alternative hypothesis that the proportion is not equal to test value.
@@ -17,12 +17,11 @@ The binomial test allows the user to test whether a proportion of a dichotomous 
 
 #### Additional Statistics
 - Confidence interval: Coverage of the confidence intervals in percentages. The default value is 95.
-- Vovk-Sellke Maximum *p*-Ratio: The bound 1/(-e *p* log(*p*)) is derived from the shape of the *p*-value distribution. Under the null hypothesis (H<sub>0</sub>) it is uniform(0,1), and under the alternative (H<sub>1</sub>) it is decreasing in *p*, e.g., a beta(&#945;, 1) distribution, where 0 < &#945; < 1. The Vovk-Sellke MPR is obtained by choosing the shape &#945; of the distribution under H<sub>1</sub> such that the obtained *p*-value is *maximally diagnostic*. The value is then the ratio of the densities at point *p* under H<sub>0</sub> and H<sub>1</sub>.
-For example, if the two-sided *p*-value equals .05, the Vovk-Sellke MPR equals 2.46, indicating that this *p*-value is at most 2.46 times more likely to occur under H<sub>1</sub> than under H<sub>0</sub>.
+- Vovk-Sellke Maximum *p*-Ratio: An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.
 
 #### Plots
-- Descriptive plots: The proportion and confidence interval of the two different values of your dichotomous variable
-- Confidence interval: Coverage of the confidence intervals in percentages. The default value is 95.
+- Descriptives plots: Visualises the proportion and confidence interval of the two different values of your dichotomous variable.
+  - Confidence interval: Coverage of the confidence intervals in percentages. The default value is 95.
 
 ### Output
 -----------

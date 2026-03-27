@@ -144,13 +144,13 @@ Form
 			name: "rowOrder"
 			title: qsTr("Row Order")
 			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Rows sorted in numerical order.")	}
-			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Opposite of above.")	}
+			RadioButton { value: "descending";	label: qsTr("Descending");						info: qsTr("Rows sorted in reverse numerical order.")	}
 		}
 		RadioButtonGroup
 		{
 			name: "columnOrder"
 			title: qsTr("Column Order")
-			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Opposite of below.")	}
+			RadioButton { value: "ascending";	label: qsTr("Ascending"); checked: true;	info: qsTr("Columns sorted in numerical order.")	}
 			RadioButton { value: "descending";	label: qsTr("Descending");					info: qsTr("Columns sorted in reverse numerical order.")	}
 		}
 
