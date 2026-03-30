@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2026-02-28 04:01\n"
-"PO-Revision-Date: 2026-03-27 14:09+0000\n"
+"PO-Revision-Date: 2026-03-31 02:09+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
@@ -169,7 +169,7 @@ msgid "Log Odds Ratio"
 msgstr ""
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "勝算比"
 
 msgid "%.0f%% Confidence Intervals"
 msgstr ""
@@ -338,7 +338,7 @@ msgid "The Bayes factor is undefined"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "貝氏因子過小"
 
 msgid "The Bayes factor is infinite"
 msgstr ""
@@ -511,7 +511,7 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr ""
+msgstr "因子"
 
 msgid "Expected: %s"
 msgstr "期望: %s"
@@ -561,7 +561,7 @@ msgid "ANOVA"
 msgstr "變異數分析"
 
 msgid "Deviance"
-msgstr ""
+msgstr "偏離差"
 
 msgid "Residual df"
 msgstr ""
@@ -615,7 +615,7 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "模型比較"
 
 msgid "BF<sub>10</sub>"
 msgstr ""
