@@ -214,8 +214,12 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
     groupList                             <- .crossTabComputeGroups(dataset, options, analysisContainer, analysis, ready) # Compute/get Group List
     res                                   <- try(.crossTabTestsRows(analysisContainer, groupList$rows, groupList, options, ready, counts.fp))
 
-    if (ready && !.crossTabIs2x2(table(dataset[[analysis[["columns"]]]], dataset[[analysis[["rows"]]]])))
-      crossTabChisq$addFootnote(gettext("Continuity correction is available only for 2x2 tables."))
+    if (ready && !.crossTabIs2x2(table(dataset[[analysis[["columns"]]]], dataset[[analysis[["rows"]]]]))) {
+      if (options$chiSquaredContinuityCorrection | options$mcNemarChiSquaredContinuityCorrection) 
+        crossTabChisq$addFootnote(gettext("Continuity correction is available only for 2x2 tables."))
+      if (options$mcNemarChiSquared) 
+        crossTabChisq$addFootnote(gettext("McNemar's test is available only for 2x2 tables."))
+    }
 
     .crossTabSetErrorOrFill(res, crossTabChisq)
   }
@@ -1107,7 +1111,7 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
 
       row[["type[mcNemarChiSquared]"]] <- "McNemar's \u03A7\u00B2"
 
-      if (ready) {
+      if (ready && .crossTabIs2x2(counts.matrix)) {
 
         chi.result <- try({
           chi.result <- stats::mcnemar.test(counts.matrix, correct = FALSE)
