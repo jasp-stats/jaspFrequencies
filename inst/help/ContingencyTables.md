@@ -9,6 +9,8 @@ Contingency tables allow the user to identify how the frequencies of one categor
 #### Statistics
 - &chi;&sup2;: Pearson's chi-squared test for independence.
 - &chi;&sup2; continuity correction: Applies Yates' correction for continuity (for 2×2 tables).
+- McNemar's &chi;&sup2;: Tests equality of two marginal proportions in paired nominal data.
+- McNemar's &chi;&sup2; continuity correction: Corrects for error introduced when approximating a discrete distribution with a continuous one in McNemar's test.
 - Likelihood ratio: Calculates the likelihood of the data under the alternative hypothesis divided by the likelihood of the data under the null hypothesis.
 - Vovk-Sellke maximum *p*-ratio: An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.
 
