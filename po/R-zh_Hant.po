@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2026-02-28 04:01\n"
-"PO-Revision-Date: 2026-04-02 08:09+0000\n"
+"PO-Revision-Date: 2026-04-03 15:09+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
@@ -20,7 +20,7 @@ msgid "Models"
 msgstr "模型"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
 msgstr ""
@@ -28,19 +28,19 @@ msgstr ""
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
-msgstr ""
+msgstr "對數勝算比為正值，表示第 2 組的成功率高於第 1 組。"
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "對數勝算比為 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "數勝算比大於 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "對數勝算比小於 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "對數勝算比 %s 0"
 
 msgid "Descriptives"
 msgstr "描述性統計"
@@ -55,16 +55,16 @@ msgid "Proportion"
 msgstr "比例"
 
 msgid "Group 1"
-msgstr ""
+msgstr "組別 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "組別 2"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "先驗與後驗"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "貝氏因子穩健性檢核"
@@ -76,10 +76,10 @@ msgid "n"
 msgstr ""
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "後驗機率"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | 資料) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr "無法檢定檢定值大於 1 之假設。"
@@ -133,7 +133,7 @@ msgstr "貝氏二項式檢定"
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
-msgstr ""
+msgstr "%1$s 對立假設下先驗分配的形狀由 Beta(%2$s, %3$s) 指定。"
 
 msgid "Inferential Plots"
 msgstr "推論圖"
@@ -142,10 +142,10 @@ msgid "Population proportion"
 msgstr "母體比例"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "一個或多個貝氏因子無法計算"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "一個或多個貝氏因子為無限大"
 
 msgid "Undefined hypothesis"
 msgstr "未定義之假設"
@@ -161,27 +161,30 @@ msgid ""
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke 最大 <em>p</em> 值比：根據 <em>p</em> 值，\n"
+"      支持 H%1$s 相對於 H%2$s 的最大可能 odds 為 %3$s\n"
+"      （Sellke, Bayarri, & Berger, 2001）。"
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "連續性校正僅適用於 2x2 表格。"
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "對數勝率比"
 
 msgid "Odds Ratio"
 msgstr "勝算比"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% 信賴區間"
 
 msgid "Nominal"
-msgstr ""
+msgstr "名義"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "順序 Gamma"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95% 信賴區間"
 
 msgid "Gamma"
 msgstr ""
@@ -220,58 +223,64 @@ msgid "Unstandardized residuals"
 msgstr "非標準化殘差"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "皮爾森殘差"
 
 msgid "Standardized residuals"
 msgstr "標準化殘差"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "列聯係數"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi 係數"
 
 msgid "Cramer's V"
 msgstr ""
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "Phi 係數僅適用於 2×2 列聯表"
 
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "無法計算數值 — 至少有一列或一行全部為零"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "Lambda（列）"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "Lambda（行）"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "Lambda（對稱）"
 
 msgid ""
 "Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is "
 "more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
 "less likely in group <em>%2$s</em>"
 msgstr ""
+"勝算比表示如下： <br>（比值 > 1）：第 <em>%1$s</em> 組在第 <em>%2$s</em> 組中"
+"發生的可能性較高<br>（比值 < 1）：第 <em>%1$s</em> 組在第 <em>%2$s</em> 組中"
+"發生的可能性較低"
 
 msgid ""
 "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
 "is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
 "is less likely in group <em>%2$s</em>"
 msgstr ""
+"對數勝算比表示如下：<br>（比值 > 0）：第 <em>%1$s</em> 組在第 <em>%2$s</em> "
+"組中發生的可能性較高<br>（比值 < 0）：第 <em>%1$s</em> 組在第 <em>%2$s</em> "
+"組中發生的可能性較低"
 
 msgid "is less than"
-msgstr ""
+msgstr "小於"
 
 msgid "is greater than"
-msgstr ""
+msgstr "大於"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-msgstr ""
+msgstr "對於所有檢定，對立假設均指定第 <em>%1$s</em> 組 %2$s <em>%3$s</em>。"
 
 msgid "Each cell displays the observed counts"
 msgstr "每個儲存格(細格)將可顯示觀察次數"
@@ -280,22 +289,22 @@ msgid "Each cell displays the expected counts"
 msgstr "每個儲存格(細格)將可顯示期望次數"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "每個細格顯示列百分比"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "每個細格顯示行百分比"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "每個細格顯示總計百分比"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "每個細格顯示未標準化殘差"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "每個細格顯示皮爾森殘差"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "每個細格顯示標準化殘差"
 
 msgid "Count"
 msgstr "計次"
@@ -305,7 +314,7 @@ msgstr ""
 
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "%s 無法計算 — 至少有一列或一行全部為零"
 
 msgid "%s continuity correction"
 msgstr "%s 連續校正"
@@ -314,93 +323,93 @@ msgid "Likelihood ratio"
 msgstr "概似比"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "勝算比僅限於 2×2 表格"
 
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "費雪精確檢定"
 
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "貝氏列聯表檢定"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% 貝氏可信區間"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "對數勝算比圖"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "勝算比僅限於 2×2 分析"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "此模型的勝算比尚未實作"
 
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "貝氏因子未定義"
 
 msgid "The Bayes factor is too small"
 msgstr "貝氏因子過小"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "貝氏因子為無限大"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "中位數對數勝算比 ="
 
 msgid "Poisson"
-msgstr ""
+msgstr "卜瓦松"
 
 msgid "Joint multinomial"
-msgstr ""
+msgstr "聯合多項分配的"
 
 msgid "Independent multinomial"
-msgstr ""
+msgstr "獨立多項式"
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "超幾何分布"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "超幾何列聯表檢定僅限於 2×2 表格"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "比例檢定僅限於 2×2 表格"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "不等於"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "選取了無效的抽樣模型"
 
 msgid "Odds ratio"
-msgstr ""
+msgstr "勝算比"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "此模型的勝算比尚未實作"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "此模型的Cramer's V 尚未實作"
 
 msgid "Posterior"
 msgstr "後驗"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
-msgstr ""
+msgstr "若未指定「樣本數」，則「成功」必須有兩個水準。"
 
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
+msgstr "無效的成功次數：變項必須僅包含整數值。"
 
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr ""
+msgstr "無效的樣本數：變項必須僅包含整數值。"
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "樣本數必須大於成功次數。"
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
-msgstr ""
+msgstr "因子必須包含能將成功次數對應至樣本數的唯一水準。"
 
 msgid "Performing sequential analysis."
-msgstr ""
+msgstr "正在執行序列分析。"
 
 msgid "Observed counts"
 msgstr "觀察次數"
@@ -409,7 +418,7 @@ msgid "Observed proportions"
 msgstr "觀察比例"
 
 msgid "Sample size"
-msgstr ""
+msgstr "樣本數"
 
 msgid "Descriptives plot"
 msgstr "描述性統計圖"
@@ -418,10 +427,10 @@ msgid "Unrestricted posterior plot"
 msgstr ""
 
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序列分析"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "至少需要指定兩個模型。"
 
 msgid "vs."
 msgstr "相對"
@@ -430,7 +439,7 @@ msgid "Observed"
 msgstr "觀察次數"
 
 msgid "Estimated"
-msgstr ""
+msgstr "估計"
 
 msgid "Proportions"
 msgstr "比例"
@@ -438,10 +447,10 @@ msgstr "比例"
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
-msgstr ""
+msgstr "「%1$s」假設（%2$s）的先驗模型機率輸入值無法解析為正數。請檢查輸入內容。"
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "%1$s 順序限制之貝氏評估"
 
 msgid "BF%1$s%2$s"
 msgstr ""
@@ -450,16 +459,16 @@ msgid "Log(BF%1$s%2$s)"
 msgstr ""
 
 msgid "Log marglik"
-msgstr ""
+msgstr "對數邊際概似度"
 
 msgid "Error"
-msgstr ""
+msgstr "錯誤"
 
 msgid "Error %%"
-msgstr ""
+msgstr "誤差 %%"
 
 msgid "P(M|Data)"
-msgstr ""
+msgstr "P(M|資料)"
 
 msgid "BF<sub>M</sub>"
 msgstr ""
@@ -468,47 +477,51 @@ msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"請雙重檢查「順序限制假設」區塊中的因子水準名稱，是否與您資料集中的因子水準相"
+"符。"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
-msgstr ""
+msgstr "每一列中的模型（標示為「1」）將與 %1$s（標示為「0」）進行比較。"
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
-msgstr ""
+msgstr "請在「順序限制假設」區塊中指定知情假設檢定。"
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "若無觀察次數，則不支援期望次數。"
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "未輸入期望次數。"
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"無效的次數：變項與因子的水準數不符。當指定次數時，資料集中的每一列必須代表因"
+"子的一個唯一水準。"
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
-msgstr ""
+msgstr "無效的期望次數：變項與因子的水準數不符。"
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "無效的次數：變項必須僅包含整數值。"
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "無效的次數：觀察值少於 1。"
 
 msgid "Invalid counts: maximum value (10e7) exceeded."
-msgstr ""
+msgstr "無效的次數：超過最大值 (10e7)。"
 
 msgid "Confidence intervals are based on independent binomial distributions."
-msgstr ""
+msgstr "信賴區間係基於獨立二項式分配。"
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "無法計算信賴區間。"
 
 msgid "Factor"
 msgstr "因子"
@@ -517,7 +530,7 @@ msgid "Expected: %s"
 msgstr "期望: %s"
 
 msgid "Expected"
-msgstr ""
+msgstr "期望值"
 
 msgid "%s%% Confidence Interval"
 msgstr "%s%% 信賴區間"
@@ -532,21 +545,21 @@ msgid "Levels"
 msgstr "水準"
 
 msgid "Credible"
-msgstr ""
+msgstr "可信的"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
-msgstr ""
+msgstr "可信區間係基於具有平坦先驗的獨立二項式分配。"
 
 msgid "Confidence"
-msgstr ""
+msgstr "信賴"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s 區間"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "無法計算 %s 區間。"
 
 msgid "Observed Counts"
 msgstr "觀察次數"
@@ -564,10 +577,10 @@ msgid "Deviance"
 msgstr "偏離差"
 
 msgid "Residual df"
-msgstr ""
+msgstr "殘差自由度"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "殘差離差"
 
 msgid "Coefficients"
 msgstr "係數"
@@ -576,7 +589,7 @@ msgid "Estimate"
 msgstr "估計值"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% 信賴區間"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -584,35 +597,41 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke 最大 <em>p</em> 值比：根據 <em>p</em> 值，\n"
+"支持 H%1$s 相對於 H%2$s 的最大可能 odds 為\n"
+"1/(-e <em>p</em> log(<em>p</em>))，其中 <em>p</em> %3$s .37\n"
+"（Sellke, Bayarri, & Berger, 2001）。"
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "無法讀取變項"
 
 msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
-msgstr ""
+msgstr "無法計算結果；取樣過程中發生數值錯誤。請嘗試更改（例如簡化）模型或調整先驗。"
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"R 套件 'conting' 錯誤：%s<br>可能是取樣過程中發生數值錯誤。請嘗試更改（例如簡"
+"化）模型、調整先驗、改變種子數，或更改 MCMC 樣本數。"
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "R 套件錯誤：無法擷取表格機率"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "已檢視模型總數 = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "指定的子模型不在可能的子模型範圍內"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>模型公式：</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>後驗模型機率 =</em>"
 
 msgid "Model Comparison"
 msgstr "模型比較"
@@ -627,7 +646,7 @@ msgid "Log(BF<sub>10</sub>)"
 msgstr ""
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "後驗摘要統計"
 
 msgid "P(incl|data)"
 msgstr "P（包含|資料）"
@@ -639,10 +658,10 @@ msgid "Variance"
 msgstr "變異數"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% 可信區間"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "子模型 %s 的後驗摘要統計"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% 可信區間"
