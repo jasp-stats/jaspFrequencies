@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-04-07 10:09+0000\n"
+"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspfrequencies-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Language: zh_Hant\n"
 "X-Qt-Contexts: true\n"
 
@@ -337,15 +343,15 @@ msgstr "對立假設(Fisher's exact檢定)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
-msgstr "組1 ≠ 組2"
+msgstr "組 1 ≠ 組 2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one > Group two"
-msgstr "組1 > 組2"
+msgstr "組 1 > 組 2"
 
 msgctxt "ContingencyTables|"
 msgid "Group one < Group two"
-msgstr "組1 < 組2"
+msgstr "組 1 < 組 2"
 
 msgctxt "ContingencyTables|"
 msgid "Nominal"
@@ -550,15 +556,15 @@ msgstr "對立假設"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one ≠ Group two"
-msgstr "組1 ≠ 組2"
+msgstr "組 1 ≠ 組 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one > Group two"
-msgstr "組1 > 組2"
+msgstr "組 1 > 組 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Group one < Group two"
-msgstr "組1 < 組2"
+msgstr "組 1 < 組 2"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Plots"
@@ -1709,7 +1715,7 @@ msgstr ""
 
 msgctxt "ContingencyTables|"
 msgid "Shows row-wise percentages."
-msgstr "顯示按行計算的百分比。"
+msgstr "顯示列百分比。"
 
 msgctxt "ContingencyTables|"
 msgid "Shows column-wise percentages."
@@ -1805,7 +1811,7 @@ msgstr "顯示虛無假設下的期望次數。"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Shows row-wise percentages."
-msgstr "顯示按行計算的百分比。"
+msgstr "顯示列百分比。"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Shows column-wise percentages."
