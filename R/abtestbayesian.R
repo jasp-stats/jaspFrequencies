@@ -20,6 +20,14 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 
   ready <- (options$n1 != "" && options$y1 != "" && options$n2 != "" && options$y2 != "")
 
+  if (ready) {
+    # ab_test expects data with columns named n1, n2, y1, y2
+    colnames(dataset) <- stringr::str_replace_all(
+      colnames(dataset),
+      setNames(c("n1", "n2", "y1", "y2"), c(options$n1, options$n2, options$y1, options$y2))
+    )
+  }
+
   ### This function is shared with summary stats a/b test
   .abTestMain(jaspResults, dataset, options, ready)
 }
@@ -196,7 +204,11 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   names(prior_prob) <- c("H1", "H+", "H-", "H0")
 
   .setSeedJASP(options)
-  ab <- try(abtest::ab_test(data = dataset, prior_par = prior_par, prior_prob = prior_prob,
+  nr <- nrow(dataset)
+  # ab_test expects a named list with y1, n1, y2, n2 (not a data frame)
+  data_list <- list(y1 = dataset$y1[nr], n1 = dataset$n1[nr],
+                    y2 = dataset$y2[nr], n2 = dataset$n2[nr])
+  ab <- try(abtest::ab_test(data = data_list, prior_par = prior_par, prior_prob = prior_prob,
                             posterior = TRUE, nsamples = options$samples))
 
   jaspResults[["model"]]$object <- ab
@@ -456,18 +468,17 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   p_prior <- p_prior[names(hyp_index2)]
   p_post  <- p_post [names(hyp_index2)]
 
-  priorPieChart <- jaspGraphs::plotPieChart(p_prior, names(p_prior), showAxisText = FALSE) +
+  # use NonPolar variant to avoid coord_polar rendering issues in newer ggplot2
+  priorPieChart <- jaspGraphs::plotPieChartCartesian(p_prior, names(p_prior), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col_trans) +
-    ggplot2::ylab("Prior Probabilities") +
-    ggplot2::coord_polar("y", start = pi / 2) +
+    ggplot2::xlab("Prior Probabilities") +
     ggplot2::theme(legend.position = "none",
                    axis.title.x = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .75),
                    plot.margin = ggplot2::margin())
 
-  posteriorPieChart <- jaspGraphs::plotPieChart(p_post, names(p_post), showAxisText = FALSE) +
+  posteriorPieChart <- jaspGraphs::plotPieChartCartesian(p_post, names(p_post), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col) +
-    ggplot2::ylab("Posterior Probabilities") +
-    ggplot2::coord_polar("y", start = pi / 2) +
+    ggplot2::xlab("Posterior Probabilities") +
     ggplot2::theme(legend.position = "none",
                    axis.title.x = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .75),
                    plot.margin = ggplot2::margin())
