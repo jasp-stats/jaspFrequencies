@@ -204,10 +204,9 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   names(prior_prob) <- c("H1", "H+", "H-", "H0")
 
   .setSeedJASP(options)
-  nr <- nrow(dataset)
   # ab_test expects a named list with y1, n1, y2, n2 (not a data frame)
-  data_list <- list(y1 = dataset$y1[nr], n1 = dataset$n1[nr],
-                    y2 = dataset$y2[nr], n2 = dataset$n2[nr])
+  data_list <- list(y1 = dataset$y1, n1 = dataset$n1,
+                    y2 = dataset$y2, n2 = dataset$n2)
   ab <- try(abtest::ab_test(data = data_list, prior_par = prior_par, prior_prob = prior_prob,
                             posterior = TRUE, nsamples = options$samples))
 
@@ -469,14 +468,14 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   p_post  <- p_post [names(hyp_index2)]
 
   # use NonPolar variant to avoid coord_polar rendering issues in newer ggplot2
-  priorPieChart <- jaspGraphs::plotPieChartCartesian(p_prior, names(p_prior), showAxisText = FALSE) +
+  priorPieChart <- jaspGraphs::plotPieChart(p_prior, names(p_prior), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col_trans) +
     ggplot2::xlab("Prior Probabilities") +
     ggplot2::theme(legend.position = "none",
                    axis.title.x = ggplot2::element_text(size = jaspGraphs::getGraphOption("fontsize") * .75),
                    plot.margin = ggplot2::margin())
 
-  posteriorPieChart <- jaspGraphs::plotPieChartCartesian(p_post, names(p_post), showAxisText = FALSE) +
+  posteriorPieChart <- jaspGraphs::plotPieChart(p_post, names(p_post), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col) +
     ggplot2::xlab("Posterior Probabilities") +
     ggplot2::theme(legend.position = "none",
