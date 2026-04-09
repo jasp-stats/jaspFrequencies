@@ -877,11 +877,11 @@ plot_robustness_ggplot2 <- function(x,
 
   xBreaks <- if (length(mu) <= 6) mu else jaspGraphs::getPrettyAxisBreaks(mu_range)
   xLimits <- range(xBreaks)
-  xName <- expression(mu[psi])
+  xName <- parse(text = "mu[psi]")
 
   yBreaks <- if (length(sigma) <= 6) sigma else jaspGraphs::getPrettyAxisBreaks(sigma_range)
   yLimits <- range(yBreaks)
-  yName <- expression(sigma[psi])
+  yName <- parse(text = "sigma[psi]")
 
 
   rbf <- range(bf, na.rm = TRUE)
