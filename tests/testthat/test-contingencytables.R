@@ -249,3 +249,46 @@ test_that("Phi coefficient is only available for 2 by 2 contingency tables", {
     label = "footnote under the table"
   )
 })
+
+options <- analysisOptions("ContingencyTables")
+options$.meta <- list(columns = list(shouldEncode = TRUE), counts = list(shouldEncode = TRUE), 
+                      layers = list(shouldEncode = TRUE), rows = list(shouldEncode = TRUE), 
+                      columns.types = list(shouldEncode = TRUE), counts.types = list(
+                        shouldEncode = TRUE), rows.types = list(shouldEncode = TRUE))
+options$chiSquared <- FALSE
+options$columns <- "jaspColumn1"
+options$counts <- "jaspColumn2"
+options$rows <- "jaspColumn3"
+options$columns.types <- "nominal"
+options$counts.types <- "scale"
+options$rows.types <- "nominal"
+options$mcNemarChiSquared <- TRUE
+options$mcNemarChiSquaredContinuityCorrection <- TRUE
+set.seed(1)
+
+dataset <- structure(
+  list(jaspColumn1 = structure(c(2L, 1L, 2L, 1L),
+                               levels = c("Negative", "Positive"),
+                               class = "factor"),
+       jaspColumn2 = c(2, 7, 219, 183),
+       jaspColumn3 = structure(c(2L, 2L, 1L, 1L),
+                               levels = c("Negative", "Positive"),
+                               class = "factor")),
+  row.names = c(NA, 4L), class = "data.frame")
+
+results <- runAnalysis("ContingencyTables", dataset, options)
+
+test_that("McNemar's Chi-Squared Tests table results match", {
+  table <- results[["results"]][["container_jaspColumn3_jaspColumn1"]][["collection"]][["container_jaspColumn3_jaspColumn1_crossTabChisq"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+                                 list("", 1, 1, "", 9.45124231840926e-45, 3.68999077623666e-45, "N",
+                                      "McNemar's <unicode><unicode> continuity correction", "McNemar's <unicode><unicode>",
+                                      411, 196.995575221239, 198.867256637168))
+})
+
+test_that("McNemar's Contingency Tables results match", {
+  table <- results[["results"]][["container_jaspColumn3_jaspColumn1"]][["collection"]][["container_jaspColumn3_jaspColumn1_crossTabMain"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+                                 list(183, 219, "Negative", 402, 7, 2, "Positive", 9, 190, 221, "Total",
+                                      411))
+})
