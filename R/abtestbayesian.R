@@ -20,14 +20,6 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 
   ready <- (options$n1 != "" && options$y1 != "" && options$n2 != "" && options$y2 != "")
 
-  if (ready) {
-    # ab_test expects data with columns named n1, n2, y1, y2
-    colnames(dataset) <- stringr::str_replace_all(
-      colnames(dataset),
-      setNames(c("n1", "n2", "y1", "y2"), c(options$n1, options$n2, options$y1, options$y2))
-    )
-  }
-
   ### This function is shared with summary stats a/b test
   .abTestMain(jaspResults, dataset, options, ready)
 }
@@ -205,8 +197,8 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
 
   .setSeedJASP(options)
   # ab_test expects a named list with y1, n1, y2, n2 (not a data frame)
-  data_list <- list(y1 = dataset$y1, n1 = dataset$n1,
-                    y2 = dataset$y2, n2 = dataset$n2)
+  data_list <- list(y1 = dataset[[options$y1]], n1 = dataset[[options$n1]],
+                    y2 = dataset[[options$y2]], n2 = dataset[[options$n2]])
   ab <- try(abtest::ab_test(data = data_list, prior_par = prior_par, prior_prob = prior_prob,
                             posterior = TRUE, nsamples = options$samples))
 
@@ -236,23 +228,23 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   if (!ready)
     return()
 
-  .abTestBayesianFillDescriptivesTable(abTestBayesianDescriptivesTable, dataset)
+  .abTestBayesianFillDescriptivesTable(abTestBayesianDescriptivesTable, dataset, options)
 
   return()
 }
 
 
-.abTestBayesianFillDescriptivesTable <- function(abTestBayesianDescriptivesTable, dataset) {
+.abTestBayesianFillDescriptivesTable <- function(abTestBayesianDescriptivesTable, dataset, options) {
 
   output.rows <- list()
 
-  num_rows = length(dataset$y1)
-  counts = dataset$y1[num_rows]
-  total = dataset$n1[num_rows]
+  num_rows = nrow(dataset)
+  counts = dataset[[options$y1]][num_rows]
+  total = dataset[[options$n1]][num_rows]
   output.rows[[1]] <- list(group = gettext("Group 1"), counts = counts, total = total, proportion = counts / total)
 
-  counts = dataset$y2[num_rows]
-  total = dataset$n2[num_rows]
+  counts = dataset[[options$y2]][num_rows]
+  total = dataset[[options$n2]][num_rows]
   output.rows[[2]] <- list(group = gettext("Group 2"), counts = counts, total = total, proportion = counts / total)
 
   abTestBayesianDescriptivesTable$addRows(output.rows)
@@ -467,7 +459,7 @@ ABTestBayesianInternal <- function(jaspResults, dataset = NULL, options) {
   p_prior <- p_prior[names(hyp_index2)]
   p_post  <- p_post [names(hyp_index2)]
 
-  # use NonPolar variant to avoid coord_polar rendering issues in newer ggplot2
+  # plotPieChart uses coord_polar internally; no additional coord override needed
   priorPieChart <- jaspGraphs::plotPieChart(p_prior, names(p_prior), showAxisText = FALSE) +
     ggplot2::scale_fill_manual(values = col_trans) +
     ggplot2::xlab("Prior Probabilities") +
