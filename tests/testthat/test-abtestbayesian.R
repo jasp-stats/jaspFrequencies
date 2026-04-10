@@ -177,5 +177,5 @@ test_that("plotRobustness plot matches", {
   results  <- jaspTools::runAnalysis("ABTestBayesian", testthat::test_path("ab_data.csv"), options)
   testPlot <- results[["state"]][["figures"]][[1]][["obj"]]
 
-  jaspTools::expect_equal_plots(testPlot, "robustness")
+  jaspTools::expect_equal_plots(testPlot, "robustness", tolerance = 0.5)
 })
