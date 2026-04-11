@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-04-03 15:09+0000\n"
+"PO-Revision-Date: 2026-04-12 08:12+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
@@ -168,9 +168,8 @@ msgstr ""
 msgid "Continuity correction is available only for 2x2 tables."
 msgstr "連續性校正僅適用於 2x2 表格。"
 
-#, fuzzy
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr "連續性校正僅適用於 2x2 表格。"
+msgstr "McNemar 檢定僅適用於 2×2 列聯表。"
 
 msgid "Log Odds Ratio"
 msgstr "對數勝率比"
@@ -323,9 +322,8 @@ msgstr "%s 無法計算 — 至少有一列或一行全部為零"
 msgid "%s continuity correction"
 msgstr "%s 連續校正"
 
-#, fuzzy
 msgid "McNemar's %s continuity correction"
-msgstr "%s 連續校正"
+msgstr "McNemar 檢定的 %s 連續性修正"
 
 msgid "Likelihood ratio"
 msgstr "概似比"
