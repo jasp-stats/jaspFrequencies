@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: R 3.6.1\n"
 "Report-Msgid-Bugs-To: github.com/jasp-stats/jasp-issues/issues\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-01-18 13:01+0000\n"
+"PO-Revision-Date: 2026-05-24 16:11+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/de/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==0 ? 0 : n==1 ? 0 : 1;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 msgid "Bayesian A/B Test"
 msgstr "Bayesscher A/B-Test"
@@ -179,9 +179,8 @@ msgstr ""
 msgid "Continuity correction is available only for 2x2 tables."
 msgstr "Stetigkeitskorrektur ist nur für 2x2-Tafeln verfügbar."
 
-#, fuzzy
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr "Stetigkeitskorrektur ist nur für 2x2-Tafeln verfügbar."
+msgstr "McNemars Test ist nur für 2x2-Tafeln verfügbar."
 
 msgid "Log Odds Ratio"
 msgstr "Log-Chancenverhältnis"
@@ -340,9 +339,8 @@ msgstr ""
 msgid "%s continuity correction"
 msgstr "%s Kontinuitätskorrektur"
 
-#, fuzzy
 msgid "McNemar's %s continuity correction"
-msgstr "%s Kontinuitätskorrektur"
+msgstr "McNemars %s Kontinuitätskorrektur"
 
 msgid "Likelihood ratio"
 msgstr "Wahrscheinlichkeits-Verhältnis"
@@ -559,7 +557,7 @@ msgid "Invalid counts: less than 1 observation."
 msgstr "Ungültige Häufigkeiten: weniger als 1 Beobachtung."
 
 msgid "Invalid counts: maximum value (10e7) exceeded."
-msgstr ""
+msgstr "Ungültige Häufigkeiten: Maximaler Wert (10e7) überschritten."
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr "Konfidenzintervalle basieren auf unabhängigen Binomialverteilungen."
