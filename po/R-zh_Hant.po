@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-05-24 16:11+0000\n"
+"PO-Revision-Date: 2026-05-27 12:19+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hant/>\n"
@@ -93,7 +93,6 @@ msgstr "二項式檢定"
 msgid "Variable"
 msgstr "變項"
 
-#, fuzzy
 msgid "Level"
 msgstr "水準"
 
