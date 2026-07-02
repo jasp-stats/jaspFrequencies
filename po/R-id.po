@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.5\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-07-02 11:08+0000\n"
+"PO-Revision-Date: 2026-07-02 12:50+0000\n"
 "Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/id/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Uji A/B Bayes"
 
 msgid "Models"
 msgstr "Model"
@@ -29,18 +29,20 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
+"Rasio ganjil log positif artinya bahwa tingkat keberhasilan di Grup 2 lebih "
+"tinggi dari di Grup 1."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Rasio ganjil log = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Rasio ganjil log > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Rasio ganjil log < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "Rasio ganjil log %s 0"
 
 msgid "Descriptives"
 msgstr "Deskriptif"
@@ -55,10 +57,10 @@ msgid "Proportion"
 msgstr "Proporsi"
 
 msgid "Group 1"
-msgstr ""
+msgstr "Grup 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "Grup 2"
 
 msgid "Prior and Posterior"
 msgstr "Priori dan Posterior"
@@ -76,10 +78,10 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "Probabilitas Posterior"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | data) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr "Tidak dapat menguji hipotesis yang nilai uji lebih dari 1."
@@ -88,7 +90,7 @@ msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr "Tidak dapat menguji hipotesis yang nilai uji kurang dari 0."
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "Uji Binomial"
 
 msgid "Variable"
 msgstr "Variabel"
@@ -100,13 +102,13 @@ msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
 msgstr "Batas Bawah"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% CI untuk Proporsi"
 
 msgid "Upper"
 msgstr "Batas Atas"
@@ -138,6 +140,8 @@ msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s Bentuk dari distribusi priori di bawah hipotesis alternatif ditentukan "
+"oleh Beta(%2$s, %3$s)."
 
 msgid "Inferential Plots"
 msgstr "Diagram Inferensial"
@@ -146,49 +150,53 @@ msgid "Population proportion"
 msgstr "Proporsi populasi"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "Satu atau lebih faktor Bayes tidak dapat dihitung"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "Satu atau lebih faktor Bayes infinit"
 
 msgid "Undefined hypothesis"
 msgstr "Hipotesis tidak ditentukan"
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "Tabel Kontingensi"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "Pengujian Chi-Kuadrat"
 
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Maksimum Vovk-Sellke  Rasio-<em>p</em>: Berdasarkan nilai-<em>p</em>,\n"
+"      ganjil memungkinkan maksimum mendukung dari H%1$s terhadap H%2$s sama "
+"dengan %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "Koreksi berkelanjutan hanya tersedia untuk tabel 2x2."
 
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr ""
+msgstr "Uji McNemar hanya tersedia untuk tabel 2x2."
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Rasio Ganjil Log"
 
 msgid "Odds Ratio"
 msgstr "Rasio Ganjil"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% Interval Kepercayaan"
 
 msgid "Nominal"
-msgstr ""
+msgstr "Nominal"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "Gamma Ordinal"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95%% Interval Kepercayaan"
 
 msgid "Gamma"
 msgstr "Gamma"
@@ -197,7 +205,7 @@ msgid "Standard Error"
 msgstr "Kesalahan Standar"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "b Tau Kendall"
 
 msgid "Z"
 msgstr "Z"
@@ -215,13 +223,13 @@ msgid "Expected count"
 msgstr "Perhitungan terharapkan"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% dalam baris"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% dalam kolom"
 
 msgid "%% of total"
-msgstr ""
+msgstr "%% dari total"
 
 msgid "Unstandardized residuals"
 msgstr ""
@@ -230,16 +238,16 @@ msgid "Pearson residuals"
 msgstr ""
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "Residu terstandardisasi"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "Koefisien kontingensi"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi-koefisien"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "V Cramer"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
 msgstr ""
