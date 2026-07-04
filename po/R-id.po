@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.95.5\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-06-23 10:01+0000\n"
+"PO-Revision-Date: 2026-07-02 22:44+0000\n"
 "Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/id/>\n"
@@ -11,10 +11,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgid "Bayesian A/B Test"
-msgstr ""
+msgstr "Uji A/B Bayes"
 
 msgid "Models"
 msgstr "Model"
@@ -29,18 +29,20 @@ msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
 msgstr ""
+"Rasio ganjil log positif artinya bahwa tingkat keberhasilan di Grup 2 lebih "
+"tinggi dari di Grup 1."
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "Rasio ganjil log = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "Rasio ganjil log > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "Rasio ganjil log < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "Rasio ganjil log %s 0"
 
 msgid "Descriptives"
 msgstr "Deskriptif"
@@ -55,10 +57,10 @@ msgid "Proportion"
 msgstr "Proporsi"
 
 msgid "Group 1"
-msgstr ""
+msgstr "Grup 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "Grup 2"
 
 msgid "Prior and Posterior"
 msgstr "Priori dan Posterior"
@@ -76,10 +78,10 @@ msgid "n"
 msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "Probabilitas Posterior"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | data) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
 msgstr "Tidak dapat menguji hipotesis yang nilai uji lebih dari 1."
@@ -88,7 +90,7 @@ msgid "Cannot test the hypothesis that the test value is less than 0."
 msgstr "Tidak dapat menguji hipotesis yang nilai uji kurang dari 0."
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "Uji Binomial"
 
 msgid "Variable"
 msgstr "Variabel"
@@ -100,13 +102,13 @@ msgid "p"
 msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
 msgstr "Batas Bawah"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "%s%% CI untuk Proporsi"
 
 msgid "Upper"
 msgstr "Batas Atas"
@@ -138,6 +140,8 @@ msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
 msgstr ""
+"%1$s Bentuk dari distribusi priori di bawah hipotesis alternatif ditentukan "
+"oleh Beta(%2$s, %3$s)."
 
 msgid "Inferential Plots"
 msgstr "Diagram Inferensial"
@@ -146,49 +150,53 @@ msgid "Population proportion"
 msgstr "Proporsi populasi"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "Satu atau lebih faktor Bayes tidak dapat dihitung"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "Satu atau lebih faktor Bayes infinit"
 
 msgid "Undefined hypothesis"
 msgstr "Hipotesis tidak ditentukan"
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "Tabel Kontingensi"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "Pengujian Chi-Kuadrat"
 
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Maksimum Vovk-Sellke  Rasio-<em>p</em>: Berdasarkan nilai-<em>p</em>,\n"
+"      ganjil memungkinkan maksimum mendukung dari H%1$s terhadap H%2$s sama "
+"dengan %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "Koreksi berkelanjutan hanya tersedia untuk tabel 2x2."
 
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr ""
+msgstr "Uji McNemar hanya tersedia untuk tabel 2x2."
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "Rasio Ganjil Log"
 
 msgid "Odds Ratio"
 msgstr "Rasio Ganjil"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% Interval Kepercayaan"
 
 msgid "Nominal"
-msgstr ""
+msgstr "Nominal"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "Gamma Ordinal"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95%% Interval Kepercayaan"
 
 msgid "Gamma"
 msgstr "Gamma"
@@ -197,7 +205,7 @@ msgid "Standard Error"
 msgstr "Kesalahan Standar"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "b Tau Kendall"
 
 msgid "Z"
 msgstr "Z"
@@ -215,94 +223,104 @@ msgid "Expected count"
 msgstr "Perhitungan terharapkan"
 
 msgid "%% within row"
-msgstr ""
+msgstr "%% dalam baris"
 
 msgid "%% within column"
-msgstr ""
+msgstr "%% dalam kolom"
 
 msgid "%% of total"
-msgstr ""
+msgstr "%% dari total"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "Residu tidak terstandardisasi"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Residu Pearson"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "Residu terstandardisasi"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "Koefisien kontingensi"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi-koefisien"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "V Cramer"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "Koefisien phi hanya tersedia untuk Tabel kontingensi 2 kali 2"
 
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"Nilai tidak dapat dihitung - Setidaknya satu baris atau kolom berisi semua "
+"nol"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "Lambda (baris)"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "Lambda (kolom)"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "Lambda (simetris)"
 
 msgid ""
 "Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is "
 "more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
 "less likely in group <em>%2$s</em>"
 msgstr ""
+"Rasio ganjil mengindikasikan berikut: <br> (Rasio > 1): Grup <em>%1$s</em> "
+"lebih memungkinkan di grup <em>%2$s</em><br>(Rasio < 1): Grup <em>%1$s</em> "
+"kurang memungkinkan di grup <em>%2$s</em>"
 
 msgid ""
 "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
 "is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
 "is less likely in group <em>%2$s</em>"
 msgstr ""
+"Rasio ganjil log mengindikasikan berikut: <br> (Rasio > 0): Grup <em>%1$s</"
+"em> lebih memungkinkan di grup <em>%2$s</em><br>(Rasio < 0): Grup <em>%1$s</"
+"em> kurang memungkinkan di grup <em>%2$s</em>"
 
 msgid "is less than"
-msgstr ""
+msgstr "kurang dari"
 
 msgid "is greater than"
-msgstr ""
+msgstr "lebih dari"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
 msgstr ""
+"Untuk semua pengujian, hipotesis alternatif menentukan bahwa grup <em>%1$s</"
+"em> %2$s <em>%3$s</em>."
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "Setiap sel menampilkan hitungan terobservasi"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "Setiap sel menampilkan hitungan diharapkan"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "Setiap sel menampilkan persentase baris"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "Setiap sel menampilkan persentase kolom"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "Setiap sel menampilkan persentase total"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "Setiap sel menampilkan residu tidak terstandardisasi"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "Setiap sel menampilkan residu Pearson"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "Setiap sel menampilkan residu terstandardisasi"
 
 msgid "Count"
 msgstr "Jumlah"
@@ -313,81 +331,82 @@ msgstr "N"
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
+"%s tidak dapat dihitung - Setidaknya satu baris atau kolom berisi semua nol"
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s koreksi berkelanjutan"
 
 msgid "McNemar's %s continuity correction"
-msgstr ""
+msgstr "%s koreksi berkelanjutan McNemar"
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "Rasio kemungkinan"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Rasio ganjil dibatasi ke tabel 2 x 2"
 
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "Uji tepat Fisher"
 
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "Pengujian Tabel Kontingensi Bayes"
 
 msgid "%.0f%% Credible Interval"
 msgstr "%.0f%% Interval Kredibel"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "Diagram Rasio Ganjil Log"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "Rasio ganjil dibatasi ke analisis 2 x 2"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "Rasio ganjil untuk model ini belum diimplementasikan"
 
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "Faktor Bayes tidak ditentukan"
 
 msgid "The Bayes factor is too small"
 msgstr "Faktor Bayes terlalu kecil"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "Faktor Bayes adalah infinit"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "Log median OR ="
 
 msgid "Poisson"
 msgstr "Poisson"
 
 msgid "Joint multinomial"
-msgstr ""
+msgstr "Multinomial gabungan"
 
 msgid "Independent multinomial"
-msgstr ""
+msgstr "Multinomial independen"
 
 msgid "Hypergeometric"
 msgstr "Hipergeometris"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Uji tabel kontingensi hipergeometris dibatasi ke tabel 2 x 2"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "Uji proporsi dibatasi ke tabel 2 x 2"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "tidak sama dengan"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "Model pensampelan tidak valid dipilih"
 
 msgid "Odds ratio"
 msgstr "Rasio odds"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "Rasio ganjil untuk model ini belum diimplementasikan"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "V Cramer untuk model ini belum diimplementasikan"
 
 msgid "Posterior"
 msgstr "Posterior"
@@ -395,43 +414,47 @@ msgstr "Posterior"
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
+"`Keberhasilan` harus memiliki dua tingkat jika `Ukuran Sampel` tidak "
+"ditentukan."
 
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
+msgstr "Keberhasilan tidak valid: variabel harus hanya berisi nilai integer."
 
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr ""
+msgstr "Ukuran sampel tidak valid: variabel harus hanya berisi nilai integer."
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "Ukuran sampel harus lebih besar dari jumlah keberhasilan."
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"Faktor harus berisi tingkat unik yang memetakan keberhasilan ke ukuran "
+"sampel."
 
 msgid "Performing sequential analysis."
-msgstr ""
+msgstr "Melakukan analisis sekuensial."
 
 msgid "Observed counts"
-msgstr ""
+msgstr "Hitungan terobservasi"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "Proporsi terobservasi"
 
 msgid "Sample size"
 msgstr "Ukuran sampel"
 
 msgid "Descriptives plot"
-msgstr ""
+msgstr "Diagram deskriptif"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "Diagram posterior tidak terbatas"
 
 msgid "Sequential analysis"
-msgstr ""
+msgstr "Analisis sekuensial"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "Setidaknya dua model perlu ditentukan."
 
 msgid "vs."
 msgstr "vs."
@@ -443,15 +466,17 @@ msgid "Estimated"
 msgstr "Diestimasi"
 
 msgid "Proportions"
-msgstr ""
+msgstr "Proporsi"
 
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"Masukan probabilitas model priori untuk hipotesis '%1$s' (%2$s) tidak dapat "
+"diuraikan menjadi angka positif. Silakan, periksa masukan."
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "Evaluasi Bayes untuk %1$s kendala urutan"
 
 msgid "BF%1$s%2$s"
 msgstr "BF%1$s%2$s"
@@ -460,16 +485,16 @@ msgid "Log(BF%1$s%2$s)"
 msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "Marglik log"
 
 msgid "Error"
-msgstr ""
+msgstr "Galat"
 
 msgid "Error %%"
-msgstr ""
+msgstr "Galat %%"
 
 msgid "P(M|Data)"
-msgstr ""
+msgstr "P(M|data)"
 
 msgid "BF<sub>M</sub>"
 msgstr "BF<sub>M</sub>"
@@ -478,94 +503,106 @@ msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"Silakan periksa kembali jika nama tingkat faktor di bagian 'Hipotesis "
+"Terbatas Urutan' cocok tingkat faktor di rangkaian data Anda."
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
 msgstr ""
+"Model di setiap baris (ditandai sebagai '1') dibandingkan dengan %1$s "
+"(ditandai sebagai 0)."
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
 msgstr ""
+"Tentukan pengujian hipotesis terinform di bagian `Hipotesis Terbatas Urutan`."
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "Hitungan terharapkan tidak didukung tanpa hitungan terobservasi."
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "Tidak ada hitungan terharapkan dimasukkan."
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"Hitungan tidak valid: variabel tidak cocok jumlah tingkat dari faktor. "
+"Ketika hitungan ditentukan, setiap baris dari rangkaian data harus "
+"merepresentasikan tingkat unik dari faktor."
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
 msgstr ""
+"Hitungan terharapkan tidak valid: variabel tidak cocok jumlah tingkat dari "
+"faktor."
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "Hitungan tidak valid: variabel harus hanya berisi nilai integer."
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "Hitungan tidak valid: kurang dari 1 observasi."
 
 msgid "Invalid counts: maximum value (10e7) exceeded."
-msgstr ""
+msgstr "Hitungan tidak valid: nilai maksimum (10e7) dilampaui."
 
 msgid "Confidence intervals are based on independent binomial distributions."
-msgstr ""
+msgstr "Interval kepercayaan berdasarkan distribusi binomial independen."
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "Tidak dapat menghitung interval kepercayaan."
 
 msgid "Factor"
 msgstr "Faktor"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "Diharapkan: %s"
 
 msgid "Expected"
-msgstr ""
+msgstr "Diharapkan"
 
 msgid "%s%% Confidence Interval"
-msgstr ""
+msgstr "%s%% Interval Kepercayaan"
 
 msgid "Descriptives Plot"
 msgstr "Diagram Deskriptif"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "Uji Multinomial Bayes"
 
 msgid "Levels"
-msgstr ""
+msgstr "Tingkat"
 
 msgid "Credible"
-msgstr ""
+msgstr "Kredibel"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
 msgstr ""
+"Interval kredibel berdasarkan distribusi binomial independen dengan priori "
+"datar."
 
 msgid "Confidence"
-msgstr ""
+msgstr "Kepercayaan"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% Interval %2$s"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "Tidak dapat menghitung Interval %s."
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "Hitungan Terobservasi"
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "Proporsi Terobservasi"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(Intersep)"
 
 msgid "ANOVA"
 msgstr "ANOVA"
@@ -574,10 +611,10 @@ msgid "Deviance"
 msgstr "Devians"
 
 msgid "Residual df"
-msgstr ""
+msgstr "Residu df"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "Residu Devians"
 
 msgid "Coefficients"
 msgstr "Koefisien"
@@ -586,7 +623,7 @@ msgid "Estimate"
 msgstr "Estimasi"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% Interval Kepercayaan"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -594,35 +631,44 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Rasio-<em>p</em> Maksimum Vovk-Sellke: Berdasarkan nilai-<em>p</em>, \n"
+"maksimum ganjil memungkinkan mendukung H%1$s terhadap H%2$s sama dengan \n"
+"1/(-e <em>p</em> log(<em>p</em>)) untuk <em>p</em> %3$s .37 \n"
+"(Sellke, Bayarri, & Berger, 2001)."
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "variabel tidak dapat dibaca"
 
 msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
 msgstr ""
+"Tidak dapat menghitung hasil; galat numerik terjadi selama pensampelan. Coba "
+"ubah (mis., sederhanakan) model atau sesuaikan priori."
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"Galat 'konting' paket R: %s <br> Itu memungkinkan bahwa galat numerik "
+"terjadi selama pensampelan. Coba ubah (mis., sederhanakan) model, sesuaikan "
+"priori, ubah benih, atau ubah jumlah sampel MCMC."
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "Galat Paket R: Tidak dapat menerima probabilitas tabel"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "Total jumlah model dikunjungi = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "Submodel ditentukan tidak dalam submodel memungkinkan"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>Rumus model:</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>Probabilitas model posterior =</em>"
 
 msgid "Model Comparison"
 msgstr "Perbandingan Model"
@@ -637,7 +683,7 @@ msgid "Log(BF<sub>10</sub>)"
 msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "Statistik Ringkasan Posterior"
 
 msgid "P(incl|data)"
 msgstr "P(inkl|data)"
@@ -649,10 +695,10 @@ msgid "Variance"
 msgstr "Varians"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% Interval kredibel"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "Statistik Ringkasan Posterior Untuk Submodel %s"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% Interval kredibel"
