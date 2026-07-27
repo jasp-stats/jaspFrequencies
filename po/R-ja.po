@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.11.0\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2024-07-02 17:09+0000\n"
-"Last-Translator: Daiki Hojo <dhojo.bayes@gmail.com>\n"
+"PO-Revision-Date: 2026-07-28 05:09+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/ja/>\n"
 "Language: ja\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "Bayesian A/B Test"
 msgstr "ベイジアンA / Bテスト"
@@ -23,7 +23,7 @@ msgid "P(M)"
 msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr "P(M|データ)"
+msgstr "P(M|data)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
@@ -44,7 +44,7 @@ msgid "Log odds ratio %s 0"
 msgstr "ログオッズ比 %s 0"
 
 msgid "Descriptives"
-msgstr "記述統計量"
+msgstr "記述統計"
 
 msgid "Counts"
 msgstr "カウント"
@@ -53,19 +53,19 @@ msgid "Total"
 msgstr "合計"
 
 msgid "Proportion"
-msgstr "比率"
+msgstr "母比率"
 
 msgid "Group 1"
-msgstr "グループ1"
+msgstr "群1"
 
 msgid "Group 2"
-msgstr "グループ2"
+msgstr "群2"
 
 msgid "Prior and Posterior"
 msgstr "事前分布と事後分布"
 
 msgid "Sequential Analysis"
-msgstr "逐次解析"
+msgstr "逐次分析"
 
 msgid "Bayes Factor Robustness Check"
 msgstr "ベイズファクターの頑健性チェック"
@@ -126,7 +126,7 @@ msgid "Proportions tested against value: %s."
 msgstr "次の値に対する比率検定: %s."
 
 msgid "Descriptives Plots"
-msgstr "記述統計量プロット"
+msgstr "記述統計プロット"
 
 msgid "Bayesian Binomial Test"
 msgstr "ベイジアンニ項検定"
@@ -134,7 +134,7 @@ msgstr "ベイジアンニ項検定"
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
-msgstr ""
+msgstr "%1$s 対立仮説のもとでの事前分布の形状は Beta(%2$s, %3$s) で指定されます。"
 
 msgid "Inferential Plots"
 msgstr "推論プロット"
@@ -167,10 +167,10 @@ msgstr ""
 "      (Sellke, Bayarri, & Berger, 2001)。"
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "連続性の補正は2x2の表でのみ利用できます。"
 
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr ""
+msgstr "McNemarの検定は2x2の表でのみ利用できます。"
 
 msgid "Log Odds Ratio"
 msgstr "対数オッズ比"
@@ -224,13 +224,13 @@ msgid "%% of total"
 msgstr "全体の%%"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "標準化していない残差"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "ピアソン残差"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "標準化残差"
 
 msgid "Contingency coefficient"
 msgstr "コンティンジェンシー係数"
@@ -262,12 +262,17 @@ msgid ""
 "more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
 "less likely in group <em>%2$s</em>"
 msgstr ""
+"オッズ比は次のことを示します: <br> (比 > 1): 群 <em>%1$s</em> は群 <em>%2$s</"
+"em>に入りやすい<br>(比 < 1): 群 <em>%1$s</em> は群 <em>%2$s</em>に入りにくい"
 
 msgid ""
 "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
 "is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
 "is less likely in group <em>%2$s</em>"
 msgstr ""
+"対数オッズ比は次のことを示します:<br>(比 > 0): 群 <em>%1$s</em> は群 <em>"
+"%2$s</em> に入りやすい <br>(比 < 0): 群 <em>%1$s</em> は群 <em>%2$s</em>に入"
+"りにくい"
 
 msgid "is less than"
 msgstr "より少ない"
@@ -283,30 +288,29 @@ msgstr ""
 "指定します。"
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "各セルには観測されたカウントが表示されます"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "各セルには期待されるカウントが表示されます"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "各セルには行のパーセンテージが表示されます"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "各セルには列のパーセンテージが表示されます"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "各セルには全体に対するパーセンテージが表示されます"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "各セルには標準化していない残差が表示されます"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "各セルにはピアソン残差が表示されます"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "各セルには標準化残差が表示されます"
 
-#, fuzzy
 msgid "Count"
 msgstr "カウント"
 
@@ -320,9 +324,8 @@ msgstr "%s は計算できませんでした - 少なくとも 1 つの行また
 msgid "%s continuity correction"
 msgstr "%s 連続性の修正"
 
-#, fuzzy
 msgid "McNemar's %s continuity correction"
-msgstr "%s 連続性の修正"
+msgstr "マクネマーの %s 連続性の修正"
 
 msgid "Likelihood ratio"
 msgstr "尤度比"
@@ -398,22 +401,22 @@ msgstr "事後分布"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
-msgstr ""
+msgstr "`サンプルサイズ` を指定しない場合、`成功` は2水準である必要があります。"
 
-#, fuzzy
 msgid "Invalid successes: variable must contain only integer values."
-msgstr "無効なカウント: 変数は整数だけでなければなりません。"
+msgstr "無効な成功数: 変数は整数値のみでなければなりません。"
 
-#, fuzzy
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr "無効なカウント: 変数は整数だけでなければなりません。"
+msgstr "無効なサンプルサイズ: 変数は整数値のみでなければなりません。"
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "サンプルサイズは成功数より大きい必要があります。"
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
 msgstr ""
+"因子には、成功数をサンプルサイズに対応づける一意の水準が含まれている必要があ"
+"ります。"
 
 msgid "Performing sequential analysis."
 msgstr "逐次解析の実行."
@@ -431,26 +434,23 @@ msgid "Descriptives plot"
 msgstr "記述的プロット"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "制約なしの事後分布プロット"
 
-#, fuzzy
 msgid "Sequential analysis"
 msgstr "逐次解析"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "モデルを少なくとも2つ指定する必要があります。"
 
 msgid "vs."
 msgstr "vs."
 
 msgid "Observed"
-msgstr "観測された"
+msgstr "観測値"
 
-#, fuzzy
 msgid "Estimated"
 msgstr "推定"
 
-#, fuzzy
 msgid "Proportions"
 msgstr "比率"
 
@@ -458,46 +458,48 @@ msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
 msgstr ""
+"'%1$s' の仮説についてのモデルの事前確率の入力(%2$s)を正の数として読み取れませ"
+"んでした。入力を確認してください。"
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "%1$s 個の順序制約のベイズによる評価"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "対数周辺尤度"
 
 msgid "Error"
-msgstr ""
+msgstr "誤差"
 
 msgid "Error %%"
-msgstr ""
+msgstr "誤差 %%"
 
-#, fuzzy
 msgid "P(M|Data)"
 msgstr "P(M|データ)"
 
-#, fuzzy
 msgid "BF<sub>M</sub>"
-msgstr "BF<sub>10</sub>"
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
 msgstr ""
+"「順序制約仮説」のセクションに書いた要因の水準名が、データセットの要因の水準"
+"と一致しているか確認してください。"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
-msgstr ""
+msgstr "各行のモデル('1'と表記)を %1$s('0'と表記)と比較します。"
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
 "section."
-msgstr ""
+msgstr "「順序制約仮説」のセクションで情報仮説検定を指定してください。"
 
 msgid "Expected counts not supported without observed counts."
 msgstr "期待度数は、観測度数なしではサポートされません。"
@@ -525,7 +527,7 @@ msgid "Invalid counts: less than 1 observation."
 msgstr "無効な度数: 1 未満の観測値。"
 
 msgid "Invalid counts: maximum value (10e7) exceeded."
-msgstr ""
+msgstr "カウントが不正です: 最大値(10e7)を超えています。"
 
 msgid "Confidence intervals are based on independent binomial distributions."
 msgstr "信頼区間は、独立した二項分布に基づいています。"
@@ -534,7 +536,7 @@ msgid "Could not compute confidence intervals."
 msgstr "信頼区間を計算できませんでした。"
 
 msgid "Factor"
-msgstr "要因"
+msgstr "因子"
 
 msgid "Expected: %s"
 msgstr "期待値: %s"
@@ -578,13 +580,13 @@ msgid "Observed Proportions"
 msgstr "観測比率"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "(切片)"
 
 msgid "ANOVA"
 msgstr "分散分析"
 
 msgid "Deviance"
-msgstr "デビアンス"
+msgstr "逸脱度"
 
 msgid "Residual df"
 msgstr "残差 df"
@@ -596,7 +598,7 @@ msgid "Coefficients"
 msgstr "係数"
 
 msgid "Estimate"
-msgstr "推定"
+msgstr "推定値"
 
 msgid "%s%% Confidence Intervals"
 msgstr "%s%% 信頼区間"
@@ -607,9 +609,10 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
-"Vovk-Sellke 最大 <em>p</em> 比: <em>p</em>-値に基づいて、H%2$sよりもH%1$sを支"
-"持する最大の可能なオッズは、<em>p</em> %3$s .37に対して1/(-e <em>p</em> "
-"log(<em>p</em>))に等しくなります(Sellke, Bayarri, & Berger, 2001)。"
+"Vovk-Sellke 最大 <em>p</em> 比: <em>p</em>値にもとづくと、\n"
+"H%2$s に対して H%1$s を支持する最大のオッズは、<em>p</em> %3$s .37 のとき \n"
+"1/(-e <em>p</em> log(<em>p</em>)) に等しくなります \n"
+"(Sellke, Bayarri, & Berger, 2001)。"
 
 msgid "variables cannot be read"
 msgstr "変数を読み取ることができません"
@@ -618,12 +621,17 @@ msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
 msgstr ""
+"結果を計算できません。標本抽出の途中で数値的なエラーが発生しました。モデルを"
+"変える(たとえば単純にする)か、事前分布を調整してみてください。"
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"Rパッケージ 'conting' のエラー: %s <br> 標本抽出の途中で数値的なエラーが発生"
+"した可能性があります。モデルを変える(たとえば単純にする)、事前分布を調整する"
+"、シードを変える、MCMCサンプル数を変えるなどをお試しください。"
 
 msgid "R Package error: Cannot retrieve table probabilities"
 msgstr "Rパッケージのエラー。表の確率を取得できません"
@@ -656,10 +664,10 @@ msgid "Posterior Summary Statistics"
 msgstr "事後要約統計"
 
 msgid "P(incl|data)"
-msgstr "P（効果を含む|データ）"
+msgstr "P(incl|data)"
 
 msgid "Mean"
-msgstr "平均値"
+msgstr "平均"
 
 msgid "Variance"
 msgstr "分散"
