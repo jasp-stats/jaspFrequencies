@@ -6,6 +6,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: ja\n"
 "X-Qt-Contexts: true\n"
+"PO-Revision-Date: 2026-08-20 01:35+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-qml/ja/>\n"
+"Language: ja\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgctxt "Description|"
 msgid "Frequencies"
@@ -313,7 +319,7 @@ msgstr "信頼区間"
 
 msgctxt "ContingencyTables|"
 msgid "Alt. Hypothesis (Fisher's exact test)"
-msgstr "対立仮説（フィッシャーの正確確率検定）"
+msgstr "対立仮説(フィッシャーの正確確率検定)"
 
 msgctxt "ContingencyTables|"
 msgid "Group one ≠ Group two"
@@ -489,15 +495,15 @@ msgstr "ジョイント多項式"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, rows fixed"
-msgstr "独立した多項式，行固定"
+msgstr "独立した多項式、行固定"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Indep. multinomial, columns fixed"
-msgstr "独立した多項式，列固定"
+msgstr "独立した多項式、列固定"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Hypergeometric (2x2 only)"
-msgstr "超幾何（2x2のみ）"
+msgstr "超幾何(2x2のみ)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Additional Statistics"
@@ -505,7 +511,7 @@ msgstr "その他の統計"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Log odds ratio (2x2 only)"
-msgstr "対数オッズ比（2x2のみ）"
+msgstr "対数オッズ比(2x2のみ)"
 
 msgctxt "ContingencyTablesBayesian|"
 msgid "Credible interval"
@@ -837,7 +843,7 @@ msgstr "カウントデータの分析"
 
 msgctxt "ContingencyTables|"
 msgid "Odds ratio (2x2 only)"
-msgstr "オッズ比（2x2のみ）"
+msgstr "オッズ比(2x2のみ)"
 
 msgctxt "ContingencyTables|"
 msgid "Log Odds Ratio"
@@ -1007,8 +1013,7 @@ msgstr ""
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
-"順序制約におけるシンタックスの詳細については、ここをクリックしてください."
+msgstr "順序制約におけるシンタックスの詳細については、ここをクリックしてください。"
 
 msgctxt "InformedBinomialTestBayesian|"
 msgid "Model 1"
@@ -1118,8 +1123,7 @@ msgstr ""
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Click to learn more about the syntax for order restrictions."
-msgstr ""
-"順序制約におけるシンタックスの詳細については、ここをクリックしてください."
+msgstr "順序制約におけるシンタックスの詳細については、ここをクリックしてください。"
 
 msgctxt "InformedMultinomialTestBayesian|"
 msgid "Model 1"
