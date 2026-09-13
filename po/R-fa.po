@@ -2,26 +2,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.96.5\n"
 "POT-Creation-Date: 2026-04-25 04:22\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-09-14 02:34+0000\n"
+"Last-Translator: Sohrab Delshad <sdel4030@gmail.com>\n"
+"Language-Team: Persian <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "Bayesian A/B Test"
 msgstr ""
 
 msgid "Models"
-msgstr ""
+msgstr "مدل‌ها"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|داده‌ها)"
 
 msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
 msgstr ""
@@ -39,7 +41,7 @@ msgid "Log odds ratio %s 0"
 msgstr ""
 
 msgid "Descriptives"
-msgstr ""
+msgstr "آماره‌های توصیفی"
 
 msgid "Counts"
 msgstr ""
@@ -87,25 +89,25 @@ msgid "Binomial Test"
 msgstr ""
 
 msgid "Variable"
-msgstr ""
+msgstr "متغیّر"
 
 msgid "Level"
-msgstr ""
+msgstr "سطح"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
-msgstr ""
+msgstr "پایین"
 
 msgid "%s%% CI for Proportion"
 msgstr ""
 
 msgid "Upper"
-msgstr ""
+msgstr "بالا"
 
 msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
 msgstr ""
@@ -186,13 +188,13 @@ msgid "Z"
 msgstr ""
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "حداکثر نسبت p وووک-سلکه (VS-MPR) %s"
 
 msgid "Value"
-msgstr ""
+msgstr "مقدار"
 
 msgid "df"
-msgstr ""
+msgstr "درجه آزادی"
 
 msgid "Expected count"
 msgstr ""
@@ -282,7 +284,7 @@ msgid "Count"
 msgstr ""
 
 msgid "N"
-msgstr ""
+msgstr "N (تعداد)"
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
@@ -390,7 +392,7 @@ msgid "Observed proportions"
 msgstr ""
 
 msgid "Sample size"
-msgstr ""
+msgstr "اندازه نمونه"
 
 msgid "Descriptives plot"
 msgstr ""
@@ -405,7 +407,7 @@ msgid "At least two models need to be specified."
 msgstr ""
 
 msgid "vs."
-msgstr ""
+msgstr "در مقابل"
 
 msgid "Observed"
 msgstr ""
@@ -441,7 +443,7 @@ msgid "P(M|Data)"
 msgstr ""
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "BF<sub>M</sub>"
 
 msgid "Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."
 msgstr ""
@@ -480,7 +482,7 @@ msgid "Could not compute confidence intervals."
 msgstr ""
 
 msgid "Factor"
-msgstr ""
+msgstr "عامل"
 
 msgid "Expected: %s"
 msgstr ""
@@ -492,7 +494,7 @@ msgid "%s%% Confidence Interval"
 msgstr ""
 
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "نمودار توصیفی"
 
 msgid "Bayesian Multinomial Test"
 msgstr ""
@@ -525,7 +527,7 @@ msgid "(Intercept)"
 msgstr ""
 
 msgid "ANOVA"
-msgstr ""
+msgstr "تحلیل واریانس (ANOVA)"
 
 msgid "Deviance"
 msgstr ""
@@ -537,10 +539,10 @@ msgid "Residual Deviance"
 msgstr ""
 
 msgid "Coefficients"
-msgstr ""
+msgstr "ضرایب"
 
 msgid "Estimate"
-msgstr ""
+msgstr "برآورد"
 
 msgid "%s%% Confidence Intervals"
 msgstr ""
@@ -573,25 +575,25 @@ msgid "<em>Posterior model probability =</em>"
 msgstr ""
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "مقایسه مدل"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "لگاریتم (BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
 msgstr ""
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(شامل|داده‌ها)"
 
 msgid "Mean"
-msgstr ""
+msgstr "میانگین"
 
 msgid "Variance"
 msgstr ""
