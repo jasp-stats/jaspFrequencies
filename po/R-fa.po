@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.96.5\n"
 "POT-Creation-Date: 2026-04-25 04:22\n"
-"PO-Revision-Date: 2026-09-14 02:34+0000\n"
+"PO-Revision-Date: 2026-09-15 04:03+0000\n"
 "Last-Translator: Sohrab Delshad <sdel4030@gmail.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/jasp/"
 "jaspfrequencies-r/fa/>\n"
@@ -44,10 +44,10 @@ msgid "Descriptives"
 msgstr "آماره‌های توصیفی"
 
 msgid "Counts"
-msgstr ""
+msgstr "شمارش‌ها"
 
 msgid "Total"
-msgstr ""
+msgstr "کل"
 
 msgid "Proportion"
 msgstr ""
@@ -59,19 +59,19 @@ msgid "Group 2"
 msgstr ""
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "پیشین و پسین"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "تحلیل ترتیبی"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "بررسی استواری فاکتور بیزی"
 
 msgid "Prior"
-msgstr ""
+msgstr "پیشین"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
 msgstr ""
@@ -119,7 +119,7 @@ msgid "Proportions tested against value: %s."
 msgstr ""
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "نمودارهای توصیفی"
 
 msgid "Bayesian Binomial Test"
 msgstr ""
@@ -128,7 +128,7 @@ msgid "%1$s The shape of the prior distribution under the alternative hypothesis
 msgstr ""
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "نمودارهای استنباطی"
 
 msgid "Population proportion"
 msgstr ""
@@ -176,16 +176,16 @@ msgid "95%% Confidence Intervals"
 msgstr ""
 
 msgid "Gamma"
-msgstr ""
+msgstr "گاما"
 
 msgid "Standard Error"
-msgstr ""
+msgstr "خطای معیار"
 
 msgid "Kendall's Tau-b"
 msgstr ""
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "VS-MPR%s"
 msgstr "حداکثر نسبت p وووک-سلکه (VS-MPR) %s"
@@ -197,7 +197,7 @@ msgid "df"
 msgstr "درجه آزادی"
 
 msgid "Expected count"
-msgstr ""
+msgstr "شمارش مورد انتظار"
 
 msgid "%% within row"
 msgstr ""
@@ -281,10 +281,10 @@ msgid "Each cell displays standardized residuals"
 msgstr ""
 
 msgid "Count"
-msgstr ""
+msgstr "شمارش"
 
 msgid "N"
-msgstr "N (تعداد)"
+msgstr "N"
 
 msgid "%s could not be calculated - At least one row or column contains all zeros"
 msgstr ""
@@ -308,7 +308,7 @@ msgid "Bayesian Contingency Tables Tests"
 msgstr ""
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "بازه باورپذیر %.0f%%"
 
 msgid "Log Odds Ratio Plots"
 msgstr ""
@@ -323,7 +323,7 @@ msgid "The Bayes factor is undefined"
 msgstr ""
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "فاکتور بیزی بسیار کوچک است"
 
 msgid "The Bayes factor is infinite"
 msgstr ""
@@ -332,7 +332,7 @@ msgid "median Log OR ="
 msgstr ""
 
 msgid "Poisson"
-msgstr ""
+msgstr "پواسون"
 
 msgid "Joint multinomial"
 msgstr ""
@@ -341,7 +341,7 @@ msgid "Independent multinomial"
 msgstr ""
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "فوق‌هندسی"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
 msgstr ""
@@ -365,7 +365,7 @@ msgid "Cramer's V for this model not yet implemented"
 msgstr ""
 
 msgid "Posterior"
-msgstr ""
+msgstr "پسین"
 
 msgid "The `Success` must have two levels if the `Sample Size` is not specified."
 msgstr ""
@@ -410,7 +410,7 @@ msgid "vs."
 msgstr "در مقابل"
 
 msgid "Observed"
-msgstr ""
+msgstr "مشاهده‌شده"
 
 msgid "Estimated"
 msgstr ""
@@ -494,7 +494,7 @@ msgid "%s%% Confidence Interval"
 msgstr ""
 
 msgid "Descriptives Plot"
-msgstr "نمودار توصیفی"
+msgstr "نمودار توصیفی‌ها"
 
 msgid "Bayesian Multinomial Test"
 msgstr ""
@@ -539,7 +539,7 @@ msgid "Residual Deviance"
 msgstr ""
 
 msgid "Coefficients"
-msgstr "ضرایب"
+msgstr "ضریب‌ها"
 
 msgid "Estimate"
 msgstr "برآورد"
@@ -590,13 +590,13 @@ msgid "Posterior Summary Statistics"
 msgstr ""
 
 msgid "P(incl|data)"
-msgstr "P(شامل|داده‌ها)"
+msgstr "P(گنجاندن|داده)"
 
 msgid "Mean"
 msgstr "میانگین"
 
 msgid "Variance"
-msgstr ""
+msgstr "واریانس"
 
 msgid "%s%% Credible intervals"
 msgstr ""
