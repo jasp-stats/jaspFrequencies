@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2024 University of Amsterdam
+# Copyright (C) 2013-2025 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,11 +15,43 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# This is a generated file. Don't change it
+# This is a generated file. Don't change it!
 
+#' Bayesian A/B Test
+#'
+#' The Bayesian A/B test allows one to monitor the evidence for the hypotheses that an intervention or treatment has either a positive effect, a negative effect or no effect.
+#'
+#' @param bayesFactorOrder, Compares each model against the model selected
+#' \itemize{
+#'   \item \code{"bestModelTop"}
+#'   \item \code{"nullModelTop"}
+#' }
+#' @param bfRobustnessPlot, Displays the prior sensitivity analysis.
+#'    Defaults to \code{FALSE}.
+#' @param bfRobustnessPlotStepsPriorMean, Specifies in how many discrete steps the μ step range is partitioned.
+#' @param bfRobustnessPlotStepsPriorSd, Specifies in how many discrete steps the σ step range is partitioned.
+#' @param bfSequentialPlot, Displays the development of posterior probabilities as the data come in. The probability wheels visualize prior and posterior probabilities of the hypotheses.
+#'    Defaults to \code{FALSE}.
+#' @param descriptivesTable, Displays the counts and proportion for each group.
+#'    Defaults to \code{FALSE}.
+#' @param n1, Number of trials in group 1 (control condition).
+#' @param n2, Number of trials in group 2 (experimental condition).
+#' @param normalPriorMean, Specifies the mean for the normal prior on the test-relevant log odds ratio.
+#' @param normalPriorSd, Specifies the standard deviation for the normal prior on the test-relevant log odds ratio.
+#' @param priorModelProbabilityEqual, Specifies that the 'success' probability is identical (there is no effect).
+#' @param priorModelProbabilityGreater, Specifies that the 'success' probability in the experimental condition is higher than in the control condition.
+#' @param priorModelProbabilityLess, Specifies that the 'success' probability in the experimental condition is lower than in the control condition.
+#' @param priorModelProbabilityTwoSided, Specifies that the 'success' probability differs between the control and experimental condition, but does not specify which one is higher.
+#' @param priorPlot, Plots parameter prior distributions.
+#'    Defaults to \code{FALSE}.
+#' @param priorPosteriorPlot, Displays the prior and posterior density for the quantity of interest.
+#'    Defaults to \code{FALSE}.
+#' @param samples, Specifies the number of importance samples for obtaining log marginal likelihood for (H+) and (H-) and the number of posterior samples.
+#' @param y1, Number of successes in group 1 (control condition).
+#' @param y2, Number of successes in group 2 (experimental condition).
 ABTestBayesian <- function(
           data = NULL,
-          version = "0.19.2",
+          version = "1",
           bayesFactorOrder = "bestModelTop",
           bayesFactorType = "BF10",
           bfRobustnessPlot = FALSE,
@@ -61,9 +93,14 @@ ABTestBayesian <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
+
+   if (!jaspBase::jaspResultsCalledFromJasp() && !is.null(data)) {
+      jaspBase::storeDataSet(data)
+   }
+
    optionsWithFormula <- c("bfRobustnessPlotType", "n1", "n2", "priorPlotType", "priorPosteriorPlotType", "y1", "y2")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspFrequencies::ABTestBayesian", data, options, version))
+   return(jaspBase::runWrappedAnalysis("jaspFrequencies", "ABTestBayesian", "ABTestBayesian.qml", options, version, TRUE))
 }

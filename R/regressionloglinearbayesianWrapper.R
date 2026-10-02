@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2024 University of Amsterdam
+# Copyright (C) 2013-2025 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,15 +15,29 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# This is a generated file. Don't change it
+# This is a generated file. Don't change it!
 
+#' Bayesian Log-Linear Regression
+#'
+#' @param modelCutOffBestDisplayed, Shows the top N models ranked by posterior probability.
+#' @param modelCutOffPosteriorProbability, Only models with posterior probability above this threshold are shown.
+#' @param priorScale, Controls how spread out the prior is; larger = more uncertainty.
+#' @param priorShape, Specifies the shape of the prior distribution on the effect size.
+#' @param regressionCoefficientsCi, Adds a credible interval for each coefficient estimate.
+#'    Defaults to \code{FALSE}.
+#' @param regressionCoefficientsEstimates, Displays estimated regression coefficients for included terms.
+#'    Defaults to \code{FALSE}.
+#' @param regressionCoefficientsSubmodel, Displays statistics for a specific model index.
+#'    Defaults to \code{FALSE}.
+#' @param regressionCoefficientsSubmodelCi, Shows credible intervals for the selected submodel's coefficients.
+#'    Defaults to \code{FALSE}.
 RegressionLogLinearBayesian <- function(
           data = NULL,
-          version = "0.19.2",
+          version = "1",
           formula = NULL,
           bayesFactorType = "BF10",
           count = list(types = list(), value = ""),
-          factors = list(types = list(), value = NULL),
+          factors = list(types = list(), value = list()),
           modelCutOffBestDisplayed = 2,
           modelCutOffPosteriorProbability = 0.1,
           modelTerms = list(optionKey = "components", types = list(), value = list()),
@@ -52,16 +66,20 @@ RegressionLogLinearBayesian <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
+
+   if (!jaspBase::jaspResultsCalledFromJasp() && !is.null(data)) {
+      jaspBase::storeDataSet(data)
+   }
+
    if (!is.null(formula)) {
       if (!inherits(formula, "formula")) {
          formula <- as.formula(formula)
       }
       options$formula <- jaspBase::jaspFormula(formula, data)
    }
-
    optionsWithFormula <- c("count", "factors", "modelTerms")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspFrequencies::RegressionLogLinearBayesian", data, options, version))
+   return(jaspBase::runWrappedAnalysis("jaspFrequencies", "RegressionLogLinearBayesian", "RegressionLogLinearBayesian.qml", options, version, TRUE))
 }

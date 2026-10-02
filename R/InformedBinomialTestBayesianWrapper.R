@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2013-2024 University of Amsterdam
+# Copyright (C) 2013-2025 University of Amsterdam
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,11 +15,25 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# This is a generated file. Don't change it
+# This is a generated file. Don't change it!
 
+#' Informed Bayesian Multi-Binomial Test
+#'
+#' @param bridgeSamples, Max number of samples used to estimate marginal likelihoods for computing Bayes factors.
+#' @param descriptivesPlot, Shows a plot of observed counts or proportions.
+#'    Defaults to \code{FALSE}.
+#' @param descriptivesTable, Displays a summary table of observed counts or proportions.
+#'    Defaults to \code{FALSE}.
+#' @param mcmcBurnin, Number of initial MCMC samples to discard before analysis begins, allowing the chain to stabilize.
+#' @param mcmcSamples, Total number of MCMC samples used for estimating the posterior after burn-in.
+#' @param posteriorPlot, Displays the posterior distribution with credible intervals.
+#'    Defaults to \code{FALSE}.
+#' @param sequentialAnalysisNumberOfSteps, Number of data points at which the Bayes factor is updated during sequential analysis.
+#' @param sequentialAnalysisPlot, Displays the development of the Bayes factor or posterior probability as the data come in.
+#'    Defaults to \code{FALSE}.
 InformedBinomialTestBayesian <- function(
           data = NULL,
-          version = "0.19.2",
+          version = "1",
           bayesFactorType = "BF10",
           bfComparison = "Encompassing",
           bfVsHypothesis = "Model 1",
@@ -56,9 +70,14 @@ InformedBinomialTestBayesian <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
+
+   if (!jaspBase::jaspResultsCalledFromJasp() && !is.null(data)) {
+      jaspBase::storeDataSet(data)
+   }
+
    optionsWithFormula <- c("bfVsHypothesis", "factor", "models", "priorCounts", "priorModelProbability", "sampleSize", "successes")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspFrequencies::InformedBinomialTestBayesian", data, options, version))
+   return(jaspBase::runWrappedAnalysis("jaspFrequencies", "InformedBinomialTestBayesian", "InformedBinomialTestBayesian.qml", options, version, TRUE))
 }
