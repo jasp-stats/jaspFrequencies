@@ -226,25 +226,36 @@ Form
 	{
 		title	: qsTr("Prior Model Probability")
 		
-		Chi2TestTableView
+		SimpleTableView
 		{
 			name:					"priorModelProbability"
 			id:						priorModelProbability
 			initialColumnCount: 	1
 			property var alwaysAvailable:
+			includeNullModel.checked && includeEncompassingModel.checked ?
 			[
-				{ label:	"Encompassing",		value: "Encompassing"},
+				{ label:	"Null",				value: "Null"},
+				{ label:	"Encompassing",		value: "Encompassing"}
+			]
+			: !includeNullModel.checked && includeEncompassingModel.checked ?
+			[
+				{ label:	"Encompassing",		value: "Encompassing"}
+			]
+			: includeNullModel.checked && !includeEncompassingModel.checked ?
+			[
 				{ label:	"Null",				value: "Null"}
 			]
+			:
+			[]
 
-			source:	[models, {values: priorModelProbability.alwaysAvailable}]
+			source:	[{values: priorModelProbability.alwaysAvailable}, models]
 
 			minimum				: 1
 			showAddButton		: false
 			showDeleteButton	: false
-			colHeader			: ""
+			buttonResetEnabled	: true
 			cornerText			: qsTr("Model")
-			itemType			: JASP.Double
+			itemType			: JASP.String
 
 			function getColHeaderText(headerText, colIndex) { return "Prior weight"}
 		}
