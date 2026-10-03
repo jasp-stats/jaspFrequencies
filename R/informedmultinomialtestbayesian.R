@@ -44,6 +44,24 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
 .informedBayesParsePriorModelProbability  <- function(options) {
 
+  # Older binomial forms could submit an initialized table without any rows.
+  # Use equal weights only for that exact default state; entered weights are preserved.
+  if (length(options[["priorModelProbability"]][[1]][["levels"]]) == 0 &&
+      length(options[["priorModelProbability"]][[1]][["values"]]) == 0) {
+    modelNames <- vapply(options[["models"]], function(model) {
+      if (nchar(model[["syntax"]]) == 0) "" else model[["modelName"]]
+    }, character(1))
+    modelNames <- modelNames[nzchar(modelNames)]
+
+    levels <- c(
+      if (options[["includeNullModel"]]) "Null",
+      if (options[["includeEncompassingModel"]]) "Encompassing",
+      modelNames
+    )
+    options[["priorModelProbability"]][[1]][["levels"]] <- levels
+    options[["priorModelProbability"]][[1]][["values"]] <- rep("1", length(levels))
+  }
+
   # prepare output holder
   options[["priorModelProbability"]][[1]][["valuesParsed"]] <- rep(NA, length(options[["priorModelProbability"]][[1]][["levels"]]))
 
