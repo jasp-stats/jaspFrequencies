@@ -47,6 +47,16 @@
         "R"
       ]
     },
+    "DBI": {
+      "Package": "DBI",
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Repository": "CRAN"
+    },
     "MASS": {
       "Package": "MASS",
       "Version": "7.3-65",
@@ -101,6 +111,23 @@
       "Requirements": [
         "R"
       ]
+    },
+    "RSQLite": {
+      "Package": "RSQLite",
+      "Version": "2.4.6",
+      "Source": "Repository",
+      "Requirements": [
+        "DBI",
+        "R",
+        "bit64",
+        "blob",
+        "cpp11",
+        "memoise",
+        "methods",
+        "pkgconfig",
+        "rlang"
+      ],
+      "Repository": "CRAN"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -184,6 +211,19 @@
         "truncnorm"
       ]
     },
+    "archive": {
+      "Package": "archive",
+      "Version": "1.1.14",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cli",
+        "glue",
+        "rlang",
+        "tibble"
+      ],
+      "Repository": "CRAN"
+    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.2.1",
@@ -199,6 +239,40 @@
       "Requirements": [
         "R"
       ]
+    },
+    "bit": {
+      "Package": "bit",
+      "Version": "4.6.0",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ],
+      "Repository": "CRAN"
+    },
+    "bit64": {
+      "Package": "bit64",
+      "Version": "4.8.0",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "bit",
+        "graphics",
+        "methods",
+        "stats",
+        "utils"
+      ],
+      "Repository": "CRAN"
+    },
+    "blob": {
+      "Package": "blob",
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Requirements": [
+        "methods",
+        "rlang",
+        "vctrs"
+      ],
+      "Repository": "CRAN"
     },
     "bridgesampling": {
       "Package": "bridgesampling",
@@ -216,6 +290,15 @@
         "stringr",
         "utils"
       ]
+    },
+    "brio": {
+      "Package": "brio",
+      "Version": "1.1.5",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ],
+      "Repository": "CRAN"
     },
     "bslib": {
       "Package": "bslib",
@@ -410,6 +493,20 @@
         "R6",
         "utils"
       ]
+    },
+    "diffobj": {
+      "Package": "diffobj",
+      "Version": "0.3.9",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "crayon",
+        "methods",
+        "stats",
+        "tools",
+        "utils"
+      ],
+      "Repository": "CRAN"
     },
     "digest": {
       "Package": "digest",
@@ -800,7 +897,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "763cb835a7589b72da079b95bbf9491abad4fab3"
+      "RemoteSha": "b187388a5e412c0d683c78ffd657908473859c2d"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -825,7 +922,35 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "23cdda0d795329eb99a2659bf6f325a9194ff292"
+      "RemoteSha": "288d2751131ee6ac17362bd89d2ed7d9c0c67c7c"
+    },
+    "jaspTools": {
+      "Package": "jaspTools",
+      "Version": "0.20.1",
+      "Source": "GitHub",
+      "Requirements": [
+        "DBI",
+        "RSQLite",
+        "archive",
+        "cli",
+        "data.table",
+        "httr",
+        "jsonlite",
+        "lifecycle",
+        "pkgload",
+        "remotes",
+        "rjson",
+        "stringi",
+        "stringr",
+        "testthat",
+        "vdiffr"
+      ],
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "jasp-stats",
+      "RemoteRepo": "jaspTools",
+      "RemoteRef": "master",
+      "RemoteSha": "1a109435bfdbedbae1e5fda5ceb39d227ca8e842"
     },
     "jquerylib": {
       "Package": "jquerylib",
@@ -1102,6 +1227,26 @@
         "utils"
       ]
     },
+    "pkgload": {
+      "Package": "pkgload",
+      "Version": "1.5.3",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cli",
+        "desc",
+        "fs",
+        "glue",
+        "lifecycle",
+        "methods",
+        "pkgbuild",
+        "processx",
+        "rlang",
+        "rprojroot",
+        "utils"
+      ],
+      "Repository": "CRAN"
+    },
     "plotly": {
       "Package": "plotly",
       "Version": "4.11.0",
@@ -1152,6 +1297,13 @@
         "R",
         "Rcpp"
       ]
+    },
+    "praise": {
+      "Package": "praise",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Requirements": [],
+      "Repository": "CRAN"
     },
     "prettyunits": {
       "Package": "prettyunits",
@@ -1316,6 +1468,19 @@
         "utils"
       ]
     },
+    "remotes": {
+      "Package": "remotes",
+      "Version": "2.5.0",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "methods",
+        "stats",
+        "tools",
+        "utils"
+      ],
+      "Repository": "CRAN"
+    },
     "rgl": {
       "Package": "rgl",
       "Version": "1.3.31",
@@ -1335,6 +1500,15 @@
         "stats",
         "utils"
       ]
+    },
+    "rjson": {
+      "Package": "rjson",
+      "Version": "0.2.23",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ],
+      "Repository": "CRAN"
     },
     "rlang": {
       "Package": "rlang",
@@ -1365,6 +1539,15 @@
         "xfun",
         "yaml"
       ]
+    },
+    "rprojroot": {
+      "Package": "rprojroot",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ],
+      "Repository": "CRAN"
     },
     "rvg": {
       "Package": "rvg",
@@ -1540,6 +1723,33 @@
         "utils"
       ]
     },
+    "testthat": {
+      "Package": "testthat",
+      "Version": "3.3.2",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "R6",
+        "brio",
+        "callr",
+        "cli",
+        "desc",
+        "evaluate",
+        "jsonlite",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "pkgload",
+        "praise",
+        "processx",
+        "ps",
+        "rlang",
+        "utils",
+        "waldo",
+        "withr"
+      ],
+      "Repository": "CRAN"
+    },
     "textshaping": {
       "Package": "textshaping",
       "Version": "1.0.4",
@@ -1680,6 +1890,24 @@
         "rlang"
       ]
     },
+    "vdiffr": {
+      "Package": "vdiffr",
+      "Version": "1.0.9",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cpp11",
+        "diffobj",
+        "glue",
+        "grDevices",
+        "htmltools",
+        "lifecycle",
+        "rlang",
+        "testthat",
+        "xml2"
+      ],
+      "Repository": "CRAN"
+    },
     "viridisLite": {
       "Package": "viridisLite",
       "Version": "0.4.2",
@@ -1687,6 +1915,20 @@
       "Requirements": [
         "R"
       ]
+    },
+    "waldo": {
+      "Package": "waldo",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "cli",
+        "diffobj",
+        "glue",
+        "methods",
+        "rlang"
+      ],
+      "Repository": "CRAN"
     },
     "withr": {
       "Package": "withr",

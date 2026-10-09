@@ -265,7 +265,16 @@ ContingencyTablesBayesianInternal <- function(jaspResults, dataset = NULL, optio
   medianTxt   <- gettext("median Log OR = ")
   xName       <- gettext("Log Odds Ratio")
 
-  if(options$posteriorOddsRatioPlotAdditionalInfo)
+  jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.drawContTabBasLogOddsPlot",
+    args = list(dfLines = dfLines, xName = xName, BF10 = BF10, ppCri = ppCri,
+                median = median, bfSubscripts = bfSubscripts, CRItxt = CRItxt,
+                medianTxt = medianTxt, additionalInfo = options$posteriorOddsRatioPlotAdditionalInfo)
+  )
+}
+
+.drawContTabBasLogOddsPlot <- function(dfLines, xName, BF10, ppCri, median, bfSubscripts, CRItxt, medianTxt, additionalInfo) {
+  if(additionalInfo)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLines, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = ppCri, median = median, bfSubscripts = bfSubscripts,
                                            CRItxt = CRItxt, medianTxt = medianTxt)

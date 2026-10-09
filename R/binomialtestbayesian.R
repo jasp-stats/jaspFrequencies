@@ -305,17 +305,24 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
   quantiles <- .credibleIntervalPlusMedian(credibleIntervalInterval = .95, options$priorA, options$priorB, counts, n, alternative=hyp, theta0 = options$testValue)
   dfLinesPP <- .dfLinesPP(a=options$priorA, b=options$priorB, hyp = hyp, theta0 = options$testValue, counts = counts, n = n)
   dfPointsPP <- .dfPointsPP(a=options$priorA, b=options$priorB, hyp = hyp, theta0 = options$testValue, counts = counts, n = n)
-  xName <- bquote(paste(.(gettext("Population proportion")), ~theta))
+  plot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.drawBayesBinomPriorPosterior",
+    args = list(dfLinesPP = dfLinesPP, dfPointsPP = dfPointsPP,
+                label = gettext("Population proportion"),
+                additionalInfo = options$priorPosteriorPlotAdditionalInfo,
+                BF10 = BF10, quantiles = quantiles, hypForPlots = .binomHypothesisForPlots(hyp))
+  )
+}
 
-  hypForPlots <- .binomHypothesisForPlots(hyp)
-
-  if (!options$priorPosteriorPlotAdditionalInfo)
+.drawBayesBinomPriorPosterior <- function(dfLinesPP, dfPointsPP, label, additionalInfo, BF10, quantiles, hypForPlots) {
+  xName <- bquote(paste(.(label), ~theta))
+  if (!additionalInfo)
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName)
   else
     p <- jaspGraphs::PlotPriorAndPosterior(dfLines = dfLinesPP, dfPoints = dfPointsPP, xName = xName, BF = BF10, bfType = "BF10",
                                            CRI = c(quantiles$ci.lower, quantiles$ci.upper), median = quantiles$ci.median,
                                            hypothesis = hypForPlots, drawCRItxt = TRUE)
-  plot$plotObject <- p
+  p
 }
 
 .bayesBinomSequentialPlot <- function(container, plotName, options, BF10, counts, n, hyp, var, data, level) {
@@ -334,7 +341,10 @@ BinomialTestBayesianInternal <- function(jaspResults, dataset = NULL, options, .
     bf <- if(bfTypeIgnoreLog == "BF01") 1 / BF10  else BF10
     bfSubscripts <- .bayesBinomGetSubscript(options$alternative)
     dfLinesSR   <- .dfLinesSR(d = data, var = var, split = level, a = options$priorA, b = options$priorB, hyp = hyp, theta0 = options$testValue, bfType = bfTypeIgnoreLog)
-    jaspGraphs::PlotRobustnessSequential(dfLines = dfLinesSR, xName = "n", BF = bf, bfType = bfTypeIgnoreLog, hypothesis = hypForPlots)
+    jaspGraphs::createJaspPlotRecipe(
+      fun = "jaspGraphs::PlotRobustnessSequential",
+      args = list(dfLines = dfLinesSR, xName = "n", BF = bf, bfType = bfTypeIgnoreLog, hypothesis = hypForPlots)
+    )
   })
 
   if (inherits(p, "try-error"))
