@@ -396,20 +396,26 @@ MultinomialTestInternal <- function(jaspResults, dataset, options, ...) {
       plotFrame$yAxisMargin[i] <- plotFrame$obs[i]
 
   yBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, plotFrame[["yAxisMargin"]]))
-  # Create plot
+  descriptivesPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.drawMultinomialDescriptivesPlot",
+    args = list(plotFrame = plotFrame, factorName = options$factor, yname = yname, yBreaks = yBreaks)
+  )
+}
+
+.drawMultinomialDescriptivesPlot <- function(plotFrame, factorName, yname, yBreaks) {
   p <- ggplot2::ggplot(data = plotFrame,
                        mapping = ggplot2::aes(x = factor, y = obs)) +
     ggplot2::geom_bar(stat = "identity", size = 0.75, colour = "black",
                       fill = "grey") +
-    ggplot2::geom_errorbar(ggplot2::aes(ymin = ciDf$lowerCI, ymax = ciDf$upperCI),
+    ggplot2::geom_errorbar(ggplot2::aes(ymin = lowerCI, ymax = upperCI),
                            size = 0.75, width = 0.3) +
-    ggplot2::xlab(options$factor) +
+    ggplot2::xlab(factorName) +
     ggplot2::scale_y_continuous(name = yname, breaks = yBreaks) +
     jaspGraphs::geom_rangeframe(sides = "b") +
     ggplot2::coord_flip() +
     jaspGraphs::themeJaspRaw(axis.title.cex = jaspGraphs::getGraphOption("axis.title.cex"))
 
-  descriptivesPlot$plotObject <- p
+  p
 }
 
 # Extra results functions

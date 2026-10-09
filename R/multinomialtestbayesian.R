@@ -275,12 +275,18 @@ MultinomialTestBayesianInternal <- function(jaspResults, dataset, options, ...) 
     return()
 
   factorVariable   <- multinomialResults[["specs"]][["factorVariable"]]
-  descriptivesPlot <- .multBayesPlotHelper(factorVariable, options, multinomialResults)
+  descriptivesPlot <- if (!multinomialResults$specs$ready) NULL else jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.multBayesPlotHelper",
+    args = list(factorVariable = factorVariable,
+                options = list(descriptivesType = options$descriptivesType),
+                multinomialResults = list(specs = list(ready = multinomialResults$specs$ready),
+                                          descriptivesPlot = multinomialResults$descriptivesPlot))
+  )
 
   jaspResults[["descriptivesPlot"]] <- createJaspPlot(plot = descriptivesPlot, title = gettext("Descriptives plot"), width = 480, height = 320)
   jaspResults[["descriptivesPlot"]]$dependOn(c("descriptivesPlot", "factor", "count", "descriptivesPlotCiLevel"))
 
-  descriptivesPlot$position <- 2
+  jaspResults[["descriptivesPlot"]]$position <- 2
 }
 
 

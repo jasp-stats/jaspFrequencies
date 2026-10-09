@@ -447,7 +447,12 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
 
   plotData <- .createInformedMultDescriptivesData(jaspResults, options)
 
-  descriptivesPlot$plotObject <- .createInformedMultPlot(plotData, options, descriptives = TRUE)
+  descriptivesPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.createInformedMultPlot",
+    args = list(plotData = plotData,
+                options = list(factor = options$factor, descriptivesDisplay = options$descriptivesDisplay),
+                descriptives = TRUE)
+  )
 
   return()
 }
@@ -471,7 +476,12 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
   colnames(tempSummary) <- c("fact", "observed", "lowerCI", "upperCI")
 
 
-  posteriorPlot$plotObject <- .createInformedMultPlot(tempSummary, options, descriptives = FALSE)
+  posteriorPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.createInformedMultPlot",
+    args = list(plotData = tempSummary,
+                options = list(factor = options$factor, descriptivesDisplay = options$descriptivesDisplay),
+                descriptives = FALSE)
+  )
 
   return()
 }
@@ -573,12 +583,13 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
       if (bfTypeIgnoreLog == "BF01")
         tempData$y <- - tempData$y
 
-      tempPlot$plotObject <- jaspGraphs::PlotRobustnessSequential(
-        dfLines    = tempData,
+      tempPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+        fun = "jaspGraphs::PlotRobustnessSequential",
+        args = list(dfLines    = tempData,
         xName      = "n",
         BF         = exp(tempData$y[nrow(tempData)]),
         bfType     = bfTypeIgnoreLog,
-        hypothesis = "equal")
+        hypothesis = "equal"))
     }
 
     return()
@@ -615,7 +626,10 @@ InformedMultinomialTestBayesianInternal <- function(jaspResults, dataset, option
                         "includeNullModel", "includeEncompassingModel"))
     tempPlot$position <- 5
     jaspResults[["sequentialAnalysisPlot"]] <- tempPlot
-    tempPlot$plotObject <- .createInformedMultPlotSequentialProb(postProb)
+    tempPlot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+      fun = "jaspFrequencies:::.createInformedMultPlotSequentialProb",
+      args = list(plotData = postProb)
+    )
 
 
     return()

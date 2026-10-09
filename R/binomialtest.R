@@ -276,6 +276,13 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .binomFillDescriptivesPlot <- function(plot, data, testValue) {
+  plot$plotObject <- jaspGraphs::createJaspPlotRecipe(
+    fun = "jaspFrequencies:::.drawBinomDescriptivesPlot",
+    args = list(data = data, testValue = testValue)
+  )
+}
+
+.drawBinomDescriptivesPlot <- function(data, testValue) {
   base_breaks_y <- function(testValue) {
     d <- data.frame(x = -Inf, xend = -Inf, y = 0, yend = 1)
     list(ggplot2::geom_segment(data = d, ggplot2::aes(x = x, y = y, xend = xend, yend = yend),
@@ -285,8 +292,7 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
 
   plotPosition <- ggplot2::position_dodge(0.2)
 
-  plot$plotObject <-
-    ggplot2::ggplot(data, ggplot2::aes(x = label, y = proportion, group = 1)) +
+  ggplot2::ggplot(data, ggplot2::aes(x = label, y = proportion, group = 1)) +
     ggplot2::geom_errorbar(ggplot2::aes(ymin = lowerCI, ymax = upperCI), colour = "black", width = 0.2,
                            position = plotPosition) +
     ggplot2::geom_point(position = plotPosition, size = 4) +
