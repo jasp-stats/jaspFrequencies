@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspFrequencies 0.19.2\n"
 "POT-Creation-Date: 2026-04-11 04:09\n"
-"PO-Revision-Date: 2026-09-26 15:27+0000\n"
+"PO-Revision-Date: 2026-10-25 11:51+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/jasp/jaspfrequencies-r/zh_Hans/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.10.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 msgid "Bayesian A/B Test"
 msgstr "贝叶斯A/B测试"
@@ -20,464 +20,471 @@ msgid "Models"
 msgstr "模型"
 
 msgid "P(M)"
-msgstr ""
+msgstr "P(M)"
 
 msgid "P(M|data)"
-msgstr ""
+msgstr "P(M|数据)"
 
 msgid ""
 "A positive log odds ratio means that the success rate in Group 2 is higher "
 "than in Group 1."
-msgstr ""
+msgstr "正的对数优势比意味着第 2 组的成功率高于第 1 组。"
 
 msgid "Log odds ratio = 0"
-msgstr ""
+msgstr "对数优势比 = 0"
 
 msgid "Log odds ratio > 0"
-msgstr ""
+msgstr "对数优势比 > 0"
 
 msgid "Log odds ratio < 0"
-msgstr ""
+msgstr "对数优势比 < 0"
 
 msgid "Log odds ratio %s 0"
-msgstr ""
+msgstr "对数优势比 %s 0"
 
 msgid "Descriptives"
-msgstr ""
+msgstr "描述统计"
 
 msgid "Counts"
-msgstr ""
+msgstr "计数"
 
 msgid "Total"
 msgstr "总计"
 
 msgid "Proportion"
-msgstr ""
+msgstr "比例"
 
 msgid "Group 1"
-msgstr ""
+msgstr "组 1"
 
 msgid "Group 2"
-msgstr ""
+msgstr "组 2"
 
 msgid "Prior and Posterior"
-msgstr ""
+msgstr "先验与后验"
 
 msgid "Sequential Analysis"
-msgstr ""
+msgstr "序贯分析"
 
 msgid "Bayes Factor Robustness Check"
-msgstr ""
+msgstr "贝叶斯因子稳健性检验"
 
 msgid "Prior"
 msgstr "先验"
 
 msgid "n"
-msgstr ""
+msgstr "n"
 
 msgid "Posterior Probability"
-msgstr ""
+msgstr "后验概率"
 
 msgid "P(%1$s | data) = %2$.3f"
-msgstr ""
+msgstr "P(%1$s | data) = %2$.3f"
 
 msgid "Cannot test the hypothesis that the test value is greater than 1."
-msgstr ""
+msgstr "无法检验检验值大于 1 的假设。"
 
 msgid "Cannot test the hypothesis that the test value is less than 0."
-msgstr ""
+msgstr "无法检验检验值小于 0 的假设。"
 
 msgid "Binomial Test"
-msgstr ""
+msgstr "二项式检验"
 
 msgid "Variable"
-msgstr ""
+msgstr "变量"
 
 msgid "Level"
-msgstr ""
+msgstr "水平"
 
 msgid "p"
-msgstr ""
+msgstr "p"
 
 msgid "VS-MPR"
-msgstr ""
+msgstr "VS-MPR"
 
 msgid "Lower"
-msgstr "下界"
+msgstr "下限"
 
 msgid "%s%% CI for Proportion"
-msgstr ""
+msgstr "比例的 %s%% 置信区间"
 
 msgid "Upper"
-msgstr "上界"
+msgstr "上限"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "less than %s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定比例小于 %s。"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that the proportion is "
 "greater than %s."
-msgstr ""
+msgstr "对于所有检验，备择假设指定比例大于 %s。"
 
 msgid "Proportions tested against value: %s."
-msgstr ""
+msgstr "比例与以下值进行比较：%s。"
 
 msgid "Descriptives Plots"
-msgstr ""
+msgstr "描述统计图"
 
 msgid "Bayesian Binomial Test"
-msgstr ""
+msgstr "贝叶斯二项式检验"
 
 msgid ""
 "%1$s The shape of the prior distribution under the alternative hypothesis is "
 "specified by Beta(%2$s, %3$s)."
-msgstr ""
+msgstr "%1$s 备择假设下先验分布的形状由 Beta(%2$s, %3$s) 指定。"
 
 msgid "Inferential Plots"
-msgstr ""
+msgstr "推断图"
 
 msgid "Population proportion"
-msgstr ""
+msgstr "总体比例"
 
 msgid "One or more Bayes factors cannot be computed"
-msgstr ""
+msgstr "一个或多个贝叶斯因子无法计算"
 
 msgid "One or more Bayes factors are infinite"
-msgstr ""
+msgstr "一个或多个贝叶斯因子为无穷大"
 
 msgid "Undefined hypothesis"
-msgstr ""
+msgstr "未定义的假设"
 
 msgid "Contingency Tables"
-msgstr ""
+msgstr "列联表"
 
 msgid "Chi-Squared Tests"
-msgstr ""
+msgstr "卡方检验"
 
 msgid ""
 "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n"
 "      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n"
 "      (Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke 最大 <em>p</em> 比值：基于 <em>p</em> 值，\n"
+" 支持 H%1$s 而非 H%2$s 的最大可能优势等于 %3$s\n"
+" （Sellke, Bayarri, & Berger, 2001）。"
 
 msgid "Continuity correction is available only for 2x2 tables."
-msgstr ""
+msgstr "连续性校正仅适用于 2x2 表。"
 
 msgid "McNemar's test is available only for 2x2 tables."
-msgstr ""
+msgstr "McNemar 检验仅适用于 2x2 表。"
 
 msgid "Log Odds Ratio"
-msgstr ""
+msgstr "对数优势比"
 
 msgid "Odds Ratio"
-msgstr ""
+msgstr "优势比"
 
 msgid "%.0f%% Confidence Intervals"
-msgstr ""
+msgstr "%.0f%% 置信区间"
 
 msgid "Nominal"
-msgstr ""
+msgstr "名义"
 
 msgid "Ordinal Gamma"
-msgstr ""
+msgstr "有序 Gamma"
 
 msgid "95%% Confidence Intervals"
-msgstr ""
+msgstr "95%% 置信区间"
 
 msgid "Gamma"
-msgstr ""
+msgstr "伽马系数"
 
 msgid "Standard Error"
 msgstr "标准误"
 
 msgid "Kendall's Tau-b"
-msgstr ""
+msgstr "Kendall's Tau-b"
 
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 msgid "VS-MPR%s"
-msgstr ""
+msgstr "VS-MPR%s"
 
 msgid "Value"
 msgstr "值"
 
 msgid "df"
-msgstr "自由度"
+msgstr "df"
 
 msgid "Expected count"
-msgstr ""
+msgstr "期望计数"
 
 msgid "%% within row"
-msgstr ""
+msgstr "行内百分比"
 
 msgid "%% within column"
-msgstr ""
+msgstr "列内百分比"
 
 msgid "%% of total"
-msgstr ""
+msgstr "占总计百分比"
 
 msgid "Unstandardized residuals"
-msgstr ""
+msgstr "未标准化残差"
 
 msgid "Pearson residuals"
-msgstr ""
+msgstr "Pearson 残差"
 
 msgid "Standardized residuals"
-msgstr ""
+msgstr "标准化残差"
 
 msgid "Contingency coefficient"
-msgstr ""
+msgstr "列联系数"
 
 msgid "Phi-coefficient"
-msgstr ""
+msgstr "Phi 系数"
 
 msgid "Cramer's V"
-msgstr ""
+msgstr "Cramer's V"
 
 msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
-msgstr ""
+msgstr "Phi 系数仅适用于 2×2 列联表"
 
 msgid ""
 "Value could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "无法计算该值——至少有一行或一列全部为零"
 
 msgid "Lambda (rows)"
-msgstr ""
+msgstr "Lambda（行）"
 
 msgid "Lambda (columns)"
-msgstr ""
+msgstr "Lambda（列）"
 
 msgid "Lambda (symmetric)"
-msgstr ""
+msgstr "Lambda（对称）"
 
 msgid ""
 "Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is "
 "more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is "
 "less likely in group <em>%2$s</em>"
 msgstr ""
+"优势比表示：<br>（比值 > 1）：组 <em>%1$s</em> 在组 <em>%2$s</em> 中更可"
+"能<br>（比值 < 1）：组 <em>%1$s</em> 在组 <em>%2$s</em> 中更不可能"
 
 msgid ""
 "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> "
 "is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> "
 "is less likely in group <em>%2$s</em>"
 msgstr ""
+"对数优势比表示：<br>（比值 > 0）：组 <em>%1$s</em> 在组 <em>%2$s</em> 中更可"
+"能 <br>（比值 < 0）：组 <em>%1$s</em> 在组 <em>%2$s</em> 中更不可能"
 
 msgid "is less than"
-msgstr ""
+msgstr "小于"
 
 msgid "is greater than"
-msgstr ""
+msgstr "大于"
 
 msgid ""
 "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> "
 "%2$s <em>%3$s</em>."
-msgstr ""
+msgstr "对于所有检验，备择假设指定组 <em>%1$s</em> %2$s <em>%3$s</em>。"
 
 msgid "Each cell displays the observed counts"
-msgstr ""
+msgstr "每个单元格显示观测计数"
 
 msgid "Each cell displays the expected counts"
-msgstr ""
+msgstr "每个单元格显示期望计数"
 
 msgid "Each cell displays the row percentages"
-msgstr ""
+msgstr "每个单元格显示行百分比"
 
 msgid "Each cell displays column percentages"
-msgstr ""
+msgstr "每个单元格显示列百分比"
 
 msgid "Each cell displays total percentages"
-msgstr ""
+msgstr "每个单元格显示总计百分比"
 
 msgid "Each cell displays unstandardized residuals"
-msgstr ""
+msgstr "每个单元格显示未标准化残差"
 
 msgid "Each cell displays Pearson residuals"
-msgstr ""
+msgstr "每个单元格显示 Pearson 残差"
 
 msgid "Each cell displays standardized residuals"
-msgstr ""
+msgstr "每个单元格显示标准化残差"
 
 msgid "Count"
-msgstr ""
+msgstr "计数"
 
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgid ""
 "%s could not be calculated - At least one row or column contains all zeros"
-msgstr ""
+msgstr "无法计算 %s——至少有一行或一列全部为零"
 
 msgid "%s continuity correction"
-msgstr ""
+msgstr "%s 连续性校正"
 
 msgid "McNemar's %s continuity correction"
-msgstr ""
+msgstr "McNemar 的 %s 连续性校正"
 
 msgid "Likelihood ratio"
-msgstr ""
+msgstr "似然比"
 
 msgid "Odds ratio restricted to 2 x 2 tables"
-msgstr ""
+msgstr "优势比仅限 2×2 表"
 
 msgid "Fisher's exact test"
-msgstr ""
+msgstr "Fisher 精确检验"
 
 msgid "Bayesian Contingency Tables Tests"
-msgstr ""
+msgstr "贝叶斯列联表检验"
 
 msgid "%.0f%% Credible Interval"
-msgstr ""
+msgstr "%.0f%% 可信区间"
 
 msgid "Log Odds Ratio Plots"
-msgstr ""
+msgstr "对数优势比图"
 
 msgid "Odds ratio restricted to 2 x 2 analyses"
-msgstr ""
+msgstr "优势比仅限 2×2 分析"
 
 msgid "Odds ratio for this model not yet implemented"
-msgstr ""
+msgstr "此模型的优势比尚未实现"
 
 msgid "The Bayes factor is undefined"
-msgstr ""
+msgstr "贝叶斯因子未定义"
 
 msgid "The Bayes factor is too small"
-msgstr ""
+msgstr "贝叶斯因子过小"
 
 msgid "The Bayes factor is infinite"
-msgstr ""
+msgstr "贝叶斯因子为无穷大"
 
 msgid "median Log OR ="
-msgstr ""
+msgstr "中位数对数优势比 ="
 
 msgid "Poisson"
-msgstr ""
+msgstr "泊松 (Poisson)"
 
 msgid "Joint multinomial"
-msgstr ""
+msgstr "联合多项式(Joint multinomial)"
 
 msgid "Independent multinomial"
-msgstr ""
+msgstr "独立多项"
 
 msgid "Hypergeometric"
-msgstr ""
+msgstr "超几何"
 
 msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "超几何列联表检验仅限 2×2 表"
 
 msgid "Proportion test restricted to 2 x 2 tables"
-msgstr ""
+msgstr "比例检验仅限 2×2 表"
 
 msgid "is not equal to"
-msgstr ""
+msgstr "不等于"
 
 msgid "Invalid sampling model selected"
-msgstr ""
+msgstr "所选抽样模型无效"
 
 msgid "Odds ratio"
-msgstr ""
+msgstr "优势比"
 
 msgid "Odd ratio for this model not yet implemented"
-msgstr ""
+msgstr "此模型的优势比尚未实现"
 
 msgid "Cramer's V for this model not yet implemented"
-msgstr ""
+msgstr "此模型的 Cramer's V 尚未实现"
 
 msgid "Posterior"
 msgstr "后验"
 
 msgid ""
 "The `Success` must have two levels if the `Sample Size` is not specified."
-msgstr ""
+msgstr "如果未指定 `样本量`，`成功数` 必须有两个水平。"
 
 msgid "Invalid successes: variable must contain only integer values."
-msgstr ""
+msgstr "成功数无效：变量只能包含整数值。"
 
 msgid "Invalid sample size: variable must contain only integer values."
-msgstr ""
+msgstr "样本量无效：变量只能包含整数值。"
 
 msgid "Sample size must be larger then the number of successes."
-msgstr ""
+msgstr "样本量必须大于成功数。"
 
 msgid ""
 "Factor must contain unique levels that map the successes to sample size."
-msgstr ""
+msgstr "因子必须包含唯一的水平，以将成功数映射到样本量。"
 
 msgid "Performing sequential analysis."
-msgstr ""
+msgstr "正在执行序贯分析。"
 
 msgid "Observed counts"
-msgstr ""
+msgstr "观测计数"
 
 msgid "Observed proportions"
-msgstr ""
+msgstr "观测比例"
 
 msgid "Sample size"
-msgstr ""
+msgstr "样本量"
 
 msgid "Descriptives plot"
-msgstr ""
+msgstr "描述性绘图"
 
 msgid "Unrestricted posterior plot"
-msgstr ""
+msgstr "无约束后验图"
 
 msgid "Sequential analysis"
-msgstr ""
+msgstr "序贯分析"
 
 msgid "At least two models need to be specified."
-msgstr ""
+msgstr "至少需要指定两个模型。"
 
 msgid "vs."
-msgstr ""
+msgstr "对比"
 
 msgid "Observed"
-msgstr ""
+msgstr "观测"
 
 msgid "Estimated"
-msgstr ""
+msgstr "估计"
 
 msgid "Proportions"
-msgstr ""
+msgstr "比例"
 
 msgid ""
 "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be "
 "parsed into a positive number. Please, check the input."
-msgstr ""
+msgstr "“%1$s”假设（%2$s）的先验模型概率输入无法解析为正数。请检查输入。"
 
 msgid "Bayesian evaluation of %1$s order constraints"
-msgstr ""
+msgstr "%1$s 序约束的贝叶斯评估"
 
 msgid "BF%1$s%2$s"
-msgstr ""
+msgstr "BF%1$s%2$s"
 
 msgid "Log(BF%1$s%2$s)"
-msgstr ""
+msgstr "Log(BF%1$s%2$s)"
 
 msgid "Log marglik"
-msgstr ""
+msgstr "对数边际似然"
 
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 msgid "Error %%"
-msgstr ""
+msgstr "误差 %%"
 
 msgid "P(M|Data)"
-msgstr ""
+msgstr "P(M|数据)"
 
 msgid "BF<sub>M</sub>"
-msgstr ""
+msgstr "BF<sub>M</sub>"
 
 msgid ""
 "Please double check if the factor level names in the 'Order Restricted "
 "Hypotheses' section match the factor levels in your data set."
-msgstr ""
+msgstr "请仔细检查“序约束假设”部分中的因子水平名称是否与数据集中的因子水平一致。"
 
 msgid ""
 "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
-msgstr ""
+msgstr "每一行的模型（记为“1”）与%1$s（记为 0）进行比较。"
 
 msgid ""
 "Specify informed hypothesis tests in the `Order Restricted Hypotheses` "
@@ -485,104 +492,106 @@ msgid ""
 msgstr ""
 
 msgid "Expected counts not supported without observed counts."
-msgstr ""
+msgstr "没有观测计数时不支持期望计数。"
 
 msgid "No expected counts entered."
-msgstr ""
+msgstr "未输入期望计数。"
 
 msgid ""
 "Invalid counts: variable does not match the number of levels of the factor. "
 "When counts are specified, each row of the data set must represent a unique "
 "level of the factor."
 msgstr ""
+"计数无效：变量与因子的水平数不匹配。指定计数时，数据集的每一行必须代表因子的"
+"唯一水平。"
 
 msgid ""
 "Invalid expected counts: variable does not match the number of levels of the "
 "factor."
-msgstr ""
+msgstr "期望计数无效：变量与因子的水平数不匹配。"
 
 msgid "Invalid counts: variable must contain only integer values."
-msgstr ""
+msgstr "计数无效：变量只能包含整数值。"
 
 msgid "Invalid counts: less than 1 observation."
-msgstr ""
+msgstr "计数无效：观测值少于 1 个。"
 
 msgid "Invalid counts: maximum value (10e7) exceeded."
-msgstr ""
+msgstr "计数无效：超过最大值（10e7）。"
 
 msgid "Confidence intervals are based on independent binomial distributions."
-msgstr ""
+msgstr "置信区间基于独立二项分布。"
 
 msgid "Could not compute confidence intervals."
-msgstr ""
+msgstr "无法计算置信区间。"
 
 msgid "Factor"
-msgstr ""
+msgstr "因子"
 
 msgid "Expected: %s"
-msgstr ""
+msgstr "期望：%s"
 
 msgid "Expected"
-msgstr ""
+msgstr "期望"
 
 msgid "%s%% Confidence Interval"
 msgstr "%s%% 置信区间"
 
 msgid "Descriptives Plot"
-msgstr ""
+msgstr "描述统计图"
 
 msgid "Bayesian Multinomial Test"
-msgstr ""
+msgstr "贝叶斯多项式检验"
 
 msgid "Levels"
-msgstr ""
+msgstr "水平"
 
 msgid "Credible"
-msgstr ""
+msgstr "可信"
 
 msgid ""
 "Credible intervals are based on independent binomial distributions with flat "
 "priors."
-msgstr ""
+msgstr "可信区间基于具有平坦先验的独立二项分布。"
 
 msgid "Confidence"
-msgstr ""
+msgstr "置信"
 
 msgid "%1$s%% %2$s Interval"
-msgstr ""
+msgstr "%1$s%% %2$s 区间"
 
 msgid "Could not compute %s Intervals."
-msgstr ""
+msgstr "无法计算 %s 区间。"
 
 msgid "Observed Counts"
-msgstr ""
+msgstr "观测计数"
 
 msgid "Observed Proportions"
-msgstr ""
+msgstr "观测比例"
 
 msgid "(Intercept)"
-msgstr ""
+msgstr "（截距）"
 
 msgid "ANOVA"
-msgstr ""
+msgstr "方差分析"
 
 msgid "Deviance"
-msgstr ""
+msgstr "偏差"
 
 msgid "Residual df"
-msgstr ""
+msgstr "残差自由度"
 
 msgid "Residual Deviance"
-msgstr ""
+msgstr "残差偏差"
 
 msgid "Coefficients"
-msgstr ""
+msgstr "系数"
 
 msgid "Estimate"
 msgstr "估计"
 
 msgid "%s%% Confidence Intervals"
-msgstr ""
+msgstr "%s%% 置信区间"
 
 msgid ""
 "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \n"
@@ -590,53 +599,59 @@ msgid ""
 "1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n"
 "(Sellke, Bayarri, & Berger, 2001)."
 msgstr ""
+"Vovk-Sellke 最大 <em>p</em> 比值：基于 <em>p</em> 值，\n"
+"支持 H%1$s 而非 H%2$s 的最大可能优势等于\n"
+"1/(-e <em>p</em> log(<em>p</em>))（对于 <em>p</em> %3$s .37）\n"
+"（Sellke, Bayarri, & Berger, 2001）。"
 
 msgid "variables cannot be read"
-msgstr ""
+msgstr "无法读取变量"
 
 msgid ""
 "Cannot compute the results; a numerical error occurred during sampling. Try "
 "to change (e.g., simplify) the model or adjust priors."
-msgstr ""
+msgstr "无法计算结果；采样过程中发生数值错误。请尝试更改（例如简化）模型或调整先验。"
 
 msgid ""
 "R package 'conting' error: %s <br> It is possible that a numerical error "
 "occured during sampling. Try to change (e.g., simplify) the model, adjust "
 "priors, change seed, or change the number of MCMC samples."
 msgstr ""
+"R 包“conting”错误：%s <br> 采样过程中可能发生了数值错误。请尝试更改（例如简化"
+"）模型、调整先验、更改随机种子，或更改 MCMC 样本数。"
 
 msgid "R Package error: Cannot retrieve table probabilities"
-msgstr ""
+msgstr "R 包错误：无法获取表格概率"
 
 msgid "Total number of models visited = %i"
-msgstr ""
+msgstr "访问的模型总数 = %i"
 
 msgid "Submodel specified is not within possible submodels"
-msgstr ""
+msgstr "指定的子模型不在可能的子模型范围内"
 
 msgid "<em>Model formula:</em>"
-msgstr ""
+msgstr "<em>模型公式：</em>"
 
 msgid "<em>Posterior model probability =</em>"
-msgstr ""
+msgstr "<em>后验模型概率 =</em>"
 
 msgid "Model Comparison"
-msgstr ""
+msgstr "模型比较"
 
 msgid "BF<sub>10</sub>"
-msgstr ""
+msgstr "BF<sub>10</sub>"
 
 msgid "BF<sub>01</sub>"
-msgstr ""
+msgstr "BF<sub>01</sub>"
 
 msgid "Log(BF<sub>10</sub>)"
-msgstr ""
+msgstr "Log(BF<sub>10</sub>)"
 
 msgid "Posterior Summary Statistics"
-msgstr ""
+msgstr "后验汇总统计量"
 
 msgid "P(incl|data)"
-msgstr ""
+msgstr "P(包含|数据)"
 
 msgid "Mean"
 msgstr "均值"
@@ -645,10 +660,10 @@ msgid "Variance"
 msgstr "方差"
 
 msgid "%s%% Credible intervals"
-msgstr ""
+msgstr "%s%% 可信区间"
 
 msgid "Posterior Summary Statistics For Submodel %s"
-msgstr ""
+msgstr "子模型 %s 的后验汇总统计量"
 
 msgid "%.0f%% Credible intervals"
-msgstr ""
+msgstr "%.0f%% 可信区间"
