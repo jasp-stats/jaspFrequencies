@@ -32,6 +32,7 @@ The binomial test allows the user to test whether a proportion of a dichotomous 
 - Proportion: calculated by counts/total.
 - p: p-value.
 - VS-MPR: Vovk-Sellke maximum p-ratio.
+- CI for Proportion: Clopper-Pearson confidence interval. For two-sided tests, the p-value sums the probabilities of all outcomes no more likely than the observed one, whereas the confidence interval places equal probability in each tail. The two can therefore occasionally disagree about the test value; a footnote marks such cases.
 
 #### Descriptive Plots
 - Displays the proportion of the level of interest (black dot) and the width of the 95% credible interval. The horizontal dotted line represents the when the proportion of both levels would be equal (= 0.5).

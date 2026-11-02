@@ -220,6 +220,14 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
   # Compute the results and fill the table
   binomResults <- .binomComputeTableResults(jaspResults, dataset, options)
   .binomFillTableMain(binomialTable, binomResults)
+
+  # two-sided p-value and central CI use different methods and can disagree
+  if (options$ci && options$alternative == "twoSided")
+    .binomAddCiPDisagreementFootnote(binomialTable, binomResults, options)
+}
+
+.binomRowName <- function(variable, level) {
+  return(paste(variable, level, sep = "-"))
 }
 
 .binomFillTableMain <- function(binomialTable, binomResults) {
@@ -230,9 +238,28 @@ BinomialTestInternal <- function(jaspResults, dataset = NULL, options, ...) {
       row <- binomResults[[variable]][[level]]
       row <- c(list(.isNewGroup = isNewGroup), row)
       isNewGroup <- FALSE
-      binomialTable$addRows(row)
+      binomialTable$addRows(row, rowNames = .binomRowName(variable, level))
     }
 
+  }
+}
+
+.binomAddCiPDisagreementFootnote <- function(binomialTable, binomResults, options) {
+  alpha   <- 1 - options$ciLevel
+  message <- gettextf(
+    "The p-value and the %s%% CI disagree about the test value. The two-sided p-value sums the probabilities of all outcomes that are no more likely than the observed one, whereas the Clopper-Pearson CI places equal probability in each tail.",
+    100 * options$ciLevel
+  )
+
+  for (variable in names(binomResults)) {
+    for (level in names(binomResults[[variable]])) {
+      row         <- binomResults[[variable]][[level]]
+      significant <- row$p < alpha
+      excluded    <- options$testValue < row$lowerCI || options$testValue > row$upperCI
+
+      if (significant != excluded)
+        binomialTable$addFootnote(message = message, colNames = "p", rowNames = .binomRowName(variable, level))
+    }
   }
 }
 
