@@ -28,6 +28,7 @@
 * Goodman and Kruskal's gamma is now computed in-module instead of via `vcdExtra`, dropping that dependency ([PR #305](https://github.com/jasp-stats/jaspFrequencies/pull/305)).
 * The A/B test prior/posterior probability ("pizza") plots are now stacked vertically ([PR #323](https://github.com/jasp-stats/jaspFrequencies/pull/323)).
 * The Binomial Test and Bayesian Binomial Test now accept at most 50 levels per variable ([PR #304](https://github.com/jasp-stats/jaspFrequencies/pull/304)).
+* The Binomial Test help now explains that the two-sided p-value (minimum-likelihood method) and the Clopper-Pearson confidence interval can disagree when the test value is not 0.5 ([PR #360](https://github.com/jasp-stats/jaspFrequencies/pull/360)).
 
 ## Fixed
 * Fixed the Bayesian A/B test, which errored after the switch to preloaded data because the counts were passed to `abtest::ab_test()` in the wrong format; the robustness and sequential analysis plots now render again ([PR #323](https://github.com/jasp-stats/jaspFrequencies/pull/323)).
