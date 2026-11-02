@@ -18,6 +18,7 @@
 # jaspFrequencies (development version)
 
 ## Added
+* Added a footnote to the Binomial Test table that flags rows where the two-sided p-value and the confidence interval disagree about the test value; the p-value uses the minimum-likelihood method, whereas the Clopper-Pearson interval places equal probability in each tail ([PR #360](https://github.com/jasp-stats/jaspFrequencies/pull/360)).
 * Added a `Counts` variable box to the Binomial Test and the Bayesian Binomial Test, so binomial data can be entered as aggregated counts instead of raw rows ([PR #315](https://github.com/jasp-stats/jaspFrequencies/pull/315)).
 * Added McNemar's test to Contingency Tables, for paired nominal data in a 2x2 table ([PR #317](https://github.com/jasp-stats/jaspFrequencies/pull/317)).
 * Added info fields to all analyses, documenting every option in the interface and in the help files ([PR #268](https://github.com/jasp-stats/jaspFrequencies/pull/268)).
