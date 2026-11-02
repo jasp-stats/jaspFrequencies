@@ -56,7 +56,7 @@ Form
 		{
 			name:	"ci"
 			label:	qsTr("Confidence interval")
-			info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95.")
+			info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95. The interval is the Clopper-Pearson interval from stats::binom.test. For two-sided tests, the p-value uses the minimum-likelihood method (summing the probabilities of all outcomes that are no more likely than the observed one), whereas the interval places equal probability in each tail. Because the interval does not invert the same test, the p-value and the interval can occasionally disagree about whether the test value is plausible. This can only happen for two-sided tests with a test value other than 0.5, where the binomial distribution is asymmetric.")
 			CIField { name: "ciLevel";	label: qsTr("Interval") }
 		}
 		CheckBox { name: "vovkSellke";	label: qsTr("Vovk-Sellke maximum p-ratio"); info: qsTr("An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.") }
