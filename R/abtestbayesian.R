@@ -865,15 +865,8 @@ plot_robustness_ggplot2 <- function(x,
     colorbarName <- bquote(BF[.(subscripts[1])][.(subscripts[2])])
   }
 
-  df <- interp::interp(
-    x = unname(prior_par_matrix[, 1]),
-    y = unname(prior_par_matrix[, 2]),
-    z = c(bf),
-    nx = 1000, ny = 1000,
-    # the default method, "linear" is a bit too jagged in my opinion
-    method = "akima") |>
-    interp::interp2xyz() |>
-    as.data.frame()
+  # prior_par_matrix is expand.grid(mu, sigma), so bf fills a length(mu) x length(sigma) matrix
+  df <- .abTestInterpolateGrid(mu, sigma, matrix(bf, nrow = length(mu)), n = 1000)
 
   xBreaks <- if (length(mu) <= 6) mu else jaspGraphs::getPrettyAxisBreaks(mu_range)
   xLimits <- range(xBreaks)
@@ -934,6 +927,19 @@ plot_robustness_ggplot2 <- function(x,
       panel.border        = ggplot2::element_rect(colour = "black", fill = NA, size = .5),
       plot.margin         = ggplot2::margin(10, 10, 10, 10, "pt")
     )
+}
+
+# Smooth z (a length(x) x length(y) matrix on a rectangular grid) onto an n x n grid with
+# tensor-product cubic splines: first along x for every y, then along y. interp::interp()
+# triangulates the points instead; on a rectangular grid that triangulation is ambiguous
+# (cocircular points), so "akima" put spikes and NAs along the triangle seams and the
+# result, and with it the contour bins, depended on the platform.
+.abTestInterpolateGrid <- function(x, y, z, n) {
+  xOut <- seq(min(x), max(x), length.out = n)
+  yOut <- seq(min(y), max(y), length.out = n)
+  zx   <- apply(z, 2L, function(v) stats::spline(x, v, xout = xOut, method = "fmm")$y)
+  zxy  <- t(apply(zx, 1L, function(v) stats::spline(y, v, xout = yOut, method = "fmm")$y))
+  data.frame(x = rep(xOut, n), y = rep(yOut, each = n), z = c(zxy))
 }
 
 is.wholenumber <- function(x, tol = .Machine$double.eps^0.5)  abs(x - round(x)) < tol
