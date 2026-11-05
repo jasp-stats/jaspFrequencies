@@ -390,16 +390,6 @@
         "stats"
       ]
     },
-    "deldir": {
-      "Package": "deldir",
-      "Version": "2.0-4",
-      "Source": "Repository",
-      "Requirements": [
-        "graphics",
-        "grDevices",
-        "R"
-      ]
-    },
     "desc": {
       "Package": "desc",
       "Version": "1.4.3",
@@ -737,17 +727,6 @@
         "deSolve",
         "elliptic",
         "R"
-      ]
-    },
-    "interp": {
-      "Package": "interp",
-      "Version": "1.1-6",
-      "Source": "Repository",
-      "Requirements": [
-        "deldir",
-        "R",
-        "Rcpp",
-        "RcppEigen"
       ]
     },
     "isoband": {
