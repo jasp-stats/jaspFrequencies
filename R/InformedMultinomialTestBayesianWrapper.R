@@ -60,12 +60,7 @@ InformedMultinomialTestBayesian <- function(
           sequentialAnalysisPlotType = "bayesFactor",
           setSeed = FALSE) {
 
-   defaultArgCalls <- formals(jaspFrequencies::InformedMultinomialTestBayesian)
-   defaultArgs <- lapply(defaultArgCalls, eval)
-   options <- as.list(match.call())[-1L]
-   options <- lapply(options, eval)
-   defaults <- setdiff(names(defaultArgs), names(options))
-   options[defaults] <- defaultArgs[defaults]
+   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
@@ -78,5 +73,7 @@ InformedMultinomialTestBayesian <- function(
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
+   # Options not given in the call get their default from the form, which can depend on the other options.
+   options <- options[names(options) %in% names(match.call())[-1L]]
    return(jaspBase::runWrappedAnalysis("jaspFrequencies", "InformedMultinomialTestBayesian", "InformedMultinomialTestBayesian.qml", options, version, TRUE))
 }

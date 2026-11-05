@@ -22,7 +22,7 @@ BinomialTest(
 )
 }
 \arguments{
-\item{ci, }{Coverage of the confidence intervals in percentages. The default value is 95.
+\item{ci, }{Coverage of the confidence intervals in percentages. The default value is 95. The interval is the Clopper-Pearson interval from stats::binom.test. For two-sided tests, the p-value uses the minimum-likelihood method (summing the probabilities of all outcomes that are no more likely than the observed one), whereas the interval places equal probability in each tail. Because the interval does not invert the same test, the p-value and the interval can occasionally disagree about whether the test value is plausible. This can only happen for two-sided tests with a test value other than 0.5, where the binomial distribution is asymmetric.
 Defaults to \code{FALSE}.}
 
 \item{descriptivesPlot, }{Visualises the proportion and confidence interval of the two different values of your dichotomous variable.

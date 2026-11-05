@@ -24,7 +24,7 @@
 #' - The variable should be a dichotomous scale.
 #' - Observations should be independent.
 #'
-#' @param ci, Coverage of the confidence intervals in percentages. The default value is 95.
+#' @param ci, Coverage of the confidence intervals in percentages. The default value is 95. The interval is the Clopper-Pearson interval from stats::binom.test. For two-sided tests, the p-value uses the minimum-likelihood method (summing the probabilities of all outcomes that are no more likely than the observed one), whereas the interval places equal probability in each tail. Because the interval does not invert the same test, the p-value and the interval can occasionally disagree about whether the test value is plausible. This can only happen for two-sided tests with a test value other than 0.5, where the binomial distribution is asymmetric.
 #'    Defaults to \code{FALSE}.
 #' @param descriptivesPlot, Visualises the proportion and confidence interval of the two different values of your dichotomous variable.
 #'    Defaults to \code{FALSE}.
@@ -48,12 +48,7 @@ BinomialTest <- function(
           variables = list(types = list(), value = list()),
           vovkSellke = FALSE) {
 
-   defaultArgCalls <- formals(jaspFrequencies::BinomialTest)
-   defaultArgs <- lapply(defaultArgCalls, eval)
-   options <- as.list(match.call())[-1L]
-   options <- lapply(options, eval)
-   defaults <- setdiff(names(defaultArgs), names(options))
-   options[defaults] <- defaultArgs[defaults]
+   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
@@ -72,5 +67,7 @@ BinomialTest <- function(
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
+   # Options not given in the call get their default from the form, which can depend on the other options.
+   options <- options[names(options) %in% names(match.call())[-1L]]
    return(jaspBase::runWrappedAnalysis("jaspFrequencies", "BinomialTest", "BinomialTest.qml", options, version, TRUE))
 }
