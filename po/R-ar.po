@@ -1,0 +1,645 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspFrequencies 0.96.5\n"
+"POT-Creation-Date: 2026-04-25 04:22\n"
+"PO-Revision-Date: 2026-11-12 10:21+0000\n"
+"Last-Translator: Fahad Mahfouz Al-Subhi "
+"<fahadalsubhi@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/jasp/"
+"jaspfrequencies-r/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2026.11.2.dev0\n"
+
+msgid "Bayesian A/B Test"
+msgstr "اختبار A/B البايزي"
+
+msgid "Models"
+msgstr "النماذج"
+
+msgid "P(M)"
+msgstr "P(M)"
+
+msgid "P(M|data)"
+msgstr "P(M|data)"
+
+msgid "A positive log odds ratio means that the success rate in Group 2 is higher than in Group 1."
+msgstr ""
+"يعني لوغاريتم نسبة الأرجحية الموجب أن معدل النجاح في المجموعة 2 أعلى منه في "
+"المجموعة 1."
+
+msgid "Log odds ratio = 0"
+msgstr "لوغاريتم نسبة الأرجحية = 0"
+
+msgid "Log odds ratio > 0"
+msgstr "لوغاريتم نسبة الأرجحية > 0"
+
+msgid "Log odds ratio < 0"
+msgstr "لوغاريتم نسبة الأرجحية < 0"
+
+msgid "Log odds ratio %s 0"
+msgstr "لوغاريتم نسبة الأرجحية %s 0"
+
+msgid "Descriptives"
+msgstr "الإحصاءات الوصفية"
+
+msgid "Counts"
+msgstr "الأعداد"
+
+msgid "Total"
+msgstr "الإجمالي"
+
+msgid "Proportion"
+msgstr "النسبة"
+
+msgid "Group 1"
+msgstr "المجموعة 1"
+
+msgid "Group 2"
+msgstr "المجموعة 2"
+
+msgid "Prior and Posterior"
+msgstr "التوزيعان القبلي والبعدي"
+
+msgid "Sequential Analysis"
+msgstr "التحليل التتابعي"
+
+msgid "Bayes Factor Robustness Check"
+msgstr "فحص حصانة عامل بايز"
+
+msgid "Prior"
+msgstr "قبلي"
+
+msgid "n"
+msgstr "n"
+
+msgid "Posterior Probability"
+msgstr "الاحتمال البعدي"
+
+msgid "P(%1$s | data) = %2$.3f"
+msgstr "P(%1$s | data) = %2$.3f"
+
+msgid "Cannot test the hypothesis that the test value is greater than 1."
+msgstr "لا يمكن اختبار فرضية أن قيمة الاختبار هي أكبر من 1."
+
+msgid "Cannot test the hypothesis that the test value is less than 0."
+msgstr "لا يمكن اختبار فرضية أن قيمة الاختبار هي أقل من 0."
+
+msgid "Binomial Test"
+msgstr "اختبار ذي الحدين"
+
+msgid "Variable"
+msgstr "المتغير"
+
+msgid "Level"
+msgstr "المستوى"
+
+msgid "p"
+msgstr "p"
+
+msgid "VS-MPR"
+msgstr "أقصى نسبة p لفوفك–سيلكي (VS-MPR)"
+
+msgid "Lower"
+msgstr "الحد الأدنى"
+
+msgid "%s%% CI for Proportion"
+msgstr "فترة ثقة %s%% للنسبة"
+
+msgid "Upper"
+msgstr "الحد الأعلى"
+
+msgid "For all tests, the alternative hypothesis specifies that the proportion is less than %s."
+msgstr "في جميع الاختبارات، تنص الفرضية البديلة على أن النسبة أقل من %s."
+
+msgid "For all tests, the alternative hypothesis specifies that the proportion is greater than %s."
+msgstr "في جميع الاختبارات، تنص الفرضية البديلة على أن النسبة أكبر من %s."
+
+msgid "Proportions tested against value: %s."
+msgstr "النسب المختبرة مقابل القيمة: %s."
+
+msgid "Descriptives Plots"
+msgstr "المخططات الوصفية"
+
+msgid "Bayesian Binomial Test"
+msgstr "اختبار ذي الحدين البايزي"
+
+msgid "%1$s The shape of the prior distribution under the alternative hypothesis is specified by Beta(%2$s, %3$s)."
+msgstr ""
+"%1$s يُحدَّد شكل التوزيع القبلي في ظل الفرضية البديلة بواسطة Beta(%2$s, %3$s)."
+
+msgid "Inferential Plots"
+msgstr "المخططات الاستدلالية"
+
+msgid "Population proportion"
+msgstr "نسبة المجتمع"
+
+msgid "One or more Bayes factors cannot be computed"
+msgstr "لا يمكن حساب عامل واحد أو أكثر من عوامل بايز"
+
+msgid "One or more Bayes factors are infinite"
+msgstr "واحد أو أكثر من عوامل بايز لا نهائي"
+
+msgid "Undefined hypothesis"
+msgstr "فرضية غير معرّفة"
+
+msgid "Contingency Tables"
+msgstr "جداول التوافق"
+
+msgid "Chi-Squared Tests"
+msgstr "اختبارات كاي تربيع"
+
+msgid "Vovk-Sellke Maximum  <em>p</em>-Ratio: Based the <em>p</em>-value,\n      the maximum possible odds in favor of H%1$s over H%2$s equals %3$s\n      (Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"أقصى نسبة <em>p</em> لفوفك–سيلكي: استنادًا إلى قيمة <em>p</em>،\n"
+"      تساوي أقصى أرجحية ممكنة لصالح H%1$s مقابل H%2$s القيمة %3$s\n"
+"      (Sellke, Bayarri, & Berger, 2001)."
+
+msgid "Continuity correction is available only for 2x2 tables."
+msgstr "تصحيح الاستمرارية متاح لجداول 2x2 فقط."
+
+msgid "McNemar's test is available only for 2x2 tables."
+msgstr "اختبار مكنيمار متاح للجداول ذات الأبعاد 2 × 2 فقط."
+
+msgid "Log Odds Ratio"
+msgstr "لوغاريتم نسبة الأرجحية"
+
+msgid "Odds Ratio"
+msgstr "نسبة الأرجحية"
+
+msgid "%.0f%% Confidence Intervals"
+msgstr "فترات الثقة %.0f%%"
+
+msgid "Nominal"
+msgstr "اسمي"
+
+msgid "Ordinal Gamma"
+msgstr "غاما الرتبي"
+
+msgid "95%% Confidence Intervals"
+msgstr "فترات الثقة 95%%"
+
+msgid "Gamma"
+msgstr "غاما"
+
+msgid "Standard Error"
+msgstr "الخطأ المعياري"
+
+msgid "Kendall's Tau-b"
+msgstr "تاو-b لكندال"
+
+msgid "Z"
+msgstr "Z"
+
+msgid "VS-MPR%s"
+msgstr "VS-MPR%s"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "df"
+msgstr "درجات الحرية"
+
+msgid "Expected count"
+msgstr "العدد المتوقع"
+
+msgid "%% within row"
+msgstr "%% داخل الصف"
+
+msgid "%% within column"
+msgstr "%% داخل العمود"
+
+msgid "%% of total"
+msgstr "%% من الإجمالي"
+
+msgid "Unstandardized residuals"
+msgstr "البواقي غير المعيارية"
+
+msgid "Pearson residuals"
+msgstr "بواقي بيرسون"
+
+msgid "Standardized residuals"
+msgstr "البواقي المعيارية"
+
+msgid "Contingency coefficient"
+msgstr "معامل التوافق"
+
+msgid "Phi-coefficient"
+msgstr "معامل فاي"
+
+msgid "Cramer's V"
+msgstr "معامل V لكرامر"
+
+msgid "Phi coefficient is only available for 2 by 2 contingency Tables"
+msgstr "معامل فاي متاح لجداول التوافق ذات الأبعاد 2 × 2 فقط"
+
+msgid "Value could not be calculated - At least one row or column contains all zeros"
+msgstr "تعذر حساب القيمة: يوجد صف أو عمود واحد على الأقل جميع قيمه صفر"
+
+msgid "Lambda (rows)"
+msgstr "لامدا (الصفوف)"
+
+msgid "Lambda (columns)"
+msgstr "لامدا (الأعمدة)"
+
+msgid "Lambda (symmetric)"
+msgstr "لامدا (متماثلة)"
+
+msgid "Odds ratio indicates the following: <br> (Ratio > 1): Group <em>%1$s</em> is more likely in group <em>%2$s</em><br>(Ratio < 1): Group <em>%1$s</em> is less likely in group <em>%2$s</em>"
+msgstr ""
+"تشير نسبة الأرجحية إلى: <br> (النسبة > 1): المجموعة <em>%1$s</em> أكثر احتمالًا "
+"ضمن المجموعة <em>%2$s</em><br>(النسبة < 1): المجموعة <em>%1$s</em> أقل "
+"احتمالًا ضمن المجموعة <em>%2$s</em>"
+
+msgid "Log odds ratio indicates the following:<br>(Ratio > 0): Group <em>%1$s</em> is more likely in group <em>%2$s</em> <br>(Ratio < 0): Group <em>%1$s</em> is less likely in group <em>%2$s</em>"
+msgstr ""
+"يشير لوغاريتم نسبة الأرجحية إلى:<br>(اللوغاريتم > 0): المجموعة <em>%1$s</em> "
+"أكثر احتمالًا ضمن المجموعة <em>%2$s</em> <br>(اللوغاريتم < 0): المجموعة <em>"
+"%1$s</em> أقل احتمالًا ضمن المجموعة <em>%2$s</em>"
+
+msgid "is less than"
+msgstr "أقل من"
+
+msgid "is greater than"
+msgstr "أكبر من"
+
+msgid "For all tests, the alternative hypothesis specifies that group <em>%1$s</em> %2$s <em>%3$s</em>."
+msgstr ""
+"في جميع الاختبارات، تنص الفرضية البديلة على أن المجموعة <em>%1$s</em> %2$s "
+"<em>%3$s</em>."
+
+msgid "Each cell displays the observed counts"
+msgstr "تعرض كل خلية التكرارات المشاهدة"
+
+msgid "Each cell displays the expected counts"
+msgstr "تعرض كل خلية التكرارات المتوقعة"
+
+msgid "Each cell displays the row percentages"
+msgstr "تعرض كل خلية النسب المئوية للصفوف"
+
+msgid "Each cell displays column percentages"
+msgstr "تعرض كل خلية النسب المئوية للأعمدة"
+
+msgid "Each cell displays total percentages"
+msgstr "تعرض كل خلية النسب المئوية من الإجمالي"
+
+msgid "Each cell displays unstandardized residuals"
+msgstr "تعرض كل خلية البواقي غير المعيارية"
+
+msgid "Each cell displays Pearson residuals"
+msgstr "تعرض كل خلية بواقي بيرسون"
+
+msgid "Each cell displays standardized residuals"
+msgstr "تعرض كل خلية البواقي المعيارية"
+
+msgid "Count"
+msgstr "العدد"
+
+msgid "N"
+msgstr "N"
+
+msgid "%s could not be calculated - At least one row or column contains all zeros"
+msgstr "تعذّر حساب %s؛ يوجد صف أو عمود واحد على الأقل جميع قيمه أصفار"
+
+msgid "%s continuity correction"
+msgstr "تصحيح الاستمرارية %s"
+
+msgid "McNemar's %s continuity correction"
+msgstr "تصحيح الاستمرارية %s لماكنيمار"
+
+msgid "Likelihood ratio"
+msgstr "نسبة الإمكان"
+
+msgid "Odds ratio restricted to 2 x 2 tables"
+msgstr "تقتصر نسبة الأرجحية على جداول 2 x 2"
+
+msgid "Fisher's exact test"
+msgstr "اختبار فيشر الدقيق"
+
+msgid "Bayesian Contingency Tables Tests"
+msgstr "الاختبارات البايزية لجداول التوافق"
+
+msgid "%.0f%% Credible Interval"
+msgstr "فترة المصداقية %.0f%%"
+
+msgid "Log Odds Ratio Plots"
+msgstr "رسوم لوغاريتم نسبة الأرجحية"
+
+msgid "Odds ratio restricted to 2 x 2 analyses"
+msgstr "تقتصر نسبة الأرجحية على تحليلات 2 x 2"
+
+msgid "Odds ratio for this model not yet implemented"
+msgstr "لم يُنفّذ بعد حساب نسبة الأرجحية لهذا النموذج"
+
+msgid "The Bayes factor is undefined"
+msgstr "عامل بايز غير معرف"
+
+msgid "The Bayes factor is too small"
+msgstr "عامل بايز صغير جداً"
+
+msgid "The Bayes factor is infinite"
+msgstr "عامل بايز لا نهائي"
+
+msgid "median Log OR ="
+msgstr "وسيط لوغاريتم نسبة الأرجحية ="
+
+msgid "Poisson"
+msgstr "بواسون"
+
+msgid "Joint multinomial"
+msgstr "توزيع متعدد الحدود المشترك"
+
+msgid "Independent multinomial"
+msgstr "توزيع متعدد الحدود المستقل"
+
+msgid "Hypergeometric"
+msgstr "فوق هندسي"
+
+msgid "Hypergeometric contingency tables test restricted to 2 x 2 tables"
+msgstr ""
+"اختبار جداول التوافق بالتوزيع فوق الهندسي، ويقتصر على الجداول ذات الأبعاد 2 × "
+"2"
+
+msgid "Proportion test restricted to 2 x 2 tables"
+msgstr "يقتصر اختبار النسب على جداول 2 x 2"
+
+msgid "is not equal to"
+msgstr "لا يساوي"
+
+msgid "Invalid sampling model selected"
+msgstr "نموذج المعاينة المحدد غير صالح"
+
+msgid "Odds ratio"
+msgstr "نسبة الأرجحية"
+
+msgid "Odd ratio for this model not yet implemented"
+msgstr "لم يُنفّذ بعد حساب نسبة الأرجحية لهذا النموذج"
+
+msgid "Cramer's V for this model not yet implemented"
+msgstr "لم يُنفّذ بعد حساب معامل V لكرامر لهذا النموذج"
+
+msgid "Posterior"
+msgstr "بعدي"
+
+msgid "The `Success` must have two levels if the `Sample Size` is not specified."
+msgstr "يجب أن يكون لمتغير `النجاح` مستويان إذا لم يُحدَّد `حجم العينة`."
+
+msgid "Invalid successes: variable must contain only integer values."
+msgstr "قيم غير صالحة لعدد النجاحات: يجب أن يحتوي المتغير على أعداد صحيحة فقط."
+
+msgid "Invalid sample size: variable must contain only integer values."
+msgstr "حجم العينة غير الصحيح: يجب أن يحتوي المتغير على قيم عددية صحيحة فقط."
+
+msgid "Sample size must be larger then the number of successes."
+msgstr "يجب أن يكون حجم العينة أكبر من عدد النجاحات."
+
+msgid "Factor must contain unique levels that map the successes to sample size."
+msgstr "يجب أن يتضمن العامل مستويات فريدة تربط أعداد النجاح بأحجام العينات."
+
+msgid "Performing sequential analysis."
+msgstr "جارٍ إجراء التحليل المتتابع."
+
+msgid "Observed counts"
+msgstr "الأعداد المشاهدة"
+
+msgid "Observed proportions"
+msgstr "النسب المشاهدة"
+
+msgid "Sample size"
+msgstr "حجم العينة"
+
+msgid "Descriptives plot"
+msgstr "مخطط الإحصاءات الوصفية"
+
+msgid "Unrestricted posterior plot"
+msgstr "رسم التوزيع البعدي غير المقيّد"
+
+msgid "Sequential analysis"
+msgstr "التحليل التتابعي"
+
+msgid "At least two models need to be specified."
+msgstr "يجب تحديد نموذجين على الأقل."
+
+msgid "vs."
+msgstr "مقابل"
+
+msgid "Observed"
+msgstr "المشاهد"
+
+msgid "Estimated"
+msgstr "مقدّر"
+
+msgid "Proportions"
+msgstr "النسب"
+
+msgid "Prior model probability input for the '%1$s' hypothesis (%2$s) could not be parsed into a positive number. Please, check the input."
+msgstr ""
+"تعذر تحويل الاحتمال القبلي المُدخل للنموذج الخاص بالفرضية '%1$s' (%2$s) إلى "
+"عدد موجب. يُرجى مراجعة المدخلات."
+
+msgid "Bayesian evaluation of %1$s order constraints"
+msgstr "التقييم البايزي لعدد %1$s من قيود الترتيب"
+
+msgid "BF%1$s%2$s"
+msgstr "BF%1$s%2$s"
+
+msgid "Log(BF%1$s%2$s)"
+msgstr "Log(BF%1$s%2$s)"
+
+msgid "Log marglik"
+msgstr "لوغاريتم الإمكان الهامشي"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Error %%"
+msgstr "الخطأ %%"
+
+msgid "P(M|Data)"
+msgstr "P(M|Data)"
+
+msgid "BF<sub>M</sub>"
+msgstr "BF<sub>M</sub>"
+
+msgid "Please double check if the factor level names in the 'Order Restricted Hypotheses' section match the factor levels in your data set."
+msgstr ""
+"يرجى التحقق من تطابق أسماء مستويات العوامل في قسم 'الفرضيات المقيّدة "
+"بالترتيب' مع مستويات العوامل في مجموعة البيانات."
+
+msgid "Model in each row (denoted as '1') is compared to the %1$s (denoted as 0)."
+msgstr ""
+"يُقارَن النموذج في كل صف (المشار إليه بالرمز '1') مع %1$s (المشار إليه بالرمز "
+"0)."
+
+msgid "Specify informed hypothesis tests in the `Order Restricted Hypotheses` section."
+msgstr "تحديد اختبارات الفرضيات المستنيرة في قسم `الفرضيات المقيّدة بالترتيب`."
+
+msgid "Expected counts not supported without observed counts."
+msgstr "التكرارات المتوقعة غير مدعومة دون التكرارات المشاهدة."
+
+msgid "No expected counts entered."
+msgstr "لم تُدخل تكرارات متوقعة."
+
+msgid "Invalid counts: variable does not match the number of levels of the factor. When counts are specified, each row of the data set must represent a unique level of the factor."
+msgstr ""
+"تكرارات غير صالحة: لا يطابق المتغير عدد مستويات العامل. عند تحديد التكرارات، "
+"يجب أن يمثل كل صف بيانات مستوى فريدًا للعامل."
+
+msgid "Invalid expected counts: variable does not match the number of levels of the factor."
+msgstr "تكرارات متوقعة غير صالحة: لا يتطابق المتغير مع عدد مستويات العامل."
+
+msgid "Invalid counts: variable must contain only integer values."
+msgstr "تكرارات غير صالحة: يجب أن يحتوي المتغير على أعداد صحيحة فقط."
+
+msgid "Invalid counts: less than 1 observation."
+msgstr "تكرارات غير صالحة: أقل من 1 مشاهدة."
+
+msgid "Invalid counts: maximum value (10e7) exceeded."
+msgstr "تكرارات غير صالحة: تجاوزت القيمة القصوى (10e7)."
+
+msgid "Confidence intervals are based on independent binomial distributions."
+msgstr "تستند فترات الثقة إلى توزيعات ثنائية الحدين مستقلة."
+
+msgid "Could not compute confidence intervals."
+msgstr "تعذّر حساب فترات الثقة."
+
+msgid "Factor"
+msgstr "العامل"
+
+msgid "Expected: %s"
+msgstr "المتوقع: %s"
+
+msgid "Expected"
+msgstr "المتوقع"
+
+msgid "%s%% Confidence Interval"
+msgstr "فترة الثقة %s%%"
+
+msgid "Descriptives Plot"
+msgstr "مخطط الإحصاءات الوصفية"
+
+msgid "Bayesian Multinomial Test"
+msgstr "اختبار التوزيع متعدد الحدود البايزي"
+
+msgid "Levels"
+msgstr "المستويات"
+
+msgid "Credible"
+msgstr "المصداقية"
+
+msgid "Credible intervals are based on independent binomial distributions with flat priors."
+msgstr ""
+"تستند فترات المصداقية إلى توزيعات ثنائية الحدين مستقلة ذات توزيعات قبلية "
+"مسطّحة."
+
+msgid "Confidence"
+msgstr "الثقة"
+
+msgid "%1$s%% %2$s Interval"
+msgstr "فترة %2$s بنسبة %1$s%%"
+
+msgid "Could not compute %s Intervals."
+msgstr "تعذّر حساب فترات %s."
+
+msgid "Observed Counts"
+msgstr "الأعداد المشاهدة"
+
+msgid "Observed Proportions"
+msgstr "النسب المشاهدة"
+
+msgid "(Intercept)"
+msgstr "(الثابت)"
+
+msgid "ANOVA"
+msgstr "تحليل التباين (ANOVA)"
+
+msgid "Deviance"
+msgstr "الانحراف"
+
+msgid "Residual df"
+msgstr "درجات حرية البواقي"
+
+msgid "Residual Deviance"
+msgstr "انحراف البواقي"
+
+msgid "Coefficients"
+msgstr "المعاملات"
+
+msgid "Estimate"
+msgstr "التقدير"
+
+msgid "%s%% Confidence Intervals"
+msgstr "فترات الثقة %s%%"
+
+msgid "Vovk-Sellke Maximum <em>p</em>-Ratio: Based the <em>p</em>-value, \nthe maximum possible odds in favor of H%1$s over H%2$s equals \n1/(-e <em>p</em> log(<em>p</em>)) for <em>p</em> %3$s .37 \n(Sellke, Bayarri, & Berger, 2001)."
+msgstr ""
+"أقصى نسبة <em>p</em> لفوفك–سيلكي: استنادًا إلى قيمة <em>p</em>،\n"
+"تساوي أقصى أرجحية ممكنة لصالح H%1$s مقابل H%2$s\n"
+"الصيغة 1/(-e <em>p</em> log(<em>p</em>)) عندما تكون <em>p</em> %3$s .37\n"
+"(Sellke, Bayarri, & Berger, 2001)."
+
+msgid "variables cannot be read"
+msgstr "تعذّرت قراءة المتغيرات"
+
+msgid "Cannot compute the results; a numerical error occurred during sampling. Try to change (e.g., simplify) the model or adjust priors."
+msgstr ""
+"تعذر حساب النتائج؛ حدث خطأ عددي أثناء أخذ العينات. حاول تغيير النموذج "
+"(كتبسيطه) أو تعديل التوزيعات القبلية."
+
+msgid "R package 'conting' error: %s <br> It is possible that a numerical error occured during sampling. Try to change (e.g., simplify) the model, adjust priors, change seed, or change the number of MCMC samples."
+msgstr ""
+"خطأ في حزمة R المسماة 'conting': %s <br> ربما وقع خطأ عددي أثناء المعاينة. "
+"جرّب تغيير النموذج (كتبسيطه)، أو تعديل التوزيعات القبلية، أو تغيير البذرة "
+"العشوائية، أو تغيير عدد عينات MCMC."
+
+msgid "R Package error: Cannot retrieve table probabilities"
+msgstr "خطأ في حزمة R: تعذر استرجاع احتمالات الجدول"
+
+msgid "Total number of models visited = %i"
+msgstr "مجموع عدد النماذج التي تمت زيارتها = %i"
+
+msgid "Submodel specified is not within possible submodels"
+msgstr "النموذج الفرعي المحدد ليس من بين النماذج الفرعية الممكنة"
+
+msgid "<em>Model formula:</em>"
+msgstr "<em>صيغة النموذج:</em>"
+
+msgid "<em>Posterior model probability =</em>"
+msgstr "<em>الاحتمال البعدي للنموذج =</em>"
+
+msgid "Model Comparison"
+msgstr "مقارنة النماذج"
+
+msgid "BF<sub>10</sub>"
+msgstr "BF<sub>10</sub>"
+
+msgid "BF<sub>01</sub>"
+msgstr "BF<sub>01</sub>"
+
+msgid "Log(BF<sub>10</sub>)"
+msgstr "Log(BF<sub>10</sub>)"
+
+msgid "Posterior Summary Statistics"
+msgstr "الإحصاءات التلخيصية البعدية"
+
+msgid "P(incl|data)"
+msgstr "P(incl|data)"
+
+msgid "Mean"
+msgstr "المتوسط"
+
+msgid "Variance"
+msgstr "التباين"
+
+msgid "%s%% Credible intervals"
+msgstr "فترات المصداقية %s%%"
+
+msgid "Posterior Summary Statistics For Submodel %s"
+msgstr "الإحصاءات التلخيصية البعدية للنموذج الفرعي %s"
+
+msgid "%.0f%% Credible intervals"
+msgstr "فترات المصداقية %.0f%%"
