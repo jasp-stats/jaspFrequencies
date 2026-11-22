@@ -34,3 +34,4 @@
 * Fixed the Bayesian A/B test, which errored after the switch to preloaded data because the counts were passed to `abtest::ab_test()` in the wrong format; the robustness and sequential analysis plots now render again ([PR #323](https://github.com/jasp-stats/jaspFrequencies/pull/323)).
 * Fixed the error checks in (Bayesian) Log-Linear Regression: infinite, missing, and negative counts, and factors with fewer than two levels, are now caught before the model is fitted ([PR #304](https://github.com/jasp-stats/jaspFrequencies/pull/304)).
 * Fixed the Multinomial Test using the wrong counts column when rows were dropped for missing factor values, and added an upper bound on the counts ([PR #304](https://github.com/jasp-stats/jaspFrequencies/pull/304)).
+* Fixed the Total layer of (Bayesian) Contingency Tables counting rows with no value on a layer variable ([Issue #4724](https://github.com/jasp-stats/jasp-issues/issues/4724)).

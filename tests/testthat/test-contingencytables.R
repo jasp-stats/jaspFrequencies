@@ -207,6 +207,50 @@ test_that("Goodman-Kruskal lambda and Cramer's V results match", {
   testthat::expect_equal(table[["value[CramerV]"]], 0.534135681195261)
 })
 
+test_that("Total layer excludes rows without a layer value", {
+  # the last two rows have no layer, so the Total layer is the table of the other 8 rows;
+  # chisq.test(..., correct = FALSE) gives X2 = 4/3, p = 0.248 for layer m (matrix(c(2, 0, 1, 1), 2)) and
+  # layer n (matrix(c(1, 1, 0, 2), 2)), and X2 = 2, p = 0.157 for Total (matrix(c(3, 1, 1, 3), 2))
+  df <- data.frame(a     = factor(c("x", "x", "y", "x", "y", "y", "x", "y", "x", "y")),
+                   b     = factor(c("p", "p", "q", "q", "p", "q", "p", "q", "q", "p")),
+                   layer = factor(c("m", "m", "m", "m", "n", "n", "n", "n", NA, NA)))
+
+  options         <- jaspTools::analysisOptions("ContingencyTables")
+  options$rows    <- "a"
+  options$columns <- "b"
+  options$layers  <- list(list(name = "Layer 1", variables = "layer"))
+
+  results <- jaspTools::runAnalysis("ContingencyTables", df, options)
+  table <- results[["results"]][["container_a_b"]][["collection"]][["container_a_b_crossTabChisq"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+                                 list("", 1, "m", "", 0.248213078989924, "N", "<unicode><unicode>", 4, 1.33333333333333,
+                                      "", 1, "n", "", 0.248213078989924, "N", "<unicode><unicode>", 4, 1.33333333333333,
+                                      "", 1, "Total", "", 0.157299207050284, "N", "<unicode><unicode>", 8, 2))
+})
+
+test_that("Partial totals of two layers exclude rows without a value on the other layer", {
+  # the last two rows have no l2, so the l2 = Total tables of l1 = m and l1 = n hold 4 rows each;
+  # chisq.test(..., correct = FALSE) gives X2 = 4/3, p = 0.248 for both
+  # (matrix(c(2, 0, 1, 1), 2) and matrix(c(0, 2, 1, 1), 2))
+  df <- data.frame(a  = factor(c("x", "y", "x", "x", "y", "y", "x", "y", "y", "x")),
+                   b  = factor(c("p", "q", "p", "q", "p", "q", "q", "p", "p", "p")),
+                   l1 = factor(c("m", "m", "m", "m", "n", "n", "n", "n", "m", "n")),
+                   l2 = factor(c("u", "u", "v", "v", "u", "u", "v", "v", NA, NA)))
+
+  options         <- jaspTools::analysisOptions("ContingencyTables")
+  options$rows    <- "a"
+  options$columns <- "b"
+  options$layers  <- list(list(name = "Layer 1", variables = "l1"), list(name = "Layer 2", variables = "l2"))
+
+  results <- jaspTools::runAnalysis("ContingencyTables", df, options)
+  table <- results[["results"]][["container_a_b"]][["collection"]][["container_a_b_crossTabChisq"]][["data"]]
+  table <- Filter(function(row) row[["l2"]] == "Total" && row[["l1"]] != "Total", table)
+  jaspTools::expect_equal_tables(table,
+                                 list("", 1, "m", "Total", "", 0.248213078989924, "N", "<unicode><unicode>", 4,
+                                      1.33333333333333, "", 1, "n", "Total", "", 0.248213078989924, "N",
+                                      "<unicode><unicode>", 4, 1.33333333333333))
+})
+
 test_that("Analysis handles errors", {
   options <- jaspTools::analysisOptions("ContingencyTables")
   options$rows <- "facExperim"
