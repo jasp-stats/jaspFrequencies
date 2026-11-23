@@ -474,6 +474,8 @@ ContingencyTablesInternal <- function(jaspResults, dataset, options, ...) {
   if(ready) {
     all.vars   <- c(unlist(analysis), counts.var)
     subdataset <- subset(dataset, select = .v(all.vars))
+    for (layer.var in analysis[-(1:2)])
+      subdataset <- subdataset[!is.na(subdataset[[ .v(layer.var) ]]), , drop = FALSE]
   }
   else
     subdataset <- dataset

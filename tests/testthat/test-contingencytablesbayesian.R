@@ -195,3 +195,25 @@ test_that("Hypergeometric contingency table does not crash for not 2x2 tables", 
   expect_equal(bfFootnote,
                "Hypergeometric contingency tables test restricted to 2 x 2 tables")
 })
+
+test_that("Total layer excludes rows without a layer value", {
+  # the last two rows have no layer, so the Total layer is the table of the other 8 rows;
+  # BayesFactor::contingencyTableBF(..., sampleType = "indepMulti", fixedMargin = "rows") gives BF10 = 1.25 for
+  # layer m (matrix(c(2, 0, 1, 1), 2)) and layer n (matrix(c(1, 1, 0, 2), 2)), and 1.575 for Total
+  # (matrix(c(3, 1, 1, 3), 2))
+  df <- data.frame(a     = factor(c("x", "x", "y", "x", "y", "y", "x", "y", "x", "y")),
+                   b     = factor(c("p", "p", "q", "q", "p", "q", "p", "q", "q", "p")),
+                   layer = factor(c("m", "m", "m", "m", "n", "n", "n", "n", NA, NA)))
+
+  options         <- jaspTools::analysisOptions("ContingencyTablesBayesian")
+  options$rows    <- "a"
+  options$columns <- "b"
+  options$layers  <- list(list(name = "Layer 1", variables = "layer"))
+
+  results <- jaspTools::runAnalysis("ContingencyTablesBayesian", df, options)
+  table <- results[["results"]][["container_a_b"]][["collection"]][["container_a_b_contTabBasBF"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+                                 list("m", "BF<unicode><unicode> Independent multinomial", "N", 1.25, 4,
+                                      "n", "BF<unicode><unicode> Independent multinomial", "N", 1.25, 4,
+                                      "Total", "BF<unicode><unicode> Independent multinomial", "N", 1.575, 8))
+})
