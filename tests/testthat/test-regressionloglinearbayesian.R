@@ -29,10 +29,12 @@ test_that("Main table results match", {
   options$modelCutOffPosteriorProbability <- 0.001
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
   table <- results[["results"]][["Container"]][["collection"]][["Container_MainTable"]][["data"]]
+  # conting::bcct() and bcctu() with set.seed(0) give 2100 draws; after the burn-in of 420,
+  # the main effects model has 1613 and the interaction model 67 of the 1680 draws
   jaspTools::expect_equal_tables(table,
-    list(1, "contBinom + facGender", 0.963333333333333, 1, 2,
+    list(1, "contBinom + facGender", 1613 / 1680, 1, 2,
          "contBinom + facGender + contBinom<unicode><unicode><unicode>facGender",
-         0.0366666666666667, 0.0380622837370242)
+         67 / 1680, 67 / 1613)
   )
 })
 
@@ -122,4 +124,60 @@ test_that("Analysis handles errors - Missing values (factor)", {
   results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
   status <- results[["status"]]
   expect_identical(status, "validationError")
+})
+
+test_that("Submodel visited only during the burn-in gives an error message", {
+  options <- initOpts()
+  options$count <- "facFifty"
+  options$factors <- c("facGender", "facExperim")
+  options$count.types <- "scale"
+  options$factors.types <- c("nominal", "nominal")
+  options$modelTerms <- list(
+    list(components="facGender"),
+    list(components="facExperim"),
+    list(components=c("facGender", "facExperim"))
+  )
+  options$samplingMethodManualSamples <- 1
+  options$setSeed <- TRUE
+  options$seed <- 3
+  options$regressionCoefficientsSubmodel <- TRUE
+  options$regressionCoefficientsSubmodelCi <- TRUE
+  options$regressionCoefficientsSubmodelNo <- 2
+  results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
+  # conting::bcct() and bcctu() with set.seed(3) give 2001 draws; the main effects model
+  # is visited once, at draw 334, so all 1601 draws after the burn-in of 400 are the interaction model
+  table <- results[["results"]][["Container"]][["collection"]][["Container_MainTable"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+    list(1, "facGender + facExperim + facGender<unicode><unicode><unicode>facExperim", 1, 1)
+  )
+  subTable <- results[["results"]][["Container"]][["collection"]][["Container_SubSummaryTable"]]
+  expect_identical(subTable[["error"]][["errorMessage"]], "Submodel specified is not within possible submodels")
+})
+
+test_that("Submodel visited only once after the burn-in gives an error message", {
+  options <- initOpts()
+  options$samplingMethod <- "auto"
+  options$count <- "facFifty"
+  options$factors <- c("facGender", "facExperim")
+  options$count.types <- "scale"
+  options$factors.types <- c("nominal", "nominal")
+  options$modelTerms <- list(
+    list(components="facGender"),
+    list(components="facExperim"),
+    list(components=c("facGender", "facExperim"))
+  )
+  options$setSeed <- TRUE
+  options$seed <- 5
+  options$regressionCoefficientsSubmodel <- TRUE
+  options$regressionCoefficientsSubmodelNo <- 2
+  results <- jaspTools::runAnalysis("RegressionLogLinearBayesian", "test.csv", options)
+  # conting::bcct() with set.seed(5) gives 2000 draws; of the 1600 after the burn-in of 400,
+  # the main effects model has 1 draw, too few for conting::sub_model() to summarise
+  table <- results[["results"]][["Container"]][["collection"]][["Container_MainTable"]][["data"]]
+  jaspTools::expect_equal_tables(table,
+    list(1, "facGender + facExperim + facGender<unicode><unicode><unicode>facExperim", 1599 / 1600, 1,
+         2, "facGender + facExperim", 1 / 1600, 1 / 1599)
+  )
+  subTable <- results[["results"]][["Container"]][["collection"]][["Container_SubSummaryTable"]]
+  expect_match(subTable[["error"]][["errorMessage"]], "visited too rarely after the burn-in", fixed = TRUE)
 })
