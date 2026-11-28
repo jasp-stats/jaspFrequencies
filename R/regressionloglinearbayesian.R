@@ -165,7 +165,7 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
     # TODO: Here check bcctSummary$totmodsvisit if this is one,
     # then nothing going on, resample
     #
-    bcctSummary <- try(conting::mod_probs(bfObject$bcctObj, scale = 0,
+    bcctSummary <- try(conting::mod_probs(bfObject$bcctObj, n.burnin = bfObject$nBurnIn, scale = 0,
                                           best = options$modelCutOffBestDisplayed), silent = TRUE)
 
     if (inherits(bcctSummary, "modprobs")) {
@@ -380,29 +380,8 @@ RegressionLogLinearBayesianInternal <- function(jaspResults, dataset = NULL, opt
       }
 
     } else {
-
-      len.Blogreg <- length(results) + 1
-      if (length(bfObject$variables) > 0) {
-
-        variablesInModel <- bfObject$variables
-
-        len.Blogreg <- len.Blogreg + 1
-
-        for (var in 1:length(variablesInModel)) {
-
-          if (base::grepl(":", variablesInModel[var])) {
-
-            # if interaction term
-            vars <- unlist(strsplit(variablesInModel[var], split = ":"))
-            name <- paste0(vars, collapse = "\u2009\u273b\u2009")
-
-          } else
-            name <- as.character(variablesInModel[ var])
-
-          results[[ len.Blogreg ]]$"Name" <- name
-          len.Blogreg <- len.Blogreg + 1
-        }
-      }
+      stop(gettextf("R package 'conting' error: %s <br> The submodel may be visited too rarely after the burn-in. Try to increase the number of MCMC samples or change the seed.",
+                    .extractErrorMessage(logBlm.subestimates)))
     }
 
   } else {
