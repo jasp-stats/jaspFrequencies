@@ -31,6 +31,8 @@
 #'    Defaults to \code{FALSE}.
 #' @param regressionCoefficientsSubmodelCi, Shows credible intervals for the selected submodel's coefficients.
 #'    Defaults to \code{FALSE}.
+#' @param ... options that are not an argument of this function: the options of an older version of the
+#'   analysis, to be used together with `version`. They are upgraded to the options of this version.
 RegressionLogLinearBayesian <- function(
           data = NULL,
           version = "1",
@@ -55,9 +57,15 @@ RegressionLogLinearBayesian <- function(
           samplingMethod = "auto",
           samplingMethodManualSamples = 10000,
           seed = 1,
-          setSeed = FALSE) {
+          setSeed = FALSE,
+          ...) {
 
-   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
+   options <- mget(setdiff(names(formals(sys.function())), "..."), envir = environment(), inherits = FALSE)
+   options <- c(options, list(...))
+   if (!all(nzchar(names(options))) || anyDuplicated(names(options)))
+      stop("The extra options given to RegressionLogLinearBayesian must be named, each name once.")
+   if (...length() > 0L && missing(version))
+      stop("RegressionLogLinearBayesian has no option ", paste(names(list(...)), collapse = ", "), ". Options of an older version need the `version` they were written for.")
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 

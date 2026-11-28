@@ -31,6 +31,8 @@
 #' @param sequentialAnalysisNumberOfSteps, Number of data points at which the Bayes factor is updated during sequential analysis.
 #' @param sequentialAnalysisPlot, Displays the development of the Bayes factor or posterior probability as the data come in.
 #'    Defaults to \code{FALSE}.
+#' @param ... options that are not an argument of this function: the options of an older version of the
+#'   analysis, to be used together with `version`. They are upgraded to the options of this version.
 InformedMultinomialTestBayesian <- function(
           data = NULL,
           version = "1",
@@ -58,9 +60,15 @@ InformedMultinomialTestBayesian <- function(
           sequentialAnalysisNumberOfSteps = 10,
           sequentialAnalysisPlot = FALSE,
           sequentialAnalysisPlotType = "bayesFactor",
-          setSeed = FALSE) {
+          setSeed = FALSE,
+          ...) {
 
-   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
+   options <- mget(setdiff(names(formals(sys.function())), "..."), envir = environment(), inherits = FALSE)
+   options <- c(options, list(...))
+   if (!all(nzchar(names(options))) || anyDuplicated(names(options)))
+      stop("The extra options given to InformedMultinomialTestBayesian must be named, each name once.")
+   if (...length() > 0L && missing(version))
+      stop("InformedMultinomialTestBayesian has no option ", paste(names(list(...)), collapse = ", "), ". Options of an older version need the `version` they were written for.")
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 

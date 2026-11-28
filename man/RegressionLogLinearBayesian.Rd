@@ -28,7 +28,8 @@ RegressionLogLinearBayesian(
   samplingMethod = "auto",
   samplingMethodManualSamples = 10000,
   seed = 1,
-  setSeed = FALSE
+  setSeed = FALSE,
+  ...
 )
 }
 \arguments{
@@ -51,6 +52,9 @@ Defaults to \code{FALSE}.}
 
 \item{regressionCoefficientsSubmodelCi, }{Shows credible intervals for the selected submodel's coefficients.
 Defaults to \code{FALSE}.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 Bayesian Log-Linear Regression

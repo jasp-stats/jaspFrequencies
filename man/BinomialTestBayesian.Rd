@@ -21,7 +21,8 @@ BinomialTestBayesian(
   priorPosteriorPlot = FALSE,
   priorPosteriorPlotAdditionalInfo = TRUE,
   testValue = 0.5,
-  variables = list(types = list(), value = list())
+  variables = list(types = list(), value = list()),
+  ...
 )
 }
 \arguments{
@@ -44,6 +45,9 @@ Defaults to \code{FALSE}.}
 Defaults to \code{TRUE}.}
 
 \item{testValue, }{The proportion of the variable under the null hypothesis - the baseline for comparison.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 The Bayesian binomial test allows you to test whether a proportion of a dichotomous variable is equal to a test value (presumed population value). The analysis returns a binomial test for each level of the dependent variable against all other levels, so it will also work for variables with more than two levels.

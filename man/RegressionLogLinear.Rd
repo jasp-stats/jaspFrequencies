@@ -16,7 +16,8 @@ RegressionLogLinear(
   regressionCoefficientsCi = FALSE,
   regressionCoefficientsCiLevel = 0.95,
   regressionCoefficientsEstimates = FALSE,
-  vovkSellke = FALSE
+  vovkSellke = FALSE,
+  ...
 )
 }
 \arguments{
@@ -28,6 +29,9 @@ Defaults to \code{FALSE}.}
 
 \item{vovkSellke, }{An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.
 Defaults to \code{FALSE}.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 Log-linear regression models the logarithm of the dependent variable as a linear combination of independent variables. It is useful for handling skewed data and multiplicative relationships.

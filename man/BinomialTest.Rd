@@ -18,7 +18,8 @@ BinomialTest(
   plotWidth = 480,
   testValue = 0.5,
   variables = list(types = list(), value = list()),
-  vovkSellke = FALSE
+  vovkSellke = FALSE,
+  ...
 )
 }
 \arguments{
@@ -34,6 +35,9 @@ Defaults to \code{FALSE}.}
 
 \item{vovkSellke, }{An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.
 Defaults to \code{FALSE}.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 The binomial test allows the user to test whether a proportion of a dichotomous variable is equal to a test value (=presumed population value). The analysis returns a binomial test for each level of the dependent variable against all other levels, so it will also work for variables with more than two levels.

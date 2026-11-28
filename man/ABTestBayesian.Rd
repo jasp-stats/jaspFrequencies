@@ -37,7 +37,8 @@ ABTestBayesian(
   seed = 1,
   setSeed = FALSE,
   y1 = list(types = list(), value = ""),
-  y2 = list(types = list(), value = "")
+  y2 = list(types = list(), value = ""),
+  ...
 )
 }
 \arguments{
@@ -87,6 +88,9 @@ Defaults to \code{FALSE}.}
 \item{y1, }{Number of successes in group 1 (control condition).}
 
 \item{y2, }{Number of successes in group 2 (experimental condition).}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 The Bayesian A/B test allows one to monitor the evidence for the hypotheses that an intervention or treatment has either a positive effect, a negative effect or no effect.

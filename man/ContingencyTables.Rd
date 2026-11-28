@@ -49,7 +49,8 @@ ContingencyTables(
   uncertaintyCoefficient = FALSE,
   vovkSellke = FALSE,
   zTestAdjustedPValues = FALSE,
-  zTestColumnComparison = FALSE
+  zTestColumnComparison = FALSE,
+  ...
 )
 }
 \arguments{
@@ -127,6 +128,9 @@ Defaults to \code{FALSE}.}
 
 \item{vovkSellke, }{An upper bound on how much more likely a p-value is under the alternative hypothesis than under the null.
 Defaults to \code{FALSE}.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 Contingency tables allow the user to identify how the frequencies of one categorical variable relate to another, helping to determine associations between variables.

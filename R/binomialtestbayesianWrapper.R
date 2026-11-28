@@ -36,6 +36,8 @@
 #' @param priorPosteriorPlotAdditionalInfo, Shows the Bayes factor using the chosen prior, a probability wheel showing evidence for each hypothesis, and the median with 95% credible interval of the effect size.
 #'    Defaults to \code{TRUE}.
 #' @param testValue, The proportion of the variable under the null hypothesis - the baseline for comparison.
+#' @param ... options that are not an argument of this function: the options of an older version of the
+#'   analysis, to be used together with `version`. They are upgraded to the options of this version.
 BinomialTestBayesian <- function(
           data = NULL,
           version = "1",
@@ -53,9 +55,15 @@ BinomialTestBayesian <- function(
           priorPosteriorPlot = FALSE,
           priorPosteriorPlotAdditionalInfo = TRUE,
           testValue = 0.5,
-          variables = list(types = list(), value = list())) {
+          variables = list(types = list(), value = list()),
+          ...) {
 
-   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
+   options <- mget(setdiff(names(formals(sys.function())), "..."), envir = environment(), inherits = FALSE)
+   options <- c(options, list(...))
+   if (!all(nzchar(names(options))) || anyDuplicated(names(options)))
+      stop("The extra options given to BinomialTestBayesian must be named, each name once.")
+   if (...length() > 0L && missing(version))
+      stop("BinomialTestBayesian has no option ", paste(names(list(...)), collapse = ", "), ". Options of an older version need the `version` they were written for.")
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 

@@ -21,7 +21,8 @@ MultinomialTestBayesian(
   plotWidth = 480,
   priorCounts = list(list(levels = list(), name = "data 1", values = list())),
   testValues = "equal",
-  testValuesCustom = list(list(levels = list(), name = "data 1", values = list()))
+  testValuesCustom = list(list(levels = list(), name = "data 1", values = list())),
+  ...
 )
 }
 \arguments{
@@ -41,6 +42,9 @@ Defaults to \code{FALSE}.}
 \item{expectedCount, }{If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis.}
 
 \item{factor, }{The categorical variable we are interested in.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 The Bayesian multinomial test allows the user to test whether an observed distribution of cell counts corresponds to an expected distribution.

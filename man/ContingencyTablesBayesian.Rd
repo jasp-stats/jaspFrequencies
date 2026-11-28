@@ -37,7 +37,8 @@ ContingencyTablesBayesian(
   rows = list(types = list(), value = list()),
   samplingModel = "independentMultinomialRowsFixed",
   seed = 1,
-  setSeed = FALSE
+  setSeed = FALSE,
+  ...
 )
 }
 \arguments{
@@ -68,6 +69,9 @@ Defaults to \code{FALSE}.}
 Defaults to \code{FALSE}.}
 
 \item{priorConcentration, }{Controls how strongly the prior favours equal proportions.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 Bayesian Contingency Tables

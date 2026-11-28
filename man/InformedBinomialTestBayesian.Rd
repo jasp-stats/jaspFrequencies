@@ -33,7 +33,8 @@ InformedBinomialTestBayesian(
   sequentialAnalysisPlot = FALSE,
   sequentialAnalysisPlotType = "bayesFactor",
   setSeed = FALSE,
-  successes = list(types = list(), value = "")
+  successes = list(types = list(), value = ""),
+  ...
 )
 }
 \arguments{
@@ -56,6 +57,9 @@ Defaults to \code{FALSE}.}
 
 \item{sequentialAnalysisPlot, }{Displays the development of the Bayes factor or posterior probability as the data come in.
 Defaults to \code{FALSE}.}
+
+\item{...}{options that are not an argument of this function: the options of an older version of the
+analysis, to be used together with `version`. They are upgraded to the options of this version.}
 }
 \description{
 Informed Bayesian Multi-Binomial Test

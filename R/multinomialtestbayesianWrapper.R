@@ -33,6 +33,8 @@
 #'    Defaults to \code{FALSE}.
 #' @param expectedCount, If the data includes a variable representing expected cell counts, enter it here; its values define the null hypothesis.
 #' @param factor, The categorical variable we are interested in.
+#' @param ... options that are not an argument of this function: the options of an older version of the
+#'   analysis, to be used together with `version`. They are upgraded to the options of this version.
 MultinomialTestBayesian <- function(
           data = NULL,
           version = "1",
@@ -50,9 +52,15 @@ MultinomialTestBayesian <- function(
           plotWidth = 480,
           priorCounts = list(list(levels = list(), name = "data 1", values = list())),
           testValues = "equal",
-          testValuesCustom = list(list(levels = list(), name = "data 1", values = list()))) {
+          testValuesCustom = list(list(levels = list(), name = "data 1", values = list())),
+          ...) {
 
-   options <- mget(names(formals(sys.function())), envir = environment(), inherits = FALSE)
+   options <- mget(setdiff(names(formals(sys.function())), "..."), envir = environment(), inherits = FALSE)
+   options <- c(options, list(...))
+   if (!all(nzchar(names(options))) || anyDuplicated(names(options)))
+      stop("The extra options given to MultinomialTestBayesian must be named, each name once.")
+   if (...length() > 0L && missing(version))
+      stop("MultinomialTestBayesian has no option ", paste(names(list(...)), collapse = ", "), ". Options of an older version need the `version` they were written for.")
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
